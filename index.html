@@ -170,7 +170,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 <header class="hero">
   <div class="brand"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="var(--accent)"/><path d="M17 34.5 L27.5 44.5 L45 23" fill="none" stroke="var(--card)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="16.5" r="5" fill="var(--warm)"/></svg><span>should<i>.</i></span></div>
   <h1>Put your life goals on autopilot.</h1>
-  <p class="sub">A better job, a retirement that funds itself, a body you're proud of. Twenty-one AI agents work on it every day. You answer with 1, 2 or 3.</p>
+  <p class="sub">A better job, money that grows while you work, a body you're proud of. Twenty-one AI agents work on it every day. You answer with 1, 2 or 3.</p>
   <div class="stats">
     <div class="stat"><b>21</b><span>AI agents</span></div>
     <div class="stat"><b>7</b><span>life goals</span></div>
@@ -321,12 +321,6 @@ const GOALS = [
   ]},
  {id:"wealth",tab:"📈 Wealth",ico:"📈",title:"Make your money work as hard as you do",tag:"Pick a strategy, see how it holds up in good years and crashes, and let an AI trading bot run it. Plus a retirement that funds itself.",agents:["wealth","book","coach"],
   wf:[
-   {t:"Retirement on autopilot",s:"Every raise and every enrollment window",trigger:"Payday, a raise, or open enrollment",steps:["Wealth Coach checks you're contributing enough to get the full employer match","When pay goes up, suggests raising your contribution by 1% so take-home still rises","Checks the funds are low-cost and match your timeline","Puts the exact enrollment steps on your todo list before the window closes"],
-    ask:{q:"You got a 4% raise. Raise your 401(k) from 6% to 7%? Take-home still goes up $112 a month.",o:["Yes, add the steps to my list","Keep it at 6%","Ask me after payday"],p:0,r:"On your list for Thursday, 5 minutes, with the link."},
-    result:"Savings rise every year without ever feeling a pay cut."},
-   {t:"Spending on track for retirement",s:"A daily check against the plan",trigger:"6:15 AM balance check",steps:["Bookkeeper syncs balances and new transactions","Compares the month so far with the plan that funds your retirement goal","Flags drift early: new subscriptions, price increases, duplicate charges","Personal Coach counts it in your weekly score"],
-    ask:{q:"Dining out is $140 over plan with 9 days left. Want a cheap meal plan for the rest of the month?",o:["Yes, Health Coach plans it","No, I'll adjust myself","Remind me Friday"],p:0,r:"Meal plan for 9 days is ready, $62 of groceries in the cart."},
-    result:"Small leaks get caught in days, not at tax time."},
    {t:"Pick your trading strategy",s:"Choose how your money is invested, in plain words",trigger:"You decide to put money to work",steps:["Wealth Coach lays out the strategies side by side: index-plus-AI, momentum, low-volatility, dividend income","Shows each one's typical return, its worst year, and how bumpy the ride is","You pick one and set your risk level, how much to invest, and your loss limit"],
     ask:{q:"For a 10-year goal with a medium risk level, Core + AI fits best: mostly index, 20% traded by the bot. Use it?",o:["Yes, use Core + AI","Show me momentum instead","Ask me Saturday"],p:0,r:"Core + AI selected. Next: see how it holds up in a crash."},
     result:"You know exactly what your money is doing and why, before a dollar moves."},
@@ -335,7 +329,13 @@ const GOALS = [
     result:"No surprises: you've seen the bad years before they happen."},
    {t:"The AI runs it, every trading day",s:"Advanced models make the calls inside your limits",trigger:"Weekdays at 2:45 PM",steps:["The bot reads prices, trends, volatility and risk across the market","An AI model weighs the signals and decides the day's trades for your strategy","Every trade is logged with its reasons, and your limits and kill switch are always on","Every Saturday you get results against the index, in plain words"],
     ask:{q:"This month: +3.2% vs index +2.1%. The bot trimmed tech before Tuesday's drop. Add $500 from payday?",o:["Yes, add $500","Keep it as is","Show me the trades"],p:0,r:"$500 added after payday. Next report Saturday."},
-    result:"Your money is managed every trading day, with reasons you can read."}
+    result:"Your money is managed every trading day, with reasons you can read."},
+   {t:"Retirement on autopilot",s:"Every raise and every enrollment window",trigger:"Payday, a raise, or open enrollment",steps:["Wealth Coach checks you're contributing enough to get the full employer match","When pay goes up, suggests raising your contribution by 1% so take-home still rises","Checks the funds are low-cost and match your timeline","Puts the exact enrollment steps on your todo list before the window closes"],
+    ask:{q:"You got a 4% raise. Raise your 401(k) from 6% to 7%? Take-home still goes up $112 a month.",o:["Yes, add the steps to my list","Keep it at 6%","Ask me after payday"],p:0,r:"On your list for Thursday, 5 minutes, with the link."},
+    result:"Savings rise every year without ever feeling a pay cut."},
+   {t:"Spending on track for retirement",s:"A daily check against the plan",trigger:"6:15 AM balance check",steps:["Bookkeeper syncs balances and new transactions","Compares the month so far with the plan that funds your retirement goal","Flags drift early: new subscriptions, price increases, duplicate charges","Personal Coach counts it in your weekly score"],
+    ask:{q:"Dining out is $140 over plan with 9 days left. Want a cheap meal plan for the rest of the month?",o:["Yes, Health Coach plans it","No, I'll adjust myself","Remind me Friday"],p:0,r:"Meal plan for 9 days is ready, $62 of groceries in the cart."},
+    result:"Small leaks get caught in days, not at tax time."}
   ],sim:["trade","retire"]},
  {id:"health",tab:"💪 Health",ico:"💪",title:"Chisel the body you want",tag:"Lose fat, keep muscle, and eat well, with a plan that adjusts itself every week.",agents:["health","shop","sched","coach"],
   wf:[
@@ -448,7 +448,7 @@ const SIMS={
    el.querySelectorAll(".chip").forEach(b=>{const on=b.getAttribute("aria-pressed")==="true";b.style.background=on?"var(--accent)":"";b.style.color=on?"#fff":"";b.style.borderColor=on?"var(--accent)":""});
    const I=path(ST.index,SC[sc],y,a,m),S=path(ST[st],SC[sc],y,a,m);
    $("#tV").textContent=ST[st].v;$("#tA").textContent=money(I.d.at(-1));$("#tB").textContent=money(S.d.at(-1));$("#tBl").textContent=ST[st].n;$("#tL").textContent=ST[st].n;
-   $("#tW").textContent=SC[sc].crash?`Worst drop: ${Math.round(S.worst*100)}% vs index ${Math.round(I.worst*100)}%`:"";
+   $("#tW").textContent=SC[sc].crash?`Crash year: ${Math.round(ST[st].c*100)}% vs index ${Math.round(ST.index.c*100)}%`:"";
    $("#tCh").innerHTML=chart([{d:I.d,c:"var(--muted)",dash:1,lo:0},{d:S.d,c:"var(--accent)",lo:0}],{yfmt:v=>v>=1e6?"$"+(v/1e6).toFixed(1)+"M":"$"+Math.round(v/1e3)+"k",xlab:[[0,"Now"],[y,y+" yrs"]]});};
   el.querySelectorAll("[data-st]").forEach(b=>b.onclick=()=>{st=b.dataset.st;run()});
   el.querySelectorAll("[data-sc]").forEach(b=>b.onclick=()=>{sc=b.dataset.sc;run()});

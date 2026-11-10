@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Should</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="description" content="Put your life goals on autopilot. One human, twenty-one AI agents.">
+<meta property="og:title" content="Should">
+<meta property="og:description" content="Put your life goals on autopilot. One human, twenty-one AI agents.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f3ec; --card:#ffffff; --ink:#1d1b16; --muted:#6b665b; --line:#e4ded1;
+  --accent:#1f6f54; --accent-soft:#e3f0ea; --warm:#c8643b; --warm-soft:#f7e6dc;
+  --bubble-me:#1f6f54; --bubble-them:#ebe6da; --shade:rgba(20,18,12,.45);
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#14130f; --card:#1d1c17; --ink:#f1ede4; --muted:#a39d90; --line:#302d26;
+    --accent:#5cc49b; --accent-soft:#1d2e27; --warm:#e88a60; --warm-soft:#36231a;
+    --bubble-me:#2d7a5e; --bubble-them:#2a2822; --shade:rgba(0,0,0,.6); }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,-apple-system,sans-serif}
+body.locked{overflow:hidden}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;margin:0}
+h2{font-size:28px;margin-bottom:10px}
+section{padding:44px 0;border-top:1px solid var(--line)}
+p{margin:0 0 12px}
+.muted{color:var(--muted)}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:10px}
+button{font:inherit;color:inherit;cursor:pointer}
+
+/* brand */
+.brand{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.brand svg{width:40px;height:40px;flex:0 0 40px}
+.brand span{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:30px;letter-spacing:-.02em;line-height:1}
+.brand i{font-style:normal;color:var(--warm)}
+/* hero */
+.hero{padding:52px 0 36px}
+.hero .kicker{font-family:Fraunces,serif;font-size:20px;color:var(--accent);margin-bottom:6px}
+.hero h1{font-size:clamp(40px,11vw,68px);letter-spacing:-.02em}
+.hero .sub{font-size:19px;margin:14px 0 18px;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 8px;text-align:center}
+.stat b{display:block;font-family:Fraunces,serif;font-size:28px;color:var(--accent)}
+.stat span{font-size:13px;color:var(--muted)}
+.cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.btn{border:0;border-radius:999px;padding:12px 18px;font-weight:600;text-decoration:none;display:inline-block}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.ghost{background:var(--card);border:1px solid var(--line);color:var(--ink)}
+
+/* goal tabs */
+.tabs{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;margin:0 -18px;padding-left:18px;padding-right:18px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--line)}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:500;white-space:nowrap}
+.tab[aria-selected="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+.goal{padding-top:22px}
+.goal-head{display:flex;gap:14px;align-items:flex-start}
+.goal-ico{flex:0 0 52px;height:52px;border-radius:16px;background:var(--accent-soft);display:grid;place-items:center;font-size:26px}
+.goal h3{font-size:24px}
+.goal .tag{color:var(--muted);margin:4px 0 0}
+.who{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 4px}
+.who button{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:5px 10px;font-size:13px}
+.label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:20px 0 8px}
+
+/* workflow list */
+.wf{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
+.wf>button{width:100%;text-align:left;background:none;border:0;padding:14px;display:flex;gap:12px;align-items:center}
+.wf .num{flex:0 0 28px;height:28px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:600;font-size:14px}
+.wf .t{flex:1}
+.wf .t b{display:block;font-size:16px}
+.wf .t span{font-size:13px;color:var(--muted)}
+.wf .chev{transition:transform .2s;color:var(--muted)}
+.wf.open .chev{transform:rotate(90deg)}
+.wf .body{display:none;padding:0 14px 16px}
+.wf.open .body{display:block}
+.steps{list-style:none;margin:4px 0 0;padding:0;position:relative}
+.steps:before{content:"";position:absolute;left:13px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.steps li{position:relative;padding:6px 0 10px 38px;font-size:15px}
+.steps li .dot{position:absolute;left:4px;top:8px;width:20px;height:20px;border-radius:50%;background:var(--card);border:2px solid var(--accent);display:grid;place-items:center;font-size:11px}
+.steps li.trigger .dot{border-color:var(--warm)}
+.steps li small{display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.ask{background:var(--bubble-them);border-radius:16px 16px 16px 6px;padding:10px 12px;margin:6px 0;font-size:14px}
+.ask .opts{display:grid;gap:6px;margin-top:8px}
+.ask .opts button{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:8px 10px;text-align:left;font-size:14px}
+.ask .opts button.picked{background:var(--bubble-me);color:#fff;border-color:var(--bubble-me)}
+.reply{display:none;font-size:14px;background:var(--accent-soft);border-radius:12px;padding:10px 12px;margin-top:6px}
+.reply.show{display:block}
+.result{border-left:4px solid var(--accent);padding:6px 10px;font-size:15px;margin-top:6px}
+
+/* simulators */
+.sim{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-top:6px}
+.sim h4{font-family:Fraunces,serif;font-size:19px;margin:0 0 2px}
+.sim .note{font-size:12px;color:var(--muted);margin-top:8px}
+.ctl{display:grid;grid-template-columns:1fr auto;gap:2px 10px;align-items:center;margin-top:12px;font-size:14px}
+.ctl output{font-weight:600}
+.ctl input{grid-column:1/-1;width:100%;accent-color:var(--accent)}
+.big{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 6px}
+.big div{border-radius:12px;padding:10px;background:var(--bg)}
+.big b{display:block;font-family:Fraunces,serif;font-size:22px}
+.big span{font-size:12px;color:var(--muted)}
+.big .good b{color:var(--accent)}
+svg.chart{width:100%;height:auto;display:block;margin-top:8px}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+.legend i{display:inline-block;width:14px;height:3px;border-radius:2px;vertical-align:middle;margin-right:5px}
+
+/* staff grid */
+.staff{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:18px}
+@media(min-width:620px){.staff{grid-template-columns:repeat(4,1fr)}}
+.agent{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 10px;text-align:left;display:flex;flex-direction:column;gap:6px;min-height:104px}
+.agent .ico{width:36px;height:36px;border-radius:10px;background:var(--accent-soft);display:grid;place-items:center;font-size:18px}
+.agent b{font-family:Fraunces,serif;font-size:15px;line-height:1.2}
+.agent span{font-size:12px;color:var(--muted);line-height:1.3}
+.agent.lead{grid-column:1/-1;flex-direction:row;align-items:center;border-color:var(--accent);min-height:0}
+.agent.lead div{display:flex;flex-direction:column}
+.agent .soon{align-self:flex-start;font-size:10px;font-weight:600;color:var(--accent);background:var(--accent-soft);border-radius:6px;padding:1px 6px}
+.agent:has(.soon){opacity:.8;border-style:dashed}
+
+/* sheet */
+.shade{position:fixed;inset:0;background:var(--shade);opacity:0;pointer-events:none;transition:opacity .2s;z-index:20}
+.shade.on{opacity:1;pointer-events:auto}
+.sheet{position:fixed;left:0;right:0;bottom:0;max-height:86vh;overflow:auto;background:var(--bg);border-radius:22px 22px 0 0;padding:10px 18px 30px;transform:translateY(105%);transition:transform .25s ease;z-index:21;max-width:760px;margin:0 auto}
+.sheet.on{transform:none}
+.grab{width:44px;height:5px;border-radius:3px;background:var(--line);margin:4px auto 12px}
+.sheet .x{position:absolute;right:14px;top:12px;border:0;background:var(--card);border-radius:50%;width:34px;height:34px;font-size:18px}
+.kv{display:grid;gap:8px;margin-top:12px}
+.kv div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:14px}
+.kv small{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+
+/* timeline */
+.tl{list-style:none;padding:0;margin:16px 0 0;position:relative}
+.tl:before{content:"";position:absolute;left:62px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:52px 1fr;gap:22px;padding:8px 0;position:relative}
+.tl li:after{content:"";position:absolute;left:57px;top:15px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.tl time{font-weight:600;font-size:14px;text-align:right;padding-top:2px}
+.tl div{font-size:15px}
+.tl small{display:block;color:var(--muted);font-size:13px}
+
+/* phone */
+.phone{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:18px 14px;max-width:380px;margin:18px auto 0}
+.phone .whoname{text-align:center;font-size:13px;color:var(--muted);margin-bottom:10px}
+.msg{max-width:85%;padding:10px 13px;border-radius:18px;margin:6px 0;font-size:15px;line-height:1.4}
+.them{background:var(--bubble-them);border-bottom-left-radius:6px}
+.me{background:var(--bubble-me);color:#fff;margin-left:auto;border-bottom-right-radius:6px;width:max-content}
+.time{font-size:11px;color:var(--muted);text-align:center;margin:10px 0 4px}
+
+.rules{display:grid;gap:10px;margin-top:16px}
+.rule{background:var(--card);border-left:4px solid var(--warm);border-radius:10px;padding:12px 14px;font-size:15px}
+.rule b{display:block;margin-bottom:2px}
+.built{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:14px}
+.cta{background:var(--accent);color:#fff;border-radius:20px;padding:26px 20px;text-align:center}
+.cta h2{color:#fff}
+.cta p{color:rgba(255,255,255,.9);margin:0}
+footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<header class="hero">
+  <div class="brand"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="var(--accent)"/><path d="M17 34.5 L27.5 44.5 L45 23" fill="none" stroke="var(--card)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="16.5" r="5" fill="var(--warm)"/></svg><span>should<i>.</i></span></div>
+  <h1>Put your life goals on autopilot.</h1>
+  <p class="sub">A better job, a retirement that funds itself, a body you're proud of. Twenty-one AI agents work on it every day. You answer with 1, 2 or 3.</p>
+  <div class="stats">
+    <div class="stat"><b>21</b><span>AI agents</span></div>
+    <div class="stat"><b>7</b><span>life goals</span></div>
+    <div class="stat"><b>1</b><span>human in charge</span></div>
+  </div>
+  <div class="cta-row">
+    <a class="btn primary" href="#goals">See how it works</a>
+    <a class="btn ghost" href="#staff">Meet the staff</a>
+  </div>
+</header>
+
+<section id="goals" style="padding-top:20px">
+  <div class="eyebrow">Your goals, on autopilot</div>
+  <h2>Pick a goal. Watch the staff work it.</h2>
+  <p class="muted">Tap a workflow to see what starts it, what the agents do, where they ask you, and what you get. Every person, number and message here is made up.</p>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <div id="goal"></div>
+</section>
+
+<section>
+  <div class="eyebrow">How you talk to them</div>
+  <h2>Your whole life runs on three buttons</h2>
+  <p>No app to open. Your staff texts you one thing at a time, and you answer with a number.</p>
+  <div class="phone" aria-label="Example text conversation">
+    <div class="whoname">Executive Assistant</div>
+    <div class="time">8:00 AM</div>
+    <div class="msg them">Good morning, Sam. Today: 2 meetings, gym at 5:30, groceries arrive at 6. Most important: car registration is due Friday.</div>
+    <div class="msg them">Put it on today's list?<br><b>1</b> yes, at lunch · <b>2</b> tomorrow · <b>3</b> already done</div>
+    <div class="msg me">1</div>
+    <div class="msg them">Done. Today at 12:15, 10 minutes, with the link.</div>
+  </div>
+</section>
+
+<section id="staff">
+  <div class="eyebrow">Meet the staff</div>
+  <h2>Twenty-one jobs, one person</h2>
+  <p class="muted">Each agent has a written role, its own routines and rules it can't break. Tap one to see its job.</p>
+  <div class="staff" id="staffgrid"></div>
+</section>
+
+<section>
+  <div class="eyebrow">A day at the office</div>
+  <h2>While you sleep, they start work</h2>
+  <ul class="tl">
+    <li><time>2:30</time><div>Everything is backed up<small>Nightly, automatic</small></div></li>
+    <li><time>6:00</time><div>Scheduler lays out the day<small>Work, appointments, workouts, meals</small></div></li>
+    <li><time>6:15</time><div>Bookkeeper checks the money; job leads get scored<small>Bills flagged, recruiters screened</small></div></li>
+    <li><time>6:30</time><div>Executive Assistant writes the daily brief<small>What's due, what's late, what matters most</small></div></li>
+    <li><time>8:00</time><div>Your morning text arrives<small>One summary, one question</small></div></li>
+    <li><time>All day</time><div>Texts answered in seconds<small>Ask anything, a staff member answers</small></div></li>
+    <li><time>2:45</time><div>Practice trading bot runs<small>Play money only, on weekdays</small></div></li>
+    <li><time>Sat</time><div>Weekly sit-down with the Personal Coach<small>Score, wins, what slipped</small></div></li>
+    <li><time>Sun</time><div>Nobody works<small>Rest day. The staff enforces it.</small></div></li>
+  </ul>
+</section>
+
+<section>
+  <div class="eyebrow">The ground rules</div>
+  <h2>They work for you, not the other way around</h2>
+  <div class="rules">
+    <div class="rule"><b>Nothing happens without your yes</b>Nothing gets bought, sent, booked or deleted until you approve that exact thing. They fill the cart; you check out.</div>
+    <div class="rule"><b>One question at a time</b>Every question comes with three options. No walls of text.</div>
+    <div class="rule"><b>Quiet hours</b>No texts between 9 PM and 8 AM, and nothing on Sundays.</div>
+    <div class="rule"><b>No secrets stored</b>No passwords, no full account numbers. They can't sign in for you.</div>
+    <div class="rule"><b>Everything is logged</b>Every change has a name on it, so you can see who did what.</div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">What it's built with</div>
+  <h2>Off-the-shelf parts</h2>
+  <p>No custom AI model and no startup. It's Claude, connected to the services you already use, running on a laptop at home.</p>
+  <div class="built">
+    <span class="chip">Claude</span><span class="chip">Claude Code</span><span class="chip">Email</span><span class="chip">Calendar</span><span class="chip">Todo list</span><span class="chip">Texting</span><span class="chip">A database</span><span class="chip">Browser</span>
+  </div>
+</section>
+
+<section>
+  <div class="cta">
+    <h2>Want a staff of your own?</h2>
+    <p>I'm building this in public, and in 2028 I want to bring people to Costa Rica for a week to build theirs together. If that sounds like you, tell me.</p>
+  </div>
+</section>
+
+<footer>Should (formerly Staff of One) · built by Rod Johnson with Claude · "Sam" and every number on this page are made up</footer>
+</main>
+
+<div class="shade" id="shade"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+  <div class="grab"></div>
+  <button class="x" id="sheetX" aria-label="Close">×</button>
+  <div id="sheetBody"></div>
+</div>
+
+<script>
+const AGENTS = {
+  ea:{n:"Executive Assistant",i:"🧭",job:"Runs the staff. Plans your day, texts you at 8 AM, handles your replies and hands work to the others.",routines:["Daily brief, 6:30 AM","Morning text, 8:00 AM","Reply desk, all day"],never:"Texts you more than one question at a time."},
+  book:{n:"Bookkeeper",i:"📒",job:"Balances, bills and spending, checked every morning before you're up.",routines:["Balance check, 6:15 AM"],never:"Moves money. It only reads."},
+  credit:{n:"Credit Advisor",i:"📈",job:"Watches your credit at all three bureaus, turns problems and opportunities into a ranked to-do list, and lays out each credit decision with its options.",routines:["Credit check, Saturdays"],never:"Opens, closes or disputes anything without your yes."},
+  sched:{n:"Scheduler",i:"🗓️",job:"Owns your time. The other agents ask it when you're free.",routines:["Day plan, 6:00 AM"],never:"Books anything on a Sunday."},
+  pi:{n:"Private Investigator",i:"🔎",job:"Works out who unknown numbers are, vets people and businesses, spots scams.",routines:["New-contact check, weekly"],never:"Digs into private people."},
+  health:{n:"Health Coach",i:"🥗",job:"Training plan, meal plans and recipes, weigh-ins, and the grocery cart.",routines:["Meal plan, every 2 weeks","Grocery cart, Saturdays","Scale sync, weekly"],never:"Checks out. You do."},
+  coach:{n:"Personal Coach",i:"🏁",job:"Grades your week against the goals you set, runs a Saturday sit-down, and helps you quit or cut back a habit with private check-ins and no shame.",routines:["Scorecard, Saturdays 9:30","Habit check-in, daily"],never:"Shames you, or shares your check-ins with anyone."},
+  career:{n:"Career Assistant",i:"💼",job:"Scores job leads, drafts recruiter replies and negotiation answers, keeps your resume current.",routines:["Lead scan, 6:15 AM"],never:"Accepts an offer or a number."},
+  wealth:{n:"Wealth Coach",i:"📈",job:"Retirement, investing and long-term planning. Runs a practice trading bot with play money.",routines:["Practice bot, weekdays 2:45 PM","Weekly digest vs the market"],never:"Uses real money."},
+  travel:{n:"Travel Agent",i:"✈️",job:"Watches fares, finds stays and cars, tracks miles and credits.",routines:["Fare watch, Tuesdays"],never:"Books. It sends you the link."},
+  shop:{n:"Shopping Expert",i:"🛒",job:"Knows what you're running low on, researches big buys, watches prices.",routines:["Deal check, weekly"],never:"Buys anything."},
+  house:{n:"Housekeeper",i:"🏠",job:"Cleaning service, chores and household supplies, inside a monthly budget.",routines:["Prep list before each cleaning"],never:"Books or pays the cleaner."},
+  fix:{n:"Handyman",i:"🔧",job:"Tell it what's broken. It works out whether the landlord or a hired handyman should fix it, then drafts the message for your yes.",routines:["Repair follow-up, until it's fixed"],never:"Sends the message or hires anyone without your yes."},
+  move:{n:"Relocation Expert",i:"📦",job:"Finds your next home within budget, plans the move week by week, and gets the other agents ready for it: new address, utilities, the calendar.",routines:["Listing check, while you're searching"],never:"Signs a lease, pays a deposit or books movers without your yes."},
+  gift:{n:"Gift Concierge",i:"🎁",job:"Every birthday and occasion: picks a gift in budget and has it in the cart in time.",routines:["Birthday check, 3 weeks ahead"],never:"Checks out."},
+  legal:{n:"Legal Advisor",i:"⚖️",job:"Reads paperwork and writes the questions to ask a real lawyer.",routines:["On request"],never:"Files anything or contacts anyone."},
+  music:{n:"Music Coach",i:"🎹",job:"Records what you play on the piano and turns it into sheet music.",routines:["On request"],never:"Gives lessons you didn't ask for."},
+  web:{n:"Webmaster",i:"🖥️",job:"Builds your personal dashboard, where every agent has a desk.",routines:["On request"],never:"Publishes without your yes."},
+  pr:{n:"PR Person",i:"📣",job:"Drafts your posts and keeps your public profiles consistent.",routines:["Weekly drafts, Mondays"],never:"Posts. You do."},
+  media:{n:"Media Concierge",i:"🎬",job:"Knows your taste in film, picks tonight's movie and tells you where to stream it.",routines:["On request"],never:"Buys or rents anything without your yes."},
+  pm:{n:"Product Manager",i:"🧩",job:"Runs Should itself like a product: the name, the look, this page, and what the staff should learn to do next.",routines:["Roadmap, as you ask for things"],never:"Changes this page's words without your yes."},
+  rel:{n:"Relationship Coach",i:"💬",soon:true,job:"Helps you stay close to the people who matter, starting with your partner: remembers what matters to them, nudges you to check in, and helps plan time together.",routines:["Coming soon"],never:"Reads or sends your private messages, or shares anything about the people you love."},
+};
+
+const GOALS = [
+ {id:"career",tab:"💼 Career",ico:"💼",title:"A better job, on autopilot",tag:"Find better roles, negotiate harder, and keep your resume ready without thinking about it.",agents:["career","pi","pr","sched"],
+  wf:[
+   {t:"Better jobs find you",s:"Every morning, leads get scored",trigger:"6:15 AM: new recruiter messages and job alerts",steps:["Career Assistant reads every new message and job alert","Scores each one against your must-haves: base pay, remote, benefits, retirement match","Private Investigator screens the recruiter: real company, real person, no red flags","Drafts a reply that asks for the pay range before you spend a minute on a call"],
+    ask:{q:"Recruiter: Director of Platform, fully remote, pay not stated. Strong fit.",o:["Send the drafted reply asking for the range","Skip this one","Ask me tomorrow"],p:0,r:"Sent. Follow-up is set for Friday if they don't answer."},
+    result:"You only talk to recruiters whose roles fit, and the pay question gets asked up front."},
+   {t:"Negotiate the offer",s:"From the offer email to a counter you approve",trigger:"An offer arrives by email",steps:["Career Assistant pulls out base, bonus, equity, benefits and the retirement match","Compares it with your floor and with market data for the role","Works out the value of the whole package over 5 years, not just the base","Drafts a polite counter with a specific number and the reason for it"],
+    ask:{q:"Offer: $160,000 base. Your floor is $165,000 and the market is $170–185k. Counter at $178,000?",o:["Yes, send the counter as drafted","Counter at $170,000 instead","Let me think, ask tonight"],p:0,r:"Counter drafted and sent from your email. You'll see their answer first."},
+    result:"Most people never counter. One email here is worth thousands a year, every year after."},
+   {t:"A resume that keeps up",s:"Wins get captured as they happen",trigger:"You finish a project, or text: \"we shipped it\"",steps:["Career Assistant asks one question: what changed, and how much?","Turns it into a resume bullet with a number","Updates the resume and drafts the matching profile change","PR Person checks the public profile tells the same story"],
+    ask:{q:"New bullet: \"Cut release time from 2 weeks to 2 days for 6 teams.\" Add it?",o:["Add it and rebuild the PDF","Edit the wording first","Skip"],p:0,r:"Resume rebuilt. The profile change is waiting for your OK."},
+    result:"Your resume is always current, so an opportunity never waits on a weekend rewrite."},
+   {t:"Your network, remembered",s:"Follow-ups that don't slip",trigger:"You have a call with someone new",steps:["The contact is saved with how you met and what you talked about","A follow-up lands on your todo list three weeks later","Their birthday and job changes get noted when they come up"],
+    ask:{q:"You met Alex (VP Engineering) last month. Send a quick check-in?",o:["Yes, send the draft","Remind me next week","Skip"],p:0,r:"Sent. Alex is set to resurface in 2 months."},
+    result:"Relationships stay warm without a spreadsheet."}
+  ],sim:"negotiate"},
+ {id:"wealth",tab:"📈 Wealth",ico:"📈",title:"Retirement that funds itself",tag:"Never leave the employer match on the table, keep spending on track, and see where you'll land.",agents:["wealth","book","coach"],
+  wf:[
+   {t:"Retirement on autopilot",s:"Every raise and every enrollment window",trigger:"Payday, a raise, or open enrollment",steps:["Wealth Coach checks you're contributing enough to get the full employer match","When pay goes up, suggests raising your contribution by 1% so take-home still rises","Checks the funds are low-cost and match your timeline","Puts the exact enrollment steps on your todo list before the window closes"],
+    ask:{q:"You got a 4% raise. Raise your 401(k) from 6% to 7%? Take-home still goes up $112 a month.",o:["Yes, add the steps to my list","Keep it at 6%","Ask me after payday"],p:0,r:"On your list for Thursday, 5 minutes, with the link."},
+    result:"Savings rise every year without ever feeling a pay cut."},
+   {t:"Spending on track for retirement",s:"A daily check against the plan",trigger:"6:15 AM balance check",steps:["Bookkeeper syncs balances and new transactions","Compares the month so far with the plan that funds your retirement goal","Flags drift early: new subscriptions, price increases, duplicate charges","Personal Coach counts it in your weekly score"],
+    ask:{q:"Dining out is $140 over plan with 9 days left. Want a cheap meal plan for the rest of the month?",o:["Yes, Health Coach plans it","No, I'll adjust myself","Remind me Friday"],p:0,r:"Meal plan for 9 days is ready, $62 of groceries in the cart."},
+    result:"Small leaks get caught in days, not at tax time."},
+   {t:"Practice before you invest",s:"A trading bot with play money",trigger:"Weekdays at 2:45 PM",steps:["Wealth Coach runs a rules-based strategy on a practice account","Every Saturday it compares results with simply buying the index","Only after months of evidence does anything get discussed with real money"],
+    ask:{q:"Practice bot this week: +0.8% vs index +1.1%. Keep testing?",o:["Keep testing","Pause it","Show me the details"],p:0,r:"Testing continues. Next digest Saturday."},
+    result:"You learn what works without risking a dollar."}
+  ],sim:"retire"},
+ {id:"health",tab:"💪 Health",ico:"💪",title:"Chisel the body you want",tag:"Lose fat, keep muscle, and eat well, with a plan that adjusts itself every week.",agents:["health","shop","sched","coach"],
+  wf:[
+   {t:"Body recomposition",s:"Weekly weigh-in, weekly adjustment",trigger:"Smart scale sync on Sunday morning",steps:["Health Coach reads weight and body fat trend (7-day average, not one bad day)","If you're losing too fast, adds food to protect muscle; too slow, trims a little","Sets protein first, then calories","Scheduler protects 3 workout slots in your week"],
+    ask:{q:"Down 1.4 lb this week, a bit fast. Add 150 calories (a protein snack) to keep muscle?",o:["Yes, adjust the plan","Keep it as is","Ask me next week"],p:0,r:"Plan updated: +150 calories, protein stays at 180 g."},
+    result:"Steady fat loss that keeps the muscle, so the shape actually changes."},
+   {t:"Meals and groceries, handled",s:"Plan, recipes, cart",trigger:"Every other Friday",steps:["Health Coach plans two weeks of meals you actually like","Writes the recipes and a prep plan for Sunday afternoon","Fills the grocery cart with exactly what the plan needs","Shopping Expert swaps in cheaper items when prices change"],
+    ask:{q:"Next 2 weeks: 14 dinners, cart is $148. Check out?",o:["I'll check out now (link)","Swap fish for chicken","Remind me tonight"],p:0,r:"Link sent. Delivery Saturday 9–11 AM."},
+    result:"No 6 PM \"what's for dinner\". The plan and the cart are already done."},
+   {t:"Training that adapts",s:"Progress without guesswork",trigger:"You log a workout by text",steps:["Health Coach records sets and weights","Adds weight when you hit the top of the rep range","Swaps exercises if something hurts"],
+    ask:{q:"You hit 3×10 on squats at 135. Go to 145 next time?",o:["Yes","Stay at 135 one more week","Swap the exercise"],p:0,r:"Next squat day: 145 × 8."},
+    result:"Every week a little stronger, without a trainer."},
+   {t:"Quit a habit, without shame",s:"Sam is quitting vaping",trigger:"Sam texts: \"I want to quit vaping\"",steps:["Personal Coach asks why, and writes the reason down where Sam will see it again","Looks at the bigger picture: sleep, stress, friends, purpose. What the habit is doing for Sam, and what could replace it","Sets a quit date and a plan for the hardest moments (after meals, stressful calls)","Checks in privately once a day by text, and keeps a streak","If there's a slip, no lecture: what happened, what helps next time, and the streak restarts","Shares support: the free quitline (1-800-QUIT-NOW in the US) and a doctor for medication options"],
+    ask:{q:"Day 30 without vaping. 🎉 How was today?",o:["Good, no cravings","Hard, but I held on","I slipped"],p:0,rs:["30 days! That's about $150 saved. Want to put it toward the trip you mentioned?","That's the win that counts. Hard days held are how streaks get built. Proud of you.","Thanks for telling me. One slip doesn't erase 29 days. What was going on? We'll plan for that moment, and tomorrow is day 1 of the next streak."]},
+    result:"A private coach in your pocket who notices the streak, forgives the slip, and keeps the reason in front of you."}
+  ],sim:"body"},
+ {id:"money",tab:"💳 Money",ico:"💳",title:"Bills never late, fraud caught early",tag:"The day-to-day money stuff that quietly costs you if you miss it.",agents:["book","pi","ea"],
+  wf:[
+   {t:"Bills that pay on time",s:"Three days ahead, with the link",trigger:"A bill is due in 3 days and isn't on autopay",steps:["Bookkeeper sees the due date and the amount","Checks there's enough in checking","Executive Assistant texts you the exact amount and the pay link"],
+    ask:{q:"Water bill $46.18 is due Thursday, not on autopay.",o:["Send me the pay link now","Remind me Wednesday","Already paid"],p:0,r:"Link sent. Marked paid when the charge clears."},
+    result:"No late fees, no surprises."},
+   {t:"Odd charges get questioned",s:"Fraud and duplicates",trigger:"A charge that doesn't match your patterns",steps:["Bookkeeper spots a duplicate, a new merchant, or an odd amount","Private Investigator checks the merchant","If it's wrong, the dispute steps go on your list with the phone number"],
+    ask:{q:"Two identical $6.75 charges at the same coffee shop, 1 minute apart.",o:["Add a dispute task","It's fine, I bought two","Ask me later"],p:0,r:"Dispute task added for tomorrow, 5 minutes."},
+    result:"Mistakes and fraud get caught in days."}
+  ]},
+ {id:"time",tab:"🗓️ Time",ico:"🗓️",title:"Your day, planned before you wake",tag:"The calendar works for you: priorities first, rest protected.",agents:["sched","ea","coach"],
+  wf:[
+   {t:"The day plan",s:"6:00 AM, every day",trigger:"6:00 AM",steps:["Scheduler reads the calendar, the todo list and how long each task takes","Puts fixed things first, then anything that costs money if missed","Fits 2–3 personal tasks around work, never 20","Moves what doesn't fit to another day and tells you what moved"],
+    ask:{q:"Today is overloaded. Move \"call the bank\" and \"sort photos\" to Saturday?",o:["Yes, move both","Move only the photos","Keep them today"],p:0,r:"Moved. Today now fits in your free time."},
+    result:"A day you can actually finish."},
+   {t:"Sunday stays Sunday",s:"A rest day the staff protects",trigger:"Anything tries to land on a Sunday",steps:["Scheduler moves it to Monday (or Saturday if the deadline is sooner)","No texts, no prompts, no chores on Sunday"],
+    ask:null,result:"One day a week with nothing to do."}
+  ]},
+ {id:"home",tab:"🏠 Home & family",ico:"🏠",title:"Home and family, remembered",tag:"Birthdays, chores and the house, without carrying it all in your head.",agents:["gift","house","shop","sched"],
+  wf:[
+   {t:"Birthdays that never sneak up",s:"Three weeks ahead",trigger:"A birthday is 3 weeks away",steps:["Gift Concierge looks at what they like and your budget","Picks a gift (or a card at minimum)","Puts it in the cart so it arrives on time"],
+    ask:{q:"Your sister's birthday is the 28th. Gift: a $35 cookbook she mentioned. In the cart.",o:["Check out (link)","Pick something else","Just a card this year"],p:0,r:"Link sent. Arrives the 24th."},
+    result:"Nobody gets forgotten."},
+   {t:"The house runs itself",s:"Cleaning, chores, supplies",trigger:"A cleaning visit tomorrow",steps:["Housekeeper sends a 10-minute prep list","Checks supplies and restocks through the Shopping Expert","Keeps cleaning spend inside the monthly budget"],
+    ask:{q:"Cleaners come tomorrow at 10. Running low on dish soap and trash bags. Add to cart?",o:["Yes","Only trash bags","Skip"],p:0,r:"Added. Arrives tomorrow morning."},
+    result:"Less mental load, a cleaner home."}
+  ]},
+ {id:"trust",tab:"🔎 Trust & legal",ico:"🔎",title:"Know who you're dealing with",tag:"Unknown numbers, scams and paperwork, checked before they become problems.",agents:["pi","legal"],
+  wf:[
+   {t:"Who is this number?",s:"Before you answer",trigger:"A text or call from an unknown number",steps:["Private Investigator checks your messages, email and contacts for clues","Checks public sources and scam reports","Saves the name, or warns you"],
+    ask:{q:"Unknown number says it's your bank and wants a code. 23 scam reports on this number.",o:["Block and report it","Save as \"scam\"","Ask me later"],p:0,r:"Flagged. Never share codes by text."},
+    result:"Fewer scams, fewer awkward \"who's this?\" replies."},
+   {t:"Paperwork, decoded",s:"Before you sign or call a lawyer",trigger:"A contract, lease or legal letter arrives",steps:["Legal Advisor summarizes it in plain words","Lists what it requires of you and by when","Writes the questions to take to a real lawyer"],
+    ask:{q:"Lease renewal: rent up 6%, 60-day notice to leave. Add the notice deadline to your calendar?",o:["Yes","No","Ask later"],p:0,r:"Deadline added, with a reminder 2 weeks before."},
+    result:"No surprises hiding in the fine print."}
+  ]}
+];
+
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const money=n=>"$"+Math.round(n).toLocaleString("en-US");
+
+function renderTabs(active){
+  $("#tabs").innerHTML=GOALS.map(g=>`<button class="tab" role="tab" aria-selected="${g.id===active}" data-g="${g.id}">${g.tab}</button>`).join("");
+}
+function renderGoal(id){
+  const g=GOALS.find(x=>x.id===id); renderTabs(id);
+  let h=`<div class="goal"><div class="goal-head"><div class="goal-ico">${g.ico}</div><div><h3>${esc(g.title)}</h3><p class="tag">${esc(g.tag)}</p></div></div>
+  <div class="who">${g.agents.map(a=>`<button data-agent="${a}">${AGENTS[a].i} ${AGENTS[a].n}</button>`).join("")}</div>
+  <div class="label">Workflows</div>`;
+  g.wf.forEach((w,i)=>{
+    h+=`<div class="wf${i===0?" open":""}"><button aria-expanded="${i===0}"><span class="num">${i+1}</span><span class="t"><b>${esc(w.t)}</b><span>${esc(w.s)}</span></span><span class="chev">›</span></button><div class="body"><ol class="steps">
+      <li class="trigger"><span class="dot">⚡</span><small>Trigger</small>${esc(w.trigger)}</li>
+      ${w.steps.map((s,j)=>`<li><span class="dot">${j+1}</span>${esc(s)}</li>`).join("")}
+      ${w.ask?`<li><span class="dot">📱</span><small>You decide</small><div class="ask">${esc(w.ask.q)}<div class="opts">${w.ask.o.map((o,k)=>`<button data-reply="${esc(w.ask.rs?w.ask.rs[k]:(k===w.ask.p?w.ask.r:(k===2?"OK. I'll ask again later.":"Got it. Nothing happens.")))}"><b>${k+1}</b> = ${esc(o)}</button>`).join("")}</div><div class="reply"></div></div></li>`:""}
+      <li><span class="dot">✓</span><small>Result</small><div class="result">${esc(w.result)}</div></li></ol></div></div>`;
+  });
+  if(g.sim) h+=`<div class="label">Try it</div><div id="sim"></div>`;
+  h+=`</div>`;
+  $("#goal").innerHTML=h;
+  if(g.sim) SIMS[g.sim]($("#sim"));
+}
+
+/* ---------- simulators ---------- */
+function chart(series,{w=320,h=170,yfmt=v=>v,xlab=[]}={}){
+  const all=series.flatMap(s=>s.d); const max=Math.max(...all), min=Math.min(0,...all)*0+Math.min(...series.map(s=>s.min??Math.min(...s.d)));
+  const lo=series[0].lo??min, hi=max*1.05; const n=series[0].d.length;
+  const X=i=>34+(w-44)*i/(n-1), Y=v=>h-22-(h-34)*(v-lo)/(hi-lo||1);
+  let g=`<svg class="chart" viewBox="0 0 ${w} ${h}" role="img">`;
+  [0,.5,1].forEach(f=>{const v=lo+(hi-lo)*f; g+=`<line x1="34" x2="${w-10}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="30" y="${Y(v)+4}" font-size="10" text-anchor="end" fill="var(--muted)">${yfmt(v)}</text>`});
+  xlab.forEach(([i,t])=>g+=`<text x="${X(i)}" y="${h-6}" font-size="10" text-anchor="${i===0?'start':i===n-1?'end':'middle'}" fill="var(--muted)">${t}</text>`);
+  series.forEach(s=>{g+=`<polyline fill="none" stroke="${s.c}" stroke-width="2.5" stroke-linejoin="round" ${s.dash?'stroke-dasharray="5 4"':''} points="${s.d.map((v,i)=>X(i).toFixed(1)+","+Y(v).toFixed(1)).join(" ")}"/>`});
+  return g+`</svg>`;
+}
+function ctl(id,label,min,max,step,val,fmt){return `<label class="ctl" for="${id}"><span>${label}</span><output id="${id}o">${fmt(val)}</output><input type="range" id="${id}" min="${min}" max="${max}" step="${step}" value="${val}"></label>`}
+
+const SIMS={
+ retire(el){
+  el.innerHTML=`<div class="sim"><h4>Simulate your retirement</h4><p class="muted" style="margin:0;font-size:14px">Sam, 38, earns $110,000 and has $45,000 saved. Slide to see what autopilot changes.</p>
+   ${ctl("ra","Contributing now","2","15","1","5",v=>v+"% of pay")}
+   ${ctl("rm","Employer match up to","0","6","1","4",v=>v+"%")}
+   ${ctl("rr","Yearly return","3","9","0.5","6",v=>v+"%")}
+   <div class="big"><div><span>Today's pace at 65</span><b id="rA"></b></div><div class="good"><span>On autopilot at 65</span><b id="rB"></b></div></div>
+   <div class="legend"><span><i style="background:var(--muted)"></i>Today's pace</span><span><i style="background:var(--accent)"></i>Autopilot: full match + 1% more each raise, up to 15%</span></div>
+   <div id="rC"></div><p class="note">Illustration only, in today's dollars, with 2.5% yearly raises. Not financial advice.</p></div>`;
+  const run=()=>{
+   const a=+$("#ra").value,m=+$("#rm").value,r=+$("#rr").value/100;
+   $("#rao").textContent=a+"% of pay";$("#rmo").textContent=m+"%";$("#rro").textContent=r*100+"%";
+   let A=45000,B=45000,pay=110000,pctB=Math.max(a,m),da=[],db=[];
+   for(let y=38;y<=65;y++){da.push(A);db.push(B);
+     A=A*(1+r)+pay*(a+Math.min(a,m))/100; B=B*(1+r)+pay*(pctB+m)/100; pay*=1.025; pctB=Math.min(15,pctB+1);}
+   $("#rA").textContent=money(da.at(-1));$("#rB").textContent=money(db.at(-1));
+   $("#rC").innerHTML=chart([{d:da,c:"var(--muted)",dash:1,lo:0},{d:db,c:"var(--accent)",lo:0}],{yfmt:v=>v>=1e6?"$"+(v/1e6).toFixed(1)+"M":"$"+Math.round(v/1e3)+"k",xlab:[[0,"38"],[12,"50"],[27,"65"]]});
+  };
+  el.querySelectorAll("input").forEach(i=>i.oninput=run);run();
+ },
+ negotiate(el){
+  el.innerHTML=`<div class="sim"><h4>What one counteroffer is worth</h4><p class="muted" style="margin:0;font-size:14px">Raises are a percentage of base, so a better start compounds for your whole career.</p>
+   ${ctl("na","Offer base","80000","300000","5000","160000",money)}
+   ${ctl("nb","Negotiated up by","0","15","1","8",v=>v+"%")}
+   ${ctl("nc","Years at this level and above","5","25","1","15",v=>v+" years")}
+   <div class="big"><div><span>Extra in year one</span><b id="nA"></b></div><div class="good"><span>Extra over the whole span</span><b id="nB"></b></div></div>
+   <div class="legend"><span><i style="background:var(--muted)"></i>Took the first offer</span><span><i style="background:var(--accent)"></i>Countered once</span></div>
+   <div id="nC"></div><p class="note">Illustration with 3% yearly raises on base pay only. Bonus and match usually follow base, so the real gap is bigger.</p></div>`;
+  const run=()=>{
+   const a=+$("#na").value,b=+$("#nb").value/100,y=+$("#nc").value;
+   $("#nao").textContent=money(a);$("#nbo").textContent=Math.round(b*100)+"%";$("#nco").textContent=y+" years";
+   let p=a,q=a*(1+b),tot=0,da=[],db=[];
+   for(let i=0;i<y;i++){da.push(p);db.push(q);tot+=q-p;p*=1.03;q*=1.03;}
+   $("#nA").textContent=money(a*b);$("#nB").textContent=money(tot);
+   $("#nC").innerHTML=chart([{d:da,c:"var(--muted)",dash:1,lo:a*.9},{d:db,c:"var(--accent)",lo:a*.9}],{yfmt:v=>"$"+Math.round(v/1e3)+"k",xlab:[[0,"Year 1"],[y-1,"Year "+y]]});
+  };
+  el.querySelectorAll("input").forEach(i=>i.oninput=run);run();
+ },
+ body(el){
+  el.innerHTML=`<div class="sim"><h4>Project your body recomposition</h4><p class="muted" style="margin:0;font-size:14px">Sam starts at 210 lb and 28% body fat, lifting 3 times a week with high protein.</p>
+   ${ctl("ba","Goal weight","170","205","1","185",v=>v+" lb")}
+   ${ctl("bb","Pace","0.5","2","0.25","1",v=>v+" lb/week")}
+   <div class="big"><div><span>Reach goal in</span><b id="bA"></b></div><div class="good"><span>Body fat at goal</span><b id="bB"></b></div></div>
+   <div class="legend"><span><i style="background:var(--accent)"></i>Weight (lb)</span></div>
+   <div id="bC"></div>
+   <div class="legend" style="margin-top:10px"><span><i style="background:var(--warm)"></i>Body fat (%)</span></div>
+   <div id="bD"></div><p class="note">Illustration only. With lifting and enough protein, most weight lost is fat; faster than about 1% of body weight a week loses more muscle.</p></div>`;
+  const run=()=>{
+   const goal=+$("#ba").value,rate=+$("#bb").value;
+   $("#bao").textContent=goal+" lb";$("#bbo").textContent=rate+" lb/week";
+   let w=210,fat=210*.28,wk=0,dw=[],df=[];
+   const fatShare=rate<=1?.9:rate<=1.5?.8:.7;
+   while(w>goal&&wk<104){dw.push(w);df.push(fat/w*100);const d=Math.min(rate,w-goal);w-=d;fat-=d*fatShare;wk++;}
+   dw.push(w);df.push(fat/w*100);
+   $("#bA").textContent=wk+" weeks";$("#bB").textContent=(fat/w*100).toFixed(1)+"%";
+   const xl=[[0,"Now"],[dw.length-1,"Week "+wk]];
+   $("#bC").innerHTML=chart([{d:dw,c:"var(--accent)",lo:Math.min(...dw)-8}],{h:140,yfmt:v=>Math.round(v)+"",xlab:xl});
+   $("#bD").innerHTML=chart([{d:df,c:"var(--warm)",lo:Math.min(...df)-3}],{h:120,yfmt:v=>Math.round(v)+"%",xlab:xl});
+  };
+  el.querySelectorAll("input").forEach(i=>i.oninput=run);run();
+ }
+};
+
+/* ---------- staff + sheet ---------- */
+function renderStaff(){
+  const order=Object.keys(AGENTS);
+  $("#staffgrid").innerHTML=order.map(k=>{const a=AGENTS[k];const lead=k==="ea";
+    return `<button class="agent${lead?" lead":""}" data-agent="${k}"><span class="ico">${a.i}</span><div><b>${a.n}</b>${a.soon?`<span class="soon">Coming soon</span>`:""}<span>${esc(lead?"Runs the staff. Tap any agent to see its job.":a.job.split(".")[0])}</span></div></button>`}).join("");
+}
+function openAgent(k){
+  const a=AGENTS[k]; const goals=GOALS.filter(g=>g.agents.includes(k));
+  $("#sheetBody").innerHTML=`<div style="display:flex;gap:12px;align-items:center;margin:4px 40px 6px 0"><div class="goal-ico">${a.i}</div><h3 id="sheetTitle" style="font-size:24px">${a.n}</h3></div>
+   <p>${esc(a.job)}</p>
+   <div class="kv"><div><small>Routines</small>${a.routines.map(esc).join(" · ")}</div>
+   <div><small>Never</small>${esc(a.never)}</div>
+   ${goals.length?`<div><small>Works on</small>${goals.map(g=>`<button class="tab" style="margin:6px 6px 0 0" data-jump="${g.id}">${g.tab}</button>`).join("")}</div>`:""}
+   <div><small>Reports to</small>${k==="ea"?"You":"Executive Assistant"}</div></div>`;
+  $("#shade").classList.add("on");$("#sheet").classList.add("on");document.body.classList.add("locked");$("#sheetX").focus();
+}
+function closeSheet(){$("#shade").classList.remove("on");$("#sheet").classList.remove("on");document.body.classList.remove("locked")}
+
+document.addEventListener("click",e=>{
+  const t=e.target.closest("[data-g],[data-agent],[data-jump],.wf>button,[data-reply]");
+  if(!t)return;
+  if(t.dataset.g){renderGoal(t.dataset.g);}
+  else if(t.dataset.agent){openAgent(t.dataset.agent);}
+  else if(t.dataset.jump){closeSheet();renderGoal(t.dataset.jump);$("#goals").scrollIntoView();}
+  else if(t.dataset.reply!==undefined){const box=t.closest(".ask");box.querySelectorAll("button").forEach(b=>b.classList.remove("picked"));t.classList.add("picked");const r=box.querySelector(".reply");r.textContent=t.dataset.reply;r.classList.add("show");}
+  else{const wf=t.parentElement;wf.classList.toggle("open");t.setAttribute("aria-expanded",wf.classList.contains("open"));}
+});
+$("#shade").onclick=closeSheet;$("#sheetX").onclick=closeSheet;
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeSheet()});
+renderGoal("career");renderStaff();
+</script>
+</body>
+</html>

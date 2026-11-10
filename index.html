@@ -388,7 +388,7 @@ const GOALS = [
    {t:"Sunday stays Sunday",s:"A rest day the staff protects",trigger:"Anything tries to land on a Sunday",steps:["Scheduler moves it to Monday (or Saturday if the deadline is sooner)","No texts, no prompts, no chores on Sunday"],
     ask:null,result:"One day a week with nothing to do."}
   ]},
- {id:"home",tab:"🏠 Home & family",ico:"🏠",title:"Home and family, remembered",tag:"Birthdays, chores and the house, without carrying it all in your head.",agents:["gift","house","shop","sched"],
+ {id:"home",tab:"🏠 Home & family",ico:"🏠",title:"Home and family, remembered",tag:"Birthdays, chores and the house, without carrying it all in your head.",agents:["rel","gift","house","shop","sched"],
   wf:[
    {t:"Birthdays that never sneak up",s:"Three weeks ahead",trigger:"A birthday is 3 weeks away",steps:["Gift Concierge looks at what they like and your budget","Picks a gift (or a card at minimum)","Puts it in the cart so it arrives on time"],
     ask:{q:"Your sister's birthday is the 28th. Gift: a $35 cookbook she mentioned. In the cart.",o:["Check out (link)","Pick something else","Just a card this year"],p:0,r:"Link sent. Arrives the 24th."},

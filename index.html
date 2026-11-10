@@ -221,7 +221,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
     <li><time>6:30</time><div>Executive Assistant writes the daily brief<small>What's due, what's late, what matters most</small></div></li>
     <li><time>8:00</time><div>Your morning text arrives<small>One summary, one question</small></div></li>
     <li><time>All day</time><div>Texts answered in seconds<small>Ask anything, a staff member answers</small></div></li>
-    <li><time>2:45</time><div>Practice trading bot runs<small>Play money only, on weekdays</small></div></li>
+    <li><time>2:45</time><div>AI trading bot makes its calls<small>On the strategy you chose, weekdays</small></div></li>
     <li><time>Sat</time><div>Weekly sit-down with the Personal Coach<small>Score, wins, what slipped</small></div></li>
     <li><time>Sun</time><div>Nobody works<small>Rest day. The staff enforces it.</small></div></li>
   </ul>
@@ -275,7 +275,7 @@ const AGENTS = {
   health:{n:"Health Coach",i:"🥗",job:"Training plan, meal plans and recipes, weigh-ins, and the grocery cart.",routines:["Meal plan, every 2 weeks","Grocery cart, Saturdays","Scale sync, weekly"],never:"Checks out. You do."},
   coach:{n:"Personal Coach",i:"🏁",job:"Grades your week against the goals you set, runs a Saturday sit-down, and helps you quit or cut back a habit with private check-ins and no shame.",routines:["Scorecard, Saturdays 9:30","Habit check-in, daily"],never:"Shames you, or shares your check-ins with anyone."},
   career:{n:"Career Assistant",i:"💼",job:"Hunts for jobs that meet your criteria, posts your resume on the job boards recruiters search, tailors your resume to each one, applies with your OK and tracks every application to the offer. Also scores recruiter leads and drafts negotiation answers.",routines:["Job search, 6:15 AM","Job board refresh, weekly","Application follow-ups, daily"],never:"Applies anywhere, or accepts an offer or a number, without your yes."},
-  wealth:{n:"Wealth Coach",i:"📈",job:"Retirement, investing and long-term planning. Runs an AI trading bot that weighs market signals with advanced models and makes its own calls, proving itself on paper before it trades real money.",routines:["Trading bot, weekdays 2:45 PM","Weekly digest vs the market"],never:"Moves real money until the bot has beaten the market and you've said yes."},
+  wealth:{n:"Wealth Coach",i:"📈",job:"Investing and retirement. You pick a trading strategy and a risk level; it tests the strategy against real market history and crash scenarios, then runs it with an AI trading bot that weighs market signals and makes the daily calls.",routines:["AI trading bot, weekdays 2:45 PM","Weekly results vs the market, Saturdays"],never:"Goes past the money limits and loss limits you set."},
   travel:{n:"Travel Agent",i:"✈️",job:"Watches fares, finds stays and cars, tracks miles and credits.",routines:["Fare watch, Tuesdays"],never:"Books. It sends you the link."},
   shop:{n:"Shopping Expert",i:"🛒",job:"Knows what you're running low on, researches big buys, watches prices.",routines:["Deal check, weekly"],never:"Buys anything."},
   house:{n:"Housekeeper",i:"🏠",job:"Cleaning service, chores and household supplies, inside a monthly budget.",routines:["Prep list before each cleaning"],never:"Books or pays the cleaner."},
@@ -319,7 +319,7 @@ const GOALS = [
     ask:{q:"You met Alex (VP Engineering) last month. Send a quick check-in?",o:["Yes, send the draft","Remind me next week","Skip"],p:0,r:"Sent. Alex is set to resurface in 2 months."},
     result:"Relationships stay warm without a spreadsheet."}
   ]},
- {id:"wealth",tab:"📈 Wealth",ico:"📈",title:"Retirement that funds itself",tag:"Never leave the employer match on the table, keep spending on track, and see where you'll land.",agents:["wealth","book","coach"],
+ {id:"wealth",tab:"📈 Wealth",ico:"📈",title:"Make your money work as hard as you do",tag:"Pick a strategy, see how it holds up in good years and crashes, and let an AI trading bot run it. Plus a retirement that funds itself.",agents:["wealth","book","coach"],
   wf:[
    {t:"Retirement on autopilot",s:"Every raise and every enrollment window",trigger:"Payday, a raise, or open enrollment",steps:["Wealth Coach checks you're contributing enough to get the full employer match","When pay goes up, suggests raising your contribution by 1% so take-home still rises","Checks the funds are low-cost and match your timeline","Puts the exact enrollment steps on your todo list before the window closes"],
     ask:{q:"You got a 4% raise. Raise your 401(k) from 6% to 7%? Take-home still goes up $112 a month.",o:["Yes, add the steps to my list","Keep it at 6%","Ask me after payday"],p:0,r:"On your list for Thursday, 5 minutes, with the link."},
@@ -327,10 +327,16 @@ const GOALS = [
    {t:"Spending on track for retirement",s:"A daily check against the plan",trigger:"6:15 AM balance check",steps:["Bookkeeper syncs balances and new transactions","Compares the month so far with the plan that funds your retirement goal","Flags drift early: new subscriptions, price increases, duplicate charges","Personal Coach counts it in your weekly score"],
     ask:{q:"Dining out is $140 over plan with 9 days left. Want a cheap meal plan for the rest of the month?",o:["Yes, Health Coach plans it","No, I'll adjust myself","Remind me Friday"],p:0,r:"Meal plan for 9 days is ready, $62 of groceries in the cart."},
     result:"Small leaks get caught in days, not at tax time."},
-   {t:"An AI trading bot that earns its way to real money",s:"Paper first, real money when it's proven",trigger:"Weekdays at 2:45 PM",steps:["The bot reads prices, trends and risk across the market and an AI model makes the day's calls","Every trade is logged with its reasons, and every Saturday the results are scored against simply buying the index","It trades paper money until it beats the index over months, then asks to graduate","Real money starts small, with hard limits and a kill switch, and grows only as the results hold up"],
-    ask:{q:"Trading bot, 6 months on paper: +9.4% vs index +7.1%, smaller drops. Move $1,000 of real money to it?",o:["Yes, start with $1,000","Keep it on paper","Show me the details"],p:0,r:"Live with $1,000. Daily loss limit 2%, kill switch on. Weekly digest Saturday."},
-    result:"An AI investor that has to prove itself before it touches your money."}
-  ],sim:"retire"},
+   {t:"Pick your trading strategy",s:"Choose how your money is invested, in plain words",trigger:"You decide to put money to work",steps:["Wealth Coach lays out the strategies side by side: index-plus-AI, momentum, low-volatility, dividend income","Shows each one's typical return, its worst year, and how bumpy the ride is","You pick one and set your risk level, how much to invest, and your loss limit"],
+    ask:{q:"For a 10-year goal with a medium risk level, Core + AI fits best: mostly index, 20% traded by the bot. Use it?",o:["Yes, use Core + AI","Show me momentum instead","Ask me Saturday"],p:0,r:"Core + AI selected. Next: see how it holds up in a crash."},
+    result:"You know exactly what your money is doing and why, before a dollar moves."},
+   {t:"See the scenarios before you commit",s:"Real history, crashes included",trigger:"You pick or change a strategy",steps:["The strategy is replayed against more than ten years of real market data","Stress-tested against a 2008-style crash, the 2020 drop and the 2022 bear market","Compared with simply buying the index, so you see whether it earns its keep","You get a one-page verdict: expected range, worst drop, time to recover"],
+    ask:{q:"Core + AI over 10 years of history: +8.1% a year vs index +7.4%. Worst drop -28% vs -34%. Go live?",o:["Go live with $5,000","Try another strategy","Show me the details"],p:0,r:"Live with $5,000. Loss limit 10%, kill switch on. Weekly results on Saturdays."},
+    result:"No surprises: you've seen the bad years before they happen."},
+   {t:"The AI runs it, every trading day",s:"Advanced models make the calls inside your limits",trigger:"Weekdays at 2:45 PM",steps:["The bot reads prices, trends, volatility and risk across the market","An AI model weighs the signals and decides the day's trades for your strategy","Every trade is logged with its reasons, and your limits and kill switch are always on","Every Saturday you get results against the index, in plain words"],
+    ask:{q:"This month: +3.2% vs index +2.1%. The bot trimmed tech before Tuesday's drop. Add $500 from payday?",o:["Yes, add $500","Keep it as is","Show me the trades"],p:0,r:"$500 added after payday. Next report Saturday."},
+    result:"Your money is managed every trading day, with reasons you can read."}
+  ],sim:["trade","retire"]},
  {id:"health",tab:"💪 Health",ico:"💪",title:"Chisel the body you want",tag:"Lose fat, keep muscle, and eat well, with a plan that adjusts itself every week.",agents:["health","shop","sched","coach"],
   wf:[
    {t:"Body recomposition",s:"Weekly weigh-in, weekly adjustment",trigger:"Smart scale sync on Sunday morning",steps:["Health Coach reads weight and body fat trend (7-day average, not one bad day)","If you're losing too fast, adds food to protect muscle; too slow, trims a little","Sets protein first, then calories","Scheduler protects 3 workout slots in your week"],
@@ -402,10 +408,10 @@ function renderGoal(id){
       ${w.ask?`<li><span class="dot">📱</span><small>You decide</small><div class="ask">${esc(w.ask.q)}<div class="opts">${w.ask.o.map((o,k)=>`<button data-reply="${esc(w.ask.rs?w.ask.rs[k]:(k===w.ask.p?w.ask.r:(k===2?"OK. I'll ask again later.":"Got it. Nothing happens.")))}"><b>${k+1}</b> = ${esc(o)}</button>`).join("")}</div><div class="reply"></div></div></li>`:""}
       <li><span class="dot">✓</span><small>Result</small><div class="result">${esc(w.result)}</div></li></ol></div></div>`;
   });
-  if(g.sim) h+=`<div class="label">Try it</div><div id="sim"></div>`;
+  if(g.sim) h+=`<div class="label">Try it</div>`+[].concat(g.sim).map((k,i)=>`<div id="sim${i}"></div>`).join("");
   h+=`</div>`;
   $("#goal").innerHTML=h;
-  if(g.sim) SIMS[g.sim]($("#sim"));
+  if(g.sim) [].concat(g.sim).forEach((k,i)=>SIMS[k]($("#sim"+i)));
 }
 
 /* ---------- simulators ---------- */
@@ -422,6 +428,32 @@ function chart(series,{w=320,h=170,yfmt=v=>v,xlab=[]}={}){
 function ctl(id,label,min,max,step,val,fmt){return `<label class="ctl" for="${id}"><span>${label}</span><output id="${id}o">${fmt(val)}</output><input type="range" id="${id}" min="${min}" max="${max}" step="${step}" value="${val}"></label>`}
 
 const SIMS={
+ trade(el){
+  const ST={index:{n:"Index only",r:.07,c:-.34,v:"Buy and hold the S&P 500"},core:{n:"Core + AI",r:.078,c:-.28,v:"80% index, 20% traded by the AI bot"},mom:{n:"Momentum",r:.085,c:-.42,v:"AI rides the strongest trends"},lowvol:{n:"Low-volatility",r:.064,c:-.2,v:"AI picks the steadiest stocks"},div:{n:"Dividend income",r:.066,c:-.26,v:"Steady payouts, reinvested"}};
+  const SC={typical:{n:"Typical market",b:0,crash:false},crash:{n:"Crash in year 2",b:0,crash:true},boom:{n:"Boom years",b:.04,crash:false}};
+  let st="core",sc="typical";
+  el.innerHTML=`<div class="sim"><h4>Pick a strategy, run the scenarios</h4><p class="muted" style="margin:0;font-size:14px">Choose how the bot invests, then see how it holds up next to simply buying the index.</p>
+   <div class="built" id="tS">${Object.entries(ST).map(([k,o])=>`<button class="chip" data-st="${k}">${o.n}</button>`).join("")}</div>
+   <p class="muted" id="tV" style="margin:8px 0 0;font-size:13px"></p>
+   <div class="built" id="tC">${Object.entries(SC).map(([k,o])=>`<button class="chip" data-sc="${k}">${o.n}</button>`).join("")}</div>
+   ${ctl("ta","Start with","1000","100000","1000","10000",money)}
+   ${ctl("tm","Add every month","0","2000","50","300",money)}
+   ${ctl("ty","Years","3","30","1","10",v=>v+" years")}
+   <div class="big"><div><span>Index only</span><b id="tA"></b></div><div class="good"><span id="tBl"></span><b id="tB"></b></div></div>
+   <div class="legend"><span><i style="background:var(--muted)"></i>Index only</span><span><i style="background:var(--accent)"></i><span id="tL"></span></span><span id="tW"></span></div>
+   <div id="tCh"></div><p class="note">Illustration with assumed average returns and crash depths, not a forecast. Investing can lose money. Not financial advice.</p></div>`;
+  const path=(o,s,yrs,a,m)=>{let v=a,d=[v],peak=v,worst=0;for(let y=1;y<=yrs;y++){let r=o.r+s.b;if(s.crash&&y===2)r=o.c;if(s.crash&&y===3)r=o.r+Math.abs(o.c)*.45;v=v*(1+r)+m*12;d.push(v);peak=Math.max(peak,v);worst=Math.min(worst,v/peak-1)}return {d,worst}};
+  const run=()=>{const a=+$("#ta").value,m=+$("#tm").value,y=+$("#ty").value;$("#tao").textContent=money(a);$("#tmo").textContent=money(m);$("#tyo").textContent=y+" years";
+   el.querySelectorAll("[data-st]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.st===st));el.querySelectorAll("[data-sc]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.sc===sc));
+   el.querySelectorAll(".chip").forEach(b=>{const on=b.getAttribute("aria-pressed")==="true";b.style.background=on?"var(--accent)":"";b.style.color=on?"#fff":"";b.style.borderColor=on?"var(--accent)":""});
+   const I=path(ST.index,SC[sc],y,a,m),S=path(ST[st],SC[sc],y,a,m);
+   $("#tV").textContent=ST[st].v;$("#tA").textContent=money(I.d.at(-1));$("#tB").textContent=money(S.d.at(-1));$("#tBl").textContent=ST[st].n;$("#tL").textContent=ST[st].n;
+   $("#tW").textContent=SC[sc].crash?`Worst drop: ${Math.round(S.worst*100)}% vs index ${Math.round(I.worst*100)}%`:"";
+   $("#tCh").innerHTML=chart([{d:I.d,c:"var(--muted)",dash:1,lo:0},{d:S.d,c:"var(--accent)",lo:0}],{yfmt:v=>v>=1e6?"$"+(v/1e6).toFixed(1)+"M":"$"+Math.round(v/1e3)+"k",xlab:[[0,"Now"],[y,y+" yrs"]]});};
+  el.querySelectorAll("[data-st]").forEach(b=>b.onclick=()=>{st=b.dataset.st;run()});
+  el.querySelectorAll("[data-sc]").forEach(b=>b.onclick=()=>{sc=b.dataset.sc;run()});
+  el.querySelectorAll("input").forEach(i=>i.oninput=run);run();
+ },
  retire(el){
   el.innerHTML=`<div class="sim"><h4>Simulate your retirement</h4><p class="muted" style="margin:0;font-size:14px">Sam, 38, earns $110,000 and has $45,000 saved. Slide to see what autopilot changes.</p>
    ${ctl("ra","Contributing now","2","15","1","5",v=>v+"% of pay")}

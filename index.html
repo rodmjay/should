@@ -6,9 +6,9 @@
 <meta name="robots" content="noindex">
 <title>Should</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta name="description" content="Put your life goals on autopilot. One human, twenty-two AI agents.">
+<meta name="description" content="Put your life goals on autopilot. One human, twenty-five AI agents.">
 <meta property="og:title" content="Should">
-<meta property="og:description" content="Put your life goals on autopilot. One human, twenty-two AI agents.">
+<meta property="og:description" content="Put your life goals on autopilot. One human, twenty-five AI agents.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -170,9 +170,9 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 <header class="hero">
   <div class="brand"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="var(--accent)"/><path d="M17 34.5 L27.5 44.5 L45 23" fill="none" stroke="var(--card)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="16.5" r="5" fill="var(--warm)"/></svg><span>should<i>.</i></span></div>
   <h1>Put your life goals on autopilot.</h1>
-  <p class="sub">A better job, money that grows while you work, a business that runs itself, a body you're proud of. Twenty-two AI agents work on it every day. You answer with 1, 2 or 3.</p>
+  <p class="sub">A better job, money that grows while you work, a business that runs itself, a body you're proud of. Twenty-five AI agents work on it every day. You answer with 1, 2 or 3.</p>
   <div class="stats">
-    <div class="stat"><b>22</b><span>AI agents</span></div>
+    <div class="stat"><b>25</b><span>AI agents</span></div>
     <div class="stat"><b>8</b><span>life goals</span></div>
     <div class="stat"><b>1</b><span>human in charge</span></div>
   </div>
@@ -206,7 +206,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 
 <section id="staff">
   <div class="eyebrow">Meet the staff</div>
-  <h2>Twenty-two jobs, one person</h2>
+  <h2>Twenty-five jobs, one person</h2>
   <p class="muted">Each agent has a written role, its own routines and rules it can't break. Tap one to see its job.</p>
   <div class="staff" id="staffgrid"></div>
 </section>
@@ -287,6 +287,8 @@ const AGENTS = {
   web:{n:"Webmaster",i:"🖥️",job:"Builds your personal dashboard, where every agent has its own desk.",routines:["On request"],never:"Publishes without your yes."},
   pr:{n:"PR Person",i:"📣",job:"Drafts your posts and keeps your public profiles telling one story.",routines:["Weekly drafts, Mondays"],never:"Posts. You do."},
   media:{n:"Media Concierge",i:"🎬",job:"Knows your taste in film and picks tonight's movie, with where to stream.",routines:["On request"],never:"Buys or rents anything without your yes."},
+  guide:{n:"Local Guide",i:"📍",job:"Knows the places you love, finds new ones, plus weekend picks and weather.",routines:["Weather, every morning","Weekend picks, Thursdays"],never:"Buys tickets, books tables or RSVPs without your yes."},
+  fashion:{n:"Fashion Consultant",i:"👔",job:"Picks today's outfit from your own closet for your plans and the weather.",routines:["Outfit of the day, workday mornings"],never:"Buys clothes without your yes."},
   biz:{n:"Business Executive",i:"🏢",job:"Runs your small business: companies, filings, books and a weekly review.",routines:["Business review, Mondays","Filing and renewal check, monthly"],never:"Files, signs, pays or forms a company without your yes."},
   pm:{n:"Product Manager",i:"🧩",job:"Runs Should like a product: the name, the look and what it learns next.",routines:["Roadmap, as you ask for things"],never:"Changes this page's words without your yes."},
   rel:{n:"Relationship Coach",i:"💬",soon:true,job:"Helps you stay close to your partner and the people who matter most.",routines:["Coming soon"],never:"Reads or sends your private messages, or shares anything about the people you love."},
@@ -380,7 +382,7 @@ const GOALS = [
     ask:{q:"Two identical $6.75 charges at the same coffee shop, 1 minute apart.",o:["Add a dispute task","It's fine, I bought two","Ask me later"],p:0,r:"Dispute task added for tomorrow, 5 minutes."},
     result:"Mistakes and fraud get caught in days."}
   ]},
- {id:"time",tab:"🗓️ Time",ico:"🗓️",title:"Your day, planned before you wake",tag:"The calendar works for you: priorities first, rest protected.",agents:["sched","ea","coach"],
+ {id:"time",tab:"🗓️ Time",ico:"🗓️",title:"Your day, planned before you wake",tag:"The calendar works for you: priorities first, rest protected.",agents:["sched","fashion","ea","coach"],
   wf:[
    {t:"The day plan",s:"6:00 AM, every day",trigger:"6:00 AM",steps:["Scheduler reads the calendar, the todo list and how long each task takes","Puts fixed things first, then anything that costs money if missed","Fits 2–3 personal tasks around work, never 20","Moves what doesn't fit to another day and tells you what moved"],
     ask:{q:"Today is overloaded. Move \"call the bank\" and \"sort photos\" to Saturday?",o:["Yes, move both","Move only the photos","Keep them today"],p:0,r:"Moved. Today now fits in your free time."},
@@ -388,7 +390,7 @@ const GOALS = [
    {t:"Sunday stays Sunday",s:"A rest day the staff protects",trigger:"Anything tries to land on a Sunday",steps:["Scheduler moves it to Monday (or Saturday if the deadline is sooner)","No texts, no prompts, no chores on Sunday"],
     ask:null,result:"One day a week with nothing to do."}
   ]},
- {id:"home",tab:"🏠 Home & family",ico:"🏠",title:"Home and family, remembered",tag:"Birthdays, chores and the house, without carrying it all in your head.",agents:["rel","gift","house","shop","sched"],
+ {id:"home",tab:"🏠 Home & family",ico:"🏠",title:"Home and family, remembered",tag:"Birthdays, chores and the house, without carrying it all in your head.",agents:["rel","gift","house","guide","shop","sched"],
   wf:[
    {t:"Birthdays that never sneak up",s:"Three weeks ahead",trigger:"A birthday is 3 weeks away",steps:["Gift Concierge looks at what they like and your budget","Picks a gift (or a card at minimum)","Puts it in the cart so it arrives on time"],
     ask:{q:"Your sister's birthday is the 28th. Gift: a $35 cookbook she mentioned. In the cart.",o:["Check out (link)","Pick something else","Just a card this year"],p:0,r:"Link sent. Arrives the 24th."},

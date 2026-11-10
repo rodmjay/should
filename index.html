@@ -275,7 +275,7 @@ const AGENTS = {
   health:{n:"Health Coach",i:"🥗",job:"Training plan, meal plans and recipes, weigh-ins, and the grocery cart.",routines:["Meal plan, every 2 weeks","Grocery cart, Saturdays","Scale sync, weekly"],never:"Checks out. You do."},
   coach:{n:"Personal Coach",i:"🏁",job:"Grades your week against the goals you set, runs a Saturday sit-down, and helps you quit or cut back a habit with private check-ins and no shame.",routines:["Scorecard, Saturdays 9:30","Habit check-in, daily"],never:"Shames you, or shares your check-ins with anyone."},
   career:{n:"Career Assistant",i:"💼",job:"Scores job leads, drafts recruiter replies and negotiation answers, keeps your resume current.",routines:["Lead scan, 6:15 AM"],never:"Accepts an offer or a number."},
-  wealth:{n:"Wealth Coach",i:"📈",job:"Retirement, investing and long-term planning. Runs a practice trading bot with play money.",routines:["Practice bot, weekdays 2:45 PM","Weekly digest vs the market"],never:"Uses real money."},
+  wealth:{n:"Wealth Coach",i:"📈",job:"Retirement, investing and long-term planning. Runs an AI trading bot that weighs market signals with advanced models and makes its own calls, proving itself on paper before it trades real money.",routines:["Trading bot, weekdays 2:45 PM","Weekly digest vs the market"],never:"Moves real money until the bot has beaten the market and you've said yes."},
   travel:{n:"Travel Agent",i:"✈️",job:"Watches fares, finds stays and cars, tracks miles and credits.",routines:["Fare watch, Tuesdays"],never:"Books. It sends you the link."},
   shop:{n:"Shopping Expert",i:"🛒",job:"Knows what you're running low on, researches big buys, watches prices.",routines:["Deal check, weekly"],never:"Buys anything."},
   house:{n:"Housekeeper",i:"🏠",job:"Cleaning service, chores and household supplies, inside a monthly budget.",routines:["Prep list before each cleaning"],never:"Books or pays the cleaner."},
@@ -315,9 +315,9 @@ const GOALS = [
    {t:"Spending on track for retirement",s:"A daily check against the plan",trigger:"6:15 AM balance check",steps:["Bookkeeper syncs balances and new transactions","Compares the month so far with the plan that funds your retirement goal","Flags drift early: new subscriptions, price increases, duplicate charges","Personal Coach counts it in your weekly score"],
     ask:{q:"Dining out is $140 over plan with 9 days left. Want a cheap meal plan for the rest of the month?",o:["Yes, Health Coach plans it","No, I'll adjust myself","Remind me Friday"],p:0,r:"Meal plan for 9 days is ready, $62 of groceries in the cart."},
     result:"Small leaks get caught in days, not at tax time."},
-   {t:"Practice before you invest",s:"A trading bot with play money",trigger:"Weekdays at 2:45 PM",steps:["Wealth Coach runs a rules-based strategy on a practice account","Every Saturday it compares results with simply buying the index","Only after months of evidence does anything get discussed with real money"],
-    ask:{q:"Practice bot this week: +0.8% vs index +1.1%. Keep testing?",o:["Keep testing","Pause it","Show me the details"],p:0,r:"Testing continues. Next digest Saturday."},
-    result:"You learn what works without risking a dollar."}
+   {t:"An AI trading bot that earns its way to real money",s:"Paper first, real money when it's proven",trigger:"Weekdays at 2:45 PM",steps:["The bot reads prices, trends and risk across the market and an AI model makes the day's calls","Every trade is logged with its reasons, and every Saturday the results are scored against simply buying the index","It trades paper money until it beats the index over months, then asks to graduate","Real money starts small, with hard limits and a kill switch, and grows only as the results hold up"],
+    ask:{q:"Trading bot, 6 months on paper: +9.4% vs index +7.1%, smaller drops. Move $1,000 of real money to it?",o:["Yes, start with $1,000","Keep it on paper","Show me the details"],p:0,r:"Live with $1,000. Daily loss limit 2%, kill switch on. Weekly digest Saturday."},
+    result:"An AI investor that has to prove itself before it touches your money."}
   ],sim:"retire"},
  {id:"health",tab:"💪 Health",ico:"💪",title:"Chisel the body you want",tag:"Lose fat, keep muscle, and eat well, with a plan that adjusts itself every week.",agents:["health","shop","sched","coach"],
   wf:[

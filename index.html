@@ -6,9 +6,9 @@
 <meta name="robots" content="noindex">
 <title>Should</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta name="description" content="Put your life goals on autopilot. One human, twenty-one AI agents.">
+<meta name="description" content="Put your life goals on autopilot. One human, twenty-two AI agents.">
 <meta property="og:title" content="Should">
-<meta property="og:description" content="Put your life goals on autopilot. One human, twenty-one AI agents.">
+<meta property="og:description" content="Put your life goals on autopilot. One human, twenty-two AI agents.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -170,10 +170,10 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 <header class="hero">
   <div class="brand"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="var(--accent)"/><path d="M17 34.5 L27.5 44.5 L45 23" fill="none" stroke="var(--card)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="16.5" r="5" fill="var(--warm)"/></svg><span>should<i>.</i></span></div>
   <h1>Put your life goals on autopilot.</h1>
-  <p class="sub">A better job, money that grows while you work, a body you're proud of. Twenty-one AI agents work on it every day. You answer with 1, 2 or 3.</p>
+  <p class="sub">A better job, money that grows while you work, a business that runs itself, a body you're proud of. Twenty-two AI agents work on it every day. You answer with 1, 2 or 3.</p>
   <div class="stats">
-    <div class="stat"><b>21</b><span>AI agents</span></div>
-    <div class="stat"><b>7</b><span>life goals</span></div>
+    <div class="stat"><b>22</b><span>AI agents</span></div>
+    <div class="stat"><b>8</b><span>life goals</span></div>
     <div class="stat"><b>1</b><span>human in charge</span></div>
   </div>
   <div class="cta-row">
@@ -206,7 +206,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 
 <section id="staff">
   <div class="eyebrow">Meet the staff</div>
-  <h2>Twenty-one jobs, one person</h2>
+  <h2>Twenty-two jobs, one person</h2>
   <p class="muted">Each agent has a written role, its own routines and rules it can't break. Tap one to see its job.</p>
   <div class="staff" id="staffgrid"></div>
 </section>
@@ -287,6 +287,7 @@ const AGENTS = {
   web:{n:"Webmaster",i:"🖥️",job:"Builds your personal dashboard, where every agent has a desk.",routines:["On request"],never:"Publishes without your yes."},
   pr:{n:"PR Person",i:"📣",job:"Drafts your posts and keeps your public profiles consistent.",routines:["Weekly drafts, Mondays"],never:"Posts. You do."},
   media:{n:"Media Concierge",i:"🎬",job:"Knows your taste in film, picks tonight's movie and tells you where to stream it.",routines:["On request"],never:"Buys or rents anything without your yes."},
+  biz:{n:"Business Executive",i:"🏢",job:"Runs your small business like a COO: sets up your companies and subsidiaries, keeps every filing and renewal on time, gets the books ready for your accountant, and brings you a weekly business review.",routines:["Business review, Mondays","Filing and renewal check, monthly"],never:"Files, signs, pays or forms a company without your yes."},
   pm:{n:"Product Manager",i:"🧩",job:"Runs Should itself like a product: the name, the look, this page, and what the staff should learn to do next.",routines:["Roadmap, as you ask for things"],never:"Changes this page's words without your yes."},
   rel:{n:"Relationship Coach",i:"💬",soon:true,job:"Helps you stay close to the people who matter, starting with your partner: remembers what matters to them, nudges you to check in, and helps plan time together.",routines:["Coming soon"],never:"Reads or sends your private messages, or shares anything about the people you love."},
 };
@@ -337,6 +338,24 @@ const GOALS = [
     ask:{q:"Dining out is $140 over plan with 9 days left. Want a cheap meal plan for the rest of the month?",o:["Yes, Health Coach plans it","No, I'll adjust myself","Remind me Friday"],p:0,r:"Meal plan for 9 days is ready, $62 of groceries in the cart."},
     result:"Small leaks get caught in days, not at tax time."}
   ],sim:["trade","retire"]},
+ {id:"business",tab:"🏢 Business",ico:"🏢",title:"A small business that runs itself",tag:"Your companies set up right, every filing on time, books ready for the accountant, and a clear weekly picture. You run the business; the paperwork runs itself.",agents:["biz","book","legal","sched"],
+  wf:[
+   {t:"Your weekly business review",s:"The whole business on one screen, every Monday",trigger:"Monday 7 AM",steps:["Business Executive pulls cash on hand, money in and out, and unpaid invoices from the books","Lists every deadline in the next 30 days: filings, renewals, taxes, contracts","Flags what needs you: an invoice 30 days late, a contract to sign, a price that went up","Sends one short summary with the two or three decisions that matter this week"],
+    ask:{q:"This week: $18,400 cash, 2 invoices overdue ($3,250), state renewal due in 12 days. Send polite reminders on the overdue invoices?",o:["Yes, send the reminders","Just the bigger one","Ask me Wednesday"],p:0,r:"Reminders sent from your business email. Renewal is on your list for Thursday, 10 minutes."},
+    result:"You know where the business stands in two minutes, without opening a spreadsheet."},
+   {t:"Set up your company the right way",s:"From idea to a real, bank-ready business",trigger:"You say: \"I want to start a business\"",steps:["Business Executive explains the options in plain words: LLC, holding company, which state","Prepares the formation filing, the tax ID application and the operating agreement","Lists what the bank needs to open a business account, and fills in the forms","Sets up the company record, the business email and every first-year deadline"],
+    ask:{q:"Your LLC filing is ready: $59 state fee, registered agent included. File it today?",o:["Yes, send me the link to pay and file","Change the name first","Ask me tonight"],p:0,r:"Link texted. Once it's filed, the tax ID and bank checklist start automatically."},
+    result:"A properly set-up company in days, without hiring someone to fill in forms."},
+   {t:"Grow with a holding company",s:"A parent company with subsidiaries underneath",trigger:"You start a second venture, buy property, or expand abroad",steps:["Business Executive maps the structure: the holding company on top, each venture its own company below","Prepares the new subsidiary's filings and the ownership paperwork","Keeps the ownership tree, officers and documents for every company in one place","Keeps money and contracts separate so one venture's risk stays in that company"],
+    ask:{q:"New venture: a rental property. Put it in its own LLC owned by your holding company?",o:["Yes, prepare the filings","Keep it in the main company","Explain the trade-off"],p:0,r:"Filings for the new LLC are ready for your review. The ownership tree is updated."},
+    result:"Each venture is protected and organized, like a much bigger company would do it."},
+   {t:"Never miss a filing",s:"Annual reports, renewals and taxes, handled",trigger:"60 days before any deadline",steps:["Business Executive tracks every company's annual reports, renewals, licenses and tax dates","Prepares each filing with the information already on record","Puts it on your list with the deadline, the fee and the exact link","Saves the confirmation and sets next year's date"],
+    ask:{q:"Utah annual renewal for your holding company is due 2/28. $18 fee, all details pre-filled. File now?",o:["Yes, text me the link","Remind me next week","Show me what's on it"],p:0,r:"Link texted. Confirmation saved and next year's renewal is on the calendar."},
+    result:"No late fees, no lapsed company, no surprise letters from the state."},
+   {t:"Books ready for your accountant",s:"Every receipt in the right place, all year",trigger:"Every transaction, and every quarter",steps:["Bookkeeper sorts business and personal spending as it happens","Business Executive keeps receipts and invoices matched to each expense","Works out quarterly tax estimates so April has no surprises","Builds the year-end packet your accountant asks for, in their format"],
+    ask:{q:"Q4 estimated tax for the business: $1,240, due 1/15. Put it on your list with the payment link?",o:["Yes, add it","Show me the math","Ask after payday"],p:0,r:"On your list for 1/12 with the IRS link. The year-end packet is 80% ready."},
+    result:"Tax season takes an afternoon, and your accountant bills you for less."}
+  ]},
  {id:"health",tab:"💪 Health",ico:"💪",title:"Chisel the body you want",tag:"Lose fat, keep muscle, and eat well, with a plan that adjusts itself every week.",agents:["health","shop","sched","coach"],
   wf:[
    {t:"Body recomposition",s:"Weekly weigh-in, weekly adjustment",trigger:"Smart scale sync on Sunday morning",steps:["Health Coach reads weight and body fat trend (7-day average, not one bad day)","If you're losing too fast, adds food to protect muscle; too slow, trims a little","Sets protein first, then calories","Scheduler protects 3 workout slots in your week"],

@@ -304,7 +304,7 @@ const AGENTS = {
 };
 
 const GOALS = [
- {id:"career",tab:"💼 Career",ico:"💼",title:"A better job, on autopilot",tag:"Find the right roles, apply with a resume tailored to each one, negotiate harder, and never lose track of an application.",agents:["career","pi","pr","sched"],
+ {id:"career",tab:"Career",ico:"💼",title:"A better job, on autopilot",tag:"Find the right roles, apply with a resume tailored to each one, negotiate harder, and never lose track of an application.",agents:["career","pi","pr","sched"],
   wf:[
    {t:"The search, done for you",s:"No recruiters knocking? It goes looking",trigger:"6:15 AM: new postings on the job boards and company career pages",steps:["Career Assistant searches for roles that match your criteria: title, pay floor, remote, benefits, location","Scores each posting and drops the ones that miss a must-have","Private Investigator checks the company is real and in good shape","Brings you the best two or three, with why each one fits"],
     ask:{q:"Senior Platform Engineer at a 400-person health-tech company. Remote, $185–210k, full benefits. 92% match. Apply?",o:["Yes, tailor my resume and apply","Skip this one","Show me the posting"],p:0,r:"Resume tailored and application sent. It's on your tracker as Applied."},
@@ -331,7 +331,7 @@ const GOALS = [
     ask:{q:"You met Alex (VP Engineering) last month. Send a quick check-in?",o:["Yes, send the draft","Remind me next week","Skip"],p:0,r:"Sent. Alex is set to resurface in 2 months."},
     result:"Relationships stay warm without a spreadsheet."}
   ]},
- {id:"wealth",tab:"📈 Wealth",ico:"📈",title:"Make your money work as hard as you do",tag:"Pick a strategy, see how it holds up in good years and crashes, and let an AI trading bot run it. Plus a retirement that funds itself.",agents:["wealth","book","coach"],
+ {id:"wealth",tab:"Wealth",ico:"📈",title:"Make your money work as hard as you do",tag:"Pick a strategy, see how it holds up in good years and crashes, and let an AI trading bot run it. Plus a retirement that funds itself.",agents:["wealth","book","coach"],
   wf:[
    {t:"Pick your trading strategy",s:"Choose how your money is invested, in plain words",trigger:"You decide to put money to work",steps:["Wealth Advisor lays out the strategies side by side: index-plus-AI, momentum, low-volatility, dividend income","Shows each one's typical return, its worst year, and how bumpy the ride is","You pick one and set your risk level, how much to invest, and your loss limit"],
     ask:{q:"For a 10-year goal with a medium risk level, Core + AI fits best: mostly index, 20% traded by the bot. Use it?",o:["Yes, use Core + AI","Show me momentum instead","Ask me Saturday"],p:0,r:"Core + AI selected. Next: see how it holds up in a crash."},
@@ -349,7 +349,7 @@ const GOALS = [
     ask:{q:"Dining out is $140 over plan with 9 days left. Want a cheap meal plan for the rest of the month?",o:["Yes, Health Coach plans it","No, I'll adjust myself","Remind me Friday"],p:0,r:"Meal plan for 9 days is ready, $62 of groceries in the cart."},
     result:"Small leaks get caught in days, not at tax time."}
   ],sim:["trade","retire"]},
- {id:"business",tab:"🏢 Business",ico:"🏢",title:"A small business that runs itself",tag:"Your companies set up right, every filing on time, books ready for the accountant, and a clear weekly picture. You run the business; the paperwork runs itself.",agents:["biz","book","legal","sched"],
+ {id:"business",tab:"Business",ico:"🏢",title:"A small business that runs itself",tag:"Your companies set up right, every filing on time, books ready for the accountant, and a clear weekly picture. You run the business; the paperwork runs itself.",agents:["biz","book","legal","sched"],
   wf:[
    {t:"Your weekly business review",s:"The whole business on one screen, every Monday",trigger:"Monday 7 AM",steps:["Business Executive pulls cash on hand, money in and out, and unpaid invoices from the books","Lists every deadline in the next 30 days: filings, renewals, taxes, contracts","Flags what needs you: an invoice 30 days late, a contract to sign, a price that went up","Sends one short summary with the two or three decisions that matter this week"],
     ask:{q:"This week: $18,400 cash, 2 invoices overdue ($3,250), state renewal due in 12 days. Send polite reminders on the overdue invoices?",o:["Yes, send the reminders","Just the bigger one","Ask me Wednesday"],p:0,r:"Reminders sent from your business email. Renewal is on your list for Thursday, 10 minutes."},
@@ -367,7 +367,7 @@ const GOALS = [
     ask:{q:"Q4 estimated tax for the business: $1,240, due 1/15. Put it on your list with the payment link?",o:["Yes, add it","Show me the math","Ask after payday"],p:0,r:"On your list for 1/12 with the IRS link. The year-end packet is 80% ready."},
     result:"Tax season takes an afternoon, and your accountant bills you for less."}
   ]},
- {id:"health",tab:"💪 Health",ico:"💪",title:"Chisel the body you want",tag:"Lose fat, keep muscle, and eat well, with a plan that adjusts itself every week.",agents:["health","shop","sched","coach"],
+ {id:"health",tab:"Health",ico:"💪",title:"Chisel the body you want",tag:"Lose fat, keep muscle, and eat well, with a plan that adjusts itself every week.",agents:["health","shop","sched","coach"],
   wf:[
    {t:"Body recomposition",s:"Weekly weigh-in, weekly adjustment",trigger:"Smart scale sync on Sunday morning",steps:["Health Coach reads weight and body fat trend (7-day average, not one bad day)","If you're losing too fast, adds food to protect muscle; too slow, trims a little","Sets protein first, then calories","Scheduler protects 3 workout slots in your week"],
     ask:{q:"Down 1.4 lb this week, a bit fast. Add 150 calories (a protein snack) to keep muscle?",o:["Yes, adjust the plan","Keep it as is","Ask me next week"],p:0,r:"Plan updated: +150 calories, protein stays at 180 g."},
@@ -382,7 +382,7 @@ const GOALS = [
     ask:{q:"Day 30 without vaping. 🎉 How was today?",o:["Good, no cravings","Hard, but I held on","I slipped"],p:0,rs:["30 days! That's about $150 saved. Want to put it toward the trip you mentioned?","That's the win that counts. Hard days held are how streaks get built. Proud of you.","Thanks for telling me. One slip doesn't erase 29 days. What was going on? We'll plan for that moment, and tomorrow is day 1 of the next streak."]},
     result:"A private coach in your pocket who notices the streak, forgives the slip, and keeps the reason in front of you."}
   ],sim:"body"},
- {id:"money",tab:"💳 Money",ico:"💳",title:"Bills never late, fraud caught early",tag:"The day-to-day money stuff that quietly costs you if you miss it.",agents:["book","pi","ea"],
+ {id:"money",tab:"Money",ico:"💳",title:"Bills never late, fraud caught early",tag:"The day-to-day money stuff that quietly costs you if you miss it.",agents:["book","pi","ea"],
   wf:[
    {t:"Bills that pay on time",s:"Three days ahead, with the link",trigger:"A bill is due in 3 days and isn't on autopay",steps:["Bookkeeper sees the due date and the amount","Checks there's enough in checking","Executive Assistant texts you the exact amount and the pay link"],
     ask:{q:"Water bill $46.18 is due Thursday, not on autopay.",o:["Send me the pay link now","Remind me Wednesday","Already paid"],p:0,r:"Link sent. Marked paid when the charge clears."},
@@ -391,7 +391,7 @@ const GOALS = [
     ask:{q:"Two identical $6.75 charges at the same coffee shop, 1 minute apart.",o:["Add a dispute task","It's fine, I bought two","Ask me later"],p:0,r:"Dispute task added for tomorrow, 5 minutes."},
     result:"Mistakes and fraud get caught in days."}
   ]},
- {id:"time",tab:"🗓️ Time",ico:"🗓️",title:"Your day, planned before you wake",tag:"The calendar works for you: priorities first, rest protected.",agents:["sched","fashion","ea","coach"],
+ {id:"time",tab:"Time",ico:"🗓️",title:"Your day, planned before you wake",tag:"The calendar works for you: priorities first, rest protected.",agents:["sched","fashion","ea","coach"],
   wf:[
    {t:"The day plan",s:"6:00 AM, every day",trigger:"6:00 AM",steps:["Scheduler reads the calendar, the todo list and how long each task takes","Puts fixed things first, then anything that costs money if missed","Fits 2–3 personal tasks around work, never 20","Moves what doesn't fit to another day and tells you what moved"],
     ask:{q:"Today is overloaded. Move \"call the bank\" and \"sort photos\" to Saturday?",o:["Yes, move both","Move only the photos","Keep them today"],p:0,r:"Moved. Today now fits in your free time."},
@@ -399,7 +399,7 @@ const GOALS = [
    {t:"Sunday stays Sunday",s:"A rest day the staff protects",trigger:"Anything tries to land on a Sunday",steps:["Scheduler moves it to Monday (or Saturday if the deadline is sooner)","No texts, no prompts, no chores on Sunday"],
     ask:null,result:"One day a week with nothing to do."}
   ]},
- {id:"home",tab:"🏠 Home & family",ico:"🏠",title:"Home and family, remembered",tag:"Birthdays, chores and the house, without carrying it all in your head.",agents:["rel","gift","house","guide","shop","sched"],
+ {id:"home",tab:"Home & family",ico:"🏠",title:"Home and family, remembered",tag:"Birthdays, chores and the house, without carrying it all in your head.",agents:["rel","gift","house","guide","shop","sched"],
   wf:[
    {t:"Birthdays that never sneak up",s:"Three weeks ahead",trigger:"A birthday is 3 weeks away",steps:["Gift Concierge looks at what they like and your budget","Picks a gift (or a card at minimum)","Puts it in the cart so it arrives on time"],
     ask:{q:"Your sister's birthday is the 28th. Gift: a $35 cookbook she mentioned. In the cart.",o:["Check out (link)","Pick something else","Just a card this year"],p:0,r:"Link sent. Arrives the 24th."},
@@ -408,7 +408,7 @@ const GOALS = [
     ask:{q:"Cleaners come tomorrow at 10. Running low on dish soap and trash bags. Add to cart?",o:["Yes","Only trash bags","Skip"],p:0,r:"Added. Arrives tomorrow morning."},
     result:"Less mental load, a cleaner home."}
   ]},
- {id:"trust",tab:"🔎 Trust & legal",ico:"🔎",title:"Know who you're dealing with",tag:"Unknown numbers, scams and paperwork, checked before they become problems.",agents:["pi","legal"],
+ {id:"trust",tab:"Trust & legal",ico:"🔎",title:"Know who you're dealing with",tag:"Unknown numbers, scams and paperwork, checked before they become problems.",agents:["pi","legal"],
   wf:[
    {t:"Who is this number?",s:"Before you answer",trigger:"A text or call from an unknown number",steps:["Private Investigator checks your messages, email and contacts for clues","Checks public sources and scam reports","Saves the name, or warns you"],
     ask:{q:"Unknown number says it's your bank and wants a code. 23 scam reports on this number.",o:["Block and report it","Save as \"scam\"","Ask me later"],p:0,r:"Flagged. Never share codes by text."},
@@ -428,7 +428,7 @@ function renderTabs(active){
 }
 function renderGoal(id){
   const g=GOALS.find(x=>x.id===id); renderTabs(id);
-  let h=`<div class="goal"><div class="goal-head"><div class="goal-ico">${g.ico}</div><div><h3>${esc(g.title)}</h3><p class="tag">${esc(g.tag)}</p></div></div>
+  let h=`<div class="goal"><div class="goal-head"><div><h3>${esc(g.title)}</h3><p class="tag">${esc(g.tag)}</p></div></div>
   <div class="who">${g.agents.map(a=>`<button data-agent="${a}">${AGENTS[a].i} ${AGENTS[a].n}</button>`).join("")}</div>
   <div class="label">Workflows</div>`;
   g.wf.forEach((w,i)=>{

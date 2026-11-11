@@ -17,11 +17,13 @@
   --bg:#f6f3ec; --card:#ffffff; --ink:#1d1b16; --muted:#6b665b; --line:#e4ded1;
   --accent:#1f6f54; --accent-soft:#e3f0ea; --warm:#c8643b; --warm-soft:#f7e6dc;
   --bubble-me:#1f6f54; --bubble-them:#ebe6da; --shade:rgba(20,18,12,.45);
+  --bad:#b3403a; --bad-soft:#f6e1de;
 }
 @media (prefers-color-scheme: dark){
   :root{ --bg:#14130f; --card:#1d1c17; --ink:#f1ede4; --muted:#a39d90; --line:#302d26;
     --accent:#5cc49b; --accent-soft:#1d2e27; --warm:#e88a60; --warm-soft:#36231a;
-    --bubble-me:#2d7a5e; --bubble-them:#2a2822; --shade:rgba(0,0,0,.6); }
+    --bubble-me:#2d7a5e; --bubble-them:#2a2822; --shade:rgba(0,0,0,.6);
+    --bad:#e57373; --bad-soft:#3a1f1d; }
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
@@ -70,31 +72,6 @@ button{font:inherit;color:inherit;cursor:pointer}
 .who button{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:5px 10px;font-size:13px}
 .label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:20px 0 8px}
 
-/* workflow list */
-.wf{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
-.wf>button{width:100%;text-align:left;background:none;border:0;padding:14px;display:flex;gap:12px;align-items:center}
-.wf .num{flex:0 0 28px;height:28px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:600;font-size:14px}
-.wf .t{flex:1}
-.wf .t b{display:block;font-size:16px}
-.wf .t span{font-size:13px;color:var(--muted)}
-.wf .chev{transition:transform .2s;color:var(--muted)}
-.wf.open .chev{transform:rotate(90deg)}
-.wf .body{display:none;padding:0 14px 16px}
-.wf.open .body{display:block}
-.steps{list-style:none;margin:4px 0 0;padding:0;position:relative}
-.steps:before{content:"";position:absolute;left:13px;top:8px;bottom:8px;width:2px;background:var(--line)}
-.steps li{position:relative;padding:6px 0 10px 38px;font-size:15px}
-.steps li .dot{position:absolute;left:4px;top:8px;width:20px;height:20px;border-radius:50%;background:var(--card);border:2px solid var(--accent);display:grid;place-items:center;font-size:11px}
-.steps li.trigger .dot{border-color:var(--warm)}
-.steps li small{display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
-.ask{background:var(--bubble-them);border-radius:16px 16px 16px 6px;padding:10px 12px;margin:6px 0;font-size:14px}
-.ask .opts{display:grid;gap:6px;margin-top:8px}
-.ask .opts button{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:8px 10px;text-align:left;font-size:14px}
-.ask .opts button.picked{background:var(--bubble-me);color:#fff;border-color:var(--bubble-me)}
-.reply{display:none;font-size:14px;background:var(--accent-soft);border-radius:12px;padding:10px 12px;margin-top:6px}
-.reply.show{display:block}
-.result{border-left:4px solid var(--accent);padding:6px 10px;font-size:15px;margin-top:6px}
-
 /* simulators */
 .sim{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-top:6px}
 .sim h4{font-family:Fraunces,serif;font-size:19px;margin:0 0 2px}
@@ -110,6 +87,148 @@ button{font:inherit;color:inherit;cursor:pointer}
 svg.chart{width:100%;height:auto;display:block;margin-top:8px}
 .legend{display:flex;gap:14px;font-size:12px;color:var(--muted);flex-wrap:wrap}
 .legend i{display:inline-block;width:14px;height:3px;border-radius:2px;vertical-align:middle;margin-right:5px}
+
+/* scenario picker + stage */
+.goal h3{font-size:26px}
+.goal .tag{color:var(--muted);margin:6px 0 0}
+.picker{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:8px;margin:18px 0 0}
+.pick{display:flex;gap:10px;align-items:center;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 12px;min-width:0}
+.pick b{display:block;font-size:14px;line-height:1.25}
+.pick small{display:block;font-size:12px;color:var(--muted);line-height:1.3}
+.pk-i{flex:0 0 34px;height:34px;border-radius:10px;background:var(--accent-soft);display:grid;place-items:center;font-size:18px}
+.pick[aria-selected="true"]{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+.pick[aria-selected="true"] .pk-i{background:var(--accent);filter:saturate(1.1)}
+.scn{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px;display:grid;gap:16px;animation:rise .25s ease}
+@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;counter-reset:f}
+.flow li{position:relative;background:var(--bg);border-radius:12px;padding:8px 10px;font-size:13px;line-height:1.35}
+.flow li small{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:2px}
+.flow li:first-child small{color:var(--warm)}
+@media(max-width:520px){.flow{grid-template-columns:1fr}}
+.stage{min-width:0}
+.scn .sim{border:0;padding:0;margin:0;background:none}
+.chat{display:grid;gap:8px;max-width:440px}
+.chat .msg{max-width:100%;margin:0}
+.chat .msg small{display:block;font-size:11px;color:var(--muted);margin-bottom:2px}
+.chat .opts{display:grid;gap:6px}
+.chat .opts button{display:flex;gap:10px;align-items:center;text-align:left;border:1px solid var(--line);background:var(--card);border-radius:12px;padding:8px 10px;font-size:14px}
+.chat .opts button b{flex:0 0 24px;height:24px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-size:13px}
+.chat .opts button.picked{background:var(--bubble-me);color:#fff;border-color:var(--bubble-me)}
+.chat .opts button.picked b{background:rgba(255,255,255,.2);color:#fff}
+.chat .reply{display:none;margin-top:8px}
+.chat .reply.show{display:block;animation:rise .2s ease}
+.gets{margin:0;border-left:4px solid var(--accent);padding:4px 0 4px 12px;font-size:15px}
+.gets b{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+
+/* scene: job lead */
+.lead-card{border:1px solid var(--line);border-radius:16px;padding:14px;background:var(--bg)}
+.lc-top{display:flex;gap:12px;justify-content:space-between;align-items:center}
+.lc-top b{display:block;font-family:Fraunces,serif;font-size:18px}
+.lc-top span{font-size:13px;color:var(--muted)}
+.ring{flex:0 0 64px;height:64px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center}
+.ring span{width:50px;height:50px;border-radius:50%;background:var(--bg);display:grid;place-items:center;font-weight:600;color:var(--ink);font-size:14px}
+.checks{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:4px;font-size:14px}
+.checks li:before{content:"✓";color:var(--accent);font-weight:700;margin-right:8px}
+.dropped{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);display:grid;gap:2px;font-size:13px;color:var(--muted)}
+.dropped small{font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+/* scene: documents */
+.doc{border:1px solid var(--line);border-radius:6px 16px 16px 16px;padding:14px 16px;background:var(--bg);font-family:Georgia,serif;font-size:15px;line-height:1.6}
+.doc-h{border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:10px;font-family:Inter,sans-serif}
+.doc-h b{display:block}
+.doc-h span{font-size:12px;color:var(--muted)}
+.doc p{margin:0 0 8px}
+.doc del{color:var(--muted);text-decoration-color:var(--bad)}
+.doc ins{text-decoration:none;background:var(--accent-soft);border-radius:4px;padding:0 3px}
+.kw{font-family:Inter,sans-serif;display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:10px}
+.kw small{width:100%;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.pill{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 9px;color:var(--muted)}
+.pill.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.doc mark{background:var(--warm-soft);color:inherit;border-radius:3px;padding:0 2px}
+.doc .note{display:block;font-family:Inter,sans-serif;font-size:12px;color:var(--warm);margin-top:2px}
+/* scene: offer range */
+.range{padding:42px 6px 4px}
+.rg-track{position:relative;height:10px;border-radius:5px;background:var(--line)}
+.rg-band{position:absolute;top:0;bottom:0;background:var(--accent-soft);border:1px solid var(--accent);border-radius:5px}
+.rg-band span{position:absolute;top:16px;left:0;font-size:11px;color:var(--accent);white-space:nowrap;font-weight:600}
+.mk{position:absolute;top:-34px;transform:translateX(-50%);font-style:normal;font-size:12px;text-align:center;white-space:nowrap;line-height:1.2}
+.mk b{display:block;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mk:after{content:"";position:absolute;left:50%;top:30px;width:2px;height:18px;background:currentColor;transform:translateX(-50%)}
+.mk.off{color:var(--muted)}.mk.floor{color:var(--warm)}.mk.ctr{color:var(--accent);font-weight:700}
+.mk.floor{top:22px}.mk.floor:after{top:-12px;height:12px}
+.rg-axis .mkt{color:var(--accent);font-weight:600}
+.rg-axis{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:50px}
+/* scene: statement */
+.stmt{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--bg);font-size:14px}
+.st-h{display:flex;justify-content:space-between;padding:10px 12px;border-bottom:1px solid var(--line)}
+.st-h span{color:var(--muted);font-size:12px}
+.stmt .row{display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:8px;padding:9px 12px;border-bottom:1px solid var(--line);align-items:center}
+.stmt .row:last-child{border-bottom:0}
+.stmt .row>span:first-child{color:var(--muted);font-size:12px}
+.stmt .row em{display:block;font-style:normal;font-size:12px}
+.stmt .flag{background:var(--bad-soft)}.stmt .flag em{color:var(--bad)}
+.stmt .due{background:var(--warm-soft)}.stmt .due em{color:var(--warm)}
+/* scene: business dashboard + tree */
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.kpis div{background:var(--bg);border-radius:14px;padding:10px;min-width:0}
+.kpis small{display:block;font-size:11px;color:var(--muted)}
+.kpis b{display:block;font-family:Fraunces,serif;font-size:22px}
+.kpis span{font-size:11px;color:var(--muted)}
+.kpis .up{color:var(--accent)}
+.kpis .warn b{color:var(--bad)}
+@media(max-width:520px){.kpis{grid-template-columns:1fr}}
+.dl{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:8px;font-size:13px}
+.dl li{display:grid;grid-template-columns:minmax(0,1fr) 90px 40px;gap:8px;align-items:center}
+.dl i{height:6px;border-radius:3px;background:linear-gradient(90deg,var(--warm) var(--w),var(--line) 0)}
+.dl b{text-align:right}
+.tree{display:grid;justify-items:center;gap:22px;padding:6px 0}
+.node{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:8px 12px;text-align:center;font-weight:600;font-size:14px;position:relative}
+.node small{display:block;font-weight:400;font-size:11px;color:var(--muted)}
+.node.top{background:var(--accent);color:#fff;border-color:var(--accent)}
+.node.top small{color:rgba(255,255,255,.85)}
+.node.top:after{content:"";position:absolute;left:50%;bottom:-23px;width:2px;height:22px;background:var(--line)}
+.kids{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;width:100%;position:relative;padding-top:12px;border-top:2px solid var(--line)}
+.kids .node:before{content:"";position:absolute;left:50%;top:-13px;width:2px;height:12px;background:var(--line)}
+.node.new{border:2px dashed var(--accent)}
+@media(max-width:520px){.kids{grid-template-columns:1fr;border-top:0;padding-top:0}.kids .node:before{display:none}}
+/* scene: meals + streak + birthdays */
+.meals{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.meals div{background:var(--bg);border-radius:12px;padding:8px 4px;text-align:center;min-width:0}
+.meals small{display:block;font-size:11px;color:var(--muted)}
+.meals span{font-size:22px;display:block}
+.meals b{display:block;font-size:11px;font-weight:500;line-height:1.25}
+@media(max-width:560px){.meals{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.cart{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;margin-top:10px;font-size:13px;color:var(--muted)}
+.cart b{font-family:Fraunces,serif;font-size:20px;color:var(--ink)}
+.why{font-family:Fraunces,serif;font-size:18px;background:var(--bg);border-radius:14px;padding:12px 14px}
+.why small{display:block;font-family:Inter,sans-serif;font-size:11px;color:var(--muted);margin-bottom:4px}
+.dots{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:12px 0;max-width:280px}
+.dots i{aspect-ratio:1;border-radius:50%;background:var(--line)}
+.dots i.on{background:var(--accent)}
+.dots i.today{background:var(--warm);box-shadow:0 0 0 3px var(--warm-soft)}
+.st-n{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.st-n b{display:block;font-family:Fraunces,serif;font-size:22px;color:var(--accent)}
+.st-n span{font-size:12px;color:var(--muted)}
+.bd{display:grid;gap:8px}
+.bd-row{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:10px;align-items:center;background:var(--bg);border-radius:14px;padding:10px 12px}
+.bd-row.on{box-shadow:0 0 0 2px var(--accent) inset}
+.av{width:40px;height:40px;border-radius:50%;background:var(--warm-soft);color:var(--warm);display:grid;place-items:center;font-weight:700}
+.bd-row small{display:block;font-size:12px;color:var(--muted)}
+.when{text-align:right}
+/* scene: repair + scam */
+.repair{display:grid;gap:10px}
+.repair .msg.me{margin:0 0 0 auto}
+.verdict{background:var(--accent-soft);border-radius:14px;padding:12px 14px}
+.verdict small,.draft small{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--accent)}
+.verdict b{font-family:Fraunces,serif;font-size:20px}
+.verdict p{margin:4px 0 0;font-size:14px}
+.draft{border:1px dashed var(--line);border-radius:14px;padding:10px 14px;font-size:14px}
+.draft small{color:var(--muted)}
+.call{background:#1d1c17;color:#f1ede4;border-radius:24px;padding:18px;max-width:360px}
+.call small{display:block;font-size:11px;color:#a39d90;text-align:center}
+.call>b{display:block;text-align:center;font-size:18px;margin-bottom:10px}
+.call .bub{background:#2a2822;border-radius:16px 16px 16px 6px;padding:10px 12px;font-size:14px}
+.alarm{margin-top:10px;background:#5a1f1c;border:1px solid #e57373;border-radius:12px;padding:10px 12px;font-size:13px}
+.alarm b{display:block;color:#ffb4ab}
 
 /* staff grid */
 .staff{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:1fr;gap:8px;margin-top:18px}
@@ -193,7 +312,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 <section id="goals" style="padding-top:20px">
   <div class="eyebrow">Your goals, on autopilot</div>
   <h2>Pick a goal. Watch the staff work it.</h2>
-  <p class="muted">Tap a workflow to see what starts it, what the agents do, where they ask you, and what you get. Every person, number and message here is made up.</p>
+  <p class="muted">Each scenario shows what starts it, what the staff does, and the one text you answer. Tap 1, 2 or 3 to try it. Every person, number and message here is made up.</p>
   <div class="goals-layout">
     <div class="tabs" role="tablist" aria-orientation="vertical" id="tabs"></div>
     <div id="goal"></div>
@@ -303,106 +422,82 @@ const AGENTS = {
 };
 
 const GOALS = [
- {id:"career",tab:"Career",ico:"💼",title:"A better job, on autopilot",tag:"Find the right roles, apply with a resume tailored to each one, negotiate harder, and never lose track of an application.",agents:["career","pi","pr"],
-  wf:[
-   {t:"The search, done for you",s:"No recruiters knocking? It goes looking",trigger:"6:15 AM: new postings on the job boards and company career pages",steps:["Career Assistant searches for roles that match your criteria: title, pay floor, remote, benefits, location","Scores each posting and drops the ones that miss a must-have","Investigator checks the company is real and in good shape","Brings you the best two or three, with why each one fits"],
-    ask:{q:"Senior Platform Engineer at a 400-person health-tech company. Remote, $185–210k, full benefits. 92% match. Apply?",o:["Yes, tailor my resume and apply","Skip this one","Show me the posting"],p:0,r:"Resume tailored and application sent. It's on your tracker as Applied."},
-    result:"You hear about good jobs every week, whether or not anyone is calling you."},
-   {t:"Get found: your resume posted for you",s:"It finds the job boards and keeps you on them",trigger:"Once at the start, then a weekly refresh",steps:["Career Assistant finds the job boards recruiters in your field actually search, general and niche","Posts your resume and a matching profile on each one, set to hide you from your current employer","Refreshes your posting every week so you stay near the top of recruiter searches","Every recruiter who reaches out goes straight into the morning lead scoring"],
-    ask:{q:"Found 4 boards recruiters use for platform roles. Post your resume on all 4, hidden from your current employer?",o:["Yes, post on all 4","Pick which ones","Ask me Saturday"],p:0,r:"Posted on 4 boards. Refreshes every Monday. 3 recruiter views so far."},
-    result:"Recruiters start knocking, so the good roles come to you as well as you going to them."},
-   {t:"A resume tailored to every job",s:"Your resume, rewritten for this posting",trigger:"You say yes to a job",steps:["Career Assistant reads the posting for the skills and words the hiring team is screening for","Reorders and rewrites your real experience to match, never inventing anything","Checks it gets past applicant-tracking software and still reads well to a person","Drafts a short cover note if the posting asks for one"],
-    ask:{q:"Tailored resume ready: 3 bullets reworded for Kubernetes and cost savings, summary rewritten. Send it as is?",o:["Send it","Show me the changes","Ask me tonight"],p:0,r:"Applied with the tailored version. A copy is saved with the application."},
-    result:"Every application looks written for that job, because it was."},
-   {t:"Every application, tracked",s:"From applied to offer, nothing slips",trigger:"Every day, and every reply from a company",steps:["Career Assistant keeps a tracker: applied, screen, interview, offer, closed","Reads replies in your email and moves each one forward","Books interview times into your calendar and preps you the night before","Drafts a polite follow-up when a company goes quiet for a week"],
-    ask:{q:"No word from Acme 8 days after your interview. Send a short follow-up?",o:["Yes, send the draft","Wait 3 more days","Close it"],p:0,r:"Sent. If there's no reply by Friday, it moves to closed."},
-    result:"You always know where every application stands, and none goes cold by accident."},
-   {t:"Better jobs find you",s:"Every morning, leads get scored",trigger:"6:15 AM: new recruiter messages and job alerts",steps:["Career Assistant reads every new message and job alert","Scores each one against your must-haves: base pay, remote, benefits, retirement match","Investigator screens the recruiter: real company, real person, no red flags","Drafts a reply that asks for the pay range before you spend a minute on a call"],
-    ask:{q:"Recruiter: Director of Platform, fully remote, pay not stated. Strong fit.",o:["Send the drafted reply asking for the range","Skip this one","Ask me tomorrow"],p:0,r:"Sent. Follow-up is set for Friday if they don't answer."},
-    result:"You only talk to recruiters whose roles fit, and the pay question gets asked up front."},
-   {t:"Negotiate the offer",s:"From the offer email to a counter you approve",trigger:"An offer arrives by email",steps:["Career Assistant pulls out base, bonus, equity, benefits and the retirement match","Compares it with your floor and with market data for the role","Works out the value of the whole package over 5 years, not just the base","Drafts a polite counter with a specific number and the reason for it"],
-    ask:{q:"Offer: $160,000 base. Your floor is $165,000 and the market is $170–185k. Counter at $178,000?",o:["Yes, send the counter as drafted","Counter at $170,000 instead","Let me think, ask tonight"],p:0,r:"Counter drafted and sent from your email. You'll see their answer first."},
-    result:"Most people never counter. One email here is worth thousands a year, every year after."},
-   {t:"A resume that keeps up",s:"Wins get captured as they happen",trigger:"You finish a project, or text: \"we shipped it\"",steps:["Career Assistant asks one question: what changed, and how much?","Turns it into a resume bullet with a number","Updates the resume and drafts the matching profile change","PR Person checks the public profile tells the same story"],
-    ask:{q:"New bullet: \"Cut release time from 2 weeks to 2 days for 6 teams.\" Add it?",o:["Add it and rebuild the PDF","Edit the wording first","Skip"],p:0,r:"Resume rebuilt. The profile change is waiting for your OK."},
-    result:"Your resume is always current, so an opportunity never waits on a weekend rewrite."},
-   {t:"Your network, remembered",s:"Follow-ups that don't slip",trigger:"You have a call with someone new",steps:["The contact is saved with how you met and what you talked about","A follow-up lands on your todo list three weeks later","Their birthday and job changes get noted when they come up"],
-    ask:{q:"You met Alex (VP Engineering) last month. Send a quick check-in?",o:["Yes, send the draft","Remind me next week","Skip"],p:0,r:"Sent. Alex is set to resurface in 2 months."},
-    result:"Relationships stay warm without a spreadsheet."}
+ {id:"career",tab:"Career",title:"A better job, on autopilot",tag:"The right roles found for you, a resume written for each one, and a counter you'd never have sent on your own.",agents:["career","pi","pr"],
+  sc:[
+   {ico:"🎯",t:"The search, done for you",s:"Only jobs that clear your bar",scene:"lead",
+    flow:["6:15 AM, new postings land","Career Assistant scores them; Investigator vets the company","You see the best two or three"],
+    ask:{q:"Senior Platform Engineer at Northwind Health. Remote, $185–210k, full benefits. 92% match. Apply?",o:["Yes, tailor my resume and apply","Skip this one","Show me the posting"],p:0,r:"Resume tailored and sent. It's on your tracker as Applied."},
+    result:"Good jobs reach you every week, and the bad fits never take a minute of your time."},
+   {ico:"✍️",t:"A resume for every job",s:"Your real experience, in their words",scene:"resume",
+    flow:["You say yes to a job","Career Assistant rewrites your bullets to match the posting","You approve before it's sent"],
+    ask:{q:"3 bullets reworded for Kubernetes and cost savings, summary rewritten. Send it?",o:["Send it","Show me the changes","Ask me tonight"],p:0,r:"Applied with the tailored version. A copy is saved with the application."},
+    result:"Every application reads as if it were written for that job, because it was. Nothing is ever made up."},
+   {ico:"🤝",t:"Negotiate the offer",s:"One email, worth thousands a year",scene:"offer",sim:"negotiate",
+    flow:["An offer arrives by email","Career Assistant prices the whole package against the market","You approve a specific counter"],
+    ask:{q:"Offer: $160,000. Your floor is $165,000 and the market is $170–185k. Counter at $178,000?",o:["Yes, send the counter","Counter at $170,000","Let me think, ask tonight"],p:0,r:"Counter sent from your email. You'll see their answer first."},
+    result:"Most people never counter. Here it takes one tap."}
   ]},
- {id:"wealth",tab:"Money",ico:"💳",title:"Money that grows, bills that never slip",tag:"Bills paid on time, fraud caught early, credit climbing, and an AI trading bot plus a retirement plan making your money work as hard as you do.",agents:["wealth","book","pi"],
-  wf:[
-   {t:"Pick your trading strategy",s:"Choose how your money is invested, in plain words",trigger:"You decide to put money to work",steps:["Financial Advisor lays out the strategies side by side: index-plus-AI, momentum, low-volatility, dividend income","Shows each one's typical return, its worst year, and how bumpy the ride is","You pick one and set your risk level, how much to invest, and your loss limit"],
-    ask:{q:"For a 10-year goal with a medium risk level, Core + AI fits best: mostly index, 20% traded by the bot. Use it?",o:["Yes, use Core + AI","Show me momentum instead","Ask me Saturday"],p:0,r:"Core + AI selected. Next: see how it holds up in a crash."},
-    result:"You know exactly what your money is doing and why, before a dollar moves."},
-   {t:"See the scenarios before you commit",s:"Real history, crashes included",trigger:"You pick or change a strategy",steps:["The strategy is replayed against more than ten years of real market data","Stress-tested against a 2008-style crash, the 2020 drop and the 2022 bear market","Compared with simply buying the index, so you see whether it earns its keep","You get a one-page verdict: expected range, worst drop, time to recover"],
-    ask:{q:"Core + AI over 10 years of history: +8.1% a year vs index +7.4%. Worst drop -28% vs -34%. Go live?",o:["Go live with $5,000","Try another strategy","Show me the details"],p:0,r:"Live with $5,000. Loss limit 10%, kill switch on. Weekly results on Saturdays."},
-    result:"No surprises: you've seen the bad years before they happen."},
-   {t:"The AI runs it, every trading day",s:"Advanced models make the calls inside your limits",trigger:"Weekdays at 2:45 PM",steps:["The bot reads prices, trends, volatility and risk across the market","An AI model weighs the signals and decides the day's trades for your strategy","Every trade is logged with its reasons, and your limits and kill switch are always on","Every Saturday you get results against the index, in plain words"],
+ {id:"money",tab:"Money",title:"Money that grows, bills that never slip",tag:"An AI trading bot on the strategy you pick, a retirement that funds itself, and nothing late or fraudulent slipping by.",agents:["wealth","book","pi"],
+  sc:[
+   {ico:"📈",t:"An AI runs your strategy",s:"Inside the limits you set",sim:"trade",
+    flow:["You pick a strategy and a loss limit","Financial Advisor's bot trades it every weekday at 2:45","Results vs the index, every Saturday"],
     ask:{q:"This month: +3.2% vs index +2.1%. The bot trimmed tech before Tuesday's drop. Add $500 from payday?",o:["Yes, add $500","Keep it as is","Show me the trades"],p:0,r:"$500 added after payday. Next report Saturday."},
-    result:"Your money is managed every trading day, with reasons you can read."},
-   {t:"Retirement on autopilot",s:"Every raise and every enrollment window",trigger:"Payday, a raise, or open enrollment",steps:["Financial Advisor checks you're contributing enough to get the full employer match","When pay goes up, suggests raising your contribution by 1% so take-home still rises","Checks the funds are low-cost and match your timeline","Puts the exact enrollment steps on your todo list before the window closes"],
+    result:"Your money is managed every trading day, with reasons you can read and a kill switch you control."},
+   {ico:"🏖️",t:"Retirement on autopilot",s:"Every raise, a little more saved",sim:"retire",
+    flow:["Payday, a raise or open enrollment","Financial Advisor checks the match and suggests +1%","You tap yes; the steps land on your list"],
     ask:{q:"You got a 4% raise. Raise your 401(k) from 6% to 7%? Take-home still goes up $112 a month.",o:["Yes, add the steps to my list","Keep it at 6%","Ask me after payday"],p:0,r:"On your list for Thursday, 5 minutes, with the link."},
-    result:"Savings rise every year without ever feeling a pay cut."},
-   {t:"Spending on track for retirement",s:"A daily check against the plan",trigger:"6:15 AM balance check",steps:["Accountant syncs balances and new transactions","Compares the month so far with the plan that funds your retirement goal","Flags drift early: new subscriptions, price increases, duplicate charges","Personal Coach counts it in your weekly score"],
-    ask:{q:"Dining out is $140 over plan with 9 days left. Want a cheap meal plan for the rest of the month?",o:["Yes, Health Coach plans it","No, I'll adjust myself","Remind me Friday"],p:0,r:"Meal plan for 9 days is ready, $62 of groceries in the cart."},
-    result:"Small leaks get caught in days, not at tax time."},
-   {t:"Bills that pay on time",s:"Three days ahead, with the link",trigger:"A bill is due in 3 days and isn't on autopay",steps:["Accountant sees the due date and the amount","Checks there's enough in checking","Executive Assistant texts you the exact amount and the pay link"],
-    ask:{q:"Water bill $46.18 is due Thursday, not on autopay.",o:["Send me the pay link now","Remind me Wednesday","Already paid"],p:0,r:"Link sent. Marked paid when the charge clears."},
-    result:"No late fees, no surprises."},
-   {t:"Odd charges get questioned",s:"Fraud and duplicates",trigger:"A charge that doesn't match your patterns",steps:["Accountant spots a duplicate, a new merchant, or an odd amount","Investigator checks the merchant","If it's wrong, the dispute steps go on your list with the phone number"],
-    ask:{q:"Two identical $6.75 charges at the same coffee shop, 1 minute apart.",o:["Add a dispute task","It's fine, I bought two","Ask me later"],p:0,r:"Dispute task added for tomorrow, 5 minutes."},
-    result:"Mistakes and fraud get caught in days."}
-  ],sim:["trade","retire"]},
- {id:"business",tab:"Business",ico:"🏢",title:"A small business that runs itself",tag:"Your companies set up right, every filing on time, books ready for the accountant, and a clear weekly picture. You run the business; the paperwork runs itself.",agents:["biz","book","legal"],
-  wf:[
-   {t:"Your weekly business review",s:"The whole business on one screen, every Monday",trigger:"Monday 7 AM",steps:["Business Executive pulls cash on hand, money in and out, and unpaid invoices from the books","Lists every deadline in the next 30 days: filings, renewals, taxes, contracts","Flags what needs you: an invoice 30 days late, a contract to sign, a price that went up","Sends one short summary with the two or three decisions that matter this week"],
-    ask:{q:"This week: $18,400 cash, 2 invoices overdue ($3,250), state renewal due in 12 days. Send polite reminders on the overdue invoices?",o:["Yes, send the reminders","Just the bigger one","Ask me Wednesday"],p:0,r:"Reminders sent from your business email. Renewal is on your list for Thursday, 10 minutes."},
-    result:"You know where the business stands in two minutes, without opening a spreadsheet."},
-   {t:"Set up your company the right way",s:"From idea to a real, bank-ready business",trigger:"You say: \"I want to start a business\"",steps:["Business Executive explains the options in plain words: LLC, holding company, which state","Prepares the formation filing, the tax ID application and the operating agreement","Lists what the bank needs to open a business account, and fills in the forms","Sets up the company record, the business email and every first-year deadline"],
-    ask:{q:"Your LLC filing is ready: $59 state fee, registered agent included. File it today?",o:["Yes, send me the link to pay and file","Change the name first","Ask me tonight"],p:0,r:"Link texted. Once it's filed, the tax ID and bank checklist start automatically."},
-    result:"A properly set-up company in days, without hiring someone to fill in forms."},
-   {t:"Grow with a holding company",s:"A parent company with subsidiaries underneath",trigger:"You start a second venture, buy property, or expand abroad",steps:["Business Executive maps the structure: the holding company on top, each venture its own company below","Prepares the new subsidiary's filings and the ownership paperwork","Keeps the ownership tree, officers and documents for every company in one place","Keeps money and contracts separate so one venture's risk stays in that company"],
-    ask:{q:"New venture: a rental property. Put it in its own LLC owned by your holding company?",o:["Yes, prepare the filings","Keep it in the main company","Explain the trade-off"],p:0,r:"Filings for the new LLC are ready for your review. The ownership tree is updated."},
-    result:"Each venture is protected and organized, like a much bigger company would do it."},
-   {t:"Never miss a filing",s:"Annual reports, renewals and taxes, handled",trigger:"60 days before any deadline",steps:["Business Executive tracks every company's annual reports, renewals, licenses and tax dates","Prepares each filing with the information already on record","Puts it on your list with the deadline, the fee and the exact link","Saves the confirmation and sets next year's date"],
-    ask:{q:"Utah annual renewal for your holding company is due 2/28. $18 fee, all details pre-filled. File now?",o:["Yes, text me the link","Remind me next week","Show me what's on it"],p:0,r:"Link texted. Confirmation saved and next year's renewal is on the calendar."},
-    result:"No late fees, no lapsed company, no surprise letters from the state."},
-   {t:"Books ready for your accountant",s:"Every receipt in the right place, all year",trigger:"Every transaction, and every quarter",steps:["Accountant sorts business and personal spending as it happens","Business Executive keeps receipts and invoices matched to each expense","Works out quarterly tax estimates so April has no surprises","Builds the year-end packet your accountant asks for, in their format"],
-    ask:{q:"Q4 estimated tax for the business: $1,240, due 1/15. Put it on your list with the payment link?",o:["Yes, add it","Show me the math","Ask after payday"],p:0,r:"On your list for 1/12 with the IRS link. The year-end packet is 80% ready."},
-    result:"Tax season takes an afternoon, and your accountant bills you for less."}
+    result:"Savings rise every year without ever feeling like a pay cut."},
+   {ico:"🧾",t:"Nothing slips by",s:"Bills on time, odd charges caught",scene:"stmt",
+    flow:["Every morning at 6:15","Accountant reads every charge; Investigator checks strange merchants","You hear only about what's wrong"],
+    ask:{q:"Two identical $6.75 charges at Blue Door Coffee, 1 minute apart.",o:["Add a dispute task","It's fine, I bought two","Ask me later"],p:0,r:"Dispute task added for tomorrow, 5 minutes, with the phone number."},
+    result:"No late fees, and mistakes or fraud get caught in days, not at tax time."}
   ]},
- {id:"health",tab:"Health",ico:"💪",title:"Chisel the body you want",tag:"Lose fat, keep muscle, and eat well, with a plan that adjusts itself every week.",agents:["health","shop"],
-  wf:[
-   {t:"Body recomposition",s:"Weekly weigh-in, weekly adjustment",trigger:"Smart scale sync on Sunday morning",steps:["Health Coach reads weight and body fat trend (7-day average, not one bad day)","If you're losing too fast, adds food to protect muscle; too slow, trims a little","Sets protein first, then calories","Scheduler protects 3 workout slots in your week"],
+ {id:"business",tab:"Business",title:"A small business that runs itself",tag:"Every company set up right, every filing on time, and the whole business on one screen each Monday.",agents:["biz","book","legal"],
+  sc:[
+   {ico:"📊",t:"Your Monday review",s:"The business in two minutes",scene:"dash",
+    flow:["Monday, 7 AM","Business Executive pulls cash, invoices and every deadline","You make the two or three calls that matter"],
+    ask:{q:"2 invoices are overdue ($3,250). Send polite reminders from your business email?",o:["Yes, send both","Just the bigger one","Ask me Wednesday"],p:0,r:"Reminders sent. The renewal is on your list for Thursday, 10 minutes."},
+    result:"You know where the business stands without opening a spreadsheet."},
+   {ico:"🌳",t:"Grow with a holding company",s:"Each venture in its own box",scene:"tree",
+    flow:["You start a second venture","Business Executive drafts the new LLC and the ownership papers","You sign; the tree stays current"],
+    ask:{q:"New venture: a rental property. Put it in its own LLC under your holding company?",o:["Yes, prepare the filings","Keep it in the main company","Explain the trade-off"],p:0,r:"Filings for Maple Street Rental LLC are ready for your review."},
+    result:"Each venture is protected and organized the way a much bigger company would do it."}
+  ]},
+ {id:"health",tab:"Health",title:"Chisel the body you want",tag:"Lose fat, keep muscle, eat food you like, and drop the habit that's holding you back.",agents:["health","shop"],
+  sc:[
+   {ico:"⚖️",t:"Body recomposition",s:"A plan that adjusts every week",sim:"body",
+    flow:["Smart scale syncs Sunday morning","Health Coach reads the 7-day trend, not one bad day","Food goes up or down a little"],
     ask:{q:"Down 1.4 lb this week, a bit fast. Add 150 calories (a protein snack) to keep muscle?",o:["Yes, adjust the plan","Keep it as is","Ask me next week"],p:0,r:"Plan updated: +150 calories, protein stays at 180 g."},
     result:"Steady fat loss that keeps the muscle, so the shape actually changes."},
-   {t:"Meals and groceries, handled",s:"Plan, recipes, cart",trigger:"Every other Friday",steps:["Health Coach plans two weeks of meals you actually like","Writes the recipes and a prep plan for Sunday afternoon","Fills the grocery cart with exactly what the plan needs","Shopping & Style swaps in cheaper items when prices change"],
-    ask:{q:"Next 2 weeks: 14 dinners, cart is $148. Check out?",o:["I'll check out now (link)","Swap fish for chicken","Remind me tonight"],p:0,r:"Link sent. Delivery Saturday 9–11 AM."},
+   {ico:"🥘",t:"Meals and groceries, handled",s:"Two weeks planned, cart filled",scene:"meals",
+    flow:["Every other Friday","Health Coach plans meals you like and fills the cart","You check out from one link"],
+    ask:{q:"Next 2 weeks: 14 dinners, 182 g protein a day. Cart is $148. Check out?",o:["I'll check out now (link)","Swap fish for chicken","Remind me tonight"],p:0,r:"Link sent. Delivery Saturday 9–11 AM."},
     result:"No 6 PM \"what's for dinner\". The plan and the cart are already done."},
-   {t:"Training that adapts",s:"Progress without guesswork",trigger:"You log a workout by text",steps:["Health Coach records sets and weights","Adds weight when you hit the top of the rep range","Swaps exercises if something hurts"],
-    ask:{q:"You hit 3×10 on squats at 135. Go to 145 next time?",o:["Yes","Stay at 135 one more week","Swap the exercise"],p:0,r:"Next squat day: 145 × 8."},
-    result:"Every week a little stronger, without a trainer."},
-   {t:"Quit a habit, without shame",s:"Sam is quitting vaping",trigger:"Sam texts: \"I want to quit vaping\"",steps:["Personal Coach asks why, and writes the reason down where Sam will see it again","Looks at the bigger picture: sleep, stress, friends, purpose. What the habit is doing for Sam, and what could replace it","Sets a quit date and a plan for the hardest moments (after meals, stressful calls)","Checks in privately once a day by text, and keeps a streak","If there's a slip, no lecture: what happened, what helps next time, and the streak restarts","Shares support: the free quitline (1-800-QUIT-NOW in the US) and a doctor for medication options"],
-    ask:{q:"Day 30 without vaping. 🎉 How was today?",o:["Good, no cravings","Hard, but I held on","I slipped"],p:0,rs:["30 days! That's about $150 saved. Want to put it toward the trip you mentioned?","That's the win that counts. Hard days held are how streaks get built. Proud of you.","Thanks for telling me. One slip doesn't erase 29 days. What was going on? We'll plan for that moment, and tomorrow is day 1 of the next streak."]},
-    result:"A private coach in your pocket who notices the streak, forgives the slip, and keeps the reason in front of you."}
-  ],sim:"body"},
- {id:"home",tab:"Home & family",ico:"🏠",title:"Home and family, remembered",tag:"Birthdays, chores and the house, without carrying it all in your head.",agents:["rel","gift","house","guide","shop"],
-  wf:[
-   {t:"Birthdays that never sneak up",s:"Three weeks ahead",trigger:"A birthday is 3 weeks away",steps:["Relationship Manager looks at what they like and your budget","Picks a gift (or a card at minimum)","Puts it in the cart so it arrives on time"],
-    ask:{q:"Your sister's birthday is the 28th. Gift: a $35 cookbook she mentioned. In the cart.",o:["Check out (link)","Pick something else","Just a card this year"],p:0,r:"Link sent. Arrives the 24th."},
-    result:"Nobody gets forgotten."},
-   {t:"The house runs itself",s:"Cleaning, chores, supplies",trigger:"A cleaning visit tomorrow",steps:["Home Manager sends a 10-minute prep list","Checks supplies and restocks through the Shopping & Style","Keeps cleaning spend inside the monthly budget"],
-    ask:{q:"Cleaners come tomorrow at 10. Running low on dish soap and trash bags. Add to cart?",o:["Yes","Only trash bags","Skip"],p:0,r:"Added. Arrives tomorrow morning."},
-    result:"Less mental load, a cleaner home."}
+   {ico:"🚭",t:"Quit a habit, without shame",s:"Sam is quitting vaping",scene:"streak",
+    flow:["Sam texts: \"I want to quit vaping\"","Personal Coach writes down the why and plans the hard moments","One private check-in a day"],
+    ask:{q:"Day 30 without vaping. 🎉 How was today?",o:["Good, no cravings","Hard, but I held on","I slipped"],rs:["30 days! About $150 saved. Put it toward the trip you mentioned?","That's the win that counts. Hard days held are how streaks get built.","Thanks for telling me. One slip doesn't erase 29 days. What was going on? Tomorrow is day 1 of the next streak."]},
+    result:"A private coach who notices the streak, forgives the slip, and keeps the reason in front of you. (Quitline: 1-800-QUIT-NOW.)"}
   ]},
- {id:"trust",tab:"Trust & legal",ico:"🔎",title:"Know who you're dealing with",tag:"Unknown numbers, scams and paperwork, checked before they become problems.",agents:["pi","legal"],
-  wf:[
-   {t:"Who is this number?",s:"Before you answer",trigger:"A text or call from an unknown number",steps:["Investigator checks your messages, email and contacts for clues","Checks public sources and scam reports","Saves the name, or warns you"],
-    ask:{q:"Unknown number says it's your bank and wants a code. 23 scam reports on this number.",o:["Block and report it","Save as \"scam\"","Ask me later"],p:0,r:"Flagged. Never share codes by text."},
-    result:"Fewer scams, fewer awkward \"who's this?\" replies."},
-   {t:"Paperwork, decoded",s:"Before you sign or call a lawyer",trigger:"A contract, lease or legal letter arrives",steps:["Legal Advisor summarizes it in plain words","Lists what it requires of you and by when","Writes the questions to take to a real lawyer"],
-    ask:{q:"Lease renewal: rent up 6%, 60-day notice to leave. Add the notice deadline to your calendar?",o:["Yes","No","Ask later"],p:0,r:"Deadline added, with a reminder 2 weeks before."},
+ {id:"home",tab:"Home & family",title:"Home and family, remembered",tag:"Nobody's birthday forgotten, and the house fixed by whoever should pay for it.",agents:["gift","house","shop"],
+  sc:[
+   {ico:"🎂",t:"Birthdays that never sneak up",s:"A gift in the cart, three weeks out",scene:"bdays",
+    flow:["A birthday is 3 weeks away","Relationship Manager picks a gift they'll like, in budget","You check out from one link"],
+    ask:{q:"Your sister's birthday is the 28th. The $35 cookbook she mentioned in March is in the cart.",o:["Check out (link)","Pick something else","Just a card this year"],p:0,r:"Link sent. It arrives on the 24th."},
+    result:"Everyone gets remembered, at least with a card."},
+   {ico:"🔧",t:"Something broke",s:"Who fixes it, and who pays",scene:"repair",
+    flow:["You text: \"the dishwasher is leaking\"","Home Manager checks the lease and drafts the ask","You approve the message"],
+    ask:{q:"Your lease says the landlord repairs included appliances. Send this request to Dana (landlord)?",o:["Send it","Edit it first","I'll fix it myself"],p:0,r:"Sent. Follow-up set for Thursday if Dana doesn't reply."},
+    result:"You never pay for a repair that's someone else's job."}
+  ]},
+ {id:"trust",tab:"Trust & legal",title:"Know who you're dealing with",tag:"Unknown numbers, scams and fine print, checked before they cost you.",agents:["pi","legal"],
+  sc:[
+   {ico:"📵",t:"Who is this number?",s:"Before you answer",scene:"scam",
+    flow:["A text from an unknown number","Investigator checks your contacts, email and scam reports","You get a name or a warning"],
+    ask:{q:"(801) 555-0147 says it's your bank and wants a code. 23 scam reports on this number.",o:["Block and report it","Save it as \"scam\"","Ask me later"],p:0,r:"Flagged. Your bank will never ask for a code by text."},
+    result:"Fewer scams, and fewer awkward \"who's this?\" replies."},
+   {ico:"📄",t:"Fine print, decoded",s:"Before you sign",scene:"doc",
+    flow:["A lease, contract or legal letter arrives","Legal Advisor marks what it asks of you, and by when","Questions for a real lawyer, if you need one"],
+    ask:{q:"Lease renewal: rent up 6%, and 60 days' notice to leave. Add the notice deadline to your calendar?",o:["Yes, with a reminder","No","Ask me later"],p:0,r:"Deadline added for Dec 31, with a reminder two weeks before."},
     result:"No surprises hiding in the fine print."}
   ]}
 ];
@@ -411,25 +506,63 @@ const $=s=>document.querySelector(s);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const money=n=>"$"+Math.round(n).toLocaleString("en-US");
 
+/* ---------- scenes: one picture per scenario ---------- */
+const SCENES={
+ lead:()=>`<div class="lead-card"><div class="lc-top"><div><b>Senior Platform Engineer</b><span>Northwind Health · 400 people · Remote</span></div><div class="ring" style="--p:92"><span>92%</span></div></div>
+  <ul class="checks"><li>Fully remote</li><li>$185–210k, above your $165k floor</li><li>Full benefits and a 4% 401(k) match</li><li>Real company, good reviews (Investigator)</li></ul>
+  <div class="dropped"><small>Dropped this morning</small><s>Staff Engineer · on-site 5 days</s><s>Platform Lead · $140k max</s><s>"DevOps Ninja" · recruiter flagged</s></div></div>`,
+ resume:()=>`<div class="doc"><div class="doc-h"><b>Sam Rivera</b><span>Tailored for: Senior Platform Engineer, Northwind Health</span></div>
+  <p><del>Managed infrastructure for engineering teams.</del> <ins>Ran the Kubernetes platform for 6 product teams.</ins></p>
+  <p><del>Helped reduce cloud costs.</del> <ins>Cut cloud spend 31% ($420k a year) by right-sizing clusters.</ins></p>
+  <p>Led the move from on-prem to AWS for 40 services, with zero downtime.</p>
+  <div class="kw"><small>Posting keywords covered</small><span class="pill on">Kubernetes</span><span class="pill on">cost savings</span><span class="pill on">platform</span><span class="pill on">mentoring</span><span class="pill">Go</span></div></div>`,
+ offer:()=>{const X=v=>((v-140)/60*100).toFixed(1)+"%";return `<div class="range"><div class="rg-track"><div class="rg-band" style="left:${X(170)};width:${(15/60*100).toFixed(1)}%"></div>
+  <i class="mk off" style="left:${X(160)}"><b>Offer</b>$160k</i><i class="mk floor" style="left:${X(165)}"><b>Floor</b>$165k</i><i class="mk ctr" style="left:${X(178)}"><b>Counter</b>$178k</i></div>
+  <div class="rg-axis"><span>$140k</span><span class="mkt">▬ Market for this role: $170–185k</span><span>$200k</span></div></div>`},
+ stmt:()=>`<div class="stmt"><div class="st-h"><b>Checking ···4417</b><span>This morning</span></div>
+  <div class="row"><span>Nov 4</span><span>Blue Door Coffee</span><b>$6.75</b></div>
+  <div class="row flag"><span>Nov 4</span><span>Blue Door Coffee<em>Same amount, 1 minute later</em></span><b>$6.75</b></div>
+  <div class="row"><span>Nov 3</span><span>Smith's Groceries</span><b>$84.12</b></div>
+  <div class="row due"><span>Thu</span><span>City water bill<em>Not on autopay · due in 3 days</em></span><b>$46.18</b></div></div>`,
+ dash:()=>`<div class="kpis"><div><small>Cash on hand</small><b>$18,400</b><span class="up">▲ $2,100 this week</span></div><div class="warn"><small>Overdue invoices</small><b>$3,250</b><span>2 clients, 30+ days</span></div><div><small>Next deadline</small><b>12 days</b><span>State annual renewal</span></div></div>
+  <ul class="dl"><li><span>State renewal · $18</span><i style="--w:60%"></i><b>12 d</b></li><li><span>Q4 estimated tax · $1,240</span><i style="--w:25%"></i><b>66 d</b></li><li><span>Business license</span><i style="--w:10%"></i><b>140 d</b></li></ul>`,
+ tree:()=>`<div class="tree"><div class="node top">Sam Holdings LLC<small>owns 100% of each</small></div><div class="kids"><div class="node">Rivera Consulting LLC<small>client work</small></div><div class="node new">Maple Street Rental LLC<small>new · drafted</small></div><div class="node">Sam Studio LLC<small>products</small></div></div></div>`,
+ meals:()=>{const D=[["Mon","🌮","Carne asada bowls"],["Tue","🐟","Lime-chili salmon"],["Wed","🍗","Pollo a la brasa"],["Thu","🥩","Lomo saltado"],["Fri","🍤","Shrimp tacos"],["Sat","🍲","Chili verde"],["Sun","🥗","Big cobb salad"]];
+  return `<div class="meals">${D.map(d=>`<div><small>${d[0]}</small><span>${d[1]}</span><b>${d[2]}</b></div>`).join("")}</div><div class="cart"><span>🛒 Cart for 2 weeks</span><b>$148</b><span>182 g protein a day</span></div>`},
+ streak:()=>`<div class="streak"><div class="why"><small>Sam's reason, in Sam's words</small>"I want to run with my kids without coughing."</div>
+  <div class="dots">${Array.from({length:35},(_,i)=>`<i class="${i<29?"on":i===29?"today":""}"></i>`).join("")}</div>
+  <div class="st-n"><div><b>30</b><span>days free</span></div><div><b>$150</b><span>not spent</span></div><div><b>3</b><span>hard moments planned</span></div></div></div>`,
+ bdays:()=>`<div class="bd">${[["J","Jess (sister)","Nov 28","21 days","Cookbook · $35 · in the cart","on"],["M","Mom","Dec 22","45 days","Card + photo book · planned",""],["A","Alex (friend)","Jan 9","63 days","Card · planned",""]].map(b=>`<div class="bd-row ${b[5]}"><span class="av">${b[0]}</span><div><b>${b[1]}</b><small>${b[4]}</small></div><div class="when"><b>${b[3]}</b><small>${b[2]}</small></div></div>`).join("")}</div>`,
+ repair:()=>`<div class="repair"><div class="msg me">the dishwasher is leaking</div>
+  <div class="verdict"><small>Who pays</small><b>Your landlord</b><p>Lease §12: "Appliances provided with the unit will be repaired by Landlord." Not caused by misuse, so it's Dana's job.</p></div>
+  <div class="draft"><small>Draft to Dana</small>Hi Dana, the dishwasher in unit 4B started leaking under the door today. Could you send someone this week? I'm home after 5. Thanks, Sam</div></div>`,
+ scam:()=>`<div class="call"><small>Text message</small><b>(801) 555-0147</b><div class="bub">FirstBank: suspicious login. Reply with the 6-digit code we just sent to keep your account open.</div>
+  <div class="alarm"><b>⚠ Likely scam</b>23 reports this month · not your bank's number · banks never ask for codes by text</div></div>`,
+ doc:()=>`<div class="doc lease"><div class="doc-h"><b>Lease renewal, unit 4B</b><span>4 pages · arrived today</span></div>
+  <p><mark>Monthly rent will be $1,537</mark> beginning January 1. <span class="note">Up 6% from $1,450 (+$87 a month).</span></p>
+  <p>Tenant must give <mark>sixty (60) days' written notice</mark> before vacating. <span class="note">To leave by Feb 28, tell them by Dec 31.</span></p>
+  <p>A pet fee of <mark>$35 per month</mark> applies to each animal. <span class="note">New this year. Ask whether it applies to your cat.</span></p></div>`
+};
+
 function renderTabs(active){
   $("#tabs").innerHTML=GOALS.map(g=>`<button class="tab" role="tab" aria-selected="${g.id===active}" data-g="${g.id}">${g.tab}</button>`).join("");
 }
-function renderGoal(id){
-  const g=GOALS.find(x=>x.id===id); renderTabs(id);
-  let h=`<div class="goal"><div class="goal-head"><div><h3>${esc(g.title)}</h3><p class="tag">${esc(g.tag)}</p></div></div>
+function askHTML(a){
+  return `<div class="chat"><div class="msg them"><small>Text from your staff</small>${esc(a.q)}</div><div class="ask"><div class="opts">${a.o.map((o,k)=>`<button data-reply="${esc(a.rs?a.rs[k]:(k===a.p?a.r:(k===2?"OK. I'll ask again later.":"Got it. Nothing happens.")))}"><b>${k+1}</b>${esc(o)}</button>`).join("")}</div><div class="reply msg them"></div></div></div>`;
+}
+function renderGoal(id,si=0){
+  const g=GOALS.find(x=>x.id===id); renderTabs(id); const w=g.sc[si];
+  $("#goal").innerHTML=`<div class="goal"><h3>${esc(g.title)}</h3><p class="tag">${esc(g.tag)}</p>
   <div class="who">${g.agents.map(a=>`<button data-agent="${a}">${AGENTS[a].i} ${AGENTS[a].n}</button>`).join("")}</div>
-  <div class="label">Workflows</div>`;
-  g.wf.forEach((w,i)=>{
-    h+=`<div class="wf${i===0?" open":""}"><button aria-expanded="${i===0}"><span class="num">${i+1}</span><span class="t"><b>${esc(w.t)}</b><span>${esc(w.s)}</span></span><span class="chev">›</span></button><div class="body"><ol class="steps">
-      <li class="trigger"><span class="dot">⚡</span><small>Trigger</small>${esc(w.trigger)}</li>
-      ${w.steps.map((s,j)=>`<li><span class="dot">${j+1}</span>${esc(s)}</li>`).join("")}
-      ${w.ask?`<li><span class="dot">📱</span><small>You decide</small><div class="ask">${esc(w.ask.q)}<div class="opts">${w.ask.o.map((o,k)=>`<button data-reply="${esc(w.ask.rs?w.ask.rs[k]:(k===w.ask.p?w.ask.r:(k===2?"OK. I'll ask again later.":"Got it. Nothing happens.")))}"><b>${k+1}</b> = ${esc(o)}</button>`).join("")}</div><div class="reply"></div></div></li>`:""}
-      <li><span class="dot">✓</span><small>Result</small><div class="result">${esc(w.result)}</div></li></ol></div></div>`;
-  });
-  if(g.sim) h+=`<div class="label">Try it</div>`+[].concat(g.sim).map((k,i)=>`<div id="sim${i}"></div>`).join("");
-  h+=`</div>`;
-  $("#goal").innerHTML=h;
-  if(g.sim) [].concat(g.sim).forEach((k,i)=>SIMS[k]($("#sim"+i)));
+  <div class="picker" role="tablist">${g.sc.map((s,i)=>`<button class="pick" role="tab" aria-selected="${i===si}" data-gid="${g.id}" data-si="${i}"><span class="pk-i">${s.ico}</span><span><b>${esc(s.t)}</b><small>${esc(s.s)}</small></span></button>`).join("")}</div>
+  <article class="scn">
+   <ol class="flow">${w.flow.map((f,i)=>`<li><small>${["When","Your staff","You"][i]}</small>${esc(f)}</li>`).join("")}</ol>
+   ${w.scene?`<div class="stage">${SCENES[w.scene]()}</div>`:""}
+   ${w.sim?`<div id="simbox"></div>`:""}
+   ${askHTML(w.ask)}
+   <p class="gets"><b>What you get</b>${esc(w.result)}</p>
+  </article></div>`;
+  if(w.sim) SIMS[w.sim]($("#simbox"));
 }
 
 /* ---------- simulators ---------- */
@@ -556,13 +689,13 @@ function openAgent(k){
 function closeSheet(){$("#shade").classList.remove("on");$("#sheet").classList.remove("on");document.body.classList.remove("locked")}
 
 document.addEventListener("click",e=>{
-  const t=e.target.closest("[data-g],[data-agent],[data-jump],.wf>button,[data-reply]");
+  const t=e.target.closest("[data-si],[data-g],[data-agent],[data-jump],[data-reply]");
   if(!t)return;
-  if(t.dataset.g){renderGoal(t.dataset.g);}
+  if(t.dataset.si!==undefined){renderGoal(t.dataset.gid,+t.dataset.si);}
+  else if(t.dataset.g){renderGoal(t.dataset.g);}
   else if(t.dataset.agent){openAgent(t.dataset.agent);}
   else if(t.dataset.jump){closeSheet();renderGoal(t.dataset.jump);$("#goals").scrollIntoView();}
   else if(t.dataset.reply!==undefined){const box=t.closest(".ask");box.querySelectorAll("button").forEach(b=>b.classList.remove("picked"));t.classList.add("picked");const r=box.querySelector(".reply");r.textContent=t.dataset.reply;r.classList.add("show");}
-  else{const wf=t.parentElement;wf.classList.toggle("open");t.setAttribute("aria-expanded",wf.classList.contains("open"));}
 });
 $("#shade").onclick=closeSheet;$("#sheetX").onclick=closeSheet;
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeSheet()});

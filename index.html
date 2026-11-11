@@ -6,9 +6,9 @@
 <meta name="robots" content="noindex">
 <title>Should</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta name="description" content="Put your life goals on autopilot. One human, twenty-three AI agents.">
+<meta name="description" content="Put your life goals on autopilot. One human, twenty-four AI agents.">
 <meta property="og:title" content="Should">
-<meta property="og:description" content="Put your life goals on autopilot. One human, twenty-three AI agents.">
+<meta property="og:description" content="Put your life goals on autopilot. One human, twenty-four AI agents.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -253,6 +253,31 @@ svg.chart{width:100%;height:auto;display:block;margin-top:8px}
 .fit b{display:block;font-size:13px}
 .fit small{font-size:11px;color:var(--muted)}
 @media(max-width:520px){.fit{grid-template-columns:repeat(2,minmax(0,1fr))}.day{grid-template-columns:1fr}}
+/* scene: co-parenting + contact */
+.cop{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:12px}
+@media(max-width:560px){.cop{grid-template-columns:1fr}}
+.cal{background:var(--bg);border-radius:14px;padding:10px}
+.cal small,.hand small,.split small{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:6px}
+.cal-g{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;text-align:center;font-size:11px;font-style:normal}
+.cal-g i{font-style:normal;padding:4px 0;border-radius:6px}
+.cal-g i.h{color:var(--muted);font-weight:600}
+.cal-g i.k{background:var(--accent-soft);color:var(--accent);font-weight:600}
+.cal-g i.t{box-shadow:0 0 0 2px var(--warm) inset}
+.cal span{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);margin-top:6px}
+.sw{width:12px;height:12px;border-radius:3px;background:var(--accent-soft);display:inline-block}
+.cop-r{display:grid;gap:10px;align-content:start}
+.hand{background:var(--accent-soft);border-radius:14px;padding:10px 12px}
+.hand b{display:block}
+.hand span{font-size:13px;color:var(--muted)}
+.split{border:1px solid var(--line);border-radius:14px;padding:10px 12px;display:grid;gap:4px}
+.split div{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:10px;font-size:14px;align-items:baseline}
+.split em{font-style:normal;font-size:12px;color:var(--accent)}
+.vcard{background:var(--bg);border-radius:16px;padding:14px;display:grid;grid-template-columns:56px minmax(0,1fr);gap:4px 12px;align-items:center}
+.av.big{width:56px;height:56px;font-size:18px;background:var(--accent-soft);color:var(--accent)}
+.vcard b{display:block;font-family:Fraunces,serif;font-size:19px}
+.vcard small{color:var(--muted)}
+.vcard ul{grid-column:1/-1;list-style:none;padding:0;margin:8px 0 0;display:grid;gap:6px;font-size:14px}
+.vcard ul i{font-style:normal;margin-right:8px}
 /* staff grid */
 .staff{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:1fr;gap:8px;margin-top:18px}
 @media(min-width:620px){.staff{grid-template-columns:repeat(4,minmax(0,1fr))}}
@@ -320,9 +345,9 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 <header class="hero">
   <div class="brand"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="var(--accent)"/><path d="M17 34.5 L27.5 44.5 L45 23" fill="none" stroke="var(--card)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="16.5" r="5" fill="var(--warm)"/></svg><span>should<i>.</i></span></div>
   <h1>Put your life goals on autopilot.</h1>
-  <p class="sub">A better job, money that grows while you work, a business that runs itself, a body you're proud of. Twenty-three AI agents work on it every day. You answer with 1, 2 or 3.</p>
+  <p class="sub">A better job, money that grows while you work, a business that runs itself, a body you're proud of. Twenty-four AI agents work on it every day. You answer with 1, 2 or 3.</p>
   <div class="stats">
-    <div class="stat"><b>23</b><span>AI agents</span></div>
+    <div class="stat"><b>24</b><span>AI agents</span></div>
     <div class="stat"><b>7</b><span>life goals</span></div>
     <div class="stat"><b>1</b><span>human in charge</span></div>
   </div>
@@ -423,7 +448,7 @@ const AGENTS = {
   ea:{n:"Executive Assistant",i:"🧭",job:"Runs the staff: plans your day, texts you at 8 AM and hands out the work.",routines:["Daily brief, 6:30 AM","Morning text, 8:00 AM","Reply desk, all day"],never:"Texts you more than one question at a time."},
   book:{n:"Accountant",i:"📒",job:"Balances, bills and spending, checked every morning before you're up.",routines:["Balance check, 6:15 AM"],never:"Moves money. It only reads."},
   sched:{n:"Scheduler",bg:true,i:"🗓️",job:"Owns your calendar. The other agents ask it when you're free or away.",routines:["Day plan, 6:00 AM"],never:"Books anything on a Sunday."},
-  pi:{n:"Investigator",i:"🔎",job:"Works out who unknown numbers are, vets people and businesses, spots scams.",routines:["New-contact check, weekly"],never:"Digs into private people."},
+  pi:{n:"Investigator",i:"🔎",job:"Works out who new numbers are, remembers how you met, and vets people and businesses before you deal with them.",routines:["New-contact check, weekly"],never:"Digs into private people."},
   health:{n:"Health Coach",i:"🥗",job:"Training plan, meal plans and recipes, weigh-ins, and the grocery cart.",routines:["Meal plan, every 2 weeks","Grocery cart, Saturdays","Scale sync, weekly"],never:"Checks out. You do."},
   coach:{n:"Personal Coach",i:"🏁",job:"Grades your week against your goals and runs a Saturday sit-down.",routines:["Scorecard, Saturdays 9:30","Habit check-in, daily"],never:"Shames you, or shares your check-ins with anyone."},
   career:{n:"Career Assistant",i:"💼",job:"Finds jobs that fit, tailors your resume, applies and tracks every reply.",routines:["Job search, 6:15 AM","Job board refresh, weekly","Application follow-ups, daily"],never:"Applies anywhere, or accepts an offer or a number, without your yes."},
@@ -433,7 +458,8 @@ const AGENTS = {
   clothier:{n:"Clothier",i:"👔",job:"Your clothes: picks today's outfit from your closet for your plans and the weather, and packs your bag for trips.",routines:["Outfit of the day, workday mornings"],never:"Buys clothes without your yes."},
   house:{n:"Home Manager",i:"🏠",job:"The house and the car: cleaning, chores, supplies and repairs. Tell it what's broken; it finds who should fix it.",routines:["Prep list before each cleaning","Repair follow-up, until it's fixed"],never:"Books, pays or messages anyone without your yes."},
   move:{n:"Relocation Expert",i:"📦",job:"Finds your next home in budget and plans the move week by week.",routines:["Listing check, while you're searching"],never:"Signs a lease, pays a deposit or books movers without your yes."},
-  gift:{n:"Relationship Manager",i:"🎁",job:"Family and friends: staying in touch, and every birthday with a gift in budget, in the cart in time.",routines:["Birthday check, 3 weeks ahead"],never:"Checks out."},
+  gift:{n:"Gift Concierge",i:"🎁",job:"Every birthday and occasion: a gift they'll love, in budget, in the cart in time. At minimum, a card in the mail.",routines:["Birthday check, 3 weeks ahead"],never:"Checks out."},
+  relmgr:{n:"Relationship Manager",i:"🤝",job:"Family and friends: who's who, every household's address, staying in touch, and smooth co-parenting.",routines:["Keep-in-touch nudges, weekly","Kids' schedule check, Thursdays"],never:"Sends a message to anyone without your yes."},
   legal:{n:"Legal Advisor",i:"⚖️",job:"Reads paperwork in plain words and writes the questions for a lawyer.",routines:["On request"],never:"Files anything or contacts anyone."},
   music:{n:"Music Coach",i:"🎹",job:"Records what you play on the piano and turns it into sheet music.",routines:["On request"],never:"Gives lessons you didn't ask for."},
   web:{n:"Webmaster",i:"🖥️",job:"Builds your personal dashboard, where every agent has its own desk.",routines:["On request"],never:"Publishes without your yes."},
@@ -502,18 +528,18 @@ const GOALS = [
     ask:{q:"Day 30 without vaping. 🎉 How was today?",o:["Good, no cravings","Hard, but I held on","I slipped"],rs:["30 days! About $150 saved. Put it toward the trip you mentioned?","That's the win that counts. Hard days held are how streaks get built.","Thanks for telling me. One slip doesn't erase 29 days. What was going on? Tomorrow is day 1 of the next streak."]},
     result:"A private coach who notices the streak, forgives the slip, and keeps the reason in front of you. (Quitline: 1-800-QUIT-NOW.)"}
   ]},
- {id:"home",tab:"Home & family",title:"Home and family, remembered",tag:"Nobody's birthday forgotten, and the house fixed by whoever should pay for it.",agents:["gift","house","shop"],
+ {id:"home",tab:"Home & family",title:"Home and family, handled",tag:"Co-parenting that runs smoothly, and the house fixed by whoever should pay for it.",agents:["relmgr","house"],
   sc:[
-   {ico:"🎂",t:"Birthdays that never sneak up",s:"A gift in the cart, three weeks out",scene:"bdays",
-    flow:["A birthday is 3 weeks away","Relationship Manager picks a gift they'll like, in budget","You check out from one link"],
-    ask:{q:"Your sister's birthday is the 28th. The $35 cookbook she mentioned in March is in the cart.",o:["Check out (link)","Pick something else","Just a card this year"],p:0,r:"Link sent. It arrives on the 24th."},
-    result:"Everyone gets remembered, at least with a card."},
+   {ico:"👨‍👧‍👦",t:"Co-parenting, kept easy",s:"Kids' weekends, handoffs and shared costs",scene:"coparent",
+    flow:["Thursday before a kids' weekend","Relationship Manager lines up pickup, plans and shared costs","You approve one friendly note"],
+    ask:{q:"Kids' weekend starts Friday. Soccer fees were $120. Send Jordan this: \"Hi Jordan, I'll pick the kids up from school at 3:30 Friday. Soccer fees were $120, so your half is $60. Receipt attached. Thanks!\"",o:["Send it","Edit it first","Ask me tomorrow"],p:0,r:"Sent. Pickup is on your calendar with a reminder at 3."},
+    result:"Every handoff smooth, every shared cost split fairly, and every message calm and friendly."},
    {ico:"🔧",t:"Something broke",s:"Who fixes it, and who pays",scene:"repair",
     flow:["You text: \"the dishwasher is leaking\"","Home Manager checks the lease and drafts the ask","You approve the message"],
     ask:{q:"Your lease says the landlord repairs included appliances. Send this request to Dana (landlord)?",o:["Send it","Edit it first","I'll fix it myself"],p:0,r:"Sent. Follow-up set for Thursday if Dana doesn't reply."},
     result:"You never pay for a repair that's someone else's job."}
   ]},
- {id:"style",tab:"Shopping & Style",title:"Buy smart, look sharp",tag:"Big purchases researched and bought at the right price, and an outfit picked for whatever today holds.",agents:["shop","clothier"],
+ {id:"style",tab:"Shopping & Style",title:"Buy smart, look sharp, give well",tag:"Big purchases bought at the right price, an outfit picked for whatever today holds, and a gift ready for every birthday.",agents:["shop","clothier","gift"],
   sc:[
    {ico:"🏷️",t:"Buy it at the right price",s:"Research once, then wait for the dip",scene:"price",
     flow:["You say: \"I need a new office chair\"","Shopping Expert compares the top picks and watches the price","You get one tap when it drops"],
@@ -522,14 +548,18 @@ const GOALS = [
    {ico:"👔",t:"Today's outfit",s:"From your own closet, for your day",scene:"outfit",
     flow:["6:30 AM, before the morning text","Clothier reads your calendar and the weather","One outfit, from clothes you own"],
     ask:{q:"Client lunch at 12 and 38°F with wind. Navy chinos, grey merino crew, brown boots and the wool coat?",o:["Perfect","Something more casual","Ask me tomorrow"],p:0,r:"Laid out in the morning text. Coat's back from the cleaners Friday."},
-    result:"No standing in front of the closet. Dressed right for the day, every day."}
+    result:"No standing in front of the closet. Dressed right for the day, every day."},
+   {ico:"🎂",t:"Birthdays that never sneak up",s:"A gift in the cart, three weeks out",scene:"bdays",
+    flow:["A birthday is 3 weeks away","Gift Concierge picks a gift they'll like, in budget","You check out from one link"],
+    ask:{q:"Your sister's birthday is the 28th. The $35 cookbook she mentioned in March is in the cart.",o:["Check out (link)","Pick something else","Just a card this year"],p:0,r:"Link sent. It arrives on the 24th."},
+    result:"Everyone gets remembered, at least with a card."}
   ]},
- {id:"trust",tab:"Trust & legal",title:"Know who you're dealing with",tag:"Unknown numbers, scams and fine print, checked before they cost you.",agents:["pi","legal"],
+ {id:"trust",tab:"People & paperwork",title:"Every person remembered, every page understood",tag:"New people saved with how you met, and fine print explained in plain words before you sign.",agents:["pi","legal","relmgr"],
   sc:[
-   {ico:"📵",t:"Who is this number?",s:"Before you answer",scene:"scam",
-    flow:["A text from an unknown number","Investigator checks your contacts, email and scam reports","You get a name or a warning"],
-    ask:{q:"(801) 555-0147 says it's your bank and wants a code. 23 scam reports on this number.",o:["Block and report it","Save it as \"scam\"","Ask me later"],p:0,r:"Flagged. Your bank will never ask for a code by text."},
-    result:"Fewer scams, and fewer awkward \"who's this?\" replies."},
+   {ico:"📇",t:"Every new person, remembered",s:"Names, how you met, what you talked about",scene:"contact",
+    flow:["A text from a number you don't have saved","Investigator matches it to your email, calendar and contacts","Saved, with the follow-up on your list"],
+    ask:{q:"(801) 555-0193 is Marco Diaz. You met at the climbing gym on Oct 30 and he invited you to Thursday's bouldering night. Save him and add Thursday 7 PM?",o:["Yes, save and add it","Just save him","Ask me later"],p:0,r:"Saved as Marco (climbing gym). Thursday 7 PM is on your calendar."},
+    result:"No more \"sorry, who's this?\". Every new friend is saved with the story of how you met."},
    {ico:"📄",t:"Fine print, decoded",s:"Before you sign",scene:"doc",
     flow:["A lease, contract or legal letter arrives","Legal Advisor marks what it asks of you, and by when","Questions for a real lawyer, if you need one"],
     ask:{q:"Lease renewal: rent up 6%, and 60 days' notice to leave. Add the notice deadline to your calendar?",o:["Yes, with a reminder","No","Ask me later"],p:0,r:"Deadline added for Dec 31, with a reminder two weeks before."},
@@ -571,14 +601,17 @@ const SCENES={
  repair:()=>`<div class="repair"><div class="msg me">the dishwasher is leaking</div>
   <div class="verdict"><small>Who pays</small><b>Your landlord</b><p>Lease §12: "Appliances provided with the unit will be repaired by Landlord." Not caused by misuse, so it's Dana's job.</p></div>
   <div class="draft"><small>Draft to Dana</small>Hi Dana, the dishwasher in unit 4B started leaking under the door today. Could you send someone this week? I'm home after 5. Thanks, Sam</div></div>`,
- scam:()=>`<div class="call"><small>Text message</small><b>(801) 555-0147</b><div class="bub">FirstBank: suspicious login. Reply with the 6-digit code we just sent to keep your account open.</div>
-  <div class="alarm"><b>⚠ Likely scam</b>23 reports this month · not your bank's number · banks never ask for codes by text</div></div>`,
  price:()=>{const P=[495,495,479,489,469,475,449,459,439,449,415,389];const max=500,min=370,X=i=>(i/(P.length-1)*100).toFixed(1),Y=v=>((max-v)/(max-min)*100).toFixed(1);
   return `<div class="price"><div class="pr-top"><div><b>Office chair, top pick</b><span>Picked over 2 others for back support and the 12-year warranty</span></div><div class="pr-now"><b>$389</b><s>$495</s></div></div>
   <svg class="spark" viewBox="0 0 100 40" preserveAspectRatio="none"><line x1="0" x2="100" y1="${(Y(400)*.4).toFixed(1)}" y2="${(Y(400)*.4).toFixed(1)}" stroke="var(--warm)" stroke-dasharray="2 2" stroke-width=".6"/><polyline fill="none" stroke="var(--accent)" stroke-width="1.6" vector-effect="non-scaling-stroke" points="${P.map((v,i)=>X(i)+","+(Y(v)*.4).toFixed(1)).join(" ")}"/></svg>
   <div class="pr-ax"><span>6 months ago</span><span class="tg">— your target: under $400</span><span>today</span></div></div>`},
  outfit:()=>`<div class="outfit"><div class="day"><div><small>Today</small><b>38°F, windy</b><span>☁️ High 44°</span></div><div><small>12:00</small><b>Client lunch</b><span>Smart casual</span></div><div><small>5:30</small><b>Gym</b><span>Pack the bag</span></div></div>
   <div class="fit">${[["🧥","Wool coat","charcoal"],["👕","Merino crew","grey"],["👖","Chinos","navy"],["🥾","Chelsea boots","brown"]].map(o=>`<div><span>${o[0]}</span><b>${o[1]}</b><small>${o[2]}</small></div>`).join("")}</div></div>`,
+ coparent:()=>{const days=Array.from({length:28},(_,i)=>i+1),kids=[5,6,7,19,20,21];return `<div class="cop"><div class="cal"><small>November</small><div class="cal-g">${["M","T","W","T","F","S","S"].map(d=>`<i class="h">${d}</i>`).join("")}${days.map(d=>`<i class="${kids.includes(d)?"k":""}${d===19?" t":""}">${d}</i>`).join("")}</div><span><b class="sw"></b>Kids with you</span></div>
+  <div class="cop-r"><div class="hand"><small>Friday handoff</small><b>3:30 PM · school pickup</b><span>Soccer bag and cleats · game Sat 10 AM</span></div>
+  <div class="split"><small>Shared costs this month</small><div><span>Soccer fees</span><b>$120</b><em>$60 each</em></div><div><span>School pictures</span><b>$38</b><em>$19 each</em></div></div></div></div>`},
+ contact:()=>`<div class="vcard"><span class="av big">MD</span><div><b>Marco Diaz</b><small>(801) 555-0193 · new</small></div>
+  <ul><li><i>📍</i>Met at the climbing gym, Oct 30</li><li><i>✉️</i>Same person who emailed the bouldering-night invite</li><li><i>📅</i>Thursday 7 PM, bouldering night</li><li><i>👥</i>Friend of Alex (in your contacts)</li></ul></div>`,
  doc:()=>`<div class="doc lease"><div class="doc-h"><b>Lease renewal, unit 4B</b><span>4 pages · arrived today</span></div>
   <p><mark>Monthly rent will be $1,537</mark> beginning January 1. <span class="note">Up 6% from $1,450 (+$87 a month).</span></p>
   <p>Tenant must give <mark>sixty (60) days' written notice</mark> before vacating. <span class="note">To leave by Feb 28, tell them by Dec 31.</span></p>

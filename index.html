@@ -328,7 +328,7 @@ const GOALS = [
     ask:{q:"You met Alex (VP Engineering) last month. Send a quick check-in?",o:["Yes, send the draft","Remind me next week","Skip"],p:0,r:"Sent. Alex is set to resurface in 2 months."},
     result:"Relationships stay warm without a spreadsheet."}
   ]},
- {id:"wealth",tab:"Wealth",ico:"📈",title:"Make your money work as hard as you do",tag:"Pick a strategy, see how it holds up in good years and crashes, and let an AI trading bot run it. Plus a retirement that funds itself.",agents:["wealth","book","coach"],
+ {id:"wealth",tab:"Money",ico:"💳",title:"Money that grows, bills that never slip",tag:"Bills paid on time, fraud caught early, credit climbing, and an AI trading bot plus a retirement plan making your money work as hard as you do.",agents:["wealth","book","pi","coach","ea"],
   wf:[
    {t:"Pick your trading strategy",s:"Choose how your money is invested, in plain words",trigger:"You decide to put money to work",steps:["Financial Advisor lays out the strategies side by side: index-plus-AI, momentum, low-volatility, dividend income","Shows each one's typical return, its worst year, and how bumpy the ride is","You pick one and set your risk level, how much to invest, and your loss limit"],
     ask:{q:"For a 10-year goal with a medium risk level, Core + AI fits best: mostly index, 20% traded by the bot. Use it?",o:["Yes, use Core + AI","Show me momentum instead","Ask me Saturday"],p:0,r:"Core + AI selected. Next: see how it holds up in a crash."},
@@ -342,9 +342,15 @@ const GOALS = [
    {t:"Retirement on autopilot",s:"Every raise and every enrollment window",trigger:"Payday, a raise, or open enrollment",steps:["Financial Advisor checks you're contributing enough to get the full employer match","When pay goes up, suggests raising your contribution by 1% so take-home still rises","Checks the funds are low-cost and match your timeline","Puts the exact enrollment steps on your todo list before the window closes"],
     ask:{q:"You got a 4% raise. Raise your 401(k) from 6% to 7%? Take-home still goes up $112 a month.",o:["Yes, add the steps to my list","Keep it at 6%","Ask me after payday"],p:0,r:"On your list for Thursday, 5 minutes, with the link."},
     result:"Savings rise every year without ever feeling a pay cut."},
-   {t:"Spending on track for retirement",s:"A daily check against the plan",trigger:"6:15 AM balance check",steps:["Bookkeeper syncs balances and new transactions","Compares the month so far with the plan that funds your retirement goal","Flags drift early: new subscriptions, price increases, duplicate charges","Personal Coach counts it in your weekly score"],
+   {t:"Spending on track for retirement",s:"A daily check against the plan",trigger:"6:15 AM balance check",steps:["Accountant syncs balances and new transactions","Compares the month so far with the plan that funds your retirement goal","Flags drift early: new subscriptions, price increases, duplicate charges","Personal Coach counts it in your weekly score"],
     ask:{q:"Dining out is $140 over plan with 9 days left. Want a cheap meal plan for the rest of the month?",o:["Yes, Health Coach plans it","No, I'll adjust myself","Remind me Friday"],p:0,r:"Meal plan for 9 days is ready, $62 of groceries in the cart."},
-    result:"Small leaks get caught in days, not at tax time."}
+    result:"Small leaks get caught in days, not at tax time."},
+   {t:"Bills that pay on time",s:"Three days ahead, with the link",trigger:"A bill is due in 3 days and isn't on autopay",steps:["Accountant sees the due date and the amount","Checks there's enough in checking","Executive Assistant texts you the exact amount and the pay link"],
+    ask:{q:"Water bill $46.18 is due Thursday, not on autopay.",o:["Send me the pay link now","Remind me Wednesday","Already paid"],p:0,r:"Link sent. Marked paid when the charge clears."},
+    result:"No late fees, no surprises."},
+   {t:"Odd charges get questioned",s:"Fraud and duplicates",trigger:"A charge that doesn't match your patterns",steps:["Accountant spots a duplicate, a new merchant, or an odd amount","Private Investigator checks the merchant","If it's wrong, the dispute steps go on your list with the phone number"],
+    ask:{q:"Two identical $6.75 charges at the same coffee shop, 1 minute apart.",o:["Add a dispute task","It's fine, I bought two","Ask me later"],p:0,r:"Dispute task added for tomorrow, 5 minutes."},
+    result:"Mistakes and fraud get caught in days."}
   ],sim:["trade","retire"]},
  {id:"business",tab:"Business",ico:"🏢",title:"A small business that runs itself",tag:"Your companies set up right, every filing on time, books ready for the accountant, and a clear weekly picture. You run the business; the paperwork runs itself.",agents:["biz","book","legal","sched"],
   wf:[
@@ -360,7 +366,7 @@ const GOALS = [
    {t:"Never miss a filing",s:"Annual reports, renewals and taxes, handled",trigger:"60 days before any deadline",steps:["Business Executive tracks every company's annual reports, renewals, licenses and tax dates","Prepares each filing with the information already on record","Puts it on your list with the deadline, the fee and the exact link","Saves the confirmation and sets next year's date"],
     ask:{q:"Utah annual renewal for your holding company is due 2/28. $18 fee, all details pre-filled. File now?",o:["Yes, text me the link","Remind me next week","Show me what's on it"],p:0,r:"Link texted. Confirmation saved and next year's renewal is on the calendar."},
     result:"No late fees, no lapsed company, no surprise letters from the state."},
-   {t:"Books ready for your accountant",s:"Every receipt in the right place, all year",trigger:"Every transaction, and every quarter",steps:["Bookkeeper sorts business and personal spending as it happens","Business Executive keeps receipts and invoices matched to each expense","Works out quarterly tax estimates so April has no surprises","Builds the year-end packet your accountant asks for, in their format"],
+   {t:"Books ready for your accountant",s:"Every receipt in the right place, all year",trigger:"Every transaction, and every quarter",steps:["Accountant sorts business and personal spending as it happens","Business Executive keeps receipts and invoices matched to each expense","Works out quarterly tax estimates so April has no surprises","Builds the year-end packet your accountant asks for, in their format"],
     ask:{q:"Q4 estimated tax for the business: $1,240, due 1/15. Put it on your list with the payment link?",o:["Yes, add it","Show me the math","Ask after payday"],p:0,r:"On your list for 1/12 with the IRS link. The year-end packet is 80% ready."},
     result:"Tax season takes an afternoon, and your accountant bills you for less."}
   ]},
@@ -379,15 +385,6 @@ const GOALS = [
     ask:{q:"Day 30 without vaping. 🎉 How was today?",o:["Good, no cravings","Hard, but I held on","I slipped"],p:0,rs:["30 days! That's about $150 saved. Want to put it toward the trip you mentioned?","That's the win that counts. Hard days held are how streaks get built. Proud of you.","Thanks for telling me. One slip doesn't erase 29 days. What was going on? We'll plan for that moment, and tomorrow is day 1 of the next streak."]},
     result:"A private coach in your pocket who notices the streak, forgives the slip, and keeps the reason in front of you."}
   ],sim:"body"},
- {id:"money",tab:"Money",ico:"💳",title:"Bills never late, fraud caught early",tag:"The day-to-day money stuff that quietly costs you if you miss it.",agents:["book","pi","ea"],
-  wf:[
-   {t:"Bills that pay on time",s:"Three days ahead, with the link",trigger:"A bill is due in 3 days and isn't on autopay",steps:["Bookkeeper sees the due date and the amount","Checks there's enough in checking","Executive Assistant texts you the exact amount and the pay link"],
-    ask:{q:"Water bill $46.18 is due Thursday, not on autopay.",o:["Send me the pay link now","Remind me Wednesday","Already paid"],p:0,r:"Link sent. Marked paid when the charge clears."},
-    result:"No late fees, no surprises."},
-   {t:"Odd charges get questioned",s:"Fraud and duplicates",trigger:"A charge that doesn't match your patterns",steps:["Bookkeeper spots a duplicate, a new merchant, or an odd amount","Private Investigator checks the merchant","If it's wrong, the dispute steps go on your list with the phone number"],
-    ask:{q:"Two identical $6.75 charges at the same coffee shop, 1 minute apart.",o:["Add a dispute task","It's fine, I bought two","Ask me later"],p:0,r:"Dispute task added for tomorrow, 5 minutes."},
-    result:"Mistakes and fraud get caught in days."}
-  ]},
  {id:"time",tab:"Time",ico:"🗓️",title:"Your day, planned before you wake",tag:"The calendar works for you: priorities first, rest protected.",agents:["sched","shop","ea","coach"],
   wf:[
    {t:"The day plan",s:"6:00 AM, every day",trigger:"6:00 AM",steps:["Scheduler reads the calendar, the todo list and how long each task takes","Puts fixed things first, then anything that costs money if missed","Fits 2–3 personal tasks around work, never 20","Moves what doesn't fit to another day and tells you what moved"],

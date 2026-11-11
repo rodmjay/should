@@ -347,7 +347,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
   <h1>Put your life goals on autopilot.</h1>
   <p class="sub">A better job, money that grows while you work, a business that runs itself, a body you're proud of. Twenty-four AI agents work on it every day. You answer with 1, 2 or 3.</p>
   <div class="stats">
-    <div class="stat"><b>25</b><span>AI agents</span></div>
+    <div class="stat"><b>26</b><span>AI agents</span></div>
     <div class="stat"><b>7</b><span>life goals</span></div>
     <div class="stat"><b>1</b><span>human in charge</span></div>
   </div>
@@ -450,6 +450,7 @@ const AGENTS = {
   sched:{n:"Scheduler",bg:true,i:"🗓️",job:"Owns your calendar. The other agents ask it when you're free or away.",routines:["Day plan, 6:00 AM"],never:"Books anything on a Sunday."},
   pi:{n:"Investigator",i:"🔎",job:"Works out who new numbers are, remembers how you met, and vets people and businesses before you deal with them.",routines:["New-contact check, weekly"],never:"Digs into private people."},
   health:{n:"Health Coach",i:"🥗",job:"Training plan, meal plans and recipes, weigh-ins, and the grocery cart.",routines:["Meal plan, every 2 weeks","Grocery cart, Saturdays","Scale sync, weekly"],never:"Checks out. You do."},
+  nurse:{n:"Nurse Agent",i:"🩺",job:"When you're sick or hurt: texts your health plan's nurse line for you, says where to go and what it will cost, and checks medical bills before you pay.",routines:["On request, any day"],never:"Sends a message to a nurse or doctor without your yes, or plays doctor. Emergencies: call 911."},
   coach:{n:"Personal Coach",i:"🏁",job:"Grades your week against your goals and runs a Saturday sit-down.",routines:["Scorecard, Saturdays 9:30","Habit check-in, daily"],never:"Shames you, or shares your check-ins with anyone."},
   career:{n:"Career Assistant",i:"💼",job:"Finds jobs that fit, tailors your resume, applies and tracks every reply.",routines:["Job search, 6:15 AM","Job board refresh, weekly","Application follow-ups, daily"],never:"Applies anywhere, or accepts an offer or a number, without your yes."},
   wealth:{n:"Financial Advisor",i:"📈",job:"Credit and investing in one: ranks what raises your score, and an AI trading bot runs the strategy you pick.",routines:["Credit check, Saturdays","AI trading bot, weekdays 2:45 PM","Weekly results vs the market, Saturdays"],never:"Opens, closes or disputes anything, or goes past the money and loss limits you set, without your yes."},
@@ -514,7 +515,7 @@ const GOALS = [
     ask:{q:"New venture: a rental property. Put it in its own LLC under your holding company?",o:["Yes, prepare the filings","Keep it in the main company","Explain the trade-off"],p:0,r:"Filings for Maple Street Rental LLC are ready for your review."},
     result:"Each venture is protected and organized the way a much bigger company would do it."}
   ]},
- {id:"health",tab:"Health",title:"Chisel the body you want",tag:"Lose fat, keep muscle, eat food you like, and drop the habit that's holding you back.",agents:["health","shop"],
+ {id:"health",tab:"Health",title:"Chisel the body you want",tag:"Lose fat, keep muscle, eat food you like, and drop the habit that's holding you back.",agents:["health","nurse","shop"],
   sc:[
    {ico:"⚖️",t:"Body recomposition",s:"A plan that adjusts every week",sim:"body",
     flow:["Smart scale syncs Sunday morning","Health Coach reads the 7-day trend, not one bad day","Food goes up or down a little"],
@@ -524,6 +525,10 @@ const GOALS = [
     flow:["Every other Friday","Health Coach plans meals you like and fills the cart","You check out from one link"],
     ask:{q:"Next 2 weeks: 14 dinners, 182 g protein a day. Cart is $148. Check out?",o:["I'll check out now (link)","Swap fish for chicken","Remind me tonight"],p:0,r:"Link sent. Delivery Saturday 9–11 AM."},
     result:"No 6 PM \"what's for dinner\". The plan and the cart are already done."},
+   {ico:"🩺",t:"Text a nurse",s:"Sick at 10 PM? Ask a real nurse",
+    flow:["You text: \"sore throat and fever since this morning\"","Nurse Agent drafts the message for your plan's 24/7 nurse line","You approve; the nurse's answer comes back by text"],
+    ask:{q:"Send to the nurse line: \"Adult, 101.5 fever and sore throat since 8 AM, no trouble breathing, no meds yet.\"",o:["Send it","Change the wording","I'll call instead (number)"],p:0,r:"Sent. The nurse says: urgent care tomorrow is fine; the in-network one 6 min away is a $50 copay."},
+    result:"Real advice from a nurse in minutes, without sitting on hold, and the right place to go at the right price."},
    {ico:"🚭",t:"Quit a habit, without shame",s:"Sam is quitting vaping",scene:"streak",
     flow:["Sam texts: \"I want to quit vaping\"","Personal Coach writes down the why and plans the hard moments","One private check-in a day"],
     ask:{q:"Day 30 without vaping. 🎉 How was today?",o:["Good, no cravings","Hard, but I held on","I slipped"],rs:["30 days! About $150 saved. Put it toward the trip you mentioned?","That's the win that counts. Hard days held are how streaks get built.","Thanks for telling me. One slip doesn't erase 29 days. What was going on? Tomorrow is day 1 of the next streak."]},

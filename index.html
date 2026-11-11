@@ -347,7 +347,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
   <h1>Put your life goals on autopilot.</h1>
   <p class="sub">A better job, money that grows while you work, a business that runs itself, a body you're proud of. Twenty-four AI agents work on it every day. You answer with 1, 2 or 3.</p>
   <div class="stats">
-    <div class="stat"><b>24</b><span>AI agents</span></div>
+    <div class="stat"><b>25</b><span>AI agents</span></div>
     <div class="stat"><b>7</b><span>life goals</span></div>
     <div class="stat"><b>1</b><span>human in charge</span></div>
   </div>
@@ -467,6 +467,7 @@ const AGENTS = {
   media:{n:"Media Concierge",i:"🎬",job:"Knows your taste in film and picks tonight's movie, with where to stream.",routines:["On request"],never:"Buys or rents anything without your yes."},
   guide:{n:"Local Guide",i:"📍",job:"Knows the places you love, finds new ones, plus weekend picks and weather.",routines:["Weather, every morning","Weekend picks, Thursdays"],never:"Buys tickets, books tables or RSVPs without your yes."},
   biz:{n:"Business Executive",i:"🏢",job:"Runs your small business: companies, filings, books and a weekly review.",routines:["Business review, Mondays","Filing and renewal check, monthly"],never:"Files, signs, pays or forms a company without your yes."},
+  arch:{n:"Software Architect",i:"🏗️",job:"Leads a software team for your company: plans the build, writes the code with its engineers, and tests every change.",routines:["Build plan, as the work grows","Progress report, after each session"],never:"Spends money, launches anything public or commits a secret."},
   pm:{n:"Product Manager",i:"🧩",job:"Runs Should like a product: the name, the look and what it learns next.",routines:["Roadmap, as you ask for things"],never:"Changes this page's words without your yes."},
   rel:{n:"Relationship Coach",i:"💬",soon:true,job:"Helps you stay close to your partner and the people who matter most.",routines:["Coming soon"],never:"Reads or sends your private messages, or shares anything about the people you love."},
 };
@@ -502,7 +503,7 @@ const GOALS = [
     ask:{q:"Two identical $6.75 charges at Blue Door Coffee, 1 minute apart.",o:["Add a dispute task","It's fine, I bought two","Ask me later"],p:0,r:"Dispute task added for tomorrow, 5 minutes, with the phone number."},
     result:"No late fees, and mistakes or fraud get caught in days, not at tax time."}
   ]},
- {id:"business",tab:"Business",title:"A small business that runs itself",tag:"Every company set up right, every filing on time, and the whole business on one screen each Monday.",agents:["biz","book","legal"],
+ {id:"business",tab:"Business",title:"A small business that runs itself",tag:"Every company set up right, every filing on time, and the whole business on one screen each Monday.",agents:["biz","arch","book","legal"],
   sc:[
    {ico:"📊",t:"Your Monday review",s:"The business in two minutes",scene:"dash",
     flow:["Monday, 7 AM","Business Executive pulls cash, invoices and every deadline","You make the two or three calls that matter"],

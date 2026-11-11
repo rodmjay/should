@@ -6,9 +6,9 @@
 <meta name="robots" content="noindex">
 <title>Should</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta name="description" content="Put your life goals on autopilot. One human, twenty-five AI agents.">
+<meta name="description" content="Put your life goals on autopilot. One human, twenty-two AI agents.">
 <meta property="og:title" content="Should">
-<meta property="og:description" content="Put your life goals on autopilot. One human, twenty-five AI agents.">
+<meta property="og:description" content="Put your life goals on autopilot. One human, twenty-two AI agents.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -177,7 +177,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 <header class="hero">
   <div class="brand"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="var(--accent)"/><path d="M17 34.5 L27.5 44.5 L45 23" fill="none" stroke="var(--card)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="16.5" r="5" fill="var(--warm)"/></svg><span>should<i>.</i></span></div>
   <h1>Put your life goals on autopilot.</h1>
-  <p class="sub">A better job, money that grows while you work, a business that runs itself, a body you're proud of. Twenty-five AI agents work on it every day. You answer with 1, 2 or 3.</p>
+  <p class="sub">A better job, money that grows while you work, a business that runs itself, a body you're proud of. Twenty-two AI agents work on it every day. You answer with 1, 2 or 3.</p>
   <div class="stats">
     <div class="stat"><b>25</b><span>AI agents</span></div>
     <div class="stat"><b>8</b><span>life goals</span></div>
@@ -215,7 +215,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 
 <section id="staff">
   <div class="eyebrow">Meet the staff</div>
-  <h2>Twenty-five jobs, one person</h2>
+  <h2>Twenty-two jobs, one person</h2>
   <p class="muted">Each agent has a written role, its own routines and rules it can't break. Tap one to see its job.</p>
   <div class="staff" id="staffgrid"></div>
 </section>
@@ -226,7 +226,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
   <ul class="tl">
     <li><time>2:30</time><div>Everything is backed up<small>Nightly, automatic</small></div></li>
     <li><time>6:00</time><div>Scheduler lays out the day<small>Work, appointments, workouts, meals</small></div></li>
-    <li><time>6:15</time><div>Bookkeeper checks the money; job leads get scored<small>Bills flagged, recruiters screened</small></div></li>
+    <li><time>6:15</time><div>Accountant checks the money; job leads get scored<small>Bills flagged, recruiters screened</small></div></li>
     <li><time>6:30</time><div>Executive Assistant writes the daily brief<small>What's due, what's late, what matters most</small></div></li>
     <li><time>8:00</time><div>Your morning text arrives<small>One summary, one question</small></div></li>
     <li><time>All day</time><div>Texts answered in seconds<small>Ask anything, a staff member answers</small></div></li>
@@ -278,26 +278,23 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 const AGENTS = {
   ea:{n:"Executive Assistant",i:"🧭",job:"Runs the staff: plans your day, texts you at 8 AM and hands out the work.",routines:["Daily brief, 6:30 AM","Morning text, 8:00 AM","Reply desk, all day"],never:"Texts you more than one question at a time."},
   book:{n:"Accountant",i:"📒",job:"Balances, bills and spending, checked every morning before you're up.",routines:["Balance check, 6:15 AM"],never:"Moves money. It only reads."},
-  credit:{n:"Credit Advisor",i:"📈",job:"Watches all three credit bureaus and ranks what will raise your score.",routines:["Credit check, Saturdays"],never:"Opens, closes or disputes anything without your yes."},
   sched:{n:"Scheduler",i:"🗓️",job:"Owns your calendar. The other agents ask it when you're free or away.",routines:["Day plan, 6:00 AM"],never:"Books anything on a Sunday."},
   pi:{n:"Private Investigator",i:"🔎",job:"Works out who unknown numbers are, vets people and businesses, spots scams.",routines:["New-contact check, weekly"],never:"Digs into private people."},
   health:{n:"Health Coach",i:"🥗",job:"Training plan, meal plans and recipes, weigh-ins, and the grocery cart.",routines:["Meal plan, every 2 weeks","Grocery cart, Saturdays","Scale sync, weekly"],never:"Checks out. You do."},
   coach:{n:"Personal Coach",i:"🏁",job:"Grades your week against your goals and runs a Saturday sit-down.",routines:["Scorecard, Saturdays 9:30","Habit check-in, daily"],never:"Shames you, or shares your check-ins with anyone."},
   career:{n:"Career Assistant",i:"💼",job:"Finds jobs that fit, tailors your resume, applies and tracks every reply.",routines:["Job search, 6:15 AM","Job board refresh, weekly","Application follow-ups, daily"],never:"Applies anywhere, or accepts an offer or a number, without your yes."},
-  wealth:{n:"Wealth Advisor",i:"📈",job:"You pick a strategy; an AI trading bot tests it, then runs it daily.",routines:["AI trading bot, weekdays 2:45 PM","Weekly results vs the market, Saturdays"],never:"Goes past the money limits and loss limits you set."},
+  wealth:{n:"Financial Advisor",i:"📈",job:"Credit and investing in one: ranks what raises your score, and an AI trading bot runs the strategy you pick.",routines:["Credit check, Saturdays","AI trading bot, weekdays 2:45 PM","Weekly results vs the market, Saturdays"],never:"Opens, closes or disputes anything, or goes past the money and loss limits you set, without your yes."},
   travel:{n:"Travel Agent",i:"✈️",job:"Watches fares, finds stays and cars, and tracks your miles and credits.",routines:["Fare watch, Tuesdays"],never:"Books. It sends you the link."},
-  shop:{n:"Shopping Expert",i:"🛒",job:"Knows what you're running low on, researches big buys, watches prices.",routines:["Deal check, weekly"],never:"Buys anything."},
-  house:{n:"Housekeeper",i:"🏠",job:"Cleaning service, chores and household supplies, inside a monthly budget.",routines:["Prep list before each cleaning"],never:"Books or pays the cleaner."},
-  fix:{n:"Handyman",i:"🔧",job:"Tell it what's broken; it finds who should fix it and drafts the ask.",routines:["Repair follow-up, until it's fixed"],never:"Sends the message or hires anyone without your yes."},
+  shop:{n:"Shopping & Style",i:"🛒",job:"Knows what you're running low on, researches big buys, watches prices, and picks today's outfit from your closet.",routines:["Deal check, weekly","Outfit of the day, workday mornings"],never:"Buys anything."},
+  house:{n:"Home Manager",i:"🏠",job:"The house and the car: cleaning, chores, supplies and repairs. Tell it what's broken; it finds who should fix it.",routines:["Prep list before each cleaning","Repair follow-up, until it's fixed"],never:"Books, pays or messages anyone without your yes."},
   move:{n:"Relocation Expert",i:"📦",job:"Finds your next home in budget and plans the move week by week.",routines:["Listing check, while you're searching"],never:"Signs a lease, pays a deposit or books movers without your yes."},
-  gift:{n:"Gift Concierge",i:"🎁",job:"Every birthday and occasion: a gift in budget, in the cart in time.",routines:["Birthday check, 3 weeks ahead"],never:"Checks out."},
+  gift:{n:"Relationship Manager",i:"🎁",job:"Family and friends: staying in touch, and every birthday with a gift in budget, in the cart in time.",routines:["Birthday check, 3 weeks ahead"],never:"Checks out."},
   legal:{n:"Legal Advisor",i:"⚖️",job:"Reads paperwork in plain words and writes the questions for a lawyer.",routines:["On request"],never:"Files anything or contacts anyone."},
   music:{n:"Music Coach",i:"🎹",job:"Records what you play on the piano and turns it into sheet music.",routines:["On request"],never:"Gives lessons you didn't ask for."},
   web:{n:"Webmaster",i:"🖥️",job:"Builds your personal dashboard, where every agent has its own desk.",routines:["On request"],never:"Publishes without your yes."},
   pr:{n:"PR Person",i:"📣",job:"Drafts your posts and keeps your public profiles telling one story.",routines:["Weekly drafts, Mondays"],never:"Posts. You do."},
   media:{n:"Media Concierge",i:"🎬",job:"Knows your taste in film and picks tonight's movie, with where to stream.",routines:["On request"],never:"Buys or rents anything without your yes."},
   guide:{n:"Local Guide",i:"📍",job:"Knows the places you love, finds new ones, plus weekend picks and weather.",routines:["Weather, every morning","Weekend picks, Thursdays"],never:"Buys tickets, books tables or RSVPs without your yes."},
-  fashion:{n:"Fashion Consultant",i:"👔",job:"Picks today's outfit from your own closet for your plans and the weather.",routines:["Outfit of the day, workday mornings"],never:"Buys clothes without your yes."},
   biz:{n:"Business Executive",i:"🏢",job:"Runs your small business: companies, filings, books and a weekly review.",routines:["Business review, Mondays","Filing and renewal check, monthly"],never:"Files, signs, pays or forms a company without your yes."},
   pm:{n:"Product Manager",i:"🧩",job:"Runs Should like a product: the name, the look and what it learns next.",routines:["Roadmap, as you ask for things"],never:"Changes this page's words without your yes."},
   rel:{n:"Relationship Coach",i:"💬",soon:true,job:"Helps you stay close to your partner and the people who matter most.",routines:["Coming soon"],never:"Reads or sends your private messages, or shares anything about the people you love."},
@@ -333,7 +330,7 @@ const GOALS = [
   ]},
  {id:"wealth",tab:"Wealth",ico:"📈",title:"Make your money work as hard as you do",tag:"Pick a strategy, see how it holds up in good years and crashes, and let an AI trading bot run it. Plus a retirement that funds itself.",agents:["wealth","book","coach"],
   wf:[
-   {t:"Pick your trading strategy",s:"Choose how your money is invested, in plain words",trigger:"You decide to put money to work",steps:["Wealth Advisor lays out the strategies side by side: index-plus-AI, momentum, low-volatility, dividend income","Shows each one's typical return, its worst year, and how bumpy the ride is","You pick one and set your risk level, how much to invest, and your loss limit"],
+   {t:"Pick your trading strategy",s:"Choose how your money is invested, in plain words",trigger:"You decide to put money to work",steps:["Financial Advisor lays out the strategies side by side: index-plus-AI, momentum, low-volatility, dividend income","Shows each one's typical return, its worst year, and how bumpy the ride is","You pick one and set your risk level, how much to invest, and your loss limit"],
     ask:{q:"For a 10-year goal with a medium risk level, Core + AI fits best: mostly index, 20% traded by the bot. Use it?",o:["Yes, use Core + AI","Show me momentum instead","Ask me Saturday"],p:0,r:"Core + AI selected. Next: see how it holds up in a crash."},
     result:"You know exactly what your money is doing and why, before a dollar moves."},
    {t:"See the scenarios before you commit",s:"Real history, crashes included",trigger:"You pick or change a strategy",steps:["The strategy is replayed against more than ten years of real market data","Stress-tested against a 2008-style crash, the 2020 drop and the 2022 bear market","Compared with simply buying the index, so you see whether it earns its keep","You get a one-page verdict: expected range, worst drop, time to recover"],
@@ -342,7 +339,7 @@ const GOALS = [
    {t:"The AI runs it, every trading day",s:"Advanced models make the calls inside your limits",trigger:"Weekdays at 2:45 PM",steps:["The bot reads prices, trends, volatility and risk across the market","An AI model weighs the signals and decides the day's trades for your strategy","Every trade is logged with its reasons, and your limits and kill switch are always on","Every Saturday you get results against the index, in plain words"],
     ask:{q:"This month: +3.2% vs index +2.1%. The bot trimmed tech before Tuesday's drop. Add $500 from payday?",o:["Yes, add $500","Keep it as is","Show me the trades"],p:0,r:"$500 added after payday. Next report Saturday."},
     result:"Your money is managed every trading day, with reasons you can read."},
-   {t:"Retirement on autopilot",s:"Every raise and every enrollment window",trigger:"Payday, a raise, or open enrollment",steps:["Wealth Advisor checks you're contributing enough to get the full employer match","When pay goes up, suggests raising your contribution by 1% so take-home still rises","Checks the funds are low-cost and match your timeline","Puts the exact enrollment steps on your todo list before the window closes"],
+   {t:"Retirement on autopilot",s:"Every raise and every enrollment window",trigger:"Payday, a raise, or open enrollment",steps:["Financial Advisor checks you're contributing enough to get the full employer match","When pay goes up, suggests raising your contribution by 1% so take-home still rises","Checks the funds are low-cost and match your timeline","Puts the exact enrollment steps on your todo list before the window closes"],
     ask:{q:"You got a 4% raise. Raise your 401(k) from 6% to 7%? Take-home still goes up $112 a month.",o:["Yes, add the steps to my list","Keep it at 6%","Ask me after payday"],p:0,r:"On your list for Thursday, 5 minutes, with the link."},
     result:"Savings rise every year without ever feeling a pay cut."},
    {t:"Spending on track for retirement",s:"A daily check against the plan",trigger:"6:15 AM balance check",steps:["Bookkeeper syncs balances and new transactions","Compares the month so far with the plan that funds your retirement goal","Flags drift early: new subscriptions, price increases, duplicate charges","Personal Coach counts it in your weekly score"],
@@ -372,7 +369,7 @@ const GOALS = [
    {t:"Body recomposition",s:"Weekly weigh-in, weekly adjustment",trigger:"Smart scale sync on Sunday morning",steps:["Health Coach reads weight and body fat trend (7-day average, not one bad day)","If you're losing too fast, adds food to protect muscle; too slow, trims a little","Sets protein first, then calories","Scheduler protects 3 workout slots in your week"],
     ask:{q:"Down 1.4 lb this week, a bit fast. Add 150 calories (a protein snack) to keep muscle?",o:["Yes, adjust the plan","Keep it as is","Ask me next week"],p:0,r:"Plan updated: +150 calories, protein stays at 180 g."},
     result:"Steady fat loss that keeps the muscle, so the shape actually changes."},
-   {t:"Meals and groceries, handled",s:"Plan, recipes, cart",trigger:"Every other Friday",steps:["Health Coach plans two weeks of meals you actually like","Writes the recipes and a prep plan for Sunday afternoon","Fills the grocery cart with exactly what the plan needs","Shopping Expert swaps in cheaper items when prices change"],
+   {t:"Meals and groceries, handled",s:"Plan, recipes, cart",trigger:"Every other Friday",steps:["Health Coach plans two weeks of meals you actually like","Writes the recipes and a prep plan for Sunday afternoon","Fills the grocery cart with exactly what the plan needs","Shopping & Style swaps in cheaper items when prices change"],
     ask:{q:"Next 2 weeks: 14 dinners, cart is $148. Check out?",o:["I'll check out now (link)","Swap fish for chicken","Remind me tonight"],p:0,r:"Link sent. Delivery Saturday 9–11 AM."},
     result:"No 6 PM \"what's for dinner\". The plan and the cart are already done."},
    {t:"Training that adapts",s:"Progress without guesswork",trigger:"You log a workout by text",steps:["Health Coach records sets and weights","Adds weight when you hit the top of the rep range","Swaps exercises if something hurts"],
@@ -391,7 +388,7 @@ const GOALS = [
     ask:{q:"Two identical $6.75 charges at the same coffee shop, 1 minute apart.",o:["Add a dispute task","It's fine, I bought two","Ask me later"],p:0,r:"Dispute task added for tomorrow, 5 minutes."},
     result:"Mistakes and fraud get caught in days."}
   ]},
- {id:"time",tab:"Time",ico:"🗓️",title:"Your day, planned before you wake",tag:"The calendar works for you: priorities first, rest protected.",agents:["sched","fashion","ea","coach"],
+ {id:"time",tab:"Time",ico:"🗓️",title:"Your day, planned before you wake",tag:"The calendar works for you: priorities first, rest protected.",agents:["sched","shop","ea","coach"],
   wf:[
    {t:"The day plan",s:"6:00 AM, every day",trigger:"6:00 AM",steps:["Scheduler reads the calendar, the todo list and how long each task takes","Puts fixed things first, then anything that costs money if missed","Fits 2–3 personal tasks around work, never 20","Moves what doesn't fit to another day and tells you what moved"],
     ask:{q:"Today is overloaded. Move \"call the bank\" and \"sort photos\" to Saturday?",o:["Yes, move both","Move only the photos","Keep them today"],p:0,r:"Moved. Today now fits in your free time."},
@@ -401,10 +398,10 @@ const GOALS = [
   ]},
  {id:"home",tab:"Home & family",ico:"🏠",title:"Home and family, remembered",tag:"Birthdays, chores and the house, without carrying it all in your head.",agents:["rel","gift","house","guide","shop","sched"],
   wf:[
-   {t:"Birthdays that never sneak up",s:"Three weeks ahead",trigger:"A birthday is 3 weeks away",steps:["Gift Concierge looks at what they like and your budget","Picks a gift (or a card at minimum)","Puts it in the cart so it arrives on time"],
+   {t:"Birthdays that never sneak up",s:"Three weeks ahead",trigger:"A birthday is 3 weeks away",steps:["Relationship Manager looks at what they like and your budget","Picks a gift (or a card at minimum)","Puts it in the cart so it arrives on time"],
     ask:{q:"Your sister's birthday is the 28th. Gift: a $35 cookbook she mentioned. In the cart.",o:["Check out (link)","Pick something else","Just a card this year"],p:0,r:"Link sent. Arrives the 24th."},
     result:"Nobody gets forgotten."},
-   {t:"The house runs itself",s:"Cleaning, chores, supplies",trigger:"A cleaning visit tomorrow",steps:["Housekeeper sends a 10-minute prep list","Checks supplies and restocks through the Shopping Expert","Keeps cleaning spend inside the monthly budget"],
+   {t:"The house runs itself",s:"Cleaning, chores, supplies",trigger:"A cleaning visit tomorrow",steps:["Home Manager sends a 10-minute prep list","Checks supplies and restocks through the Shopping & Style","Keeps cleaning spend inside the monthly budget"],
     ask:{q:"Cleaners come tomorrow at 10. Running low on dish soap and trash bags. Add to cart?",o:["Yes","Only trash bags","Skip"],p:0,r:"Added. Arrives tomorrow morning."},
     result:"Less mental load, a cleaner home."}
   ]},

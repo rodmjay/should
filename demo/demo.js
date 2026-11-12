@@ -62,29 +62,29 @@
   // Local Guide: public Salt Lake valley places (names, the one-line pitch, the venue's own photo when it has one).
   const P = (name, cat, city, score, pitch, img, url, mins, tags = []) => ({ name, cat, city, score, pitch, img, url, mins, tags });
   const PLACES = [
-    P('Three Pines Coffee', 'coffee', 'Salt Lake City', 78, 'Specialty coffee on Main Street, steps from TRAX.', 'https://static.wixstatic.com/media/bfa48b_efd9c0e457604d85bce1e6aaf8b827a5%7Emv2_d_2560_1704_s_2.jpg/v1/fit/w_900,h_600,al_c/bfa48b_efd9c0e457604d85bce1e6aaf8b827a5%7Emv2_d_2560_1704_s_2.jpg', 'https://threepinescoffee.com', 24),
-    P('Publik Coffee Roasters', 'coffee', 'Salt Lake City', 84, 'A big, warm roastery with room to spread out.', null, 'https://publikcoffee.com', 22),
-    P('La Barba Coffee', 'coffee', 'Draper', 88, "Utah's best-known specialty roaster.", null, 'https://labarbacoffee.com', 12, ['new']),
-    P('Caffeine Station', 'coffee', 'Sandy', 85, 'Top-rated café, bright with big windows.', null, null, 9),
-    P('Garden Espresso', 'coffee', 'Murray', 70, 'A small neighborhood espresso bar.', null, null, 14),
-    P('Biscotts Bakery & Café', 'coffee', 'South Jordan', 72, 'A London-style chai house by the lake.', null, null, 18),
-    P('Bohemian Brewery', 'bar', 'Midvale', 84, 'Old-world lagers in a calm room made for long talks.', null, null, 11, ['date-night']),
-    P('2 Row Brewing', 'bar', 'Midvale', 72, "One of Utah's best brewers, plus cornhole.", null, 'https://2rowbrewing.com', 12),
-    P('Cliff Dining Pub', 'bar', 'Draper', 82, 'A pub with a mountain view and real food.', null, null, 15, ['date-night']),
-    P('Wolfdog Brewery', 'bar', 'Sandy', 68, 'A friendly local brewpub.', null, null, 8),
-    P('Hoof & Vine', 'food', 'Midvale', 82, "The valley's top-rated steakhouse.", 'https://static.wixstatic.com/media/08c62d_c59e510285964f469785ce73b2fa82f2.jpg/v1/fit/w_900,h_600,al_c/08c62d_c59e510285964f469785ce73b2fa82f2.jpg', 'https://hoofandvine.com', 13, ['date-night']),
-    P('Los Cucos', 'food', 'Sandy', 74, 'Sit-down Mexican, warm and loud.', 'https://loscucos.com/wp-content/uploads/2024/07/LosCucos.jpg', 'https://loscucos.com', 10, ['lunch']),
-    P("Penny Ann's Café", 'food', 'Draper', 64, 'Cozy local café, a breakfast favorite.', 'https://pennyannscafe.com/wp-content/uploads/2023/10/table.png', 'https://pennyannscafe.com', 14, ['lunch', 'kids']),
-    P('Libertango Steakhouse', 'food', 'Sandy', 84, 'Argentine steakhouse: Latin flavor, all grill.', null, null, 9, ['lunch']),
-    P('Goodwood Barbecue', 'food', 'Draper', 76, 'Slow-smoked meats, an easy lunch.', null, null, 15, ['lunch', 'kids']),
-    P('Spitz', 'food', 'Draper', 72, 'Döner meat over salad, quick and filling.', null, null, 15, ['lunch']),
+    P('Three Pines Coffee', 'coffee', 'Salt Lake City', 78, 'Specialty coffee on Main Street, steps from TRAX.', 'https://static.wixstatic.com/media/bfa48b_efd9c0e457604d85bce1e6aaf8b827a5%7Emv2_d_2560_1704_s_2.jpg/v1/fit/w_900,h_600,al_c/bfa48b_efd9c0e457604d85bce1e6aaf8b827a5%7Emv2_d_2560_1704_s_2.jpg', 'https://threepinescoffee.com', null),
+    P('Publik Coffee Roasters', 'coffee', 'Salt Lake City', 84, 'A big, warm roastery with room to spread out.', null, 'https://publikcoffee.com', null),
+    P('La Barba Coffee', 'coffee', 'Draper', 88, "Utah's best-known specialty roaster.", null, 'https://labarbacoffee.com', null, ['new']),
+    P('Caffeine Station', 'coffee', 'Sandy', 85, 'Top-rated café, bright with big windows.', null, null, null),
+    P('Garden Espresso', 'coffee', 'Murray', 70, 'A small neighborhood espresso bar.', null, null, null),
+    P('Biscotts Bakery & Café', 'coffee', 'South Jordan', 72, 'A London-style chai house by the lake.', null, null, null),
+    P('Bohemian Brewery', 'bar', 'Midvale', 84, 'Old-world lagers in a calm room made for long talks.', null, null, null, ['date-night']),
+    P('2 Row Brewing', 'bar', 'Midvale', 72, "One of Utah's best brewers, plus cornhole.", null, 'https://2rowbrewing.com', null),
+    P('Cliff Dining Pub', 'bar', 'Draper', 82, 'A pub with a mountain view and real food.', null, null, null, ['date-night']),
+    P('Wolfdog Brewery', 'bar', 'Sandy', 68, 'A friendly local brewpub.', null, null, null),
+    P('Hoof & Vine', 'food', 'Midvale', 82, "The valley's top-rated steakhouse.", 'https://static.wixstatic.com/media/08c62d_c59e510285964f469785ce73b2fa82f2.jpg/v1/fit/w_900,h_600,al_c/08c62d_c59e510285964f469785ce73b2fa82f2.jpg', 'https://hoofandvine.com', null, ['date-night']),
+    P('Los Cucos', 'food', 'Sandy', 74, 'Sit-down Mexican, warm and loud.', 'https://loscucos.com/wp-content/uploads/2024/07/LosCucos.jpg', 'https://loscucos.com', null, ['lunch']),
+    P("Penny Ann's Café", 'food', 'Draper', 64, 'Cozy local café, a breakfast favorite.', 'https://pennyannscafe.com/wp-content/uploads/2023/10/table.png', 'https://pennyannscafe.com', null, ['lunch', 'kids']),
+    P('Libertango Steakhouse', 'food', 'Sandy', 84, 'Argentine steakhouse: Latin flavor, all grill.', null, null, null, ['lunch']),
+    P('Goodwood Barbecue', 'food', 'Draper', 76, 'Slow-smoked meats, an easy lunch.', null, null, null, ['lunch', 'kids']),
+    P('Spitz', 'food', 'Draper', 72, 'Döner meat over salad, quick and filling.', null, null, null, ['lunch']),
   ];
   const EVENTS = [
-    { t: 'Temple Square Christmas lights', cat: 'arts', when: () => `${day(fri)} · 5 PM`, where: 'Salt Lake City', price: 'Free', why: 'The classic December walk: free, festive, an easy evening out.', mins: 25, kids: true, free: true },
-    { t: 'Gardner Village "Christmas in the Village"', cat: 'family', when: () => `${day(sat)} · 4 PM`, where: 'West Jordan', price: 'Free', why: 'Late-afternoon shops and lights with an easy Lyft home.', mins: 16, kids: true, free: true },
-    { t: 'Dimple Dell Regional Park walk', cat: 'outdoors', when: () => `${day(sun)} · midday`, where: 'Sandy', price: 'Free', why: 'A quiet trail an hour before lunch. Rest-day friendly.', mins: 6, kids: true, free: true },
-    { t: 'Utah Symphony: Holiday Pops', cat: 'music', when: () => `${day(sat)} · 7:30 PM`, where: 'Abravanel Hall', price: '$29–89', why: 'Big orchestra, warm hall, dinner downtown first.', mins: 24 },
-    { t: 'Jazz night at the Bohemian', cat: 'music', when: () => `${day(fri)} · 8 PM`, where: 'Midvale', price: '$10', why: 'A trio and a lager, ten minutes away.', mins: 11 },
+    { t: 'Temple Square Christmas lights', cat: 'arts', when: () => `${day(fri)} · 5 PM`, where: 'Salt Lake City', price: 'Free', why: 'The classic December walk: free, festive, an easy evening out.', kids: true, free: true },
+    { t: 'Gardner Village "Christmas in the Village"', cat: 'family', when: () => `${day(sat)} · 4 PM`, where: 'West Jordan', price: 'Free', why: 'Late-afternoon shops and lights with an easy ride home.', kids: true, free: true },
+    { t: 'Dimple Dell Regional Park walk', cat: 'outdoors', when: () => `${day(sun)} · midday`, where: 'Sandy', price: 'Free', why: 'A quiet trail an hour before lunch. Rest-day friendly.', kids: true, free: true },
+    { t: 'Utah Symphony: Holiday Pops', cat: 'music', when: () => `${day(sat)} · 7:30 PM`, where: 'Abravanel Hall', price: '$29–89', why: 'Big orchestra, warm hall, dinner downtown first.' },
+    { t: 'Jazz night at the Bohemian', cat: 'music', when: () => `${day(fri)} · 8 PM`, where: 'Midvale', price: '$10', why: 'A trio and a lager, no reservations needed.' },
   ];
 
   // The agent roster (the real org chart; descriptions are the public page's, generic on purpose).
@@ -209,10 +209,10 @@
   const media = (x, cat) => `<div class="media" style="--cat:${CAT[cat]}">${x.img ? `<img src="${x.img}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">` : ''}${x.img ? '' : svg(cat === 'food' ? 'food' : cat)}<span class="cat">${cat}</span></div>`;
   const placeCard = (p) => `<a class="card" style="--cat:${CAT[p.cat]}" ${p.url ? `href="${p.url}" target="_blank" rel="noopener"` : ''}>${media(p, p.cat)}
     <div class="cbody"><b>${p.name}</b><span class="meta">${p.city} · ${p.cat === 'food' ? 'restaurant' : p.cat}</span>
-    <span class="chips"><span class="dist">${p.mins} min away</span><span class="pill score">${p.score}</span>${p.tags.includes('kids') ? '<span class="pill">kids</span>' : ''}</span>
+    <span class="chips"><span class="pill score">${p.score}</span>${p.tags.includes('kids') ? '<span class="pill">kids</span>' : ''}</span>
     <span class="why">${p.pitch}</span></div></a>`;
   const eventCard = (e) => `<div class="card" style="--cat:${CAT[e.cat]}">${media({}, e.cat)}<div class="cbody"><b>${e.t}</b><span class="meta">${e.when()}</span>
-    <span class="meta">${e.where} · <b>${e.price}</b></span><span class="chips"><span class="dist">${e.mins} min away</span>${e.kids ? '<span class="pill">kids</span>' : ''}</span><span class="why">${e.why}</span></div></div>`;
+    <span class="meta">${e.where} · <b>${e.price}</b></span><span class="chips">${e.kids ? '<span class="pill">kids</span>' : ''}</span><span class="why">${e.why}</span></div></div>`;
   const funCard = () => `<section class="block fun"><h2 class="label">fun money <a href="#/money">more</a></h2>
     <p class="big"><b class="num">${money(FUN.left)}</b><span>Free to spend, through ${FUN.through}</span></p>
     <p class="small muted" style="margin:0 0 8px">${money(FUN.spent)} of fun so far. Spend it on anything; nobody comments.</p>
@@ -252,15 +252,15 @@
 
   let gFilter = 'all';
   function guideView() {
-    const pass = (x) => gFilter === 'kids' ? (x.kids || x.tags?.includes('kids')) : gFilter === 'free' ? x.free : gFilter === 'near' ? x.mins <= 12 : true;
+    const pass = (x) => gFilter === 'kids' ? (x.kids || x.tags?.includes('kids')) : gFilter === 'free' ? x.free : true;
     const ev = EVENTS.filter(pass), hero = ev.slice(0, 3);
     const pl = PLACES.filter(pass).sort((a, b) => b.score - a.score);
     const list = (cat, name, rows) => `<section class="block" style="--cat:${CAT[cat]}"><h2 class="label" style="color:${CAT[cat]}">${svg(cat === 'food' ? 'food' : cat, 'width="16" height="16"')}${name}</h2>
       <ol class="rank">${rows.slice(0, 6).map((p) => `<li>${p.img ? `<img class="thumb" src="${p.img}" alt="" loading="lazy" referrerpolicy="no-referrer">` : `<span class="thumb">${svg(cat === 'food' ? 'food' : cat)}</span>`}
-        <span class="li-main"><b>${p.name}</b><span class="chips"><span class="dist">${p.mins} min</span><span class="pill">${p.city}</span></span></span><span class="pill score">${p.score}</span></li>`).join('') || '<li class="muted">Nothing with this filter.</li>'}</ol></section>`;
+        <span class="li-main"><b>${p.name}</b><span class="chips"><span class="pill">${p.city}</span></span></span><span class="pill score">${p.score}</span></li>`).join('') || '<li class="muted">Nothing with this filter.</li>'}</ol></section>`;
     return `<p class="eyebrow">Fun &amp; Local</p><h1 class="page-h1">Local Guide</h1>
     <p class="lede">Places scored against your taste, this weekend's best events, and where to get coffee, a beer or lunch. Real Salt Lake valley places.</p>
-    <div class="filters">${[['all', 'All'], ['kids', 'Kid-friendly'], ['free', 'Free'], ['near', 'Near home']].map(([k, n]) => `<button data-f="${k}" class="${gFilter === k ? 'on' : ''}">${n}</button>`).join('')}</div>
+    <div class="filters">${[['all', 'All'], ['kids', 'Kid-friendly'], ['free', 'Free']].map(([k, n]) => `<button data-f="${k}" class="${gFilter === k ? 'on' : ''}">${n}</button>`).join('')}</div>
     <section><h2 class="label">this weekend · ${fmt(fri, { month: 'short', day: 'numeric' })}–${fmt(sun, { month: 'short', day: 'numeric' })}</h2>
       <div class="hero">${hero.map((e) => `<div class="herocard" style="--cat:${CAT[e.cat]}">${svg(e.cat)}<div class="over"><span class="w">${e.when()}</span><span class="t">${e.t}</span><span class="d">${e.where} · ${e.price}</span><span class="d"><i>${e.why}</i></span></div></div>`).join('') || '<p class="muted">Nothing with this filter.</p>'}</div></section>
     <section><h2 class="label">events this week</h2><div class="row">${ev.map(eventCard).join('') || '<p class="muted">Nothing with this filter.</p>'}</div></section>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Should · Portal demo</title>
+<meta name="description" content="A walk-through of the Should portal with sample data: one person, a staff of AI agents.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="ribbon">Demo: sample data. Movies, places and the agents are real; everything else is made up. <a href="../">Back to Should</a></div>
+<header class="top">
+  <div class="bar">
+    <a class="logo" href="#/"><img src="../should-mark.svg" alt=""><span>should</span></a>
+    <nav class="main" id="nav" aria-label="Pages"></nav>
+    <div class="ctx">
+      <button class="ctxbtn" id="ctxbtn" aria-haspopup="true" aria-expanded="false"><span class="dot"></span><span id="ctxname">Personal</span> ▾</button>
+      <div class="ctxmenu" id="ctxmenu" role="menu"></div>
+    </div>
+  </div>
+</header>
+<main id="app" aria-live="polite"></main>
+<nav class="tabs" id="tabs" aria-label="Pages"></nav>
+<footer class="demo">Sample portal for Should. Nothing here is a real person, account or balance. Cards link out to public sites only.</footer>
+<script src="demo.js"></script>
+</body>
+</html>

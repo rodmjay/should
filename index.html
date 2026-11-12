@@ -6,9 +6,9 @@
 <meta name="robots" content="noindex">
 <title>Should</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta name="description" content="Put your life goals on autopilot. One human, twenty-seven AI agents.">
+<meta name="description" content="Put your life goals on autopilot. One human, twenty-eight AI agents.">
 <meta property="og:title" content="Should">
-<meta property="og:description" content="Put your life goals on autopilot. One human, twenty-seven AI agents.">
+<meta property="og:description" content="Put your life goals on autopilot. One human, twenty-eight AI agents.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -347,9 +347,9 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 <header class="hero">
   <div class="brand"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="var(--accent)"/><path d="M17 34.5 L27.5 44.5 L45 23" fill="none" stroke="var(--card)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="16.5" r="5" fill="var(--warm)"/></svg><span>should<i>.</i></span></div>
   <h1>Put your life goals on autopilot.</h1>
-  <p class="sub">A better job, money that grows while you work, a business that runs itself, a body you're proud of. Twenty-seven AI agents work on it every day. You answer with 1, 2 or 3.</p>
+  <p class="sub">A better job, money that grows while you work, a business that runs itself, a body you're proud of. Twenty-eight AI agents work on it every day. You answer with 1, 2 or 3.</p>
   <div class="stats">
-    <div class="stat"><b>27</b><span>AI agents</span></div>
+    <div class="stat"><b>28</b><span>AI agents</span></div>
     <div class="stat"><b>7</b><span>life goals</span></div>
     <div class="stat"><b>1</b><span>human in charge</span></div>
   </div>
@@ -500,6 +500,7 @@ const AGENTS = {
   shop:{n:"Shopping Expert",i:"🛒",job:"Knows what you're running low on, researches big buys and watches prices.",routines:["Deal check, weekly"],never:"Buys anything."},
   clothier:{n:"Clothier",i:"👔",job:"Your clothes: picks today's outfit from your closet for your plans and the weather, and packs your bag for trips.",routines:["Outfit of the day, workday mornings"],never:"Buys clothes without your yes."},
   house:{n:"Home Manager",i:"🏠",job:"The house and the car: cleaning, chores, supplies and repairs. Tell it what's broken; it finds who should fix it.",routines:["Prep list before each cleaning","Repair follow-up, until it's fixed"],never:"Books, pays or messages anyone without your yes."},
+  pets:{n:"Pet Expert",i:"🐾",job:"Looks after your pets: health and the vet, food and supplies on a plan, and their care around cleanings, trips and moves.",routines:["On request"],never:"Books, buys or pays without your yes."},
   move:{n:"Relocation Expert",i:"📦",job:"Finds your next home in budget, plans the move week by week, and reads your mail scan so nothing that arrives gets missed.",routines:["Mail check, Mon–Sat 7:30 AM","Listing check, while you're searching"],never:"Signs a lease, pays a deposit or books movers without your yes."},
   gift:{n:"Gift Concierge",i:"🎁",job:"Every birthday and occasion: a gift they'll love, in budget, in the cart in time. At minimum, a card in the mail.",routines:["Birthday check, 3 weeks ahead"],never:"Checks out."},
   relmgr:{n:"Relationship Manager",i:"🤝",job:"Family and friends: who's who, every household's address, staying in touch, and smooth co-parenting.",routines:["Keep-in-touch nudges, weekly","Kids' schedule check, Thursdays"],never:"Sends a message to anyone without your yes."},
@@ -578,7 +579,7 @@ const GOALS = [
     ask:{q:"Day 30 without vaping. 🎉 How was today?",o:["Good, no cravings","Hard, but I held on","I slipped"],rs:["30 days! About $150 saved. Put it toward the trip you mentioned?","That's the win that counts. Hard days held are how streaks get built.","Thanks for telling me. One slip doesn't erase 29 days. What was going on? Tomorrow is day 1 of the next streak."]},
     result:"A private coach who notices the streak, forgives the slip, and keeps the reason in front of you. (Quitline: 1-800-QUIT-NOW.)"}
   ]},
- {id:"home",tab:"Home & family",title:"Home and family, handled",tag:"Co-parenting that runs smoothly, and the house fixed by whoever should pay for it.",agents:["relmgr","house"],
+ {id:"home",tab:"Home & family",title:"Home and family, handled",tag:"Co-parenting that runs smoothly, and the house fixed by whoever should pay for it.",agents:["relmgr","house","pets"],
   sc:[
    {ico:"👨‍👧‍👦",t:"Co-parenting, kept easy",s:"Kids' weekends, handoffs and shared costs",scene:"coparent",
     flow:["Thursday before a kids' weekend","Relationship Manager lines up pickup, plans and shared costs","You approve one friendly note"],

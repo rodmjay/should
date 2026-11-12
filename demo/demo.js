@@ -106,6 +106,7 @@
       ['travel', 'Travel Agent', 'Fares, stays and cars; search only, you book', 'var(--r-time)']]],
     ['Home', [
       ['home', 'Home Manager', 'Cleaning, repairs, supplies and the car', 'var(--r-home)'],
+      ['pets', 'Pet Expert', 'Pet health, the vet, food and supplies', 'var(--r-home)'],
       ['relocation', 'Relocation Expert', 'The next move, end to end', 'var(--r-home)']]],
     ['Shopping & Style', [
       ['shopping', 'Shopping Expert', 'Research, the wish list, price watch, carts', 'var(--r-shop)'],
@@ -227,7 +228,7 @@
     const m = MOVIES[0];
     return `<p class="eyebrow">${fmt(now, { weekday: 'long', month: 'long', day: 'numeric' })}</p>
     <h1 class="page-h1">${greet}, Sam</h1>
-    <p class="lede">Twenty-seven agents worked overnight. Here's what they need from you, and what they already handled.</p>
+    <p class="lede">Twenty-eight agents worked overnight. Here's what they need from you, and what they already handled.</p>
     <div class="grid">
       <section class="block s8"><h2 class="label">morning brief <span class="muted" style="text-transform:none;letter-spacing:0;font-weight:500">texted 8:00 AM</span></h2>
         <div class="brief"><div class="avatar" style="background:var(--r-ea)">EA</div><div class="bubble">

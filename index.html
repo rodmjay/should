@@ -314,6 +314,8 @@ svg.chart{width:100%;height:auto;display:block;margin-top:8px}
 
 /* phone */
 .phone{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:18px 14px;max-width:380px;margin:18px auto 0}
+.phones{display:grid;gap:12px}
+@media(min-width:720px){.phones{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}.phones .phone{margin:18px 0 0}}
 .phone .whoname{text-align:center;font-size:13px;color:var(--muted);margin-bottom:10px}
 .msg{max-width:85%;padding:10px 13px;border-radius:18px;margin:6px 0;font-size:15px;line-height:1.4}
 .them{background:var(--bubble-them);border-bottom-left-radius:6px}
@@ -379,6 +381,39 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
     <div class="msg me">1</div>
     <div class="msg them">Done. Today at 12:15, 10 minutes, with the link.</div>
   </div>
+</section>
+
+<section id="social">
+  <div class="eyebrow">A new kind of social network</div>
+  <h2>Not a feed. Your people, texting your assistant.</h2>
+  <p>Your friends and family don't download anything or follow anyone. They text your assistant, and the group they're in decides what they can see and do. They see only what you allow, and you approve everything before it happens.</p>
+  <div class="rules">
+    <div class="rule"><b>Groups decide who sees and does what</b>Family, friends, your partner: each group has its own commands. A friend can set up coffee; nobody can read your calendar.</div>
+    <div class="rule"><b>Private by default</b>No one sees your calendar, your address or anyone else in your life. Numbers you don't know get nothing automatic.</div>
+    <div class="rule"><b>You tap once</b>Nothing goes out and nothing gets booked until you answer 1.</div>
+  </div>
+  <div class="phones">
+    <div class="phone" aria-label="Example: a friend sets up coffee">
+      <div class="whoname">Alex (Friends group) → Sam's assistant</div>
+      <div class="msg me">/help</div>
+      <div class="msg them">Hi Alex! You can text /coffee to grab a coffee with Sam. More coming soon.</div>
+      <div class="msg me">/coffee</div>
+      <div class="msg them">Where are you near, and when's good this week?</div>
+      <div class="msg me">downtown, mornings</div>
+      <div class="msg them">Sam is free:<br><b>1</b> Thu 8:30 at Grind Café · <b>2</b> Fri 9:00 at Bean There · <b>3</b> other times</div>
+      <div class="msg me">1</div>
+      <div class="msg them">Checking with Sam. You'll hear back shortly.</div>
+    </div>
+    <div class="phone" aria-label="Example: Sam approves">
+      <div class="whoname">Sam's assistant → Sam</div>
+      <div class="msg them">Alex (Friends) wants coffee Thu 8:30 at Grind Café, downtown. You're free.<br><b>1</b> yes · <b>2</b> suggest another time · <b>3</b> not this week</div>
+      <div class="msg me">1</div>
+      <div class="msg them">Done. It's on your calendar, and Alex got the invite.</div>
+      <div class="time">Alex sees</div>
+      <div class="msg them">You're on: Thu 8:30 at Grind Café with Sam. Calendar invite sent. Text /help any time.</div>
+    </div>
+  </div>
+  <p class="muted" style="margin-top:14px">Coffee is the first command. More are coming, each one turned on per group.</p>
 </section>
 
 <section id="staff">

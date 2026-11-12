@@ -317,7 +317,7 @@
       <p><button class="btn" id="replay">Play it again</button></p></div></div>`;
   }
   const CHAT = [['me', '/coffee'], ['them', 'Hi Alex, this is Sam\'s assistant. Coffee at Three Pines Coffee, a favorite near Sam:\n1 Thu 8:30 AM · 2 Fri 9:00 AM · 3 Sat 11:00 AM'],
-    ['me', '2'], ['them', 'Done: coffee Fri 9:00 AM at Three Pines Coffee. Sam has the invite and is looking forward to it.'], ['me', '🙌']];
+    ['me', '2'], ['them', 'Done: coffee Fri 9:00 AM at Three Pines Coffee. Sam has the invite and is looking forward to it.\nassistant here to /help'], ['me', '🙌']];
   function playChat() {
     const box = $('#msgs'); if (!box) return;
     box.innerHTML = CHAT.map(([w, t]) => `<div class="msg ${w}">${t.replace(/\n/g, '<br>')}</div>`).join('');

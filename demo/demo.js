@@ -173,7 +173,7 @@
   // ---------- Context and router ----------
   const PERSONAL = { slug: '', short: 'Personal', color: '#1f6f54' };
   let ctx = PERSONAL;
-  const PAGES = [['', 'Today', 'today'], ['guide', 'Local Guide', 'guide'], ['movies', 'Movies', 'movies'], ['money', 'Money', 'money'], ['agents', 'Agents', 'agents'], ['coffee', '/coffee', 'coffee']];
+  const PAGES = [['', 'Today', 'today'], ['guide', 'Local Guide', 'guide'], ['movies', 'Movies', 'movies'], ['money', 'Money', 'money'], ['agents', 'Agents', 'agents']];
   const CO_PAGES = [['', 'Overview', 'company'], ['cap', 'Cap table', 'cap'], ['agents', 'Team', 'agents']];
   const $ = (s) => document.querySelector(s);
   const app = $('#app');
@@ -260,7 +260,7 @@
       <ol class="rank">${rows.slice(0, 6).map((p) => `<li>${p.img ? `<img class="thumb" src="${p.img}" alt="" loading="lazy" referrerpolicy="no-referrer">` : `<span class="thumb">${svg(cat === 'food' ? 'food' : cat)}</span>`}
         <span class="li-main"><b>${p.name}</b><span class="chips"><span class="pill">${p.city}</span></span></span><span class="pill score">${p.score}</span></li>`).join('') || '<li class="muted">Nothing with this filter.</li>'}</ol></section>`;
     return `<p class="eyebrow">Fun &amp; Local</p><h1 class="page-h1">Local Guide</h1>
-    <p class="lede">Places scored against your taste, this weekend's best events, and where to get coffee, a beer or lunch. Real Salt Lake valley places.</p>
+    <p class="lede">Places scored against your taste, this weekend's best events, and where to get coffee, a beer or lunch. Real Salt Lake valley places. <a href="#/coffee">See how a friend texts /coffee &rarr;</a></p>
     <div class="filters">${[['all', 'All'], ['kids', 'Kid-friendly'], ['free', 'Free']].map(([k, n]) => `<button data-f="${k}" class="${gFilter === k ? 'on' : ''}">${n}</button>`).join('')}</div>
     <section><h2 class="label">this weekend · ${fmt(fri, { month: 'short', day: 'numeric' })}–${fmt(sun, { month: 'short', day: 'numeric' })}</h2>
       <div class="hero">${hero.map((e) => `<div class="herocard" style="--cat:${CAT[e.cat]}">${svg(e.cat)}<div class="over"><span class="w">${e.when()}</span><span class="t">${e.t}</span><span class="d">${e.where} · ${e.price}</span><span class="d"><i>${e.why}</i></span></div></div>`).join('') || '<p class="muted">Nothing with this filter.</p>'}</div></section>

@@ -91,6 +91,7 @@
   const ROSTER = [
     ['People you rely on most', [
       ['ea', 'Executive Assistant', 'Chief of staff: runs the team, brings you only decisions and problems', 'var(--r-ea)'],
+      ['text', 'Text Concierge', 'Your texts answered, new people greeted, groups and quiet hours', 'var(--r-ea)'],
       ['security', 'Security Officer', 'Threats, breaches, passwords and 2FA, ranked; reports to your coach', 'var(--r-ea)'],
       ['philosopher', 'Philosopher', 'The Should way, your reading list and book summaries, ideas to try', 'var(--r-ea)'],
       ['coach', 'Personal Coach', 'Scores every area against your own goals; the Saturday sit-down', 'var(--r-coach)']]],
@@ -230,7 +231,7 @@
     const m = MOVIES[0];
     return `<p class="eyebrow">${fmt(now, { weekday: 'long', month: 'long', day: 'numeric' })}</p>
     <h1 class="page-h1">${greet}, Sam</h1>
-    <p class="lede">Thirty agents worked overnight. Here's what they need from you, and what they already handled.</p>
+    <p class="lede">Thirty-one agents worked overnight. Here's what they need from you, and what they already handled.</p>
     <div class="grid">
       <section class="block s8"><h2 class="label">morning brief <span class="muted" style="text-transform:none;letter-spacing:0;font-weight:500">texted 8:00 AM</span></h2>
         <div class="brief"><div class="avatar" style="background:var(--r-ea)">EA</div><div class="bubble">

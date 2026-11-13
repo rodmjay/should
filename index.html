@@ -6,9 +6,9 @@
 <meta name="robots" content="noindex">
 <title>Should</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta name="description" content="Put your life goals on autopilot. One human, thirty AI agents.">
+<meta name="description" content="Put your life goals on autopilot. One human, thirty-one AI agents.">
 <meta property="og:title" content="Should">
-<meta property="og:description" content="Put your life goals on autopilot. One human, thirty AI agents.">
+<meta property="og:description" content="Put your life goals on autopilot. One human, thirty-one AI agents.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -347,9 +347,9 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 <header class="hero">
   <div class="brand"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="var(--accent)"/><path d="M17 34.5 L27.5 44.5 L45 23" fill="none" stroke="var(--card)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="16.5" r="5" fill="var(--warm)"/></svg><span>should<i>.</i></span></div>
   <h1>Put your life goals on autopilot.</h1>
-  <p class="sub">A better job, money that grows while you work, a business that runs itself, a body you're proud of. Thirty AI agents work on it every day. You answer with 1, 2 or 3.</p>
+  <p class="sub">A better job, money that grows while you work, a business that runs itself, a body you're proud of. Thirty-one AI agents work on it every day. You answer with 1, 2 or 3.</p>
   <div class="stats">
-    <div class="stat"><b>30</b><span>AI agents</span></div>
+    <div class="stat"><b>31</b><span>AI agents</span></div>
     <div class="stat"><b>7</b><span>life goals</span></div>
     <div class="stat"><b>1</b><span>human in charge</span></div>
   </div>
@@ -504,11 +504,12 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 
 <script>
 const AGENTS = {
-  ea:{n:"Executive Assistant",i:"🧭",job:"Runs the staff: plans your day, texts you at 8 AM and hands out the work.",routines:["Daily brief, 6:30 AM","Morning text, 8:00 AM","Reply desk, all day"],never:"Texts you more than one question at a time."},
+  ea:{n:"Executive Assistant",i:"🧭",job:"Runs the staff: plans your day, texts you at 8 AM and hands out the work.",routines:["Daily brief, 6:30 AM","Morning text, 8:00 AM"],never:"Texts you more than one question at a time."},
   book:{n:"Accountant",i:"📒",job:"Balances, bills and spending, checked every morning before you're up, plus how much is free to spend on fun.",routines:["Balance check, 6:15 AM","Fun money left, daily"],never:"Moves money. It only reads."},
   sched:{n:"Scheduler",bg:true,i:"🗓️",job:"Owns your calendar. The other agents ask it when you're free or away.",routines:["Day plan, 6:00 AM"],never:"Books anything on a Sunday."},
   pi:{n:"Investigator",i:"🔎",job:"Works out who new numbers are, remembers how you met, and vets people and businesses before you deal with them.",routines:["New-contact check, weekly"],never:"Digs into private people."},
   health:{n:"Health Agent",i:"🩺",job:"Training, meal plans and the grocery cart, and when you're sick: texts your plan's nurse for you, says where to go and what it costs, and checks medical bills.",routines:["Meal plan, every 2 weeks","Grocery cart, Saturdays","Scale sync, weekly","Nurse chat, any time you're sick"],never:"Checks out, messages a nurse without your yes, or plays doctor. Emergencies: call 911."},
+  text:{n:"Text Concierge",i:"💬",job:"Runs everything that happens by text: answers your texts in seconds, greets new people who text in, keeps friend and family groups and their menus, queues your 1/2/3 questions, and keeps quiet hours.",routines:["Text replies, all day","Phone desk, hourly"],never:"Texts anyone but you without your yes."},
   phil:{n:"Philosopher",i:"📚",job:"Keeps the Should way and your reading list. Each book gets a short summary before you listen, ending with a check against your values. It also keeps a short list of new ideas to try, and nothing gets tried until you approve it.",routines:["North-star check, monthly"],never:"Changes how another agent works without your yes."},
   sec:{n:"Security Officer",i:"🛡️",job:"Watches for threats to your accounts: suspicious logins, breaches, weak or reused passwords, missing 2FA. It audits every account, ranks what to fix first, and sends a weekly summary to your coach.",routines:["Security audit, Fridays 3 PM"],never:"Handles your passwords, signs in, or changes anything."},
   coach:{n:"Personal Coach",i:"🏁",job:"Grades your week against your goals and runs a Saturday sit-down.",routines:["Scorecard, Saturdays 9:30","Habit check-in, daily"],never:"Shames you, or shares your check-ins with anyone."},

@@ -91,7 +91,7 @@
   const ROSTER = [
     ['People you rely on most', [
       ['ea', 'Executive Assistant', 'Chief of staff: runs the team, brings you only decisions and problems', 'var(--r-ea)'],
-      ['philosopher', 'Philosopher', 'Keeps the Should way, the book library and ideas to try', 'var(--r-ea)'],
+      ['philosopher', 'Philosopher', 'The Should way, your reading list and book summaries, ideas to try', 'var(--r-ea)'],
       ['coach', 'Personal Coach', 'Scores every area against your own goals; the Saturday sit-down', 'var(--r-coach)']]],
     ['Money', [
       ['accountant', 'Accountant', 'Balances, bills, transactions and taxes', 'var(--r-money)'],

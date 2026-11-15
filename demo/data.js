@@ -1,6 +1,3 @@
-// Sample data for the Should portal demo. Every person, company, place and number here is made up.
-// Nothing comes from a real account. Keep it that way: Security Officer spot-checks this file before
-// it publishes (texting/PRIVACY.md never-share list).
 window.DEMO = {
   me: { name: 'Sam Carter', initials: 'SC', email: 'sam@example.com' },
   date: 'Saturday', dateLong: 'November 21, 2026',
@@ -120,8 +117,6 @@ window.DEMO = {
     projects: [['Website rebuild', '24h', '$1,920'], ['Booking API', '20h', '$1,640'], ['Data cleanup', '18h', '$1,260']],
     clients: [['Acme Bakery', '22h', '$1,780'], ['Riverbend Dental', '21h', '$1,690'], ['Pine & Co', '19h', '$1,350']]
   },
-
-  // The 1/2/3 text that ends every tour.
   text: [
     ['in', 'Coach: two gym plans fit your week.\n\n1 = Basic, $24/mo, 6 AM–10 PM\n2 = Plus, $39/mo, classes included\n3 = ask me Monday'],
     ['out', '1'],

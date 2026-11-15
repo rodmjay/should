@@ -1,7 +1,3 @@
-/* Should portal demo (rebuilt in Nightcap 2026-11-15 to match the real portal).
-   The shell (bar, area pill, quick add, launcher, avatar, sub-page pills) uses the portal's own class
-   names; portal.css and icons.js are copied from the portal by product/scripts/sync-demo.py.
-   All data is in data.js and made up. Friend commands never go in the nav (Rod 11/12). */
 (function () {
   'use strict';
   var D = window.DEMO, I = window.ICONS;
@@ -11,8 +7,6 @@
     size = size || 20;
     return '<svg class="icon" width="' + size + '" height="' + size + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (I[n] || I.assistant) + '</svg>';
   }
-
-  // ---- Navigation: the portal's six areas, then the companies -------------------------------------------
   var GROUPS = [
     { key: 'today', name: 'Today', icon: 'today', tile: 'today', tabs: [['', 'today', 'today', 'var(--r-today)'], ['assistant', 'assistant', 'assistant', 'var(--r-assistant)'], ['coach', 'coach', 'coach', 'var(--r-coach)']] },
     { key: 'money', name: 'Money', icon: 'bookkeeper', tile: 'money', tabs: [['money', 'overview', 'today', 'var(--pen)'], ['bookkeeper', 'accountant', 'bookkeeper', 'var(--r-bookkeeper)'], ['financial', 'financial', 'financial', 'var(--r-financial)'], ['shopping', 'shopping', 'shopping', 'var(--r-shopping)']] },
@@ -25,8 +19,6 @@
   var H = D.holding;
   var COMPANIES = [{ slug: 'northstar', name: H.name, color: '#5ac8fa', depth: 0 }].concat(H.subs.map(function (s) { return { slug: s.slug, name: s.name, color: s.color, depth: 1, stage: s.stage }; }));
   var AREA = { health: 'health', shopping: 'shopping', chores: 'home', home: 'home' };
-
-  // Desks that open as a simple role page (report + routines), with made-up reports.
   var DESKS = {
     assistant: ['Executive Assistant', 'Chief of staff: the morning text, your list, and one batched ask a day', 'Sent the 8 AM text. 3 things today, 2 decisions waiting. Moved the oil change to Monday so Saturday stays light.', ['Morning text, 8 AM', 'List hygiene, 5:45 AM']],
     coach: ['Personal Coach', 'Your weekly scorecard and the Saturday sit-down', 'Sit-down at 9:30: money and health are green, sleep is yellow. Three questions from the team, and up to 3 commitments for next week.', ['Weekly review, Saturdays 9 AM']],
@@ -42,8 +34,6 @@
     career: ['Career Assistant', 'Job leads, recruiter replies and the resume', '4 new leads, 2 strong fits. Two recruiter replies drafted; they go out only on your yes.', ['Job leads, 6:15 AM']],
     legal: ['Legal Advisor', 'Agreements, deadlines and questions for a lawyer', 'Lease renewal is in your email: the rent stays the same, 12 months. Sign by 12/1.', []]
   };
-
-  // ---- Router --------------------------------------------------------------------------------------------
   var menu = null;
   function parse() {
     var h = (location.hash || '#/').slice(2).split('/');
@@ -63,8 +53,6 @@
     renderSeg(g, co, r);
     $('#app').innerHTML = co ? companyView(co, r.sec) : (VIEWS[r.key] || deskView)(r.key);
   }
-
-  // ---- The app bar (portal +layout.svelte markup) --------------------------------------------------------
   function launcherApps() {
     return GROUPS.map(function (g) { return { name: g.name, icon: g.icon, href: hrefOf(g.tabs[0][0]), bg: 'var(--tile-' + g.tile + ')', act: g.key === 'money' }; })
       .concat([{ name: 'Health', icon: 'health', href: '#/health', bg: 'var(--tile-health)' }, { name: 'Coach', icon: 'coach', href: '#/coach', bg: 'var(--tile-plans)' }, { name: 'Agency desk', icon: 'as-architect', href: '#/agency', bg: 'var(--tile-business)' }]);
@@ -78,7 +66,7 @@
       GROUPS.map(function (x) { return '<li role="option"><a href="' + hrefOf(x.tabs[0][0]) + '"' + (!co && g === x ? ' class="on"' : '') + '><span class="mini" style="background: var(--tile-' + x.tile + ')">' + icon(x.icon, 13) + '</span>' + x.name + '</a></li>'; }).join('') +
       '<li class="head">Companies</li>' +
       COMPANIES.map(function (c) { return '<li role="option"><a href="#/c/' + c.slug + '" style="padding-left:' + (10 + c.depth * 16) + 'px"' + (co && co.slug === c.slug ? ' class="on"' : '') + '><span class="sw" style="background:' + c.color + '"></span><span>' + esc(c.name) + '</span></a></li>'; }).join('') + '</ul>';
-    var add = '<div class="panel list" role="menu" aria-label="Quick add"><form class="quick" onsubmit="return false"><label class="head" for="qa">Add a task (Todoist)</label><input id="qa" class="field" placeholder="Call the bank about…"><button class="nc-go" type="button" data-demo>Add</button><p class="small muted" id="qmsg" hidden>Demo: nothing is saved.</p></form>' +
+    var add = '<div class="panel list" role="menu" aria-label="Quick add"><form class="quick" onsubmit="return false"><label class="head" for="qa">Add a task</label><input id="qa" class="field" placeholder="Call the bank about…"><button class="nc-go" type="button" data-demo>Add</button><p class="small muted" id="qmsg" hidden>Demo: nothing is saved.</p></form>' +
       '<a role="menuitem" href="#/agency"><span class="mini" style="background: var(--tile-business)">' + icon('as-architect', 13) + '</span>Log time<span class="hint">text /agency /log 3h Client note</span></a>' +
       '<a role="menuitem" href="#/assistant"><span class="mini" style="background: var(--tile-today)">' + icon('ask', 13) + '</span>Ask Executive Assistant</a></div>';
     var launcher = '<div class="panel launcher" role="dialog" aria-label="All desks"><div class="grid">' +
@@ -107,8 +95,6 @@
       return '<a href="' + t[0] + '" style="--c:' + t[3] + '"' + (cls.trim() ? ' class="' + cls.trim() + '"' : '') + (t[4] ? ' aria-current="page"' : '') + '>' + icon(t[2], 14) + '<span>' + t[1] + '</span></a>';
     }).join('') + '</div>';
   }
-
-  // ---- Building blocks ------------------------------------------------------------------------------------
   function spark(pts) {
     var min = Math.min.apply(null, pts), max = Math.max.apply(null, pts), w = 120, h = 30;
     var d = pts.map(function (p, i) { return (i ? 'L' : 'M') + (i * w / (pts.length - 1)).toFixed(1) + ' ' + (h - 3 - (p - min) / ((max - min) || 1) * (h - 6)).toFixed(1); }).join(' ');
@@ -129,8 +115,6 @@
     return '<section class="block phonecard"><h2 class="label"><span>A 1/2/3 text</span><span class="muted small">how you answer, on the go</span></h2><div class="msgs">' +
       D.text.map(function (m) { return '<p class="' + m[0] + '">' + esc(m[1]).replace(/\n/g, '<br>') + '</p>'; }).join('') + '</div></section>';
   }
-
-  // ---- Views ----------------------------------------------------------------------------------------------
   var T = D.today;
   var VIEWS = {
     '': function () {
@@ -198,8 +182,6 @@
       '<path d="' + line(now) + '" fill="none" stroke="var(--nc-green)" stroke-width="3" stroke-linejoin="round"/><circle cx="' + x(n) + '" cy="' + y(now[n]) + '" r="5" fill="var(--nc-green)"/>' +
       [1, 8, 15, 22, 29].map(function (d) { return '<text x="' + x(d - 1) + '" y="' + (h - 2) + '" class="ax" text-anchor="middle">' + d + '</text>'; }).join('') + '</svg>';
   }
-
-  // Companies: the holding company's command center, its subsidiaries, and the agency's hours.
   function companyView(co, sec) {
     if (co.slug === 'northstar' && !sec) return holdingView();
     if (co.slug === 'brightside' && sec === 'hours') return agencyView();
@@ -234,8 +216,6 @@
       '<div class="testmode"><b>TEST MODE</b> · payments sandbox, no real money moves. Snapshot ' + A.snapshot + '.</div>' +
       card('Hours', '<p>' + A.total + '</p><div class="cols3"><div><h3 class="sub">By worker</h3>' + table(['Name', 'Hours', 'Cost', 'Billed'], A.workers) + '</div><div><h3 class="sub">By project</h3>' + table(['Project', 'Hours', 'Billed'], A.projects) + '</div><div><h3 class="sub">By client</h3>' + table(['Client', 'Hours', 'Billed'], A.clients) + '</div></div>', '<span class="seg-btns"><button class="on">this week</button><button>this month</button></span>');
   }
-
-  // ---- Wiring ---------------------------------------------------------------------------------------------
   document.addEventListener('click', function (e) {
     var b = e.target.closest('[data-menu]');
     if (b) { menu = menu === b.dataset.menu ? null : b.dataset.menu; render(); return; }

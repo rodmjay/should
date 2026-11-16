@@ -95,3 +95,11 @@ table.data td.num, .cols3 table.data th:not(:first-child) { text-align: right; }
 .promo { color: #6ee59a; margin-top: 10px !important; } .change { color: #ffc15e; margin-top: 10px !important; }
 .scroll { overflow-x: auto; }
 table.data tfoot td { border-top: 1px solid var(--rule-strong); }
+.cats { display: grid; gap: 8px; }
+.cat { margin: 0; background: rgba(255, 255, 255, 0.04); border-radius: 12px; padding: 8px 12px; }
+.cat summary { display: flex; gap: 8px; color: var(--ink); font-weight: 600; cursor: pointer; }
+.cat summary span { flex: 1; }
+.cat ul { list-style: none; margin: 8px 0 2px; padding: 0; display: grid; gap: 5px; }
+.cat li { display: flex; justify-content: space-between; gap: 12px; font-size: 0.86rem; color: var(--ink-2); }
+.neg { color: #6ee59a; }
+.bill-total { display: flex; justify-content: space-between; margin: 14px 0 4px !important; padding-top: 10px; border-top: 1px solid var(--rule-strong); font-weight: 650; }

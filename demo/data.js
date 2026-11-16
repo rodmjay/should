@@ -98,23 +98,38 @@ window.DEMO = {
 
   phone: {
     tiles: [
-      { label: 'Carrier this month', value: '$186.40', sub: '4 lines' },
+      { label: 'Next bill', value: '$204.40', sub: '4 lines · estimate' },
       { label: 'Next payment', value: 'Dec 3', sub: 'bill cycle closes the 24th' },
       { label: 'AutoPay', value: 'On', sub: 'charges itself, $20 discount', tone: 'good' },
       { label: 'Past due', value: '$0.00', sub: 'nothing past due', tone: 'good' },
-      { label: 'Equipment', value: '$52.08', sub: '$611.40 owed' }
+      { label: 'Equipment', value: '$52.08', sub: '$611.40 owed' },
+      { label: 'Pay off every device today', value: '$611.40', sub: '2 devices, no fees' }
     ],
     lines: [
-      { last4: '4417', label: 'Main', user: 'Sam', device: 'Pixel 9', share: '$46.60', protection: 'On', status: 'active' },
-      { last4: '2290', label: 'Family', user: 'Jamie', device: 'iPhone 15', share: '$46.60', protection: 'On', status: 'active', promo: '$10/mo trade-in credit through Aug 2027' },
-      { last4: '8053', label: 'Family', user: 'Riley', device: 'Galaxy A35', share: '$46.60', protection: 'On', status: 'active' },
-      { last4: '6631', label: 'Family', user: 'Taylor', device: 'iPhone 13', share: null, protection: 'Off', status: 'active', change: ['Dec 24', 'upgrade eligible; trade-in quote $180'] }
+      { last4: '4417', label: 'Main', user: 'Sam', device: 'Pixel 9', share: '$35.00', total: '$41.00', protection: 'On', status: 'active' },
+      { last4: '2290', label: 'Family', user: 'Jamie', device: 'iPhone 15', share: '$35.00', total: '$64.34', protection: 'On', status: 'active', promo: '$10/mo trade-in credit through Aug 2027' },
+      { last4: '8053', label: 'Family', user: 'Riley', device: 'Galaxy A35', share: '$35.00', total: '$59.74', protection: 'On', status: 'active' },
+      { last4: '6631', label: 'Family', user: 'Taylor', device: 'iPhone 13', share: null, total: null, protection: 'Off', status: 'active', change: ['Dec 24', 'upgrade eligible; trade-in quote $180'] }
     ],
     installments: [
-      ['iPhone 15', 'Jamie', '2290', '$33.34', '$433.42', '13', 'Dec 2027', '$10/mo trade-in'],
-      ['Galaxy A35', 'Riley', '8053', '$18.74', '$177.98', '9', 'Aug 2027', '']
+      ['iPhone 15', 'Jamie', '2290', '$33.34', '$433.42', '13', 'Dec 2027 · $33.34', '$10/mo trade-in'],
+      ['Galaxy A35', 'Riley', '8053', '$18.74', '$177.98', '9', 'Aug 2027 · $28.06', '']
     ],
     timeline: [['Oct 24', 'Switched to the family plan, 4 lines'], ['Nov 3', 'First bill on AutoPay'], ['Nov 18', 'Riley asked about an upgrade'], ['Dec 24', 'Taylor’s upgrade window opens']],
+    bill: {
+      date: 'Nov 24', next: 'Next bill Dec 24, about $204.40 on AutoPay',
+      cats: [
+        ['Plan and line access', 140.00, [['4 lines × $35.00', '$140.00']]],
+        ['Equipment', 52.08, [['iPhone 15 (…2290)', '$33.34'], ['Galaxy A35 (…8053)', '$18.74']]],
+        ['Device protection', 18.00, [['3 lines × $6.00', '$18.00']]],
+        ['Add-ons', 10.00, [['Hotspot pass (…6631)', '$10.00']]],
+        ['Taxes and fees', 14.32, [['Regulatory fees', '$4.20'], ['Sales tax', '$10.12']]],
+        ['Late fees', 0, [['None this cycle', '$0.00']]],
+        ['Credits and promos', -30.00, [['AutoPay discount', '−$20.00'], ['Trade-in credit (…2290)', '−$10.00']]],
+        ['Other', 0, [['Nothing else', '$0.00']]]
+      ],
+      total: '$204.40'
+    },
     data: [['Phone, last 30 days', '64 calls · 812 texts'], ['Assistant number, 30 days', '22 calls · 140 texts'], ['Texts the assistant sent, 30 days', '57']]
   },
 

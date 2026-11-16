@@ -141,12 +141,16 @@
       return hero('<a href="#/money">Money</a> · <a href="#/it">IT Guy</a> keeps it current', 'Phone', 'Lines, equipment charges and the phone data Should syncs. Read only.') + tiles(X.tiles) +
         '<div class="lines">' + X.lines.map(function (l) {
           return '<article class="block line"><h2 class="label"><span>…' + l.last4 + ' · ' + l.label + '</span>' + pill(l.status, l.status === 'active' ? 'ok' : 'watch') + '</h2>' +
-            dl([['Used by', l.user], ['Phone', l.device], ['Monthly share', l.share || PEND], ['Device protection', l.protection]]) +
+            dl([['Used by', l.user], ['Phone', l.device], ['Monthly share', l.share || PEND], ['Device protection', l.protection], ['Line total a month', l.total ? '<b>' + l.total + '</b>' : PEND]]) +
             (l.promo ? '<p class="small promo">' + l.promo + '</p>' : '') + (l.change ? '<p class="small change"><b>' + l.change[0] + '</b> ' + l.change[1] + '</p>' : '') + '</article>';
         }).join('') + '</div>' +
-        card('Equipment charges', '<div class="scroll"><table class="data"><thead><tr><th>Device</th><th>Line</th><th>Monthly</th><th>Balance left</th><th>Payments left</th><th>Final month</th><th>Credits</th></tr></thead><tbody>' +
+        card('Equipment charges', '<div class="scroll"><table class="data"><thead><tr><th>Device</th><th>Line</th><th>Monthly</th><th>Payoff today</th><th>Payments left</th><th>Final payment</th><th>Credits</th></tr></thead><tbody>' +
           X.installments.map(function (i) { return '<tr><td><b>' + i[0] + '</b><br><span class="small muted">' + i[1] + '</span></td><td>…' + i[2] + '</td><td class="num">' + i[3] + '</td><td class="num">' + i[4] + '</td><td class="num">' + i[5] + '</td><td>' + i[6] + '</td><td class="small">' + i[7] + '</td></tr>'; }).join('') +
           '</tbody><tfoot><tr><td colspan="2"><b>Total</b></td><td class="num"><b>$52.08</b></td><td class="num"><b>$611.40</b></td><td colspan="3"></td></tr></tfoot></table></div>', '<span class="small muted">2 of 2 balances known</span>') +
+        card('Where the bill goes', '<div class="cats">' + X.bill.cats.map(function (c) {
+          var amt = (c[1] < 0 ? '−$' : '$') + Math.abs(c[1]).toFixed(2);
+          return '<details class="cat"><summary><span>' + c[0] + '</span><b class="num' + (c[1] < 0 ? ' neg' : '') + '">' + amt + '</b></summary><ul>' + c[2].map(function (i) { return '<li><span>' + i[0] + '</span><span class="num">' + i[1] + '</span></li>'; }).join('') + '</ul></details>';
+        }).join('') + '</div><p class="bill-total"><span>Statement total</span><b class="num">' + X.bill.total + '</b></p><p class="small muted">' + X.bill.next + '</p>', '<span class="small muted">statement of ' + X.bill.date + '</span>') +
         '<div class="cols2">' + card('Timeline', rows(X.timeline, function (t) { return '<b class="num">' + t[0] + '</b><span>' + t[1] + '</span>'; })) +
         card('Phone data', dl(X.data) + '<p class="small muted">Counts only. Message text stays on each person’s timeline.</p>') + '</div>';
     },

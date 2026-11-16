@@ -154,7 +154,7 @@ window.DEMO = {
       { key: 'trend', name: 'Trend follow', color: '#0a84ff', on: true, equity: 26030, pnl: 1030, dd: 2.1, trades: 9, win: 56, cagr: 6.8, vs: 6.8, desc: 'Buys when the 20-day average crosses above the 100-day, sells on the cross back.', params: [['fast', '20', '10–30'], ['slow', '100', '50–200']], verdict: 'Ahead so far; needs a few more months.', curve: [0, 100, 275, 225, 525, 650, 825, 1030] },
       { key: 'carry', name: 'Carry', color: '#30d158', on: true, equity: 25465, pnl: 465, dd: 1.2, trades: 3, win: 67, cagr: 3.9, vs: 3.9, desc: 'Holds the higher-yielding currency of each pair and rebalances monthly.', params: [['rebalance', 'monthly', 'weekly–quarterly']], verdict: 'Slow and steady.', curve: [0, 50, 112.5, 175, 237.5, 300, 375, 465] },
       { key: 'revert', name: 'Mean reversion', color: '#ff9f0a', on: true, equity: 24685, pnl: -315, dd: 3.4, trades: 14, win: 43, cagr: 1.2, vs: 1.2, desc: 'Fades moves of more than 2 standard deviations from the 20-day average.', params: [['window', '20', '10–40'], ['band', '2.0', '1.5–3.0']], verdict: 'Behind; trending markets hurt it.', curve: [0, 75, -50, -150, -25, -225, -375, -315] },
-      { key: 'breakout', name: 'Breakout', color: '#bf5af2', on: false, equity: 24475, pnl: -525, dd: 4.8, trades: 6, win: 33, cagr: -0.8, vs: -0.8, desc: 'Buys a break of the 40-day high, sells a break of the 15-day low.', params: [['entry', '40', '20–100'], ['exit', '15', '10–55']], verdict: 'Turned off: false breakouts this fall.', curve: [0, -100, -225, -150, -375, -475, -575, -525] },
+      { key: 'breakout', name: 'Breakout', color: '#0e9f8f', on: false, equity: 24475, pnl: -525, dd: 4.8, trades: 6, win: 33, cagr: -0.8, vs: -0.8, desc: 'Buys a break of the 40-day high, sells a break of the 15-day low.', params: [['entry', '40', '20–100'], ['exit', '15', '10–55']], verdict: 'Turned off: false breakouts this fall.', curve: [0, -100, -225, -150, -375, -475, -575, -525] },
       { key: 'momentum', name: 'Momentum', color: '#ff375f', on: true, equity: 25145, pnl: 145, dd: 2.6, trades: 7, win: 57, cagr: 4.4, vs: 4.4, desc: 'Each week, holds the two strongest currencies against the two weakest.', params: [['lookback', '12 weeks', '4–26']], verdict: 'Too early to say.', curve: [0, -75, 50, 150, 25, 100, 225, 145] }
     ],
     open: [['Trend follow', 'EUR/USD', 'long', '20,000', '1.0842'], ['Carry', 'AUD/USD', 'long', '12,500', '0.6531'], ['Momentum', 'USD/JPY', 'short', '10,000', '151.20']],
@@ -169,7 +169,7 @@ window.DEMO = {
       { name: 'Brightside Agency', slug: 'brightside', stage: 'live', color: '#0a84ff', pulse: '$4,820 billed this month', next: 'Send the November invoices (drafted)' },
       { name: 'Cedar Studio', slug: 'cedar', stage: 'building', color: '#30d158', pulse: 'Website 70% done', next: 'Pick a logo from 3 drafts' },
       { name: 'Harbor Goods', slug: 'harbor', stage: 'planned', color: '#ff9f0a', pulse: 'Name and domain held', next: 'Decide on the formation filing ($70)' },
-      { name: 'Lantern Trust', slug: 'lantern', stage: 'idea', color: '#bf5af2', pulse: 'Notes only', next: 'Talk to a lawyer in January' }
+      { name: 'Lantern Trust', slug: 'lantern', stage: 'idea', color: '#0e9f8f', pulse: 'Notes only', next: 'Talk to a lawyer in January' }
     ],
     goal: { label: 'double income by Dec 2027', pct: 38, have: '$57k', target: '$150k' },
     asks: ['Money: approve the $70 formation filing for Harbor Goods', 'Sends to clients: the 3 November invoices', 'Legal: sign the Brightside contractor agreement'],

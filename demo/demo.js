@@ -74,7 +74,7 @@
     var launcher = '<div class="panel launcher" role="dialog" aria-label="All desks"><div class="grid">' +
       apps.map(function (a) { return '<a href="' + a.href + '"><span class="app" style="background:' + a.bg + '">' + icon(a.icon, 24) + (a.act ? '<i class="badge"></i>' : '') + '</span><span class="lbl">' + a.name + '</span></a>'; }).join('') +
       '</div><p class="head">Companies</p><div class="grid">' +
-      COMPANIES.map(function (c) { return '<a href="#/c/' + c.slug + '"><span class="app" style="background: linear-gradient(135deg, color-mix(in srgb, ' + c.color + ' 60%, #fff), ' + c.color + ')">' + icon(c.slug === 'lantern' ? 'legal' : 'business', 24) + '</span><span class="lbl">' + esc(c.name) + '</span></a>'; }).join('') +
+      COMPANIES.map(function (c) { return '<a href="#/c/' + c.slug + '"><span class="app" style="background: ' + c.color + '">' + icon(c.slug === 'lantern' ? 'legal' : 'business', 24) + '</span><span class="lbl">' + esc(c.name) + '</span></a>'; }).join('') +
       '</div><p class="head">Systems and tools</p><div class="grid small">' +
       [['it', 'it'], ['webmaster', 'webmaster'], ['search', 'search'], ['people', 'phone book']].map(function (t) { return '<a href="#/assistant"><span class="app" style="background: var(--tile-systems)">' + icon(t[0], 20) + '</span><span class="lbl">' + t[1] + '</span></a>'; }).join('') + '</div></div>';
     var me = '<div class="panel list" role="menu" aria-label="' + D.me.name + '"><p class="who"><b>' + D.me.name + '</b><span class="small muted">' + D.me.email + '</span></p><a role="menuitem" href="#/coach">Coach and values</a><a role="menuitem" href="../">The Should page ↗</a></div>';

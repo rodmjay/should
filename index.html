@@ -67,10 +67,11 @@ button{font:inherit;color:inherit;cursor:pointer}
 .goal{padding-top:22px}
 .goal-head{display:flex;gap:14px;align-items:flex-start}
 .goal-ico{flex:0 0 52px;height:52px;border-radius:16px;background:var(--accent-soft);display:grid;place-items:center;font-size:26px}
+.goal-ico:has(svg){background:none;flex-basis:56px;height:56px}
 .goal h3{font-size:24px}
 .goal .tag{color:var(--muted);margin:4px 0 0}
 .who{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 4px}
-.who button{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:5px 10px;font-size:13px}
+.who button{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:3px 10px 3px 3px;font-size:13px;display:inline-flex;align-items:center;gap:6px}
 .label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:20px 0 8px}
 
 /* simulators */
@@ -132,6 +133,8 @@ svg.chart{width:100%;height:auto;display:block;margin-top:8px}
 .rung b{font-size:15px}
 .rung span{font-size:13px;color:var(--muted)}
 .rung.now{border-left-color:var(--accent);background:var(--accent-soft)}
+.dl.pace i{background:linear-gradient(90deg,var(--accent) var(--w),var(--line) 0)}
+.dl.pace li{grid-template-columns:1.4fr 1fr auto}
 .lc-top b{display:block;font-family:var(--md-ref-typeface-brand);font-size:18px}
 .lc-top span{font-size:13px;color:var(--muted)}
 .ring{flex:0 0 64px;height:64px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center}
@@ -292,7 +295,7 @@ svg.chart{width:100%;height:auto;display:block;margin-top:8px}
 @media(min-width:620px){.staff{grid-template-columns:repeat(4,minmax(0,1fr))}}
 .agent{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 10px;text-align:left;display:flex;flex-direction:column;gap:6px;min-height:104px;min-width:0;overflow-wrap:anywhere}
 .agent div,.agent b,.agent span{min-width:0}
-.agent .ico{width:36px;height:36px;border-radius:10px;background:var(--accent-soft);display:grid;place-items:center;font-size:18px}
+.agent .ico{width:44px;height:44px;display:grid;place-items:center}
 .agent b{font-family:var(--md-ref-typeface-brand);font-size:15px;line-height:1.2}
 .agent span{font-size:12px;color:var(--muted);line-height:1.3}
 .staff.leads{grid-template-columns:repeat(2,minmax(0,1fr))!important}
@@ -511,6 +514,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
   <div id="sheetBody"></div>
 </div>
 
+<script src="ds/avatars.js"></script>
 <script>
 const AGENTS = {
   ea:{n:"Executive Assistant",i:"🧭",job:"Runs the staff: plans your day, texts you at 8 AM and hands out the work.",routines:["Daily brief, 6:30 AM","Morning text, 8:00 AM"],never:"Texts you more than one question at a time."},
@@ -549,6 +553,10 @@ const AGENTS = {
   rel:{n:"Relationship Coach",i:"💬",soon:true,job:"Helps you stay close to your partner and the people who matter most.",routines:["Coming soon"],never:"Reads or sends your private messages, or shares anything about the people you love."},
 };
 
+// Each agent's person avatar comes from the design system (ds/avatars.js), keyed by org role
+const ORG={ea:"assistant",book:"bookkeeper",pi:"investigator",health:"health",text:"text-concierge",phil:"philosopher",sec:"security",comp:"compliance",bcoach:"business_coach",coach:"coach",career:"career",wealth:"financial",travel:"travel",shop:"shopping",clothier:"clothier",house:"home-manager",pets:"pets",move:"relocation",gift:"gifts",relmgr:"relationship-manager",events:"events",legal:"legal",music:"music",web:"webmaster",pr:"pr",media:"media",guide:"local-guide",biz:"business",arch:"as-architect",dba:"dba",it:"it",pm:"product",rel:"relationships"};
+const av=(k,size,badge=true)=>window.DSAvatars?DSAvatars.avatarSVG(ORG[k]||k,{size,badge,label:AGENTS[k].n}):AGENTS[k].i;
+
 const GOALS = [
  {id:"career",tab:"Career",title:"A better job, on autopilot",tag:"The right roles found for you, a resume written for each one, and a counter you'd never have sent on your own.",agents:["career","coach","pi","pr"],
   sc:[
@@ -565,11 +573,12 @@ const GOALS = [
     ask:{q:"Offer: $160,000. Your floor is $165,000 and the market is $170–185k. Counter at $178,000?",o:["Yes, send the counter","Counter at $170,000","Let me think, ask tonight"],p:0,r:"Counter sent from your email. You'll see their answer first."},
     result:"Most people never counter. Here it takes one tap."},
    {ico:"🪜",t:"Plan the next five years",s:"From the role you want down to this week",scene:"ladder",
+    ladder:{h:"Sam's career plan",sub:"Reviewed each quarter with Life Coach",rungs:[["2029 target","Director of Platform Engineering","Runs 3 teams, owns the platform budget"],["This year","Lead a team of 6 · cloud architecture cert · $200k","Title, skill and pay goals, checked monthly"],Object.assign(["This quarter","Lead one cross-team architecture decision","8 of 10 Director postings ask for it; you have 0 so far"],{now:1}),["This week","Draft the shared build pipeline proposal","Thursday, 90 minutes"]]},
     flow:["Once a quarter, Life Coach runs your career review","Career Assistant brings market data, skill gaps and a resume and LinkedIn kept in sync","You pick the quarter's focus and this week's one step"],
     ask:{q:"Q1 focus: lead one cross-team architecture decision to build Director-level evidence. Add it as this week's commitment?",o:["Yes, make it this week's commitment","Pick a different focus","Ask me at Saturday's review"],p:0,r:"Added: draft the shared build pipeline proposal, Thursday, 90 minutes. Life Coach checks in Saturday."},
     result:"The big goal stays in view, and every week has one step that moves you toward it."}
   ]},
- {id:"money",tab:"Money",title:"Money that grows, bills that never slip",tag:"An AI trading bot on the strategy you pick, a retirement that funds itself, and nothing late or fraudulent slipping by.",agents:["wealth","book","pi"],
+ {id:"money",tab:"Money",title:"Money that grows, bills that never slip",tag:"An AI trading bot on the strategy you pick, a retirement that funds itself, and nothing late or fraudulent slipping by.",agents:["wealth","coach","book","pi"],
   sc:[
    {ico:"📈",t:"An AI runs your strategy",s:"Inside the limits you set",sim:"trade",
     flow:["You pick a strategy and a loss limit","Financial Advisor's bot trades it every weekday at 2:45","Results vs the index, every Saturday"],
@@ -582,7 +591,12 @@ const GOALS = [
    {ico:"🧾",t:"Nothing slips by",s:"Bills on time, odd charges caught",scene:"stmt",
     flow:["Every morning at 6:15","Accountant reads every charge; Investigator checks strange merchants","You hear only about what's wrong"],
     ask:{q:"Two identical $6.75 charges at Blue Door Coffee, 1 minute apart.",o:["Add a dispute task","It's fine, I bought two","Ask me later"],p:0,r:"Dispute task added for tomorrow, 5 minutes, with the phone number."},
-    result:"No late fees, and mistakes or fraud get caught in days, not at tax time."}
+    result:"No late fees, and mistakes or fraud get caught in days, not at tax time."},
+   {ico:"🪜",t:"Plan the money years",s:"Income first, then debts, then savings",scene:"ladder",
+    ladder:{h:"Sam's money plan",sub:"Reviewed each quarter with Life Coach",rungs:[["2030 target","Debt-free, 6 months saved, investing 15%","Checked against your values each January"],["This year","Pay off the $8,400 card · $5,000 emergency fund","Checked every payday"],Object.assign(["This quarter","Clear the $2,100 store card first","Highest rate of anything you owe"],{now:1}),["This week","Send $350 to the store card on Friday","Payday, 5 minutes, with the link"]]},
+    flow:["Every payday, and a deeper look each quarter","Financial Advisor lines up income, then debts, then savings; Life Coach sets the quarter's money focus","You approve this week's one money step"],
+    ask:{q:"Q1 money focus: clear the $2,100 store card first, since it has the highest rate. Make Friday's $350 payment this week's commitment?",o:["Yes, make it this week's commitment","Pick a different focus","Ask me at Saturday's review"],p:0,r:"Added for Friday, 5 minutes, with the link. Life Coach checks in Saturday."},
+    result:"Every payday goes to the next right thing, and the five-year goal gets a little closer each time."}
   ]},
  {id:"business",tab:"Business",title:"A small business that runs itself",tag:"Every company set up right, every filing on time, and the whole business on one screen each Monday.",agents:["biz","bcoach","arch","book","legal"],
   sc:[
@@ -593,9 +607,14 @@ const GOALS = [
    {ico:"🌳",t:"Grow with a holding company",s:"Each venture in its own box",scene:"tree",
     flow:["You start a second venture","Business Executive drafts the new LLC and the ownership papers","You sign; the tree stays current"],
     ask:{q:"New venture: a rental property. Put it in its own LLC under your holding company?",o:["Yes, prepare the filings","Keep it in the main company","Explain the trade-off"],p:0,r:"Filings for Maple Street Rental LLC are ready for your review."},
-    result:"Each venture is protected and organized the way a much bigger company would do it."}
+    result:"Each venture is protected and organized the way a much bigger company would do it."},
+   {ico:"🪜",t:"Grow it on purpose",s:"From the vision down to this week",scene:"ladder",
+    ladder:{h:"Brightside Agency plan",sub:"Reviewed each quarter with Business Coach",rungs:[["3-year vision","$40k a month, two hires, no client over 25%","Revisited each January"],["This year","$15k a month from 5 retainer clients","Checked monthly"],Object.assign(["This quarter","First dollar: sign one paying retainer","2 proposals out, 0 signed so far"],{now:1}),["This week","Follow up the two open proposals","Tuesday, 30 minutes"]]},
+    flow:["Each quarter, Business Coach runs the business review","Business Executive brings the numbers; Business Coach sets the quarter's focus","You pick this week's one business move"],
+    ask:{q:"Q1 business focus: sign the first paying retainer. This week: follow up the two open proposals. Make it the week's business commitment?",o:["Yes, add it for Tuesday","Pick a different focus","Ask me at Saturday's review"],p:0,r:"Added for Tuesday, 30 minutes. Business Coach brings it to Saturday's sit-down."},
+    result:"The business has a direction for years, a focus for the quarter and one move this week."}
   ]},
- {id:"health",tab:"Health",title:"Chisel the body you want",tag:"Lose fat, keep muscle, eat food you like, and drop the habit that's holding you back.",agents:["health","shop"],
+ {id:"health",tab:"Health",title:"Chisel the body you want",tag:"Lose fat, keep muscle, eat food you like, and drop the habit that's holding you back.",agents:["health","coach","shop"],
   sc:[
    {ico:"⚖️",t:"Body recomposition",s:"A plan that adjusts every week",sim:"body",
     flow:["Smart scale syncs Sunday morning","Health Agent reads the 7-day trend, not one bad day","Food goes up or down a little"],
@@ -612,9 +631,14 @@ const GOALS = [
    {ico:"🚭",t:"Quit a habit, without shame",s:"Sam is quitting vaping",scene:"streak",
     flow:["Sam texts: \"I want to quit vaping\"","Life Coach writes down the why and plans the hard moments","One private check-in a day"],
     ask:{q:"Day 30 without vaping. 🎉 How was today?",o:["Good, no cravings","Hard, but I held on","I slipped"],rs:["30 days! About $150 saved. Put it toward the trip you mentioned?","That's the win that counts. Hard days held are how streaks get built.","Thanks for telling me. One slip doesn't erase 29 days. What was going on? Tomorrow is day 1 of the next streak."]},
-    result:"A private coach who notices the streak, forgives the slip, and keeps the reason in front of you. (Quitline: 1-800-QUIT-NOW.)"}
+    result:"A private coach who notices the streak, forgives the slip, and keeps the reason in front of you. (Quitline: 1-800-QUIT-NOW.)"},
+   {ico:"🪜",t:"Plan the long game",s:"From the body you want down to this week",scene:"ladder",
+    ladder:{h:"Sam's health plan",sub:"Reviewed each quarter with Life Coach",rungs:[["2028 target","185 lb, strong, a half marathon","Checked against your values each January"],["This year","Down 20 lb with muscle kept · lift 3 times a week","Weigh-ins and lifts, checked weekly"],Object.assign(["This quarter","180 g of protein on 5 days a week","Averaging 3 days now"],{now:1}),["This week","Prep 4 lunches on Saturday","60 minutes, groceries already in the cart"]]},
+    flow:["Each quarter, Life Coach runs your health review","Health Agent brings weigh-ins, workouts and meals; Life Coach sets the quarter's focus","You pick this week's one health step"],
+    ask:{q:"Q1 health focus: protein on 5 days a week. This week: prep 4 lunches on Saturday. Make it the week's commitment?",o:["Yes, add it for Saturday","Pick a different focus","Ask me at Saturday's review"],p:0,r:"Added for Saturday, 60 minutes. Health Agent put the groceries in your cart."},
+    result:"The long goal stays steady while each week's step stays small enough to actually do."}
   ]},
- {id:"home",tab:"Home & family",title:"Home and family, handled",tag:"Co-parenting that runs smoothly, and the house fixed by whoever should pay for it.",agents:["relmgr","house","pets"],
+ {id:"home",tab:"Home & family",title:"Home and family, handled",tag:"Co-parenting that runs smoothly, and the house fixed by whoever should pay for it.",agents:["relmgr","coach","house","pets"],
   sc:[
    {ico:"👨‍👧‍👦",t:"Co-parenting, kept easy",s:"Kids' weekends, handoffs and shared costs",scene:"coparent",
     flow:["Thursday before a kids' weekend","Relationship Manager lines up pickup, plans and shared costs","You approve one friendly note"],
@@ -623,9 +647,14 @@ const GOALS = [
    {ico:"🔧",t:"Something broke",s:"Who fixes it, and who pays",scene:"repair",
     flow:["You text: \"the dishwasher is leaking\"","Home Manager checks the lease and drafts the ask","You approve the message"],
     ask:{q:"Your lease says the landlord repairs included appliances. Send this request to Dana (landlord)?",o:["Send it","Edit it first","I'll fix it myself"],p:0,r:"Sent. Follow-up set for Thursday if Dana doesn't reply."},
-    result:"You never pay for a repair that's someone else's job."}
+    result:"You never pay for a repair that's someone else's job."},
+   {ico:"🪜",t:"Plan family time",s:"From the home you want down to this week",scene:"ladder",
+    ladder:{h:"Sam's home and family plan",sub:"Reviewed each quarter with Life Coach",rungs:[["5-year target","A calm home, kids close, a house of your own","Checked against your values each January"],["This year","Every custody weekend planned ahead · $12k toward a down payment","Checked monthly"],Object.assign(["This quarter","One planned outing with each kid every month","1 of 3 so far"],{now:1}),["This week","Plan Saturday's hike with Jordan","20 minutes, trail and weather picked"]]},
+    flow:["Each quarter, Life Coach runs your home and family review","Relationship Manager brings the custody calendar; Home Manager brings the house plan","You pick this week's one family step"],
+    ask:{q:"Q1 family focus: one planned outing with each kid every month. This week: plan Saturday's hike with Jordan. Add it?",o:["Yes, add it","Pick a different focus","Ask me at Saturday's review"],p:0,r:"Added. Relationship Manager has the trail, the weather and a draft text to the co-parent."},
+    result:"Time with the people at home gets planned, not squeezed in."}
   ]},
- {id:"style",tab:"Shopping & Style",title:"Buy smart, look sharp, give well",tag:"Big purchases bought at the right price, an outfit picked for whatever today holds, and a gift ready for every birthday.",agents:["shop","clothier","gift"],
+ {id:"style",tab:"Shopping & Style",title:"Buy smart, look sharp, give well",tag:"Big purchases bought at the right price, an outfit picked for whatever today holds, and a gift ready for every birthday.",agents:["shop","coach","clothier","gift"],
   sc:[
    {ico:"🏷️",t:"Buy it at the right price",s:"Research once, then wait for the dip",scene:"price",
     flow:["You say: \"I need a new office chair\"","Shopping Expert compares the top picks and watches the price","You get one tap when it drops"],
@@ -638,9 +667,14 @@ const GOALS = [
    {ico:"🎂",t:"Birthdays that never sneak up",s:"A gift in the cart, three weeks out",scene:"bdays",
     flow:["A birthday is 3 weeks away","Gift Concierge picks a gift they'll like, in budget","You check out from one link"],
     ask:{q:"Your sister's birthday is the 28th. The $35 cookbook she mentioned in March is in the cart.",o:["Check out (link)","Pick something else","Just a card this year"],p:0,r:"Link sent. It arrives on the 24th."},
-    result:"Everyone gets remembered, at least with a card."}
+    result:"Everyone gets remembered, at least with a card."},
+   {ico:"🪜",t:"Buy with a plan",s:"Fewer, better things, on purpose",scene:"ladder",
+    ladder:{h:"Sam's style and buying plan",sub:"Reviewed each quarter with Life Coach",rungs:[["Long term","A wardrobe that fits who you're becoming","Buy less, buy better"],["This year","Replace the 10 most-worn pieces within $1,200","Checked monthly"],Object.assign(["This quarter","Two interview-ready outfits under $300","1 of 2 so far"],{now:1}),["This week","Try on the navy blazer at home","Wednesday, 15 minutes; free returns until Friday"]]},
+    flow:["Each quarter, Life Coach runs your buying review","Shopping Expert and Clothier bring what you own, what's worn out and what's on sale","You pick this week's one step"],
+    ask:{q:"Q1 style focus: two interview-ready outfits under $300. This week: try on the navy blazer and return it if it doesn't fit. Add it?",o:["Yes, add it for Wednesday","Pick a different focus","Ask me at Saturday's review"],p:0,r:"Added for Wednesday evening, 15 minutes. The return label is ready if you need it."},
+    result:"Big buys follow a plan instead of a sale email."}
   ]},
- {id:"trust",tab:"People & paperwork",title:"Every person remembered, every page understood",tag:"New people saved with how you met, and fine print explained in plain words before you sign.",agents:["pi","legal","relmgr"],
+ {id:"trust",tab:"People & paperwork",title:"Every person remembered, every page understood",tag:"New people saved with how you met, and fine print explained in plain words before you sign.",agents:["relmgr","coach","pi","legal"],
   sc:[
    {ico:"📇",t:"Every new person, remembered",s:"Names, how you met, what you talked about",scene:"contact",
     flow:["A text from a number you don't have saved","Investigator matches it to your email, calendar and contacts","Saved with how you met; only a call back you have to make goes on your list"],
@@ -649,7 +683,31 @@ const GOALS = [
    {ico:"📄",t:"Fine print, decoded",s:"Before you sign",scene:"doc",
     flow:["A lease, contract or legal letter arrives","Legal Advisor marks what it asks of you, and by when","Questions for a real lawyer, if you need one"],
     ask:{q:"Lease renewal: rent up 6%, and 60 days' notice to leave. Add the notice deadline to your calendar?",o:["Yes, with a reminder","No","Ask me later"],p:0,r:"Deadline added for Dec 31, with a reminder two weeks before."},
-    result:"No surprises hiding in the fine print."}
+    result:"No surprises hiding in the fine print."},
+   {ico:"🪜",t:"Keep people and papers in order",s:"A steady habit, not a crisis",scene:"ladder",
+    ladder:{h:"Sam's people and paperwork plan",sub:"Reviewed each quarter with Life Coach",rungs:[["Long term","A circle you keep in touch with, papers always in order","Checked against your values each January"],["This year","Will and beneficiaries done · catch up with 12 old friends","Checked monthly"],Object.assign(["This quarter","One catch-up a week with someone you've drifted from","4 of 12 so far"],{now:1}),["This week","Call Alex on Thursday evening","20 minutes, with notes from last time"]]},
+    flow:["Each quarter, Life Coach runs your people and paperwork review","Relationship Manager brings who you haven't talked to; Legal Advisor brings papers due","You pick this week's one step"],
+    ask:{q:"Q1 people focus: one catch-up a week with someone you've drifted from. This week: call Alex on Thursday evening. Add it?",o:["Yes, add it","Pick someone else","Ask me at Saturday's review"],p:0,r:"Added for Thursday, 20 minutes. Relationship Manager put what you talked about last time in the task."},
+    result:"Friendships and paperwork get steady attention, not a scramble."}
+  ]},
+ {id:"coaching",tab:"Coaching",title:"Coaches that keep the long game going",tag:"Life Coach and Business Coach turn your values into yearly goals, a few outcomes each quarter and at most 3 commitments a week, then check in weekly, monthly, quarterly and yearly.",agents:["coach","bcoach"],
+  sc:[
+   {ico:"🗓️",t:"The Saturday sit-down",s:"Friday reports in, 3 commitments out",scene:"week",
+    flow:["Friday 5 PM, every role sends its weekly report","Life Coach scores each area against your own gauges; Business Coach hands over the business scorecard","Saturday 9:30: the scorecard, a few questions, at most 3 commitments"],
+    ask:{q:"This week: Money 4/5, Health 3/5, Career 4/5, Business 3/5. Commit to protein on 5 days, following up 2 proposals and calling Alex?",o:["Yes, those three","Swap one","Just two this week"],p:0,r:"Three commitments on your list, each with a time. Next sit-down Saturday."},
+    result:"One short check-in a week keeps every area moving, and you never track any of it yourself."},
+   {ico:"📏",t:"Monthly pace check",s:"Is each quarter's goal on track?",scene:"pace",
+    flow:["First Saturday of each month","Life Coach compares each goal's progress with how much of the quarter has passed","Anything behind gets one small adjustment, never a pile of new tasks"],
+    ask:{q:"Month 2 of 3: the store card is 45% paid off, behind pace. Send an extra $100 to it this payday?",o:["Yes, add $100","Keep the plan","Ask me after payday"],p:0,r:"Next payday sends $450 to the store card. Back on pace by month's end."},
+    result:"Slips get caught at the one-month mark, while they're still easy to fix."},
+   {ico:"🧭",t:"Quarterly and yearly reviews",s:"Values, then years, then the next quarter",scene:"review",
+    flow:["First Saturday of January, April, July and October","Life Coach reviews the quarter; Business Coach does the same for the business; in January, the whole year against your values","You pick 1 to 3 outcomes for the next quarter"],
+    ask:{q:"Last quarter: 2 of 3 outcomes met. Next quarter: keep debt payoff and career, and move running to mornings?",o:["Yes, set those","Change one","Talk it through at the sit-down"],p:0,r:"Next quarter's outcomes are set. This week's commitments come from them."},
+    result:"Every quarter starts from what you value, and nothing important drifts for more than three months."},
+   {ico:"📓",t:"A coach that learns you",s:"The coaching log",scene:"log",
+    flow:["After every check-in","Life Coach logs what was kept, what slipped and why","Next week's suggestions use it"],
+    ask:{q:"You keep morning commitments 8 times in 10 and evening ones 3 in 10. Default new commitments to mornings?",o:["Yes, mornings","Keep mixing","Ask me next month"],p:0,r:"Done. Saturday's suggestions will lean on mornings."},
+    result:"The coaching fits you better every month, because it learns from what actually worked."}
   ]}
 ];
 
@@ -670,11 +728,18 @@ const SCENES={
  offer:()=>{const X=v=>((v-140)/60*100).toFixed(1)+"%";return `<div class="range"><div class="rg-track"><div class="rg-band" style="left:${X(170)};width:${(15/60*100).toFixed(1)}%"></div>
   <i class="mk off" style="left:${X(160)}"><b>Offer</b>$160k</i><i class="mk floor" style="left:${X(165)}"><b>Floor</b>$165k</i><i class="mk ctr" style="left:${X(178)}"><b>Counter</b>$178k</i></div>
   <div class="rg-axis"><span>$140k</span><span class="mkt">▬ Market for this role: $170–185k</span><span>$200k</span></div></div>`},
- ladder:()=>`<div class="ladder"><div class="ld-h"><b>Sam's career plan</b><span>Reviewed each quarter with Life Coach</span></div>
-  <div class="rung"><small>2029 target</small><b>Director of Platform Engineering</b><span>Runs 3 teams, owns the platform budget</span></div>
-  <div class="rung"><small>This year</small><b>Lead a team of 6 · cloud architecture cert · $200k</b><span>Title, skill and pay goals, checked monthly</span></div>
-  <div class="rung now"><small>This quarter</small><b>Lead one cross-team architecture decision</b><span>8 of 10 Director postings ask for it; you have 0 so far</span></div>
-  <div class="rung"><small>This week</small><b>Draft the shared build pipeline proposal</b><span>Thursday, 90 minutes</span></div></div>`,
+ ladder:w=>{const L=w.ladder;return `<div class="ladder"><div class="ld-h"><b>${L.h}</b><span>${L.sub}</span></div>
+  ${L.rungs.map(r=>`<div class="rung${r.now?" now":""}"><small>${r[0]}</small><b>${r[1]}</b><span>${r[2]}</span></div>`).join("")}</div>`},
+ week:()=>`<div class="ladder"><div class="ld-h"><b>This week's scorecard</b><span>Built from 9 Friday reports, Saturday 9:30</span></div>
+  ${[["Money","4 of 5","Accountant, Financial Advisor"],["Health","3 of 5","Health Agent"],["Career","4 of 5","Career Assistant"],["Business","3 of 5","from Business Coach's scorecard"]].map(r=>`<div class="rung"><small>${r[0]}</small><b>${r[1]}</b><span>${r[2]}</span></div>`).join("")}
+  <div class="rung now"><small>This week's commitments (3 at most)</small><b>Protein on 5 days · follow up 2 proposals · call Alex</b><span>On your list, each with its own time</span></div></div>`,
+ pace:()=>`<div class="ladder"><div class="ld-h"><b>Quarter pace check</b><span>Month 2 of 3: two thirds of the quarter gone</span></div>
+  <ul class="dl pace">${[["Protein on 5 days a week",70,"on pace"],["Store card paid off",45,"behind"],["Two open proposals signed",50,"behind"]].map(r=>`<li><span>${r[0]}</span><i style="--w:${r[1]}%"></i><b>${r[2]}</b></li>`).join("")}</ul></div>`,
+ review:()=>`<div class="ladder"><div class="ld-h"><b>Quarterly review</b><span>First Saturday of the quarter</span></div>
+  ${[["Met","Store card paid off","$2,100, two weeks early"],["Met","Lead one cross-team decision","Build pipeline proposal approved"],["Missed","Run 3 times a week","2 a week on average: the plan moves to mornings"]].map(r=>`<div class="rung${r[0]==="Met"?"":" now"}"><small>${r[0]}</small><b>${r[1]}</b><span>${r[2]}</span></div>`).join("")}
+  <div class="rung"><small>In January</small><b>The whole year, checked against your values</b><span>Then next year's goals, one per area</span></div></div>`,
+ log:()=>`<div class="ladder"><div class="ld-h"><b>Coaching log</b><span>What the coach has learned about you</span></div>
+  ${[["12 weeks","Morning commitments get kept 8 times in 10","Evening ones, 3 in 10"],["6 paydays","Money steps on payday get done the same day","Later in the week, half slip"],["9 weeks","More than 3 commitments drops follow-through to 40%","So it never suggests a fourth"]].map(r=>`<div class="rung"><small>${r[0]}</small><b>${r[1]}</b><span>${r[2]}</span></div>`).join("")}</div>`,
  stmt:()=>`<div class="stmt"><div class="st-h"><b>Checking ···4417</b><span>This morning</span></div>
   <div class="row"><span>Nov 4</span><span>Blue Door Coffee</span><b>$6.75</b></div>
   <div class="row flag"><span>Nov 4</span><span>Blue Door Coffee<em>Same amount, 1 minute later</em></span><b>$6.75</b></div>
@@ -718,11 +783,11 @@ function askHTML(a){
 function renderGoal(id,si=0){
   const g=GOALS.find(x=>x.id===id); renderTabs(id); const w=g.sc[si];
   $("#goal").innerHTML=`<div class="goal"><h3>${esc(g.title)}</h3><p class="tag">${esc(g.tag)}</p>
-  <div class="who">${g.agents.map(a=>`<button data-agent="${a}">${AGENTS[a].i} ${AGENTS[a].n}</button>`).join("")}</div>
+  <div class="who">${g.agents.map(a=>`<button data-agent="${a}">${av(a,22,false)} ${AGENTS[a].n}</button>`).join("")}</div>
   <div class="picker" role="tablist">${g.sc.map((s,i)=>`<button class="pick" role="tab" aria-selected="${i===si}" data-gid="${g.id}" data-si="${i}"><span class="pk-i">${s.ico}</span><span><b>${esc(s.t)}</b><small>${esc(s.s)}</small></span></button>`).join("")}</div>
   <article class="scn">
    <ol class="flow">${w.flow.map((f,i)=>`<li><small>${["When","Your staff","You"][i]}</small>${esc(f)}</li>`).join("")}</ol>
-   ${w.scene?`<div class="stage">${SCENES[w.scene]()}</div>`:""}
+   ${w.scene?`<div class="stage">${SCENES[w.scene](w)}</div>`:""}
    ${w.sim?`<div id="simbox"></div>`:""}
    ${askHTML(w.ask)}
    <p class="gets"><b>What you get</b>${esc(w.result)}</p>
@@ -837,13 +902,13 @@ const LEADS=["ea","coach"]; // your go-to agents; everyone else reports to them.
 function renderStaff(){
   const order=Object.keys(AGENTS).filter(k=>!AGENTS[k].bg).sort((a,b)=>LEADS.includes(b)-LEADS.includes(a));
   const card=k=>{const a=AGENTS[k];const lead=LEADS.includes(k);
-    return `<button class="agent${lead?" lead":""}" data-agent="${k}"><span class="ico">${a.i}</span><div><b>${a.n}</b>${a.soon?`<span class="soon">Coming soon</span>`:""}<span>${esc(a.job.split(".")[0])}</span></div></button>`};
+    return `<button class="agent${lead?" lead":""}" data-agent="${k}"><span class="ico">${av(k,44)}</span><div><b>${a.n}</b>${a.soon?`<span class="soon">Coming soon</span>`:""}<span>${esc(a.job.split(".")[0])}</span></div></button>`};
   $("#leadgrid").innerHTML=LEADS.map(card).join("");
   $("#staffgrid").innerHTML=order.filter(k=>!LEADS.includes(k)).map(card).join("");
 }
 function openAgent(k){
   const a=AGENTS[k]; const goals=GOALS.filter(g=>g.agents.includes(k));
-  $("#sheetBody").innerHTML=`<div style="display:flex;gap:12px;align-items:center;margin:4px 40px 6px 0"><div class="goal-ico">${a.i}</div><h3 id="sheetTitle" style="font-size:24px">${a.n}</h3></div>
+  $("#sheetBody").innerHTML=`<div style="display:flex;gap:12px;align-items:center;margin:4px 40px 6px 0"><div class="goal-ico">${av(k,56)}</div><h3 id="sheetTitle" style="font-size:24px">${a.n}</h3></div>
    <p>${esc(a.job)}</p>
    <div class="kv"><div><small>Routines</small>${a.routines.map(esc).join(" · ")}</div>
    <div><small>Never</small>${esc(a.never)}</div>

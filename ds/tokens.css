@@ -1,4 +1,4 @@
-/* @should/design-system 0.3.0: generated from src/ by scripts/build.mjs; edit src/, not this file */
+/* @should/design-system 0.4.0: generated from src/ by scripts/build.mjs; edit src/, not this file */
 /* Design system: Material Design 3, adapted.
    Token names follow M3's web tokens (--md-sys-*), so Material Web components,
    Tailwind and plain CSS read the same values. Colors are generated per brand
@@ -29,6 +29,12 @@
   --md-sys-typescale-label-large-size: 0.875rem;      --md-sys-typescale-label-large-line-height: 1.43;     --md-sys-typescale-label-large-weight: 500;     --md-sys-typescale-label-large-tracking: 0.007em;
   --md-sys-typescale-label-medium-size: 0.75rem;      --md-sys-typescale-label-medium-line-height: 1.33;    --md-sys-typescale-label-medium-weight: 500;    --md-sys-typescale-label-medium-tracking: 0.04em;
   --md-sys-typescale-label-small-size: 0.6875rem;     --md-sys-typescale-label-small-line-height: 1.45;     --md-sys-typescale-label-small-weight: 500;     --md-sys-typescale-label-small-tracking: 0.045em;
+
+  /* Avatar palette (people avatars, src/avatars.js): six skin tones, five hair colors.
+     Fixed in both themes, like real people; none in the purple band. */
+  --ds-skin-1: #f6d7c3; --ds-skin-2: #e6b897; --ds-skin-3: #c98f6a;
+  --ds-skin-4: #a46c4a; --ds-skin-5: #7a4a30; --ds-skin-6: #4f2f1f;
+  --ds-hair-1: #241c17; --ds-hair-2: #4a3226; --ds-hair-3: #7a4b2a; --ds-hair-4: #c99a5b; --ds-hair-5: #9c9a95;
 
   /* Space: M3's 4dp grid */
   --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;

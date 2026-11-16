@@ -6,7 +6,12 @@
   function icon(n, size) {
     size = size || 20;
     return '<svg class="icon" width="' + size + '" height="' + size + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (I[n] || I.assistant) + '</svg>';
+  }  // A role drawn as a person (the design system's avatars, like the portal's Person.svelte); anything else keeps its icon
+  function face(n, size, label) {
+    var A = window.DSAvatars;
+    return A && A.AVATARS[n] ? '<span class="person" style="width:' + size + 'px;height:' + size + 'px">' + A.avatarSVG(n, { size: size, label: label, badge: size >= 28 }) + '</span>' : icon(n, size);
   }
+
   var GROUPS = [
     { key: 'today', name: 'Today', icon: 'today', tile: 'today', tabs: [['', 'today', 'today', 'var(--r-today)'], ['assistant', 'assistant', 'assistant', 'var(--r-assistant)'], ['coach', 'coach', 'coach', 'var(--r-coach)'], ['business_coach', 'business coach', 'business_coach', 'var(--r-business)']] },
     { key: 'money', name: 'Money', icon: 'bookkeeper', tile: 'money', tabs: [['money', 'overview', 'today', 'var(--pen)'], ['forecast', 'cash forecast', 'financial', 'var(--r-bookkeeper)'], ['bookkeeper', 'accountant', 'bookkeeper', 'var(--r-bookkeeper)'], ['financial', 'financial', 'financial', 'var(--r-financial)'], ['shopping', 'shopping', 'shopping', 'var(--r-shopping)'], ['phone', 'phone', 'it', 'var(--r-it)'], ['forex', 'forex (paper)', 'wealth', 'var(--r-financial)']] },
@@ -76,7 +81,7 @@
       '</div><p class="head">Companies</p><div class="grid">' +
       COMPANIES.map(function (c) { return '<a href="#/c/' + c.slug + '"><span class="app" style="background: ' + c.color + '">' + icon(c.slug === 'lantern' ? 'legal' : 'business', 24) + '</span><span class="lbl">' + esc(c.name) + '</span></a>'; }).join('') +
       '</div><p class="head">Systems and tools</p><div class="grid small">' +
-      [['it', 'it'], ['webmaster', 'webmaster'], ['search', 'search'], ['people', 'phone book']].map(function (t) { return '<a href="#/assistant"><span class="app" style="background: var(--tile-systems)">' + icon(t[0], 20) + '</span><span class="lbl">' + t[1] + '</span></a>'; }).join('') + '</div></div>';
+      [['it', 'it'], ['webmaster', 'webmaster'], ['search', 'search'], ['people', 'phone book']].map(function (t) { return '<a href="#/assistant">' + (window.DSAvatars && DSAvatars.AVATARS[t[0]] ? face(t[0], 42) : '<span class="app" style="background: var(--tile-systems)">' + icon(t[0], 20) + '</span>') + '<span class="lbl">' + t[1] + '</span></a>'; }).join('') + '</div></div>';
     var me = '<div class="panel list" role="menu" aria-label="' + D.me.name + '"><p class="who"><b>' + D.me.name + '</b><span class="small muted">' + D.me.email + '</span></p><a role="menuitem" href="#/coach">Coach and values</a><a role="menuitem" href="../">The Should page ↗</a></div>';
     bar.innerHTML =
       '<a href="#/" class="brand" aria-label="Should, Today"><svg viewBox="0 0 64 64" width="26" height="26" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#1f6f54"/><path d="M17 34.5 L27.5 44.5 L45 23" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="16.5" r="5" fill="#e88a60"/></svg><span class="word">Should</span></a>' +
@@ -94,7 +99,7 @@
     else tabs = g.tabs.map(function (t) { return [hrefOf(t[0]), t[1], t[2], t[3], r.key === t[0], t[0] === 'bookkeeper']; });
     $('#seg').innerHTML = '<div class="segin">' + tabs.map(function (t) {
       var cls = (t[4] ? 'on ' : '') + (t[5] ? 'act' : '');
-      return '<a href="' + t[0] + '" style="--c:' + t[3] + '"' + (cls.trim() ? ' class="' + cls.trim() + '"' : '') + (t[4] ? ' aria-current="page"' : '') + '>' + icon(t[2], 14) + '<span>' + t[1] + '</span></a>';
+      return '<a href="' + t[0] + '" style="--c:' + t[3] + '"' + (cls.trim() ? ' class="' + cls.trim() + '"' : '') + (t[4] ? ' aria-current="page"' : '') + '>' + face(t[2], 20) + '<span>' + t[1] + '</span></a>';
     }).join('') + '</div>';
   }
   function spark(pts) {
@@ -299,7 +304,7 @@
   function deskView(key) {
     var d = DESKS[key];
     if (!d) return VIEWS['']();
-    return '<header class="dhead" style="--c: var(--r-' + key + ')"><span class="badge">' + icon(key, 26) + '</span><div><h1 class="page-h1">' + d[0] + '</h1><p class="eyebrow">' + d[1] + '</p></div></header>' +
+    return '<header class="dhead" style="--c: var(--r-' + key + ')"><span class="badge">' + face(key, 56, d[0]) + '</span><div><h1 class="page-h1">' + d[0] + '</h1><p class="eyebrow">' + d[1] + '</p></div></header>' +
       card('Latest report', '<p>' + d[2] + '</p>', '<span class="muted small">today</span>') +
       (d[3].length ? card('Routines it runs', rows(d[3], function (r) { return '<span>' + r + '</span>'; })) : '') +
       card('What it never does', '<p>Buys, sends, books or deletes anything without your yes for that exact thing.</p>');

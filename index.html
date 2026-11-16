@@ -43,16 +43,16 @@ button{font:inherit;color:inherit;cursor:pointer}
 /* brand */
 .brand{display:flex;align-items:center;gap:10px;margin-bottom:14px}
 .brand svg{width:40px;height:40px;flex:0 0 40px}
-.brand span{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:30px;letter-spacing:-.02em;line-height:1}
+.brand span{font-family:var(--md-ref-typeface-brand);font-weight:700;font-size:30px;letter-spacing:-.02em;line-height:1}
 .brand i{font-style:normal;color:var(--warm)}
 /* hero */
 .hero{padding:52px 0 36px}
-.hero .kicker{font-family:Fraunces,serif;font-size:20px;color:var(--accent);margin-bottom:6px}
+.hero .kicker{font-family:var(--md-ref-typeface-brand);font-size:20px;color:var(--accent);margin-bottom:6px}
 .hero h1{font-size:clamp(40px,11vw,68px);letter-spacing:-.02em}
 .hero .sub{font-size:19px;margin:14px 0 18px;color:var(--muted)}
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:20px}
 .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 8px;text-align:center}
-.stat b{display:block;font-family:Fraunces,serif;font-size:28px;color:var(--accent)}
+.stat b{display:block;font-family:var(--md-ref-typeface-brand);font-size:28px;color:var(--accent)}
 .stat span{font-size:13px;color:var(--muted)}
 .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
 .btn{border:0;border-radius:999px;padding:12px 18px;font-weight:600;text-decoration:none;display:inline-block}
@@ -75,14 +75,14 @@ button{font:inherit;color:inherit;cursor:pointer}
 
 /* simulators */
 .sim{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-top:6px}
-.sim h4{font-family:Fraunces,serif;font-size:19px;margin:0 0 2px}
+.sim h4{font-family:var(--md-ref-typeface-brand);font-size:19px;margin:0 0 2px}
 .sim .note{font-size:12px;color:var(--muted);margin-top:8px}
 .ctl{display:grid;grid-template-columns:1fr auto;gap:2px 10px;align-items:center;margin-top:12px;font-size:14px}
 .ctl output{font-weight:600}
 .ctl input{grid-column:1/-1;width:100%;accent-color:var(--accent)}
 .big{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0 6px}
 .big div{border-radius:12px;padding:10px;background:var(--bg)}
-.big b{display:block;font-family:Fraunces,serif;font-size:22px}
+.big b{display:block;font-family:var(--md-ref-typeface-brand);font-size:22px}
 .big span{font-size:12px;color:var(--muted)}
 .big .good b{color:var(--accent)}
 svg.chart{width:100%;height:auto;display:block;margin-top:8px}
@@ -124,7 +124,15 @@ svg.chart{width:100%;height:auto;display:block;margin-top:8px}
 /* scene: job lead */
 .lead-card{border:1px solid var(--line);border-radius:16px;padding:14px;background:var(--bg)}
 .lc-top{display:flex;gap:12px;justify-content:space-between;align-items:center}
-.lc-top b{display:block;font-family:Fraunces,serif;font-size:18px}
+.ladder{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;display:grid;gap:8px}
+.ld-h b{display:block;font-family:var(--md-ref-typeface-brand);font-size:18px}
+.ld-h span{font-size:12px;color:var(--muted)}
+.rung{display:grid;gap:1px;padding:8px 12px;border-left:3px solid var(--line);border-radius:4px}
+.rung small{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.rung b{font-size:15px}
+.rung span{font-size:13px;color:var(--muted)}
+.rung.now{border-left-color:var(--accent);background:var(--accent-soft)}
+.lc-top b{display:block;font-family:var(--md-ref-typeface-brand);font-size:18px}
 .lc-top span{font-size:13px;color:var(--muted)}
 .ring{flex:0 0 64px;height:64px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center}
 .ring span{width:50px;height:50px;border-radius:50%;background:var(--bg);display:grid;place-items:center;font-weight:600;color:var(--ink);font-size:14px}
@@ -172,7 +180,7 @@ svg.chart{width:100%;height:auto;display:block;margin-top:8px}
 .kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
 .kpis div{background:var(--bg);border-radius:14px;padding:10px;min-width:0}
 .kpis small{display:block;font-size:11px;color:var(--muted)}
-.kpis b{display:block;font-family:Fraunces,serif;font-size:22px}
+.kpis b{display:block;font-family:var(--md-ref-typeface-brand);font-size:22px}
 .kpis span{font-size:11px;color:var(--muted)}
 .kpis .up{color:var(--accent)}
 .kpis .warn b{color:var(--bad)}
@@ -199,15 +207,15 @@ svg.chart{width:100%;height:auto;display:block;margin-top:8px}
 .meals b{display:block;font-size:11px;font-weight:500;line-height:1.25}
 @media(max-width:560px){.meals{grid-template-columns:repeat(4,minmax(0,1fr))}}
 .cart{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;margin-top:10px;font-size:13px;color:var(--muted)}
-.cart b{font-family:Fraunces,serif;font-size:20px;color:var(--ink)}
-.why{font-family:Fraunces,serif;font-size:18px;background:var(--bg);border-radius:14px;padding:12px 14px}
+.cart b{font-family:var(--md-ref-typeface-brand);font-size:20px;color:var(--ink)}
+.why{font-family:var(--md-ref-typeface-brand);font-size:18px;background:var(--bg);border-radius:14px;padding:12px 14px}
 .why small{display:block;font-family:Inter,sans-serif;font-size:11px;color:var(--muted);margin-bottom:4px}
 .dots{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:12px 0;max-width:280px}
 .dots i{aspect-ratio:1;border-radius:50%;background:var(--line)}
 .dots i.on{background:var(--accent)}
 .dots i.today{background:var(--warm);box-shadow:0 0 0 3px var(--warm-soft)}
 .st-n{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
-.st-n b{display:block;font-family:Fraunces,serif;font-size:22px;color:var(--accent)}
+.st-n b{display:block;font-family:var(--md-ref-typeface-brand);font-size:22px;color:var(--accent)}
 .st-n span{font-size:12px;color:var(--muted)}
 .bd{display:grid;gap:8px}
 .bd-row{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:10px;align-items:center;background:var(--bg);border-radius:14px;padding:10px 12px}
@@ -220,7 +228,7 @@ svg.chart{width:100%;height:auto;display:block;margin-top:8px}
 .repair .msg.me{margin:0 0 0 auto}
 .verdict{background:var(--accent-soft);border-radius:14px;padding:12px 14px}
 .verdict small,.draft small{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--accent)}
-.verdict b{font-family:Fraunces,serif;font-size:20px}
+.verdict b{font-family:var(--md-ref-typeface-brand);font-size:20px}
 .verdict p{margin:4px 0 0;font-size:14px}
 .draft{border:1px dashed var(--line);border-radius:14px;padding:10px 14px;font-size:14px}
 .draft small{color:var(--muted)}
@@ -234,7 +242,7 @@ svg.chart{width:100%;height:auto;display:block;margin-top:8px}
 /* scene: price watch + outfit */
 .price{border:1px solid var(--line);border-radius:16px;padding:14px;background:var(--bg)}
 .pr-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
-.pr-top b{display:block;font-family:Fraunces,serif;font-size:18px}
+.pr-top b{display:block;font-family:var(--md-ref-typeface-brand);font-size:18px}
 .pr-top span{font-size:13px;color:var(--muted)}
 .pr-now{text-align:right;flex:0 0 auto}
 .pr-now b{color:var(--accent);font-size:24px}
@@ -275,7 +283,7 @@ svg.chart{width:100%;height:auto;display:block;margin-top:8px}
 .split em{font-style:normal;font-size:12px;color:var(--accent)}
 .vcard{background:var(--bg);border-radius:16px;padding:14px;display:grid;grid-template-columns:56px minmax(0,1fr);gap:4px 12px;align-items:center}
 .av.big{width:56px;height:56px;font-size:18px;background:var(--accent-soft);color:var(--accent)}
-.vcard b{display:block;font-family:Fraunces,serif;font-size:19px}
+.vcard b{display:block;font-family:var(--md-ref-typeface-brand);font-size:19px}
 .vcard small{color:var(--muted)}
 .vcard ul{grid-column:1/-1;list-style:none;padding:0;margin:8px 0 0;display:grid;gap:6px;font-size:14px}
 .vcard ul i{font-style:normal;margin-right:8px}
@@ -285,7 +293,7 @@ svg.chart{width:100%;height:auto;display:block;margin-top:8px}
 .agent{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 10px;text-align:left;display:flex;flex-direction:column;gap:6px;min-height:104px;min-width:0;overflow-wrap:anywhere}
 .agent div,.agent b,.agent span{min-width:0}
 .agent .ico{width:36px;height:36px;border-radius:10px;background:var(--accent-soft);display:grid;place-items:center;font-size:18px}
-.agent b{font-family:Fraunces,serif;font-size:15px;line-height:1.2}
+.agent b{font-family:var(--md-ref-typeface-brand);font-size:15px;line-height:1.2}
 .agent span{font-size:12px;color:var(--muted);line-height:1.3}
 .staff.leads{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 .agent.lead{flex-direction:row;align-items:center;border-color:var(--accent);min-height:0}
@@ -542,7 +550,7 @@ const AGENTS = {
 };
 
 const GOALS = [
- {id:"career",tab:"Career",title:"A better job, on autopilot",tag:"The right roles found for you, a resume written for each one, and a counter you'd never have sent on your own.",agents:["career","pi","pr"],
+ {id:"career",tab:"Career",title:"A better job, on autopilot",tag:"The right roles found for you, a resume written for each one, and a counter you'd never have sent on your own.",agents:["career","coach","pi","pr"],
   sc:[
    {ico:"🎯",t:"The search, done for you",s:"Only jobs that clear your bar",scene:"lead",
     flow:["6:15 AM, new postings land","Career Assistant scores them; Investigator vets the company","You see the best two or three"],
@@ -555,7 +563,11 @@ const GOALS = [
    {ico:"🤝",t:"Negotiate the offer",s:"One email, worth thousands a year",scene:"offer",sim:"negotiate",
     flow:["An offer arrives by email","Career Assistant prices the whole package against the market","You approve a specific counter"],
     ask:{q:"Offer: $160,000. Your floor is $165,000 and the market is $170–185k. Counter at $178,000?",o:["Yes, send the counter","Counter at $170,000","Let me think, ask tonight"],p:0,r:"Counter sent from your email. You'll see their answer first."},
-    result:"Most people never counter. Here it takes one tap."}
+    result:"Most people never counter. Here it takes one tap."},
+   {ico:"🪜",t:"Plan the next five years",s:"From the role you want down to this week",scene:"ladder",
+    flow:["Once a quarter, Life Coach runs your career review","Career Assistant brings market data, skill gaps and a resume and LinkedIn kept in sync","You pick the quarter's focus and this week's one step"],
+    ask:{q:"Q1 focus: lead one cross-team architecture decision to build Director-level evidence. Add it as this week's commitment?",o:["Yes, make it this week's commitment","Pick a different focus","Ask me at Saturday's review"],p:0,r:"Added: draft the shared build pipeline proposal, Thursday, 90 minutes. Life Coach checks in Saturday."},
+    result:"The big goal stays in view, and every week has one step that moves you toward it."}
   ]},
  {id:"money",tab:"Money",title:"Money that grows, bills that never slip",tag:"An AI trading bot on the strategy you pick, a retirement that funds itself, and nothing late or fraudulent slipping by.",agents:["wealth","book","pi"],
   sc:[
@@ -658,6 +670,11 @@ const SCENES={
  offer:()=>{const X=v=>((v-140)/60*100).toFixed(1)+"%";return `<div class="range"><div class="rg-track"><div class="rg-band" style="left:${X(170)};width:${(15/60*100).toFixed(1)}%"></div>
   <i class="mk off" style="left:${X(160)}"><b>Offer</b>$160k</i><i class="mk floor" style="left:${X(165)}"><b>Floor</b>$165k</i><i class="mk ctr" style="left:${X(178)}"><b>Counter</b>$178k</i></div>
   <div class="rg-axis"><span>$140k</span><span class="mkt">▬ Market for this role: $170–185k</span><span>$200k</span></div></div>`},
+ ladder:()=>`<div class="ladder"><div class="ld-h"><b>Sam's career plan</b><span>Reviewed each quarter with Life Coach</span></div>
+  <div class="rung"><small>2029 target</small><b>Director of Platform Engineering</b><span>Runs 3 teams, owns the platform budget</span></div>
+  <div class="rung"><small>This year</small><b>Lead a team of 6 · cloud architecture cert · $200k</b><span>Title, skill and pay goals, checked monthly</span></div>
+  <div class="rung now"><small>This quarter</small><b>Lead one cross-team architecture decision</b><span>8 of 10 Director postings ask for it; you have 0 so far</span></div>
+  <div class="rung"><small>This week</small><b>Draft the shared build pipeline proposal</b><span>Thursday, 90 minutes</span></div></div>`,
  stmt:()=>`<div class="stmt"><div class="st-h"><b>Checking ···4417</b><span>This morning</span></div>
   <div class="row"><span>Nov 4</span><span>Blue Door Coffee</span><b>$6.75</b></div>
   <div class="row flag"><span>Nov 4</span><span>Blue Door Coffee<em>Same amount, 1 minute later</em></span><b>$6.75</b></div>

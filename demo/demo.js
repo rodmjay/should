@@ -9,7 +9,7 @@
   }
   var GROUPS = [
     { key: 'today', name: 'Today', icon: 'today', tile: 'today', tabs: [['', 'today', 'today', 'var(--r-today)'], ['assistant', 'assistant', 'assistant', 'var(--r-assistant)'], ['coach', 'coach', 'coach', 'var(--r-coach)']] },
-    { key: 'money', name: 'Money', icon: 'bookkeeper', tile: 'money', tabs: [['money', 'overview', 'today', 'var(--pen)'], ['bookkeeper', 'accountant', 'bookkeeper', 'var(--r-bookkeeper)'], ['financial', 'financial', 'financial', 'var(--r-financial)'], ['shopping', 'shopping', 'shopping', 'var(--r-shopping)']] },
+    { key: 'money', name: 'Money', icon: 'bookkeeper', tile: 'money', tabs: [['money', 'overview', 'today', 'var(--pen)'], ['bookkeeper', 'accountant', 'bookkeeper', 'var(--r-bookkeeper)'], ['financial', 'financial', 'financial', 'var(--r-financial)'], ['shopping', 'shopping', 'shopping', 'var(--r-shopping)'], ['phone', 'phone', 'it', 'var(--r-it)']] },
     { key: 'home-health', name: 'Home & Health', icon: 'home-manager', tile: 'home', tabs: [['home', 'overview', 'today', 'var(--pen)'], ['chores', 'chores', 'home-manager', 'var(--r-home-manager)'], ['health', 'health', 'health', 'var(--r-health)']] },
     { key: 'plans', name: 'Plans', icon: 'scheduler', tile: 'plans', tabs: [['local-guide', 'local guide', 'local-guide', 'var(--r-local-guide)'], ['scheduler', 'scheduler', 'scheduler', 'var(--r-scheduler)'], ['travel', 'travel', 'travel', 'var(--r-travel)'], ['media', 'movies', 'media', 'var(--r-media)']] },
     { key: 'people', name: 'People', icon: 'people', tile: 'people', tabs: [['people', 'overview', 'today', 'var(--pen)'], ['relationship-manager', 'relationships', 'relationship-manager', 'var(--r-relationship-manager)'], ['gifts', 'gifts', 'gifts', 'var(--r-gifts)']] },
@@ -18,7 +18,7 @@
   var CO_TABS = [['', 'overview', 'business'], ['cap', 'cap table', 'financial'], ['compliance', 'compliance', 'legal'], ['money', 'accounts & money', 'bookkeeper'], ['tasks', 'tasks', 'check']];
   var H = D.holding;
   var COMPANIES = [{ slug: 'northstar', name: H.name, color: '#5ac8fa', depth: 0 }].concat(H.subs.map(function (s) { return { slug: s.slug, name: s.name, color: s.color, depth: 1, stage: s.stage }; }));
-  var AREA = { health: 'health', shopping: 'shopping', chores: 'home', home: 'home' };
+  var AREA = { phone: 'money', health: 'health', shopping: 'shopping', chores: 'home', home: 'home' };
   var DESKS = {
     assistant: ['Executive Assistant', 'Chief of staff: the morning text, your list, and one batched ask a day', 'Sent the 8 AM text. 3 things today, 2 decisions waiting. Moved the oil change to Monday so Saturday stays light.', ['Morning text, 8 AM', 'List hygiene, 5:45 AM']],
     coach: ['Personal Coach', 'Your weekly scorecard and the Saturday sit-down', 'Sit-down at 9:30: money and health are green, sleep is yellow. Three questions from the team, and up to 3 commitments for next week.', ['Weekly review, Saturdays 9 AM']],
@@ -32,6 +32,7 @@
     'relationship-manager': ['Relationship Manager', 'Contacts, households and staying in touch', '2 friends are overdue for a hello; drafts are ready for your OK. Nothing goes out without it.', []],
     gifts: ['Gift Concierge', 'Birthdays, cards and gifts', 'Priya’s birthday is Tuesday: a card is drafted and a cookbook ($24) is in the cart.', ['Gift check, Mondays']],
     career: ['Career Assistant', 'Job leads, recruiter replies and the resume', '4 new leads, 2 strong fits. Two recruiter replies drafted; they go out only on your yes.', ['Job leads, 6:15 AM']],
+    it: ['IT Guy', 'Internet, phones, the computer and account security', 'All services healthy. Phone bill is on AutoPay; one upgrade window opens Dec 24.', ['Health check, every 15 min']],
     legal: ['Legal Advisor', 'Agreements, deadlines and questions for a lawyer', 'Lease renewal is in your email: the rent stays the same, 12 months. Sign by 12/1.', []]
   };
   var menu = null;
@@ -55,7 +56,7 @@
   }
   function launcherApps() {
     return GROUPS.map(function (g) { return { name: g.name, icon: g.icon, href: hrefOf(g.tabs[0][0]), bg: 'var(--tile-' + g.tile + ')', act: g.key === 'money' }; })
-      .concat([{ name: 'Health', icon: 'health', href: '#/health', bg: 'var(--tile-health)' }, { name: 'Coach', icon: 'coach', href: '#/coach', bg: 'var(--tile-plans)' }, { name: 'Agency desk', icon: 'as-architect', href: '#/agency', bg: 'var(--tile-business)' }]);
+      .concat([{ name: 'Phone', icon: 'it', href: '#/phone', bg: 'var(--tile-money)' }, { name: 'Health', icon: 'health', href: '#/health', bg: 'var(--tile-health)' }, { name: 'Coach', icon: 'coach', href: '#/coach', bg: 'var(--tile-plans)' }, { name: 'Agency desk', icon: 'as-architect', href: '#/agency', bg: 'var(--tile-business)' }]);
   }
   function renderBar(g, co) {
     var bar = $('#bar');
@@ -133,6 +134,21 @@
         '<div class="seg-btns subtabs">' + M.tabs.map(function (t, i) { return '<button' + (i ? '' : ' class="on"') + '>' + t + '</button>'; }).join('') + '</div>' +
         card('Current spend', '<p class="big"><b class="num">' + S.total + '</b> in November <span class="good">' + S.note + '</span></p>' + spendChart(S.now, S.last), '<a href="#/bookkeeper">by category</a>') +
         card('Bills, next 14 days', rows(M.bills, function (b) { return '<b>' + b[0] + '</b><span class="num">' + b[1] + '</span><span class="muted">' + b[2] + '</span>' + pill(b[3], b[3] === 'autopay' ? 'ok' : 'watch'); }));
+    },
+    phone: function () {
+      var X = D.phone, PEND = '<i class="pend">pending sign-in</i>';
+      var dl = function (pairs) { return '<dl class="kv">' + pairs.map(function (p) { return '<div><dt>' + p[0] + '</dt><dd>' + p[1] + '</dd></div>'; }).join('') + '</dl>'; };
+      return hero('<a href="#/money">Money</a> · <a href="#/it">IT Guy</a> keeps it current', 'Phone', 'Lines, equipment charges and the phone data Should syncs. Read only.') + tiles(X.tiles) +
+        '<div class="lines">' + X.lines.map(function (l) {
+          return '<article class="block line"><h2 class="label"><span>…' + l.last4 + ' · ' + l.label + '</span>' + pill(l.status, l.status === 'active' ? 'ok' : 'watch') + '</h2>' +
+            dl([['Used by', l.user], ['Phone', l.device], ['Monthly share', l.share || PEND], ['Device protection', l.protection]]) +
+            (l.promo ? '<p class="small promo">' + l.promo + '</p>' : '') + (l.change ? '<p class="small change"><b>' + l.change[0] + '</b> ' + l.change[1] + '</p>' : '') + '</article>';
+        }).join('') + '</div>' +
+        card('Equipment charges', '<div class="scroll"><table class="data"><thead><tr><th>Device</th><th>Line</th><th>Monthly</th><th>Balance left</th><th>Payments left</th><th>Final month</th><th>Credits</th></tr></thead><tbody>' +
+          X.installments.map(function (i) { return '<tr><td><b>' + i[0] + '</b><br><span class="small muted">' + i[1] + '</span></td><td>…' + i[2] + '</td><td class="num">' + i[3] + '</td><td class="num">' + i[4] + '</td><td class="num">' + i[5] + '</td><td>' + i[6] + '</td><td class="small">' + i[7] + '</td></tr>'; }).join('') +
+          '</tbody><tfoot><tr><td colspan="2"><b>Total</b></td><td class="num"><b>$52.08</b></td><td class="num"><b>$611.40</b></td><td colspan="3"></td></tr></tfoot></table></div>', '<span class="small muted">2 of 2 balances known</span>') +
+        '<div class="cols2">' + card('Timeline', rows(X.timeline, function (t) { return '<b class="num">' + t[0] + '</b><span>' + t[1] + '</span>'; })) +
+        card('Phone data', dl(X.data) + '<p class="small muted">Counts only. Message text stays on each person’s timeline.</p>') + '</div>';
     },
     health: function () {
       var X = D.health;

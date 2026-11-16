@@ -96,6 +96,28 @@ window.DEMO = {
     pipeline: [['Lumen Labs', 'interview Tue 11/24'], ['Harbor Health', 'screen done, waiting'], ['Northgate', 'applied 11/18']]
   },
 
+  phone: {
+    tiles: [
+      { label: 'Carrier this month', value: '$186.40', sub: '4 lines' },
+      { label: 'Next payment', value: 'Dec 3', sub: 'bill cycle closes the 24th' },
+      { label: 'AutoPay', value: 'On', sub: 'charges itself, $20 discount', tone: 'good' },
+      { label: 'Past due', value: '$0.00', sub: 'nothing past due', tone: 'good' },
+      { label: 'Equipment', value: '$52.08', sub: '$611.40 owed' }
+    ],
+    lines: [
+      { last4: '4417', label: 'Main', user: 'Sam', device: 'Pixel 9', share: '$46.60', protection: 'On', status: 'active' },
+      { last4: '2290', label: 'Family', user: 'Jamie', device: 'iPhone 15', share: '$46.60', protection: 'On', status: 'active', promo: '$10/mo trade-in credit through Aug 2027' },
+      { last4: '8053', label: 'Family', user: 'Riley', device: 'Galaxy A35', share: '$46.60', protection: 'On', status: 'active' },
+      { last4: '6631', label: 'Family', user: 'Taylor', device: 'iPhone 13', share: null, protection: 'Off', status: 'active', change: ['Dec 24', 'upgrade eligible; trade-in quote $180'] }
+    ],
+    installments: [
+      ['iPhone 15', 'Jamie', '2290', '$33.34', '$433.42', '13', 'Dec 2027', '$10/mo trade-in'],
+      ['Galaxy A35', 'Riley', '8053', '$18.74', '$177.98', '9', 'Aug 2027', '']
+    ],
+    timeline: [['Oct 24', 'Switched to the family plan, 4 lines'], ['Nov 3', 'First bill on AutoPay'], ['Nov 18', 'Riley asked about an upgrade'], ['Dec 24', 'Taylor’s upgrade window opens']],
+    data: [['Phone, last 30 days', '64 calls · 812 texts'], ['Assistant number, 30 days', '22 calls · 140 texts'], ['Texts the assistant sent, 30 days', '57']]
+  },
+
   holding: {
     name: 'Northstar Holdings', legal: 'Northstar Holdings LLC', state: 'Colorado', formed: 'Mar 3, 2025',
     stages: ['idea', 'planned', 'building', 'live'],

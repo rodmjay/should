@@ -13,7 +13,7 @@
     { key: 'home-health', name: 'Home & Health', icon: 'home-manager', tile: 'home', tabs: [['home', 'overview', 'today', 'var(--pen)'], ['chores', 'chores', 'home-manager', 'var(--r-home-manager)'], ['health', 'health', 'health', 'var(--r-health)']] },
     { key: 'plans', name: 'Plans', icon: 'scheduler', tile: 'plans', tabs: [['local-guide', 'local guide', 'local-guide', 'var(--r-local-guide)'], ['scheduler', 'scheduler', 'scheduler', 'var(--r-scheduler)'], ['travel', 'travel', 'travel', 'var(--r-travel)'], ['media', 'movies', 'media', 'var(--r-media)']] },
     { key: 'people', name: 'People', icon: 'people', tile: 'people', tabs: [['people', 'overview', 'today', 'var(--pen)'], ['relationship-manager', 'relationships', 'relationship-manager', 'var(--r-relationship-manager)'], ['gifts', 'gifts', 'gifts', 'var(--r-gifts)']] },
-    { key: 'work', name: 'Work', icon: 'career', tile: 'work', tabs: [['work', 'overview', 'today', 'var(--pen)'], ['career', 'career', 'career', 'var(--r-career)'], ['legal', 'legal', 'legal', 'var(--r-legal)']] }
+    { key: 'work', name: 'Work', icon: 'career', tile: 'work', tabs: [['work', 'overview', 'today', 'var(--pen)'], ['career', 'career', 'career', 'var(--r-career)'], ['legal', 'legal', 'legal', 'var(--r-legal)'], ['business-coach', 'business coach', 'coach', 'var(--r-business)']] }
   ];
   var CO_TABS = [['', 'overview', 'business'], ['cap', 'cap table', 'financial'], ['compliance', 'compliance', 'legal'], ['money', 'accounts & money', 'bookkeeper'], ['tasks', 'tasks', 'check']];
   var H = D.holding;
@@ -22,6 +22,7 @@
   var DESKS = {
     assistant: ['Executive Assistant', 'Chief of staff: the morning text, your list, and one batched ask a day', 'Sent the 8 AM text. 3 things today, 2 decisions waiting. Moved the oil change to Monday so Saturday stays light.', ['Morning text, 8 AM', 'List hygiene, 5:45 AM']],
     coach: ['Life Coach', 'Your long-term guide: yearly goals, quarterly outcomes, a monthly focus and the week', 'Sit-down at 9:30: money and health are green, sleep is yellow. Three questions from the team, and up to 3 commitments for next week.', ['Weekly review, Saturdays 9 AM']],
+    'business-coach': ['Business Coach', 'Long-term coaching for your companies: vision down to the week', 'This quarter’s focus: Brightside Agency to 5 retainer clients (now 3). Two proposals are out. This week’s business commitment: one follow-up call.', ['Business check-in, weekly', 'Quarterly business review']],
     bookkeeper: ['Accountant', 'Balances, bills and transactions, every morning', D.money.report, ['Balance sync, 6:15 AM']],
     financial: ['Financial Advisor', 'Credit, savings and investing, paper trades only', 'Score up 5 to 731. Paying the store card to $0 next payday would lift it more than anything else this month.', ['Credit check, Saturdays']],
     shopping: ['Shopping Expert', 'Research, the wish list and price watch', 'The headphones on your wish list dropped to $129 (was $179). They’re in the cart; checkout is yours.', ['Price watch, daily']],

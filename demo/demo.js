@@ -21,7 +21,7 @@
   var AREA = { forex: 'money', forecast: 'money', phone: 'money', health: 'health', shopping: 'shopping', chores: 'home', home: 'home' };
   var DESKS = {
     assistant: ['Executive Assistant', 'Chief of staff: the morning text, your list, and one batched ask a day', 'Sent the 8 AM text. 3 things today, 2 decisions waiting. Moved the oil change to Monday so Saturday stays light.', ['Morning text, 8 AM', 'List hygiene, 5:45 AM']],
-    coach: ['Personal Coach', 'Your weekly scorecard and the Saturday sit-down', 'Sit-down at 9:30: money and health are green, sleep is yellow. Three questions from the team, and up to 3 commitments for next week.', ['Weekly review, Saturdays 9 AM']],
+    coach: ['Life Coach', 'Your weekly scorecard and the Saturday sit-down', 'Sit-down at 9:30: money and health are green, sleep is yellow. Three questions from the team, and up to 3 commitments for next week.', ['Weekly review, Saturdays 9 AM']],
     bookkeeper: ['Accountant', 'Balances, bills and transactions, every morning', D.money.report, ['Balance sync, 6:15 AM']],
     financial: ['Financial Advisor', 'Credit, savings and investing, paper trades only', 'Score up 5 to 731. Paying the store card to $0 next payday would lift it more than anything else this month.', ['Credit check, Saturdays']],
     shopping: ['Shopping Expert', 'Research, the wish list and price watch', 'The headphones on your wish list dropped to $129 (was $179). They’re in the cart; checkout is yours.', ['Price watch, daily']],

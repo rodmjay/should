@@ -9,7 +9,7 @@
   }
   var GROUPS = [
     { key: 'today', name: 'Today', icon: 'today', tile: 'today', tabs: [['', 'today', 'today', 'var(--r-today)'], ['assistant', 'assistant', 'assistant', 'var(--r-assistant)'], ['coach', 'coach', 'coach', 'var(--r-coach)']] },
-    { key: 'money', name: 'Money', icon: 'bookkeeper', tile: 'money', tabs: [['money', 'overview', 'today', 'var(--pen)'], ['bookkeeper', 'accountant', 'bookkeeper', 'var(--r-bookkeeper)'], ['financial', 'financial', 'financial', 'var(--r-financial)'], ['shopping', 'shopping', 'shopping', 'var(--r-shopping)'], ['phone', 'phone', 'it', 'var(--r-it)']] },
+    { key: 'money', name: 'Money', icon: 'bookkeeper', tile: 'money', tabs: [['money', 'overview', 'today', 'var(--pen)'], ['forecast', 'cash forecast', 'financial', 'var(--r-bookkeeper)'], ['bookkeeper', 'accountant', 'bookkeeper', 'var(--r-bookkeeper)'], ['financial', 'financial', 'financial', 'var(--r-financial)'], ['shopping', 'shopping', 'shopping', 'var(--r-shopping)'], ['phone', 'phone', 'it', 'var(--r-it)']] },
     { key: 'home-health', name: 'Home & Health', icon: 'home-manager', tile: 'home', tabs: [['home', 'overview', 'today', 'var(--pen)'], ['chores', 'chores', 'home-manager', 'var(--r-home-manager)'], ['health', 'health', 'health', 'var(--r-health)']] },
     { key: 'plans', name: 'Plans', icon: 'scheduler', tile: 'plans', tabs: [['local-guide', 'local guide', 'local-guide', 'var(--r-local-guide)'], ['scheduler', 'scheduler', 'scheduler', 'var(--r-scheduler)'], ['travel', 'travel', 'travel', 'var(--r-travel)'], ['media', 'movies', 'media', 'var(--r-media)']] },
     { key: 'people', name: 'People', icon: 'people', tile: 'people', tabs: [['people', 'overview', 'today', 'var(--pen)'], ['relationship-manager', 'relationships', 'relationship-manager', 'var(--r-relationship-manager)'], ['gifts', 'gifts', 'gifts', 'var(--r-gifts)']] },
@@ -18,7 +18,7 @@
   var CO_TABS = [['', 'overview', 'business'], ['cap', 'cap table', 'financial'], ['compliance', 'compliance', 'legal'], ['money', 'accounts & money', 'bookkeeper'], ['tasks', 'tasks', 'check']];
   var H = D.holding;
   var COMPANIES = [{ slug: 'northstar', name: H.name, color: '#5ac8fa', depth: 0 }].concat(H.subs.map(function (s) { return { slug: s.slug, name: s.name, color: s.color, depth: 1, stage: s.stage }; }));
-  var AREA = { phone: 'money', health: 'health', shopping: 'shopping', chores: 'home', home: 'home' };
+  var AREA = { forecast: 'money', phone: 'money', health: 'health', shopping: 'shopping', chores: 'home', home: 'home' };
   var DESKS = {
     assistant: ['Executive Assistant', 'Chief of staff: the morning text, your list, and one batched ask a day', 'Sent the 8 AM text. 3 things today, 2 decisions waiting. Moved the oil change to Monday so Saturday stays light.', ['Morning text, 8 AM', 'List hygiene, 5:45 AM']],
     coach: ['Personal Coach', 'Your weekly scorecard and the Saturday sit-down', 'Sit-down at 9:30: money and health are green, sleep is yellow. Three questions from the team, and up to 3 commitments for next week.', ['Weekly review, Saturdays 9 AM']],
@@ -56,7 +56,7 @@
   }
   function launcherApps() {
     return GROUPS.map(function (g) { return { name: g.name, icon: g.icon, href: hrefOf(g.tabs[0][0]), bg: 'var(--tile-' + g.tile + ')', act: g.key === 'money' }; })
-      .concat([{ name: 'Phone', icon: 'it', href: '#/phone', bg: 'var(--tile-money)' }, { name: 'Health', icon: 'health', href: '#/health', bg: 'var(--tile-health)' }, { name: 'Coach', icon: 'coach', href: '#/coach', bg: 'var(--tile-plans)' }, { name: 'Agency desk', icon: 'as-architect', href: '#/agency', bg: 'var(--tile-business)' }]);
+      .concat([{ name: 'Cash Forecast', icon: 'financial', href: '#/forecast', bg: 'var(--tile-money)' }, { name: 'Phone', icon: 'it', href: '#/phone', bg: 'var(--tile-money)' }, { name: 'Health', icon: 'health', href: '#/health', bg: 'var(--tile-health)' }, { name: 'Coach', icon: 'coach', href: '#/coach', bg: 'var(--tile-plans)' }, { name: 'Agency desk', icon: 'as-architect', href: '#/agency', bg: 'var(--tile-business)' }]);
   }
   function renderBar(g, co) {
     var bar = $('#bar');
@@ -144,6 +144,8 @@
             dl([['Used by', l.user], ['Phone', l.device], ['Monthly share', l.share || PEND], ['Device protection', l.protection], ['Line total a month', l.total ? '<b>' + l.total + '</b>' : PEND]]) +
             (l.promo ? '<p class="small promo">' + l.promo + '</p>' : '') + (l.change ? '<p class="small change"><b>' + l.change[0] + '</b> ' + l.change[1] + '</p>' : '') + '</article>';
         }).join('') + '</div>' +
+        card('The plan', '<p class="plantext">' + X.plan.text + '</p><div class="scroll"><table class="data"><thead><tr><th>From the bill of</th><th>Equipment</th><th class="r">Bill</th></tr></thead><tbody>' +
+          X.plan.falloff.map(function (f) { return '<tr><td>' + f[0].replace('Bill of ', '') + '</td><td>' + f[1] + '</td><td class="num r"><b>' + f[2] + '</b></td></tr>'; }).join('') + '</tbody></table></div>', '<span class="small muted">' + X.plan.approved + '</span>') +
         card('Equipment charges', '<div class="scroll"><table class="data"><thead><tr><th>Device</th><th>Line</th><th>Monthly</th><th>Payoff today</th><th>Payments left</th><th>Final payment</th><th>Credits</th></tr></thead><tbody>' +
           X.installments.map(function (i) { return '<tr><td><b>' + i[0] + '</b><br><span class="small muted">' + i[1] + '</span></td><td>…' + i[2] + '</td><td class="num">' + i[3] + '</td><td class="num">' + i[4] + '</td><td class="num">' + i[5] + '</td><td>' + i[6] + '</td><td class="small">' + i[7] + '</td></tr>'; }).join('') +
           '</tbody><tfoot><tr><td colspan="2"><b>Total</b></td><td class="num"><b>$52.08</b></td><td class="num"><b>$611.40</b></td><td colspan="3"></td></tr></tfoot></table></div>', '<span class="small muted">2 of 2 balances known</span>') +
@@ -154,6 +156,7 @@
         '<div class="cols2">' + card('Timeline', rows(X.timeline, function (t) { return '<b class="num">' + t[0] + '</b><span>' + t[1] + '</span>'; })) +
         card('Phone data', dl(X.data) + '<p class="small muted">Counts only. Message text stays on each person’s timeline.</p>') + '</div>';
     },
+    forecast: function () { return forecastView(); },
     health: function () {
       var X = D.health;
       return hero('Training, meals and weigh-ins, from Health Agent.', 'health') + tiles(X.tiles) +
@@ -183,6 +186,90 @@
         card('Pipeline', rows(X.pipeline, function (p) { return '<b>' + p[0] + '</b><span class="muted">' + p[1] + '</span>'; })) + '</div>';
     }
   };
+  // Cash Forecast: a day-by-day balance worked out in the page from data.js.
+  var fcDays = 90, fcPick = null, fcWhatif = [];
+  var PRESETS = [['2 wks', 14], ['1 mo', 30], ['3 mo', 90], ['6 mo', 182], ['1 yr', 365], ['2 yrs', 730]];
+  function iso(d) { return d.toISOString().slice(0, 10); }
+  function addDays(s, n) { var d = new Date(s + 'T12:00:00Z'); d.setUTCDate(d.getUTCDate() + n); return iso(d); }
+  function shortDay(s) { return new Date(s + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' }); }
+  function money(n) { return (n < 0 ? '−$' : '$') + Math.abs(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+  function forecast(days) {
+    var F = D.forecast, bal = F.balance, out = [], periods = [], cur = null;
+    var extras = F.extras.concat(fcWhatif);
+    var payStart = (new Date(F.pay.first) - new Date(F.start)) / 864e5;
+    for (var i = 0; i < days; i++) {
+      var day = addDays(F.start, i), dom = +day.slice(8), items = [], income = 0;
+      var isPay = i >= payStart && (i - payStart) % F.pay.every === 0;
+      if (isPay || !cur) {
+        cur = { start: day, payday: isPay, opening: bal, income: 0, bills: 0, extra: 0, low: Infinity, lowOn: day, items: [] };
+        periods.push(cur);
+      }
+      if (isPay) { income = F.pay.amount; cur.income += income; }
+      F.bills.forEach(function (b) { if (b[0] === dom) { items.push([day, b[1], b[2], 'bill']); cur.bills += b[2]; } });
+      cur.bills += F.daily;
+      extras.forEach(function (e) { if (e[0] === day) { items.push([day, e[1], e[2], 'extra']); cur.extra += e[2]; } });
+      bal += income - F.daily - items.reduce(function (a, x) { return a + x[2]; }, 0);
+      cur.items = cur.items.concat(items);
+      if (bal < cur.low) { cur.low = bal; cur.lowOn = day; }
+      cur.end = day; cur.closing = bal;
+      out.push({ day: day, bal: bal, pay: isPay });
+    }
+    periods.forEach(function (p) { p.under = p.low < F.bar; });
+    return { pts: out, periods: periods };
+  }
+  function forecastView() {
+    var F = D.forecast, r = forecast(fcDays), pts = r.pts, P = r.periods;
+    var worst = P.reduce(function (a, p) { return !a || p.low < a.low ? p : a; }, null);
+    var W = 900, H = 280, L = 56, R = 14, T = 18, B = 30;
+    var vals = pts.map(function (p) { return p.bal; }).concat([F.bar, 0]);
+    var lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals) * 1.08;
+    var x = function (i) { return L + i * (W - L - R) / Math.max(1, pts.length - 1); };
+    var y = function (v) { return T + (hi - v) / (hi - lo || 1) * (H - T - B); };
+    var line = pts.map(function (p, i) { return (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(p.bal).toFixed(1); }).join(' ');
+    var area = line + ' L' + x(pts.length - 1).toFixed(1) + ' ' + y(lo) + ' L' + x(0) + ' ' + y(lo) + ' Z';
+    var red = pts.map(function (p, i) { return p.bal < F.bar && i ? '<line x1="' + x(i - 1) + '" y1="' + y(pts[i - 1].bal) + '" x2="' + x(i) + '" y2="' + y(p.bal) + '" class="red"/>' : ''; }).join('');
+    var step = Math.pow(10, Math.floor(Math.log10(hi - lo || 1))), ticks = [];
+    for (var t = Math.ceil(lo / step) * step; t <= hi; t += step) ticks.push(t);
+    if (ticks.length > 6) ticks = ticks.filter(function (_, k) { return k % 2 === 0; });
+    var idx = {}; pts.forEach(function (p, i) { idx[p.day] = i; });
+    var months = pts.map(function (p, i) { return [p, i]; }).filter(function (a) { return a[0].day.slice(8) === '01'; });
+    if (months.length > 12) months = months.filter(function (_, k) { return k % 3 === 0; });
+    var events = F.extras.concat(fcWhatif).filter(function (e) { return idx[e[0]] != null; });
+    var lows = P.filter(function (p) { return idx[p.lowOn] != null; });
+    var showAll = lows.length <= W / 70;
+    var svg = '<svg class="fc" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Checking balance by day; lowest ' + money(worst.low) + '">' +
+      ticks.map(function (t) { return '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + y(t) + '" y2="' + y(t) + '" class="grid"/><text x="' + (L - 8) + '" y="' + (y(t) + 4) + '" class="yt">' + (Math.abs(t) >= 1000 ? '$' + t / 1000 + 'k' : '$' + t) + '</text>'; }).join('') +
+      months.map(function (m) { return '<line x1="' + x(m[1]) + '" x2="' + x(m[1]) + '" y1="' + T + '" y2="' + (H - B) + '" class="grid"/><text x="' + x(m[1]) + '" y="' + (H - 10) + '" class="xt">' + shortDay(m[0].day).split(' ')[0] + (m[0].day.slice(5, 7) === '01' ? ' ’' + m[0].day.slice(2, 4) : '') + '</text>'; }).join('') +
+      pts.map(function (p, i) { return p.pay ? '<line x1="' + x(i) + '" x2="' + x(i) + '" y1="' + (H - B) + '" y2="' + (H - B - 7) + '" class="pay"/>' : ''; }).join('') +
+      '<path d="' + area + '" class="area"/><path d="' + line + '" class="ln"/>' + red +
+      '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + y(F.bar) + '" y2="' + y(F.bar) + '" class="barl"/><text x="' + (L + 6) + '" y="' + (y(F.bar) - 5) + '" class="bart">bar ' + money(F.bar).replace('.00', '') + '</text>' +
+      events.map(function (e) { return '<line x1="' + x(idx[e[0]]) + '" x2="' + x(idx[e[0]]) + '" y1="' + T + '" y2="' + (T + 10) + '" class="ev"/>'; }).join('') +
+      lows.map(function (p) { var cx = x(idx[p.lowOn]), cy = y(p.low);
+        return '<g class="low' + (p.under ? ' under' : '') + (fcPick === p.start ? ' on' : '') + '" data-period="' + p.start + '" role="button" tabindex="0" aria-label="Low ' + money(p.low) + ' on ' + shortDay(p.lowOn) + '"><circle cx="' + cx + '" cy="' + cy + '" r="12" class="hit"/><circle cx="' + cx + '" cy="' + cy + '" r="4.5"/>' +
+          (showAll || p.under || p === worst ? '<text x="' + cx + '" y="' + (cy + 18) + '" class="lt">' + money(p.low).replace(/\.\d\d$/, '') + '</text>' : '') + '</g>'; }).join('') + '</svg>';
+    var picked = P.filter(function (p) { return p.start === fcPick; })[0];
+    var due = picked ? card('What’s due ' + shortDay(picked.start) + ' – ' + shortDay(picked.end), '<p class="small">Opens ' + money(picked.opening) + (picked.income ? ', payday adds ' + money(picked.income) : '') + '; low ' + money(picked.low) + ' on ' + shortDay(picked.lowOn) + (picked.under ? ', under the bar' : '') + '. Daily spending of ' + money(F.daily) + ' is in the bills total.</p>' +
+      (picked.items.length ? rows(picked.items, function (it) { return '<b class="num">' + shortDay(it[0]) + '</b><span>' + esc(it[1]) + (it[3] === 'extra' ? '<span class="small muted"> · one-off</span>' : '') + '</span><span class="num">' + money(it[2]) + '</span>'; }) : '<p class="muted">Only daily spending in this stretch.</p>'),
+      '<button class="pen" data-fc-close>close</button>') : '';
+    var label = fcDays < 60 ? fcDays + ' days' : fcDays < 365 ? Math.round(fcDays / 30.4) + ' months' : (fcDays / 365).toFixed(fcDays % 365 ? 1 : 0) + ' years';
+    return hero('<a href="#/money">Money</a> · Accountant’s numbers, checking …' + F.last4, 'Cash Forecast', 'The checking balance a day at a time, every paycheck, bill and one-off, out to two years. The bar is ' + money(F.bar).replace('.00', '') + '.') +
+      card('Horizon', '<input class="slider" type="range" min="14" max="730" step="1" value="' + fcDays + '" aria-label="Days ahead" data-fc-slider><div class="presets">' + PRESETS.map(function (p) { return '<button class="pen' + (fcDays === p[1] ? ' on' : '') + '" data-fc-days="' + p[1] + '">' + p[0] + '</button>'; }).join('') + '</div>', '<span class="small muted">' + label + '</span>') +
+      tiles([
+        { label: 'Checking today', value: money(F.balance), sub: shortDay(F.start) },
+        { label: 'Lowest point', value: money(worst.low), sub: shortDay(worst.lowOn) + (worst.under ? ' · under the bar' : ''), tone: worst.under ? 'act' : '' },
+        { label: 'Periods under ' + money(F.bar).replace('.00', ''), value: P.filter(function (p) { return p.under; }).length + ' of ' + P.length, sub: 'pay periods in view', tone: P.some(function (p) { return p.under; }) ? 'act' : '' },
+        { label: 'On ' + shortDay(pts[pts.length - 1].day), value: money(pts[pts.length - 1].bal), sub: 'end of the horizon' }
+      ]) +
+      card('Checking balance by day', svg + '<p class="legend small fcl"><span class="k ln-k"></span>balance <span class="k red-k"></span>under the bar <span class="k bar-k"></span>bar <span class="k pay-k"></span>payday <span class="k ev-k"></span>event</p>', '<span class="small muted">click a low point to see what’s due</span>') +
+      due +
+      card('Pay periods', '<div class="scroll"><table class="data fct"><thead><tr><th>Period</th><th class="r">Opening</th><th class="r">Income</th><th class="r">Bills</th><th class="r">One-offs</th><th class="r">Low point</th><th>Low on</th><th class="r">Closing</th></tr></thead><tbody>' +
+        P.map(function (p) { return '<tr data-period="' + p.start + '" class="' + (p.under ? 'under ' : '') + (fcPick === p.start ? 'on' : '') + '"><td>' + shortDay(p.start) + (p.payday ? '' : ' (part)') + '</td><td class="num">' + money(p.opening) + '</td><td class="num">' + (p.income ? money(p.income) : '—') + '</td><td class="num">' + money(p.bills) + '</td><td class="num">' + (p.extra ? money(p.extra) : '—') + '</td><td class="num"><b>' + money(p.low) + '</b>' + (p.under ? ' <span class="pill act">under</span>' : '') + '</td><td>' + shortDay(p.lowOn) + '</td><td class="num">' + money(p.closing) + '</td></tr>'; }).join('') +
+        '</tbody></table></div>', '<span class="small muted">' + P.length + ' in view · click a row for what’s due</span>') +
+      '<div class="cols2">' + card('Events on the timeline', rows(F.extras.map(function (e) { return [e[0], e[1], money(e[2]), 'extra']; }).concat(F.ends.map(function (e) { return [e[0], e[1] + '<span class="small muted"> · frees ' + money(e[2]) + ' ' + e[3] + '</span>', '', 'ends']; })), function (e) { return '<b class="num">' + shortDay(e[0]) + ' ’' + e[0].slice(2, 4) + '</b><span class="ev-' + e[3] + '">' + e[1] + '</span>' + (e[2] ? '<span class="num">' + e[2] + '</span>' : ''); })) +
+      card('What if', '<form class="wf" data-fc-form><input class="field" type="date" name="date" min="' + F.start + '" max="' + addDays(F.start, 729) + '" required aria-label="Date"><input class="field" name="label" placeholder="New laptop" aria-label="What"><input class="field" type="number" step="0.01" name="amount" placeholder="120" required aria-label="Amount"><button class="pen">add</button></form>' +
+        (fcWhatif.length ? rows(fcWhatif, function (w) { return '<b class="num">' + shortDay(w[0]) + '</b><span>' + esc(w[1]) + '</span><span class="num">' + money(w[2]) + '</span>'; }) + '<button class="pen" data-fc-clear>clear what-ifs</button>' : '') +
+        '<p class="small muted">A positive amount is money out, a negative one money in. Ask Accountant to make one real.</p>', '<span class="small muted">this view only, never saved</span>') + '</div>';
+  }
   function deskView(key) {
     var d = DESKS[key];
     if (!d) return VIEWS['']();
@@ -241,8 +328,24 @@
     if (b) { menu = menu === b.dataset.menu ? null : b.dataset.menu; render(); return; }
     if (e.target.closest('[data-demo]')) { var m = $('#qmsg'); if (m) m.hidden = false; return; }
     if (e.target.closest('.scrim')) { menu = null; render(); return; }
+    var fd = e.target.closest('[data-fc-days]');
+    if (fd) { fcDays = +fd.dataset.fcDays; render(); return; }
+    if (e.target.closest('[data-fc-close]')) { fcPick = null; render(); return; }
+    if (e.target.closest('[data-fc-clear]')) { fcWhatif = []; render(); return; }
+    var fp = e.target.closest('[data-period]');
+    if (fp) { fcPick = fp.dataset.period; render(); return; }
     var sb = e.target.closest('.seg-btns button');
     if (sb) sb.parentNode.querySelectorAll('button').forEach(function (x) { x.classList.toggle('on', x === sb); });
+  });
+  document.addEventListener('input', function (e) {
+    if (e.target.matches('[data-fc-slider]')) { fcDays = +e.target.value; var y = window.scrollY; render(); window.scrollTo(0, y); var sl = $('[data-fc-slider]'); if (sl) sl.focus(); }
+  });
+  document.addEventListener('submit', function (e) {
+    var f = e.target.closest('[data-fc-form]');
+    if (!f) return;
+    e.preventDefault();
+    fcWhatif.push([f.date.value, f.label.value || 'What-if', Number(f.amount.value)]);
+    render();
   });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && menu) { menu = null; render(); } });
   window.addEventListener('hashchange', function () { menu = null; render(); window.scrollTo(0, 0); });

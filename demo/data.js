@@ -7,7 +7,7 @@ window.DEMO = {
     attention: 2,
     tiles: [
       { label: 'To do today', value: '1 of 3', sub: 'from the morning brief' },
-      { label: 'Checking', value: '$3,184.22', sub: 'as of 6:15 AM' },
+      { label: 'Checking', value: '$1,584.22', sub: 'as of 6:15 AM' },
       { label: 'Bills, next 14 days', value: '$1,212.40', sub: '5 bills, 4 on autopay' },
       { label: 'Steps this week', value: '48,210', sub: 'goal 56,000', spark: [5200, 7400, 6900, 8100, 7600, 6400, 6610] },
       { label: 'Credit score', value: '731', sub: 'goal 760', spark: [702, 708, 715, 719, 726, 731] }
@@ -34,8 +34,8 @@ window.DEMO = {
 
   money: {
     tiles: [
-      { label: 'Low point before payday', value: '$842.10', sub: 'Thu 11/26 · safe', tone: 'good' },
-      { label: 'Checking now', value: '$3,184.22', sub: '11/21, 6:15 AM' },
+      { label: 'Low point before payday', value: '$1,164.22', sub: 'Thu 11/26 · safe', tone: 'good' },
+      { label: 'Checking now', value: '$1,584.22', sub: '11/21, 6:15 AM' },
       { label: 'Days to payday', value: '6', sub: 'Fri, Nov 27' },
       { label: 'Fun money left', value: '$140', sub: 'of $200 this pay period' },
       { label: 'Bills on time', value: '100%', sub: '12 of 12 this quarter', tone: 'good' }
@@ -116,6 +116,11 @@ window.DEMO = {
       ['Galaxy A35', 'Riley', '8053', '$18.74', '$177.98', '9', 'Aug 2027 · $28.06', '']
     ],
     timeline: [['Oct 24', 'Switched to the family plan, 4 lines'], ['Nov 3', 'First bill on AutoPay'], ['Nov 18', 'Riley asked about an upgrade'], ['Dec 24', 'Taylor’s upgrade window opens']],
+    plan: {
+      approved: 'approved Nov 20',
+      text: 'Keep all 4 lines, finish both device plans on schedule, and trade in the iPhone 13 when its upgrade window opens; no new devices before then.',
+      falloff: [['Bill of Aug 24, 2027', 'Galaxy A35 ends', '$185.66'], ['Bill of Dec 24, 2027', 'iPhone 15 ends', '$152.32']]
+    },
     bill: {
       date: 'Nov 24', next: 'Next bill Dec 24, about $204.40 on AutoPay',
       cats: [
@@ -131,6 +136,14 @@ window.DEMO = {
       total: '$204.40'
     },
     data: [['Phone, last 30 days', '64 calls · 812 texts'], ['Assistant number, 30 days', '22 calls · 140 texts'], ['Texts the assistant sent, 30 days', '57']]
+  },
+
+  forecast: {
+    start: '2026-11-21', balance: 1584.22, bar: 500, daily: 40, last4: '4821',
+    pay: { first: '2026-11-27', every: 14, amount: 1980, label: 'Paycheck' },
+    bills: [[1, 'Rent', 1350], [3, 'Phone', 204.40], [5, 'Car payment', 289], [9, 'Electric', 84], [12, 'Internet', 65], [15, 'Car insurance', 118.28], [18, 'Streaming', 23], [20, 'Gym', 24], [22, 'Student loan', 180], [27, 'Credit card', 150]],
+    extras: [['2026-12-10', 'Holiday gifts', 300], ['2027-01-06', 'Car registration', 145], ['2027-02-14', 'Dentist (after insurance)', 220], ['2027-04-15', 'Taxes owed', 600], ['2027-06-01', 'Summer trip deposit', 500]],
+    ends: [['2027-08-24', 'Galaxy A35 paid off', 18.74, 'a month'], ['2027-12-24', 'iPhone 15 paid off', 33.34, 'a month']]
   },
 
   holding: {

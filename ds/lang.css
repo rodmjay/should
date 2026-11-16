@@ -1,0 +1,14 @@
+/* From the design system (components.css): the language menu */
+/* Language menu (i18n.js langMenu): a native select styled as an M3 outlined menu */
+.ds-lang { display: inline-flex; }
+.ds-lang label { position: relative; display: inline-flex; align-items: center; }
+.ds-lang-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.ds-lang select {
+  appearance: none; -webkit-appearance: none; height: 2.25rem; padding: 0 2rem 0 var(--space-3); cursor: pointer;
+  border: 1px solid var(--md-sys-color-outline); border-radius: var(--md-sys-shape-corner-full);
+  background: var(--md-sys-color-surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23777' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 0.8rem center;
+  color: var(--md-sys-color-on-surface); font: var(--md-sys-typescale-label-large-weight) var(--md-sys-typescale-label-large-size)/1 var(--md-ref-typeface-plain);
+}
+.ds-lang select:hover { border-color: var(--md-sys-color-on-surface); }
+.ds-lang select:focus-visible { outline: 3px solid var(--md-sys-color-secondary); outline-offset: 2px; }
+

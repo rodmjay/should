@@ -1,11 +1,16 @@
 <!doctype html>
-<html lang="en" data-brand="should">
+<html lang="en" data-brand="should" translate="no" class="notranslate">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex">
+<meta name="google" content="notranslate">
+<link rel="alternate" hreflang="en" href="https://rodmjay.github.io/should/?lang=en">
+<link rel="alternate" hreflang="es-419" href="https://rodmjay.github.io/should/?lang=es">
+<link rel="alternate" hreflang="x-default" href="https://rodmjay.github.io/should/">
 <title>Should</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<!-- Link previews can't run scripts, so description and og: stay in English here; the page sets the description from i18n/ on load -->
 <meta name="description" content="Put your life goals on autopilot. One human, thirty-four AI agents.">
 <meta property="og:title" content="Should">
 <meta property="og:description" content="Put your life goals on autopilot. One human, thirty-four AI agents.">
@@ -13,6 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="ds/tokens.css">
+<link rel="stylesheet" href="ds/lang.css">
 <style>
 :root{
   /* Page names, pointed at the design system's M3 roles (ds/tokens.css, brand "should") */
@@ -41,7 +47,8 @@ p{margin:0 0 12px}
 button{font:inherit;color:inherit;cursor:pointer}
 
 /* brand */
-.brand{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.hero-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.brand{display:flex;align-items:center;gap:10px}
 .brand svg{width:40px;height:40px;flex:0 0 40px}
 .brand span{font-family:var(--md-ref-typeface-brand);font-weight:700;font-size:30px;letter-spacing:-.02em;line-height:1}
 .brand i{font-style:normal;color:var(--warm)}
@@ -357,25 +364,28 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 <main class="wrap">
 
 <header class="hero">
-  <div class="brand"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="var(--accent)"/><path d="M17 34.5 L27.5 44.5 L45 23" fill="none" stroke="var(--card)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="16.5" r="5" fill="var(--warm)"/></svg><span>should<i>.</i></span></div>
-  <h1>Put your life goals on autopilot.</h1>
-  <p class="sub">A better job, money that grows while you work, a business that runs itself, a body you're proud of. Thirty-four AI agents work on it every day. You answer with 1, 2 or 3.</p>
+  <div class="hero-top">
+    <div class="brand"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="var(--accent)"/><path d="M17 34.5 L27.5 44.5 L45 23" fill="none" stroke="var(--card)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="16.5" r="5" fill="var(--warm)"/></svg><span>should<i>.</i></span></div>
+    <div id="lang"></div>
+  </div>
+  <h1 data-i18n="ui.hero_h1"></h1>
+  <p class="sub" data-i18n="ui.hero_sub"></p>
   <div class="stats">
-    <div class="stat"><b>34</b><span>AI agents</span></div>
-    <div class="stat"><b>7</b><span>life goals</span></div>
-    <div class="stat"><b>1</b><span>human in charge</span></div>
+    <div class="stat"><b>34</b><span data-i18n="ui.stat_agents"></span></div>
+    <div class="stat"><b>7</b><span data-i18n="ui.stat_goals"></span></div>
+    <div class="stat"><b>1</b><span data-i18n="ui.stat_human"></span></div>
   </div>
   <div class="cta-row">
-    <a class="btn primary" href="#goals">See how it works</a>
-    <a class="btn ghost" href="#staff">Meet the staff</a>
-    <a class="btn ghost" href="demo/">See the demo</a>
+    <a class="btn primary" href="#goals" data-i18n="ui.cta_how"></a>
+    <a class="btn ghost" href="#staff" data-i18n="ui.cta_staff"></a>
+    <a class="btn ghost" href="demo/" data-i18n="ui.cta_demo"></a>
   </div>
 </header>
 
 <section id="goals" style="padding-top:20px">
-  <div class="eyebrow">Your goals, on autopilot</div>
-  <h2>Pick a goal. Watch the staff work it.</h2>
-  <p class="muted">Each scenario shows what starts it, what the staff does, and the one text you answer. Tap 1, 2 or 3 to try it.</p>
+  <div class="eyebrow" data-i18n="ui.goals_eyebrow"></div>
+  <h2 data-i18n="ui.goals_h2"></h2>
+  <p class="muted" data-i18n="ui.goals_p"></p>
   <div class="goals-layout">
     <div class="tabs" role="tablist" aria-orientation="vertical" id="tabs"></div>
     <div id="goal"></div>
@@ -383,414 +393,191 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 </section>
 
 <section>
-  <div class="eyebrow">How you talk to them</div>
-  <h2>Your whole life runs on three buttons</h2>
-  <p>No app to open. Your staff texts you one thing at a time, and you answer with a number.</p>
-  <div class="phone" aria-label="Example text conversation">
-    <div class="whoname">Executive Assistant</div>
-    <div class="time">8:00 AM</div>
-    <div class="msg them">Good morning, Sam. Today: 2 meetings, gym at 5:30, groceries arrive at 6. Most important: car registration is due Friday.</div>
-    <div class="msg them">Put it on today's list?<br><b>1</b> yes, at lunch · <b>2</b> tomorrow · <b>3</b> already done</div>
-    <div class="msg me">1</div>
-    <div class="msg them">Done. Today at 12:15, 10 minutes, with the link.</div>
-  </div>
+  <div class="eyebrow" data-i18n="ui.talk_eyebrow"></div>
+  <h2 data-i18n="ui.talk_h2"></h2>
+  <p data-i18n="ui.talk_p"></p>
+  <div class="phone" data-i18n-attr="aria-label:ui.talk_aria" data-phone="talk_phone"></div>
 </section>
 
 <section id="social">
-  <div class="eyebrow">A new kind of social network</div>
-  <h2>Not a feed. Your people, texting your assistant.</h2>
-  <p>Your friends and family don't download anything or follow anyone. They text your assistant, and the group they're in decides what they can see and do. They see only what you allow, and you approve everything before it happens.</p>
-  <div class="rules">
-    <div class="rule"><b>Groups decide who sees and does what</b>Family, friends, your partner: each group gets its own commands. Friends can set up a coffee or a beer, or ask you for help with a move; other groups get commands when you turn them on. Nobody can read your calendar.</div>
-    <div class="rule"><b>Private by default</b>No one sees your calendar, your address or anyone else in your life. Numbers you don't know get nothing automatic.</div>
-    <div class="rule"><b>You tap once</b>Nothing goes out and nothing gets booked until you answer 1.</div>
-  </div>
+  <div class="eyebrow" data-i18n="ui.social_eyebrow"></div>
+  <h2 data-i18n="ui.social_h2"></h2>
+  <p data-i18n="ui.social_p"></p>
+  <div class="rules" data-rules="social_rules"></div>
   <div class="phones">
-    <div class="phone" aria-label="Example: a friend sets up coffee">
-      <div class="whoname">Alex (Friends group) → Sam's assistant</div>
-      <div class="msg me">/help</div>
-      <div class="msg them">Hi Alex! As a friend you can text /coffee (before 3 PM) or /beer (after 3 PM) to meet up with Sam. More coming soon.</div>
-      <div class="msg me">/coffee</div>
-      <div class="msg them">Sam's free for coffee at Grind Café, a favorite near Sam:<br><b>1</b> Thu 8:30 AM · <b>2</b> Fri 9:00 AM · <b>3</b> Sat 11:00 AM</div>
-      <div class="msg me">1</div>
-      <div class="msg them">Checking with Sam. You'll hear back shortly.</div>
-    </div>
-    <div class="phone" aria-label="Example: Sam approves">
-      <div class="whoname">Sam's assistant → Sam</div>
-      <div class="msg them">Alex (Friends) wants coffee Thu 8:30 at Grind Café. You're free.<br><b>1</b> yes · <b>2</b> suggest another time · <b>3</b> not this week</div>
-      <div class="msg me">1</div>
-      <div class="msg them">Done. It's on your calendar, and Alex got the invite.</div>
-      <div class="time">Alex sees</div>
-      <div class="msg them">You're on: Thu 8:30 at Grind Café with Sam. Calendar invite sent.<br>assistant here to /help</div>
-    </div>
+    <div class="phone" data-i18n-attr="aria-label:ui.social_phone1_aria" data-phone="social_phone1"></div>
+    <div class="phone" data-i18n-attr="aria-label:ui.social_phone2_aria" data-phone="social_phone2"></div>
   </div>
-  <p class="muted" style="margin-top:14px">Coffee and beer are the first commands, for friends. More are coming, each one turned on per group.</p>
+  <p class="muted" style="margin-top:14px" data-i18n="ui.social_note"></p>
 </section>
 
 <section id="demo">
-  <div class="eyebrow">See it for yourself</div>
-  <h2>Walk around the dashboard</h2>
-  <p>Every agent has a desk on a private dashboard: what it did today, what needs you, and what's next. The demo is the real thing with made-up data, and it works on your phone.</p>
-  <a class="btn primary" href="demo/">See the demo</a>
-  <p class="muted" style="margin-top:10px;font-size:14px">Everything in it is fake except public things like movies, places and the weather.</p>
+  <div class="eyebrow" data-i18n="ui.demo_eyebrow"></div>
+  <h2 data-i18n="ui.demo_h2"></h2>
+  <p data-i18n="ui.demo_p"></p>
+  <a class="btn primary" href="demo/" data-i18n="ui.demo_btn"></a>
+  <p class="muted" style="margin-top:10px;font-size:14px" data-i18n="ui.demo_note"></p>
 </section>
 
 <section id="staff">
-  <div class="eyebrow">Meet the staff</div>
-  <h2>Two go-to agents. Everyone else reports to them.</h2>
-  <p class="muted">You deal with the Executive Assistant and the Life Coach. The specialists below work for them, each with a written role, its own routines and rules it can't break. Tap one to see its job.</p>
+  <div class="eyebrow" data-i18n="ui.staff_eyebrow"></div>
+  <h2 data-i18n="ui.staff_h2"></h2>
+  <p class="muted" data-i18n="ui.staff_p"></p>
   <div class="staff leads" id="leadgrid"></div>
   <div class="staff" id="staffgrid"></div>
 </section>
 
 <section>
-  <div class="eyebrow">A day at the office</div>
-  <h2>While you sleep, they start work</h2>
-  <ul class="tl">
-    <li><time>2:30</time><div>Everything is backed up<small>Nightly, automatic</small></div></li>
-    <li><time>6:00</time><div>Your day gets laid out<small>Work, appointments, workouts, meals</small></div></li>
-    <li><time>6:15</time><div>Accountant checks the money; job leads get scored<small>Bills flagged, recruiters screened</small></div></li>
-    <li><time>6:30</time><div>Executive Assistant writes the daily brief<small>What's due, what's late, what matters most</small></div></li>
-    <li><time>7:30</time><div>Today's mail gets read<small>Bills and notices go straight to your list</small></div></li>
-    <li><time>8:00</time><div>Your morning text arrives<small>One summary, one question</small></div></li>
-    <li><time>All day</time><div>Texts answered in seconds<small>Ask anything, a staff member answers</small></div></li>
-    <li><time>2:45</time><div>AI trading bot makes its calls<small>On the strategy you chose, weekdays</small></div></li>
-    <li><time>Sat</time><div>Weekly sit-down with the Life Coach<small>Score, wins, what slipped</small></div></li>
-    <li><time>Sun</time><div>Nobody works<small>Rest day. The staff enforces it.</small></div></li>
-  </ul>
+  <div class="eyebrow" data-i18n="ui.day_eyebrow"></div>
+  <h2 data-i18n="ui.day_h2"></h2>
+  <ul class="tl" id="day"></ul>
 </section>
 
 <section id="way">
-  <div class="eyebrow">The Should way</div>
-  <h2>GTD asks "what's the next action?" Should asks "who does it?"</h2>
-  <p>Getting Things Done was built for one person keeping their own lists. Should is built for one person with a staff. Most things that come in never reach you: an agent handles them. You see only the steps that need your hands or your decision.</p>
-  <p><b>Capture → Clarify → Route → Organize → Review → Engage.</b> Things come in on their own: calls, texts, mail, email. Agents work out what each one is and who should act on it. You check in with the morning text each day and a short sit-down each week.</p>
-  <div class="rules">
-    <div class="rule"><b>Agent first</b>Your attention is the scarce resource. If an agent can do it, or do all of it but one step, it does.</div>
-    <div class="rule"><b>One-way and two-way doors</b>Easy-to-undo calls, like wording, scheduling or a draft, agents just make and tell you in one line. Only hard-to-undo ones (money, sending, deleting for good, settings) come to you, once, named for what's at stake and with one recommendation.</div>
-    <div class="rule"><b>Dates only for real deadlines</b>Your calendar holds what has to happen on a day: appointments, deadlines. Nothing else.</div>
-    <div class="rule"><b>Agents do the waiting</b>Waiting on a reply, a refund or a package is the agents' job, and you can see the list anytime.</div>
-    <div class="rule"><b>Fewer, better</b>A short list you'll finish beats a long one you won't. Fewer things in flight at once.</div>
-    <div class="rule"><b>Rest is part of the system</b>Sundays are for rest. The staff plans around it.</div>
-  </div>
-  <p>A staff role, the Philosopher, looks after the Should way. It reads widely, keeps the ideas worth borrowing and proposes new ones. You decide which get tried.</p>
+  <div class="eyebrow" data-i18n="ui.way_eyebrow"></div>
+  <h2 data-i18n="ui.way_h2"></h2>
+  <p data-i18n="ui.way_p1"></p>
+  <p data-i18n-html="ui.way_p2"></p>
+  <div class="rules" data-rules="way_rules"></div>
+  <p data-i18n="ui.way_p3"></p>
 </section>
 
 <section>
-  <div class="eyebrow">The ground rules</div>
-  <h2>They work for you, not the other way around</h2>
-  <div class="rules">
-    <div class="rule"><b>Nothing happens without your yes</b>Nothing gets bought, sent, booked or deleted until you approve that exact thing. They fill the cart; you check out.</div>
-    <div class="rule"><b>One question at a time</b>Every question comes with three options. No walls of text.</div>
-    <div class="rule"><b>Quiet hours</b>No texts between 9 PM and 8 AM, and nothing on Sundays.</div>
-    <div class="rule"><b>No secrets stored</b>No passwords, no full account numbers. They can't sign in for you.</div>
-    <div class="rule"><b>Everything is logged</b>Every change has a name on it, so you can see who did what.</div>
-  </div>
+  <div class="eyebrow" data-i18n="ui.rules_eyebrow"></div>
+  <h2 data-i18n="ui.rules_h2"></h2>
+  <div class="rules" data-rules="rules"></div>
 </section>
 
 <section>
-  <div class="eyebrow">What it's built with</div>
-  <h2>Off-the-shelf parts</h2>
-  <p>No custom AI model and no startup. It's Claude, connected to the services you already use, running on a laptop at home. Some services are read through their official APIs, read only, with keys only you hold, instead of driving a browser.</p>
-  <div class="built">
-    <span class="chip">Claude</span><span class="chip">Claude Code</span><span class="chip">Email</span><span class="chip">Calendar</span><span class="chip">Todo list</span><span class="chip">Texting</span><span class="chip">A database</span><span class="chip">Browser</span><span class="chip">Read-only APIs</span>
-  </div>
+  <div class="eyebrow" data-i18n="ui.built_eyebrow"></div>
+  <h2 data-i18n="ui.built_h2"></h2>
+  <p data-i18n="ui.built_p"></p>
+  <div class="built" id="built"></div>
 </section>
 
 <section>
   <div class="cta">
-    <h2>Want a staff of your own?</h2>
-    <p>I'm building this in public, and in 2028 I want to bring people to Costa Rica for a week to build theirs together. If that sounds like you, tell me.</p>
+    <h2 data-i18n="ui.cta_h2"></h2>
+    <p data-i18n="ui.cta_p"></p>
   </div>
 </section>
 
-<footer>Should · built by Rod Johnson with Claude</footer>
+<footer data-i18n="ui.footer"></footer>
 </main>
 
 <div class="shade" id="shade"></div>
 <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
   <div class="grab"></div>
-  <button class="x" id="sheetX" aria-label="Close">×</button>
+  <button class="x" id="sheetX" data-i18n-attr="aria-label:meta.close">×</button>
   <div id="sheetBody"></div>
 </div>
 
 <script src="ds/avatars.js"></script>
+<script src="ds/i18n.js"></script>
+<script src="i18n/en.js"></script>
+<script src="i18n/es.js"></script>
 <script>
+/* Structure only. Every visible word is in i18n/en.js and i18n/es.js (same shape, checked by ds/check-i18n.mjs). */
 const AGENTS = {
-  ea:{n:"Executive Assistant",i:"🧭",job:"Runs the staff: plans your day, texts you at 8 AM and hands out the work.",routines:["Daily brief, 6:30 AM","Morning text, 8:00 AM"],never:"Texts you more than one question at a time."},
-  book:{n:"Accountant",i:"📒",job:"Balances, bills and spending, checked every morning before you're up, plus how much is free to spend on fun.",routines:["Balance check, 6:15 AM","Fun money left, daily"],never:"Moves money. It only reads."},
-  sched:{n:"Scheduler",bg:true,i:"🗓️",job:"Owns your calendar. The other agents ask it when you're free or away.",routines:["Day plan, 6:00 AM"],never:"Books anything on a Sunday."},
-  pi:{n:"Investigator",i:"🔎",job:"Works out who new numbers are, remembers how you met, and vets people and businesses before you deal with them.",routines:["New-contact check, weekly"],never:"Digs into private people."},
-  health:{n:"Health Agent",i:"🩺",job:"Training, meal plans and the grocery cart, and when you're sick: texts your plan's nurse for you, says where to go and what it costs, and checks medical bills.",routines:["Meal plan, every 2 weeks","Grocery cart, Saturdays","Scale sync, weekly","Nurse chat, any time you're sick"],never:"Checks out, messages a nurse without your yes, or plays doctor. Emergencies: call 911."},
-  text:{n:"Text Concierge",i:"💬",job:"Runs everything that happens by text: answers your texts in seconds, greets new people who text in, keeps friend and family groups and their menus, queues your 1/2/3 questions, and keeps quiet hours. Checks every text to anyone else before it goes out, and holds any that fail as a draft for you.",routines:["Text replies, all day","Phone desk, hourly"],never:"Texts anyone but you without your yes, or shares where you are, your plans, money, health or family."},
-  phil:{n:"Philosopher",i:"📚",job:"Keeps the Should way and your reading list. Each book gets a short summary before you listen, ending with a check against your values. It also keeps a short list of new ideas to try, and nothing gets tried until you approve it.",routines:["North-star check, monthly"],never:"Changes how another agent works without your yes."},
-  sec:{n:"Security Officer",i:"🛡️",job:"Watches for threats to your accounts: suspicious logins, breaches, weak or reused passwords, missing 2FA. It audits every account, ranks what to fix first, and sends a weekly summary to your coach.",routines:["Security audit, Fridays 3 PM"],never:"Handles your passwords, signs in, or changes anything."},
-  comp:{n:"Compliance Officer",i:"⚖️",job:"Checks that every agent stays inside your moral code, the law and each platform's terms, and flags anything that drifts, with the weekly report to your coach.",routines:["Compliance check, weekly"],never:"Sends or changes anything itself."},
-  bcoach:{n:"Business Coach",i:"🧭",rep:"You",job:"Your long-term guide for the business only. Turns a vision for your companies into yearly goals, one focus each quarter, monthly milestones and the week's business commitment, tracks the business gauges, and runs a quarterly review. It coaches you as the owner; the Business Executive runs the companies.",routines:["Business check-in, weekly","Quarterly business review"],never:"Spends money, signs, files or contacts anyone."},
-  coach:{n:"Life Coach",i:"🏁",job:"Your long-term guide. Turns your values into yearly goals, a few outcomes each quarter, a focus for the month and at most 3 commitments a week, then checks in on them weekly, monthly, quarterly and yearly. It gets better at coaching you over time.",routines:["Scorecard and sit-down, Saturdays 9:30","Monthly and quarterly reviews","Habit check-in, daily"],never:"Shames you, or shares your check-ins with anyone."},
-  career:{n:"Career Assistant",i:"💼",job:"Finds jobs that fit, tailors your resume, applies and tracks every reply.",routines:["Job search on LinkedIn and Indeed, 6:15 AM","Job board refresh, weekly","Application follow-ups, daily"],never:"Applies anywhere, or accepts an offer or a number, without your yes."},
-  wealth:{n:"Financial Advisor",i:"📈",job:"Credit and investing in one: ranks what raises your score, and an AI trading bot runs the strategy you pick.",routines:["Credit check, Saturdays","AI trading bot, weekdays 2:45 PM","Weekly results vs the market, Saturdays"],never:"Opens, closes or disputes anything, or goes past the money and loss limits you set, without your yes."},
-  travel:{n:"Travel Agent",i:"✈️",job:"Watches fares, finds stays and cars, and tracks your miles and credits.",routines:["Fare watch, Tuesdays"],never:"Books. It sends you the link."},
-  shop:{n:"Shopping Expert",i:"🛒",job:"Knows what you're running low on, researches big buys and watches prices.",routines:["Deal check, weekly"],never:"Buys anything."},
-  clothier:{n:"Clothier",i:"👔",job:"Your clothes: picks today's outfit from your closet for your plans and the weather, and packs your bag for trips.",routines:["Outfit of the day, workday mornings"],never:"Buys clothes without your yes."},
-  house:{n:"Home Manager",i:"🏠",job:"The house and the car: cleaning, chores, supplies and repairs. Tell it what's broken; it finds who should fix it.",routines:["Prep list before each cleaning","Repair follow-up, until it's fixed"],never:"Books, pays or messages anyone without your yes."},
-  pets:{n:"Pet Expert",i:"🐾",job:"Looks after your pets: health and the vet, food and supplies on a plan, and their care around cleanings, trips and moves.",routines:["On request"],never:"Books, buys or pays without your yes."},
-  move:{n:"Relocation Expert",i:"📦",job:"Finds your next home in budget, plans the move week by week, and reads your mail scan so nothing that arrives gets missed.",routines:["Mail check, Mon–Sat 7:30 AM","Listing check, while you're searching"],never:"Signs a lease, pays a deposit or books movers without your yes."},
-  gift:{n:"Gift Concierge",i:"🎁",job:"Every birthday and occasion: a gift they'll love, in budget, in the cart in time. At minimum, a card in the mail.",routines:["Birthday check, 3 weeks ahead"],never:"Checks out."},
-  relmgr:{n:"Relationship Manager",i:"🤝",job:"Family and friends: who's who, every household's address, staying in touch, and smooth co-parenting.",routines:["Keep-in-touch nudges, weekly","Kids' schedule check, Thursdays"],never:"Sends a message to anyone without your yes."},
-  events:{n:"Event Planner",i:"🎉",job:"Plans the gatherings you host: guest list, invites, RSVPs, timeline and a day-of run sheet.",routines:["Event checklist, until the day"],never:"Sends an invite or pays a deposit without your yes."},
-  legal:{n:"Legal Advisor",i:"⚖️",job:"Reads paperwork in plain words and writes the questions for a lawyer.",routines:["On request"],never:"Files anything or contacts anyone."},
-  music:{n:"Music Coach",i:"🎹",job:"Records what you play on the piano and turns it into sheet music.",routines:["On request"],never:"Gives lessons you didn't ask for."},
-  web:{n:"Webmaster",i:"🖥️",job:"Builds your personal dashboard, where every agent has its own desk.",routines:["On request"],never:"Publishes without your yes."},
-  pr:{n:"PR Person",i:"📣",job:"Drafts your posts and keeps your public profiles telling one story.",routines:["Weekly drafts, Mondays"],never:"Posts. You do."},
-  media:{n:"Media Concierge",i:"🎬",job:"Knows your taste in film and picks tonight's movie, with where to stream.",routines:["On request"],never:"Buys or rents anything without your yes."},
-  guide:{n:"Local Guide",i:"📍",job:"Knows the places you love, finds new ones, plus weekend picks, weather and ideas that fit your fun money.",routines:["Weather, every morning","Weekend picks, Thursdays","Fun-money ideas, when there's money to spend"],never:"Buys tickets, books tables or RSVPs without your yes."},
-  biz:{n:"Business Executive",i:"🏢",job:"Runs your small business: companies, filings, cap tables and investor notes, books and a weekly review, with each company on its own dashboard view.",routines:["Business review, Mondays","Filing and renewal check, monthly"],never:"Files, signs, pays or forms a company without your yes."},
-  arch:{n:"Software Architect",i:"🏗️",job:"Leads a software team for your company: plans the build, writes the code with its engineers, and tests every change.",routines:["Build plan, as the work grows","Progress report, after each session"],never:"Spends money, launches anything public or commits a secret."},
-  dba:{n:"Database Administrator",i:"🗄️",job:"Looks after the database that holds your records: every change to it goes through one careful process, and it keeps it fast, backed up and healthy.",routines:["Watches the nightly backup and health check"],never:"Weakens its security without your yes."},
-  it:{n:"IT Guy",i:"🛠️",job:"Keeps your internet, Wi-Fi, phone and computer working, fixes what the Security Officer finds, and keeps the staff's own systems running. Sign in to a new account and it gets set up: who owns it, its data saved, new text commands.",routines:["System health check, daily","Usage guard, 6 times a day: slows the staff down before the weekly AI limit runs out","Breach check, any time you text /it /breach-check","New account setup, when you sign in"],never:"Handles your passwords, or changes an account without your yes."},
-  pm:{n:"Product Manager",i:"🧩",job:"Runs Should like a product: the name, the look and what it learns next.",routines:["Roadmap, as you ask for things"],never:"Changes this page's words without your yes."},
-  rel:{n:"Relationship Coach",i:"💬",soon:true,job:"Helps you stay close to your partner and the people who matter most.",routines:["Coming soon"],never:"Reads or sends your private messages, or shares anything about the people you love."},
+  ea:{i:"🧭"}, book:{i:"📒"}, sched:{bg:true,i:"🗓️"}, pi:{i:"🔎"}, health:{i:"🩺"}, text:{i:"💬"}, phil:{i:"📚"}, sec:{i:"🛡️"},
+  comp:{i:"⚖️"}, bcoach:{i:"🧭",toYou:true}, coach:{i:"🏁"}, career:{i:"💼"}, wealth:{i:"📈"}, travel:{i:"✈️"}, shop:{i:"🛒"},
+  clothier:{i:"👔"}, house:{i:"🏠"}, pets:{i:"🐾"}, move:{i:"📦"}, gift:{i:"🎁"}, relmgr:{i:"🤝"}, events:{i:"🎉"}, legal:{i:"⚖️"},
+  music:{i:"🎹"}, web:{i:"🖥️"}, pr:{i:"📣"}, media:{i:"🎬"}, guide:{i:"📍"}, biz:{i:"🏢"}, arch:{i:"🏗️"}, dba:{i:"🗄️"}, it:{i:"🛠️"},
+  pm:{i:"🧩"}, rel:{i:"💬",soon:true},
 };
-
 // Each agent's person avatar comes from the design system (ds/avatars.js), keyed by org role
-const ORG={ea:"assistant",book:"bookkeeper",pi:"investigator",health:"health",text:"text-concierge",phil:"philosopher",sec:"security",comp:"compliance",bcoach:"business_coach",coach:"coach",career:"career",wealth:"financial",travel:"travel",shop:"shopping",clothier:"clothier",house:"home-manager",pets:"pets",move:"relocation",gift:"gifts",relmgr:"relationship-manager",events:"events",legal:"legal",music:"music",web:"webmaster",pr:"pr",media:"media",guide:"local-guide",biz:"business",arch:"as-architect",dba:"dba",it:"it",pm:"product",rel:"relationships"};
-const av=(k,size,badge=true)=>window.DSAvatars?DSAvatars.avatarSVG(ORG[k]||k,{size,badge,label:AGENTS[k].n}):AGENTS[k].i;
+const ORG={ea:"assistant",book:"bookkeeper",sched:"scheduler",pi:"investigator",health:"health",text:"text-concierge",phil:"philosopher",sec:"security",comp:"compliance",bcoach:"business_coach",coach:"coach",career:"career",wealth:"financial",travel:"travel",shop:"shopping",clothier:"clothier",house:"home-manager",pets:"pets",move:"relocation",gift:"gifts",relmgr:"relationship-manager",events:"events",legal:"legal",music:"music",web:"webmaster",pr:"pr",media:"media",guide:"local-guide",biz:"business",arch:"as-architect",dba:"dba",it:"it",pm:"product",rel:"relationships"};
 
 const GOALS = [
- {id:"career",tab:"Career",title:"A better job, on autopilot",tag:"The right roles found for you, a resume written for each one, and a counter you'd never have sent on your own.",agents:["career","coach","pi","pr"],
-  sc:[
-   {ico:"🎯",t:"The search, done for you",s:"Only jobs that clear your bar",scene:"lead",
-    flow:["6:15 AM, new postings land","Career Assistant scores them; Investigator vets the company","You see the best two or three"],
-    ask:{q:"Senior Platform Engineer at Northwind Health. Remote, $185–210k, full benefits. 92% match. Apply?",o:["Yes, tailor my resume and apply","Skip this one","Show me the posting"],p:0,r:"Resume tailored and sent. It's on your tracker as Applied."},
-    result:"Good jobs reach you every week, and the bad fits never take a minute of your time."},
-   {ico:"✍️",t:"A resume for every job",s:"Your real experience, in their words",scene:"resume",
-    flow:["You say yes to a job","Career Assistant rewrites your bullets to match the posting","You approve before it's sent"],
-    ask:{q:"3 bullets reworded for Kubernetes and cost savings, summary rewritten. Send it?",o:["Send it","Show me the changes","Ask me tonight"],p:0,r:"Applied with the tailored version. A copy is saved with the application."},
-    result:"Every application reads as if it were written for that job, because it was. Nothing is ever made up."},
-   {ico:"🤝",t:"Negotiate the offer",s:"One email, worth thousands a year",scene:"offer",sim:"negotiate",
-    flow:["An offer arrives by email","Career Assistant prices the whole package against the market","You approve a specific counter"],
-    ask:{q:"Offer: $160,000. Your floor is $165,000 and the market is $170–185k. Counter at $178,000?",o:["Yes, send the counter","Counter at $170,000","Let me think, ask tonight"],p:0,r:"Counter sent from your email. You'll see their answer first."},
-    result:"Most people never counter. Here it takes one tap."},
-   {ico:"🪜",t:"Plan the next five years",s:"From the role you want down to this week",scene:"ladder",
-    ladder:{h:"Sam's career plan",sub:"Reviewed each quarter with Life Coach",rungs:[["2029 target","Director of Platform Engineering","Runs 3 teams, owns the platform budget"],["This year","Lead a team of 6 · cloud architecture cert · $200k","Title, skill and pay goals, checked monthly"],Object.assign(["This quarter","Lead one cross-team architecture decision","8 of 10 Director postings ask for it; you have 0 so far"],{now:1}),["This week","Draft the shared build pipeline proposal","Thursday, 90 minutes"]]},
-    flow:["Once a quarter, Life Coach runs your career review","Career Assistant brings market data, skill gaps and a resume and LinkedIn kept in sync","You pick the quarter's focus and this week's one step"],
-    ask:{q:"Q1 focus: lead one cross-team architecture decision to build Director-level evidence. Add it as this week's commitment?",o:["Yes, make it this week's commitment","Pick a different focus","Ask me at Saturday's review"],p:0,r:"Added: draft the shared build pipeline proposal, Thursday, 90 minutes. Life Coach checks in Saturday."},
-    result:"The big goal stays in view, and every week has one step that moves you toward it."}
-  ]},
- {id:"money",tab:"Money",title:"Money that grows, bills that never slip",tag:"An AI trading bot on the strategy you pick, a retirement that funds itself, and nothing late or fraudulent slipping by.",agents:["wealth","coach","book","pi"],
-  sc:[
-   {ico:"📈",t:"An AI runs your strategy",s:"Inside the limits you set",sim:"trade",
-    flow:["You pick a strategy and a loss limit","Financial Advisor's bot trades it every weekday at 2:45","Results vs the index, every Saturday"],
-    ask:{q:"This month: +3.2% vs index +2.1%. The bot trimmed tech before Tuesday's drop. Add $500 from payday?",o:["Yes, add $500","Keep it as is","Show me the trades"],p:0,r:"$500 added after payday. Next report Saturday."},
-    result:"Your money is managed every trading day, with reasons you can read and a kill switch you control."},
-   {ico:"🏖️",t:"Retirement on autopilot",s:"Every raise, a little more saved",sim:"retire",
-    flow:["Payday, a raise or open enrollment","Financial Advisor checks the match and suggests +1%","You tap yes; the steps land on your list"],
-    ask:{q:"You got a 4% raise. Raise your 401(k) from 6% to 7%? Take-home still goes up $112 a month.",o:["Yes, add the steps to my list","Keep it at 6%","Ask me after payday"],p:0,r:"On your list for Thursday, 5 minutes, with the link."},
-    result:"Savings rise every year without ever feeling like a pay cut."},
-   {ico:"🧾",t:"Nothing slips by",s:"Bills on time, odd charges caught",scene:"stmt",
-    flow:["Every morning at 6:15","Accountant reads every charge; Investigator checks strange merchants","You hear only about what's wrong"],
-    ask:{q:"Two identical $6.75 charges at Blue Door Coffee, 1 minute apart.",o:["Add a dispute task","It's fine, I bought two","Ask me later"],p:0,r:"Dispute task added for tomorrow, 5 minutes, with the phone number."},
-    result:"No late fees, and mistakes or fraud get caught in days, not at tax time."},
-   {ico:"🪜",t:"Plan the money years",s:"Income first, then debts, then savings",scene:"ladder",
-    ladder:{h:"Sam's money plan",sub:"Reviewed each quarter with Life Coach",rungs:[["2030 target","Debt-free, 6 months saved, investing 15%","Checked against your values each January"],["This year","Pay off the $8,400 card · $5,000 emergency fund","Checked every payday"],Object.assign(["This quarter","Clear the $2,100 store card first","Highest rate of anything you owe"],{now:1}),["This week","Send $350 to the store card on Friday","Payday, 5 minutes, with the link"]]},
-    flow:["Every payday, and a deeper look each quarter","Financial Advisor lines up income, then debts, then savings; Life Coach sets the quarter's money focus","You approve this week's one money step"],
-    ask:{q:"Q1 money focus: clear the $2,100 store card first, since it has the highest rate. Make Friday's $350 payment this week's commitment?",o:["Yes, make it this week's commitment","Pick a different focus","Ask me at Saturday's review"],p:0,r:"Added for Friday, 5 minutes, with the link. Life Coach checks in Saturday."},
-    result:"Every payday goes to the next right thing, and the five-year goal gets a little closer each time."}
-  ]},
- {id:"business",tab:"Business",title:"A small business that runs itself",tag:"Every company set up right, every filing on time, and the whole business on one screen each Monday.",agents:["biz","bcoach","arch","book","legal"],
-  sc:[
-   {ico:"📊",t:"Your Monday review",s:"The business in two minutes",scene:"dash",
-    flow:["Monday, 7 AM","Business Executive pulls cash, invoices and every deadline","You make the two or three calls that matter"],
-    ask:{q:"2 invoices are overdue ($3,250). Send polite reminders from your business email?",o:["Yes, send both","Just the bigger one","Ask me Wednesday"],p:0,r:"Reminders sent. The renewal is on your list for Thursday, 10 minutes."},
-    result:"You know where the business stands without opening a spreadsheet."},
-   {ico:"🌳",t:"Grow with a holding company",s:"Each venture in its own box",scene:"tree",
-    flow:["You start a second venture","Business Executive drafts the new LLC and the ownership papers","You sign; the tree stays current"],
-    ask:{q:"New venture: a rental property. Put it in its own LLC under your holding company?",o:["Yes, prepare the filings","Keep it in the main company","Explain the trade-off"],p:0,r:"Filings for Maple Street Rental LLC are ready for your review."},
-    result:"Each venture is protected and organized the way a much bigger company would do it."},
-   {ico:"🪜",t:"Grow it on purpose",s:"From the vision down to this week",scene:"ladder",
-    ladder:{h:"Brightside Agency plan",sub:"Reviewed each quarter with Business Coach",rungs:[["3-year vision","$40k a month, two hires, no client over 25%","Revisited each January"],["This year","$15k a month from 5 retainer clients","Checked monthly"],Object.assign(["This quarter","First dollar: sign one paying retainer","2 proposals out, 0 signed so far"],{now:1}),["This week","Follow up the two open proposals","Tuesday, 30 minutes"]]},
-    flow:["Each quarter, Business Coach runs the business review","Business Executive brings the numbers; Business Coach sets the quarter's focus","You pick this week's one business move"],
-    ask:{q:"Q1 business focus: sign the first paying retainer. This week: follow up the two open proposals. Make it the week's business commitment?",o:["Yes, add it for Tuesday","Pick a different focus","Ask me at Saturday's review"],p:0,r:"Added for Tuesday, 30 minutes. Business Coach brings it to Saturday's sit-down."},
-    result:"The business has a direction for years, a focus for the quarter and one move this week."}
-  ]},
- {id:"health",tab:"Health",title:"Chisel the body you want",tag:"Lose fat, keep muscle, eat food you like, and drop the habit that's holding you back.",agents:["health","coach","shop"],
-  sc:[
-   {ico:"⚖️",t:"Body recomposition",s:"A plan that adjusts every week",sim:"body",
-    flow:["Smart scale syncs Sunday morning","Health Agent reads the 7-day trend, not one bad day","Food goes up or down a little"],
-    ask:{q:"Down 1.4 lb this week, a bit fast. Add 150 calories (a protein snack) to keep muscle?",o:["Yes, adjust the plan","Keep it as is","Ask me next week"],p:0,r:"Plan updated: +150 calories, protein stays at 180 g."},
-    result:"Steady fat loss that keeps the muscle, so the shape actually changes."},
-   {ico:"🥘",t:"Meals and groceries, handled",s:"Two weeks planned, cart filled",scene:"meals",
-    flow:["Every other Friday","Health Agent plans meals you like and fills the cart","You check out from one link"],
-    ask:{q:"Next 2 weeks: 14 dinners, 182 g protein a day. Cart is $148. Check out?",o:["I'll check out now (link)","Swap fish for chicken","Remind me tonight"],p:0,r:"Link sent. Delivery Saturday 9–11 AM."},
-    result:"No 6 PM \"what's for dinner\". The plan and the cart are already done."},
-   {ico:"🩺",t:"Text a nurse",s:"Sick at 10 PM? Ask a real nurse",
-    flow:["You text: \"sore throat and fever since this morning\"","Health Agent drafts the message for your plan's 24/7 nurse chat","You approve; the nurse's answer comes back by text"],
-    ask:{q:"Send to the nurse line: \"Adult, 101.5 fever and sore throat since 8 AM, no trouble breathing, no meds yet.\"",o:["Send it","Change the wording","I'll call instead (number)"],p:0,r:"Sent. The nurse says: urgent care tomorrow is fine; the in-network one 6 min away is a $50 copay."},
-    result:"Real advice from a nurse in minutes, without sitting on hold, and the right place to go at the right price."},
-   {ico:"🚭",t:"Quit a habit, without shame",s:"Sam is quitting vaping",scene:"streak",
-    flow:["Sam texts: \"I want to quit vaping\"","Life Coach writes down the why and plans the hard moments","One private check-in a day"],
-    ask:{q:"Day 30 without vaping. 🎉 How was today?",o:["Good, no cravings","Hard, but I held on","I slipped"],rs:["30 days! About $150 saved. Put it toward the trip you mentioned?","That's the win that counts. Hard days held are how streaks get built.","Thanks for telling me. One slip doesn't erase 29 days. What was going on? Tomorrow is day 1 of the next streak."]},
-    result:"A private coach who notices the streak, forgives the slip, and keeps the reason in front of you. (Quitline: 1-800-QUIT-NOW.)"},
-   {ico:"🪜",t:"Plan the long game",s:"From the body you want down to this week",scene:"ladder",
-    ladder:{h:"Sam's health plan",sub:"Reviewed each quarter with Life Coach",rungs:[["2028 target","185 lb, strong, a half marathon","Checked against your values each January"],["This year","Down 20 lb with muscle kept · lift 3 times a week","Weigh-ins and lifts, checked weekly"],Object.assign(["This quarter","180 g of protein on 5 days a week","Averaging 3 days now"],{now:1}),["This week","Prep 4 lunches on Saturday","60 minutes, groceries already in the cart"]]},
-    flow:["Each quarter, Life Coach runs your health review","Health Agent brings weigh-ins, workouts and meals; Life Coach sets the quarter's focus","You pick this week's one health step"],
-    ask:{q:"Q1 health focus: protein on 5 days a week. This week: prep 4 lunches on Saturday. Make it the week's commitment?",o:["Yes, add it for Saturday","Pick a different focus","Ask me at Saturday's review"],p:0,r:"Added for Saturday, 60 minutes. Health Agent put the groceries in your cart."},
-    result:"The long goal stays steady while each week's step stays small enough to actually do."}
-  ]},
- {id:"home",tab:"Home & family",title:"Home and family, handled",tag:"Co-parenting that runs smoothly, and the house fixed by whoever should pay for it.",agents:["relmgr","coach","house","pets"],
-  sc:[
-   {ico:"👨‍👧‍👦",t:"Co-parenting, kept easy",s:"Kids' weekends, handoffs and shared costs",scene:"coparent",
-    flow:["Thursday before a kids' weekend","Relationship Manager lines up pickup, plans and shared costs","You approve one friendly note"],
-    ask:{q:"Kids' weekend starts Friday. Soccer fees were $120. Send Jordan this: \"Hi Jordan, I'll pick the kids up from school at 3:30 Friday. Soccer fees were $120, so your half is $60. Receipt attached. Thanks!\"",o:["Send it","Edit it first","Ask me tomorrow"],p:0,r:"Sent. Pickup is on your calendar with a reminder at 3."},
-    result:"Every handoff smooth, every shared cost split fairly, and every message calm and friendly."},
-   {ico:"🔧",t:"Something broke",s:"Who fixes it, and who pays",scene:"repair",
-    flow:["You text: \"the dishwasher is leaking\"","Home Manager checks the lease and drafts the ask","You approve the message"],
-    ask:{q:"Your lease says the landlord repairs included appliances. Send this request to Dana (landlord)?",o:["Send it","Edit it first","I'll fix it myself"],p:0,r:"Sent. Follow-up set for Thursday if Dana doesn't reply."},
-    result:"You never pay for a repair that's someone else's job."},
-   {ico:"🪜",t:"Plan family time",s:"From the home you want down to this week",scene:"ladder",
-    ladder:{h:"Sam's home and family plan",sub:"Reviewed each quarter with Life Coach",rungs:[["5-year target","A calm home, kids close, a house of your own","Checked against your values each January"],["This year","Every custody weekend planned ahead · $12k toward a down payment","Checked monthly"],Object.assign(["This quarter","One planned outing with each kid every month","1 of 3 so far"],{now:1}),["This week","Plan Saturday's hike with Jordan","20 minutes, trail and weather picked"]]},
-    flow:["Each quarter, Life Coach runs your home and family review","Relationship Manager brings the custody calendar; Home Manager brings the house plan","You pick this week's one family step"],
-    ask:{q:"Q1 family focus: one planned outing with each kid every month. This week: plan Saturday's hike with Jordan. Add it?",o:["Yes, add it","Pick a different focus","Ask me at Saturday's review"],p:0,r:"Added. Relationship Manager has the trail, the weather and a draft text to the co-parent."},
-    result:"Time with the people at home gets planned, not squeezed in."}
-  ]},
- {id:"style",tab:"Shopping & Style",title:"Buy smart, look sharp, give well",tag:"Big purchases bought at the right price, an outfit picked for whatever today holds, and a gift ready for every birthday.",agents:["shop","coach","clothier","gift"],
-  sc:[
-   {ico:"🏷️",t:"Buy it at the right price",s:"Research once, then wait for the dip",scene:"price",
-    flow:["You say: \"I need a new office chair\"","Shopping Expert compares the top picks and watches the price","You get one tap when it drops"],
-    ask:{q:"The chair you picked just dropped from $495 to $389, the lowest in 6 months. It's in the cart.",o:["Check out (link)","Keep watching","Show me the other two"],p:0,r:"Link sent. You saved $106."},
-    result:"You buy the right thing once, and never at full price."},
-   {ico:"👔",t:"Today's outfit",s:"From your own closet, for your day",scene:"outfit",
-    flow:["6:30 AM, before the morning text","Clothier reads your calendar and the weather","One outfit, from clothes you own"],
-    ask:{q:"Client lunch at 12 and 38°F with wind. Navy chinos, grey merino crew, brown boots and the wool coat?",o:["Perfect","Something more casual","Ask me tomorrow"],p:0,r:"Laid out in the morning text. Coat's back from the cleaners Friday."},
-    result:"No standing in front of the closet. Dressed right for the day, every day."},
-   {ico:"🎂",t:"Birthdays that never sneak up",s:"A gift in the cart, three weeks out",scene:"bdays",
-    flow:["A birthday is 3 weeks away","Gift Concierge picks a gift they'll like, in budget","You check out from one link"],
-    ask:{q:"Your sister's birthday is the 28th. The $35 cookbook she mentioned in March is in the cart.",o:["Check out (link)","Pick something else","Just a card this year"],p:0,r:"Link sent. It arrives on the 24th."},
-    result:"Everyone gets remembered, at least with a card."},
-   {ico:"🪜",t:"Buy with a plan",s:"Fewer, better things, on purpose",scene:"ladder",
-    ladder:{h:"Sam's style and buying plan",sub:"Reviewed each quarter with Life Coach",rungs:[["Long term","A wardrobe that fits who you're becoming","Buy less, buy better"],["This year","Replace the 10 most-worn pieces within $1,200","Checked monthly"],Object.assign(["This quarter","Two interview-ready outfits under $300","1 of 2 so far"],{now:1}),["This week","Try on the navy blazer at home","Wednesday, 15 minutes; free returns until Friday"]]},
-    flow:["Each quarter, Life Coach runs your buying review","Shopping Expert and Clothier bring what you own, what's worn out and what's on sale","You pick this week's one step"],
-    ask:{q:"Q1 style focus: two interview-ready outfits under $300. This week: try on the navy blazer and return it if it doesn't fit. Add it?",o:["Yes, add it for Wednesday","Pick a different focus","Ask me at Saturday's review"],p:0,r:"Added for Wednesday evening, 15 minutes. The return label is ready if you need it."},
-    result:"Big buys follow a plan instead of a sale email."}
-  ]},
- {id:"trust",tab:"People & paperwork",title:"Every person remembered, every page understood",tag:"New people saved with how you met, and fine print explained in plain words before you sign.",agents:["relmgr","coach","pi","legal"],
-  sc:[
-   {ico:"📇",t:"Every new person, remembered",s:"Names, how you met, what you talked about",scene:"contact",
-    flow:["A text from a number you don't have saved","Investigator matches it to your email, calendar and contacts","Saved with how you met; only a call back you have to make goes on your list"],
-    ask:{q:"(801) 555-0193 is Marco Diaz. You met at the climbing gym on Oct 30 and he invited you to Thursday's bouldering night. Save him and add Thursday 7 PM?",o:["Yes, save and add it","Just save him","Ask me later"],p:0,r:"Saved as Marco (climbing gym). Thursday 7 PM is on your calendar."},
-    result:"No more \"sorry, who's this?\". Every new friend is saved with the story of how you met."},
-   {ico:"📄",t:"Fine print, decoded",s:"Before you sign",scene:"doc",
-    flow:["A lease, contract or legal letter arrives","Legal Advisor marks what it asks of you, and by when","Questions for a real lawyer, if you need one"],
-    ask:{q:"Lease renewal: rent up 6%, and 60 days' notice to leave. Add the notice deadline to your calendar?",o:["Yes, with a reminder","No","Ask me later"],p:0,r:"Deadline added for Dec 31, with a reminder two weeks before."},
-    result:"No surprises hiding in the fine print."},
-   {ico:"🪜",t:"Keep people and papers in order",s:"A steady habit, not a crisis",scene:"ladder",
-    ladder:{h:"Sam's people and paperwork plan",sub:"Reviewed each quarter with Life Coach",rungs:[["Long term","A circle you keep in touch with, papers always in order","Checked against your values each January"],["This year","Will and beneficiaries done · catch up with 12 old friends","Checked monthly"],Object.assign(["This quarter","One catch-up a week with someone you've drifted from","4 of 12 so far"],{now:1}),["This week","Call Alex on Thursday evening","20 minutes, with notes from last time"]]},
-    flow:["Each quarter, Life Coach runs your people and paperwork review","Relationship Manager brings who you haven't talked to; Legal Advisor brings papers due","You pick this week's one step"],
-    ask:{q:"Q1 people focus: one catch-up a week with someone you've drifted from. This week: call Alex on Thursday evening. Add it?",o:["Yes, add it","Pick someone else","Ask me at Saturday's review"],p:0,r:"Added for Thursday, 20 minutes. Relationship Manager put what you talked about last time in the task."},
-    result:"Friendships and paperwork get steady attention, not a scramble."}
-  ]},
- {id:"coaching",tab:"Coaching",title:"Coaches that keep the long game going",tag:"Life Coach and Business Coach turn your values into yearly goals, a few outcomes each quarter and at most 3 commitments a week, then check in weekly, monthly, quarterly and yearly.",agents:["coach","bcoach"],
-  sc:[
-   {ico:"🗓️",t:"The Saturday sit-down",s:"Friday reports in, 3 commitments out",scene:"week",
-    flow:["Friday 5 PM, every role sends its weekly report","Life Coach scores each area against your own gauges; Business Coach hands over the business scorecard","Saturday 9:30: the scorecard, a few questions, at most 3 commitments"],
-    ask:{q:"This week: Money 4/5, Health 3/5, Career 4/5, Business 3/5. Commit to protein on 5 days, following up 2 proposals and calling Alex?",o:["Yes, those three","Swap one","Just two this week"],p:0,r:"Three commitments on your list, each with a time. Next sit-down Saturday."},
-    result:"One short check-in a week keeps every area moving, and you never track any of it yourself."},
-   {ico:"📏",t:"Monthly pace check",s:"Is each quarter's goal on track?",scene:"pace",
-    flow:["First Saturday of each month","Life Coach compares each goal's progress with how much of the quarter has passed","Anything behind gets one small adjustment, never a pile of new tasks"],
-    ask:{q:"Month 2 of 3: the store card is 45% paid off, behind pace. Send an extra $100 to it this payday?",o:["Yes, add $100","Keep the plan","Ask me after payday"],p:0,r:"Next payday sends $450 to the store card. Back on pace by month's end."},
-    result:"Slips get caught at the one-month mark, while they're still easy to fix."},
-   {ico:"🧭",t:"Quarterly and yearly reviews",s:"Values, then years, then the next quarter",scene:"review",
-    flow:["First Saturday of January, April, July and October","Life Coach reviews the quarter; Business Coach does the same for the business; in January, the whole year against your values","You pick 1 to 3 outcomes for the next quarter"],
-    ask:{q:"Last quarter: 2 of 3 outcomes met. Next quarter: keep debt payoff and career, and move running to mornings?",o:["Yes, set those","Change one","Talk it through at the sit-down"],p:0,r:"Next quarter's outcomes are set. This week's commitments come from them."},
-    result:"Every quarter starts from what you value, and nothing important drifts for more than three months."},
-   {ico:"📓",t:"A coach that learns you",s:"The coaching log",scene:"log",
-    flow:["After every check-in","Life Coach logs what was kept, what slipped and why","Next week's suggestions use it"],
-    ask:{q:"You keep morning commitments 8 times in 10 and evening ones 3 in 10. Default new commitments to mornings?",o:["Yes, mornings","Keep mixing","Ask me next month"],p:0,r:"Done. Saturday's suggestions will lean on mornings."},
-    result:"The coaching fits you better every month, because it learns from what actually worked."}
-  ]}
+ {id:"career",agents:["career","coach","pi","pr"],sc:[{ico:"🎯",scene:"lead"},{ico:"✍️",scene:"resume"},{ico:"🤝",scene:"offer",sim:"negotiate"},{ico:"🪜",scene:"ladder"}]},
+ {id:"money",agents:["wealth","coach","book","pi"],sc:[{ico:"📈",sim:"trade"},{ico:"🏖️",sim:"retire"},{ico:"🧾",scene:"stmt"},{ico:"🪜",scene:"ladder"}]},
+ {id:"business",agents:["biz","bcoach","arch","book","legal"],sc:[{ico:"📊",scene:"dash"},{ico:"🌳",scene:"tree"},{ico:"🪜",scene:"ladder"}]},
+ {id:"health",agents:["health","coach","shop"],sc:[{ico:"⚖️",sim:"body"},{ico:"🥘",scene:"meals"},{ico:"🩺"},{ico:"🚭",scene:"streak"},{ico:"🪜",scene:"ladder"}]},
+ {id:"home",agents:["relmgr","coach","house","pets"],sc:[{ico:"👨‍👧‍👦",scene:"coparent"},{ico:"🔧",scene:"repair"},{ico:"🪜",scene:"ladder"}]},
+ {id:"style",agents:["shop","coach","clothier","gift"],sc:[{ico:"🏷️",scene:"price"},{ico:"👔",scene:"outfit"},{ico:"🎂",scene:"bdays"},{ico:"🪜",scene:"ladder"}]},
+ {id:"trust",agents:["relmgr","coach","pi","legal"],sc:[{ico:"📇",scene:"contact"},{ico:"📄",scene:"doc"},{ico:"🪜",scene:"ladder"}]},
+ {id:"coaching",agents:["coach","bcoach"],sc:[{ico:"🗓️",scene:"week"},{ico:"📏",scene:"pace"},{ico:"🧭",scene:"review"},{ico:"📓",scene:"log"}]},
 ];
+const LEADS=["ea","coach"]; // your go-to agents; everyone else reports to them. bg:true = background role, not shown
+
+/* ---------- language ---------- */
+const I=window.DSI18n, DICT=window.SHOULD_I18N;
+let lang=I.pickLang(), L=DICT[lang];
+const fmt=(s,v)=>String(s).replace(/\{(\w+)\}/g,(m,k)=>k in v?v[k]:m);
+const agent=k=>({...AGENTS[k],...L.agents[k]});
+const goalText=id=>L.goals[id];
 
 const $=s=>document.querySelector(s);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const money=n=>"$"+Math.round(n).toLocaleString("en-US");
+const money=n=>"$"+Math.round(n).toLocaleString(L.sims.money_locale);
+const av=(k,size,badge=true)=>window.DSAvatars?DSAvatars.avatarSVG(ORG[k]||k,{size,badge,label:agent(k).n}):AGENTS[k].i;
 
 /* ---------- scenes: one picture per scenario ---------- */
+const rung=(r,now)=>`<div class="rung${now?" now":""}"><small>${r[0]}</small><b>${r[1]}</b><span>${r[2]}</span></div>`;
 const SCENES={
- lead:()=>`<div class="lead-card"><div class="lc-top"><div><b>Senior Platform Engineer</b><span>Northwind Health · 400 people · Remote</span></div><div class="ring" style="--p:92"><span>92%</span></div></div>
-  <ul class="checks"><li>Fully remote</li><li>$185–210k, above your $165k floor</li><li>Full benefits and a 4% 401(k) match</li><li>Real company, good reviews (Investigator)</li></ul>
-  <div class="dropped"><small>Dropped this morning</small><s>Staff Engineer · on-site 5 days</s><s>Platform Lead · $140k max</s><s>"DevOps Ninja" · recruiter flagged</s></div></div>`,
- resume:()=>`<div class="doc"><div class="doc-h"><b>Sam Rivera</b><span>Tailored for: Senior Platform Engineer, Northwind Health</span></div>
-  <p><del>Managed infrastructure for engineering teams.</del> <ins>Ran the Kubernetes platform for 6 product teams.</ins></p>
-  <p><del>Helped reduce cloud costs.</del> <ins>Cut cloud spend 31% ($420k a year) by right-sizing clusters.</ins></p>
-  <p>Led the move from on-prem to AWS for 40 services, with zero downtime.</p>
-  <div class="kw"><small>Posting keywords covered</small><span class="pill on">Kubernetes</span><span class="pill on">cost savings</span><span class="pill on">platform</span><span class="pill on">mentoring</span><span class="pill">Go</span></div></div>`,
- offer:()=>{const X=v=>((v-140)/60*100).toFixed(1)+"%";return `<div class="range"><div class="rg-track"><div class="rg-band" style="left:${X(170)};width:${(15/60*100).toFixed(1)}%"></div>
-  <i class="mk off" style="left:${X(160)}"><b>Offer</b>$160k</i><i class="mk floor" style="left:${X(165)}"><b>Floor</b>$165k</i><i class="mk ctr" style="left:${X(178)}"><b>Counter</b>$178k</i></div>
-  <div class="rg-axis"><span>$140k</span><span class="mkt">▬ Market for this role: $170–185k</span><span>$200k</span></div></div>`},
- ladder:w=>{const L=w.ladder;return `<div class="ladder"><div class="ld-h"><b>${L.h}</b><span>${L.sub}</span></div>
-  ${L.rungs.map(r=>`<div class="rung${r.now?" now":""}"><small>${r[0]}</small><b>${r[1]}</b><span>${r[2]}</span></div>`).join("")}</div>`},
- week:()=>`<div class="ladder"><div class="ld-h"><b>This week's scorecard</b><span>Built from 9 Friday reports, Saturday 9:30</span></div>
-  ${[["Money","4 of 5","Accountant, Financial Advisor"],["Health","3 of 5","Health Agent"],["Career","4 of 5","Career Assistant"],["Business","3 of 5","from Business Coach's scorecard"]].map(r=>`<div class="rung"><small>${r[0]}</small><b>${r[1]}</b><span>${r[2]}</span></div>`).join("")}
-  <div class="rung now"><small>This week's commitments (3 at most)</small><b>Protein on 5 days · follow up 2 proposals · call Alex</b><span>On your list, each with its own time</span></div></div>`,
- pace:()=>`<div class="ladder"><div class="ld-h"><b>Quarter pace check</b><span>Month 2 of 3: two thirds of the quarter gone</span></div>
-  <ul class="dl pace">${[["Protein on 5 days a week",70,"on pace"],["Store card paid off",45,"behind"],["Two open proposals signed",50,"behind"]].map(r=>`<li><span>${r[0]}</span><i style="--w:${r[1]}%"></i><b>${r[2]}</b></li>`).join("")}</ul></div>`,
- review:()=>`<div class="ladder"><div class="ld-h"><b>Quarterly review</b><span>First Saturday of the quarter</span></div>
-  ${[["Met","Store card paid off","$2,100, two weeks early"],["Met","Lead one cross-team decision","Build pipeline proposal approved"],["Missed","Run 3 times a week","2 a week on average: the plan moves to mornings"]].map(r=>`<div class="rung${r[0]==="Met"?"":" now"}"><small>${r[0]}</small><b>${r[1]}</b><span>${r[2]}</span></div>`).join("")}
-  <div class="rung"><small>In January</small><b>The whole year, checked against your values</b><span>Then next year's goals, one per area</span></div></div>`,
- log:()=>`<div class="ladder"><div class="ld-h"><b>Coaching log</b><span>What the coach has learned about you</span></div>
-  ${[["12 weeks","Morning commitments get kept 8 times in 10","Evening ones, 3 in 10"],["6 paydays","Money steps on payday get done the same day","Later in the week, half slip"],["9 weeks","More than 3 commitments drops follow-through to 40%","So it never suggests a fourth"]].map(r=>`<div class="rung"><small>${r[0]}</small><b>${r[1]}</b><span>${r[2]}</span></div>`).join("")}</div>`,
- stmt:()=>`<div class="stmt"><div class="st-h"><b>Checking ···4417</b><span>This morning</span></div>
-  <div class="row"><span>Nov 4</span><span>Blue Door Coffee</span><b>$6.75</b></div>
-  <div class="row flag"><span>Nov 4</span><span>Blue Door Coffee<em>Same amount, 1 minute later</em></span><b>$6.75</b></div>
-  <div class="row"><span>Nov 3</span><span>Smith's Groceries</span><b>$84.12</b></div>
-  <div class="row due"><span>Thu</span><span>City water bill<em>Not on autopay · due in 3 days</em></span><b>$46.18</b></div></div>`,
- dash:()=>`<div class="kpis"><div><small>Cash on hand</small><b>$18,400</b><span class="up">▲ $2,100 this week</span></div><div class="warn"><small>Overdue invoices</small><b>$3,250</b><span>2 clients, 30+ days</span></div><div><small>Next deadline</small><b>12 days</b><span>State annual renewal</span></div></div>
-  <ul class="dl"><li><span>State renewal · $18</span><i style="--w:60%"></i><b>12 d</b></li><li><span>Q4 estimated tax · $1,240</span><i style="--w:25%"></i><b>66 d</b></li><li><span>Business license</span><i style="--w:10%"></i><b>140 d</b></li></ul>`,
- tree:()=>`<div class="tree"><div class="node top">Sam Holdings LLC<small>owns 100% of each</small></div><div class="kids"><div class="node">Rivera Consulting LLC<small>client work</small></div><div class="node new">Maple Street Rental LLC<small>new · drafted</small></div><div class="node">Sam Studio LLC<small>products</small></div></div></div>`,
- meals:()=>{const D=[["Mon","🌮","Carne asada bowls"],["Tue","🐟","Lime-chili salmon"],["Wed","🍗","Pollo a la brasa"],["Thu","🥩","Lomo saltado"],["Fri","🍤","Shrimp tacos"],["Sat","🍲","Chili verde"],["Sun","🥗","Big cobb salad"]];
-  return `<div class="meals">${D.map(d=>`<div><small>${d[0]}</small><span>${d[1]}</span><b>${d[2]}</b></div>`).join("")}</div><div class="cart"><span>🛒 Cart for 2 weeks</span><b>$148</b><span>182 g protein a day</span></div>`},
- streak:()=>`<div class="streak"><div class="why"><small>Sam's reason, in Sam's words</small>"I want to run with my kids without coughing."</div>
+ lead:()=>{const S=L.scenes.lead;return `<div class="lead-card"><div class="lc-top"><div><b>${S.role}</b><span>${S.co}</span></div><div class="ring" style="--p:92"><span>92%</span></div></div>
+  <ul class="checks">${S.checks.map(c=>`<li>${c}</li>`).join("")}</ul>
+  <div class="dropped"><small>${S.dropped_h}</small>${S.dropped.map(d=>`<s>${esc(d)}</s>`).join("")}</div></div>`},
+ resume:()=>{const S=L.scenes.resume,on=[1,1,1,1,0];return `<div class="doc"><div class="doc-h"><b>${S.name}</b><span>${S.tailored}</span></div>
+  ${S.rows.map(r=>`<p><del>${r[0]}</del> <ins>${r[1]}</ins></p>`).join("")}<p>${S.plain}</p>
+  <div class="kw"><small>${S.kw_h}</small>${S.kw.map((k,i)=>`<span class="pill${on[i]?" on":""}">${k}</span>`).join("")}</div></div>`},
+ offer:()=>{const S=L.scenes.offer,X=v=>((v-140)/60*100).toFixed(1)+"%";return `<div class="range"><div class="rg-track"><div class="rg-band" style="left:${X(170)};width:${(15/60*100).toFixed(1)}%"></div>
+  <i class="mk off" style="left:${X(160)}"><b>${S.offer}</b>$160k</i><i class="mk floor" style="left:${X(165)}"><b>${S.floor}</b>$165k</i><i class="mk ctr" style="left:${X(178)}"><b>${S.counter}</b>$178k</i></div>
+  <div class="rg-axis"><span>$140k</span><span class="mkt">${S.market}</span><span>$200k</span></div></div>`},
+ ladder:w=>{const Lw=w.text.ladder;return `<div class="ladder"><div class="ld-h"><b>${Lw.h}</b><span>${Lw.sub}</span></div>${Lw.rungs.map((r,i)=>rung(r,i===2)).join("")}</div>`},
+ week:()=>{const S=L.scenes.week;return `<div class="ladder"><div class="ld-h"><b>${S.h}</b><span>${S.sub}</span></div>${S.rows.map(r=>rung(r)).join("")}${rung(S.now,1)}</div>`},
+ pace:()=>{const S=L.scenes.pace,pct=[70,45,50];return `<div class="ladder"><div class="ld-h"><b>${S.h}</b><span>${S.sub}</span></div>
+  <ul class="dl pace">${S.rows.map((r,i)=>`<li><span>${r[0]}</span><i style="--w:${pct[i]}%"></i><b>${r[1]}</b></li>`).join("")}</ul></div>`},
+ review:()=>{const S=L.scenes.review,met=[1,1,0];return `<div class="ladder"><div class="ld-h"><b>${S.h}</b><span>${S.sub}</span></div>${S.rows.map((r,i)=>rung(r,!met[i])).join("")}${rung(S.jan)}</div>`},
+ log:()=>{const S=L.scenes.log;return `<div class="ladder"><div class="ld-h"><b>${S.h}</b><span>${S.sub}</span></div>${S.rows.map(r=>rung(r)).join("")}</div>`},
+ stmt:()=>{const S=L.scenes.stmt,cls=["","flag","","due"];return `<div class="stmt"><div class="st-h"><b>${S.h}</b><span>${S.sub}</span></div>
+  ${S.rows.map((r,i)=>`<div class="row${cls[i]?" "+cls[i]:""}"><span>${r[0]}</span><span>${r[1]}${r[3]?`<em>${r[3]}</em>`:""}</span><b>${r[2]}</b></div>`).join("")}</div>`},
+ dash:()=>{const S=L.scenes.dash,cls=["","warn",""],w=[60,25,10];return `<div class="kpis">${S.kpis.map((k,i)=>`<div${cls[i]?` class="${cls[i]}"`:""}><small>${k[0]}</small><b>${k[1]}</b><span${i===0?' class="up"':""}>${k[2]}</span></div>`).join("")}</div>
+  <ul class="dl">${S.dl.map((d,i)=>`<li><span>${d[0]}</span><i style="--w:${w[i]}%"></i><b>${d[1]}</b></li>`).join("")}</ul>`},
+ tree:()=>{const S=L.scenes.tree,cls=["","new",""];return `<div class="tree"><div class="node top">${S.top[0]}<small>${S.top[1]}</small></div><div class="kids">${S.kids.map((k,i)=>`<div class="node${cls[i]?" "+cls[i]:""}">${k[0]}<small>${k[1]}</small></div>`).join("")}</div></div>`},
+ meals:()=>{const S=L.scenes.meals,ico=["🌮","🐟","🍗","🥩","🍤","🍲","🥗"];
+  return `<div class="meals">${S.days.map((d,i)=>`<div><small>${d[0]}</small><span>${ico[i]}</span><b>${d[1]}</b></div>`).join("")}</div><div class="cart"><span>${S.cart}</span><b>${S.total}</b><span>${S.protein}</span></div>`},
+ streak:()=>{const S=L.scenes.streak;return `<div class="streak"><div class="why"><small>${S.why_h}</small>${esc(S.why)}</div>
   <div class="dots">${Array.from({length:35},(_,i)=>`<i class="${i<29?"on":i===29?"today":""}"></i>`).join("")}</div>
-  <div class="st-n"><div><b>30</b><span>days free</span></div><div><b>$150</b><span>not spent</span></div><div><b>3</b><span>hard moments planned</span></div></div></div>`,
- bdays:()=>`<div class="bd">${[["J","Jess (sister)","Nov 28","21 days","Cookbook · $35 · in the cart","on"],["M","Mom","Dec 22","45 days","Card + photo book · planned",""],["A","Alex (friend)","Jan 9","63 days","Card · planned",""]].map(b=>`<div class="bd-row ${b[5]}"><span class="av">${b[0]}</span><div><b>${b[1]}</b><small>${b[4]}</small></div><div class="when"><b>${b[3]}</b><small>${b[2]}</small></div></div>`).join("")}</div>`,
- repair:()=>`<div class="repair"><div class="msg me">the dishwasher is leaking</div>
-  <div class="verdict"><small>Who pays</small><b>Your landlord</b><p>Lease §12: "Appliances provided with the unit will be repaired by Landlord." Not caused by misuse, so it's Dana's job.</p></div>
-  <div class="draft"><small>Draft to Dana</small>Hi Dana, the dishwasher in unit 4B started leaking under the door today. Could you send someone this week? I'm home after 5. Thanks, Sam</div></div>`,
- price:()=>{const P=[495,495,479,489,469,475,449,459,439,449,415,389];const max=500,min=370,X=i=>(i/(P.length-1)*100).toFixed(1),Y=v=>((max-v)/(max-min)*100).toFixed(1);
-  return `<div class="price"><div class="pr-top"><div><b>Office chair, top pick</b><span>Picked over 2 others for back support and the 12-year warranty</span></div><div class="pr-now"><b>$389</b><s>$495</s></div></div>
-  <svg class="spark" viewBox="0 0 100 40" preserveAspectRatio="none"><line x1="0" x2="100" y1="${(Y(400)*.4).toFixed(1)}" y2="${(Y(400)*.4).toFixed(1)}" stroke="var(--warm)" stroke-dasharray="2 2" stroke-width=".6"/><polyline fill="none" stroke="var(--accent)" stroke-width="1.6" vector-effect="non-scaling-stroke" points="${P.map((v,i)=>X(i)+","+(Y(v)*.4).toFixed(1)).join(" ")}"/></svg>
-  <div class="pr-ax"><span>6 months ago</span><span class="tg">— your target: under $400</span><span>today</span></div></div>`},
- outfit:()=>`<div class="outfit"><div class="day"><div><small>Today</small><b>38°F, windy</b><span>☁️ High 44°</span></div><div><small>12:00</small><b>Client lunch</b><span>Smart casual</span></div><div><small>5:30</small><b>Gym</b><span>Pack the bag</span></div></div>
-  <div class="fit">${[["🧥","Wool coat","charcoal"],["👕","Merino crew","grey"],["👖","Chinos","navy"],["🥾","Chelsea boots","brown"]].map(o=>`<div><span>${o[0]}</span><b>${o[1]}</b><small>${o[2]}</small></div>`).join("")}</div></div>`,
- coparent:()=>{const days=Array.from({length:28},(_,i)=>i+1),kids=[5,6,7,19,20,21];return `<div class="cop"><div class="cal"><small>November</small><div class="cal-g">${["M","T","W","T","F","S","S"].map(d=>`<i class="h">${d}</i>`).join("")}${days.map(d=>`<i class="${kids.includes(d)?"k":""}${d===19?" t":""}">${d}</i>`).join("")}</div><span><b class="sw"></b>Kids with you</span></div>
-  <div class="cop-r"><div class="hand"><small>Friday handoff</small><b>3:30 PM · school pickup</b><span>Soccer bag and cleats · game Sat 10 AM</span></div>
-  <div class="split"><small>Shared costs this month</small><div><span>Soccer fees</span><b>$120</b><em>$60 each</em></div><div><span>School pictures</span><b>$38</b><em>$19 each</em></div></div></div></div>`},
- contact:()=>`<div class="vcard"><span class="av big">MD</span><div><b>Marco Diaz</b><small>(801) 555-0193 · new</small></div>
-  <ul><li><i>📍</i>Met at the climbing gym, Oct 30</li><li><i>✉️</i>Same person who emailed the bouldering-night invite</li><li><i>📅</i>Thursday 7 PM, bouldering night</li><li><i>👥</i>Friend of Alex (in your contacts)</li></ul></div>`,
- doc:()=>`<div class="doc lease"><div class="doc-h"><b>Lease renewal, unit 4B</b><span>4 pages · arrived today</span></div>
-  <p><mark>Monthly rent will be $1,537</mark> beginning January 1. <span class="note">Up 6% from $1,450 (+$87 a month).</span></p>
-  <p>Tenant must give <mark>sixty (60) days' written notice</mark> before vacating. <span class="note">To leave by Feb 28, tell them by Dec 31.</span></p>
-  <p>A pet fee of <mark>$35 per month</mark> applies to each animal. <span class="note">New this year. Ask whether it applies to your cat.</span></p></div>`
+  <div class="st-n">${S.n.map(n=>`<div><b>${n[0]}</b><span>${n[1]}</span></div>`).join("")}</div></div>`},
+ bdays:()=>{const S=L.scenes.bdays,cls=["on","",""];return `<div class="bd">${S.rows.map((b,i)=>`<div class="bd-row ${cls[i]}"><span class="av">${b[0]}</span><div><b>${b[1]}</b><small>${b[4]}</small></div><div class="when"><b>${b[3]}</b><small>${b[2]}</small></div></div>`).join("")}</div>`},
+ repair:()=>{const S=L.scenes.repair;return `<div class="repair"><div class="msg me">${S.msg}</div>
+  <div class="verdict"><small>${S.who_h}</small><b>${S.who}</b><p>${esc(S.p)}</p></div>
+  <div class="draft"><small>${S.draft_h}</small>${S.draft}</div></div>`},
+ price:()=>{const S=L.scenes.price,P=[495,495,479,489,469,475,449,459,439,449,415,389];const max=500,min=370,X=i=>(i/(P.length-1)*100).toFixed(1),Y=v=>((max-v)/(max-min)*100).toFixed(1);
+  return `<div class="price"><div class="pr-top"><div><b>${S.title}</b><span>${S.sub}</span></div><div class="pr-now"><b>${S.now}</b><s>${S.was}</s></div></div>
+  <svg class="spark" viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true"><line x1="0" x2="100" y1="${(Y(400)*.4).toFixed(1)}" y2="${(Y(400)*.4).toFixed(1)}" stroke="var(--warm)" stroke-dasharray="2 2" stroke-width=".6"/><polyline fill="none" stroke="var(--accent)" stroke-width="1.6" vector-effect="non-scaling-stroke" points="${P.map((v,i)=>X(i)+","+(Y(v)*.4).toFixed(1)).join(" ")}"/></svg>
+  <div class="pr-ax"><span>${S.ax[0]}</span><span class="tg">${S.ax[1]}</span><span>${S.ax[2]}</span></div></div>`},
+ outfit:()=>{const S=L.scenes.outfit,ico=["🧥","👕","👖","🥾"];return `<div class="outfit"><div class="day">${S.day.map(d=>`<div><small>${d[0]}</small><b>${d[1]}</b><span>${d[2]}</span></div>`).join("")}</div>
+  <div class="fit">${S.fit.map((o,i)=>`<div><span>${ico[i]}</span><b>${o[0]}</b><small>${o[1]}</small></div>`).join("")}</div></div>`},
+ coparent:()=>{const S=L.scenes.coparent,days=Array.from({length:28},(_,i)=>i+1),kids=[5,6,7,19,20,21];return `<div class="cop"><div class="cal"><small>${S.month}</small><div class="cal-g">${S.wd.map(d=>`<i class="h">${d}</i>`).join("")}${days.map(d=>`<i class="${kids.includes(d)?"k":""}${d===19?" t":""}">${d}</i>`).join("")}</div><span><b class="sw"></b>${S.kids}</span></div>
+  <div class="cop-r"><div class="hand"><small>${S.hand[0]}</small><b>${S.hand[1]}</b><span>${S.hand[2]}</span></div>
+  <div class="split"><small>${S.split_h}</small>${S.split.map(x=>`<div><span>${x[0]}</span><b>${x[1]}</b><em>${x[2]}</em></div>`).join("")}</div></div></div>`},
+ contact:()=>{const S=L.scenes.contact,ico=["📍","✉️","📅","👥"];return `<div class="vcard"><span class="av big">MD</span><div><b>${S.name}</b><small>${S.phone}</small></div>
+  <ul>${S.items.map((t,i)=>`<li><i>${ico[i]}</i>${t}</li>`).join("")}</ul></div>`},
+ doc:()=>{const S=L.scenes.doc;return `<div class="doc lease"><div class="doc-h"><b>${S.h}</b><span>${S.sub}</span></div>${S.ps.map(p=>`<p>${p}</p>`).join("")}</div>`},
 };
 
 function renderTabs(active){
-  $("#tabs").innerHTML=GOALS.map(g=>`<button class="tab" role="tab" aria-selected="${g.id===active}" data-g="${g.id}">${g.tab}</button>`).join("");
+  $("#tabs").innerHTML=GOALS.map(g=>`<button class="tab" role="tab" aria-selected="${g.id===active}" data-g="${g.id}">${goalText(g.id).tab}</button>`).join("");
 }
 function askHTML(a){
-  return `<div class="chat"><div class="msg them"><small>Text from your staff</small>${esc(a.q)}</div><div class="ask"><div class="opts">${a.o.map((o,k)=>`<button data-reply="${esc(a.rs?a.rs[k]:(k===a.p?a.r:(k===2?"OK. I'll ask again later.":"Got it. Nothing happens.")))}"><b>${k+1}</b>${esc(o)}</button>`).join("")}</div><div class="reply msg them"></div></div></div>`;
+  const reply=k=>a.rs?a.rs[k]:(k===0?a.r:(k===2?L.ui.reply_later:L.ui.reply_nothing));
+  return `<div class="chat"><div class="msg them"><small>${L.ui.text_from_staff}</small>${esc(a.q)}</div><div class="ask"><div class="opts">${a.o.map((o,k)=>`<button data-reply="${esc(reply(k))}"><b>${k+1}</b>${esc(o)}</button>`).join("")}</div><div class="reply msg them"></div></div></div>`;
 }
+let current={id:"career",si:0};
 function renderGoal(id,si=0){
-  const g=GOALS.find(x=>x.id===id); renderTabs(id); const w=g.sc[si];
-  $("#goal").innerHTML=`<div class="goal"><h3>${esc(g.title)}</h3><p class="tag">${esc(g.tag)}</p>
-  <div class="who">${g.agents.map(a=>`<button data-agent="${a}">${av(a,22,false)} ${AGENTS[a].n}</button>`).join("")}</div>
-  <div class="picker" role="tablist">${g.sc.map((s,i)=>`<button class="pick" role="tab" aria-selected="${i===si}" data-gid="${g.id}" data-si="${i}"><span class="pk-i">${s.ico}</span><span><b>${esc(s.t)}</b><small>${esc(s.s)}</small></span></button>`).join("")}</div>
+  current={id,si};
+  const g=GOALS.find(x=>x.id===id), G=goalText(id); renderTabs(id); const w={...g.sc[si],text:G.sc[si]}, X=w.text;
+  $("#goal").innerHTML=`<div class="goal"><h3>${esc(G.title)}</h3><p class="tag">${esc(G.tag)}</p>
+  <div class="who">${g.agents.map(a=>`<button data-agent="${a}">${av(a,22,false)} ${agent(a).n}</button>`).join("")}</div>
+  <div class="picker" role="tablist">${g.sc.map((s,i)=>`<button class="pick" role="tab" aria-selected="${i===si}" data-gid="${g.id}" data-si="${i}"><span class="pk-i">${s.ico}</span><span><b>${esc(G.sc[i].t)}</b><small>${esc(G.sc[i].s)}</small></span></button>`).join("")}</div>
   <article class="scn">
-   <ol class="flow">${w.flow.map((f,i)=>`<li><small>${["When","Your staff","You"][i]}</small>${esc(f)}</li>`).join("")}</ol>
+   <ol class="flow">${X.flow.map((f,i)=>`<li><small>${L.ui.flow_labels[i]}</small>${esc(f)}</li>`).join("")}</ol>
    ${w.scene?`<div class="stage">${SCENES[w.scene](w)}</div>`:""}
    ${w.sim?`<div id="simbox"></div>`:""}
-   ${askHTML(w.ask)}
-   <p class="gets"><b>What you get</b>${esc(w.result)}</p>
+   ${askHTML(X.ask)}
+   <p class="gets"><b>${L.ui.what_you_get}</b>${esc(X.result)}</p>
   </article></div>`;
   if(w.sim) SIMS[w.sim]($("#simbox"));
 }
@@ -806,117 +593,140 @@ function chart(series,{w=320,h=170,yfmt=v=>v,xlab=[]}={}){
   series.forEach(s=>{g+=`<polyline fill="none" stroke="${s.c}" stroke-width="2.5" stroke-linejoin="round" ${s.dash?'stroke-dasharray="5 4"':''} points="${s.d.map((v,i)=>X(i).toFixed(1)+","+Y(v).toFixed(1)).join(" ")}"/>`});
   return g+`</svg>`;
 }
-function ctl(id,label,min,max,step,val,fmt){return `<label class="ctl" for="${id}"><span>${label}</span><output id="${id}o">${fmt(val)}</output><input type="range" id="${id}" min="${min}" max="${max}" step="${step}" value="${val}"></label>`}
+function ctl(id,label,min,max,step,val,f){return `<label class="ctl" for="${id}"><span>${label}</span><output id="${id}o">${f(val)}</output><input type="range" id="${id}" min="${min}" max="${max}" step="${step}" value="${val}"></label>`}
+const kfmt=v=>v>=1e6?"$"+(v/1e6).toFixed(1)+"M":"$"+Math.round(v/1e3)+"k";
 
 const SIMS={
  trade(el){
-  const ST={index:{n:"Index only",r:.07,c:-.34,v:"Buy and hold the S&P 500"},core:{n:"Core + AI",r:.078,c:-.28,v:"80% index, 20% traded by the AI bot"},mom:{n:"Momentum",r:.085,c:-.42,v:"AI rides the strongest trends"},lowvol:{n:"Low-volatility",r:.064,c:-.2,v:"AI picks the steadiest stocks"},div:{n:"Dividend income",r:.066,c:-.26,v:"Steady payouts, reinvested"}};
-  const SC={typical:{n:"Typical market",b:0,crash:false},crash:{n:"Crash in year 2",b:0,crash:true},boom:{n:"Boom years",b:.04,crash:false}};
+  const S=L.sims.trade;
+  const ST={index:{r:.07,c:-.34},core:{r:.078,c:-.28},mom:{r:.085,c:-.42},lowvol:{r:.064,c:-.2},div:{r:.066,c:-.26}};
+  const SC={typical:{b:0,crash:false},crash:{b:0,crash:true},boom:{b:.04,crash:false}};
+  const yrs=v=>fmt(S.years_fmt,{n:v});
   let st="core",sc="typical";
-  el.innerHTML=`<div class="sim"><h4>Pick a strategy, run the scenarios</h4><p class="muted" style="margin:0;font-size:14px">Choose how the bot invests, then see how it holds up next to simply buying the index.</p>
-   <div class="built" id="tS">${Object.entries(ST).map(([k,o])=>`<button class="chip" data-st="${k}">${o.n}</button>`).join("")}</div>
+  el.innerHTML=`<div class="sim"><h4>${S.h}</h4><p class="muted" style="margin:0;font-size:14px">${S.p}</p>
+   <div class="built" id="tS">${Object.keys(ST).map(k=>`<button class="chip" data-st="${k}">${S.st[k][0]}</button>`).join("")}</div>
    <p class="muted" id="tV" style="margin:8px 0 0;font-size:13px"></p>
-   <div class="built" id="tC">${Object.entries(SC).map(([k,o])=>`<button class="chip" data-sc="${k}">${o.n}</button>`).join("")}</div>
-   ${ctl("ta","Start with","1000","100000","1000","10000",money)}
-   ${ctl("tm","Add every month","0","2000","50","300",money)}
-   ${ctl("ty","Years","3","30","1","10",v=>v+" years")}
-   <div class="big"><div><span>Index only</span><b id="tA"></b></div><div class="good"><span id="tBl"></span><b id="tB"></b></div></div>
-   <div class="legend"><span><i style="background:var(--muted)"></i>Index only</span><span><i style="background:var(--accent)"></i><span id="tL"></span></span><span id="tW"></span></div>
-   <div id="tCh"></div><p class="note">Illustration with assumed average returns and crash depths, not a forecast. Investing can lose money. Not financial advice.</p></div>`;
-  const path=(o,s,yrs,a,m)=>{let v=a,d=[v],peak=v,worst=0;for(let y=1;y<=yrs;y++){let r=o.r+s.b;if(s.crash&&y===2)r=o.c;if(s.crash&&y===3)r=o.r+Math.abs(o.c)*.45;v=v*(1+r)+m*12;d.push(v);peak=Math.max(peak,v);worst=Math.min(worst,v/peak-1)}return {d,worst}};
-  const run=()=>{const a=+$("#ta").value,m=+$("#tm").value,y=+$("#ty").value;$("#tao").textContent=money(a);$("#tmo").textContent=money(m);$("#tyo").textContent=y+" years";
+   <div class="built" id="tC">${Object.keys(SC).map(k=>`<button class="chip" data-sc="${k}">${S.sc[k]}</button>`).join("")}</div>
+   ${ctl("ta",S.start,"1000","100000","1000","10000",money)}
+   ${ctl("tm",S.monthly,"0","2000","50","300",money)}
+   ${ctl("ty",S.years,"3","30","1","10",yrs)}
+   <div class="big"><div><span>${S.index}</span><b id="tA"></b></div><div class="good"><span id="tBl"></span><b id="tB"></b></div></div>
+   <div class="legend"><span><i style="background:var(--muted)"></i>${S.index}</span><span><i style="background:var(--accent)"></i><span id="tL"></span></span><span id="tW"></span></div>
+   <div id="tCh"></div><p class="note">${S.note}</p></div>`;
+  const path=(o,s,y,a,m)=>{let v=a,d=[v],peak=v,worst=0;for(let i=1;i<=y;i++){let r=o.r+s.b;if(s.crash&&i===2)r=o.c;if(s.crash&&i===3)r=o.r+Math.abs(o.c)*.45;v=v*(1+r)+m*12;d.push(v);peak=Math.max(peak,v);worst=Math.min(worst,v/peak-1)}return {d,worst}};
+  const run=()=>{const a=+$("#ta").value,m=+$("#tm").value,y=+$("#ty").value;$("#tao").textContent=money(a);$("#tmo").textContent=money(m);$("#tyo").textContent=yrs(y);
    el.querySelectorAll("[data-st]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.st===st));el.querySelectorAll("[data-sc]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.sc===sc));
-   el.querySelectorAll(".chip").forEach(b=>{const on=b.getAttribute("aria-pressed")==="true";b.style.background=on?"var(--accent)":"";b.style.color=on?"#fff":"";b.style.borderColor=on?"var(--accent)":""});
-   const I=path(ST.index,SC[sc],y,a,m),S=path(ST[st],SC[sc],y,a,m);
-   $("#tV").textContent=ST[st].v;$("#tA").textContent=money(I.d.at(-1));$("#tB").textContent=money(S.d.at(-1));$("#tBl").textContent=ST[st].n;$("#tL").textContent=ST[st].n;
-   $("#tW").textContent=SC[sc].crash?`Crash year: ${Math.round(ST[st].c*100)}% vs index ${Math.round(ST.index.c*100)}%`:"";
-   $("#tCh").innerHTML=chart([{d:I.d,c:"var(--muted)",dash:1,lo:0},{d:S.d,c:"var(--accent)",lo:0}],{yfmt:v=>v>=1e6?"$"+(v/1e6).toFixed(1)+"M":"$"+Math.round(v/1e3)+"k",xlab:[[0,"Now"],[y,y+" yrs"]]});};
+   el.querySelectorAll(".chip").forEach(b=>{const on=b.getAttribute("aria-pressed")==="true";b.style.background=on?"var(--accent)":"";b.style.color=on?"var(--on-accent)":"";b.style.borderColor=on?"var(--accent)":""});
+   const Ix=path(ST.index,SC[sc],y,a,m),Sx=path(ST[st],SC[sc],y,a,m);
+   $("#tV").textContent=S.st[st][1];$("#tA").textContent=money(Ix.d.at(-1));$("#tB").textContent=money(Sx.d.at(-1));$("#tBl").textContent=S.st[st][0];$("#tL").textContent=S.st[st][0];
+   $("#tW").textContent=SC[sc].crash?fmt(S.crash_fmt,{a:Math.round(ST[st].c*100),b:Math.round(ST.index.c*100)}):"";
+   $("#tCh").innerHTML=chart([{d:Ix.d,c:"var(--muted)",dash:1,lo:0},{d:Sx.d,c:"var(--accent)",lo:0}],{yfmt:kfmt,xlab:[[0,S.now],[y,fmt(S.yrs_fmt,{n:y})]]});};
   el.querySelectorAll("[data-st]").forEach(b=>b.onclick=()=>{st=b.dataset.st;run()});
   el.querySelectorAll("[data-sc]").forEach(b=>b.onclick=()=>{sc=b.dataset.sc;run()});
   el.querySelectorAll("input").forEach(i=>i.oninput=run);run();
  },
  retire(el){
-  el.innerHTML=`<div class="sim"><h4>Simulate your retirement</h4><p class="muted" style="margin:0;font-size:14px">Sam, 38, earns $110,000 and has $45,000 saved. Slide to see what autopilot changes.</p>
-   ${ctl("ra","Contributing now","2","15","1","5",v=>v+"% of pay")}
-   ${ctl("rm","Employer match up to","0","6","1","4",v=>v+"%")}
-   ${ctl("rr","Yearly return","3","9","0.5","6",v=>v+"%")}
-   <div class="big"><div><span>Today's pace at 65</span><b id="rA"></b></div><div class="good"><span>On autopilot at 65</span><b id="rB"></b></div></div>
-   <div class="legend"><span><i style="background:var(--muted)"></i>Today's pace</span><span><i style="background:var(--accent)"></i>Autopilot: full match + 1% more each raise, up to 15%</span></div>
-   <div id="rC"></div><p class="note">Illustration only, in today's dollars, with 2.5% yearly raises. Not financial advice.</p></div>`;
+  const S=L.sims.retire,pct=v=>fmt(S.now_fmt,{n:v});
+  el.innerHTML=`<div class="sim"><h4>${S.h}</h4><p class="muted" style="margin:0;font-size:14px">${S.p}</p>
+   ${ctl("ra",S.now,"2","15","1","5",pct)}
+   ${ctl("rm",S.match,"0","6","1","4",v=>v+"%")}
+   ${ctl("rr",S.ret,"3","9","0.5","6",v=>v+"%")}
+   <div class="big"><div><span>${S.a}</span><b id="rA"></b></div><div class="good"><span>${S.b}</span><b id="rB"></b></div></div>
+   <div class="legend"><span><i style="background:var(--muted)"></i>${S.leg_a}</span><span><i style="background:var(--accent)"></i>${S.leg_b}</span></div>
+   <div id="rC"></div><p class="note">${S.note}</p></div>`;
   const run=()=>{
    const a=+$("#ra").value,m=+$("#rm").value,r=+$("#rr").value/100;
-   $("#rao").textContent=a+"% of pay";$("#rmo").textContent=m+"%";$("#rro").textContent=r*100+"%";
+   $("#rao").textContent=pct(a);$("#rmo").textContent=m+"%";$("#rro").textContent=r*100+"%";
    let A=45000,B=45000,pay=110000,pctB=Math.max(a,m),da=[],db=[];
    for(let y=38;y<=65;y++){da.push(A);db.push(B);
      A=A*(1+r)+pay*(a+Math.min(a,m))/100; B=B*(1+r)+pay*(pctB+m)/100; pay*=1.025; pctB=Math.min(15,pctB+1);}
    $("#rA").textContent=money(da.at(-1));$("#rB").textContent=money(db.at(-1));
-   $("#rC").innerHTML=chart([{d:da,c:"var(--muted)",dash:1,lo:0},{d:db,c:"var(--accent)",lo:0}],{yfmt:v=>v>=1e6?"$"+(v/1e6).toFixed(1)+"M":"$"+Math.round(v/1e3)+"k",xlab:[[0,"38"],[12,"50"],[27,"65"]]});
+   $("#rC").innerHTML=chart([{d:da,c:"var(--muted)",dash:1,lo:0},{d:db,c:"var(--accent)",lo:0}],{yfmt:kfmt,xlab:[[0,"38"],[12,"50"],[27,"65"]]});
   };
   el.querySelectorAll("input").forEach(i=>i.oninput=run);run();
  },
  negotiate(el){
-  el.innerHTML=`<div class="sim"><h4>What one counteroffer is worth</h4><p class="muted" style="margin:0;font-size:14px">Raises are a percentage of base, so a better start compounds for your whole career.</p>
-   ${ctl("na","Offer base","80000","300000","5000","160000",money)}
-   ${ctl("nb","Negotiated up by","0","15","1","8",v=>v+"%")}
-   ${ctl("nc","Years at this level and above","5","25","1","15",v=>v+" years")}
-   <div class="big"><div><span>Extra in year one</span><b id="nA"></b></div><div class="good"><span>Extra over the whole span</span><b id="nB"></b></div></div>
-   <div class="legend"><span><i style="background:var(--muted)"></i>Took the first offer</span><span><i style="background:var(--accent)"></i>Countered once</span></div>
-   <div id="nC"></div><p class="note">Illustration with 3% yearly raises on base pay only. Bonus and match usually follow base, so the real gap is bigger.</p></div>`;
+  const S=L.sims.negotiate,yrs=v=>fmt(S.years_fmt,{n:v});
+  el.innerHTML=`<div class="sim"><h4>${S.h}</h4><p class="muted" style="margin:0;font-size:14px">${S.p}</p>
+   ${ctl("na",S.base,"80000","300000","5000","160000",money)}
+   ${ctl("nb",S.up,"0","15","1","8",v=>v+"%")}
+   ${ctl("nc",S.span,"5","25","1","15",yrs)}
+   <div class="big"><div><span>${S.a}</span><b id="nA"></b></div><div class="good"><span>${S.b}</span><b id="nB"></b></div></div>
+   <div class="legend"><span><i style="background:var(--muted)"></i>${S.leg_a}</span><span><i style="background:var(--accent)"></i>${S.leg_b}</span></div>
+   <div id="nC"></div><p class="note">${S.note}</p></div>`;
   const run=()=>{
    const a=+$("#na").value,b=+$("#nb").value/100,y=+$("#nc").value;
-   $("#nao").textContent=money(a);$("#nbo").textContent=Math.round(b*100)+"%";$("#nco").textContent=y+" years";
+   $("#nao").textContent=money(a);$("#nbo").textContent=Math.round(b*100)+"%";$("#nco").textContent=yrs(y);
    let p=a,q=a*(1+b),tot=0,da=[],db=[];
    for(let i=0;i<y;i++){da.push(p);db.push(q);tot+=q-p;p*=1.03;q*=1.03;}
    $("#nA").textContent=money(a*b);$("#nB").textContent=money(tot);
-   $("#nC").innerHTML=chart([{d:da,c:"var(--muted)",dash:1,lo:a*.9},{d:db,c:"var(--accent)",lo:a*.9}],{yfmt:v=>"$"+Math.round(v/1e3)+"k",xlab:[[0,"Year 1"],[y-1,"Year "+y]]});
+   $("#nC").innerHTML=chart([{d:da,c:"var(--muted)",dash:1,lo:a*.9},{d:db,c:"var(--accent)",lo:a*.9}],{yfmt:v=>"$"+Math.round(v/1e3)+"k",xlab:[[0,fmt(S.year_fmt,{n:1})],[y-1,fmt(S.year_fmt,{n:y})]]});
   };
   el.querySelectorAll("input").forEach(i=>i.oninput=run);run();
  },
  body(el){
-  el.innerHTML=`<div class="sim"><h4>Project your body recomposition</h4><p class="muted" style="margin:0;font-size:14px">Sam starts at 210 lb and 28% body fat, lifting 3 times a week with high protein.</p>
-   ${ctl("ba","Goal weight","170","205","1","185",v=>v+" lb")}
-   ${ctl("bb","Pace","0.5","2","0.25","1",v=>v+" lb/week")}
-   <div class="big"><div><span>Reach goal in</span><b id="bA"></b></div><div class="good"><span>Body fat at goal</span><b id="bB"></b></div></div>
-   <div class="legend"><span><i style="background:var(--accent)"></i>Weight (lb)</span></div>
+  // The model runs in pounds; the dictionary sets the display unit (lb or kg)
+  const S=L.sims.body,k=S.per_lb,u=S.unit,wt=v=>Math.round(v*k)+" "+u,pace=v=>fmt(S.pace_fmt,{n:+(v*k).toFixed(2),u});
+  el.innerHTML=`<div class="sim"><h4>${S.h}</h4><p class="muted" style="margin:0;font-size:14px">${S.p}</p>
+   ${ctl("ba",S.goal,"170","205","1","185",wt)}
+   ${ctl("bb",S.pace,"0.5","2","0.25","1",pace)}
+   <div class="big"><div><span>${S.a}</span><b id="bA"></b></div><div class="good"><span>${S.b}</span><b id="bB"></b></div></div>
+   <div class="legend"><span><i style="background:var(--accent)"></i>${fmt(S.leg_w,{u})}</span></div>
    <div id="bC"></div>
-   <div class="legend" style="margin-top:10px"><span><i style="background:var(--warm)"></i>Body fat (%)</span></div>
-   <div id="bD"></div><p class="note">Illustration only. With lifting and enough protein, most weight lost is fat; faster than about 1% of body weight a week loses more muscle.</p></div>`;
+   <div class="legend" style="margin-top:10px"><span><i style="background:var(--warm)"></i>${S.leg_f}</span></div>
+   <div id="bD"></div><p class="note">${S.note}</p></div>`;
   const run=()=>{
    const goal=+$("#ba").value,rate=+$("#bb").value;
-   $("#bao").textContent=goal+" lb";$("#bbo").textContent=rate+" lb/week";
+   $("#bao").textContent=wt(goal);$("#bbo").textContent=pace(rate);
    let w=210,fat=210*.28,wk=0,dw=[],df=[];
    const fatShare=rate<=1?.9:rate<=1.5?.8:.7;
-   while(w>goal&&wk<104){dw.push(w);df.push(fat/w*100);const d=Math.min(rate,w-goal);w-=d;fat-=d*fatShare;wk++;}
-   dw.push(w);df.push(fat/w*100);
-   $("#bA").textContent=wk+" weeks";$("#bB").textContent=(fat/w*100).toFixed(1)+"%";
-   const xl=[[0,"Now"],[dw.length-1,"Week "+wk]];
-   $("#bC").innerHTML=chart([{d:dw,c:"var(--accent)",lo:Math.min(...dw)-8}],{h:140,yfmt:v=>Math.round(v)+"",xlab:xl});
+   while(w>goal&&wk<104){dw.push(w*k);df.push(fat/w*100);const d=Math.min(rate,w-goal);w-=d;fat-=d*fatShare;wk++;}
+   dw.push(w*k);df.push(fat/w*100);
+   $("#bA").textContent=fmt(S.weeks_fmt,{n:wk});$("#bB").textContent=(fat/w*100).toFixed(1)+"%";
+   const xl=[[0,S.now],[dw.length-1,fmt(S.week_fmt,{n:wk})]];
+   $("#bC").innerHTML=chart([{d:dw,c:"var(--accent)",lo:Math.min(...dw)-8*k}],{h:140,yfmt:v=>Math.round(v)+"",xlab:xl});
    $("#bD").innerHTML=chart([{d:df,c:"var(--warm)",lo:Math.min(...df)-3}],{h:120,yfmt:v=>Math.round(v)+"%",xlab:xl});
   };
   el.querySelectorAll("input").forEach(i=>i.oninput=run);run();
  }
 };
 
-/* ---------- staff + sheet ---------- */
-const LEADS=["ea","coach"]; // your go-to agents; everyone else reports to them. bg:true = background role, not shown
+/* ---------- static sections, staff + sheet ---------- */
+function renderStatic(){
+  I.translate(L);
+  document.title=L.meta.title;
+  document.querySelector('meta[name="description"]').content=L.meta.description;
+  document.querySelectorAll("[data-phone]").forEach(el=>{
+    el.innerHTML=L.ui[el.dataset.phone].map(([k,h])=>k==="who"?`<div class="whoname">${h}</div>`:k==="time"?`<div class="time">${h}</div>`:`<div class="msg ${k}">${h}</div>`).join("");
+  });
+  document.querySelectorAll("[data-rules]").forEach(el=>{el.innerHTML=L.ui[el.dataset.rules].map(([b,t])=>`<div class="rule"><b>${b}</b>${t}</div>`).join("")});
+  $("#day").innerHTML=L.ui.day.map(([t,b,s])=>`<li><time>${t}</time><div>${b}<small>${s}</small></div></li>`).join("");
+  $("#built").innerHTML=L.ui.built_chips.map(c=>`<span class="chip">${c}</span>`).join("");
+}
 function renderStaff(){
   const order=Object.keys(AGENTS).filter(k=>!AGENTS[k].bg).sort((a,b)=>LEADS.includes(b)-LEADS.includes(a));
-  const card=k=>{const a=AGENTS[k];const lead=LEADS.includes(k);
-    return `<button class="agent${lead?" lead":""}" data-agent="${k}"><span class="ico">${av(k,44)}</span><div><b>${a.n}</b>${a.soon?`<span class="soon">Coming soon</span>`:""}<span>${esc(a.job.split(".")[0])}</span></div></button>`};
+  const card=k=>{const a=agent(k);const lead=LEADS.includes(k);
+    return `<button class="agent${lead?" lead":""}" data-agent="${k}"><span class="ico">${av(k,44)}</span><div><b>${a.n}</b>${a.soon?`<span class="soon">${L.ui.coming_soon}</span>`:""}<span>${esc(a.job.split(". ")[0].replace(/\.$/,""))}</span></div></button>`};
   $("#leadgrid").innerHTML=LEADS.map(card).join("");
   $("#staffgrid").innerHTML=order.filter(k=>!LEADS.includes(k)).map(card).join("");
 }
 function openAgent(k){
-  const a=AGENTS[k]; const goals=GOALS.filter(g=>g.agents.includes(k));
+  const a=agent(k); const goals=GOALS.filter(g=>g.agents.includes(k));
   $("#sheetBody").innerHTML=`<div style="display:flex;gap:12px;align-items:center;margin:4px 40px 6px 0"><div class="goal-ico">${av(k,56)}</div><h3 id="sheetTitle" style="font-size:24px">${a.n}</h3></div>
    <p>${esc(a.job)}</p>
-   <div class="kv"><div><small>Routines</small>${a.routines.map(esc).join(" · ")}</div>
-   <div><small>Never</small>${esc(a.never)}</div>
-   ${goals.length?`<div><small>Works on</small>${goals.map(g=>`<button class="tab" style="margin:6px 6px 0 0" data-jump="${g.id}">${g.tab}</button>`).join("")}</div>`:""}
-   <div><small>Reports to</small>${LEADS.includes(k)?"You":(a.rep||"Executive Assistant")}</div></div>`;
+   <div class="kv"><div><small>${L.ui.routines}</small>${a.routines.map(esc).join(" · ")}</div>
+   <div><small>${L.ui.never}</small>${esc(a.never)}</div>
+   ${goals.length?`<div><small>${L.ui.works_on}</small>${goals.map(g=>`<button class="tab" style="margin:6px 6px 0 0" data-jump="${g.id}">${goalText(g.id).tab}</button>`).join("")}</div>`:""}
+   <div><small>${L.ui.reports_to}</small>${LEADS.includes(k)||a.toYou?L.ui.you:agent("ea").n}</div></div>`;
   $("#shade").classList.add("on");$("#sheet").classList.add("on");document.body.classList.add("locked");$("#sheetX").focus();
 }
 function closeSheet(){$("#shade").classList.remove("on");$("#sheet").classList.remove("on");document.body.classList.remove("locked")}
+
+function setLang(l){
+  lang=l; L=DICT[l]; I.applyLang(l);
+  renderStatic(); renderStaff(); renderGoal(current.id,current.si); closeSheet();
+  menu.set(l,L.meta.lang_label);
+}
 
 document.addEventListener("click",e=>{
   const t=e.target.closest("[data-si],[data-g],[data-agent],[data-jump],[data-reply]");
@@ -929,7 +739,8 @@ document.addEventListener("click",e=>{
 });
 $("#shade").onclick=closeSheet;$("#sheetX").onclick=closeSheet;
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeSheet()});
-renderGoal("career");renderStaff();
+const menu=I.langMenu($("#lang"),{current:lang,label:L.meta.lang_label,onChange:setLang});
+setLang(lang);
 </script>
 </body>
 </html>

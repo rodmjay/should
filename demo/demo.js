@@ -9,7 +9,7 @@
   }
   var GROUPS = [
     { key: 'today', name: 'Today', icon: 'today', tile: 'today', tabs: [['', 'today', 'today', 'var(--r-today)'], ['assistant', 'assistant', 'assistant', 'var(--r-assistant)'], ['coach', 'coach', 'coach', 'var(--r-coach)']] },
-    { key: 'money', name: 'Money', icon: 'bookkeeper', tile: 'money', tabs: [['money', 'overview', 'today', 'var(--pen)'], ['forecast', 'cash forecast', 'financial', 'var(--r-bookkeeper)'], ['bookkeeper', 'accountant', 'bookkeeper', 'var(--r-bookkeeper)'], ['financial', 'financial', 'financial', 'var(--r-financial)'], ['shopping', 'shopping', 'shopping', 'var(--r-shopping)'], ['phone', 'phone', 'it', 'var(--r-it)']] },
+    { key: 'money', name: 'Money', icon: 'bookkeeper', tile: 'money', tabs: [['money', 'overview', 'today', 'var(--pen)'], ['forecast', 'cash forecast', 'financial', 'var(--r-bookkeeper)'], ['bookkeeper', 'accountant', 'bookkeeper', 'var(--r-bookkeeper)'], ['financial', 'financial', 'financial', 'var(--r-financial)'], ['shopping', 'shopping', 'shopping', 'var(--r-shopping)'], ['phone', 'phone', 'it', 'var(--r-it)'], ['forex', 'forex (paper)', 'wealth', 'var(--r-financial)']] },
     { key: 'home-health', name: 'Home & Health', icon: 'home-manager', tile: 'home', tabs: [['home', 'overview', 'today', 'var(--pen)'], ['chores', 'chores', 'home-manager', 'var(--r-home-manager)'], ['health', 'health', 'health', 'var(--r-health)']] },
     { key: 'plans', name: 'Plans', icon: 'scheduler', tile: 'plans', tabs: [['local-guide', 'local guide', 'local-guide', 'var(--r-local-guide)'], ['scheduler', 'scheduler', 'scheduler', 'var(--r-scheduler)'], ['travel', 'travel', 'travel', 'var(--r-travel)'], ['media', 'movies', 'media', 'var(--r-media)']] },
     { key: 'people', name: 'People', icon: 'people', tile: 'people', tabs: [['people', 'overview', 'today', 'var(--pen)'], ['relationship-manager', 'relationships', 'relationship-manager', 'var(--r-relationship-manager)'], ['gifts', 'gifts', 'gifts', 'var(--r-gifts)']] },
@@ -18,7 +18,7 @@
   var CO_TABS = [['', 'overview', 'business'], ['cap', 'cap table', 'financial'], ['compliance', 'compliance', 'legal'], ['money', 'accounts & money', 'bookkeeper'], ['tasks', 'tasks', 'check']];
   var H = D.holding;
   var COMPANIES = [{ slug: 'northstar', name: H.name, color: '#5ac8fa', depth: 0 }].concat(H.subs.map(function (s) { return { slug: s.slug, name: s.name, color: s.color, depth: 1, stage: s.stage }; }));
-  var AREA = { forecast: 'money', phone: 'money', health: 'health', shopping: 'shopping', chores: 'home', home: 'home' };
+  var AREA = { forex: 'money', forecast: 'money', phone: 'money', health: 'health', shopping: 'shopping', chores: 'home', home: 'home' };
   var DESKS = {
     assistant: ['Executive Assistant', 'Chief of staff: the morning text, your list, and one batched ask a day', 'Sent the 8 AM text. 3 things today, 2 decisions waiting. Moved the oil change to Monday so Saturday stays light.', ['Morning text, 8 AM', 'List hygiene, 5:45 AM']],
     coach: ['Personal Coach', 'Your weekly scorecard and the Saturday sit-down', 'Sit-down at 9:30: money and health are green, sleep is yellow. Three questions from the team, and up to 3 commitments for next week.', ['Weekly review, Saturdays 9 AM']],
@@ -56,7 +56,7 @@
   }
   function launcherApps() {
     return GROUPS.map(function (g) { return { name: g.name, icon: g.icon, href: hrefOf(g.tabs[0][0]), bg: 'var(--tile-' + g.tile + ')', act: g.key === 'money' }; })
-      .concat([{ name: 'Cash Forecast', icon: 'financial', href: '#/forecast', bg: 'var(--tile-money)' }, { name: 'Phone', icon: 'it', href: '#/phone', bg: 'var(--tile-money)' }, { name: 'Health', icon: 'health', href: '#/health', bg: 'var(--tile-health)' }, { name: 'Coach', icon: 'coach', href: '#/coach', bg: 'var(--tile-plans)' }, { name: 'Agency desk', icon: 'as-architect', href: '#/agency', bg: 'var(--tile-business)' }]);
+      .concat([{ name: 'Cash Forecast', icon: 'financial', href: '#/forecast', bg: 'var(--tile-money)' }, { name: 'Phone', icon: 'it', href: '#/phone', bg: 'var(--tile-money)' }, { name: 'Forex (paper)', icon: 'wealth', href: '#/forex', bg: 'var(--tile-money)' }, { name: 'Health', icon: 'health', href: '#/health', bg: 'var(--tile-health)' }, { name: 'Coach', icon: 'coach', href: '#/coach', bg: 'var(--tile-plans)' }, { name: 'Agency desk', icon: 'as-architect', href: '#/agency', bg: 'var(--tile-business)' }]);
   }
   function renderBar(g, co) {
     var bar = $('#bar');
@@ -157,6 +157,31 @@
         card('Phone data', dl(X.data) + '<p class="small muted">Counts only. Message text stays on each person’s timeline.</p>') + '</div>';
     },
     forecast: function () { return forecastView(); },
+    forex: function () {
+      var X = D.forex, S = X.strategies;
+      var sgn = function (n) { return (n > 0 ? '+' : n < 0 ? '−' : '') + '$' + Math.abs(n).toLocaleString('en-US', { minimumFractionDigits: 2 }); };
+      var pc = function (n) { return n == null ? '—' : (n > 0 ? '+' : n < 0 ? '−' : '') + Math.abs(n).toFixed(1) + '%'; };
+      var ranked = S.slice().sort(function (a, b) { return b.equity - a.equity; });
+      var W = 900, H = 240, L = 56, R = 14, T = 14, B = 26, all = [].concat.apply([], S.map(function (s) { return s.curve; }));
+      var lo = Math.min.apply(null, all) - 40, hi = Math.max.apply(null, all) + 40, n = S[0].curve.length;
+      var x = function (i) { return L + i * (W - L - R) / (n - 1); }, y = function (v) { return T + (hi - v) / (hi - lo) * (H - T - B); };
+      var eq = '<svg class="eq" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Equity of each paper sub-account"><line x1="' + L + '" x2="' + (W - R) + '" y1="' + y(0) + '" y2="' + y(0) + '" class="start"/><text x="' + (L - 8) + '" y="' + (y(0) + 4) + '" class="yt">$25k</text>' +
+        S.map(function (s) { return '<path d="' + s.curve.map(function (v, i) { return (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(v).toFixed(1); }).join(' ') + '" style="stroke:' + s.color + '" class="ln' + (s.baseline ? ' base' : '') + '"/>'; }).join('') +
+        '<text x="' + L + '" y="' + (H - 6) + '" class="xt">' + X.days[0] + '</text><text x="' + (W - R) + '" y="' + (H - 6) + '" class="xt end">' + X.days[1] + '</text></svg>';
+      return '<header class="hero"><div><p class="eyebrow"><a href="#/financial">Stocks</a> · <b>Forex</b> · <a href="#/financial">Financial Advisor</a> runs it</p><h1 class="page-h1">Forex <span class="paper">PAPER</span></h1><p class="lede">A play account: one paper sub-account per strategy, each started at the same balance, racing against simply holding US dollars. No real money.</p></div></header>' +
+        '<p class="small muted fxmeta">' + X.broker + ' · prices as of ' + X.asOf + ' · ' + X.pairs.join(', ') + '.</p>' +
+        card('Leaderboard', '<div class="scroll"><table class="data"><thead><tr><th>Strategy</th><th>On</th><th class="r">Equity</th><th class="r">P&amp;L</th><th class="r">Max DD</th><th class="r">Trades</th><th class="r">Win rate</th><th class="r">Backtest a year</th><th class="r">vs holding USD</th></tr></thead><tbody>' +
+          ranked.map(function (s) { return '<tr><td><span class="sw" style="background:' + s.color + '"></span><b>' + s.name + '</b>' + (s.baseline ? ' <span class="small muted">baseline</span>' : '') + '</td><td><button class="switch' + (s.on ? ' on' : '') + '" role="switch" aria-checked="' + s.on + '" aria-label="' + s.name + '" data-demo-switch><span></span></button></td><td class="num">' + money(s.equity) + '</td><td class="num ' + (s.pnl > 0 ? 'up' : s.pnl < 0 ? 'down' : '') + '">' + sgn(s.pnl) + '</td><td class="num">' + pc(-s.dd) + '</td><td class="num">' + s.trades + '</td><td class="num">' + (s.win == null ? '—' : s.win + '%') + '</td><td class="num">' + pc(s.cagr) + '</td><td class="num ' + (s.vs > 0 ? 'up' : s.vs < 0 ? 'down' : '') + '">' + (s.baseline ? '—' : pc(s.vs)) + '</td></tr>'; }).join('') +
+          '</tbody></table></div><p class="small muted" id="swmsg">Backtest columns are since 2016, after costs. A strategy only earns trust by beating holding USD on paper first.</p>', '<span class="small muted">turn a strategy on or off; the bot picks it up on its next run</span>') +
+        card('Equity curves', eq + '<p class="legend small eql">' + S.map(function (s) { return '<span><i style="background:' + s.color + '"></i>' + s.name + '</span>'; }).join('') + '</p>') +
+        '<h2 class="label sect">Strategies</h2><div class="cards">' + S.map(function (s) {
+          return '<article class="block scard" style="--c:' + s.color + '"><h2 class="label"><span>' + s.name + '</span>' + pill(s.on ? 'active' : 'paused', s.on ? 'ok' : 'watch') + '</h2><p class="small">' + s.desc + '</p>' +
+            (s.params.length ? '<dl class="params">' + s.params.map(function (p) { return '<div><dt>' + p[0] + '</dt><dd>' + p[1] + '</dd><span class="small muted">' + p[2] + '</span></div>'; }).join('') + '</dl>' : '') + '<p class="small verdict">' + s.verdict + '</p></article>';
+        }).join('') + '</div>' +
+        '<div class="cols2">' + card('Open positions', '<div class="scroll"><table class="data"><thead><tr><th>Strategy</th><th>Pair</th><th>Side</th><th class="r">Units</th><th class="r">Entry</th></tr></thead><tbody>' + X.open.map(function (t) { return '<tr><td>' + t[0] + '</td><td>' + t[1] + '</td><td>' + t[2] + '</td><td class="num">' + t[3] + '</td><td class="num">' + t[4] + '</td></tr>'; }).join('') + '</tbody></table></div>', '<span class="small muted">' + X.open.length + '</span>') +
+        card('Risk rules', '<dl class="risk">' + X.risk.map(function (r) { return '<div' + (r[2] ? ' class="wide2"' : '') + '><dt>' + r[0] + '</dt><dd' + (r[2] ? ' class="small"' : '') + '>' + r[1] + '</dd></div>'; }).join('') + '</dl>', '<span class="small muted">hard caps in the bot’s code</span>') + '</div>' +
+        card('Trades log', '<div class="scroll"><table class="data"><thead><tr><th>Day</th><th>Strategy</th><th>Pair</th><th>Side</th><th class="r">Units</th><th class="r">Price</th><th class="r">Result</th></tr></thead><tbody>' + X.trades.map(function (t) { return '<tr><td>' + t[0] + '</td><td>' + t[1] + '</td><td>' + t[2] + '</td><td>' + t[3] + '</td><td class="num">' + t[4] + '</td><td class="num">' + t[5] + '</td><td class="num ' + (t[6][0] === '+' ? 'up' : t[6] ? 'down' : '') + '">' + (t[6] || 'open') + '</td></tr>'; }).join('') + '</tbody></table></div>');
+    },
     health: function () {
       var X = D.health;
       return hero('Training, meals and weigh-ins, from Health Agent.', 'health') + tiles(X.tiles) +
@@ -328,6 +353,8 @@
     if (b) { menu = menu === b.dataset.menu ? null : b.dataset.menu; render(); return; }
     if (e.target.closest('[data-demo]')) { var m = $('#qmsg'); if (m) m.hidden = false; return; }
     if (e.target.closest('.scrim')) { menu = null; render(); return; }
+    var sw = e.target.closest('[data-demo-switch]');
+    if (sw) { var m2 = $('#swmsg'); if (m2) m2.textContent = 'Demo: switches don’t change anything here.'; return; }
     var fd = e.target.closest('[data-fc-days]');
     if (fd) { fcDays = +fd.dataset.fcDays; render(); return; }
     if (e.target.closest('[data-fc-close]')) { fcPick = null; render(); return; }

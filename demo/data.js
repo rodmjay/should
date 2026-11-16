@@ -146,6 +146,22 @@ window.DEMO = {
     ends: [['2027-08-24', 'Galaxy A35 paid off', 18.74, 'a month'], ['2027-12-24', 'iPhone 15 paid off', 33.34, 'a month']]
   },
 
+  forex: {
+    broker: 'Practice account', asOf: 'Nov 20 close', pairs: ['EUR/USD', 'GBP/USD', 'USD/JPY', 'AUD/USD'],
+    days: ['Oct 1', 'Nov 20'],
+    strategies: [
+      { key: 'hold', name: 'Hold USD', color: '#8e8e93', on: true, equity: 25000, pnl: 0, dd: 0, trades: 0, win: null, cagr: 0, vs: null, baseline: true, desc: 'Does nothing: the bar every strategy has to beat.', params: [], verdict: 'The baseline.' , curve: [0, 0, 0, 0, 0, 0, 0, 0] },
+      { key: 'trend', name: 'Trend follow', color: '#0a84ff', on: true, equity: 26030, pnl: 1030, dd: 2.1, trades: 9, win: 56, cagr: 6.8, vs: 6.8, desc: 'Buys when the 20-day average crosses above the 100-day, sells on the cross back.', params: [['fast', '20', '10–30'], ['slow', '100', '50–200']], verdict: 'Ahead so far; needs a few more months.', curve: [0, 100, 275, 225, 525, 650, 825, 1030] },
+      { key: 'carry', name: 'Carry', color: '#30d158', on: true, equity: 25465, pnl: 465, dd: 1.2, trades: 3, win: 67, cagr: 3.9, vs: 3.9, desc: 'Holds the higher-yielding currency of each pair and rebalances monthly.', params: [['rebalance', 'monthly', 'weekly–quarterly']], verdict: 'Slow and steady.', curve: [0, 50, 112.5, 175, 237.5, 300, 375, 465] },
+      { key: 'revert', name: 'Mean reversion', color: '#ff9f0a', on: true, equity: 24685, pnl: -315, dd: 3.4, trades: 14, win: 43, cagr: 1.2, vs: 1.2, desc: 'Fades moves of more than 2 standard deviations from the 20-day average.', params: [['window', '20', '10–40'], ['band', '2.0', '1.5–3.0']], verdict: 'Behind; trending markets hurt it.', curve: [0, 75, -50, -150, -25, -225, -375, -315] },
+      { key: 'breakout', name: 'Breakout', color: '#bf5af2', on: false, equity: 24475, pnl: -525, dd: 4.8, trades: 6, win: 33, cagr: -0.8, vs: -0.8, desc: 'Buys a break of the 40-day high, sells a break of the 15-day low.', params: [['entry', '40', '20–100'], ['exit', '15', '10–55']], verdict: 'Turned off: false breakouts this fall.', curve: [0, -100, -225, -150, -375, -475, -575, -525] },
+      { key: 'momentum', name: 'Momentum', color: '#ff375f', on: true, equity: 25145, pnl: 145, dd: 2.6, trades: 7, win: 57, cagr: 4.4, vs: 4.4, desc: 'Each week, holds the two strongest currencies against the two weakest.', params: [['lookback', '12 weeks', '4–26']], verdict: 'Too early to say.', curve: [0, -75, 50, 150, 25, 100, 225, 145] }
+    ],
+    open: [['Trend follow', 'EUR/USD', 'long', '20,000', '1.0842'], ['Carry', 'AUD/USD', 'long', '12,500', '0.6531'], ['Momentum', 'USD/JPY', 'short', '10,000', '151.20']],
+    risk: [['Leverage cap', '4×'], ['Risk per trade', '1%'], ['Daily loss limit', '3%'], ['Kill switch', '15% drawdown'], ['Max open', '4 positions'], ['Stop-loss', 'Every trade has one, set at entry', true], ['Event blackout', 'No new trades an hour either side of big rate announcements', true]],
+    trades: [['Nov 19', 'Trend follow', 'EUR/USD', 'buy', '20,000', '1.0842', ''], ['Nov 18', 'Mean reversion', 'GBP/USD', 'sell', '15,000', '1.2710', '−$120.50'], ['Nov 14', 'Momentum', 'USD/JPY', 'sell', '10,000', '151.20', ''], ['Nov 12', 'Trend follow', 'GBP/USD', 'sell', '15,000', '1.2655', '+$231.00'], ['Nov 6', 'Carry', 'AUD/USD', 'buy', '12,500', '0.6531', '']]
+  },
+
   holding: {
     name: 'Northstar Holdings', legal: 'Northstar Holdings LLC', state: 'Colorado', formed: 'Mar 3, 2025',
     stages: ['idea', 'planned', 'building', 'live'],

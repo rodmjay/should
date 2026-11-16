@@ -426,7 +426,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 <section id="staff">
   <div class="eyebrow">Meet the staff</div>
   <h2>Two go-to agents. Everyone else reports to them.</h2>
-  <p class="muted">You deal with the Executive Assistant and the Personal Coach. The specialists below work for them, each with a written role, its own routines and rules it can't break. Tap one to see its job.</p>
+  <p class="muted">You deal with the Executive Assistant and the Life Coach. The specialists below work for them, each with a written role, its own routines and rules it can't break. Tap one to see its job.</p>
   <div class="staff leads" id="leadgrid"></div>
   <div class="staff" id="staffgrid"></div>
 </section>
@@ -443,7 +443,7 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
     <li><time>8:00</time><div>Your morning text arrives<small>One summary, one question</small></div></li>
     <li><time>All day</time><div>Texts answered in seconds<small>Ask anything, a staff member answers</small></div></li>
     <li><time>2:45</time><div>AI trading bot makes its calls<small>On the strategy you chose, weekdays</small></div></li>
-    <li><time>Sat</time><div>Weekly sit-down with the Personal Coach<small>Score, wins, what slipped</small></div></li>
+    <li><time>Sat</time><div>Weekly sit-down with the Life Coach<small>Score, wins, what slipped</small></div></li>
     <li><time>Sun</time><div>Nobody works<small>Rest day. The staff enforces it.</small></div></li>
   </ul>
 </section>
@@ -513,7 +513,7 @@ const AGENTS = {
   phil:{n:"Philosopher",i:"📚",job:"Keeps the Should way and your reading list. Each book gets a short summary before you listen, ending with a check against your values. It also keeps a short list of new ideas to try, and nothing gets tried until you approve it.",routines:["North-star check, monthly"],never:"Changes how another agent works without your yes."},
   sec:{n:"Security Officer",i:"🛡️",job:"Watches for threats to your accounts: suspicious logins, breaches, weak or reused passwords, missing 2FA. It audits every account, ranks what to fix first, and sends a weekly summary to your coach.",routines:["Security audit, Fridays 3 PM"],never:"Handles your passwords, signs in, or changes anything."},
   comp:{n:"Compliance Officer",i:"⚖️",job:"Checks that every agent stays inside your moral code, the law and each platform's terms, and flags anything that drifts, with the weekly report to your coach.",routines:["Compliance check, weekly"],never:"Sends or changes anything itself."},
-  coach:{n:"Personal Coach",i:"🏁",job:"Grades your week against your goals and runs a Saturday sit-down.",routines:["Scorecard, Saturdays 9:30","Habit check-in, daily"],never:"Shames you, or shares your check-ins with anyone."},
+  coach:{n:"Life Coach",i:"🏁",job:"Grades your week against your goals and runs a Saturday sit-down.",routines:["Scorecard, Saturdays 9:30","Habit check-in, daily"],never:"Shames you, or shares your check-ins with anyone."},
   career:{n:"Career Assistant",i:"💼",job:"Finds jobs that fit, tailors your resume, applies and tracks every reply.",routines:["Job search on LinkedIn and Indeed, 6:15 AM","Job board refresh, weekly","Application follow-ups, daily"],never:"Applies anywhere, or accepts an offer or a number, without your yes."},
   wealth:{n:"Financial Advisor",i:"📈",job:"Credit and investing in one: ranks what raises your score, and an AI trading bot runs the strategy you pick.",routines:["Credit check, Saturdays","AI trading bot, weekdays 2:45 PM","Weekly results vs the market, Saturdays"],never:"Opens, closes or disputes anything, or goes past the money and loss limits you set, without your yes."},
   travel:{n:"Travel Agent",i:"✈️",job:"Watches fares, finds stays and cars, and tracks your miles and credits.",routines:["Fare watch, Tuesdays"],never:"Books. It sends you the link."},
@@ -596,7 +596,7 @@ const GOALS = [
     ask:{q:"Send to the nurse line: \"Adult, 101.5 fever and sore throat since 8 AM, no trouble breathing, no meds yet.\"",o:["Send it","Change the wording","I'll call instead (number)"],p:0,r:"Sent. The nurse says: urgent care tomorrow is fine; the in-network one 6 min away is a $50 copay."},
     result:"Real advice from a nurse in minutes, without sitting on hold, and the right place to go at the right price."},
    {ico:"🚭",t:"Quit a habit, without shame",s:"Sam is quitting vaping",scene:"streak",
-    flow:["Sam texts: \"I want to quit vaping\"","Personal Coach writes down the why and plans the hard moments","One private check-in a day"],
+    flow:["Sam texts: \"I want to quit vaping\"","Life Coach writes down the why and plans the hard moments","One private check-in a day"],
     ask:{q:"Day 30 without vaping. 🎉 How was today?",o:["Good, no cravings","Hard, but I held on","I slipped"],rs:["30 days! About $150 saved. Put it toward the trip you mentioned?","That's the win that counts. Hard days held are how streaks get built.","Thanks for telling me. One slip doesn't erase 29 days. What was going on? Tomorrow is day 1 of the next streak."]},
     result:"A private coach who notices the streak, forgives the slip, and keeps the reason in front of you. (Quitline: 1-800-QUIT-NOW.)"}
   ]},

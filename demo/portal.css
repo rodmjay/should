@@ -309,7 +309,7 @@ button { font: inherit; color: inherit; }
   .tile .t-value { font-size: 1.35rem; }
 }
 
-:root { --up: var(--green); --down: var(--red); --c1: var(--pen); --c2: #eb6834; --c3: #6250d6; --c4: #1baf7a; --c5: #e87ba4; }
+:root { --up: var(--green); --down: var(--red); --c1: var(--pen); --c2: #eb6834; --c3: light-dark(#0e7c86, #4cc3cc); --c4: #1baf7a; --c5: #e87ba4; }
 
 .prose { overflow-wrap: anywhere; max-width: 72ch; }
 .prose h1, .prose h2, .prose h3 { font-weight: 600; line-height: var(--line); margin: var(--line) 0 0; }

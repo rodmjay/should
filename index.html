@@ -360,6 +360,39 @@ svg.chart{width:100%;height:auto;display:block;margin-top:8px}
 .reach-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .reach-tabs::-webkit-scrollbar{display:none}
 
+/* goal ladder */
+.ladder-sec h2{font-size:clamp(28px,6vw,36px)}
+.ladder{margin-top:18px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px}
+.ladder .reach-tabs{margin:0 0 14px}
+.lad-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;font-size:12px;color:var(--muted);margin-bottom:10px}
+.lad-head b{color:var(--ink);font-weight:600}
+.rungs{list-style:none;margin:0;padding:0 0 0 30px;position:relative;display:grid;gap:8px}
+.rungs::before{content:"";position:absolute;left:10px;top:18px;bottom:18px;width:2px;background:var(--md-sys-color-outline-variant)}
+.rung{position:relative;background:var(--bg);border-radius:12px;padding:8px 12px;min-width:0;animation:rise .25s ease}
+.rung::before{content:"";position:absolute;left:-26px;top:50%;width:10px;height:10px;margin-top:-7px;border-radius:50%;background:var(--card);border:2px solid var(--accent)}
+.rung small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.rung span{display:block;font-weight:500;font-size:15px;line-height:1.35}
+.rung.value{background:var(--warm-soft);color:var(--md-sys-color-on-tertiary-container)}
+.rung.value small{color:inherit;opacity:.8}
+.rung.value::before{background:var(--warm);border-color:var(--warm)}
+.rung.week{background:var(--md-sys-color-primary-container);color:var(--md-sys-color-on-primary-container)}
+.rung.week small{color:inherit;opacity:.8}
+.rung.week::before{background:var(--accent)}
+.rung.next{background:none;padding-bottom:0}
+.rung.next span{font-family:var(--md-ref-typeface-brand);font-size:20px;font-weight:700}
+.fork{display:block;width:100%;height:26px;margin:4px 0 0;color:var(--md-sys-color-outline-variant)}
+.acts{display:grid;gap:8px;grid-template-columns:minmax(0,1fr)}
+@media(max-width:619px){.fork{display:none}.acts{margin-top:10px}}
+@media(min-width:620px){.acts{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.act{background:var(--bg);border-radius:12px;border-top:4px solid var(--c);padding:10px 12px;display:flex;flex-direction:column;gap:6px;min-width:0;font-size:14px;line-height:1.4;animation:rise .25s ease}
+.act b{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--c)}
+.act small{margin-top:auto;font-size:12px;color:var(--muted)}
+.act.a0{--c:var(--accent)}.act.a1{--c:var(--md-sys-color-secondary)}.act.a2{--c:var(--warm)}
+.gnotes{display:grid;gap:10px;margin-top:14px;grid-template-columns:minmax(0,1fr)}
+@media(min-width:620px){.gnotes{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.gnote{border-left:4px solid var(--accent);background:var(--card);border-radius:10px;padding:12px 14px;font-size:15px;min-width:0}
+.gnote b{display:block;margin-bottom:2px}
+
 .rules{display:grid;gap:10px;margin-top:16px}
 .rule{background:var(--card);border-left:4px solid var(--warm);border-radius:10px;padding:12px 14px;font-size:15px}
 .rule b{display:block;margin-bottom:2px}
@@ -400,6 +433,18 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
     <a class="btn ghost" href="demo/" data-i18n="ui.cta_demo"></a>
   </div>
 </header>
+
+<section id="ladder" class="ladder-sec">
+  <div class="eyebrow" data-i18n="ui.ladder_eyebrow"></div>
+  <h2 data-i18n="ui.ladder_h2"></h2>
+  <p data-i18n="ui.ladder_p"></p>
+  <div class="ladder">
+    <div class="reach-tabs" role="tablist" data-i18n-attr="aria-label:ui.ladder_tabs_label" id="ladderTabs"></div>
+    <div id="ladderBody" role="tabpanel"></div>
+  </div>
+  <div class="gnotes" id="ladderNotes"></div>
+  <p class="muted" style="margin-top:14px" data-i18n="ui.ladder_note"></p>
+</section>
 
 <section id="goals" style="padding-top:20px">
   <div class="eyebrow" data-i18n="ui.goals_eyebrow"></div>
@@ -740,9 +785,24 @@ function renderStatic(){
   document.querySelectorAll("[data-rules]").forEach(el=>{el.innerHTML=L.ui[el.dataset.rules].map(([b,t])=>`<div class="rule"><b>${b}</b>${t}</div>`).join("")});
   document.querySelectorAll("[data-channels]").forEach(el=>{el.innerHTML=L.ui[el.dataset.channels].map(([b,t])=>`<div class="channel"><b>${b}</b><span>${t}</span></div>`).join("")});
   renderReach();
+  renderLadder();
   $("#day").innerHTML=L.ui.day.map(([t,b,s])=>`<li><time>${t}</time><div>${b}<small>${s}</small></div></li>`).join("");
   $("#built").innerHTML=L.ui.built_chips.map(c=>`<span class="chip">${c}</span>`).join("");
 }
+let ladderI=0;
+function renderLadder(){
+  const u=L.ui, ex=u.ladder_examples[ladderI];
+  $("#ladderTabs").innerHTML=u.ladder_examples.map((e,i)=>`<button class="tab" role="tab" aria-selected="${i===ladderI}" data-ladder="${i}">${e.tab}</button>`).join("");
+  const cls=["value","","","","","week"];
+  const rungs=ex.rungs.map((r,i)=>`<li class="rung ${cls[i]}"><small>${u.ladder_levels[i]}</small><span>${r}</span></li>`).join("")
+    +`<li class="rung next"><small>${u.ladder_levels[6]}</small><span>${u.ladder_who_q}</span></li>`;
+  const fork=`<svg class="fork" viewBox="0 0 300 26" preserveAspectRatio="none" aria-hidden="true"><path d="M150 0V8M50 26V8H250V26M150 8V26" fill="none" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>`;
+  const acts=ex.acts.map((a,i)=>`<div class="act a${i}"><b>${u.ladder_who[i][0]}</b><span>${a}</span><small>${u.ladder_who[i][1]}</small></div>`).join("");
+  $("#ladderBody").innerHTML=`<div class="lad-head"><b>${ex.coach}</b><span>${u.ladder_axis}</span></div><ol class="rungs">${rungs}</ol>${fork}<div class="acts">${acts}</div>`;
+  $("#ladderBody").setAttribute("aria-label",ex.tab);
+  $("#ladderNotes").innerHTML=u.ladder_notes.map(([b,t])=>`<div class="gnote"><b>${b}</b>${t}</div>`).join("");
+}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-ladder]");if(b){ladderI=+b.dataset.ladder;renderLadder();}});
 let reachI=0;
 function renderReach(){
   const ex=L.ui.reach_examples;

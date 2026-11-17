@@ -70,8 +70,11 @@
   demo_note: "Everything in it is fake except public things like movies, places and the weather.",
 
   staff_eyebrow: "Meet the staff",
-  staff_h2: "Two go-to agents. Everyone else reports to them.",
-  staff_p: "You deal with the Executive Assistant and the Life Coach. The specialists below work for them, each with a written role, its own routines and rules it can't break. Tap one to see its job.",
+  staff_h2: "Your assistant and your coaches. The staff works for them.",
+  staff_p: "You deal with the Executive Assistant day to day. Your coaches sit above the staff and report only to you. The specialists below work for the Executive Assistant, each with a written role, its own routines and rules it can't break. Tap one to see its job.",
+  coaches_h3: "Your coaches",
+  coaches_p: "Long-term guides for your life and your business. They turn your values into goals, check in weekly through yearly, and keep the whole staff pointed at what matters to you.",
+  staff_h3: "The staff",
 
   day_eyebrow: "A day at the office",
   day_h2: "While you sleep, they start work",

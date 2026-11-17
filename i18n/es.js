@@ -70,8 +70,11 @@
   demo_note: "Todo es ficticio, excepto lo público, como películas, lugares y el clima.",
 
   staff_eyebrow: "Conozca al equipo",
-  staff_h2: "Dos agentes de cabecera. Todos los demás les reportan a ellos.",
-  staff_p: "Usted trata con el Asistente ejecutivo y el Coach de vida. Los especialistas de abajo trabajan para ellos, cada uno con un rol por escrito, sus propias rutinas y reglas que no puede romper. Toque uno para ver qué hace.",
+  staff_h2: "Su asistente y sus coaches. El equipo trabaja para ellos.",
+  staff_p: "Usted trata con el Asistente ejecutivo en el día a día. Sus coaches están por encima del equipo y le reportan solo a usted. Los especialistas de abajo trabajan para el Asistente ejecutivo, cada uno con un rol por escrito, sus propias rutinas y reglas que no puede romper. Toque uno para ver qué hace.",
+  coaches_h3: "Sus coaches",
+  coaches_p: "Guías de largo plazo para su vida y su negocio. Convierten sus valores en metas, le dan seguimiento de cada semana a cada año y mantienen a todo el equipo enfocado en lo que a usted le importa.",
+  staff_h3: "El equipo",
 
   day_eyebrow: "Un día en la oficina",
   day_h2: "Mientras usted duerme, ellos empiezan a trabajar",

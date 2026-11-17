@@ -302,12 +302,19 @@ svg.chart{width:100%;height:auto;display:block;margin-top:8px}
 @media(min-width:620px){.staff{grid-template-columns:repeat(4,minmax(0,1fr))}}
 .agent{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 10px;text-align:left;display:flex;flex-direction:column;gap:6px;min-height:104px;min-width:0;overflow-wrap:anywhere}
 .agent div,.agent b,.agent span{min-width:0}
-.agent .ico{width:44px;height:44px;display:grid;place-items:center}
+.agent .ico{width:44px;height:44px;display:grid;place-items:center;flex:none}
 .agent b{font-family:var(--md-ref-typeface-brand);font-size:15px;line-height:1.2}
 .agent span{font-size:12px;color:var(--muted);line-height:1.3}
-.staff.leads{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.staff.leads{grid-template-columns:minmax(0,1fr)!important;max-width:420px}
 .agent.lead{flex-direction:row;align-items:center;border-color:var(--accent);min-height:0}
 .agent div{display:flex;flex-direction:column;gap:3px}
+.coaches{margin-top:18px;padding:16px;border-radius:18px;background:var(--md-sys-color-surface-container);display:grid;gap:6px}
+.coaches h3,.staff-h{font-size:18px;margin:0}
+.staff-h{margin-top:22px}
+.coaches .staff{margin-top:8px}
+.coaches .agent{flex-direction:row;align-items:center;min-height:0;border-color:var(--accent)}
+.coaches .staff{grid-template-columns:minmax(0,1fr);grid-auto-rows:auto}
+@media(min-width:620px){.coaches .staff{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .agent .soon{align-self:flex-start;font-size:10px;font-weight:600;color:var(--accent);background:var(--accent-soft);border-radius:6px;padding:1px 6px}
 .agent:has(.soon){opacity:.8;border-style:dashed}
 
@@ -424,6 +431,12 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
   <h2 data-i18n="ui.staff_h2"></h2>
   <p class="muted" data-i18n="ui.staff_p"></p>
   <div class="staff leads" id="leadgrid"></div>
+  <div class="coaches">
+    <h3 data-i18n="ui.coaches_h3"></h3>
+    <p class="muted" data-i18n="ui.coaches_p"></p>
+    <div class="staff" id="coachgrid"></div>
+  </div>
+  <h3 class="staff-h" data-i18n="ui.staff_h3"></h3>
   <div class="staff" id="staffgrid"></div>
 </section>
 
@@ -498,7 +511,8 @@ const GOALS = [
  {id:"trust",agents:["relmgr","coach","pi","legal"],sc:[{ico:"📇",scene:"contact"},{ico:"📄",scene:"doc"},{ico:"🪜",scene:"ladder"}]},
  {id:"coaching",agents:["coach","bcoach"],sc:[{ico:"🗓️",scene:"week"},{ico:"📏",scene:"pace"},{ico:"🧭",scene:"review"},{ico:"📓",scene:"log"}]},
 ];
-const LEADS=["ea","coach"]; // your go-to agents; everyone else reports to them. bg:true = background role, not shown
+const LEADS=["ea"]; // your go-to agent; the staff reports to it. bg:true = background role, not shown
+const COACHES=["coach","bcoach","rel"]; // "coach" is reserved for these long-term guides (Rod 11/16): grouped and shown above the staff, reporting to you
 
 /* ---------- language ---------- */
 const I=window.DSI18n, DICT=window.SHOULD_I18N;
@@ -704,11 +718,12 @@ function renderStatic(){
   $("#built").innerHTML=L.ui.built_chips.map(c=>`<span class="chip">${c}</span>`).join("");
 }
 function renderStaff(){
-  const order=Object.keys(AGENTS).filter(k=>!AGENTS[k].bg).sort((a,b)=>LEADS.includes(b)-LEADS.includes(a));
-  const card=k=>{const a=agent(k);const lead=LEADS.includes(k);
+  const order=Object.keys(AGENTS).filter(k=>!AGENTS[k].bg&&!LEADS.includes(k)&&!COACHES.includes(k));
+  const card=k=>{const a=agent(k);const lead=LEADS.includes(k)||COACHES.includes(k);
     return `<button class="agent${lead?" lead":""}" data-agent="${k}"><span class="ico">${av(k,44)}</span><div><b>${a.n}</b>${a.soon?`<span class="soon">${L.ui.coming_soon}</span>`:""}<span>${esc(a.job.split(". ")[0].replace(/\.$/,""))}</span></div></button>`};
   $("#leadgrid").innerHTML=LEADS.map(card).join("");
-  $("#staffgrid").innerHTML=order.filter(k=>!LEADS.includes(k)).map(card).join("");
+  $("#coachgrid").innerHTML=COACHES.map(card).join("");
+  $("#staffgrid").innerHTML=order.map(card).join("");
 }
 function openAgent(k){
   const a=agent(k); const goals=GOALS.filter(g=>g.agents.includes(k));
@@ -717,7 +732,7 @@ function openAgent(k){
    <div class="kv"><div><small>${L.ui.routines}</small>${a.routines.map(esc).join(" · ")}</div>
    <div><small>${L.ui.never}</small>${esc(a.never)}</div>
    ${goals.length?`<div><small>${L.ui.works_on}</small>${goals.map(g=>`<button class="tab" style="margin:6px 6px 0 0" data-jump="${g.id}">${goalText(g.id).tab}</button>`).join("")}</div>`:""}
-   <div><small>${L.ui.reports_to}</small>${LEADS.includes(k)||a.toYou?L.ui.you:agent("ea").n}</div></div>`;
+   <div><small>${L.ui.reports_to}</small>${LEADS.includes(k)||COACHES.includes(k)||a.toYou?L.ui.you:agent("ea").n}</div></div>`;
   $("#shade").classList.add("on");$("#sheet").classList.add("on");document.body.classList.add("locked");$("#sheetX").focus();
 }
 function closeSheet(){$("#shade").classList.remove("on");$("#sheet").classList.remove("on");document.body.classList.remove("locked")}

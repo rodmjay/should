@@ -64,6 +64,9 @@ button{font:inherit;color:inherit;cursor:pointer}
 .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
 .btn{border:0;border-radius:999px;padding:12px 18px;font-weight:600;text-decoration:none;display:inline-block}
 .btn.primary{background:var(--accent);color:var(--on-accent)}
+.btn.tonal{background:var(--accent-soft);color:var(--md-sys-color-on-secondary-container)}
+.ebook-row{display:flex;align-items:center;gap:6px 14px;flex-wrap:wrap;margin-top:10px}
+.ebook-alt{font-size:14px;color:var(--muted)}
 .btn.ghost{background:var(--card);border:1px solid var(--line);color:var(--ink)}
 
 /* goal tabs */
@@ -432,6 +435,10 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
     <a class="btn ghost" href="#staff" data-i18n="ui.cta_staff"></a>
     <a class="btn ghost" href="demo/" data-i18n="ui.cta_demo"></a>
   </div>
+  <div class="ebook-row">
+    <a class="btn tonal" id="ebookPdf" href="ebook/should-way.en.pdf" download data-i18n="ui.ebook_btn"></a>
+    <a class="ebook-alt" id="ebookEpub" href="ebook/should-way.en.epub" download data-i18n="ui.ebook_epub"></a>
+  </div>
 </header>
 
 <section id="goals" style="padding-top:20px">
@@ -786,6 +793,7 @@ function renderStatic(){
   document.querySelectorAll("[data-channels]").forEach(el=>{el.innerHTML=L.ui[el.dataset.channels].map(([b,t])=>`<div class="channel"><b>${b}</b><span>${t}</span></div>`).join("")});
   renderReach();
   renderLadder();
+  $("#ebookPdf").href=`ebook/should-way.${lang}.pdf`;$("#ebookEpub").href=`ebook/should-way.${lang}.epub`;
   $("#day").innerHTML=L.ui.day.map(([t,b,s])=>`<li><time>${t}</time><div>${b}<small>${s}</small></div></li>`).join("");
   $("#built").innerHTML=L.ui.built_chips.map(c=>`<span class="chip">${c}</span>`).join("");
 }

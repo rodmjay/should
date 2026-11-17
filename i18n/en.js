@@ -17,6 +17,8 @@
   cta_staff: "Meet the staff",
   cta_demo: "See the demo",
 
+  ebook_btn: "Download eBook",
+  ebook_epub: "or EPUB for e-readers",
   ladder_eyebrow: "Goals come first",
   ladder_h2: "Every goal ties to a value and always has a next step.",
   ladder_p: "A goal on Should is never a wish on a list. It climbs up to something you care about and down to one step someone takes this week. Then comes the question GTD never asked: who does it?",

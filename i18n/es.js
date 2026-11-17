@@ -17,6 +17,8 @@
   cta_staff: "Conozca al equipo",
   cta_demo: "Vea la demo",
 
+  ebook_btn: "Descargar el eBook",
+  ebook_epub: "o EPUB para lectores electrónicos",
   ladder_eyebrow: "Primero, las metas",
   ladder_h2: "Cada meta se vincula a un valor y siempre tiene un siguiente paso.",
   ladder_p: "En Should, una meta nunca es un deseo en una lista. Sube hasta algo que a usted le importa y baja hasta un paso que alguien da esta semana. Luego viene la pregunta que GTD nunca hizo: ¿quién lo hace?",

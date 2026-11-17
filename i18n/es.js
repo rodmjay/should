@@ -145,6 +145,7 @@
   way_p2: "<b>Capturar → Aclarar → Asignar → Organizar → Revisar → Hacer.</b> Las cosas llegan solas: llamadas, mensajes, correo postal, email. Los agentes averiguan qué es cada una y quién debe actuar. Usted se pone al día con el mensaje de cada mañana y una reunión corta cada semana.",
   way_rules: [
    ["Primero, un agente", "Su atención es el recurso más escaso. Si un agente puede hacerlo, o hacerlo todo menos un paso, lo hace."],
+   ["Cada meta tiene un siguiente paso", "Cada meta se vincula a un valor y siempre tiene un siguiente paso, a cargo de quien pueda hacerlo."],
    ["Puertas de ida y vuelta, y de un solo sentido", "Las decisiones fáciles de deshacer, como la redacción, la agenda o un borrador, los agentes las toman y se lo cuentan en una línea. Solo las difíciles de deshacer (dinero, envíos, borrar para siempre, configuraciones) llegan a usted, una vez, con lo que está en juego y una recomendación."],
    ["Fechas solo para plazos reales", "Su calendario tiene lo que debe pasar en un día específico: citas y plazos. Nada más."],
    ["Los agentes se encargan de esperar", "Esperar una respuesta, un reembolso o un paquete es trabajo de los agentes, y usted puede ver la lista cuando quiera."],

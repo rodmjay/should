@@ -1,4 +1,4 @@
-/* @should/design-system 0.5.0: generated from src/ by scripts/build.mjs; edit src/, not this file */
+/* @should/design-system 0.6.0: generated from src/ by scripts/build.mjs; edit src/, not this file */
 (() => {
 // Person avatars for agents: one consistent set, keyed by role key (org_roles.key).
 // Each avatar is a bust (skin tone, hairstyle, hair color, clothing tone) with a
@@ -65,7 +65,7 @@ const AVATARS = {
   "scheduler":            { name: "Scheduler",              skin: 4, hair: 7, hairColor: 1, tone: 1, cue: "clock" },
   "travel":               { name: "Travel Agent",           skin: 5, hair: 2, hairColor: 2, tone: 3, cue: "plane" },
   "legal":                { name: "Legal Advisor",          skin: 1, hair: 4, hairColor: 5, tone: 4, cue: "scales" },
-  "music":                { name: "Music Coach",            skin: 6, hair: 3, hairColor: 2, tone: 3, cue: "note" },
+  "music":                { name: "Music Producer",         skin: 6, hair: 3, hairColor: 2, tone: 3, cue: "note" },
   "home-manager":         { name: "Home Manager",           skin: 3, hair: 6, hairColor: 1, tone: 2, cue: "house" },
   "relationship-manager": { name: "Relationship Manager",   skin: 2, hair: 5, hairColor: 3, tone: 1, cue: "people" },
   "gifts":                { name: "Gift Concierge",         skin: 4, hair: 3, hairColor: 2, tone: 3, cue: "gift" },

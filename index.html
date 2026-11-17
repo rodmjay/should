@@ -348,6 +348,18 @@ svg.chart{width:100%;height:auto;display:block;margin-top:8px}
 .me{background:var(--bubble-me);color:var(--on-accent);margin-left:auto;border-bottom-right-radius:6px;width:max-content}
 .time{font-size:11px;color:var(--muted);text-align:center;margin:10px 0 4px}
 
+/* real-world channels */
+.channels{display:grid;gap:10px;margin-top:16px;grid-template-columns:minmax(0,1fr)}
+@media(min-width:620px){.channels{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:960px){.channels{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.channel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;gap:4px;font-size:15px;min-width:0}
+.channel b{font-family:var(--md-ref-typeface-brand);font-size:17px}
+.channel span{color:var(--muted);line-height:1.45}
+.trust{margin-top:16px;padding:14px 16px;border-radius:14px;background:var(--md-sys-color-tertiary-container);color:var(--md-sys-color-on-tertiary-container);font-size:16px;line-height:1.5}
+.reach-h{margin-top:26px;font-size:18px}
+.reach-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.reach-tabs::-webkit-scrollbar{display:none}
+
 .rules{display:grid;gap:10px;margin-top:16px}
 .rule{background:var(--card);border-left:4px solid var(--warm);border-radius:10px;padding:12px 14px;font-size:15px}
 .rule b{display:block;margin-bottom:2px}
@@ -404,6 +416,18 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
   <h2 data-i18n="ui.talk_h2"></h2>
   <p data-i18n="ui.talk_p"></p>
   <div class="phone" data-i18n-attr="aria-label:ui.talk_aria" data-phone="talk_phone"></div>
+</section>
+
+<section id="reach">
+  <div class="eyebrow" data-i18n="ui.reach_eyebrow"></div>
+  <h2 data-i18n="ui.reach_h2"></h2>
+  <p data-i18n="ui.reach_p"></p>
+  <div class="channels" data-channels="reach_channels"></div>
+  <p class="trust" data-i18n-html="ui.reach_trust"></p>
+  <h3 class="reach-h" data-i18n="ui.reach_examples_h3"></h3>
+  <div class="reach-tabs" role="tablist" data-i18n-attr="aria-label:ui.reach_examples_h3" id="reachTabs"></div>
+  <div class="phone" role="tabpanel" id="reachPhone"></div>
+  <p class="muted" style="margin-top:14px" data-i18n="ui.reach_note"></p>
 </section>
 
 <section id="social">
@@ -714,9 +738,19 @@ function renderStatic(){
     el.innerHTML=L.ui[el.dataset.phone].map(([k,h])=>k==="who"?`<div class="whoname">${h}</div>`:k==="time"?`<div class="time">${h}</div>`:`<div class="msg ${k}">${h}</div>`).join("");
   });
   document.querySelectorAll("[data-rules]").forEach(el=>{el.innerHTML=L.ui[el.dataset.rules].map(([b,t])=>`<div class="rule"><b>${b}</b>${t}</div>`).join("")});
+  document.querySelectorAll("[data-channels]").forEach(el=>{el.innerHTML=L.ui[el.dataset.channels].map(([b,t])=>`<div class="channel"><b>${b}</b><span>${t}</span></div>`).join("")});
+  renderReach();
   $("#day").innerHTML=L.ui.day.map(([t,b,s])=>`<li><time>${t}</time><div>${b}<small>${s}</small></div></li>`).join("");
   $("#built").innerHTML=L.ui.built_chips.map(c=>`<span class="chip">${c}</span>`).join("");
 }
+let reachI=0;
+function renderReach(){
+  const ex=L.ui.reach_examples;
+  $("#reachTabs").innerHTML=ex.map((e,i)=>`<button class="tab" role="tab" aria-selected="${i===reachI}" data-reach="${i}">${e.tab}</button>`).join("");
+  const ph=$("#reachPhone"); ph.setAttribute("aria-label",ex[reachI].tab);
+  ph.innerHTML=ex[reachI].phone.map(([k,h])=>k==="who"?`<div class="whoname">${h}</div>`:k==="time"?`<div class="time">${h}</div>`:`<div class="msg ${k}">${h}</div>`).join("");
+}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-reach]");if(b){reachI=+b.dataset.reach;renderReach();}});
 function renderStaff(){
   const order=Object.keys(AGENTS).filter(k=>!AGENTS[k].bg&&!LEADS.includes(k)&&!COACHES.includes(k));
   const card=k=>{const a=agent(k);const lead=LEADS.includes(k)||COACHES.includes(k);

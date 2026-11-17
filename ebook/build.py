@@ -56,7 +56,15 @@ def parse(md_text):
     intro, chapters = parts[0].strip(), []
     for p in parts[1:]:
         head, _, body = p.partition("\n")
-        chapters.append((head[3:].strip(), body.strip()))
+        head = head[3:].strip()
+        if head.lower() in ("contents", "contenido", "índice"):
+            continue  # the build makes its own linked contents
+        chapters.append((head, re.sub(r"\n-{3,}\s*$", "", body.strip()).strip()))
+    if meta.get("subtitle"):  # the cover already shows it
+        intro = re.sub(r"^#{3,} " + re.escape(meta["subtitle"]) + r"\s*$", "", intro, flags=re.M)
+    intro = re.sub(r"^\s*-{3,}\s*$", "", intro, flags=re.M).strip()
+    if meta.get("rights"):
+        intro = (intro + "\n\n" + meta["rights"]).strip()
     return meta, intro, chapters
 
 

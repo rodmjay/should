@@ -153,6 +153,48 @@ svg.chart{width:100%;height:auto;display:block;margin-top:8px}
 .checks li:before{content:"✓";color:var(--accent);font-weight:700;margin-right:8px}
 .dropped{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);display:grid;gap:2px;font-size:13px;color:var(--muted)}
 .dropped small{font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+/* projects: one shell, a panel per type */
+.proj-key{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted);margin:4px 0 12px}
+.proj-key span{display:inline-flex;align-items:center;gap:8px}
+.proj-key span:before{content:"";width:22px;height:10px;border-radius:3px}
+.proj-key .k-shell:before{background:var(--accent-soft);border:1px solid var(--accent)}
+.proj-key .k-panel:before{background:var(--bg);border:1px dashed var(--muted)}
+.proj-grid{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:760px){.proj-grid{grid-template-columns:repeat(3,minmax(0,1fr));margin-inline:calc(50% - min(520px,50vw - 16px))}.pj{display:grid;grid-row:span 2;grid-template-rows:subgrid;gap:0}}
+.pj{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.pj-shell{background:var(--accent-soft);color:var(--md-sys-color-on-secondary-container);padding:14px;display:grid;gap:8px}
+.pj-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.pj-type{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.pj-own{font-size:12px;opacity:.85;white-space:nowrap}
+.pj-name{font-family:var(--md-ref-typeface-brand);font-size:20px;line-height:1.2;margin:0}
+.pj-out{font-size:13px;margin:0}
+.pj-bar{height:6px;border-radius:999px;background:color-mix(in srgb,var(--md-sys-color-on-secondary-container) 14%,transparent);overflow:hidden}
+.pj-bar i{display:block;height:100%;width:var(--p);background:var(--accent)}
+.pj-f{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;margin:0;font-size:13px}
+.pj-f dt{font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;padding-top:2px;opacity:.8}
+.pj-f dd{margin:0;min-width:0}
+.pj-f dd.next{font-weight:600}
+.pj-panel{padding:14px;display:grid;gap:8px;align-content:start;flex:1;border-top:1px dashed var(--line)}
+.pj-ptitle{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.pj-lines{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:13px}
+.pj-lines li{display:grid;grid-template-columns:1fr auto;gap:2px 10px}
+.pj-lines small{grid-column:1/-1;color:var(--muted);font-size:12px}
+.pj-lines b{font-variant-numeric:tabular-nums}
+.pj-lines .tot{border-top:1px solid var(--line);padding-top:6px}
+.pj-watch{font-size:12px;color:var(--warm);font-weight:600}
+.pj-steps{list-style:none;margin:0;padding:0;display:grid;gap:0;font-size:13px}
+.pj-steps li{display:grid;grid-template-columns:14px 1fr auto;gap:10px;align-items:start;padding:5px 0;position:relative}
+.pj-steps li:before{content:"";width:10px;height:10px;border-radius:50%;border:2px solid var(--line);margin-top:3px;background:var(--card);z-index:1}
+.pj-steps li:not(:last-child):after{content:"";position:absolute;left:6px;top:18px;bottom:-6px;width:2px;background:var(--line)}
+.pj-steps li.done:before{background:var(--accent);border-color:var(--accent)}
+.pj-steps li.now:before{border-color:var(--warm);background:var(--warm-soft)}
+.pj-steps li.done span{color:var(--muted)}
+.pj-steps time{font-size:12px;color:var(--muted);white-space:nowrap}
+.pj-gates{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:13px}
+.pj-gates li{display:flex;justify-content:space-between;gap:8px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:6px 10px}
+.pj-gates em{font-style:normal;font-size:11px;font-weight:600;border-radius:999px;padding:2px 8px;white-space:nowrap;background:var(--line);color:var(--muted)}
+.pj-gates em.done{background:var(--accent-soft);color:var(--md-sys-color-on-secondary-container)}
+.pj-gates em.now{background:var(--warm-soft);color:var(--md-sys-color-on-tertiary-container)}
 /* scene: documents */
 .doc{border:1px solid var(--line);border-radius:6px 16px 16px 16px;padding:14px 16px;background:var(--bg);font-family:Georgia,serif;font-size:15px;line-height:1.6}
 .doc-h{border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:10px;font-family:Inter,sans-serif}
@@ -522,6 +564,16 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
   <p class="muted" style="margin-top:14px" data-i18n="ui.ladder_note"></p>
 </section>
 
+<section id="projects" class="proj-sec">
+  <div class="eyebrow" data-i18n="ui.proj_eyebrow"></div>
+  <h2 data-i18n="ui.proj_h2"></h2>
+  <p data-i18n="ui.proj_p"></p>
+  <div class="proj-key" aria-hidden="true"><span class="k-shell" data-i18n="ui.proj_key_shell"></span><span class="k-panel" data-i18n="ui.proj_key_panel"></span></div>
+  <div class="proj-grid" id="projGrid"></div>
+  <div class="gnotes" id="projNotes"></div>
+  <p class="muted" style="margin-top:14px" data-i18n="ui.proj_note"></p>
+</section>
+
 <section id="way">
   <div class="eyebrow" data-i18n="ui.way_eyebrow"></div>
   <h2 data-i18n="ui.way_h2"></h2>
@@ -793,9 +845,21 @@ function renderStatic(){
   document.querySelectorAll("[data-channels]").forEach(el=>{el.innerHTML=L.ui[el.dataset.channels].map(([b,t])=>`<div class="channel"><b>${b}</b><span>${t}</span></div>`).join("")});
   renderReach();
   renderLadder();
+  renderProjects();
   $("#ebookPdf").href=`ebook/should-way.${lang}.pdf`;$("#ebookEpub").href=`ebook/should-way.${lang}.epub`;
   $("#day").innerHTML=L.ui.day.map(([t,b,s])=>`<li><time>${t}</time><div>${b}<small>${s}</small></div></li>`).join("");
   $("#built").innerHTML=L.ui.built_chips.map(c=>`<span class="chip">${c}</span>`).join("");
+}
+function renderProjects(){
+  const u=L.ui, F=u.proj_fields;
+  const panel=c=>{
+    const b=c.body;
+    if(b.kind==="lines")return `<ul class="pj-lines">${b.items.map(([l,v,s])=>`<li><span>${l}</span><b>${v}</b>${s?`<small>${s}</small>`:""}</li>`).join("")}<li class="tot"><span>${b.total[0]}</span><b>${b.total[1]}</b></li></ul><div class="pj-watch">${b.watch}</div>`;
+    if(b.kind==="steps")return `<ol class="pj-steps">${b.items.map(([t,w,st])=>`<li class="${st}"><span>${t}</span><time>${w}</time></li>`).join("")}</ol>`;
+    return `<ul class="pj-gates">${b.items.map(([t,st,lab])=>`<li><span>${t}</span><em class="${st}">${lab}</em></li>`).join("")}</ul>`;
+  };
+  $("#projGrid").innerHTML=u.proj_cards.map(c=>`<article class="pj"><div class="pj-shell"><div class="pj-top"><span class="pj-type">${c.type}</span><span class="pj-own">${c.owner}</span></div><h3 class="pj-name">${c.name}</h3><p class="pj-out"><b>${F[0]}:</b> ${c.outcome}</p><div class="pj-bar" role="img" aria-label="${c.pct}%"><i style="--p:${c.pct}%"></i></div><dl class="pj-f"><dt>${F[1]}</dt><dd class="next">${c.next}</dd><dt>${F[2]}</dt><dd>${c.waiting}</dd><dt>${F[3]}</dt><dd>${c.goal}</dd></dl></div><div class="pj-panel"><div class="pj-ptitle">${c.panel}</div>${panel(c)}</div></article>`).join("");
+  $("#projNotes").innerHTML=u.proj_notes.map(([b,t])=>`<div class="gnote"><b>${b}</b>${t}</div>`).join("");
 }
 let ladderI=0;
 function renderLadder(){

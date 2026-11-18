@@ -348,7 +348,7 @@
       '<div class="pulses">' + H.subs.map(function (c) { return '<section class="block pulse" style="--c:' + c.color + '"><h2 class="label"><span>' + c.name + '</span><span class="pill st-' + c.stage + '">' + c.stage + '</span></h2><p><b>' + c.pulse + '</b></p><p class="muted small">Next: ' + c.next + '</p></section>'; }).join('') + '</div>' +
       card('Coming up', rows(H.next, function (n) { return '<b class="num">' + n[0] + '</b><span>' + n[1] + '</span><span class="muted small">' + n[2] + '</span>'; }));
   }
-  // Retirement, mirrors the portal's /retirement (Empower home style). The slider is a what-if only.
+  // Retirement, mirrors the portal's /retirement. The slider is a what-if only.
   var rtTab = 'when', rtD = null;
   function retirementView() {
     var X = D.retirement, I0 = X.income, d0 = X.deferral;

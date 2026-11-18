@@ -169,7 +169,7 @@ table.data th, table.data td { padding-left: 8px; padding-right: 8px; }
 .risk .wide2 { grid-column: 1 / -1; }
 .risk dt { color: var(--ink-3); font-size: 0.76rem; } .risk dd { margin: 2px 0 0; font-weight: 650; }
 
-/* Retirement, mirrors the portal's /retirement (Empower home style, M3 roles only) */
+/* Retirement, mirrors the portal's /retirement (M3 roles only) */
 .rt { --rt-mine: var(--md-sys-color-primary); --rt-emp: color-mix(in srgb, var(--md-sys-color-primary) 55%, var(--md-sys-color-surface)); --rt-ss: var(--md-sys-color-tertiary); --rt-other: var(--md-sys-color-secondary); --rt-gap: var(--md-sys-color-surface-container-highest); }
 .rt-top { display: flex; gap: 24px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
 .rt-head { flex: 1 1 320px; min-width: 0; }

@@ -212,3 +212,6 @@ table.data th, table.data td { padding-left: 8px; padding-right: 8px; }
 .rt .meter span { display: block; height: 100%; background: var(--md-sys-color-primary); }
 @media (max-width: 600px) { .rt-bar { flex-wrap: wrap; } .rt-bar .seg { flex: 1 1 40% !important; } .rt .ring { width: 128px; height: 128px; margin: 0 auto; } }
 .rt table.data td.r { white-space: nowrap; }
+.rt-sub { font: 600 0.95rem var(--nc-font); margin: 16px 0 6px; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.rt-payoff { margin: 0 0 8px; padding-left: 1.4em; display: flex; flex-direction: column; gap: 6px; }
+.rt-payoff li span { display: block; }

@@ -104,6 +104,8 @@ window.DEMO = {
     next: ['Consider 8%. Your match tops out at 5%, so anything past that is your own money, but two more points moves your goal age about a year sooner.', 'Nov 18'],
     accounts: [['Brokerage', 'Index fund account', 18420, 'Nov 20'], ['Bank', 'High-yield savings', 6250, 'Nov 20'], ['Old employer', 'Rollover IRA', 12880, 'Nov 15'], ['HSA', 'Health savings, invested', 3110, 'Nov 15'], ['Roth IRA', 'Opens in January', null, '', 'planned']],
     plan: ['100% of the first 3% and 50% of the next 2%. Match vests fully after 2 years (you’re at 3).', 'Example Co 401(k) · enrolled'],
+    taxSaving: 22,
+    payoff: [['Store card to $0', '$640', 'next payday'], ['Car loan extra $150 a month', '$8,900 left', 'from Dec'], ['Student loan', '$14,200 left', '—']],
     goal: ['Early retirement fund', 9600, 40000, 'Dec 31, 2030', 690]
   },
   phone: {

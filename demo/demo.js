@@ -14,7 +14,7 @@
 
   var GROUPS = [
     { key: 'today', name: 'Today', icon: 'today', tile: 'today', tabs: [['', 'today', 'today', 'var(--r-today)'], ['assistant', 'assistant', 'assistant', 'var(--r-assistant)'], ['coach', 'coach', 'coach', 'var(--r-coach)'], ['business_coach', 'business coach', 'business_coach', 'var(--r-business)']] },
-    { key: 'money', name: 'Money', icon: 'bookkeeper', tile: 'money', tabs: [['money', 'overview', 'today', 'var(--pen)'], ['forecast', 'cash forecast', 'financial', 'var(--r-bookkeeper)'], ['bookkeeper', 'accountant', 'bookkeeper', 'var(--r-bookkeeper)'], ['financial', 'financial', 'financial', 'var(--r-financial)'], ['shopping', 'shopping', 'shopping', 'var(--r-shopping)'], ['phone', 'phone', 'it', 'var(--r-it)'], ['forex', 'forex (paper)', 'wealth', 'var(--r-financial)']] },
+    { key: 'money', name: 'Money', icon: 'bookkeeper', tile: 'money', tabs: [['money', 'overview', 'today', 'var(--pen)'], ['forecast', 'cash forecast', 'financial', 'var(--r-bookkeeper)'], ['bookkeeper', 'accountant', 'bookkeeper', 'var(--r-bookkeeper)'], ['financial', 'financial', 'financial', 'var(--r-financial)'], ['shopping', 'shopping', 'shopping', 'var(--r-shopping)'], ['phone', 'phone', 'it', 'var(--r-it)'], ['retirement', 'retirement', 'financial', 'var(--r-financial)'], ['forex', 'forex (paper)', 'wealth', 'var(--r-financial)']] },
     { key: 'home-health', name: 'Home & Health', icon: 'home-manager', tile: 'home', tabs: [['home', 'overview', 'today', 'var(--pen)'], ['chores', 'chores', 'home-manager', 'var(--r-home-manager)'], ['health', 'health', 'health', 'var(--r-health)']] },
     { key: 'plans', name: 'Plans', icon: 'scheduler', tile: 'plans', tabs: [['local-guide', 'local guide', 'local-guide', 'var(--r-local-guide)'], ['scheduler', 'scheduler', 'scheduler', 'var(--r-scheduler)'], ['travel', 'travel', 'travel', 'var(--r-travel)'], ['media', 'movies', 'media', 'var(--r-media)']] },
     { key: 'people', name: 'People', icon: 'people', tile: 'people', tabs: [['people', 'overview', 'today', 'var(--pen)'], ['relationship-manager', 'relationships', 'relationship-manager', 'var(--r-relationship-manager)'], ['gifts', 'gifts', 'gifts', 'var(--r-gifts)']] },
@@ -23,7 +23,7 @@
   var CO_TABS = [['', 'overview', 'business'], ['cap', 'cap table', 'financial'], ['compliance', 'compliance', 'legal'], ['money', 'accounts & money', 'bookkeeper'], ['tasks', 'tasks', 'check']];
   var H = D.holding;
   var COMPANIES = [{ slug: 'northstar', name: H.name, color: '#5ac8fa', depth: 0 }].concat(H.subs.map(function (s) { return { slug: s.slug, name: s.name, color: s.color, depth: 1, stage: s.stage }; }));
-  var AREA = { forex: 'money', forecast: 'money', phone: 'money', health: 'health', shopping: 'shopping', chores: 'home', home: 'home' };
+  var AREA = { retirement: 'money', forex: 'money', forecast: 'money', phone: 'money', health: 'health', shopping: 'shopping', chores: 'home', home: 'home' };
   var DESKS = {
     assistant: ['Executive Assistant', 'Chief of staff: the morning text, your list, and one batched ask a day', 'Sent the 8 AM text. 3 things today, 2 decisions waiting. Moved the oil change to Monday so Saturday stays light.', ['Morning text, 8 AM', 'List hygiene, 5:45 AM']],
     coach: ['Life Coach', 'Your long-term guide: yearly goals, quarterly outcomes, a monthly focus and the week', 'Sit-down at 9:30: money and health are green, sleep is yellow. Three questions from the team, and up to 3 commitments for next week.', ['Weekly review, Saturdays 9 AM']],
@@ -62,7 +62,7 @@
   }
   function launcherApps() {
     return GROUPS.map(function (g) { return { name: g.name, icon: g.icon, href: hrefOf(g.tabs[0][0]), bg: 'var(--tile-' + g.tile + ')', act: g.key === 'money' }; })
-      .concat([{ name: 'Cash Forecast', icon: 'financial', href: '#/forecast', bg: 'var(--tile-money)' }, { name: 'Phone', icon: 'it', href: '#/phone', bg: 'var(--tile-money)' }, { name: 'Forex (paper)', icon: 'wealth', href: '#/forex', bg: 'var(--tile-money)' }, { name: 'Health', icon: 'health', href: '#/health', bg: 'var(--tile-health)' }, { name: 'Coach', icon: 'coach', href: '#/coach', bg: 'var(--tile-plans)' }, { name: 'Agency desk', icon: 'as-architect', href: '#/agency', bg: 'var(--tile-business)' }]);
+      .concat([{ name: 'Cash Forecast', icon: 'financial', href: '#/forecast', bg: 'var(--tile-money)' }, { name: 'Phone', icon: 'it', href: '#/phone', bg: 'var(--tile-money)' }, { name: 'Retirement', icon: 'financial', href: '#/retirement', bg: 'var(--tile-money)' }, { name: 'Forex (paper)', icon: 'wealth', href: '#/forex', bg: 'var(--tile-money)' }, { name: 'Health', icon: 'health', href: '#/health', bg: 'var(--tile-health)' }, { name: 'Coach', icon: 'coach', href: '#/coach', bg: 'var(--tile-plans)' }, { name: 'Agency desk', icon: 'as-architect', href: '#/agency', bg: 'var(--tile-business)' }]);
   }
   function renderBar(g, co) {
     var bar = $('#bar');
@@ -163,6 +163,7 @@
         card('Phone data', dl(X.data) + '<p class="small muted">Counts only. Message text stays on each person’s timeline.</p>') + '</div>';
     },
     forecast: function () { return forecastView(); },
+    retirement: function () { return retirementView(); },
     forex: function () {
       var X = D.forex, S = X.strategies;
       var sgn = function (n) { return (n > 0 ? '+' : n < 0 ? '−' : '') + '$' + Math.abs(n).toLocaleString('en-US', { minimumFractionDigits: 2 }); };
@@ -347,6 +348,49 @@
       '<div class="pulses">' + H.subs.map(function (c) { return '<section class="block pulse" style="--c:' + c.color + '"><h2 class="label"><span>' + c.name + '</span><span class="pill st-' + c.stage + '">' + c.stage + '</span></h2><p><b>' + c.pulse + '</b></p><p class="muted small">Next: ' + c.next + '</p></section>'; }).join('') + '</div>' +
       card('Coming up', rows(H.next, function (n) { return '<b class="num">' + n[0] + '</b><span>' + n[1] + '</span><span class="muted small">' + n[2] + '</span>'; }));
   }
+  // Retirement, mirrors the portal's /retirement (Empower home style). The slider is a what-if only.
+  var rtTab = 'when', rtD = null;
+  function retirementView() {
+    var X = D.retirement, I0 = X.income, d0 = X.deferral;
+    if (rtD == null) rtD = d0;
+    var d = rtD, usd = function (n) { return '$' + Math.round(n).toLocaleString('en-US'); };
+    var match = function (p) { return Math.min(p, 3) + 0.5 * Math.max(0, Math.min(p, 5) - 3); };
+    var goal = I0.savings + I0.employer + I0.ss + I0.other + I0.gap;
+    var sav = I0.savings * d / d0, emp = I0.employer * match(d) / match(d0), have = sav + emp + I0.ss + I0.other;
+    var gap = Math.max(0, goal - have), pct = Math.min(100, Math.round(have / goal * 100));
+    var perYear = (100 - X.goalPct) / Math.max(1, X.ageProjected - X.planAge);
+    var age = pct >= 100 ? X.planAge : Math.round(X.planAge + (100 - pct) / perYear), moved = d !== d0;
+    var parts = [['My savings', sav, 'var(--rt-mine)'], ['Employer', emp, 'var(--rt-emp)'], ['Social Security', I0.ss, 'var(--rt-ss)'], ['Other assets', I0.other, 'var(--rt-other)'], ['Income gap', gap, 'var(--rt-gap)', true]];
+    var total = parts.reduce(function (a, p) { return a + p[1]; }, 0) || 1, R = 52, C = 2 * Math.PI * R, off = 0;
+    var arcs = parts.filter(function (p) { return p[1] > 0; }).map(function (p) { var len = p[1] / total * C, a = '<circle cx="64" cy="64" r="52" class="arc' + (p[3] ? ' gapc' : '') + '" stroke="' + p[2] + '" stroke-dasharray="' + Math.max(0, len - 2).toFixed(1) + ' ' + C.toFixed(1) + '" stroke-dashoffset="' + (-off).toFixed(1) + '" transform="rotate(-90 64 64)"/>'; off += len; return a; }).join('');
+    var ticks = []; for (var i = 0; i < 7; i++) ticks.push(X.ageProjected - 3 + i);
+    var scale = ticks.map(function (t) { return '<span class="tk' + (t === age ? ' on' : Math.abs(t - age) === 1 ? ' near' : '') + '">' + t + '</span>'; }).join('') + (age < ticks[0] || age > ticks[6] ? '<span class="tk on out">' + age + '</span>' : '');
+    var facts = function (pairs) { return '<dl class="facts">' + pairs.map(function (p) { return '<div><dt>' + p[0] + '</dt><dd class="num">' + p[1] + '</dd></div>'; }).join('') + '</dl>'; };
+    var TABS = [['when', 'When could I retire'], ['income', 'Retirement income'], ['health', 'Healthcare costs'], ['compare', 'How do I compare']];
+    var body;
+    if (rtTab === 'when') body = '<div class="rt-two">' +
+      card('Before-tax contribution', '<div class="slide"><input type="range" min="0" max="15" step="1" value="' + d + '" data-rt-slider aria-label="Before-tax contribution percent"><output class="num">' + d + '%</output></div>' +
+        facts([['From each paycheck', usd(X.grossPerPay * d / 100)], ['Employer match', match(d) + '% · ' + usd(X.grossPerPay * match(d) / 100)], ['% of goal', pct + '%'], ['Goal reached at', age]]) +
+        '<p class="small muted">Now ' + d0 + '% at the plan. The match is 100% of the first 3% and 50% of the next 2%, so anything past 5% is your money only.' + (moved ? ' <button class="link" data-rt-reset>back to ' + d0 + '%</button>' : '') + '</p>', '<span class="small muted">what-if only, changes nothing</span>') +
+      card('Next step', '<p class="rt-step">' + X.next[0] + '</p><p class="small muted">Financial Advisor, ' + X.next[1] + '. You change the election yourself at the plan’s site.</p>') + '</div>';
+    else if (rtTab === 'income') body = card('Monthly income at retirement', '<div class="scroll"><table class="data rt-t"><tbody>' + parts.map(function (p) { return '<tr' + (p[3] ? ' class="gaprow"' : '') + '><td><i style="background:' + p[2] + '"></i>' + p[0] + '</td><td class="num r">' + usd(p[1]) + '</td><td class="num r muted">' + Math.round(p[1] / goal * 100) + '%</td></tr>'; }).join('') + '<tr class="tot"><td>Goal</td><td class="num r">' + usd(goal) + '</td><td></td></tr></tbody></table></div><p class="small muted">As of ' + X.asOf + ', source the plan’s projection' + (moved ? ', with your savings and match at ' + d + '%' : '') + '.</p>');
+    else if (rtTab === 'health') body = card('Healthcare costs in retirement', facts([['Per month', usd(X.healthcare.monthly)], ['Lifetime', usd(X.healthcare.total)]]) + '<p class="small muted">As of ' + X.asOf + ', source the plan’s projection.</p>');
+    else body = card('How do I compare', facts([['You', X.goalPct + '% of goal'], ['People like you', X.peerPct + '% of goal']]) + '<p class="small muted">' + X.peerNote + ' As of ' + X.asOf + '.</p>');
+    var own = X.accounts.reduce(function (a, x) { return a + (x[2] || 0); }, 0), g = X.goal, gp = Math.min(100, g[1] / g[2] * 100);
+    return '<div class="rt">' + hero('<a href="#/money">Money</a> · <b>Retirement</b> · <a href="#/financial">Financial Advisor</a> keeps it', 'retirement', 'The 401(k) plan’s projection, with your own accounts beside it. Read only.') +
+      '<section class="block rt-hero" aria-label="Retirement income goal"><div class="rt-top"><div class="rt-head"><p class="rt-h">' + (moved ? 'At ' + d + '% you would reach' : 'At your current savings rate you will reach') + ' your retirement income goal at age</p>' +
+      '<div class="scale" aria-label="Projected age ' + age + '">' + scale + '</div>' + (moved ? '<p class="small muted">The plan says ' + X.ageProjected + ' at ' + d0 + '%. The what-if age is a straight-line estimate, not the plan’s model.</p>' : '') + '</div>' +
+      '<figure class="ring" aria-label="' + pct + '% of goal"><svg viewBox="0 0 128 128" role="img" aria-hidden="true"><circle cx="64" cy="64" r="52" class="track"/>' + arcs + '</svg><figcaption><b class="num">' + pct + '%</b><span>of my goal</span></figcaption></figure></div>' +
+      '<div class="rt-bar" role="list" aria-label="Monthly income at retirement">' + parts.map(function (p) { return '<div class="seg' + (p[3] ? ' gap' : '') + '" role="listitem" style="--c:' + p[2] + ';flex-grow:' + Math.max(p[1], total * 0.08).toFixed(0) + '"><span class="k">' + p[0] + '</span><b class="num">' + usd(p[1]) + '</b></div>'; }).join('') + '</div>' +
+      '<p class="small muted rt-src">Monthly income at retirement. As of ' + X.asOf + ', source the plan’s projection · goal ' + usd(goal) + '/mo.</p></section>' +
+      '<div class="seg-btns subtabs" role="tablist" aria-label="Retirement views">' + TABS.map(function (t) { return '<button data-rt-tab="' + t[0] + '"' + (rtTab === t[0] ? ' class="on" aria-pressed="true"' : ' aria-pressed="false"') + '>' + t[1] + '</button>'; }).join('') + '</div>' + body +
+      card('Beyond the plan', '<div class="scroll"><table class="data"><thead><tr><th>Account</th><th class="r">Balance</th><th class="r">As of</th></tr></thead><tbody>' +
+        X.accounts.map(function (a) { return '<tr><td>' + a[0] + ' · ' + a[1] + (a[4] ? ' ' + pill('planned', 'watch') : '') + '</td><td class="num r">' + (a[2] != null ? money(a[2]) : '—') + '</td><td class="num r small muted">' + a[3] + '</td></tr>'; }).join('') +
+        '</tbody><tfoot><tr><td><b>Total</b></td><td class="num r"><b>' + usd(own) + '</b></td><td></td></tr></tfoot></table></div>' +
+        '<div class="rt-cards"><div class="rt-mini"><span class="label">401(k) match and vesting</span><p>' + X.plan[0] + '</p><p class="small muted">' + X.plan[1] + '</p></div>' +
+        '<div class="rt-mini"><span class="label">' + g[0] + '</span><p><b class="num">' + usd(g[1]) + '</b> of ' + usd(g[2]) + ' by ' + g[3] + '</p><div class="meter" role="meter" aria-valuenow="' + Math.round(gp) + '" aria-valuemin="0" aria-valuemax="100" aria-label="' + g[0] + ' progress"><span style="width:' + gp.toFixed(1) + '%"></span></div><p class="small muted">' + usd(g[4]) + '/mo needed</p></div></div>',
+        '<span class="small muted">what the plan counts as $0 “other assets”</span>') + '</div>';
+  }
   function agencyView() {
     var A = D.agency;
     var table = function (head, list) { return '<table class="data"><thead><tr>' + head.map(function (h) { return '<th>' + h + '</th>'; }).join('') + '</tr></thead><tbody>' + list.map(function (r) { return '<tr>' + r.map(function (c, i) { return '<td' + (i ? ' class="num"' : '') + '>' + esc(c) + '</td>'; }).join('') + '</tr>'; }).join('') + '</tbody></table>'; };
@@ -365,12 +409,16 @@
     if (fd) { fcDays = +fd.dataset.fcDays; render(); return; }
     if (e.target.closest('[data-fc-close]')) { fcPick = null; render(); return; }
     if (e.target.closest('[data-fc-clear]')) { fcWhatif = []; render(); return; }
+    var rt = e.target.closest('[data-rt-tab]');
+    if (rt) { rtTab = rt.dataset.rtTab; render(); return; }
+    if (e.target.closest('[data-rt-reset]')) { rtD = null; render(); return; }
     var fp = e.target.closest('[data-period]');
     if (fp) { fcPick = fp.dataset.period; render(); return; }
     var sb = e.target.closest('.seg-btns button');
     if (sb) sb.parentNode.querySelectorAll('button').forEach(function (x) { x.classList.toggle('on', x === sb); });
   });
   document.addEventListener('input', function (e) {
+    if (e.target.matches('[data-rt-slider]')) { rtD = +e.target.value; var ys = window.scrollY; render(); window.scrollTo(0, ys); var rs = $('[data-rt-slider]'); if (rs) rs.focus(); return; }
     if (e.target.matches('[data-fc-slider]')) { fcDays = +e.target.value; var y = window.scrollY; render(); window.scrollTo(0, y); var sl = $('[data-fc-slider]'); if (sl) sl.focus(); }
   });
   document.addEventListener('submit', function (e) {

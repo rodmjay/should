@@ -13,7 +13,7 @@
   }
 
   var GROUPS = [
-    { key: 'today', name: 'Today', icon: 'today', tile: 'today', tabs: [['', 'today', 'today', 'var(--r-today)'], ['assistant', 'assistant', 'assistant', 'var(--r-assistant)'], ['coach', 'coach', 'coach', 'var(--r-coach)'], ['business_coach', 'business coach', 'business_coach', 'var(--r-business)']] },
+    { key: 'today', name: 'Today', icon: 'today', tile: 'today', tabs: [['', 'today', 'today', 'var(--r-today)'], ['projects', 'projects', 'check', 'var(--r-today)'], ['assistant', 'assistant', 'assistant', 'var(--r-assistant)'], ['coach', 'coach', 'coach', 'var(--r-coach)'], ['business_coach', 'business coach', 'business_coach', 'var(--r-business)']] },
     { key: 'money', name: 'Money', icon: 'bookkeeper', tile: 'money', tabs: [['money', 'overview', 'today', 'var(--pen)'], ['forecast', 'cash forecast', 'financial', 'var(--r-bookkeeper)'], ['bookkeeper', 'accountant', 'bookkeeper', 'var(--r-bookkeeper)'], ['financial', 'financial', 'financial', 'var(--r-financial)'], ['shopping', 'shopping', 'shopping', 'var(--r-shopping)'], ['phone', 'phone', 'it', 'var(--r-it)'], ['retirement', 'retirement', 'financial', 'var(--r-financial)'], ['forex', 'forex (paper)', 'wealth', 'var(--r-financial)']] },
     { key: 'home-health', name: 'Home & Health', icon: 'home-manager', tile: 'home', tabs: [['home', 'overview', 'today', 'var(--pen)'], ['chores', 'chores', 'home-manager', 'var(--r-home-manager)'], ['health', 'health', 'health', 'var(--r-health)']] },
     { key: 'plans', name: 'Plans', icon: 'scheduler', tile: 'plans', tabs: [['local-guide', 'local guide', 'local-guide', 'var(--r-local-guide)'], ['scheduler', 'scheduler', 'scheduler', 'var(--r-scheduler)'], ['travel', 'travel', 'travel', 'var(--r-travel)'], ['media', 'movies', 'media', 'var(--r-media)']] },
@@ -46,7 +46,7 @@
     var h = (location.hash || '#/').slice(2).split('/');
     if (h[0] === 'c') return { co: h[1] || 'northstar', sec: h[2] || '' };
     if (h[0] === 'agency') return { co: 'brightside', sec: 'hours' };
-    return { key: h[0] || '' };
+    return { key: h[0] || '', sub: h[1] || '' };
   }
   function groupOf(key) { return GROUPS.filter(function (g) { return g.tabs.some(function (t) { return t[0] === key; }); })[0] || GROUPS[0]; }
   function hrefOf(key) { return '#/' + key; }
@@ -58,11 +58,11 @@
     document.title = (co ? co.name : g.name) + ' · Should demo';
     renderBar(g, co);
     renderSeg(g, co, r);
-    $('#app').innerHTML = co ? companyView(co, r.sec) : (VIEWS[r.key] || deskView)(r.key);
+    $('#app').innerHTML = co ? companyView(co, r.sec) : (VIEWS[r.key] || deskView)(r.key, r.sub);
   }
   function launcherApps() {
     return GROUPS.map(function (g) { return { name: g.name, icon: g.icon, href: hrefOf(g.tabs[0][0]), bg: 'var(--tile-' + g.tile + ')', act: g.key === 'money' }; })
-      .concat([{ name: 'Cash Forecast', icon: 'financial', href: '#/forecast', bg: 'var(--tile-money)' }, { name: 'Phone', icon: 'it', href: '#/phone', bg: 'var(--tile-money)' }, { name: 'Retirement', icon: 'financial', href: '#/retirement', bg: 'var(--tile-money)' }, { name: 'Forex (paper)', icon: 'wealth', href: '#/forex', bg: 'var(--tile-money)' }, { name: 'Health', icon: 'health', href: '#/health', bg: 'var(--tile-health)' }, { name: 'Coach', icon: 'coach', href: '#/coach', bg: 'var(--tile-plans)' }, { name: 'Agency desk', icon: 'as-architect', href: '#/agency', bg: 'var(--tile-business)' }]);
+      .concat([{ name: 'Cash Forecast', icon: 'financial', href: '#/forecast', bg: 'var(--tile-money)' }, { name: 'Phone', icon: 'it', href: '#/phone', bg: 'var(--tile-money)' }, { name: 'Retirement', icon: 'financial', href: '#/retirement', bg: 'var(--tile-money)' }, { name: 'Projects', icon: 'check', href: '#/projects', bg: 'var(--tile-today)' }, { name: 'Forex (paper)', icon: 'wealth', href: '#/forex', bg: 'var(--tile-money)' }, { name: 'Health', icon: 'health', href: '#/health', bg: 'var(--tile-health)' }, { name: 'Coach', icon: 'coach', href: '#/coach', bg: 'var(--tile-plans)' }, { name: 'Agency desk', icon: 'as-architect', href: '#/agency', bg: 'var(--tile-business)' }]);
   }
   function renderBar(g, co) {
     var bar = $('#bar');
@@ -164,6 +164,7 @@
     },
     forecast: function () { return forecastView(); },
     retirement: function () { return retirementView(); },
+    projects: function (k, sub) { return sub ? projectView(sub) : projectsView(); },
     forex: function () {
       var X = D.forex, S = X.strategies;
       var sgn = function (n) { return (n > 0 ? '+' : n < 0 ? '−' : '') + '$' + Math.abs(n).toLocaleString('en-US', { minimumFractionDigits: 2 }); };
@@ -392,6 +393,52 @@
         '<div class="rt-mini"><span class="label">' + g[0] + '</span><p><b class="num">' + usd(g[1]) + '</b> of ' + usd(g[2]) + ' by ' + g[3] + '</p><div class="meter" role="meter" aria-valuenow="' + Math.round(gp) + '" aria-valuemin="0" aria-valuemax="100" aria-label="' + g[0] + ' progress"><span style="width:' + gp.toFixed(1) + '%"></span></div><p class="small muted">' + usd(g[4]) + '/mo needed</p></div></div>',
         '<span class="small muted">what the plan counts as $0 “other assets”</span>') + '</div>';
   }
+  // Projects, mirrors the portal's /projects and /projects/<key>: cards by type, then one project's shell and its type's panel
+  var PK = { vacation: ['Trips', 'trip', 'travel', 'var(--r-travel)'], move: ['Moves', 'move', 'relocation', 'var(--r-relocation)'], event: ['Events', 'event', 'events', 'var(--r-events)'], legal_case: ['Legal', 'legal case', 'legal', 'var(--r-legal)'], purchase: ['Purchases', 'purchase', 'shopping', 'var(--r-shopping)'], business_launch: ['Business launches', 'launch', 'business', 'var(--r-business)'], generic: ['Other projects', 'project', 'check', 'var(--r-assistant)'] };
+  var PST = { active: 'Active', waiting: 'Waiting', someday: 'Someday', done: 'Done', dropped: 'Dropped' };
+  var pjShow = 'open';
+  var pjFits = function (p, f) { return f === 'all' || (f === 'open' ? (p.status === 'active' || p.status === 'waiting') : f === 'done' ? (p.status === 'done' || p.status === 'dropped') : p.status === f); };
+  var pjOpen = function (p) { return p.status === 'active' || p.status === 'waiting'; };
+  var pjBar = function (p, c) { return p.progress[1] ? '<span class="pj-bar" role="meter" aria-label="' + p.progress[0] + ' of ' + p.progress[1] + ' steps done" aria-valuenow="' + Math.round(p.progress[0] / p.progress[1] * 100) + '" aria-valuemin="0" aria-valuemax="100"><span style="width:' + (p.progress[0] / p.progress[1] * 100).toFixed(0) + '%;background:' + c + '"></span></span>' : ''; };
+  function projectsView() {
+    var P = D.projects, list = P.filter(function (p) { return pjFits(p, pjShow); });
+    var F = [['open', 'In progress'], ['someday', 'Someday'], ['done', 'Done'], ['all', 'All']];
+    var groups = Object.keys(PK).map(function (k) { return { k: k, K: PK[k], items: list.filter(function (p) { return (PK[p.kind] ? p.kind : 'generic') === k; }) }; }).filter(function (g) { return g.items.length; });
+    return '<div class="pj">' + hero('Every outcome that takes more than one step, where it stands and what’s next.', 'projects') +
+      '<nav class="pj-chips" aria-label="Filter by status">' + F.map(function (f) { return '<button data-pj-filter="' + f[0] + '" aria-pressed="' + (pjShow === f[0]) + '"' + (pjShow === f[0] ? ' class="on"' : '') + '>' + f[1] + ' <span class="n">' + P.filter(function (p) { return pjFits(p, f[0]); }).length + '</span></button>'; }).join('') + '</nav>' +
+      (groups.length ? '' : '<p class="muted">Nothing here.</p>') +
+      groups.map(function (g) {
+        return '<section class="pj-kind" aria-label="' + g.K[0] + '"><h2 class="pj-kh">' + icon(g.K[2], 18) + ' ' + g.K[0] + ' <span class="muted small">' + g.items.length + '</span></h2><div class="pj-cards">' +
+          g.items.map(function (p) {
+            return '<a class="block pj-card" href="#/projects/' + p.key + '" style="--c:' + g.K[3] + '"><span class="pj-top"><b>' + esc(p.title) + '</b><span class="pj-st s-' + p.status + '">' + PST[p.status] + '</span></span>' +
+              '<span class="pj-oc">' + esc(p.outcome) + '</span>' +
+              (p.next ? '<span class="pj-next"><span class="lbl">Next</span> ' + esc(p.next[0]) + (p.next[1] ? ' · ' + p.next[1] : '') + '</span>' : pjOpen(p) ? '<span class="pj-next none">No next action</span>' : '') +
+              '<span class="pj-foot">' + pjBar(p, g.K[3]) + (p.progress[1] ? '<span class="small muted">' + p.progress[0] + '/' + p.progress[1] + '</span>' : '') + (p.waits.length ? '<span class="small muted">· ' + p.waits.length + ' waiting</span>' : '') + '<span class="pj-own">' + face(p.owner, 20) + '</span></span></a>';
+          }).join('') + '</div></section>';
+      }).join('') + '</div>';
+  }
+  function projectView(key) {
+    var p = D.projects.filter(function (x) { return x.key === key; })[0];
+    if (!p) return hero('<a href="#/projects">Projects</a>', 'Not found', 'That project isn’t in the demo.');
+    var K = PK[p.kind] || PK.generic, A = window.DSAvatars, who = A && A.AVATARS[p.owner] ? A.AVATARS[p.owner].name : (DESKS[p.owner] || [p.owner])[0];
+    var li = function (xs, fn) { return xs.length ? '<ul>' + xs.map(fn).join('') + '</ul>' : ''; };
+    var shell = '<section class="block pj-shell" aria-label="Project" style="--c:' + K[3] + '"><div class="pj-row"><span class="pj-st chip s-' + p.status + '">' + PST[p.status] + '</span><span class="pj-k">' + icon(K[2], 16) + ' ' + K[1] + '</span><span class="pj-own">' + face(p.owner, 22) + ' ' + esc(who) + ', owner</span></div>' +
+      '<p class="pj-oc big"><span class="lbl">Outcome</span>' + esc(p.outcome) + '</p>' +
+      '<div class="pj-nextbox' + (p.next ? '' : ' none') + '"><span class="lbl">Next action</span>' + (p.next ? '<b>' + esc(p.next[0]) + '</b>' + (p.next[1] ? '<span class="small muted"> · ' + p.next[1] + '</span>' : '') : pjOpen(p) ? 'None yet. Every active project needs one.' : '<span class="muted">—</span>') + '</div>' +
+      (p.progress[1] ? '<div class="pj-prog">' + pjBar(p, K[3]) + '<span class="small muted">' + p.progress[0] + ' of ' + p.progress[1] + ' steps done</span></div>' : '') +
+      '<div class="pj-grid"><div><span class="lbl">Waiting on</span>' + (li(p.waits, function (w) { return '<li>' + esc(w[0]) + ' <span class="small muted">· ' + esc(w[1]) + ', check ' + w[2] + '</span></li>'; }) || '<p class="muted small">Nothing.</p>') + '</div>' +
+      '<div><span class="lbl">Key dates</span>' + (li(p.dates, function (x) { return '<li><b>' + x[0] + '</b> ' + esc(x[1]) + '</li>'; }) || '<p class="muted small">None dated.</p>') + '</div>' +
+      '<div><span class="lbl">Goal</span>' + (p.goal ? '<p>' + esc(p.goal[0]) + ' <span class="small muted">· ' + p.goal[1] + '</span></p>' : '<p class="muted small">Not linked.</p>') + '</div></div></section>';
+    var trip = '';
+    if (p.trip) {
+      var T = p.trip;
+      trip = card('Trip options', '<div class="pj-opts">' + T.options.map(function (o) { return '<div class="pj-opt' + (o[3] ? ' pick' : '') + '"><b>' + esc(o[0]) + '</b><span class="num big">' + o[1] + '</span><span class="small muted">' + esc(o[2]) + '</span>' + (o[3] ? pill('Travel Agent’s pick', 'ok') : '') + '</div>'; }).join('') + '</div>' +
+        '<ul class="pj-lines">' + T.lines.map(function (l) { return '<li><span>' + l[0] + '</span><b class="num">' + l[1] + '</b></li>'; }).join('') + '</ul><p class="small pj-watch">' + T.watch + '</p>', '<span class="small muted">whole-trip totals</span>');
+    }
+    var steps = card('Steps', (p.steps.length ? '<ul class="pj-steps">' + p.steps.map(function (t) { return '<li><span class="box" aria-hidden="true"></span><span>' + esc(t[0]) + '</span><span class="small muted">' + [t[1], t[2] ? t[2] + ' min' : ''].filter(Boolean).join(' · ') + '</span></li>'; }).join('') + '</ul>' : '<p class="muted">No open steps.</p>') +
+      (p.done.length ? '<details class="pj-done"><summary class="small">' + p.done.length + ' done in the last 90 days</summary><ul class="pj-steps">' + p.done.map(function (t) { return '<li class="ok"><span class="box" aria-hidden="true">✓</span><span>' + esc(t[0]) + '</span><span class="small muted">' + t[1] + '</span></li>'; }).join('') + '</ul></details>' : ''));
+    return '<div class="pj">' + hero('<a href="#/projects">Projects</a> · ' + K[1], esc(p.title)) + shell + trip + steps + '</div>';
+  }
   function agencyView() {
     var A = D.agency;
     var table = function (head, list) { return '<table class="data"><thead><tr>' + head.map(function (h) { return '<th>' + h + '</th>'; }).join('') + '</tr></thead><tbody>' + list.map(function (r) { return '<tr>' + r.map(function (c, i) { return '<td' + (i ? ' class="num"' : '') + '>' + esc(c) + '</td>'; }).join('') + '</tr>'; }).join('') + '</tbody></table>'; };
@@ -410,6 +457,8 @@
     if (fd) { fcDays = +fd.dataset.fcDays; render(); return; }
     if (e.target.closest('[data-fc-close]')) { fcPick = null; render(); return; }
     if (e.target.closest('[data-fc-clear]')) { fcWhatif = []; render(); return; }
+    var pf = e.target.closest('[data-pj-filter]');
+    if (pf) { pjShow = pf.dataset.pjFilter; render(); return; }
     var rt = e.target.closest('[data-rt-tab]');
     if (rt) { rtTab = rt.dataset.rtTab; render(); return; }
     if (e.target.closest('[data-rt-reset]')) { rtD = null; render(); return; }

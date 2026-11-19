@@ -268,3 +268,5 @@ table.data th, table.data td { padding-left: 8px; padding-right: 8px; }
 .pj-done { margin-top: 10px; } .pj-done summary { cursor: pointer; color: var(--md-sys-color-primary); }
 .pj .lbl { text-align: left; }
 .pj-opt .pill { align-self: flex-start; }
+.pj-flag { font-size: 0.8rem; color: var(--md-sys-color-error); }
+.pj-flagbox { margin: 0 0 8px; padding: 6px 10px; border-radius: 8px; background: var(--md-sys-color-error-container); color: var(--md-sys-color-on-error-container); font-size: 0.88rem; }

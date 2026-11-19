@@ -412,6 +412,7 @@
           g.items.map(function (p) {
             return '<a class="block pj-card" href="#/projects/' + p.key + '" style="--c:' + g.K[3] + '"><span class="pj-top"><b>' + esc(p.title) + '</b><span class="pj-st s-' + p.status + '">' + PST[p.status] + '</span></span>' +
               '<span class="pj-oc">' + esc(p.outcome) + '</span>' +
+              (p.flags || []).map(function (f) { return '<span class="pj-flag">' + esc(f) + '</span>'; }).join('') +
               (p.next ? '<span class="pj-next"><span class="lbl">Next</span> ' + esc(p.next[0]) + (p.next[1] ? ' · ' + p.next[1] : '') + '</span>' : pjOpen(p) ? '<span class="pj-next none">No next action</span>' : '') +
               '<span class="pj-foot">' + pjBar(p, g.K[3]) + (p.progress[1] ? '<span class="small muted">' + p.progress[0] + '/' + p.progress[1] + '</span>' : '') + (p.waits.length ? '<span class="small muted">· ' + p.waits.length + ' waiting</span>' : '') + '<span class="pj-own">' + face(p.owner, 20) + '</span></span></a>';
           }).join('') + '</div></section>';
@@ -423,6 +424,7 @@
     var K = PK[p.kind] || PK.generic, A = window.DSAvatars, who = A && A.AVATARS[p.owner] ? A.AVATARS[p.owner].name : (DESKS[p.owner] || [p.owner])[0];
     var li = function (xs, fn) { return xs.length ? '<ul>' + xs.map(fn).join('') + '</ul>' : ''; };
     var shell = '<section class="block pj-shell" aria-label="Project" style="--c:' + K[3] + '"><div class="pj-row"><span class="pj-st chip s-' + p.status + '">' + PST[p.status] + '</span><span class="pj-k">' + icon(K[2], 16) + ' ' + K[1] + '</span><span class="pj-own">' + face(p.owner, 22) + ' ' + esc(who) + ', owner</span></div>' +
+      (p.flags || []).map(function (f) { return '<p class="pj-flagbox" role="status">' + esc(f) + '</p>'; }).join('') +
       '<p class="pj-oc big"><span class="lbl">Outcome</span>' + esc(p.outcome) + '</p>' +
       '<div class="pj-nextbox' + (p.next ? '' : ' none') + '"><span class="lbl">Next action</span>' + (p.next ? '<b>' + esc(p.next[0]) + '</b>' + (p.next[1] ? '<span class="small muted"> · ' + p.next[1] + '</span>' : '') : pjOpen(p) ? 'None yet. Every active project needs one.' : '<span class="muted">—</span>') + '</div>' +
       (p.progress[1] ? '<div class="pj-prog">' + pjBar(p, K[3]) + '<span class="small muted">' + p.progress[0] + ' of ' + p.progress[1] + ' steps done</span></div>' : '') +

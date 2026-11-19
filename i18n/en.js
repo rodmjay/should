@@ -55,13 +55,13 @@
   proj_fields: ["Outcome", "Next", "Waiting on", "Goal"],
   proj_cards: [
    { type: "Trip", owner: "Travel Agent", panel: "Costs", name: "Beach week in March", outcome: "Six days on the coast, under $2,000 all in", pct: 40,
-     next: "Pick one of the two stays (5 minutes)", waiting: "Price drop on the Tuesday flight", goal: "Rest: one real week off a year",
+     next: "Pick one of the two stays (5 minutes)", waiting: "A cheaper Tuesday flight", goal: "Rest: one real week off a year",
      body: { kind: "lines", items: [["Flights, 2 people", "$612", "Tuesday out, Monday back"], ["Stay, 6 nights", "$840", "Free cancellation until Feb 20"], ["Car, 6 days", "$228", "Pickup at the airport"], ["Food and fun", "$300", "Estimate"]], total: ["Trip total", "$1,980"], watch: "Watching the flight: $40 lower on Tuesdays" } },
    { type: "Move", owner: "Relocation Expert", panel: "Steps", name: "Move to the new place", outcome: "Moved in, old place handed back, deposit returned", pct: 55,
      next: "Sign the lease (link in your text)", waiting: "The mover's written quote", goal: "Home: a calm place to live",
      body: { kind: "steps", items: [["Shortlist 3 places", "Apr 3", "done"], ["Tour and apply", "Apr 9", "done"], ["Sign the lease", "Apr 14", "now"], ["Book movers", "Apr 20", "next"], ["Utilities and address change", "Apr 27", "next"], ["Hand back the keys", "May 1", "next"]] } },
    { type: "Launch", owner: "Business Executive", panel: "Checklist", name: "Open the online shop", outcome: "Shop live and the first 10 orders shipped", pct: 70,
-     next: "Approve the home page (10 minutes)", waiting: "The payment processor's account review", goal: "Freedom: a business that runs without me",
+     next: "Approve the home page (10 minutes)", waiting: "Payment account review", goal: "Freedom: a business that runs itself",
      body: { kind: "gates", items: [["Products and prices", "done", "Done"], ["Shipping and returns policy", "done", "Done"], ["Home page", "now", "Your review"], ["Payments", "wait", "Waiting"], ["Launch announcement", "wait", "Next"]] } },
   ],
   proj_notes: [

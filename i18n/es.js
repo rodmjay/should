@@ -55,13 +55,13 @@
   proj_fields: ["Resultado", "Siguiente", "Esperando", "Meta"],
   proj_cards: [
    { type: "Viaje", owner: "Agente de viajes", panel: "Costos", name: "Semana de playa en marzo", outcome: "Seis días en la costa, menos de $2,000 en total", pct: 40,
-     next: "Elegir uno de los dos alojamientos (5 minutos)", waiting: "Que baje el precio del vuelo del martes", goal: "Descanso: una semana libre de verdad al año",
+     next: "Elegir uno de los dos alojamientos (5 minutos)", waiting: "Un vuelo del martes más barato", goal: "Descanso: una semana libre de verdad al año",
      body: { kind: "lines", items: [["Vuelos, 2 personas", "$612", "Ida el martes, regreso el lunes"], ["Alojamiento, 6 noches", "$840", "Cancelación gratis hasta el 20 de feb."], ["Auto, 6 días", "$228", "Se recoge en el aeropuerto"], ["Comida y paseos", "$300", "Estimado"]], total: ["Total del viaje", "$1,980"], watch: "Vigilando el vuelo: $40 menos los martes" } },
    { type: "Mudanza", owner: "Experto en mudanzas", panel: "Pasos", name: "Mudarse al nuevo lugar", outcome: "Instalado, el lugar anterior entregado y el depósito devuelto", pct: 55,
      next: "Firmar el contrato (enlace en su mensaje)", waiting: "La cotización por escrito de la mudanza", goal: "Hogar: un lugar tranquilo para vivir",
      body: { kind: "steps", items: [["Elegir 3 lugares", "3 abr", "done"], ["Visitar y aplicar", "9 abr", "done"], ["Firmar el contrato", "14 abr", "now"], ["Contratar la mudanza", "20 abr", "next"], ["Servicios y cambio de dirección", "27 abr", "next"], ["Entregar las llaves", "1 may", "next"]] } },
    { type: "Lanzamiento", owner: "Ejecutivo de negocios", panel: "Lista de pendientes", name: "Abrir la tienda en línea", outcome: "Tienda en línea y los primeros 10 pedidos enviados", pct: 70,
-     next: "Aprobar la página de inicio (10 minutos)", waiting: "La revisión de la cuenta de pagos", goal: "Libertad: un negocio que funcione sin mí",
+     next: "Aprobar la página de inicio (10 minutos)", waiting: "Revisión de la cuenta de pagos", goal: "Libertad: un negocio que funcione solo",
      body: { kind: "gates", items: [["Productos y precios", "done", "Listo"], ["Política de envíos y devoluciones", "done", "Listo"], ["Página de inicio", "now", "Su revisión"], ["Pagos", "wait", "Esperando"], ["Anuncio del lanzamiento", "wait", "Siguiente"]] } },
   ],
   proj_notes: [

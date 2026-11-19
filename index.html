@@ -155,8 +155,8 @@ svg.chart{width:100%;height:auto;display:block;margin-top:8px}
 .dropped small{font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
 /* projects */
 .proj-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr))}
-@media(min-width:480px){.pj{display:grid;grid-row:span 2;grid-template-rows:subgrid;gap:0}}
 .pj{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+@media(min-width:480px){.pj{display:grid;grid-row:span 2;grid-template-rows:subgrid;gap:0}}
 .pj-shell{background:var(--accent-soft);color:var(--md-sys-color-on-secondary-container);padding:14px;display:grid;gap:8px}
 .pj-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
 .pj-type{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
@@ -165,7 +165,8 @@ svg.chart{width:100%;height:auto;display:block;margin-top:8px}
 .pj-out{font-size:13px;margin:0}
 .pj-bar{height:6px;border-radius:999px;background:color-mix(in srgb,var(--md-sys-color-on-secondary-container) 14%,transparent);overflow:hidden}
 .pj-bar i{display:block;height:100%;width:var(--p);background:var(--accent)}
-.pj-f{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;margin:0;font-size:13px}
+.pj-f{display:grid;grid-template-columns:1fr;gap:0;margin:0;font-size:13px}
+.pj-f dd+dt{margin-top:6px}
 .pj-f dt{font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;padding-top:2px;opacity:.8}
 .pj-f dd{margin:0;min-width:0}
 .pj-f dd.next{font-weight:600}

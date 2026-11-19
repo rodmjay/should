@@ -393,53 +393,127 @@
         '<div class="rt-mini"><span class="label">' + g[0] + '</span><p><b class="num">' + usd(g[1]) + '</b> of ' + usd(g[2]) + ' by ' + g[3] + '</p><div class="meter" role="meter" aria-valuenow="' + Math.round(gp) + '" aria-valuemin="0" aria-valuemax="100" aria-label="' + g[0] + ' progress"><span style="width:' + gp.toFixed(1) + '%"></span></div><p class="small muted">' + usd(g[4]) + '/mo needed</p></div></div>',
         '<span class="small muted">what the plan counts as $0 “other assets”</span>') + '</div>';
   }
-  // Projects, mirrors the portal's /projects and /projects/<key>: cards by type, then one project's shell and its type's panel
-  var PK = { vacation: ['Trips', 'trip', 'travel', 'var(--r-travel)'], move: ['Moves', 'move', 'relocation', 'var(--r-relocation)'], event: ['Events', 'event', 'events', 'var(--r-events)'], legal_case: ['Legal', 'legal case', 'legal', 'var(--r-legal)'], purchase: ['Purchases', 'purchase', 'shopping', 'var(--r-shopping)'], business_launch: ['Business launches', 'launch', 'business', 'var(--r-business)'], generic: ['Other projects', 'project', 'check', 'var(--r-assistant)'] };
+  // Projects, mirrors the portal's /projects and /projects/<key> (first-class pass 85151ae): overview strip, cards or
+  // timeline, and a project page with a hero, the next step, the kind's panel, steps and a side column. Made-up data.
+  var PK = { vacation: ['Trips', 'Trip', 'travel', 'var(--ds-series-1)'], move: ['Moves', 'Move', 'relocation', 'var(--ds-series-4)'], event: ['Events', 'Event', 'events', 'var(--ds-series-8)'], legal_case: ['Legal', 'Legal case', 'legal', 'var(--ds-series-9)'], purchase: ['Purchases', 'Purchase', 'shopping', 'var(--ds-series-6)'], business_launch: ['Launches', 'Launch', 'business', 'var(--ds-series-2)'], generic: ['Other projects', 'Project', 'check', 'var(--ds-series-3)'] };
   var PST = { active: 'Active', waiting: 'Waiting', someday: 'Someday', done: 'Done', dropped: 'Dropped' };
-  var pjShow = 'open';
+  var PCHIP = { active: 'primary', waiting: 'warning', someday: '', done: 'success', dropped: '' };
+  var PJ_TODAY = '2026-11-21';
+  var pjShow = 'open', pjView = 'cards', pjRange = '12';
+  var pjK = function (p) { return PK[p.kind] || PK.generic; };
   var pjFits = function (p, f) { return f === 'all' || (f === 'open' ? (p.status === 'active' || p.status === 'waiting') : f === 'done' ? (p.status === 'done' || p.status === 'dropped') : p.status === f); };
-  var pjOpen = function (p) { return p.status === 'active' || p.status === 'waiting'; };
-  var pjBar = function (p, c) { return p.progress[1] ? '<span class="pj-bar" role="meter" aria-label="' + p.progress[0] + ' of ' + p.progress[1] + ' steps done" aria-valuenow="' + Math.round(p.progress[0] / p.progress[1] * 100) + '" aria-valuemin="0" aria-valuemax="100"><span style="width:' + (p.progress[0] / p.progress[1] * 100).toFixed(0) + '%;background:' + c + '"></span></span>' : ''; };
+  var pjLive = function (p) { return p.status === 'active' || p.status === 'waiting'; };
+  var pjMd = function (iso, o) { return iso ? new Date(iso + 'T12:00:00').toLocaleDateString('en-US', o || { month: 'short', day: 'numeric' }) : ''; };
+  var pjPct = function (p) { return p.progress[1] ? Math.round(p.progress[0] / p.progress[1] * 100) : null; };
+  var pjDays = function (iso) { return Math.round((new Date(iso + 'T12:00:00') - new Date(PJ_TODAY + 'T12:00:00')) / 864e5); };
+  function pjDue(d) {
+    if (d == null) return null;
+    if (d < 0) return [-d + 'd overdue', 'error']; if (d === 0) return ['today', 'error']; if (d === 1) return ['tomorrow', 'warning'];
+    if (d <= 7) return ['in ' + d + ' days', 'warning']; if (d <= 60) return ['in ' + d + ' days', ''];
+    return d <= 540 ? ['in ' + Math.round(d / 30.4) + ' months', ''] : ['in ' + (d / 365).toFixed(1) + ' years', ''];
+  }
+  function pjNext(p) {
+    if (p.next) return ['Your step', p.next[0], p.next[1]];
+    if (p.waits.length) return ['Waiting on ' + p.waits[0][0], p.waits[0][1], p.waits[0][2]];
+    if (!pjLive(p)) return null;
+    return [pjOwner(p), 'Owns the next step.', ''];
+  }
+  function pjOwner(p) { var A = window.DSAvatars; return A && A.AVATARS[p.owner] ? A.AVATARS[p.owner].name : (DESKS[p.owner] || [p.owner])[0]; }
+  function ring(pct, size, stroke, accent) {
+    var r = (size - stroke) / 2, c = 2 * Math.PI * r, h = size / 2;
+    return '<span class="pj-ring" style="width:' + size + 'px;height:' + size + 'px" role="meter" aria-label="Progress" aria-valuenow="' + (pct || 0) + '" aria-valuemin="0" aria-valuemax="100"><svg viewBox="0 0 ' + size + ' ' + size + '" aria-hidden="true"><circle cx="' + h + '" cy="' + h + '" r="' + r + '" class="track" stroke-width="' + stroke + '"/>' +
+      (pct ? '<circle cx="' + h + '" cy="' + h + '" r="' + r + '" class="arc" stroke="' + accent + '" stroke-width="' + stroke + '" stroke-dasharray="' + (pct / 100 * c).toFixed(1) + ' ' + c.toFixed(1) + '" transform="rotate(-90 ' + h + ' ' + h + ')"/>' : '') +
+      '</svg><span class="v" style="font-size:' + Math.max(11, size * 0.24) + 'px">' + (pct == null ? '–' : pct + '%') + '</span></span>';
+  }
+  var chip = function (text, tone) { return '<span class="pj-chip ' + (tone || '') + '">' + text + '</span>'; };
+  function pjCard(p) {
+    var K = pjK(p), d = pjDue(p.days), n = pjNext(p), pct = pjPct(p), quiet = !pjLive(p);
+    return '<div class="pj-wrap"><a class="pj-card' + (quiet ? ' quiet' : '') + '" href="#/projects/' + p.key + '" style="--accent:' + K[3] + '"><div class="pj-main">' +
+      '<div class="pj-head"><span class="pj-kind"><span class="pj-ki">' + icon(K[2], 16) + '</span>' + K[1] + '</span>' + chip(PST[p.status], PCHIP[p.status]) + '</div>' +
+      '<h3 class="pj-t">' + esc(p.title) + '</h3><p class="pj-oc">' + esc(p.outcome) + '</p>' +
+      (p.sig.length ? '<p class="pj-sig">' + p.sig.map(function (x) { return '<span>' + esc(x) + '</span>'; }).join('') + '</p>' : '') +
+      (p.flags || []).map(function (f) { return chip(esc(f), 'error flag'); }).join('') +
+      (n ? '<div class="pj-next"><span class="who">' + esc(n[0]) + '</span><span class="what">' + esc(n[1]) + '</span>' + (n[2] ? '<span class="nd">' + pjMd(n[2]) + '</span>' : '') + '</div>' : '') +
+      '</div><div class="pj-foot">' + (p.progress[1] ? ring(pct, 44, 5, K[3]) + '<span class="pj-steps-n">' + p.progress[0] + '/' + p.progress[1] + '<br><span>steps</span></span>' : '') +
+      (d ? chip(d[0], d[1]) : '') + (p.waits.length ? chip(p.waits.length + ' waiting', 'warning') : '') + '<span class="pj-own" title="' + esc(pjOwner(p)) + '">' + face(p.owner, 28) + '</span></div></a></div>';
+  }
+  function pjTimeline(P) {
+    var rows = P.filter(function (p) { return p.end && p.status !== 'done' && p.status !== 'dropped'; }).sort(function (a, b) { return a.end.localeCompare(b.end); });
+    var undated = P.filter(function (p) { return !p.end && p.status !== 'done' && p.status !== 'dropped'; });
+    var t0 = new Date(PJ_TODAY + 'T00:00:00Z'), from = new Date(Date.UTC(t0.getUTCFullYear(), t0.getUTCMonth(), 1));
+    var last = rows.reduce(function (m, r) { return r.end > m ? r.end : m; }, PJ_TODAY), l = new Date(last + 'T00:00:00Z');
+    var cap = Date.UTC(t0.getUTCFullYear(), t0.getUTCMonth() + (pjRange === 'all' ? 24 : +pjRange), 1);
+    var to = new Date(Math.min(cap, Date.UTC(l.getUTCFullYear(), l.getUTCMonth() + 1, 1), cap));
+    if (to <= from) to = new Date(Date.UTC(t0.getUTCFullYear(), t0.getUTCMonth() + 3, 1));
+    var pos = function (iso) { return Math.max(0, Math.min(100, (new Date(iso + 'T00:00:00Z') - from) / (to - from) * 100)); };
+    var iso = function (d) { return d.toISOString().slice(0, 10); };
+    var months = []; for (var d = new Date(from); d < to; d = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 1, 1))) months.push(d);
+    var step = months.length > 12 ? 3 : months.length > 6 ? 2 : 1;
+    var ml = function (m, i) { return m.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' }) + (m.getUTCMonth() === 0 || i === 0 ? ' ’' + String(m.getUTCFullYear()).slice(2) : ''); };
+    var end = iso(to);
+    return '<div class="pj-tl-top"><div class="pj-seg" role="group" aria-label="Range">' + [['3', '3 months'], ['12', '1 year'], ['all', 'All']].map(function (r) { return '<button data-pj-range="' + r[0] + '" aria-pressed="' + (pjRange === r[0]) + '">' + r[1] + '</button>'; }).join('') + '</div></div>' +
+      '<div class="pj-tl" role="region" aria-label="Projects timeline"><div class="pj-tl-in"><div class="pj-axis" aria-hidden="true">' +
+      months.map(function (m, i) { return '<span class="m' + (m.getUTCMonth() === 0 ? ' yr' : '') + '" style="left:' + pos(iso(m)) + '%">' + (i % step === 0 ? ml(m, i) : '') + '</span>'; }).join('') +
+      '<span class="today" style="left:' + pos(PJ_TODAY) + '%">Today</span></div>' +
+      rows.map(function (p) {
+        var K = pjK(p), st = p.start && p.start < PJ_TODAY ? p.start : PJ_TODAY, open = p.end > end;
+        var dots = p.steps.filter(function (t) { return t[1] && t[1] >= st && t[1] <= p.end && t[1] <= end; }).map(function (t) { return '<span class="dot" style="left:' + pos(t[1]) + '%" title="' + pjMd(t[1]) + ': ' + esc(t[0]) + '"></span>'; }).join('');
+        return '<a class="row" href="#/projects/' + p.key + '" style="--accent:' + K[3] + '"><span class="name"><b>' + esc(p.title) + '</b><span>' + K[1] + ' · ends ' + pjMd(p.end) + '</span></span><span class="lane">' +
+          (st > end ? '<span class="later">' + pjMd(st) + ' →</span>' : '<span class="bar' + (p.status !== 'active' ? ' faint' : '') + (open ? ' open' : '') + '" style="left:' + pos(st) + '%;width:max(6px,' + (pos(p.end) - pos(st)).toFixed(2) + '%)">' + (pjPct(p) ? '<span class="fill" style="width:' + pjPct(p) + '%"></span>' : '') + '</span>') +
+          dots + (p.limit && p.limit <= end ? '<span class="limit" style="left:' + pos(p.limit) + '%" title="Hard limit ' + pjMd(p.limit) + '"></span>' : '') + '<span class="now" style="left:' + pos(PJ_TODAY) + '%"></span></span></a>';
+      }).join('') + '</div></div><p class="pj-legend small"><span class="lg dot"></span> dated step <span class="lg limit"></span> hard limit <span class="lg bar"></span> in progress (filled part = steps done)</p>' +
+      (undated.length ? '<p class="small muted">No dates yet: ' + undated.map(function (p) { return '<a href="#/projects/' + p.key + '">' + esc(p.title) + '</a>'; }).join(', ') + '</p>' : '');
+  }
   function projectsView() {
     var P = D.projects, list = P.filter(function (p) { return pjFits(p, pjShow); });
     var F = [['open', 'In progress'], ['someday', 'Someday'], ['done', 'Done'], ['all', 'All']];
-    var groups = Object.keys(PK).map(function (k) { return { k: k, K: PK[k], items: list.filter(function (p) { return (PK[p.kind] ? p.kind : 'generic') === k; }) }; }).filter(function (g) { return g.items.length; });
-    return '<div class="pj">' + hero('Every outcome that takes more than one step, where it stands and what’s next.', 'projects') +
-      '<nav class="pj-chips" aria-label="Filter by status">' + F.map(function (f) { return '<button data-pj-filter="' + f[0] + '" aria-pressed="' + (pjShow === f[0]) + '"' + (pjShow === f[0] ? ' class="on"' : '') + '>' + f[1] + ' <span class="n">' + P.filter(function (p) { return pjFits(p, f[0]); }).length + '</span></button>'; }).join('') + '</nav>' +
-      (groups.length ? '' : '<p class="muted">Nothing here.</p>') +
-      groups.map(function (g) {
-        return '<section class="pj-kind" aria-label="' + g.K[0] + '"><h2 class="pj-kh">' + icon(g.K[2], 18) + ' ' + g.K[0] + ' <span class="muted small">' + g.items.length + '</span></h2><div class="pj-cards">' +
-          g.items.map(function (p) {
-            return '<a class="block pj-card" href="#/projects/' + p.key + '" style="--c:' + g.K[3] + '"><span class="pj-top"><b>' + esc(p.title) + '</b><span class="pj-st s-' + p.status + '">' + PST[p.status] + '</span></span>' +
-              '<span class="pj-oc">' + esc(p.outcome) + '</span>' +
-              (p.flags || []).map(function (f) { return '<span class="pj-flag">' + esc(f) + '</span>'; }).join('') +
-              (p.next ? '<span class="pj-next"><span class="lbl">Next</span> ' + esc(p.next[0]) + (p.next[1] ? ' · ' + p.next[1] : '') + '</span>' : pjOpen(p) ? '<span class="pj-next none">No next action</span>' : '') +
-              '<span class="pj-foot">' + pjBar(p, g.K[3]) + (p.progress[1] ? '<span class="small muted">' + p.progress[0] + '/' + p.progress[1] + '</span>' : '') + (p.waits.length ? '<span class="small muted">· ' + p.waits.length + ' waiting</span>' : '') + '<span class="pj-own">' + face(p.owner, 20) + '</span></span></a>';
-          }).join('') + '</div></section>';
-      }).join('') + '</div>';
+    var urg = function (a, b) { return (a.days == null ? 1e6 : a.days) - (b.days == null ? 1e6 : b.days); };
+    var groups = Object.keys(PK).map(function (k) { return { K: PK[k], items: list.filter(function (p) { return (PK[p.kind] ? p.kind : 'generic') === k; }).sort(urg) }; }).filter(function (g) { return g.items.length; });
+    var live = P.filter(pjLive), by = function (s) { return P.filter(function (p) { return p.status === s; }).length; };
+    var nextUp = live.filter(function (p) { return p.days != null && p.days >= 0; }).sort(urg)[0];
+    var yours = live.filter(function (p) { return p.next; }), soon = yours.filter(function (p) { return p.next[1] && pjDays(p.next[1]) <= 7; }).length;
+    var flagged = P.filter(function (p) { return (p.flags || []).length; }), waits = live.reduce(function (n, p) { return n + p.waits.length; }, 0);
+    var strip = '<section class="pj-strip" aria-label="Overview"><div class="pj-tile"><span class="tl">In motion</span><span class="big">' + by('active') + '<small>active</small></span><span class="sub">' + by('waiting') + ' waiting · ' + by('someday') + ' someday · ' + by('done') + ' done</span></div>' +
+      (nextUp ? '<a class="pj-tile nextup" href="#/projects/' + nextUp.key + '" style="--accent:' + pjK(nextUp)[3] + '"><span class="tl">Next date</span><span class="big">' + nextUp.days + '<small>' + (nextUp.days === 1 ? 'day' : 'days') + '</small></span><span class="sub"><b>' + esc(nextUp.title) + '</b> · ' + pjMd(nextUp.end, { weekday: 'short', month: 'short', day: 'numeric' }) + '</span></a>' : '') +
+      '<div class="pj-tile"><span class="tl">Your steps</span><span class="big">' + yours.length + '<small>next</small></span><span class="sub">' + (soon ? soon + ' due this week' : 'none due this week') + (waits ? ' · ' + waits + ' waiting on others' : '') + '</span></div>' +
+      '<button class="pj-tile attn' + (flagged.length ? '' : ' ok') + '" data-pj-attn' + (flagged.length ? '' : ' disabled') + '><span class="tl">Needs attention</span><span class="big">' + flagged.length + '<small>' + (flagged.length === 1 ? 'project' : 'projects') + '</small></span><span class="sub">' + (flagged.length ? flagged.map(function (p) { return esc(p.title); }).join(', ') : 'Every project has a next step.') + '</span></button></section>';
+    var body = pjView === 'timeline' ? '<section class="pj-panel" aria-label="Timeline">' + pjTimeline(P) + '</section>' :
+      '<nav class="pj-filters" aria-label="Filter by status">' + F.map(function (f) { return '<button class="pj-fchip" data-pj-filter="' + f[0] + '" aria-pressed="' + (pjShow === f[0]) + '">' + f[1] + ' <span class="n">' + P.filter(function (p) { return pjFits(p, f[0]); }).length + '</span></button>'; }).join('') + '</nav>' +
+      (groups.length ? '' : '<div class="pj-empty">' + icon('check', 28) + '<p>Nothing here yet.</p></div>') +
+      groups.map(function (g) { return '<section class="pj-group" aria-label="' + g.K[0] + '" style="--accent:' + g.K[3] + '"><h2 class="pj-kh"><span class="pj-ki">' + icon(g.K[2], 18) + '</span>' + g.K[0] + '<span class="kn">' + g.items.length + '</span></h2><div class="pj-grid">' + g.items.map(pjCard).join('') + '</div></section>'; }).join('');
+    return '<div class="pj"><header class="pj-hero"><div><p class="pj-over">Today · Projects</p><h1 class="pj-h">Projects</h1><p class="pj-lede">Every outcome that takes more than one step, where it stands and what’s next.</p></div>' +
+      '<div class="pj-seg" role="group" aria-label="View"><button data-pj-view="cards" aria-pressed="' + (pjView === 'cards') + '">Cards</button><button data-pj-view="timeline" aria-pressed="' + (pjView === 'timeline') + '">Timeline</button></div></header>' + strip + body + '</div>';
   }
   function projectView(key) {
     var p = D.projects.filter(function (x) { return x.key === key; })[0];
     if (!p) return hero('<a href="#/projects">Projects</a>', 'Not found', 'That project isn’t in the demo.');
-    var K = PK[p.kind] || PK.generic, A = window.DSAvatars, who = A && A.AVATARS[p.owner] ? A.AVATARS[p.owner].name : (DESKS[p.owner] || [p.owner])[0];
-    var li = function (xs, fn) { return xs.length ? '<ul>' + xs.map(fn).join('') + '</ul>' : ''; };
-    var shell = '<section class="block pj-shell" aria-label="Project" style="--c:' + K[3] + '"><div class="pj-row"><span class="pj-st chip s-' + p.status + '">' + PST[p.status] + '</span><span class="pj-k">' + icon(K[2], 16) + ' ' + K[1] + '</span><span class="pj-own">' + face(p.owner, 22) + ' ' + esc(who) + ', owner</span></div>' +
-      (p.flags || []).map(function (f) { return '<p class="pj-flagbox" role="status">' + esc(f) + '</p>'; }).join('') +
-      '<p class="pj-oc big"><span class="lbl">Outcome</span>' + esc(p.outcome) + '</p>' +
-      '<div class="pj-nextbox' + (p.next ? '' : ' none') + '"><span class="lbl">Next action</span>' + (p.next ? '<b>' + esc(p.next[0]) + '</b>' + (p.next[1] ? '<span class="small muted"> · ' + p.next[1] + '</span>' : '') : pjOpen(p) ? 'None yet. Every active project needs one.' : '<span class="muted">—</span>') + '</div>' +
-      (p.progress[1] ? '<div class="pj-prog">' + pjBar(p, K[3]) + '<span class="small muted">' + p.progress[0] + ' of ' + p.progress[1] + ' steps done</span></div>' : '') +
-      '<div class="pj-grid"><div><span class="lbl">Waiting on</span>' + (li(p.waits, function (w) { return '<li>' + esc(w[0]) + ' <span class="small muted">· ' + esc(w[1]) + ', check ' + w[2] + '</span></li>'; }) || '<p class="muted small">Nothing.</p>') + '</div>' +
-      '<div><span class="lbl">Key dates</span>' + (li(p.dates, function (x) { return '<li><b>' + x[0] + '</b> ' + esc(x[1]) + '</li>'; }) || '<p class="muted small">None dated.</p>') + '</div>' +
-      '<div><span class="lbl">Goal</span>' + (p.goal ? '<p>' + esc(p.goal[0]) + ' <span class="small muted">· ' + p.goal[1] + '</span></p>' : '<p class="muted small">Not linked.</p>') + '</div></div></section>';
-    var trip = '';
+    var K = pjK(p), d = pjDue(p.days), n = pjNext(p), pct = pjPct(p);
+    var dates = []; var add = function (date, what, lim) { if (date) dates.push([date, what, !!lim]); };
+    add(p.limit, 'Hard limit', true); if (p.trip) { add('2027-03-10', 'Trip starts'); add('2027-03-16', 'Trip ends'); }
+    p.waits.forEach(function (w) { add(w[2], 'Check: ' + w[0]); }); p.steps.forEach(function (t) { add(t[1], t[0]); });
+    var seen = {}; dates = dates.sort(function (a, b) { return a[0].localeCompare(b[0]); }).filter(function (x) { if (seen[x[0]]) { seen[x[0]][3] = (seen[x[0]][3] || 0) + 1; return false; } seen[x[0]] = x; return true; }).slice(0, 7);
+    var heroH = '<header class="pj-phero" style="--accent:' + K[3] + '"><div class="hl"><div class="meta"><span class="pj-kind"><span class="pj-ki big">' + icon(K[2], 18) + '</span>' + K[1] + '</span>' + chip(PST[p.status], PCHIP[p.status]) + (d ? chip(d[0], d[1]) : '') + '</div>' +
+      '<h1 class="t">' + esc(p.title) + '</h1><p class="oc"><span class="ol">Done looks like</span>' + esc(p.outcome) + '</p>' +
+      (p.sig.length ? '<p class="pj-sig big">' + p.sig.map(function (x) { return '<span>' + esc(x) + '</span>'; }).join('') + '</p>' : '') +
+      (p.flags || []).map(function (f) { return '<p class="pj-chip error flag" role="status">' + esc(f) + '</p>'; }).join('') +
+      '</div><div class="hr">' + ring(pct, 112, 10, K[3]) + '<span class="small">' + (p.progress[1] ? p.progress[0] + ' of ' + p.progress[1] + ' steps done' : 'No steps yet') + '</span></div></header>';
+    var nextH = n ? '<section class="pj-nextbig" style="--accent:' + K[3] + '" aria-label="Next step"><span class="who">' + esc(n[0]) + '</span><p class="what">' + esc(n[1]) + '</p>' + (n[2] ? '<span class="nd">' + pjMd(n[2], { weekday: 'short', month: 'short', day: 'numeric' }) + ' · in ' + pjDays(n[2]) + ' day' + (pjDays(n[2]) === 1 ? '' : 's') + '</span>' : '') + '</section>' : '';
+    var panel = '';
     if (p.trip) {
       var T = p.trip;
-      trip = card('Trip options', '<div class="pj-opts">' + T.options.map(function (o) { return '<div class="pj-opt' + (o[3] ? ' pick' : '') + '"><b>' + esc(o[0]) + '</b><span class="num big">' + o[1] + '</span><span class="small muted">' + esc(o[2]) + '</span>' + (o[3] ? pill('Travel Agent’s pick', 'ok') : '') + '</div>'; }).join('') + '</div>' +
-        '<ul class="pj-lines">' + T.lines.map(function (l) { return '<li><span>' + l[0] + '</span><b class="num">' + l[1] + '</b></li>'; }).join('') + '</ul><p class="small pj-watch">' + T.watch + '</p>', '<span class="small muted">whole-trip totals</span>');
+      panel = '<section class="pj-panel" aria-label="Trip details"><h2 class="pj-sh">' + icon(K[2], 18) + ' Trip details</h2><div class="pj-opts">' +
+        T.options.map(function (o) { return '<div class="pj-opt' + (o[3] ? ' pick' : '') + '"><b>' + esc(o[0]) + '</b><span class="num big">' + o[1] + '</span><span class="small muted">' + esc(o[2]) + '</span>' + (o[3] ? chip('Travel Agent’s pick', 'success') : '') + '</div>'; }).join('') +
+        '</div><ul class="pj-lines">' + T.lines.map(function (l) { return '<li><span>' + l[0] + '</span><b class="num">' + l[1] + '</b></li>'; }).join('') + '</ul><p class="small pj-watch">' + T.watch + '</p></section>';
     }
-    var steps = card('Steps', (p.steps.length ? '<ul class="pj-steps">' + p.steps.map(function (t) { return '<li><span class="box" aria-hidden="true"></span><span>' + esc(t[0]) + '</span><span class="small muted">' + [t[1], t[2] ? t[2] + ' min' : ''].filter(Boolean).join(' · ') + '</span></li>'; }).join('') + '</ul>' : '<p class="muted">No open steps.</p>') +
-      (p.done.length ? '<details class="pj-done"><summary class="small">' + p.done.length + ' done in the last 90 days</summary><ul class="pj-steps">' + p.done.map(function (t) { return '<li class="ok"><span class="box" aria-hidden="true">✓</span><span>' + esc(t[0]) + '</span><span class="small muted">' + t[1] + '</span></li>'; }).join('') + '</ul></details>' : ''));
-    return '<div class="pj">' + hero('<a href="#/projects">Projects</a> · ' + K[1], esc(p.title)) + shell + trip + steps + '</div>';
+    var steps = '<section class="pj-panel pj-stepsec" aria-label="Steps" style="--accent:' + K[3] + '"><h2 class="pj-sh">Your steps <span class="kn">' + p.steps.length + ' open</span></h2>' +
+      (p.steps.length ? '<ol class="pj-list">' + p.steps.map(function (t, i) { return '<li' + (i ? '' : ' class="first"') + '><span class="box" aria-hidden="true"></span><span class="txt">' + esc(t[0]) + '</span><span class="meta">' + [t[1] ? pjMd(t[1], { weekday: 'short', month: 'short', day: 'numeric' }) : '', t[2] ? t[2] + ' min' : ''].filter(Boolean).join(' · ') + '</span></li>'; }).join('') + '</ol>' : '<p class="pj-none">No open steps.</p>') +
+      (p.done.length ? '<details class="pj-done"><summary>' + p.done.length + ' done in the last 90 days</summary><ol class="pj-list">' + p.done.map(function (t) { return '<li class="ok"><span class="box" aria-hidden="true">✓</span><span class="txt">' + esc(t[0]) + '</span><span class="meta">' + pjMd(t[1], { weekday: 'short', month: 'short', day: 'numeric' }) + '</span></li>'; }).join('') + '</ol></details>' : '') + '</section>';
+    var side = '<aside class="pj-side"><a class="pj-box owner" href="#/' + p.owner + '">' + face(p.owner, 44) + '<span><span class="lbl">Owner</span><b>' + esc(pjOwner(p)) + '</b><span class="small muted">keeps this project moving</span></span></a>' +
+      '<section class="pj-box" aria-label="Waiting on"><h2 class="lbl">Waiting on</h2>' + (p.waits.length ? '<ul class="pj-wl">' + p.waits.map(function (w) { return '<li><b>' + esc(w[0]) + '</b><span>' + esc(w[1]) + '</span><span class="small muted">check ' + pjMd(w[2], { weekday: 'short', month: 'short', day: 'numeric' }) + '</span></li>'; }).join('') + '</ul>' : '<p class="pj-none">Nothing outstanding.</p>') + '</section>' +
+      '<section class="pj-box" aria-label="Key dates"><h2 class="lbl">Key dates</h2>' + (dates.length ? '<ol class="pj-dates">' + dates.map(function (x) { return '<li class="' + (x[2] ? 'limit ' : '') + (x[0] < PJ_TODAY ? 'past' : '') + '"><span class="dd">' + pjMd(x[0]) + '</span><span>' + esc(x[1]) + (x[3] ? '<span class="more"> +' + x[3] + ' more</span>' : '') + '</span></li>'; }).join('') + '</ol>' : '<p class="pj-none">Nothing dated.</p>') + '</section>' +
+      '<section class="pj-box" aria-label="Goal"><h2 class="lbl">Serves the goal</h2>' + (p.goal ? '<p class="goal">' + chip(p.goal[1]) + ' ' + esc(p.goal[0]) + '</p>' : '<p class="pj-none">Not tied to a goal yet.</p>') + '</section>' +
+      '<section class="pj-box" aria-label="Recent activity"><h2 class="lbl">Recent activity</h2>' + (p.done.length ? '<ol class="pj-act">' + p.done.slice(0, 8).map(function (a) { return '<li><span class="tick" aria-hidden="true">✓</span><span>' + esc(a[0]) + '</span><span class="small muted">' + pjMd(a[1]) + '</span></li>'; }).join('') + '</ol>' : '<p class="pj-none">No steps finished in the last 90 days.</p>') + '</section></aside>';
+    return '<div class="pj"><nav class="pj-crumbs" aria-label="Breadcrumb"><a href="#/projects">Projects</a> <span aria-hidden="true">›</span> ' + K[0] + '</nav>' + heroH + '<div class="pj-cols"><div class="pj-maincol">' + nextH + panel + steps + '</div>' + side + '</div></div>';
   }
   function agencyView() {
     var A = D.agency;
@@ -461,6 +535,11 @@
     if (e.target.closest('[data-fc-clear]')) { fcWhatif = []; render(); return; }
     var pf = e.target.closest('[data-pj-filter]');
     if (pf) { pjShow = pf.dataset.pjFilter; render(); return; }
+    var pv = e.target.closest('[data-pj-view]');
+    if (pv) { pjView = pv.dataset.pjView; render(); return; }
+    var pr = e.target.closest('[data-pj-range]');
+    if (pr) { pjRange = pr.dataset.pjRange; render(); return; }
+    if (e.target.closest('[data-pj-attn]')) { pjShow = 'all'; pjView = 'cards'; render(); return; }
     var rt = e.target.closest('[data-rt-tab]');
     if (rt) { rtTab = rt.dataset.rtTab; render(); return; }
     if (e.target.closest('[data-rt-reset]')) { rtD = null; render(); return; }

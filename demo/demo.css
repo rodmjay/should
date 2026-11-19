@@ -378,3 +378,12 @@ a.pj-tile:hover, button.pj-tile:not(:disabled):hover { background: var(--md-sys-
   .pj-tl .row { grid-template-columns: 1fr; padding: 8px 0 0; min-height: 0; } .pj-tl .name { padding: 0; } .pj-tl .lane { min-height: 34px; }
 }
 .pj .who { display: block; padding: 0; margin: 0; border: 0; }
+
+/* Retirement: strategies explained (portal 11/18) */
+.rt .rt-strats{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.rt .rt-strats li{display:grid;grid-template-columns:5.5rem 1fr;gap:12px;align-items:start;padding-top:12px;border-top:1px solid var(--md-sys-color-outline-variant)}
+.rt .rt-strats li:first-child{border-top:0;padding-top:0}
+.rt .rt-strats p{margin:2px 0 0}
+.rt .rt-strats .pill{justify-self:start}
+@media(max-width:480px){.rt .rt-strats li{grid-template-columns:1fr;gap:6px}}
+.rows .soon{color:var(--red);font-weight:600}

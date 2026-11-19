@@ -139,7 +139,10 @@
       return hero('Cash, bills, credit and buying, from Accountant, Financial Advisor and Shopping Expert.', 'money') + tiles(M.tiles) +
         '<div class="seg-btns subtabs">' + M.tabs.map(function (t, i) { return '<button' + (i ? '' : ' class="on"') + '>' + t + '</button>'; }).join('') + '</div>' +
         card('Current spend', '<p class="big"><b class="num">' + S.total + '</b> in November <span class="good">' + S.note + '</span></p>' + spendChart(S.now, S.last), '<a href="#/bookkeeper">by category</a>') +
-        card('Bills, next 14 days', rows(M.bills, function (b) { return '<b>' + b[0] + '</b><span class="num">' + b[1] + '</span><span class="muted">' + b[2] + '</span>' + pill(b[3], b[3] === 'autopay' ? 'ok' : 'watch'); }));
+        card('Bills, next 14 days', rows(M.bills, function (b) { return '<b>' + b[0] + '</b><span class="num">' + b[1] + '</span><span class="muted">' + b[2] + '</span>' + pill(b[3], b[3] === 'autopay' ? 'ok' : 'watch'); })) +
+        card('Card offers', [['Expiring this week', M.offers.filter(function (o) { return o[6] <= 7; })], ['Other offers', M.offers.filter(function (o) { return o[6] > 7; })]].map(function (g) {
+          return g[1].length ? '<h3 class="rt-sub">' + g[0] + '</h3>' + rows(g[1], function (o) { return '<b>' + o[0] + '</b>' + (o[1] ? pill('you shop here', 'good') : '') + '<span class="small muted">card ··' + o[2] + [o[4], o[5]].filter(Boolean).map(function (x) { return ' · ' + x; }).join('') + '</span><span class="num">' + o[3] + '</span><span class="small ' + (o[6] <= 7 ? 'soon' : 'muted') + '">' + o[6] + ' days left</span>' + pill(o[7] ? 'activated' : 'not activated', o[7] ? 'ok' : 'watch'); }) : '';
+        }).join('') + '<p class="small muted">Accountant reads them; you activate an offer in the card’s own app.</p>', '<span class="small muted">read only</span>');
     },
     phone: function () {
       var X = D.phone, PEND = '<i class="pend">pending sign-in</i>';
@@ -391,7 +394,14 @@
         '</tbody><tfoot><tr><td><b>Total</b></td><td class="num r"><b>' + usd(own) + '</b></td><td></td></tr></tfoot></table></div>' +
         '<div class="rt-cards"><div class="rt-mini"><span class="label">401(k) match and vesting</span><p>' + X.plan[0] + '</p><p class="small muted">' + X.plan[1] + '</p></div>' +
         '<div class="rt-mini"><span class="label">' + g[0] + '</span><p><b class="num">' + usd(g[1]) + '</b> of ' + usd(g[2]) + ' by ' + g[3] + '</p><div class="meter" role="meter" aria-valuenow="' + Math.round(gp) + '" aria-valuemin="0" aria-valuemax="100" aria-label="' + g[0] + ' progress"><span style="width:' + gp.toFixed(1) + '%"></span></div><p class="small muted">' + usd(g[4]) + '/mo needed</p></div></div>',
-        '<span class="small muted">what the plan counts as $0 “other assets”</span>') + '</div>';
+        '<span class="small muted">what the plan counts as $0 “other assets”</span>') + strategiesCard(X.strategies) + '</div>';
+  }
+  function strategiesCard(S) {
+    var ST = { not: ['not yet', ''], ready: ['ready', 'watch'], doing: ['doing', 'act'], done: ['done', 'ok'] };
+    var n = function (k) { return S.list.filter(function (x) { return x[0] === k; }).length; };
+    return card('Strategies explained', '<p class="small muted">' + S.list.length + ' strategies · ' + n('done') + ' done, ' + n('doing') + ' doing, ' + n('ready') + ' ready, ' + n('not') + ' not yet · ' + S.changed + '</p>' +
+      '<ul class="rt-strats">' + S.list.map(function (x) { return '<li>' + pill(ST[x[0]][0], ST[x[0]][1]) + '<div><b>' + x[1] + '</b><p>' + x[2] + '</p><p class="small"><b>When:</b> ' + x[3] + '</p><p class="small muted">' + x[4] + ' · next review ' + x[5] + '</p></div></li>'; }).join('') + '</ul>',
+      '<span class="small muted">Financial Advisor reviews monthly</span>');
   }
   // Projects, mirrors the portal's /projects and /projects/<key> (first-class pass 85151ae): overview strip, cards or
   // timeline, and a project page with a hero, the next step, the kind's panel, steps and a side column. Made-up data.

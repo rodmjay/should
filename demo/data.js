@@ -49,6 +49,13 @@ window.DEMO = {
       ['Car insurance', '$118.28', 'Fri 11/27', 'autopay'],
       ['Rent', '$900.00', 'Tue 12/1', 'pay link texted']
     ],
+    offers: [
+      ['Grocery Mart', true, '4417', '5% back', 'up to $10', 'min $40', 3, true],
+      ['Corner Coffee', true, '4417', '$2 back', '', 'min $8', 5, false],
+      ['Fit Gym', false, '0932', '10% back', 'up to $15', '', 6, false],
+      ['Shoe Depot', false, '4417', '$15 back', '', 'min $75', 21, false],
+      ['City Cinema', true, '0932', '15% back', 'up to $6', '', 30, true]
+    ],
     report: 'Balances synced at 6:15. Spending is 12% under last month. One bill (rent) needs your tap on the texted link after payday; the rest are on autopay.'
   },
 
@@ -138,7 +145,14 @@ window.DEMO = {
     plan: ['100% of the first 3% and 50% of the next 2%. Match vests fully after 2 years (you’re at 3).', 'Example Co 401(k) · enrolled'],
     taxSaving: 22,
     payoff: [['Store card to $0', '$640', 'next payday'], ['Car loan extra $150 a month', '$8,900 left', 'from Dec'], ['Student loan', '$14,200 left', '—']],
-    goal: ['Early retirement fund', 9600, 40000, 'Dec 31, 2030', 690]
+    goal: ['Early retirement fund', 9600, 40000, 'Dec 31, 2030', 690],
+    strategies: { changed: 'Nov 18: Store card payoff moved to doing', list: [
+      ['doing', 'Pay off high-interest debt first', 'Every extra dollar goes to the card with the highest rate until it’s gone.', 'Now, while any card is over 15%', 'You pay; Financial Advisor picks the order', 'Dec 5'],
+      ['done', 'Get the full employer match', 'Save at least 5% so the company adds its full match.', 'Already true at 6%', 'Financial Advisor checks each pay stub', 'Dec 5'],
+      ['ready', 'Open a Roth IRA', 'After-tax savings that grow and come out tax-free in retirement.', 'January, once the store card is paid', 'You open it; Financial Advisor picks the fund', 'Jan 2'],
+      ['not', 'Invest the HSA', 'Keep a cash cushion, invest the rest for health costs later.', 'When the HSA passes $4,000', 'Financial Advisor', 'Feb 6'],
+      ['not', 'Raise savings 1% each raise', 'Each raise, send one point to the 401(k) before you get used to it.', 'Next raise (March)', 'You change it at the plan’s site', 'Mar 6']
+    ] }
   },
   phone: {
     tiles: [

@@ -68,7 +68,7 @@
    ["La comparación honesta", "Cada resultado aparece junto a simplemente mantener la inversión. Si nada la supera, usted lo ve con claridad."],
    ["Límites que se detienen solos", "Cada estrategia tiene un límite de pérdida. Si lo alcanza, esa estrategia se pausa hasta que usted la revise."],
   ],
-  tb_legal: "Números inventados. Es una herramienta de práctica, no asesoría de inversión. Invertir puede hacerle perder dinero, y los resultados pasados, reales o de práctica, no predicen los futuros.",
+  tb_legal: "Números inventados. Es una herramienta de práctica, no asesoría de inversión. Invertir puede hacerle perder dinero, y los resultados pasados, reales o de práctica, no predicen los futuros. Los resultados de práctica no incluyen costos ni demoras reales, así que operar con dinero real suele dar peores resultados.",
 
   proj_eyebrow: "Proyectos",
   proj_h2: "Todo lo que tiene en marcha, en un solo lugar.",

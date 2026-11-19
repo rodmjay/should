@@ -68,7 +68,7 @@
    ["The honest comparison", "Every result sits next to simply holding. When nothing beats it, you see that plainly."],
    ["Limits that stop on their own", "Each strategy has a loss limit. Hit it and that strategy pauses until you look."],
   ],
-  tb_legal: "Made-up numbers. This is a practice tool, not investment advice. Investing can lose money, and past results, real or practice, don't predict future ones.",
+  tb_legal: "Made-up numbers. This is a practice tool, not investment advice. Investing can lose money, and past results, real or practice, don't predict future ones. Practice results leave out real-world costs and delays, so real trading usually does worse.",
 
   proj_eyebrow: "Projects",
   proj_h2: "Everything you've got going on, in one place.",

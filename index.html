@@ -191,6 +191,22 @@ svg.chart{width:100%;height:auto;display:block;margin-top:8px}
 .pj-gates em{font-style:normal;font-size:11px;font-weight:600;border-radius:999px;padding:2px 8px;white-space:nowrap;background:var(--line);color:var(--muted)}
 .pj-gates em.done{background:var(--accent-soft);color:var(--md-sys-color-on-secondary-container)}
 .pj-gates em.now{background:var(--warm-soft);color:var(--md-sys-color-on-tertiary-container)}
+/* trading bots */
+.tb-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr))}
+.tb{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;display:grid;gap:10px;align-content:start;min-width:0}
+.tb-top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.tb-top b{font-family:var(--md-ref-typeface-brand);font-size:20px}
+.tb-badge{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:999px;background:var(--warm-soft);color:var(--md-sys-color-on-tertiary-container)}
+.tb-week{font-size:12px;color:var(--muted)}
+.tb-rows{list-style:none;margin:0;padding:0;display:grid;gap:0;font-size:14px}
+.tb-rows li{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--line)}
+.tb-rows li:last-child{border-bottom:0}
+.tb-rows li.base span:first-child{color:var(--muted);font-style:italic}
+.tb-rows b{font-variant-numeric:tabular-nums;text-align:right;min-width:4.5ch}
+.tb-st{font-size:11px;font-weight:600;border-radius:999px;padding:2px 8px;background:var(--line);color:var(--muted);white-space:nowrap}
+.tb-st.on{background:var(--accent-soft);color:var(--md-sys-color-on-secondary-container)}
+.tb-text{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:12px 12px 12px 4px;padding:8px 10px;font-size:13px}
+.tb-legal{margin-top:14px;font-size:13px}
 /* scene: documents */
 .doc{border:1px solid var(--line);border-radius:6px 16px 16px 16px;padding:14px 16px;background:var(--bg);font-family:Georgia,serif;font-size:15px;line-height:1.6}
 .doc-h{border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:10px;font-family:Inter,sans-serif}
@@ -569,6 +585,15 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
   <p class="muted" style="margin-top:14px" data-i18n="ui.proj_note"></p>
 </section>
 
+<section id="trading" class="trade-sec">
+  <div class="eyebrow" data-i18n="ui.tb_eyebrow"></div>
+  <h2 data-i18n="ui.tb_h2"></h2>
+  <p data-i18n="ui.tb_p"></p>
+  <div class="tb-grid" id="tbGrid"></div>
+  <div class="gnotes" id="tbNotes"></div>
+  <p class="muted tb-legal" data-i18n="ui.tb_legal"></p>
+</section>
+
 <section id="way">
   <div class="eyebrow" data-i18n="ui.way_eyebrow"></div>
   <h2 data-i18n="ui.way_h2"></h2>
@@ -736,7 +761,7 @@ const kfmt=v=>v>=1e6?"$"+(v/1e6).toFixed(1)+"M":"$"+Math.round(v/1e3)+"k";
 const SIMS={
  trade(el){
   const S=L.sims.trade;
-  const ST={index:{r:.07,c:-.34},core:{r:.078,c:-.28},mom:{r:.085,c:-.42},lowvol:{r:.064,c:-.2},div:{r:.066,c:-.26}};
+  const ST={index:{r:.07,c:-.34},core:{r:.068,c:-.31},mom:{r:.066,c:-.42},lowvol:{r:.06,c:-.2},div:{r:.062,c:-.26}};
   const SC={typical:{b:0,crash:false},crash:{b:0,crash:true},boom:{b:.04,crash:false}};
   const yrs=v=>fmt(S.years_fmt,{n:v});
   let st="core",sc="typical";
@@ -841,9 +866,15 @@ function renderStatic(){
   renderReach();
   renderLadder();
   renderProjects();
+  renderTrading();
   $("#ebookPdf").href=`ebook/should-way.${lang}.pdf`;$("#ebookEpub").href=`ebook/should-way.${lang}.epub`;
   $("#day").innerHTML=L.ui.day.map(([t,b,s])=>`<li><time>${t}</time><div>${b}<small>${s}</small></div></li>`).join("");
   $("#built").innerHTML=L.ui.built_chips.map(c=>`<span class="chip">${c}</span>`).join("");
+}
+function renderTrading(){
+  const u=L.ui;
+  $("#tbGrid").innerHTML=u.tb_bots.map(b=>`<article class="tb"><div class="tb-top"><b>${b.name}</b><span class="tb-badge">${u.tb_badge}</span></div><div class="tb-week">${b.week}</div><ul class="tb-rows">${b.rows.map(([n,v,st])=>`<li class="${st==="base"?"base":""}"><span>${n}</span>${st==="base"?`<span></span>`:`<span class="tb-st ${st==="on"?"on":""}">${st==="on"?u.tb_on:u.tb_paused}</span>`}<b>${v}</b></li>`).join("")}</ul><p class="tb-text">${b.text}</p></article>`).join("");
+  $("#tbNotes").innerHTML=u.tb_notes.map(([b,t])=>`<div class="gnote"><b>${b}</b>${t}</div>`).join("");
 }
 function renderProjects(){
   const u=L.ui, F=u.proj_fields;

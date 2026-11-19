@@ -154,8 +154,8 @@ svg.chart{width:100%;height:auto;display:block;margin-top:8px}
 .dropped{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);display:grid;gap:2px;font-size:13px;color:var(--muted)}
 .dropped small{font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
 /* projects */
-.proj-grid{display:grid;gap:14px;grid-template-columns:1fr}
-@media(min-width:760px){.proj-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.pj{display:grid;grid-row:span 2;grid-template-rows:subgrid;gap:0}}
+.proj-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr))}
+@media(min-width:480px){.pj{display:grid;grid-row:span 2;grid-template-rows:subgrid;gap:0}}
 .pj{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
 .pj-shell{background:var(--accent-soft);color:var(--md-sys-color-on-secondary-container);padding:14px;display:grid;gap:8px}
 .pj-top{display:flex;justify-content:space-between;align-items:center;gap:8px}

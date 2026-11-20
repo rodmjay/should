@@ -1,4 +1,4 @@
-/* @should/design-system 0.15.1: generated from src/ by scripts/build.mjs; edit src/, not this file */
+/* @should/design-system 0.16.0: generated from src/ by scripts/build.mjs; edit src/, not this file */
 (() => {
 // English and Spanish for every site (one kit, same rules everywhere).
 // Our own dictionaries, never a browser or widget translation: pages set

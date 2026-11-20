@@ -1,4 +1,4 @@
-/* @should/design-system 0.15.1: generated from src/ by scripts/build.mjs; edit src/, not this file */
+/* @should/design-system 0.16.0: generated from src/ by scripts/build.mjs; edit src/, not this file */
 (() => {
 // "Needs you" badges on navigation (Rod 11/20: "red badge next to nav item if there is something needed of them on
 // that tab"). M3 Badge in the error color: a small dot for one item, a count for two or more (99+ caps it).
@@ -6,6 +6,10 @@
 //   import { needsYou, navBadges } from "@should/design-system/badges.js";
 //   needsYou(tabEl, 3);                                   // one nav item
 //   navBadges(navEl, { brokers: 7, mail: 2, phone: 0 });  // items marked data-nav="brokers" etc.
+//   navBadgesFrom(navEl, { brokers: "/brokers/api/badge", mail: () => getMailCount() }, { every: 60000 });
+// A count may be a number, a promise or a function returning either (each micro-frontend exposes its own badge
+// endpoint, Rod 11/20). An endpoint returns JSON { "needsYou": n } (or { "count": n }, or a bare number).
+// While a count loads, its room stays reserved and nothing shows; 0, an error or no answer shows nothing, never an error.
 // Works on .ds-tab, rail/bar items (put the icon in .ds-nav-icon) and drawer rows (.ds-list-item).
 const STRINGS = {
   en: { one: "1 item needs you", many: "{n} items need you" },
@@ -15,6 +19,13 @@ const STRINGS = {
 const langOf = (el, lang) => ((lang || el.closest("[lang]")?.lang || document.documentElement.lang || "en").toLowerCase().startsWith("es") ? "es" : "en");
 
 function needsYou(el, count, opts = {}) {
+  if (typeof count === "function") count = count();
+  if (count && typeof count.then === "function") {
+    const token = (el.__dsNeeds = (el.__dsNeeds || 0) + 1);  // a newer call wins over a slower older one
+    count.then((v) => { if (el.__dsNeeds === token) needsYou(el, v, opts); }, () => { if (el.__dsNeeds === token) needsYou(el, 0, opts); });
+    return;
+  }
+  el.__dsNeeds = (el.__dsNeeds || 0) + 1;  // a plain count also cancels any count still loading
   const n = Math.max(0, Math.floor(Number(count) || 0));
   const host = el.querySelector(":scope > .ds-nav-icon") || el;
   let b = host.querySelector(":scope > .ds-badge[data-needs]");
@@ -44,5 +55,22 @@ function navBadges(root, counts = {}, opts = {}) {
   root.querySelectorAll("[data-nav]").forEach((el) => needsYou(el, counts[el.dataset.nav] ?? 0, opts));
 }
 
-window.DSBadges = { STRINGS, needsYou, navBadges };
+const fromUrl = (url) => fetch(url, { credentials: "include", headers: { accept: "application/json" } })
+  .then((r) => (r.ok ? r.json() : 0)).then((j) => (typeof j === "number" ? j : j?.needsYou ?? j?.count ?? 0));
+
+// Polls each nav item's own source. Returns a stop() function. Sources: a URL string, a function or a promise.
+function navBadgesFrom(root, sources = {}, opts = {}) {
+  const run = () => root.querySelectorAll("[data-nav]").forEach((el) => {
+    const src = sources[el.dataset.nav];
+    if (src == null) return;
+    needsYou(el, typeof src === "string" ? () => fromUrl(src).catch(() => 0) : src, opts);
+  });
+  run();
+  const id = opts.every ? setInterval(run, Math.max(15000, opts.every)) : 0;
+  const onVis = () => { if (document.visibilityState === "visible") run(); };
+  document.addEventListener("visibilitychange", onVis);
+  return () => { clearInterval(id); document.removeEventListener("visibilitychange", onVis); };
+}
+
+window.DSBadges = { STRINGS, needsYou, navBadges, navBadgesFrom };
 })();

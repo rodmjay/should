@@ -1,4 +1,4 @@
-/* @should/design-system 0.15.1: generated from src/ by scripts/build.mjs; edit src/, not this file */
+/* @should/design-system 0.16.0: generated from src/ by scripts/build.mjs; edit src/, not this file */
 (() => {
 // Charts: plain SVG, themed by the M3 roles and the series colors, so every brand, light and dark, comes free.
 // No library: the same file works on static pages, the portal and TV (Svelte), and Next.js (client component).

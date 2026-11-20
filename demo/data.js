@@ -1,7 +1,7 @@
 window.DEMO = {
   me: { name: 'Sam Carter', initials: 'SC', email: 'sam@example.com' },
   // Needs-you nav badges (made up): a dot for 1, a count for 2+
-  needs: { assistant: 1, projects: 3, bookkeeper: 2 },
+  needs: { assistant: 1, projects: 3, bookkeeper: 2, brokers: 4, legal: 1 },
   date: 'Saturday', dateLong: 'November 21, 2026',
 
   today: {

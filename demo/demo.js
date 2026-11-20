@@ -66,7 +66,7 @@
     document.querySelectorAll('#app [data-ch]').forEach(function (el) { DSCharts.mount(el, CH[+el.dataset.ch]); });
   }
   function launcherApps() {
-    return GROUPS.map(function (g) { return { name: g.name, icon: g.icon, href: hrefOf(g.tabs[0][0]), bg: 'var(--tile-' + g.tile + ')', act: g.key === 'money' }; })
+    return GROUPS.map(function (g) { return { key: g.key, name: g.name, icon: g.icon, href: hrefOf(g.tabs[0][0]), bg: 'var(--tile-' + g.tile + ')' }; })
       .concat([{ name: 'Cash Forecast', icon: 'financial', href: '#/forecast', bg: 'var(--tile-money)' }, { name: 'Phone', icon: 'it', href: '#/phone', bg: 'var(--tile-money)' }, { name: 'Retirement', icon: 'financial', href: '#/retirement', bg: 'var(--tile-money)' }, { name: 'Projects', icon: 'check', href: '#/projects', bg: 'var(--tile-today)' }, { name: 'Forex (paper)', icon: 'wealth', href: '#/forex', bg: 'var(--tile-money)' }, { name: 'Health', icon: 'health', href: '#/health', bg: 'var(--tile-health)' }, { name: 'Coach', icon: 'coach', href: '#/coach', bg: 'var(--tile-plans)' }, { name: 'Agency desk', icon: 'as-architect', href: '#/agency', bg: 'var(--tile-business)' }]);
   }
   function renderBar(g, co) {
@@ -82,7 +82,7 @@
       '<a role="menuitem" href="#/agency"><span class="mini" style="background: var(--tile-business)">' + icon('as-architect', 13) + '</span>Log time<span class="hint">text /agency /log 3h Client note</span></a>' +
       '<a role="menuitem" href="#/assistant"><span class="mini" style="background: var(--tile-today)">' + icon('ask', 13) + '</span>Ask Executive Assistant</a></div>';
     var launcher = '<div class="panel launcher" role="dialog" aria-label="All desks"><div class="grid">' +
-      apps.map(function (a) { return '<a href="' + a.href + '"><span class="app" style="background:' + a.bg + '">' + icon(a.icon, 24) + (a.act ? '<i class="badge"></i>' : '') + '</span><span class="lbl">' + a.name + '</span></a>'; }).join('') +
+      apps.map(function (a) { return '<a href="' + a.href + '"' + (a.key ? ' data-nav="g:' + a.key + '"' : '') + '><span class="app ds-nav-icon" style="background:' + a.bg + '">' + icon(a.icon, 24) + '</span><span class="lbl">' + a.name + '</span></a>'; }).join('') +
       '</div><p class="head">Companies</p><div class="grid">' +
       COMPANIES.map(function (c) { return '<a href="#/c/' + c.slug + '"><span class="app" style="background: ' + c.color + '">' + icon(c.slug === 'lantern' ? 'legal' : 'business', 24) + '</span><span class="lbl">' + esc(c.name) + '</span></a>'; }).join('') +
       '</div><p class="head">Systems and tools</p><div class="grid small">' +
@@ -93,9 +93,19 @@
       '<div class="mid"><span class="pop"><button class="pillbtn" data-menu="ctx" aria-haspopup="listbox" aria-expanded="' + (menu === 'ctx') + '"><span class="sw" style="background:' + (co ? co.color : 'var(--nc-blue)') + '"></span><span class="pname">' + esc(pageName) + '</span><span class="chev' + (menu === 'ctx' ? ' up' : '') + '" aria-hidden="true">▾</span></button>' + (menu === 'ctx' ? ctx : '') + '</span></div>' +
       '<div class="right">' +
       '<span class="pop"><button class="round" data-menu="add" aria-label="Quick add" aria-expanded="' + (menu === 'add') + '"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>' + (menu === 'add' ? add : '') + '</span>' +
-      '<span class="pop"><button class="round dot" data-menu="apps" aria-label="All desks" aria-expanded="' + (menu === 'apps') + '"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">' + [5, 12, 19].map(function (y) { return [5, 12, 19].map(function (x) { return '<circle cx="' + x + '" cy="' + y + '" r="2.1" fill="currentColor"/>'; }).join(''); }).join('') + '</svg></button>' + (menu === 'apps' ? launcher : '') + '</span>' +
+      '<span class="pop"><button class="round" data-nav="all" data-menu="apps" aria-label="All desks" aria-expanded="' + (menu === 'apps') + '"><span class="ds-nav-icon"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">' + [5, 12, 19].map(function (y) { return [5, 12, 19].map(function (x) { return '<circle cx="' + x + '" cy="' + y + '" r="2.1" fill="currentColor"/>'; }).join(''); }).join('') + '</svg></span></button>' + (menu === 'apps' ? launcher : '') + '</span>' +
       '<span class="pop"><button class="round avatar" data-menu="me" aria-label="' + D.me.name + '’s menu" aria-expanded="' + (menu === 'me') + '">' + D.me.initials + '</button>' + (menu === 'me' ? me : '') + '</span>' +
       '</div>' + (menu ? '<div class="scrim" role="presentation"></div>' : '');
+  }
+  // Needs-you badges (design system v0.16.1, Rod 11/20; mirrors the portal): made-up counts per desk from data.js,
+  // each group's sum on its launcher tile, and the total on the launcher button. The old red dots are gone.
+  function badges() {
+    if (!window.DSBadges) return;
+    var n = D.needs || {}, out = {}, all = 0;
+    Object.keys(n).forEach(function (k) { out[k] = n[k]; });
+    GROUPS.forEach(function (g) { var sum = g.tabs.reduce(function (s, t) { return s + (n[t[0]] || 0); }, 0); out['g:' + g.key] = sum; all += sum; });
+    out.all = all;
+    DSBadges.navBadges(document.body, out);
   }
   function renderSeg(g, co, r) {
     var tabs;
@@ -103,11 +113,10 @@
     else if (co) tabs = CO_TABS.map(function (t) { return ['#/c/' + co.slug + (t[0] ? '/' + t[0] : ''), t[1], t[2], co.color, r.sec === t[0]]; });
     else tabs = g.tabs.map(function (t) { return [hrefOf(t[0]), t[1], t[2], t[3], r.key === t[0], t[0] === 'bookkeeper', t[0]]; });
     $('#seg').innerHTML = '<div class="segin">' + tabs.map(function (t) {
-      var cls = (t[4] ? 'on ' : '') + (t[5] && !(D.needs || {})[t[6]] ? 'act ' : '') + (t[6] ? 'ds-nav-inline' : '');
+      var cls = (t[4] ? 'on ' : '') + (t[6] ? 'ds-nav-inline' : '');
       return '<a href="' + t[0] + '" style="--c:' + t[3] + '"' + (cls.trim() ? ' class="' + cls.trim() + '"' : '') + (t[4] ? ' aria-current="page"' : '') + (t[6] ? ' data-nav="' + t[6] + '"' : '') + '><span class="ds-nav-icon">' + face(t[2], 20) + '</span><span>' + t[1] + '</span></a>';
     }).join('') + '</div>';
-    // Needs-you badges (design system v0.16.1, Rod 11/20): made-up counts from data.js
-    if (window.DSBadges) DSBadges.navBadges($('#seg'), D.needs || {});
+    badges();
   }
   function spark(pts) {
     var min = Math.min.apply(null, pts), max = Math.max.apply(null, pts), w = 120, h = 30;

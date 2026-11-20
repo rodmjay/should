@@ -3,13 +3,13 @@
 (window.SHOULD_I18N = window.SHOULD_I18N || {}).en = {
  meta: {
   title: "Should: put your life goals on autopilot",
-  description: "Put your life goals on autopilot. One human, thirty-four AI agents.",
+  description: "Put your life goals on autopilot. One human, thirty-five AI agents.",
   lang_label: "Language",
   close: "Close",
  },
  ui: {
   hero_h1: "Put your life goals on autopilot.",
-  hero_sub: "A better job, money that's looked after while you work, a business that runs itself, a body you're proud of. Thirty-four AI agents work on it every day. You answer with 1, 2 or 3.",
+  hero_sub: "A better job, money that's looked after while you work, a business that runs itself, a body you're proud of. Thirty-five AI agents work on it every day. You answer with 1, 2 or 3.",
   stat_agents: "AI agents",
   stat_goals: "life goals",
   stat_human: "human in charge",
@@ -293,7 +293,8 @@
   arch: { n: "Software Architect", job: "Leads a software team for your company: plans the build, writes the code with its engineers, and tests every change.", routines: ["Build plan, as the work grows", "Progress report, after each session"], never: "Spends money, launches anything public or commits a secret." },
   dba: { n: "Database Administrator", job: "Looks after the database that holds your records: every change to it goes through one careful process, and it keeps it fast, backed up and healthy.", routines: ["Watches the nightly backup and health check"], never: "Weakens its security without your yes." },
   it: { n: "IT Guy", job: "Keeps your internet, Wi-Fi, phone and computer working, fixes what the Security Officer finds, and keeps the staff's own systems running. Sign in to a new account and it gets set up: who owns it, its data saved, new text commands.", routines: ["System health check, daily", "Usage guard, 6 times a day: slows the staff down before the weekly AI limit runs out", "Breach check, any time you text /it /breach-check", "New account setup, when you sign in"], never: "Handles your passwords, or changes an account without your yes." },
-  pm: { n: "Product Manager", job: "Runs Should like a product: the name, the look and what it learns next.", routines: ["Roadmap, as you ask for things"], never: "Changes this page's words without your yes." },
+  pm: { n: "Product Manager", job: "Runs Should like a product: the name, the story and what it learns next.", routines: ["Roadmap, as you ask for things"], never: "Changes this page's words without your yes." },
+  design: { n: "Designer", job: "Keeps everything you see looking like one family: the design system every page, dashboard and site is built from, in English and Spanish, light and dark.", routines: ["Design check, before anything visual goes public"], never: "Ships a new look without the design check." },
   rel: { n: "Relationship Coach", job: "Helps you stay close to your partner and the people who matter most.", routines: ["Coming soon"], never: "Reads or sends your private messages, or shares anything about the people you love." },
  },
 

@@ -1,4 +1,4 @@
-/* @should/design-system 0.14.2: generated from src/ by scripts/build.mjs; edit src/, not this file */
+/* @should/design-system 0.15.1: generated from src/ by scripts/build.mjs; edit src/, not this file */
 /* Design system: Material Design 3, adapted.
    Token names follow M3's web tokens (--md-sys-*), so Material Web components,
    Tailwind and plain CSS read the same values. Colors are generated per brand
@@ -423,6 +423,18 @@
 .ds-chip.status.error { background: var(--md-sys-color-error-container); color: var(--md-sys-color-on-error-container); }
 .ds-badge { display: inline-grid; place-items: center; min-width: 1rem; height: 1rem; padding: 0 0.25rem; border-radius: var(--md-sys-shape-corner-full);
   background: var(--md-sys-color-error); color: var(--md-sys-color-on-error); font: 500 var(--md-sys-typescale-label-small-size)/1 var(--md-ref-typeface-plain); }
+/* "Needs you" on navigation (badges.js): one item = small dot, 2+ = count. Absolutely placed, so showing,
+   changing or clearing a badge never moves the nav (no layout jump). Error color, never series or brand colors. */
+.ds-badge.dot { min-width: 0; width: 0.375rem; height: 0.375rem; padding: 0; }
+.ds-tab[data-nav] { padding-right: 3rem; }  /* room reserved on every badgeable tab, so a badge never widens it */
+.ds-tab > .ds-badge[data-needs] { position: absolute; top: 50%; right: 0.5rem; transform: translateY(-50%); }
+.ds-tab > .ds-badge.dot[data-needs] { right: 1.25rem; }
+.ds-nav-icon { position: relative; display: inline-grid; place-items: center; }
+.ds-nav-icon > .ds-badge[data-needs] { position: absolute; top: -0.25rem; left: calc(100% - 0.5rem); }
+.ds-nav-icon > .ds-badge.dot[data-needs] { top: 0; left: calc(100% - 0.25rem); }
+.ds-list-item > .ds-badge[data-needs] { margin-left: auto; }
+.ds-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (forced-colors: active) { .ds-badge { forced-color-adjust: none; background: Mark; color: MarkText; } }
 
 /* Text fields: outlined, label above (adapted from M3's floating label) */
 .ds-field { display: grid; gap: var(--space-1); }
@@ -459,7 +471,7 @@
 /* Tabs (primary tabs) and segmented buttons */
 .ds-tabs { display: flex; max-width: 100%; overflow-x: auto; border-bottom: 1px solid var(--md-sys-color-outline-variant); scrollbar-width: none; }
 .ds-tab {
-  flex: 0 0 auto; height: 3rem; padding: 0 var(--space-4); border: 0; background: transparent; cursor: pointer; text-decoration: none;
+  flex: 0 0 auto; display: inline-flex; align-items: center; gap: var(--space-2); height: 3rem; padding: 0 var(--space-4); border: 0; background: transparent; cursor: pointer; text-decoration: none;
   font: var(--md-sys-typescale-title-small-weight) var(--md-sys-typescale-title-small-size)/1 var(--md-ref-typeface-plain); color: var(--md-sys-color-on-surface-variant);
 }
 .ds-tab[aria-selected="true"], .ds-tab[aria-current="page"] { color: var(--md-sys-color-primary); }

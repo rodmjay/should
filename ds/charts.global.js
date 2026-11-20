@@ -1,4 +1,4 @@
-/* @should/design-system 0.14.2: generated from src/ by scripts/build.mjs; edit src/, not this file */
+/* @should/design-system 0.15.1: generated from src/ by scripts/build.mjs; edit src/, not this file */
 (() => {
 // Charts: plain SVG, themed by the M3 roles and the series colors, so every brand, light and dark, comes free.
 // No library: the same file works on static pages, the portal and TV (Svelte), and Next.js (client component).
@@ -73,7 +73,7 @@ function cartesian(spec, W) {
   const ticks = niceTicks(max), top = ticks.at(-1), tickFmt = (t) => fmt(t, { ...spec, decimals: ticks.every((x) => x % 1 === 0) ? 0 : undefined });
   const direct = series.length <= 4 && spec.type !== "bar" && series.length > 1;
   const longest = Math.max(...series.map((r) => r.name.length));
-  const pad = { t: 12, r: direct ? Math.min(140, 12 + longest * 7) : 12, b: 28, l: horizontal ? Math.min(160, 16 + Math.max(...labels.map((l) => String(l).length)) * 7) : 12 + Math.max(...ticks.map((t) => tickFmt(t).length)) * 7 };
+  const pad = { t: 12, r: direct ? Math.min(140, 12 + longest * 7) : horizontal ? Math.max(12, 6 + tickFmt(top).length * 3.5) : 12, b: 28, l: horizontal ? Math.min(160, 16 + Math.max(...labels.map((l) => String(l).length)) * 7) : 12 + Math.max(...ticks.map((t) => tickFmt(t).length)) * 7 };
   const iw = W - pad.l - pad.r, ih = H - pad.t - pad.b;
   let g = "";
   const tipData = labels.map((lab, i) => ({ label: lab, rows: series.map((r, k) => ({ name: r.name, value: r.values[i], color: seriesColor(r, k) })) }));
@@ -96,7 +96,7 @@ function cartesian(spec, W) {
     });
   } else {
     ticks.forEach((t) => { const y = pad.t + ih - (t / top) * ih; g += `<line x1="${pad.l}" x2="${pad.l + iw}" y1="${y}" y2="${y}" stroke="var(--md-sys-color-outline-variant)" stroke-width="1"/><text x="${pad.l - 8}" y="${y + 4}" text-anchor="end" font-size="11" ${textAttrs}>${esc(tickFmt(t))}</text>`; });
-    const every = Math.max(1, Math.ceil(n / Math.max(2, Math.floor(iw / 56))));
+    const slot = Math.max(56, 16 + Math.max(...labels.map((l) => String(l).length)) * 6.5), every = Math.max(1, Math.ceil(n / Math.max(2, Math.floor(iw / slot))));  // thin x labels by their real width so long dates never collide
     const xAt = spec.type === "bar" ? (i) => pad.l + (i + 0.5) * (iw / n) : (i) => pad.l + (n === 1 ? iw / 2 : (i / (n - 1)) * iw);
     labels.forEach((lab, i) => { if (i % every === 0) g += `<text x="${xAt(i)}" y="${H - 8}" text-anchor="middle" font-size="11" ${textAttrs}>${esc(lab)}</text>`; });
     const yAt = (v) => pad.t + ih - (v / top) * ih;

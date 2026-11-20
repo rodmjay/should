@@ -1,4 +1,4 @@
-/* @should/design-system 0.14.2: generated from src/ by scripts/build.mjs; edit src/, not this file */
+/* @should/design-system 0.15.1: generated from src/ by scripts/build.mjs; edit src/, not this file */
 (() => {
 // Person avatars for agents: one consistent set, keyed by role key (org_roles.key).
 // Each avatar is a bust (skin tone, hairstyle, hair color, clothing tone) with a

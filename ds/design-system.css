@@ -1,4 +1,4 @@
-/* @should/design-system 0.11.1: generated from src/ by scripts/build.mjs; edit src/, not this file */
+/* @should/design-system 0.14.0: generated from src/ by scripts/build.mjs; edit src/, not this file */
 /* Design system: Material Design 3, adapted.
    Token names follow M3's web tokens (--md-sys-*), so Material Web components,
    Tailwind and plain CSS read the same values. Colors are generated per brand
@@ -35,6 +35,9 @@
   --ds-skin-1: #f6d7c3; --ds-skin-2: #e6b897; --ds-skin-3: #c98f6a;
   --ds-skin-4: #a46c4a; --ds-skin-5: #7a4a30; --ds-skin-6: #4f2f1f;
   --ds-hair-1: #241c17; --ds-hair-2: #4a3226; --ds-hair-3: #7a4b2a; --ds-hair-4: #c99a5b; --ds-hair-5: #9c9a95;
+
+  /* Plate behind third-party logos (.ds-logo): light in both themes, softened in dark */
+  --ds-logo-plate: light-dark(#ffffff, #e6e4de);
 
   /* Space: M3's 4dp grid */
   --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;
@@ -79,14 +82,14 @@
 
 /* Series colors for charts and splits (src/series.json) */
 :root {
-  --ds-series-1: light-dark(#00639b, #94ccff);
-  --ds-series-2: light-dark(#006a6a, #4cdada);
-  --ds-series-3: light-dark(#4fb8b6, #a6f2f0);
-  --ds-series-4: light-dark(#7d5800, #f8bd2a);
-  --ds-series-5: light-dark(#d9a531, #ffdea3);
-  --ds-series-6: light-dark(#386a20, #9cd67d);
-  --ds-series-7: light-dark(#7fb862, #c9eeb2);
-  --ds-series-8: light-dark(#b02f00, #ffb59c);
+  --ds-series-1: light-dark(#2a78d6, #3987e5);
+  --ds-series-2: light-dark(#eb6834, #d95926);
+  --ds-series-3: light-dark(#1baf7a, #199e70);
+  --ds-series-4: light-dark(#eda100, #c98500);
+  --ds-series-5: light-dark(#e87ba4, #d55181);
+  --ds-series-6: light-dark(#008300, #008300);
+  --ds-series-7: light-dark(#0090a8, #0aa0b8);
+  --ds-series-8: light-dark(#e34948, #e66767);
   --ds-series-9: light-dark(#73796e, #a9ada1);
 }
 
@@ -578,3 +581,76 @@
   color: var(--md-sys-color-primary); font: var(--md-sys-typescale-label-large-weight, 500) var(--md-sys-typescale-label-large-size)/1.4 var(--md-ref-typeface-plain); }
 .ds-code-resend:disabled { color: var(--md-sys-color-on-surface-variant); cursor: default; }
 .ds-code-resend:focus-visible { outline: 3px solid var(--md-sys-color-secondary); outline-offset: 2px; }
+
+/* Shared by design-system.css and the Tailwind layer (v0.12). */
+
+/* Icons: Material Symbols as inline SVG (24px grid, currentColor). No icon fonts: a font shows its ligature
+   words ("chat", "groups") until it loads. Copy the SVG path from fonts.google.com/icons (Apache 2.0). */
+.ds-icon { width: 1.5rem; height: 1.5rem; flex: none; fill: currentColor; vertical-align: middle; }
+.ds-icon.sm { width: 1.25rem; height: 1.25rem; }
+.ds-icon.lg { width: 2rem; height: 2rem; }
+
+/* Third-party logos (brokers, banks, partners): a light plate in both themes, so dark marks with transparent
+   backgrounds stay visible on dark surfaces. Size the tile with width/height; the image fits inside. */
+.ds-logo {
+  display: inline-grid; place-items: center; flex: none; width: 2.5rem; height: 2.5rem; padding: var(--space-1);
+  border-radius: var(--md-sys-shape-corner-small); background: var(--ds-logo-plate);
+  box-shadow: inset 0 0 0 1px var(--md-sys-color-outline-variant); overflow: hidden;
+}
+.ds-logo img, .ds-logo svg { max-width: 100%; max-height: 100%; object-fit: contain; }
+.ds-logo.lg { width: 3.5rem; height: 3.5rem; padding: var(--space-2); }
+
+/* Account (v0.13, Rod 11/19: "a login button on the home page … they need way to login and logoff").
+   Signed out: a text "Log in" button at the trailing end of the app bar, visible at every width.
+   Signed in: an avatar button opening .ds-menu with name and email, Open app, Settings, Log out. */
+.ds-account { position: relative; display: inline-flex; }
+.ds-account > button { border: 0; padding: 0; background: none; border-radius: 50%; cursor: pointer; }
+.ds-account > button:focus-visible { outline: 3px solid var(--md-sys-color-secondary); outline-offset: 2px; }
+.ds-menu {
+  min-width: 14rem; max-width: min(20rem, calc(100vw - 2rem)); margin: 0; padding: var(--space-2) 0;
+  border: 0; border-radius: var(--md-sys-shape-corner-extra-small); background: var(--md-sys-color-surface-container);
+  color: var(--md-sys-color-on-surface); box-shadow: var(--md-sys-elevation-level2);
+  font: var(--md-sys-typescale-body-large-weight) var(--md-sys-typescale-label-large-size)/1.4 var(--md-ref-typeface-plain);
+}
+.ds-menu[popover] { position: fixed; inset: auto; }
+.ds-menu .ds-menu-who { display: grid; gap: 2px; padding: var(--space-2) var(--space-4) var(--space-3); }
+.ds-menu .ds-menu-who span { color: var(--md-sys-color-on-surface-variant); font-size: var(--md-sys-typescale-body-small-size); overflow-wrap: anywhere; }
+.ds-menu hr { border: 0; height: 1px; margin: var(--space-1) 0; background: var(--md-sys-color-outline-variant); }
+.ds-menu :is(a, button) {
+  display: flex; align-items: center; gap: var(--space-3); width: 100%; min-height: 3rem; padding: 0 var(--space-4);
+  border: 0; background: none; color: inherit; font: inherit; text-align: start; text-decoration: none; cursor: pointer;
+}
+.ds-menu :is(a, button):hover { background: color-mix(in srgb, var(--md-sys-color-on-surface) 8%, transparent); }
+.ds-menu :is(a, button):focus-visible { outline: 2px solid var(--md-sys-color-secondary); outline-offset: -2px; }
+
+/* Charts (v0.14, charts.js). Text uses the text roles; color marks carry identity. */
+.ds-chart { display: grid; gap: var(--space-2); min-width: 0; font-family: var(--md-ref-typeface-plain); }
+.ds-chart-title { font: var(--md-sys-typescale-title-small-weight) var(--md-sys-typescale-title-small-size)/1.4 var(--md-ref-typeface-plain); color: var(--md-sys-color-on-surface); }
+.ds-chart-plot { position: relative; min-width: 0; }
+.ds-chart-plot svg { display: block; max-width: 100%; height: auto; overflow: visible; }
+.ds-chart-tip {
+  position: absolute; z-index: 2; display: grid; gap: 2px; min-width: 8rem; max-width: 16rem; padding: var(--space-2) var(--space-3);
+  pointer-events: none; border-radius: var(--md-sys-shape-corner-extra-small); background: var(--md-sys-color-inverse-surface);
+  color: var(--md-sys-color-inverse-on-surface); font-size: var(--md-sys-typescale-body-small-size); line-height: 1.4; box-shadow: var(--md-sys-elevation-level2);
+}
+.ds-chart-tip[hidden] { display: none; }
+.ds-chart-tip span { display: flex; align-items: center; gap: var(--space-2); }
+.ds-chart-tip b { margin-inline-start: auto; font-variant-numeric: tabular-nums; }
+.ds-chart-tip i { width: 0.625rem; height: 0.625rem; border-radius: 2px; flex: none; }
+.ds-chart-toggle { justify-self: start; }
+.ds-legend { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-4); margin: 0; padding: 0; list-style: none;
+  font-size: var(--md-sys-typescale-body-small-size); color: var(--md-sys-color-on-surface-variant); }
+.ds-legend li { display: inline-flex; align-items: center; gap: var(--space-2); }
+.ds-legend-key { display: inline-block; width: 0.75rem; height: 0.75rem; border-radius: 3px; flex: none; }
+.ds-legend-scale { align-items: center; gap: var(--space-1); }
+.ds-stat { display: grid; gap: var(--space-1); min-width: 0; padding: var(--space-4); border-radius: var(--md-sys-shape-corner-medium);
+  background: var(--md-sys-color-surface-container-low); box-shadow: inset 0 0 0 1px var(--md-sys-color-outline-variant); }
+.ds-stat-label { font-size: var(--md-sys-typescale-label-large-size); color: var(--md-sys-color-on-surface-variant); }
+.ds-stat-value { font: 600 var(--md-sys-typescale-headline-small-size)/1.2 var(--md-ref-typeface-brand); color: var(--md-sys-color-on-surface); font-variant-numeric: tabular-nums; }
+.ds-stat-foot { display: flex; align-items: center; gap: var(--space-2); flex-wrap: wrap; font-size: var(--md-sys-typescale-body-small-size); color: var(--md-sys-color-on-surface-variant); }
+.ds-stat-foot .ds-spark { margin-inline-start: auto; }
+.ds-stat-delta { font-weight: 600; font-variant-numeric: tabular-nums; }
+.ds-stat-delta.good { color: var(--success); }
+.ds-stat-delta.bad { color: var(--md-sys-color-error); }
+.ds-bar-table td.bar { width: 50%; }
+.ds-bar-table td.bar span { display: block; width: var(--w); min-width: 2px; height: 0.625rem; border-radius: 0 4px 4px 0; background: var(--md-sys-color-primary); }

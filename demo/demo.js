@@ -58,7 +58,10 @@
     document.title = (co ? co.name : g.name) + ' · Should demo';
     renderBar(g, co);
     renderSeg(g, co, r);
+    CH = [];
     $('#app').innerHTML = co ? companyView(co, r.sec) : (VIEWS[r.key] || deskView)(r.key, r.sub);
+    // Charts are the design system's charts.js (v0.14.0), mounted once the view is in the page
+    document.querySelectorAll('#app [data-ch]').forEach(function (el) { DSCharts.mount(el, CH[+el.dataset.ch]); });
   }
   function launcherApps() {
     return GROUPS.map(function (g) { return { name: g.name, icon: g.icon, href: hrefOf(g.tabs[0][0]), bg: 'var(--tile-' + g.tile + ')', act: g.key === 'money' }; })
@@ -81,7 +84,7 @@
       '</div><p class="head">Companies</p><div class="grid">' +
       COMPANIES.map(function (c) { return '<a href="#/c/' + c.slug + '"><span class="app" style="background: ' + c.color + '">' + icon(c.slug === 'lantern' ? 'legal' : 'business', 24) + '</span><span class="lbl">' + esc(c.name) + '</span></a>'; }).join('') +
       '</div><p class="head">Systems and tools</p><div class="grid small">' +
-      [['it', 'it'], ['webmaster', 'webmaster'], ['dba', 'database'], ['designer', 'designer'], ['search', 'search'], ['people', 'phone book']].map(function (t) { return '<a href="#/assistant">' + (window.DSAvatars && DSAvatars.AVATARS[t[0]] ? face(t[0], 42) : '<span class="app" style="background: var(--tile-systems)">' + icon(t[0], 20) + '</span>') + '<span class="lbl">' + t[1] + '</span></a>'; }).join('') + '</div></div>';
+      [['it', 'it'], ['webmaster', 'webmaster'], ['dba', 'database'], ['designer', 'designer'], ['usage', 'agent usage', '#/usage', 'it'], ['search', 'search'], ['people', 'phone book']].map(function (t) { return '<a href="' + (t[2] || '#/assistant') + '">' + (window.DSAvatars && DSAvatars.AVATARS[t[0]] ? face(t[0], 42) : '<span class="app" style="background: var(--tile-systems)">' + icon(t[3] || t[0], 20) + '</span>') + '<span class="lbl">' + t[1] + '</span></a>'; }).join('') + '</div></div>';
     var me = '<div class="panel list" role="menu" aria-label="' + D.me.name + '"><p class="who"><b>' + D.me.name + '</b><span class="small muted">' + D.me.email + '</span></p><a role="menuitem" href="#/coach">Coach and values</a><a role="menuitem" href="../">The Should page ↗</a></div>';
     bar.innerHTML =
       '<a href="#/" class="brand" aria-label="Should, Today"><svg viewBox="0 0 64 64" width="26" height="26" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#1f6f54"/><path d="M17 34.5 L27.5 44.5 L45 23" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="16.5" r="5" fill="#e88a60"/></svg><span class="word">Should</span></a>' +
@@ -117,6 +120,8 @@
   function hero(eyebrow, title, lede, side) {
     return '<header class="hero"><div>' + (eyebrow ? '<p class="eyebrow">' + eyebrow + '</p>' : '') + '<h1 class="page-h1">' + title + '</h1>' + (lede ? '<p class="lede">' + lede + '</p>' : '') + '</div>' + (side || '') + '</header>';
   }
+  var CH = [];
+  function chart(spec) { CH.push(spec); return '<div data-ch="' + (CH.length - 1) + '"></div>'; }
   function pill(text, tone) { return '<span class="pill ' + (tone || '') + '">' + text + '</span>'; }
   function phone() {
     return '<section class="block phonecard"><h2 class="label"><span>A 1/2/3 text</span><span class="muted small">how you answer, on the go</span></h2><div class="msgs">' +
@@ -220,18 +225,32 @@
       var G = { confirmed: 'off', notlisted: 'off', needs: 'need' }, STEP = { checking: 0, found: 1, relisted: 1, filed: 2, needs: 2, confirmed: 3, notlisted: 4 };
       var LBL = { checking: ['Checking', ''], filed: ['Opt-out filed', ''], relisted: ['Listed again, re-filed', 'watch'], needs: ['Needs you', 'watch'], confirmed: ['Opt-out confirmed', 'ok'], notlisted: ['Re-checked: not listed', 'good'] };
       X.sites.forEach(function (s) { n[G[s[1]] || 'prog']++; });
-      var bar = '<div class="br-bar" aria-hidden="true"><span class="off" style="flex-grow:' + n.off + '"></span><span class="prog" style="flex-grow:' + n.prog + '"></span><span class="need" style="flex-grow:' + n.need + '"></span></div>';
+      var ORDER = ['checking', 'relisted', 'filed', 'needs', 'confirmed', 'notlisted'];
+      var bar = chart({ type: 'bar', horizontal: true, title: 'Sites by status', labels: ORDER.map(function (k) { return LBL[k][0]; }), series: [{ name: 'Sites', values: ORDER.map(function (k) { return X.sites.filter(function (s) { return s[1] === k; }).length; }) }], height: 220 });
       var tilesHtml = '<ul class="br-tiles">' + X.sites.map(function (s) {
         var tr = ''; for (var i = 0; i < 4; i++) tr += '<i class="' + (i < STEP[s[1]] ? 'on' : '') + '"></i>';
         return '<li class="' + (G[s[1]] || 'prog') + '"><span class="br-logo" aria-hidden="true">' + s[0].replace(/[^A-Z]/g, '').slice(0, 2) + '</span><b>' + s[0] + '</b><span class="br-track">' + tr + '</span>' + pill(LBL[s[1]][0], LBL[s[1]][1]) + '</li>';
       }).join('') + '</ul>';
       return hero('Investigator', 'Data brokers', 'Where you’re listed on people-search and marketing sites, what’s filed, and the few steps only you can do. Investigator files and re-checks.') +
         tiles([{ label: 'Opt-outs confirmed', value: n.off + ' of ' + X.sites.length, sub: 'as of ' + X.asOf }, { label: 'In progress', value: '' + n.prog, sub: 'filed or checking' }, { label: 'Needs you', value: '' + n.need, sub: 'a few minutes each' }, { label: 'Next check', value: X.next, sub: 're-checks every 3 months' }]) +
-        card('At a glance', bar + '<p class="small muted">' + n.off + ' confirmed · ' + n.prog + ' in progress · ' + n.need + ' need you</p>') +
+        card('Removals by status', bar + '<p class="small muted">' + n.off + ' confirmed · ' + n.prog + ' in progress · ' + n.need + ' need you</p>') +
         card('Needs you', rows(X.needs, function (x) { return '<b>' + x[0] + '</b><span>' + x[1] + '</span><a class="small" href="#/brokers">Open ' + x[0] + '</a>'; }), '<span class="muted small">one step each</span>') +
         '<div class="cols2">' + card('Your sites', tilesHtml) +
         card('What we’ve done', rows(X.feed, function (f) { return '<span class="muted small">' + f[0] + '</span><span>' + f[1] + '</span>' + (f[2] ? '<span class="small muted">Confirmation ' + f[2] + '</span>' : ''); })) + '</div>' +
         card('Re-checks due', rows(X.rechecks, function (r) { return '<b>' + r[0] + '</b><span class="muted">' + r[1] + '</span>'; }), '<span class="muted small">confirmation references only, never copies of their pages</span>');
+    },
+    usage: function () {
+      var X = D.usage, C = DSCharts, metric = 'spend';
+      var t = [C.statTile({ label: 'Estimated cost, last 7 days', value: X.kpis.week, unit: '$', delta: X.kpis.weekDelta, goodWhen: 'down', trend: X.byModel[0].values.slice(-7), caption: 'at API list price' }),
+        C.statTile({ label: 'Tokens on Nov 19', value: X.kpis.day, delta: X.kpis.dayDelta, goodWhen: 'down' }),
+        C.statTile({ label: 'Messages, last 7 days', value: X.kpis.messages }), C.statTile({ label: 'Agents active, 30 days', value: X.kpis.active })].join('');
+      return hero('IT Guy', 'Agent usage', 'Claude tokens per agent, model and day. Cost is an estimate at API list price; you’re on a subscription, so it isn’t money spent.') +
+        '<div class="us-tiles">' + t + '</div>' +
+        '<div class="us-grid"><section class="block us-wide">' + chart({ type: 'bar', stacked: true, title: 'Estimated cost per day, by agent', labels: X.labels, series: X.byRole, unit: '$', height: 260 }) + '</section>' +
+        '<section class="block">' + chart({ type: 'line', title: 'Estimated cost per day, by model', labels: X.labels, series: X.byModel, unit: '$', height: 240 }) + '</section>' +
+        '<section class="block">' + chart({ type: 'calendar', title: 'Estimated cost per day, last 90 days', days: X.calendar, unit: '$' }) + '</section>' +
+        '<section class="block"><h2 class="ds-chart-title">Per agent, last 30 days</h2>' + C.barTable({ rows: X.perRole.map(function (r) { return { label: r.label, value: r.spend }; }), unit: '$' }) + '</section>' +
+        '<section class="block"><h2 class="ds-chart-title">Each agent’s model</h2><table class="ds-table"><tbody>' + X.current.map(function (c) { return '<tr><td>' + c[0] + '</td><td>' + c[1] + '</td><td class="num muted">' + c[2] + '</td></tr>'; }).join('') + '</tbody></table></section></div>';
     },
     work: function () {
       var X = D.work, tone = { strong: 'ok', maybe: 'watch', skip: 'act' };

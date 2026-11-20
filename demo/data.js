@@ -107,6 +107,25 @@ window.DEMO = {
     rechecks: [['TrueRecords', 'Feb 17'], ['OpenDirectory', 'Feb 12'], ['NeighborList', 'Feb 10']]
   },
 
+  // Agent usage (Systems): made-up token use per agent; mirrors the portal's /usage. Cost is a list-price estimate.
+  usage: (function () {
+    var roles = [['Executive Assistant', 3.1, 'Opus'], ['Text Concierge', 1.6, 'Sonnet'], ['Webmaster', 1.2, 'Opus'], ['Accountant', 0.8, 'Sonnet'], ['Health Agent', 0.6, 'Sonnet'], ['Investigator', 0.5, 'Sonnet'], ['Life Coach', 0.4, 'Opus'], ['Scheduler', 0.3, 'Haiku'], ['Local Guide', 0.2, 'Haiku']];
+    var wave = [0.9, 1.1, 0.7, 1.3, 1.0, 0.6, 0.4, 1.2, 1.0, 0.8, 1.4, 1.1, 0.9, 1.0];
+    var labels = [], d0 = new Date(2026, 10, 6);
+    for (var i = 0; i < 14; i++) { var d = new Date(d0); d.setDate(d0.getDate() + i); labels.push(d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })); }
+    var byRole = roles.map(function (r, k) { return { name: r[0], values: wave.map(function (w, i) { return +(r[1] * w * (1 + ((i * 7 + k * 3) % 5 - 2) / 20)).toFixed(2); }) }; });
+    var models = ['Opus', 'Sonnet', 'Haiku'].map(function (m) { return { name: m, values: wave.map(function (_, i) { return +byRole.filter(function (_, k) { return roles[k][2] === m; }).reduce(function (a, r) { return a + r.values[i]; }, 0).toFixed(2); }) }; });
+    var cal = [], c0 = new Date(2026, 7, 22);
+    for (var j = 0; j < 90; j++) { var cd = new Date(c0); cd.setDate(c0.getDate() + j); cal.push({ date: cd.toISOString().slice(0, 10), value: +(4 + 6 * Math.abs(Math.sin(j / 5)) + (j % 7 === 6 ? -3 : 0) + j / 30).toFixed(2) }); }
+    var total = function (r) { return r.values.reduce(function (a, b) { return a + b; }, 0); };
+    return {
+      labels: labels, byRole: byRole, byModel: models, calendar: cal,
+      perRole: byRole.map(function (r, k) { return { label: r.name, spend: +(total(r) * 2.1).toFixed(2), tokens: Math.round(total(r) * 2.1 * 52000) }; }),
+      current: roles.map(function (r) { return [r[0], 'Claude ' + r[2], 'Nov 19']; }),
+      kpis: { week: 64.2, weekDelta: -0.08, day: 1840000, dayDelta: 0.05, messages: 1312, active: 9 }
+    };
+  })(),
+
   work: {
     tiles: [
       { label: 'New job leads', value: '4', sub: '2 strong fits' },

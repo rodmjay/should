@@ -1,4 +1,4 @@
-/* @should/design-system 0.11.1: generated from src/ by scripts/build.mjs; edit src/, not this file */
+/* @should/design-system 0.14.0: generated from src/ by scripts/build.mjs; edit src/, not this file */
 /* Design system: Material Design 3, adapted.
    Token names follow M3's web tokens (--md-sys-*), so Material Web components,
    Tailwind and plain CSS read the same values. Colors are generated per brand
@@ -35,6 +35,9 @@
   --ds-skin-1: #f6d7c3; --ds-skin-2: #e6b897; --ds-skin-3: #c98f6a;
   --ds-skin-4: #a46c4a; --ds-skin-5: #7a4a30; --ds-skin-6: #4f2f1f;
   --ds-hair-1: #241c17; --ds-hair-2: #4a3226; --ds-hair-3: #7a4b2a; --ds-hair-4: #c99a5b; --ds-hair-5: #9c9a95;
+
+  /* Plate behind third-party logos (.ds-logo): light in both themes, softened in dark */
+  --ds-logo-plate: light-dark(#ffffff, #e6e4de);
 
   /* Space: M3's 4dp grid */
   --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;
@@ -79,14 +82,14 @@
 
 /* Series colors for charts and splits (src/series.json) */
 :root {
-  --ds-series-1: light-dark(#00639b, #94ccff);
-  --ds-series-2: light-dark(#006a6a, #4cdada);
-  --ds-series-3: light-dark(#4fb8b6, #a6f2f0);
-  --ds-series-4: light-dark(#7d5800, #f8bd2a);
-  --ds-series-5: light-dark(#d9a531, #ffdea3);
-  --ds-series-6: light-dark(#386a20, #9cd67d);
-  --ds-series-7: light-dark(#7fb862, #c9eeb2);
-  --ds-series-8: light-dark(#b02f00, #ffb59c);
+  --ds-series-1: light-dark(#2a78d6, #3987e5);
+  --ds-series-2: light-dark(#eb6834, #d95926);
+  --ds-series-3: light-dark(#1baf7a, #199e70);
+  --ds-series-4: light-dark(#eda100, #c98500);
+  --ds-series-5: light-dark(#e87ba4, #d55181);
+  --ds-series-6: light-dark(#008300, #008300);
+  --ds-series-7: light-dark(#0090a8, #0aa0b8);
+  --ds-series-8: light-dark(#e34948, #e66767);
   --ds-series-9: light-dark(#73796e, #a9ada1);
 }
 

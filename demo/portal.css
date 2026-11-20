@@ -1,216 +1,3 @@
-:root { color-scheme: light dark; }
-[data-theme="light"] { color-scheme: light; }
-[data-theme="dark"] { color-scheme: dark; }
-
-:root {
-  --md-ref-typeface-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
-
-  --md-sys-typescale-display-large-size: clamp(2.75rem, 2rem + 3vw, 3.5625rem);  --md-sys-typescale-display-large-line-height: 1.12;  --md-sys-typescale-display-large-weight: 700; --md-sys-typescale-display-large-tracking: -0.02em;
-  --md-sys-typescale-display-medium-size: clamp(2.25rem, 1.8rem + 2vw, 2.8125rem); --md-sys-typescale-display-medium-line-height: 1.16; --md-sys-typescale-display-medium-weight: 700; --md-sys-typescale-display-medium-tracking: -0.015em;
-  --md-sys-typescale-display-small-size: 2.25rem;     --md-sys-typescale-display-small-line-height: 1.22;   --md-sys-typescale-display-small-weight: 700;   --md-sys-typescale-display-small-tracking: -0.01em;
-  --md-sys-typescale-headline-large-size: 2rem;       --md-sys-typescale-headline-large-line-height: 1.25;  --md-sys-typescale-headline-large-weight: 600;  --md-sys-typescale-headline-large-tracking: -0.01em;
-  --md-sys-typescale-headline-medium-size: 1.75rem;   --md-sys-typescale-headline-medium-line-height: 1.29; --md-sys-typescale-headline-medium-weight: 600; --md-sys-typescale-headline-medium-tracking: -0.005em;
-  --md-sys-typescale-headline-small-size: 1.5rem;     --md-sys-typescale-headline-small-line-height: 1.33;  --md-sys-typescale-headline-small-weight: 600;  --md-sys-typescale-headline-small-tracking: 0;
-  --md-sys-typescale-title-large-size: 1.375rem;      --md-sys-typescale-title-large-line-height: 1.27;     --md-sys-typescale-title-large-weight: 600;     --md-sys-typescale-title-large-tracking: 0;
-  --md-sys-typescale-title-medium-size: 1rem;         --md-sys-typescale-title-medium-line-height: 1.5;     --md-sys-typescale-title-medium-weight: 600;    --md-sys-typescale-title-medium-tracking: 0.009em;
-  --md-sys-typescale-title-small-size: 0.875rem;      --md-sys-typescale-title-small-line-height: 1.43;     --md-sys-typescale-title-small-weight: 600;     --md-sys-typescale-title-small-tracking: 0.007em;
-  --md-sys-typescale-body-large-size: 1rem;           --md-sys-typescale-body-large-line-height: 1.6;       --md-sys-typescale-body-large-weight: 400;      --md-sys-typescale-body-large-tracking: 0;
-  --md-sys-typescale-body-medium-size: 0.875rem;      --md-sys-typescale-body-medium-line-height: 1.43;     --md-sys-typescale-body-medium-weight: 400;     --md-sys-typescale-body-medium-tracking: 0.0125em;
-  --md-sys-typescale-body-small-size: 0.75rem;        --md-sys-typescale-body-small-line-height: 1.33;      --md-sys-typescale-body-small-weight: 400;      --md-sys-typescale-body-small-tracking: 0.025em;
-  --md-sys-typescale-label-large-size: 0.875rem;      --md-sys-typescale-label-large-line-height: 1.43;     --md-sys-typescale-label-large-weight: 500;     --md-sys-typescale-label-large-tracking: 0.007em;
-  --md-sys-typescale-label-medium-size: 0.75rem;      --md-sys-typescale-label-medium-line-height: 1.33;    --md-sys-typescale-label-medium-weight: 500;    --md-sys-typescale-label-medium-tracking: 0.04em;
-  --md-sys-typescale-label-small-size: 0.6875rem;     --md-sys-typescale-label-small-line-height: 1.45;     --md-sys-typescale-label-small-weight: 500;     --md-sys-typescale-label-small-tracking: 0.045em;
-
-  --ds-skin-1: #f6d7c3; --ds-skin-2: #e6b897; --ds-skin-3: #c98f6a;
-  --ds-skin-4: #a46c4a; --ds-skin-5: #7a4a30; --ds-skin-6: #4f2f1f;
-  --ds-hair-1: #241c17; --ds-hair-2: #4a3226; --ds-hair-3: #7a4b2a; --ds-hair-4: #c99a5b; --ds-hair-5: #9c9a95;
-
-  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;
-  --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem;
-  --space-12: 3rem; --space-16: 4rem; --space-24: 6rem;
-  --container: 72rem;
-  --gutter: 1rem;
-
-  --md-sys-elevation-level0: none;
-  --md-sys-elevation-level1: 0 1px 2px rgb(0 0 0 / 0.18), 0 1px 3px 1px rgb(0 0 0 / 0.08);
-  --md-sys-elevation-level2: 0 1px 2px rgb(0 0 0 / 0.18), 0 2px 6px 2px rgb(0 0 0 / 0.09);
-  --md-sys-elevation-level3: 0 1px 3px rgb(0 0 0 / 0.18), 0 4px 8px 3px rgb(0 0 0 / 0.1);
-  --md-sys-elevation-level4: 0 2px 3px rgb(0 0 0 / 0.18), 0 6px 10px 4px rgb(0 0 0 / 0.1);
-  --md-sys-elevation-level5: 0 4px 4px rgb(0 0 0 / 0.18), 0 8px 12px 6px rgb(0 0 0 / 0.1);
-
-  --md-sys-state-hover-opacity: 0.08;
-  --md-sys-state-focus-opacity: 0.1;
-  --md-sys-state-pressed-opacity: 0.1;
-  --md-sys-state-dragged-opacity: 0.16;
-
-  --md-sys-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
-  --md-sys-motion-easing-standard-decelerate: cubic-bezier(0, 0, 0, 1);
-  --md-sys-motion-easing-standard-accelerate: cubic-bezier(0.3, 0, 1, 1);
-  --md-sys-motion-easing-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
-  --md-sys-motion-easing-emphasized-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
-  --md-sys-motion-duration-short2: 100ms;
-  --md-sys-motion-duration-short4: 200ms;
-  --md-sys-motion-duration-medium2: 300ms;
-  --md-sys-motion-duration-medium4: 400ms;
-  --md-sys-motion-duration-long2: 500ms;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  :root {
-    --md-sys-motion-duration-short2: 0ms; --md-sys-motion-duration-short4: 0ms; --md-sys-motion-duration-medium2: 0ms;
-    --md-sys-motion-duration-medium4: 0ms; --md-sys-motion-duration-long2: 0ms;
-  }
-}
-
-:root,
-[data-brand="should"] {
-  --md-sys-color-background: light-dark(#fcf9f2, #131410);
-  --md-sys-color-on-background: light-dark(#1c1c18, #e5e2dc);
-  --md-sys-color-surface: light-dark(#fcf9f2, #131410);
-  --md-sys-color-surface-dim: light-dark(#dcdad4, #131410);
-  --md-sys-color-surface-bright: light-dark(#fcf9f2, #3a3935);
-  --md-sys-color-surface-container-lowest: light-dark(#ffffff, #0e0e0b);
-  --md-sys-color-surface-container-low: light-dark(#f6f3ed, #1c1c18);
-  --md-sys-color-surface-container: light-dark(#f1eee7, #20201c);
-  --md-sys-color-surface-container-high: light-dark(#ebe8e1, #2a2a26);
-  --md-sys-color-surface-container-highest: light-dark(#e5e2dc, #353531);
-  --md-sys-color-on-surface: light-dark(#1c1c18, #e5e2dc);
-  --md-sys-color-surface-variant: light-dark(#e4e3d4, #47473d);
-  --md-sys-color-on-surface-variant: light-dark(#47473d, #c8c7b9);
-  --md-sys-color-inverse-surface: light-dark(#31312c, #e5e2dc);
-  --md-sys-color-inverse-on-surface: light-dark(#f3f0ea, #31312c);
-  --md-sys-color-outline: light-dark(#78786b, #929184);
-  --md-sys-color-outline-variant: light-dark(#c8c7b9, #47473d);
-  --md-sys-color-shadow: light-dark(#000000, #000000);
-  --md-sys-color-scrim: light-dark(#000000, #000000);
-  --md-sys-color-surface-tint: light-dark(#1f6f54, #5cc49b);
-  --md-sys-color-primary: light-dark(#1f6f54, #5cc49b);
-  --md-sys-color-on-primary: light-dark(#ffffff, #003827);
-  --md-sys-color-primary-container: light-dark(#a5f2d0, #00513b);
-  --md-sys-color-on-primary-container: light-dark(#00513b, #a5f2d0);
-  --md-sys-color-inverse-primary: light-dark(#8ad6b5, #196b50);
-  --md-sys-color-secondary: light-dark(#4c6358, #b3ccbf);
-  --md-sys-color-on-secondary: light-dark(#ffffff, #1f352b);
-  --md-sys-color-secondary-container: light-dark(#cfe9da, #354b41);
-  --md-sys-color-on-secondary-container: light-dark(#354b41, #cfe9da);
-  --md-sys-color-tertiary: light-dark(#954924, #ffb596);
-  --md-sys-color-on-tertiary: light-dark(#ffffff, #581e00);
-  --md-sys-color-tertiary-container: light-dark(#ffdbcd, #77320f);
-  --md-sys-color-on-tertiary-container: light-dark(#77320f, #ffdbcd);
-  --md-sys-color-error: light-dark(#ba1a1a, #ffb4ab);
-  --md-sys-color-on-error: light-dark(#ffffff, #690005);
-  --md-sys-color-error-container: light-dark(#ffdad6, #93000a);
-  --md-sys-color-on-error-container: light-dark(#93000a, #ffdad6);
-  --md-ref-typeface-brand: "Fraunces", Georgia, "Times New Roman", serif;
-  --md-ref-typeface-plain: "Inter", "Inter Variable", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --brand-corner: 1;
-}
-
-[data-brand="agency"] {
-  --md-sys-color-background: light-dark(#fafaf3, #121410);
-  --md-sys-color-on-background: light-dark(#1a1c18, #e3e3dc);
-  --md-sys-color-surface: light-dark(#fafaf3, #121410);
-  --md-sys-color-surface-dim: light-dark(#dadad4, #121410);
-  --md-sys-color-surface-bright: light-dark(#fafaf3, #383a35);
-  --md-sys-color-surface-container-lowest: light-dark(#ffffff, #0d0f0b);
-  --md-sys-color-surface-container-low: light-dark(#f4f4ed, #1a1c18);
-  --md-sys-color-surface-container: light-dark(#eeeee7, #1e201c);
-  --md-sys-color-surface-container-high: light-dark(#e8e9e2, #292b26);
-  --md-sys-color-surface-container-highest: light-dark(#e3e3dc, #343531);
-  --md-sys-color-on-surface: light-dark(#1a1c18, #e3e3dc);
-  --md-sys-color-surface-variant: light-dark(#dfe4d7, #43483e);
-  --md-sys-color-on-surface-variant: light-dark(#43483e, #c3c8bb);
-  --md-sys-color-inverse-surface: light-dark(#2f312d, #e3e3dc);
-  --md-sys-color-inverse-on-surface: light-dark(#f1f1ea, #2f312d);
-  --md-sys-color-outline: light-dark(#73796d, #8d9287);
-  --md-sys-color-outline-variant: light-dark(#c3c8bb, #43483e);
-  --md-sys-color-shadow: light-dark(#000000, #000000);
-  --md-sys-color-scrim: light-dark(#000000, #000000);
-  --md-sys-color-surface-tint: light-dark(#386a20, #9cd67d);
-  --md-sys-color-primary: light-dark(#386a20, #9cd67d);
-  --md-sys-color-on-primary: light-dark(#ffffff, #113800);
-  --md-sys-color-primary-container: light-dark(#b8f398, #205107);
-  --md-sys-color-on-primary-container: light-dark(#205107, #b8f398);
-  --md-sys-color-inverse-primary: light-dark(#9dd67e, #386a20);
-  --md-sys-color-secondary: light-dark(#55624c, #bdcbb0);
-  --md-sys-color-on-secondary: light-dark(#ffffff, #283420);
-  --md-sys-color-secondary-container: light-dark(#d8e7cb, #3e4a35);
-  --md-sys-color-on-secondary-container: light-dark(#3e4a35, #d8e7cb);
-  --md-sys-color-tertiary: light-dark(#386666, #a0cfcf);
-  --md-sys-color-on-tertiary: light-dark(#ffffff, #003737);
-  --md-sys-color-tertiary-container: light-dark(#bbeceb, #1e4e4e);
-  --md-sys-color-on-tertiary-container: light-dark(#1e4e4e, #bbeceb);
-  --md-sys-color-error: light-dark(#ba1a1a, #ffb4ab);
-  --md-sys-color-on-error: light-dark(#ffffff, #690005);
-  --md-sys-color-error-container: light-dark(#ffdad6, #93000a);
-  --md-sys-color-on-error-container: light-dark(#93000a, #ffdad6);
-  --md-ref-typeface-brand: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --md-ref-typeface-plain: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --brand-corner: 1;
-}
-
-[data-brand="agentic"] {
-  --md-sys-color-background: light-dark(#f8f9fc, #111416);
-  --md-sys-color-on-background: light-dark(#191c1e, #e1e2e5);
-  --md-sys-color-surface: light-dark(#f8f9fc, #111416);
-  --md-sys-color-surface-dim: light-dark(#d9dadc, #111416);
-  --md-sys-color-surface-bright: light-dark(#f8f9fc, #37393b);
-  --md-sys-color-surface-container-lowest: light-dark(#ffffff, #0c0f10);
-  --md-sys-color-surface-container-low: light-dark(#f3f3f6, #191c1e);
-  --md-sys-color-surface-container: light-dark(#edeef0, #1d2022);
-  --md-sys-color-surface-container-high: light-dark(#e7e8ea, #282a2c);
-  --md-sys-color-surface-container-highest: light-dark(#e1e2e5, #323537);
-  --md-sys-color-on-surface: light-dark(#191c1e, #e1e2e5);
-  --md-sys-color-surface-variant: light-dark(#dce3e9, #40484d);
-  --md-sys-color-on-surface-variant: light-dark(#40484d, #c0c7cd);
-  --md-sys-color-inverse-surface: light-dark(#2e3133, #e1e2e5);
-  --md-sys-color-inverse-on-surface: light-dark(#f0f1f3, #2e3133);
-  --md-sys-color-outline: light-dark(#71787d, #8a9297);
-  --md-sys-color-outline-variant: light-dark(#c0c7cd, #40484d);
-  --md-sys-color-shadow: light-dark(#000000, #000000);
-  --md-sys-color-scrim: light-dark(#000000, #000000);
-  --md-sys-color-surface-tint: light-dark(#2747d6, #b2c5ff);
-  --md-sys-color-primary: light-dark(#2747d6, #b2c5ff);
-  --md-sys-color-on-primary: light-dark(#ffffff, #002b72);
-  --md-sys-color-primary-container: light-dark(#dae2ff, #0040a1);
-  --md-sys-color-on-primary-container: light-dark(#0040a1, #dae2ff);
-  --md-sys-color-inverse-primary: light-dark(#b2c5ff, #0856cf);
-  --md-sys-color-secondary: light-dark(#585e71, #c0c6dd);
-  --md-sys-color-on-secondary: light-dark(#ffffff, #2a3042);
-  --md-sys-color-secondary-container: light-dark(#dce2f9, #404659);
-  --md-sys-color-on-secondary-container: light-dark(#404659, #dce2f9);
-  --md-sys-color-tertiary: light-dark(#7f5700, #ffba3e);
-  --md-sys-color-on-tertiary: light-dark(#ffffff, #432c00);
-  --md-sys-color-tertiary-container: light-dark(#ffdeae, #604100);
-  --md-sys-color-on-tertiary-container: light-dark(#604100, #ffdeae);
-  --md-sys-color-error: light-dark(#ba1a1a, #ffb4ab);
-  --md-sys-color-on-error: light-dark(#ffffff, #690005);
-  --md-sys-color-error-container: light-dark(#ffdad6, #93000a);
-  --md-sys-color-on-error-container: light-dark(#93000a, #ffdad6);
-  --md-ref-typeface-brand: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
-  --md-ref-typeface-plain: "Public Sans", "Helvetica Neue", Arial, sans-serif;
-  --brand-corner: 0.5;
-}
-
-:root,
-[data-brand] {
-  --md-sys-shape-corner-none: 0;
-  --md-sys-shape-corner-extra-small: calc(4px * var(--brand-corner));
-  --md-sys-shape-corner-small: calc(8px * var(--brand-corner));
-  --md-sys-shape-corner-medium: calc(12px * var(--brand-corner));
-  --md-sys-shape-corner-large: calc(16px * var(--brand-corner));
-  --md-sys-shape-corner-extra-large: calc(28px * var(--brand-corner));
-  --md-sys-shape-corner-full: 9999px;
-
-  --spark: var(--md-sys-color-tertiary);
-  --success: light-dark(#1d6b3a, #7fd99a);
-  --warning: light-dark(#8a5a00, #f5c065);
-
-  --font-sans: var(--md-ref-typeface-plain);
-  --font-heading: var(--md-ref-typeface-brand);
-  --font-mono: var(--md-ref-typeface-mono);
-}
-
 :root {
   --paper: var(--md-sys-color-surface);
   --paper-2: var(--md-sys-color-surface-container-high);
@@ -236,7 +23,7 @@
   --hand: var(--font-sans);
   --serif: var(--font-heading);
 
-  --r-assistant: light-dark(#2a78d6, #3987e5); --r-scheduler: light-dark(#3a6ea5, #8fb4e3); --r-bookkeeper: light-dark(#008300, #2fa82f); --r-wealth: light-dark(#b07800, #d9a21a); --r-financial: light-dark(#b07800, #d9a21a); --r-health: light-dark(#13936a, #2fbf8a); --r-career: light-dark(#e05a22, #f07a45); --r-travel: light-dark(#d25c8b, #e687ac); --r-investigator: light-dark(#5b6b7a, #8fa0b0); --r-legal: light-dark(#8a6d3b, #c09a5c); --r-music: light-dark(#b23a48, #ef8a96); --r-webmaster: light-dark(#2f8aa3, #5fb4cc); --r-housekeeper: light-dark(#5f7f1f, #93b84a); --r-pr: light-dark(#c2307a, #e070a8); --r-shopping: light-dark(#1f9fd6, #5cc0ef); --r-coach: light-dark(#0e7c86, #4cc3cc); --r-gifts: light-dark(#c2185b, #ef6f9c); --r-today: light-dark(#eda100, #f0b54a); --r-credit: light-dark(#3d6fd1, #7fa3ec); --r-handyman: light-dark(#b8612a, #e0925c); --r-relocation: light-dark(#8a6d1f, #d6b85a); --r-product: light-dark(#1f6f54, #5cc49b); --r-media: light-dark(#d4462f, #f07a63); --r-local-guide: light-dark(#2e8b57, #6cc795); --r-fashion: light-dark(#a0522d, #e09a74); --r-clothier: light-dark(#a0522d, #e09a74); --r-it: light-dark(#546e7a, #90a4ae); --r-events: light-dark(#2d6a8f, #6aa8d0); --r-business: light-dark(#37474f, #9fb3bd); --r-home-manager: light-dark(#5f7f1f, #93b84a); --r-relationships: light-dark(#c2185b, #ef6f9c); --r-relationship-manager: light-dark(#c2185b, #ef6f9c); --r-as-architect: light-dark(#4a6b8a, #9fb6cc);
+  --r-assistant: light-dark(#2a78d6, #3987e5); --r-scheduler: light-dark(#3a6ea5, #8fb4e3); --r-bookkeeper: light-dark(#008300, #2fa82f); --r-wealth: light-dark(#b07800, #d9a21a); --r-financial: light-dark(#b07800, #d9a21a); --r-health: light-dark(#13936a, #2fbf8a); --r-career: light-dark(#e05a22, #f07a45); --r-travel: light-dark(#d25c8b, #e687ac); --r-investigator: light-dark(#5b6b7a, #8fa0b0); --r-legal: light-dark(#8a6d3b, #c09a5c); --r-music: light-dark(#b23a48, #ef8a96); --r-webmaster: light-dark(#2f8aa3, #5fb4cc); --r-housekeeper: light-dark(#5f7f1f, #93b84a); --r-pr: light-dark(#c2307a, #e070a8); --r-shopping: light-dark(#1f9fd6, #5cc0ef); --r-coach: light-dark(#0e7c86, #4cc3cc); --r-gifts: light-dark(#c2185b, #ef6f9c); --r-today: light-dark(#eda100, #f0b54a); --r-credit: light-dark(#3d6fd1, #7fa3ec); --r-handyman: light-dark(#b8612a, #e0925c); --r-relocation: light-dark(#8a6d1f, #d6b85a); --r-product: light-dark(#1f6f54, #5cc49b); --r-designer: light-dark(#00838f, #4fc3cc); --r-media: light-dark(#d4462f, #f07a63); --r-local-guide: light-dark(#2e8b57, #6cc795); --r-fashion: light-dark(#a0522d, #e09a74); --r-clothier: light-dark(#a0522d, #e09a74); --r-it: light-dark(#546e7a, #90a4ae); --r-events: light-dark(#2d6a8f, #6aa8d0); --r-business: light-dark(#37474f, #9fb3bd); --r-home-manager: light-dark(#5f7f1f, #93b84a); --r-relationships: light-dark(#c2185b, #ef6f9c); --r-relationship-manager: light-dark(#c2185b, #ef6f9c); --r-as-architect: light-dark(#4a6b8a, #9fb6cc);
 }
 
 * { box-sizing: border-box; }
@@ -524,13 +311,13 @@ details > summary { color: var(--md-sys-color-on-surface-variant); }
 }
 
 
-  .bar {
+  header.bar {
     position: sticky; top: 0; z-index: 20; height: 48px; display: flex; align-items: center; gap: 12px;
     padding: 0 max(14px, calc((100vw - 1240px) / 2 + 14px));
     background: var(--md-sys-color-surface-container);
     border-bottom: 1px solid var(--md-sys-color-outline-variant);
   }
-  .bar.company { box-shadow: inset 0 2px 0 var(--ctx); }
+  header.bar.company { box-shadow: inset 0 2px 0 var(--ctx); }
   .brand { display: inline-flex; align-items: center; gap: 8px; text-decoration: none !important; flex: none; }
   .brand .word { font: 600 1.15rem/1 var(--font-heading); letter-spacing: -0.02em; color: var(--ink); }
   .mid { flex: 1; display: flex; justify-content: center; min-width: 0; }
@@ -606,7 +393,7 @@ details > summary { color: var(--md-sys-color-on-surface-variant); }
   .segin a.act::after { content: ''; position: absolute; top: 3px; right: 5px; width: 6px; height: 6px; border-radius: 50%; background: var(--nc-red); }
 
   @media (max-width: 700px) {
-    .bar { gap: 8px; }
+    header.bar { gap: 8px; }
     .mid { display: none; }
     .right { margin-left: auto; }
     .brand .word { font-size: 1.05rem; }

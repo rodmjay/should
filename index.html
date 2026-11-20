@@ -17,11 +17,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="ds/tokens.css">
-<link rel="stylesheet" href="ds/lang.css">
+<link rel="stylesheet" href="ds/design-system.css">
 <style>
 :root{
-  /* Page names, pointed at the design system's M3 roles (ds/tokens.css, brand "should") */
+  /* Page names, pointed at the design system's M3 roles (ds/design-system.css, brand "should") */
   --bg:var(--md-sys-color-surface); --card:var(--md-sys-color-surface-container-lowest);
   --ink:var(--md-sys-color-on-surface); --muted:var(--md-sys-color-on-surface-variant);
   --line:var(--md-sys-color-surface-container-highest);
@@ -633,8 +632,8 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
   <div id="sheetBody"></div>
 </div>
 
-<script src="ds/avatars.js"></script>
-<script src="ds/i18n.js"></script>
+<script src="ds/avatars.global.js"></script>
+<script src="ds/i18n.global.js"></script>
 <script src="i18n/en.js"></script>
 <script src="i18n/es.js"></script>
 <script>
@@ -646,7 +645,7 @@ const AGENTS = {
   music:{i:"🎹"}, web:{i:"🖥️"}, pr:{i:"📣"}, media:{i:"🎬"}, guide:{i:"📍"}, biz:{i:"🏢"}, arch:{i:"🏗️"}, dba:{i:"🗄️"}, it:{i:"🛠️"},
   pm:{i:"🧩"}, design:{i:"🎨"}, rel:{i:"💬",soon:true},
 };
-// Each agent's person avatar comes from the design system (ds/avatars.js), keyed by org role
+// Each agent's person avatar comes from the design system (ds/avatars.global.js), keyed by org role
 const ORG={ea:"assistant",book:"bookkeeper",sched:"scheduler",pi:"investigator",health:"health",text:"text-concierge",phil:"philosopher",sec:"security",comp:"compliance",bcoach:"business_coach",coach:"coach",career:"career",wealth:"financial",travel:"travel",shop:"shopping",clothier:"clothier",house:"home-manager",pets:"pets",move:"relocation",gift:"gifts",relmgr:"relationship-manager",events:"events",legal:"legal",music:"music",web:"webmaster",pr:"pr",media:"media",guide:"local-guide",biz:"business",arch:"as-architect",dba:"dba",it:"it",pm:"product",design:"designer",rel:"relationships"};
 
 const GOALS = [

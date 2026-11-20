@@ -1,4 +1,4 @@
-/* @should/design-system 0.6.0: generated from src/ by scripts/build.mjs; edit src/, not this file */
+/* @should/design-system 0.11.1: generated from src/ by scripts/build.mjs; edit src/, not this file */
 (() => {
 // Person avatars for agents: one consistent set, keyed by role key (org_roles.key).
 // Each avatar is a bust (skin tone, hairstyle, hair color, clothing tone) with a
@@ -39,6 +39,7 @@ const CUES = {
   monitor: "M3 5h18v11H3zM9 20h6M12 16v4",
   megaphone: "M3 10v4h4l8 5V5L7 10zM18 9c1.3 1.3 1.3 4.7 0 6",
   film: "M4 5h16v14H4zM8 5v14M16 5v14M4 9h4M4 15h4M16 9h4M16 15h4",
+  nib: "M12 3l6 8-6 10-6-10zM12 3v7.5M12 12m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0-3 0",
   pin: "M12 21s-6-6-6-11a6 6 0 0 1 12 0c0 5-6 11-6 11zM12 10m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0",
   building: "M5 20V4h10v16M15 9h4v11M8 8h4M8 12h4M8 16h4M3 20h18",
   ruler: "M4 20L20 4M4 20h6M4 20v-6M8 16l2 2M11 13l2 2M14 10l2 2",
@@ -81,6 +82,7 @@ const AVATARS = {
   "it":                   { name: "IT Guy",                 skin: 2, hair: 3, hairColor: 2, tone: 4, cue: "wrench" },
   "webmaster":            { name: "Webmaster",              skin: 6, hair: 2, hairColor: 1, tone: 1, cue: "monitor" },
   "product":              { name: "Product Manager",        skin: 4, hair: 6, hairColor: 2, tone: 3, cue: "puzzle" },
+  "designer":             { name: "Designer",               skin: 5, hair: 3, hairColor: 4, tone: 2, cue: "nib" },
   "dba":                  { name: "Database Administrator", skin: 1, hair: 6, hairColor: 2, tone: 4, cue: "database" },
   "text-concierge":       { name: "Text Concierge",         skin: 5, hair: 1, hairColor: 2, tone: 2, cue: "chat" },
   "philosopher":          { name: "Philosopher",            skin: 3, hair: 7, hairColor: 5, tone: 3, cue: "book" },

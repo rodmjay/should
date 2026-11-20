@@ -1,4 +1,4 @@
-/* @should/design-system 0.4.0: generated from src/ by scripts/build.mjs; edit src/, not this file */
+/* @should/design-system 0.11.1: generated from src/ by scripts/build.mjs; edit src/, not this file */
 /* Design system: Material Design 3, adapted.
    Token names follow M3's web tokens (--md-sys-*), so Material Web components,
    Tailwind and plain CSS read the same values. Colors are generated per brand
@@ -75,6 +75,19 @@
     --md-sys-motion-duration-short2: 0ms; --md-sys-motion-duration-short4: 0ms; --md-sys-motion-duration-medium2: 0ms;
     --md-sys-motion-duration-medium4: 0ms; --md-sys-motion-duration-long2: 0ms;
   }
+}
+
+/* Series colors for charts and splits (src/series.json) */
+:root {
+  --ds-series-1: light-dark(#00639b, #94ccff);
+  --ds-series-2: light-dark(#006a6a, #4cdada);
+  --ds-series-3: light-dark(#4fb8b6, #a6f2f0);
+  --ds-series-4: light-dark(#7d5800, #f8bd2a);
+  --ds-series-5: light-dark(#d9a531, #ffdea3);
+  --ds-series-6: light-dark(#386a20, #9cd67d);
+  --ds-series-7: light-dark(#7fb862, #c9eeb2);
+  --ds-series-8: light-dark(#b02f00, #ffb59c);
+  --ds-series-9: light-dark(#73796e, #a9ada1);
 }
 
 /* Brand: Should (seed #1f6f54, accent #e88a60) */
@@ -164,6 +177,15 @@
   --md-ref-typeface-brand: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
   --md-ref-typeface-plain: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
   --brand-corner: 1;
+  --md-sys-typescale-display-large-weight: 400;
+  --md-sys-typescale-display-medium-weight: 400;
+  --md-sys-typescale-display-small-weight: 400;
+  --md-sys-typescale-headline-large-weight: 400;
+  --md-sys-typescale-headline-medium-weight: 400;
+  --md-sys-typescale-headline-small-weight: 400;
+  --md-sys-typescale-title-large-weight: 400;
+  --md-sys-typescale-title-medium-weight: 500;
+  --md-sys-typescale-title-small-weight: 500;
 }
 
 /* Brand: Agentic Squared (seed #0b57d0, accent #e8a317) */
@@ -208,6 +230,50 @@
   --md-ref-typeface-brand: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
   --md-ref-typeface-plain: "Public Sans", "Helvetica Neue", Arial, sans-serif;
   --brand-corner: 0.5;
+}
+
+/* Brand: Privacy Squared (seed #0e5c6b, accent #b4532a) */
+[data-brand="privacy"] {
+  --md-sys-color-background: light-dark(#f9f9f9, #111414);
+  --md-sys-color-on-background: light-dark(#1a1c1c, #e2e2e2);
+  --md-sys-color-surface: light-dark(#f9f9f9, #111414);
+  --md-sys-color-surface-dim: light-dark(#d9dada, #111414);
+  --md-sys-color-surface-bright: light-dark(#f9f9f9, #373a3a);
+  --md-sys-color-surface-container-lowest: light-dark(#ffffff, #0c0f0f);
+  --md-sys-color-surface-container-low: light-dark(#f3f4f3, #1a1c1c);
+  --md-sys-color-surface-container: light-dark(#edeeee, #1e2020);
+  --md-sys-color-surface-container-high: light-dark(#e8e8e8, #282a2b);
+  --md-sys-color-surface-container-highest: light-dark(#e2e2e2, #333535);
+  --md-sys-color-on-surface: light-dark(#1a1c1c, #e2e2e2);
+  --md-sys-color-surface-variant: light-dark(#dce4e5, #404849);
+  --md-sys-color-on-surface-variant: light-dark(#404849, #c0c8c9);
+  --md-sys-color-inverse-surface: light-dark(#2f3131, #e2e2e2);
+  --md-sys-color-inverse-on-surface: light-dark(#f0f1f1, #2f3131);
+  --md-sys-color-outline: light-dark(#707979, #8a9293);
+  --md-sys-color-outline-variant: light-dark(#c0c8c9, #404849);
+  --md-sys-color-shadow: light-dark(#000000, #000000);
+  --md-sys-color-scrim: light-dark(#000000, #000000);
+  --md-sys-color-surface-tint: light-dark(#0e5c6b, #7fcfdd);
+  --md-sys-color-primary: light-dark(#0e5c6b, #7fcfdd);
+  --md-sys-color-on-primary: light-dark(#ffffff, #003640);
+  --md-sys-color-primary-container: light-dark(#aaedff, #004e5c);
+  --md-sys-color-on-primary-container: light-dark(#004e5c, #aaedff);
+  --md-sys-color-inverse-primary: light-dark(#84d2e6, #006879);
+  --md-sys-color-secondary: light-dark(#4b6269, #b2cbd2);
+  --md-sys-color-on-secondary: light-dark(#ffffff, #1d343a);
+  --md-sys-color-secondary-container: light-dark(#cee7ee, #334a51);
+  --md-sys-color-on-secondary-container: light-dark(#334a51, #cee7ee);
+  --md-sys-color-tertiary: light-dark(#9e421a, #ffb599);
+  --md-sys-color-on-tertiary: light-dark(#ffffff, #5a1c00);
+  --md-sys-color-tertiary-container: light-dark(#ffdbce, #7e2c03);
+  --md-sys-color-on-tertiary-container: light-dark(#7e2c03, #ffdbce);
+  --md-sys-color-error: light-dark(#ba1a1a, #ffb4ab);
+  --md-sys-color-on-error: light-dark(#ffffff, #690005);
+  --md-sys-color-error-container: light-dark(#ffdad6, #93000a);
+  --md-sys-color-on-error-container: light-dark(#93000a, #ffdad6);
+  --md-ref-typeface-brand: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --md-ref-typeface-plain: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --brand-corner: 0.75;
 }
 
 /* Derived tokens. A var() resolves where it's declared, so these are

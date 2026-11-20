@@ -1,4 +1,5 @@
-/* @should/design-system 0.5.0: generated from src/ by scripts/build.mjs; edit src/, not this file */
+/* @should/design-system 0.11.1: generated from src/ by scripts/build.mjs; edit src/, not this file */
+(() => {
 // English and Spanish for every site (one kit, same rules everywhere).
 // Our own dictionaries, never a browser or widget translation: pages set
 // translate="no" and <meta name="google" content="notranslate">.
@@ -14,9 +15,9 @@
 //   import { pickLang, applyLang, translate, langMenu } from "@should/design-system/i18n.js";
 // Static pages without modules can load dist/i18n.global.js, which sets window.DSI18n.
 
-export const SUPPORTED = ["en", "es"];
-export const HTML_LANG = { en: "en", es: "es-419" };
-export const NAMES = { en: "English", es: "Español" };
+const SUPPORTED = ["en", "es"];
+const HTML_LANG = { en: "en", es: "es-419" };
+const NAMES = { en: "English", es: "Español" };
 const KEY = "ds-lang";
 
 // Spanish-speaking time zones (Latin America, Spain); a hint only, the menu always wins
@@ -38,7 +39,7 @@ function stored() {
   try { return localStorage.getItem(KEY); } catch (e) { return null; }
 }
 
-export function pickLang({ fallback = "en", url = globalThis.location, doc = globalThis.document, nav = globalThis.navigator } = {}) {
+function pickLang({ fallback = "en", url = globalThis.location, doc = globalThis.document, nav = globalThis.navigator } = {}) {
   if (url) {
     const seg = url.pathname.split("/").map(short).find((s) => SUPPORTED.includes(s));
     const q = ok(short(new URLSearchParams(url.search).get("lang")));
@@ -55,7 +56,7 @@ export function pickLang({ fallback = "en", url = globalThis.location, doc = glo
 }
 
 // Set the document language and keep browsers from machine-translating over our copy
-export function applyLang(lang, doc = globalThis.document) {
+function applyLang(lang, doc = globalThis.document) {
   const root = doc.documentElement;
   root.lang = HTML_LANG[lang] || lang;
   root.setAttribute("translate", "no");
@@ -63,7 +64,7 @@ export function applyLang(lang, doc = globalThis.document) {
 }
 
 // Look up "a.b.c" in a dictionary; {name} placeholders are filled from vars
-export function t(dict, key, vars) {
+function t(dict, key, vars) {
   let v = key.split(".").reduce((o, k) => (o == null ? o : o[k]), dict);
   if (v == null) { console.warn(`i18n: missing "${key}"`); return key; }
   if (typeof v === "string" && vars) v = v.replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m));
@@ -72,7 +73,7 @@ export function t(dict, key, vars) {
 
 // Fill the page: data-i18n (text), data-i18n-html (trusted markup from our own dictionary),
 // data-i18n-attr="aria-label:key;content:key"
-export function translate(dict, root = globalThis.document) {
+function translate(dict, root = globalThis.document) {
   root.querySelectorAll("[data-i18n]").forEach((el) => { el.textContent = t(dict, el.dataset.i18n); });
   root.querySelectorAll("[data-i18n-html]").forEach((el) => { el.innerHTML = t(dict, el.dataset.i18nHtml); });
   root.querySelectorAll("[data-i18n-attr]").forEach((el) => {
@@ -85,7 +86,7 @@ export function translate(dict, root = globalThis.document) {
 
 // The language menu: a native <select>, so it works by keyboard and screen reader everywhere.
 // onChange(lang) re-renders the page; the choice is remembered and put in the URL (?lang=).
-export function langMenu(container, { current, label = "Language", onChange } = {}) {
+function langMenu(container, { current, label = "Language", onChange } = {}) {
   container.classList.add("ds-lang");
   container.innerHTML = `<label><span class="ds-lang-label">${label}</span><select aria-label="${label}">${SUPPORTED
     .map((l) => `<option value="${l}" lang="${HTML_LANG[l]}"${l === current ? " selected" : ""}>${NAMES[l]}</option>`)
@@ -106,7 +107,7 @@ export function langMenu(container, { current, label = "Language", onChange } = 
 
 // Compare two dictionaries: every key, array length and value type must match,
 // and no string may be empty. Returns a list of problems (empty means OK).
-export function compareDicts(a, b, names = ["en", "es"]) {
+function compareDicts(a, b, names = ["en", "es"]) {
   const out = [];
   const walk = (x, y, path) => {
     const tx = Array.isArray(x) ? "array" : typeof x, ty = Array.isArray(y) ? "array" : typeof y;
@@ -126,3 +127,6 @@ export function compareDicts(a, b, names = ["en", "es"]) {
   walk(a, b, "");
   return out;
 }
+
+window.DSI18n = { SUPPORTED, HTML_LANG, NAMES, pickLang, applyLang, t, translate, langMenu, compareDicts };
+})();

@@ -7,7 +7,7 @@ import { readFileSync } from "node:fs";
 import { createContext, runInContext } from "node:vm";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
-import { compareDicts, t } from "./i18n.mjs";
+import { compareDicts, t } from "./i18n.js";
 
 const args = process.argv.slice(2);
 const take = (flag) => args.flatMap((a, i) => (a === flag ? [args[i + 1]] : []));

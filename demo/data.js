@@ -93,6 +93,20 @@ window.DEMO = {
     touch: [['Alex Kim', 'lunch today', 'Talked 2 weeks ago'], ['Jordan Lee', 'Thanksgiving plans', 'Waiting on their reply'], ['Chris Moore', 'college friend', '3 months: a hello is drafted']]
   },
 
+  // Data brokers (Investigator): made-up site names; same states and labels as the real page
+  brokers: {
+    asOf: 'Nov 19', next: 'Nov 26',
+    needs: [['FindAnyone', 'Confirm with a short phone call from you'], ['PeopleIndex', 'Click the link in their confirmation email'], ['AdList Partners', 'Answer the note on your request']],
+    sites: [
+      ['PeopleIndex', 'needs', 'Nov 18'], ['FindAnyone', 'needs', 'Nov 17'], ['AdList Partners', 'needs', 'Nov 16'],
+      ['NameLookup', 'filed', 'Nov 18'], ['AddressTrail', 'filed', 'Nov 15'], ['RecordHub', 'relisted', 'Nov 18'], ['PhoneTrace', 'checking', 'Nov 19'],
+      ['TrueRecords', 'notlisted', 'Nov 17'], ['OpenDirectory', 'confirmed', 'Nov 12'], ['NeighborList', 'confirmed', 'Nov 10'], ['BackgroundNow', 'confirmed', 'Nov 9'],
+      ['MarketMail', 'confirmed', 'Nov 7'], ['ShopperData', 'confirmed', 'Nov 6'], ['ListBroker Co', 'confirmed', 'Nov 6']
+    ],
+    feed: [['Nov 19', 'Checking PhoneTrace', ''], ['Nov 18', 'RecordHub listed you again; filed again', 'RH-20931'], ['Nov 18', 'Filed an opt-out with NameLookup', ''], ['Nov 17', 'Re-checked TrueRecords: not listed', ''], ['Nov 12', 'OpenDirectory confirmed your opt-out', 'OD-55120']],
+    rechecks: [['TrueRecords', 'Feb 17'], ['OpenDirectory', 'Feb 12'], ['NeighborList', 'Feb 10']]
+  },
+
   work: {
     tiles: [
       { label: 'New job leads', value: '4', sub: '2 strong fits' },

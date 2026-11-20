@@ -17,7 +17,7 @@
     { key: 'money', name: 'Money', icon: 'bookkeeper', tile: 'money', tabs: [['money', 'overview', 'today', 'var(--pen)'], ['forecast', 'cash forecast', 'financial', 'var(--r-bookkeeper)'], ['bookkeeper', 'accountant', 'bookkeeper', 'var(--r-bookkeeper)'], ['financial', 'financial', 'financial', 'var(--r-financial)'], ['shopping', 'shopping', 'shopping', 'var(--r-shopping)'], ['phone', 'phone', 'it', 'var(--r-it)'], ['retirement', 'retirement', 'financial', 'var(--r-financial)'], ['forex', 'forex (paper)', 'wealth', 'var(--r-financial)']] },
     { key: 'home-health', name: 'Home & Health', icon: 'home-manager', tile: 'home', tabs: [['home', 'overview', 'today', 'var(--pen)'], ['chores', 'chores', 'home-manager', 'var(--r-home-manager)'], ['health', 'health', 'health', 'var(--r-health)']] },
     { key: 'plans', name: 'Plans', icon: 'scheduler', tile: 'plans', tabs: [['local-guide', 'local guide', 'local-guide', 'var(--r-local-guide)'], ['scheduler', 'scheduler', 'scheduler', 'var(--r-scheduler)'], ['travel', 'travel', 'travel', 'var(--r-travel)'], ['media', 'movies', 'media', 'var(--r-media)']] },
-    { key: 'people', name: 'People', icon: 'people', tile: 'people', tabs: [['people', 'overview', 'today', 'var(--pen)'], ['relationship-manager', 'relationships', 'relationship-manager', 'var(--r-relationship-manager)'], ['gifts', 'gifts', 'gifts', 'var(--r-gifts)']] },
+    { key: 'people', name: 'People', icon: 'people', tile: 'people', tabs: [['people', 'overview', 'today', 'var(--pen)'], ['relationship-manager', 'relationships', 'relationship-manager', 'var(--r-relationship-manager)'], ['gifts', 'gifts', 'gifts', 'var(--r-gifts)'], ['brokers', 'data brokers', 'investigator', 'var(--r-investigator)']] },
     { key: 'work', name: 'Work', icon: 'career', tile: 'work', tabs: [['work', 'overview', 'today', 'var(--pen)'], ['career', 'career', 'career', 'var(--r-career)'], ['legal', 'legal', 'legal', 'var(--r-legal)']] }
   ];
   var CO_TABS = [['', 'overview', 'business'], ['cap', 'cap table', 'financial'], ['compliance', 'compliance', 'legal'], ['money', 'accounts & money', 'bookkeeper'], ['tasks', 'tasks', 'check']];
@@ -214,6 +214,24 @@
       return hero('Family and friends, from Relationship Manager and Gift Concierge.', 'people') + tiles(X.tiles) +
         '<div class="cols2">' + card('Birthdays coming', rows(X.birthdays, function (b) { return '<b>' + b[0] + '</b><span class="muted">' + b[1] + ' · ' + b[2] + '</span><span class="small">' + b[3] + '</span>'; })) +
         card('Stay in touch', rows(X.touch, function (t) { return '<b>' + t[0] + '</b><span>' + t[1] + '</span><span class="muted small">' + t[2] + '</span>'; })) + '</div>';
+    },
+    brokers: function () {
+      var X = D.brokers, n = { off: 0, prog: 0, need: 0 };
+      var G = { confirmed: 'off', notlisted: 'off', needs: 'need' }, STEP = { checking: 0, found: 1, relisted: 1, filed: 2, needs: 2, confirmed: 3, notlisted: 4 };
+      var LBL = { checking: ['Checking', ''], filed: ['Opt-out filed', ''], relisted: ['Listed again, re-filed', 'watch'], needs: ['Needs you', 'watch'], confirmed: ['Opt-out confirmed', 'ok'], notlisted: ['Re-checked: not listed', 'good'] };
+      X.sites.forEach(function (s) { n[G[s[1]] || 'prog']++; });
+      var bar = '<div class="br-bar" aria-hidden="true"><span class="off" style="flex-grow:' + n.off + '"></span><span class="prog" style="flex-grow:' + n.prog + '"></span><span class="need" style="flex-grow:' + n.need + '"></span></div>';
+      var tilesHtml = '<ul class="br-tiles">' + X.sites.map(function (s) {
+        var tr = ''; for (var i = 0; i < 4; i++) tr += '<i class="' + (i < STEP[s[1]] ? 'on' : '') + '"></i>';
+        return '<li class="' + (G[s[1]] || 'prog') + '"><span class="br-logo" aria-hidden="true">' + s[0].replace(/[^A-Z]/g, '').slice(0, 2) + '</span><b>' + s[0] + '</b><span class="br-track">' + tr + '</span>' + pill(LBL[s[1]][0], LBL[s[1]][1]) + '</li>';
+      }).join('') + '</ul>';
+      return hero('Investigator', 'Data brokers', 'Where you’re listed on people-search and marketing sites, what’s filed, and the few steps only you can do. Investigator files and re-checks.') +
+        tiles([{ label: 'Opt-outs confirmed', value: n.off + ' of ' + X.sites.length, sub: 'as of ' + X.asOf }, { label: 'In progress', value: '' + n.prog, sub: 'filed or checking' }, { label: 'Needs you', value: '' + n.need, sub: 'a few minutes each' }, { label: 'Next check', value: X.next, sub: 're-checks every 3 months' }]) +
+        card('At a glance', bar + '<p class="small muted">' + n.off + ' confirmed · ' + n.prog + ' in progress · ' + n.need + ' need you</p>') +
+        card('Needs you', rows(X.needs, function (x) { return '<b>' + x[0] + '</b><span>' + x[1] + '</span><a class="small" href="#/brokers">Open ' + x[0] + '</a>'; }), '<span class="muted small">one step each</span>') +
+        '<div class="cols2">' + card('Your sites', tilesHtml) +
+        card('What we’ve done', rows(X.feed, function (f) { return '<span class="muted small">' + f[0] + '</span><span>' + f[1] + '</span>' + (f[2] ? '<span class="small muted">Confirmation ' + f[2] + '</span>' : ''); })) + '</div>' +
+        card('Re-checks due', rows(X.rechecks, function (r) { return '<b>' + r[0] + '</b><span class="muted">' + r[1] + '</span>'; }), '<span class="muted small">confirmation references only, never copies of their pages</span>');
     },
     work: function () {
       var X = D.work, tone = { strong: 'ok', maybe: 'watch', skip: 'act' };

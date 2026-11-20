@@ -662,8 +662,10 @@ const LEADS=["ea"]; // your go-to agent; the staff reports to it. bg:true = back
 const COACHES=["coach","bcoach","rel"]; // "coach" is reserved for these long-term guides (Rod 11/16): grouped and shown above the staff, reporting to you
 
 /* ---------- language ---------- */
-const I=window.DSI18n, DICT=window.SHOULD_I18N;
-let lang=I.pickLang(), L=DICT[lang];
+const I=window.DSI18n, DICT=window.SHOULD_I18N||{};
+// A dictionary that failed to load falls back to English (or whichever one did load), so a network blip never blanks the page
+const have=l=>DICT[l]?l:DICT.en?"en":Object.keys(DICT)[0];
+let lang=have(I.pickLang()), L=DICT[lang];
 const fmt=(s,v)=>String(s).replace(/\{(\w+)\}/g,(m,k)=>k in v?v[k]:m);
 const agent=k=>({...AGENTS[k],...L.agents[k]});
 const goalText=id=>L.goals[id];
@@ -929,7 +931,7 @@ function openAgent(k){
 function closeSheet(){$("#shade").classList.remove("on");$("#sheet").classList.remove("on");document.body.classList.remove("locked")}
 
 function setLang(l){
-  lang=l; L=DICT[l]; I.applyLang(l);
+  lang=have(l); L=DICT[lang]; I.applyLang(lang);
   renderStatic(); renderStaff(); renderGoal(current.id,current.si); closeSheet();
   menu.set(l,L.meta.lang_label);
 }

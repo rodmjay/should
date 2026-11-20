@@ -1,4 +1,4 @@
-/* @should/design-system 0.14.0: generated from src/ by scripts/build.mjs; edit src/, not this file */
+/* @should/design-system 0.14.2: generated from src/ by scripts/build.mjs; edit src/, not this file */
 (() => {
 // Charts: plain SVG, themed by the M3 roles and the series colors, so every brand, light and dark, comes free.
 // No library: the same file works on static pages, the portal and TV (Svelte), and Next.js (client component).
@@ -6,6 +6,7 @@
 //   import { mount } from "@should/design-system/charts.js";
 //   mount(el, { type: "line", labels: ["Mon", "Tue"], series: [{ name: "Opus", values: [3, 5] }], unit: "$" });
 //   types: line, area, bar (grouped | stacked, horizontal), donut, sparkline, gauge, heatmap, calendar
+//   null in a line or area means no data (a gap, not zero); calendar takes from/to to show the whole window
 //   HTML helpers: statTile(), barTable()  ·  pure SVG strings: svg(spec, width)
 //
 // Rules this follows (design/STANDARDS.md, the dataviz method): series colors in fixed order, never cycled, and a
@@ -116,11 +117,18 @@ function cartesian(spec, W) {
       });
     } else {
       series.forEach((r, k) => {
-        const pts = r.values.map((v, i) => [xAt(i), yAt(v || 0)]);
-        const d = pts.map((p, i) => (i ? "L" : "M") + p[0].toFixed(1) + "," + p[1].toFixed(1)).join("");
-        if (spec.type === "area") g += `<path d="${d}L${pts.at(-1)[0]},${pad.t + ih}L${pts[0][0]},${pad.t + ih}Z" fill="${seriesColor(r, k)}" fill-opacity="${series.length > 1 ? 0.14 : 0.2}"/>`;
-        g += `<path d="${d}" fill="none" stroke="${seriesColor(r, k)}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
-        const end = pts.at(-1);
+        // null means "no data": the line breaks there instead of dropping to zero
+        const runs = []; let run = [];
+        r.values.forEach((v, i) => { if (v == null) { if (run.length) runs.push(run); run = []; } else run.push([xAt(i), yAt(v)]); });
+        if (run.length) runs.push(run);
+        if (!runs.length) return;
+        runs.forEach((pts) => {
+          const d = pts.map((p, i) => (i ? "L" : "M") + p[0].toFixed(1) + "," + p[1].toFixed(1)).join("");
+          if (spec.type === "area") g += `<path d="${d}L${pts.at(-1)[0]},${pad.t + ih}L${pts[0][0]},${pad.t + ih}Z" fill="${seriesColor(r, k)}" fill-opacity="${series.length > 1 ? 0.14 : 0.2}"/>`;
+          g += pts.length > 1 ? `<path d="${d}" fill="none" stroke="${seriesColor(r, k)}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`
+            : `<circle cx="${pts[0][0]}" cy="${pts[0][1]}" r="4" fill="${seriesColor(r, k)}"/>`;
+        });
+        const end = runs.at(-1).at(-1);
         g += `<circle cx="${end[0]}" cy="${end[1]}" r="4" fill="${seriesColor(r, k)}" stroke="var(--md-sys-color-surface)" stroke-width="2"/>`;
         if (direct) g += `<text x="${end[0] + 8}" y="${end[1] + 4}" font-size="12" font-family="var(--md-ref-typeface-plain)" fill="var(--md-sys-color-on-surface)">${esc(r.name)}</text>`;
       });
@@ -219,14 +227,19 @@ function heatmap(spec, W) {
 }
 function calendar(spec, W) {
   // days: [{ date: "2026-11-19", value }] → weeks as columns, Monday first
-  const days = [...(spec.days || [])].sort((a, b) => a.date.localeCompare(b.date));
+  let days = [...(spec.days || [])].sort((a, b) => a.date.localeCompare(b.date));
+  if (spec.from || spec.to) {  // fill the whole window; days without data show as empty cells
+    const have = new Map(days.map((d) => [d.date, d.value])), iso = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+    const a = new Date((spec.from || days[0]?.date) + "T00:00:00"), b = new Date((spec.to || days.at(-1)?.date) + "T00:00:00");
+    days = []; for (let d = new Date(a); d <= b; d.setDate(d.getDate() + 1)) days.push({ date: iso(d), value: have.has(iso(d)) ? have.get(iso(d)) : null });
+  }
   if (!days.length) return { svg: empty(W, 120, S(spec)), table: "" };
   const lang = langOf(spec) === "es" ? "es-419" : "en-US";
   const start = new Date(days[0].date + "T00:00:00"), dow = (d) => (d.getDay() + 6) % 7;
   const byWeek = new Map();
   const monday = new Date(start); monday.setDate(start.getDate() - dow(start));
   days.forEach((d) => { const dt = new Date(d.date + "T00:00:00"), wk = Math.floor(Math.round((dt - monday) / 864e5) / 7); byWeek.set(wk, [...(byWeek.get(wk) || []), { ...d, dow: dow(dt) }]); });  // round: DST days are 23 or 25 hours
-  const weeks = Math.max(...byWeek.keys()) + 1, max = Math.max(1, ...days.map((d) => d.value || 0));
+  const weeks = Math.max(...byWeek.keys()) + 1, max = Math.max(1, ...days.map((d) => d.value || 0));  // null days stay empty
   const padL = 28, padT = 4, cell = Math.max(10, Math.min(18, (W - padL) / weeks)), H = padT + 7 * cell + 4;
   const dayNames = [...Array(7)].map((_, i) => new Intl.DateTimeFormat(lang, { weekday: "narrow" }).format(new Date(2024, 0, 1 + i)));
   let g = [0, 2, 4].map((i) => `<text x="${padL - 6}" y="${padT + i * cell + cell / 2 + 4}" text-anchor="end" font-size="10" ${textAttrs}>${dayNames[i]}</text>`).join("");
@@ -251,7 +264,7 @@ function statTile(o) {
 function barTable(o) {
   // { rows: [{ label, value }], unit, max? } → a table with an inline bar per row
   const rows = o.rows || [], max = o.max || Math.max(1, ...rows.map((r) => r.value || 0));
-  return `<table class="ds-table ds-bar-table"><tbody>${rows.map((r) => `<tr><td>${esc(r.label)}</td><td class="bar"><span style="--w:${(((r.value || 0) / max) * 100).toFixed(1)}%"></span></td><td class="num">${esc(fmt(r.value, o))}</td></tr>`).join("")}</tbody></table>`;
+  return `<table class="ds-table ds-bar-table"><tbody>${rows.map((r) => `<tr><td>${esc(r.label)}</td><td class="ds-bar-cell"><span style="--w:${(((r.value || 0) / max) * 100).toFixed(1)}%"></span></td><td class="num">${esc(fmt(r.value, o))}</td></tr>`).join("")}</tbody></table>`;
 }
 
 // ---------- render and mount ----------

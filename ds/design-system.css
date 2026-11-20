@@ -1,4 +1,4 @@
-/* @should/design-system 0.14.0: generated from src/ by scripts/build.mjs; edit src/, not this file */
+/* @should/design-system 0.14.2: generated from src/ by scripts/build.mjs; edit src/, not this file */
 /* Design system: Material Design 3, adapted.
    Token names follow M3's web tokens (--md-sys-*), so Material Web components,
    Tailwind and plain CSS read the same values. Colors are generated per brand
@@ -652,5 +652,5 @@
 .ds-stat-delta { font-weight: 600; font-variant-numeric: tabular-nums; }
 .ds-stat-delta.good { color: var(--success); }
 .ds-stat-delta.bad { color: var(--md-sys-color-error); }
-.ds-bar-table td.bar { width: 50%; }
-.ds-bar-table td.bar span { display: block; width: var(--w); min-width: 2px; height: 0.625rem; border-radius: 0 4px 4px 0; background: var(--md-sys-color-primary); }
+.ds-bar-table td.ds-bar-cell { width: 50%; }
+.ds-bar-table td.ds-bar-cell span { display: block; width: var(--w); min-width: 2px; height: 0.625rem; border-radius: 0 4px 4px 0; background: var(--md-sys-color-primary); }

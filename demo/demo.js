@@ -103,10 +103,10 @@
     else if (co) tabs = CO_TABS.map(function (t) { return ['#/c/' + co.slug + (t[0] ? '/' + t[0] : ''), t[1], t[2], co.color, r.sec === t[0]]; });
     else tabs = g.tabs.map(function (t) { return [hrefOf(t[0]), t[1], t[2], t[3], r.key === t[0], t[0] === 'bookkeeper', t[0]]; });
     $('#seg').innerHTML = '<div class="segin">' + tabs.map(function (t) {
-      var cls = (t[4] ? 'on ' : '') + (t[5] ? 'act' : '');
+      var cls = (t[4] ? 'on ' : '') + (t[5] && !(D.needs || {})[t[6]] ? 'act ' : '') + (t[6] ? 'ds-nav-inline' : '');
       return '<a href="' + t[0] + '" style="--c:' + t[3] + '"' + (cls.trim() ? ' class="' + cls.trim() + '"' : '') + (t[4] ? ' aria-current="page"' : '') + (t[6] ? ' data-nav="' + t[6] + '"' : '') + '><span class="ds-nav-icon">' + face(t[2], 20) + '</span><span>' + t[1] + '</span></a>';
     }).join('') + '</div>';
-    // Needs-you badges (design system v0.15, Rod 11/20): made-up counts from data.js
+    // Needs-you badges (design system v0.16.1, Rod 11/20): made-up counts from data.js
     if (window.DSBadges) DSBadges.navBadges($('#seg'), D.needs || {});
   }
   function spark(pts) {

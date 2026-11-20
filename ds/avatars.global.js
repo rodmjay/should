@@ -1,16 +1,5 @@
-/* @should/design-system 0.16.0: generated from src/ by scripts/build.mjs; edit src/, not this file */
 (() => {
-// Person avatars for agents: one consistent set, keyed by role key (org_roles.key).
-// Each avatar is a bust (skin tone, hairstyle, hair color, clothing tone) with a
-// small badge showing the role's cue. Inline SVG drawn with design-system tokens,
-// so it follows the brand and light/dark. People are neutral: no role is mapped
-// to a gender, and nothing is a photo, a real face or a robot head.
-//
-//   import { avatarSVG } from "@should/design-system/avatars.js";
-//   el.innerHTML = avatarSVG("coach", { size: 48, label: "Life Coach" });
-// Static pages without modules can load dist/avatars.global.js, which sets window.DSAvatars.
 
-// Role cues, drawn on a 24-unit grid as strokes
 const CUES = {
   headset: "M5 13a7 7 0 0 1 14 0M5 13v3h3v-4H5M19 13v3h-3v-4h3M16 17c0 2-2 3-4 3",
   clipboard: "M8 4h8v3H8zM6 6H5v15h14V6h-1M9 13l2 2 4-4",
@@ -53,7 +42,6 @@ const CUES = {
   list: "M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01",
 };
 
-// skin 1-6, hair style 1-7, hair color 1-5, clothing tone 1-4, cue
 const AVATARS = {
   "assistant":            { name: "Executive Assistant",    skin: 3, hair: 2, hairColor: 1, tone: 1, cue: "headset" },
   "coach":                { name: "Life Coach",             skin: 5, hair: 3, hairColor: 1, tone: 2, cue: "flag" },
@@ -96,7 +84,6 @@ const AVATARS = {
   "as-devops":            { name: "DevOps Engineer",        skin: 2, hair: 4, hairColor: 3, tone: 3, cue: "cloud" },
 };
 
-// Clothing and background pairs, from the M3 roles
 const TONES = {
   1: { bg: "var(--md-sys-color-primary-container)", cloth: "var(--md-sys-color-primary)" },
   2: { bg: "var(--md-sys-color-secondary-container)", cloth: "var(--md-sys-color-secondary)" },
@@ -104,8 +91,6 @@ const TONES = {
   4: { bg: "var(--md-sys-color-surface-container-highest)", cloth: "var(--md-sys-color-on-surface-variant)" },
 };
 
-// Hair drawn on a 64-unit canvas, head centred at (32, 27), radius 11.
-// back: behind the head, front: over it.
 const HAIR = {
   1: { front: "M21 26c0-9 5-13 11-13s11 4 11 13c-2-5-6-7-11-7s-9 2-11 7z" },                                   // short crop
   2: { front: "M20.5 28c-1.5-12 7-16 13-15.5 7 .6 11 6 9.5 15-1.5-6-4-8.5-9-9-5 2.5-10 3.5-13.5 9.5z" },   // side part

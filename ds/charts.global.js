@@ -1,18 +1,4 @@
-/* @should/design-system 0.16.0: generated from src/ by scripts/build.mjs; edit src/, not this file */
 (() => {
-// Charts: plain SVG, themed by the M3 roles and the series colors, so every brand, light and dark, comes free.
-// No library: the same file works on static pages, the portal and TV (Svelte), and Next.js (client component).
-//
-//   import { mount } from "@should/design-system/charts.js";
-//   mount(el, { type: "line", labels: ["Mon", "Tue"], series: [{ name: "Opus", values: [3, 5] }], unit: "$" });
-//   types: line, area, bar (grouped | stacked, horizontal), donut, sparkline, gauge, heatmap, calendar
-//   null in a line or area means no data (a gap, not zero); calendar takes from/to to show the whole window
-//   HTML helpers: statTile(), barTable()  ·  pure SVG strings: svg(spec, width)
-//
-// Rules this follows (design/STANDARDS.md, the dataviz method): series colors in fixed order, never cycled, and a
-// 9th series folds into "Other"; one y-axis only; a legend for 2+ series plus direct labels when there are 4 or
-// fewer; text in the text roles, never a series color; 2px lines, 4px rounded bar ends, 2px gaps between fills;
-// a crosshair or per-mark tooltip on hover; a "Show table" view, so nothing is color alone; EN and ES.
 
 const STRINGS = {
   en: { table: "Show table", hide: "Hide table", other: "Other", total: "Total", of: "of", none: "No data yet" },
@@ -42,7 +28,6 @@ function niceTicks(max, count = 4) {
   return ticks;
 }
 
-// A 9th+ series folds into "Other" (summed), never a new hue
 function foldSeries(series, s) {
   if (series.length <= MAX_SERIES) return series;
   const keep = series.slice(0, MAX_SERIES - 1), rest = series.slice(MAX_SERIES - 1);
@@ -61,7 +46,6 @@ const roundRight = (x, y, w, h, r) => {
   return `M${x},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + r}V${y + h - r}Q${x + w},${y + h} ${x + w - r},${y + h}H${x}Z`;
 };
 
-// ---------- cartesian: line, area, bar ----------
 function cartesian(spec, W) {
   const s = S(spec), H = spec.height || 240, horizontal = spec.type === "bar" && spec.horizontal;
   const series = foldSeries(spec.series || [], s), labels = spec.labels || [];
@@ -117,7 +101,6 @@ function cartesian(spec, W) {
       });
     } else {
       series.forEach((r, k) => {
-        // null means "no data": the line breaks there instead of dropping to zero
         const runs = []; let run = [];
         r.values.forEach((v, i) => { if (v == null) { if (run.length) runs.push(run); run = []; } else run.push([xAt(i), yAt(v)]); });
         if (run.length) runs.push(run);
@@ -148,7 +131,6 @@ function legend(items) {
 }
 const empty = (W, H, s) => `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img"><text x="${W / 2}" y="${H / 2}" text-anchor="middle" font-size="13" ${textAttrs}>${esc(s.none)}</text></svg>`;
 
-// ---------- donut ----------
 function donut(spec, W) {
   const s = S(spec);
   let items = (spec.items || []).filter((x) => x.value > 0);
@@ -174,7 +156,6 @@ function donut(spec, W) {
   return { svg, table, legend: legend(items.map((x) => ({ ...x, name: `${x.label} · ${fmt(x.value, spec)}` }))) };
 }
 
-// ---------- sparkline ----------
 function sparkline(values, o = {}) {
   const W = o.width || 96, H = o.height || 28, v = values || [];
   if (v.length < 2) return "";
@@ -188,7 +169,6 @@ function sparkline(values, o = {}) {
     `<circle cx="${end[0]}" cy="${end[1]}" r="3" fill="${c}"/></svg>`;
 }
 
-// ---------- gauge (one value against a target or a limit) ----------
 function gauge(spec, W) {
   const s = S(spec), size = Math.min(W, spec.height ? spec.height * 2 : 240), H = size / 2 + 28;
   const max = spec.max || 100, frac = Math.max(0, Math.min(1, (spec.value || 0) / max));
@@ -204,7 +184,6 @@ function gauge(spec, W) {
   return { svg: `<svg viewBox="0 0 ${size} ${H}" width="${size}" height="${H}" role="img" aria-label="${esc(spec.title ? spec.title + ": " : "")}${esc(label)}">${g}</svg>`, table: "" };
 }
 
-// ---------- heatmap and calendar (sequential: one hue, the brand primary, light to dark) ----------
 const STEPS = [0, 18, 38, 62, 88];
 const seqFill = (f) => (f == null ? "var(--md-sys-color-surface-container)" : `color-mix(in oklab, var(--md-sys-color-primary) ${STEPS[Math.min(4, 1 + Math.floor(f * 3.999))]}%, var(--md-sys-color-surface-container-low))`);
 function heatmap(spec, W) {
@@ -226,7 +205,6 @@ function heatmap(spec, W) {
   return { svg: `<svg viewBox="0 0 ${w} ${H}" width="${w}" height="${H}" role="img" aria-label="${esc(spec.title || "")}">${g}</svg>`, table: "", legend: scaleLegend(spec, max) };
 }
 function calendar(spec, W) {
-  // days: [{ date: "2026-11-19", value }] → weeks as columns, Monday first
   let days = [...(spec.days || [])].sort((a, b) => a.date.localeCompare(b.date));
   if (spec.from || spec.to) {  // fill the whole window; days without data show as empty cells
     const have = new Map(days.map((d) => [d.date, d.value])), iso = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
@@ -252,9 +230,7 @@ function calendar(spec, W) {
 }
 const scaleLegend = (spec, max) => `<div class="ds-legend ds-legend-scale"><span>${esc(fmt(0, spec))}</span>${STEPS.slice(1).map((_, i) => `<span class="ds-legend-key" style="background:${seqFill((i + 0.5) / 4)}"></span>`).join("")}<span>${esc(fmt(max, spec))}</span></div>`;
 
-// ---------- HTML helpers ----------
 function statTile(o) {
-  // { label, value, unit, delta (number, e.g. 0.12 = +12%), goodWhen: "up" | "down", trend: [numbers] }
   const s = S(o), d = o.delta, good = d == null || d === 0 ? null : (d > 0) === ((o.goodWhen || "up") === "up");
   const arrow = d == null ? "" : d > 0 ? "▲" : d < 0 ? "▼" : "–";
   const pct = d == null ? "" : `${arrow} ${fmt(Math.abs(d * 100), { ...o, unit: "", decimals: 0 })}%`;
@@ -262,12 +238,10 @@ function statTile(o) {
     `<span class="ds-stat-foot">${pct ? `<span class="ds-stat-delta ${good == null ? "" : good ? "good" : "bad"}">${esc(pct)}</span>` : ""}${o.caption ? `<span>${esc(o.caption)}</span>` : ""}${o.trend ? sparkline(o.trend) : ""}</span></div>`;
 }
 function barTable(o) {
-  // { rows: [{ label, value }], unit, max? } → a table with an inline bar per row
   const rows = o.rows || [], max = o.max || Math.max(1, ...rows.map((r) => r.value || 0));
   return `<table class="ds-table ds-bar-table"><tbody>${rows.map((r) => `<tr><td>${esc(r.label)}</td><td class="ds-bar-cell"><span style="--w:${(((r.value || 0) / max) * 100).toFixed(1)}%"></span></td><td class="num">${esc(fmt(r.value, o))}</td></tr>`).join("")}</tbody></table>`;
 }
 
-// ---------- render and mount ----------
 function svg(spec, width = 600) {
   const t = spec.type;
   return (t === "donut" ? donut : t === "gauge" ? gauge : t === "heatmap" ? heatmap : t === "calendar" ? calendar : cartesian)(spec, width);

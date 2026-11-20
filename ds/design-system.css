@@ -1,19 +1,11 @@
-/* @should/design-system 0.16.0: generated from src/ by scripts/build.mjs; edit src/, not this file */
-/* Design system: Material Design 3, adapted.
-   Token names follow M3's web tokens (--md-sys-*), so Material Web components,
-   Tailwind and plain CSS read the same values. Colors are generated per brand
-   (see brands.json) as light-dark(light, dark): the page follows the OS, and
-   data-theme="light|dark" on any element pins it. */
-
 :root { color-scheme: light dark; }
 [data-theme="light"] { color-scheme: light; }
 [data-theme="dark"] { color-scheme: dark; }
 
 :root {
-  /* Fonts (brands set --md-ref-typeface-brand and -plain) */
+
   --md-ref-typeface-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
-  /* M3 type scale: size / line height / weight / tracking */
   --md-sys-typescale-display-large-size: clamp(2.75rem, 2rem + 3vw, 3.5625rem);  --md-sys-typescale-display-large-line-height: 1.12;  --md-sys-typescale-display-large-weight: 700; --md-sys-typescale-display-large-tracking: -0.02em;
   --md-sys-typescale-display-medium-size: clamp(2.25rem, 1.8rem + 2vw, 2.8125rem); --md-sys-typescale-display-medium-line-height: 1.16; --md-sys-typescale-display-medium-weight: 700; --md-sys-typescale-display-medium-tracking: -0.015em;
   --md-sys-typescale-display-small-size: 2.25rem;     --md-sys-typescale-display-small-line-height: 1.22;   --md-sys-typescale-display-small-weight: 700;   --md-sys-typescale-display-small-tracking: -0.01em;
@@ -30,23 +22,18 @@
   --md-sys-typescale-label-medium-size: 0.75rem;      --md-sys-typescale-label-medium-line-height: 1.33;    --md-sys-typescale-label-medium-weight: 500;    --md-sys-typescale-label-medium-tracking: 0.04em;
   --md-sys-typescale-label-small-size: 0.6875rem;     --md-sys-typescale-label-small-line-height: 1.45;     --md-sys-typescale-label-small-weight: 500;     --md-sys-typescale-label-small-tracking: 0.045em;
 
-  /* Avatar palette (people avatars, src/avatars.js): six skin tones, five hair colors.
-     Fixed in both themes, like real people; none in the purple band. */
   --ds-skin-1: #f6d7c3; --ds-skin-2: #e6b897; --ds-skin-3: #c98f6a;
   --ds-skin-4: #a46c4a; --ds-skin-5: #7a4a30; --ds-skin-6: #4f2f1f;
   --ds-hair-1: #241c17; --ds-hair-2: #4a3226; --ds-hair-3: #7a4b2a; --ds-hair-4: #c99a5b; --ds-hair-5: #9c9a95;
 
-  /* Plate behind third-party logos (.ds-logo): light in both themes, softened in dark */
   --ds-logo-plate: light-dark(#ffffff, #e6e4de);
 
-  /* Space: M3's 4dp grid */
   --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;
   --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem;
   --space-12: 3rem; --space-16: 4rem; --space-24: 6rem;
   --container: 72rem;
   --gutter: 1rem;
 
-  /* Elevation levels 0–5 (M3 shadow pairs, softened) */
   --md-sys-elevation-level0: none;
   --md-sys-elevation-level1: 0 1px 2px rgb(0 0 0 / 0.18), 0 1px 3px 1px rgb(0 0 0 / 0.08);
   --md-sys-elevation-level2: 0 1px 2px rgb(0 0 0 / 0.18), 0 2px 6px 2px rgb(0 0 0 / 0.09);
@@ -54,13 +41,11 @@
   --md-sys-elevation-level4: 0 2px 3px rgb(0 0 0 / 0.18), 0 6px 10px 4px rgb(0 0 0 / 0.1);
   --md-sys-elevation-level5: 0 4px 4px rgb(0 0 0 / 0.18), 0 8px 12px 6px rgb(0 0 0 / 0.1);
 
-  /* State layers: an on-color over the surface at these opacities */
   --md-sys-state-hover-opacity: 0.08;
   --md-sys-state-focus-opacity: 0.1;
   --md-sys-state-pressed-opacity: 0.1;
   --md-sys-state-dragged-opacity: 0.16;
 
-  /* Motion (M3 easing and duration tokens) */
   --md-sys-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
   --md-sys-motion-easing-standard-decelerate: cubic-bezier(0, 0, 0, 1);
   --md-sys-motion-easing-standard-accelerate: cubic-bezier(0.3, 0, 1, 1);
@@ -80,7 +65,6 @@
   }
 }
 
-/* Series colors for charts and splits (src/series.json) */
 :root {
   --ds-series-1: light-dark(#2a78d6, #3987e5);
   --ds-series-2: light-dark(#eb6834, #d95926);
@@ -93,7 +77,6 @@
   --ds-series-9: light-dark(#73796e, #a9ada1);
 }
 
-/* Brand: Should (seed #1f6f54, accent #e88a60) */
 :root,
 [data-brand="should"] {
   --md-sys-color-background: light-dark(#fcf9f2, #131410);
@@ -138,153 +121,9 @@
   --brand-corner: 1;
 }
 
-/* Brand: Agency Squared (seed #386a20, accent #386666) */
-[data-brand="agency"] {
-  --md-sys-color-background: light-dark(#fafaf3, #121410);
-  --md-sys-color-on-background: light-dark(#1a1c18, #e3e3dc);
-  --md-sys-color-surface: light-dark(#fafaf3, #121410);
-  --md-sys-color-surface-dim: light-dark(#dadad4, #121410);
-  --md-sys-color-surface-bright: light-dark(#fafaf3, #383a35);
-  --md-sys-color-surface-container-lowest: light-dark(#ffffff, #0d0f0b);
-  --md-sys-color-surface-container-low: light-dark(#f4f4ed, #1a1c18);
-  --md-sys-color-surface-container: light-dark(#eeeee7, #1e201c);
-  --md-sys-color-surface-container-high: light-dark(#e8e9e2, #292b26);
-  --md-sys-color-surface-container-highest: light-dark(#e3e3dc, #343531);
-  --md-sys-color-on-surface: light-dark(#1a1c18, #e3e3dc);
-  --md-sys-color-surface-variant: light-dark(#dfe4d7, #43483e);
-  --md-sys-color-on-surface-variant: light-dark(#43483e, #c3c8bb);
-  --md-sys-color-inverse-surface: light-dark(#2f312d, #e3e3dc);
-  --md-sys-color-inverse-on-surface: light-dark(#f1f1ea, #2f312d);
-  --md-sys-color-outline: light-dark(#73796d, #8d9287);
-  --md-sys-color-outline-variant: light-dark(#c3c8bb, #43483e);
-  --md-sys-color-shadow: light-dark(#000000, #000000);
-  --md-sys-color-scrim: light-dark(#000000, #000000);
-  --md-sys-color-surface-tint: light-dark(#386a20, #9cd67d);
-  --md-sys-color-primary: light-dark(#386a20, #9cd67d);
-  --md-sys-color-on-primary: light-dark(#ffffff, #113800);
-  --md-sys-color-primary-container: light-dark(#b8f398, #205107);
-  --md-sys-color-on-primary-container: light-dark(#205107, #b8f398);
-  --md-sys-color-inverse-primary: light-dark(#9dd67e, #386a20);
-  --md-sys-color-secondary: light-dark(#55624c, #bdcbb0);
-  --md-sys-color-on-secondary: light-dark(#ffffff, #283420);
-  --md-sys-color-secondary-container: light-dark(#d8e7cb, #3e4a35);
-  --md-sys-color-on-secondary-container: light-dark(#3e4a35, #d8e7cb);
-  --md-sys-color-tertiary: light-dark(#386666, #a0cfcf);
-  --md-sys-color-on-tertiary: light-dark(#ffffff, #003737);
-  --md-sys-color-tertiary-container: light-dark(#bbeceb, #1e4e4e);
-  --md-sys-color-on-tertiary-container: light-dark(#1e4e4e, #bbeceb);
-  --md-sys-color-error: light-dark(#ba1a1a, #ffb4ab);
-  --md-sys-color-on-error: light-dark(#ffffff, #690005);
-  --md-sys-color-error-container: light-dark(#ffdad6, #93000a);
-  --md-sys-color-on-error-container: light-dark(#93000a, #ffdad6);
-  --md-ref-typeface-brand: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --md-ref-typeface-plain: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --brand-corner: 1;
-  --md-sys-typescale-display-large-weight: 400;
-  --md-sys-typescale-display-medium-weight: 400;
-  --md-sys-typescale-display-small-weight: 400;
-  --md-sys-typescale-headline-large-weight: 400;
-  --md-sys-typescale-headline-medium-weight: 400;
-  --md-sys-typescale-headline-small-weight: 400;
-  --md-sys-typescale-title-large-weight: 400;
-  --md-sys-typescale-title-medium-weight: 500;
-  --md-sys-typescale-title-small-weight: 500;
-}
-
-/* Brand: Agentic Squared (seed #0b57d0, accent #e8a317) */
-[data-brand="agentic"] {
-  --md-sys-color-background: light-dark(#f8f9fc, #111416);
-  --md-sys-color-on-background: light-dark(#191c1e, #e1e2e5);
-  --md-sys-color-surface: light-dark(#f8f9fc, #111416);
-  --md-sys-color-surface-dim: light-dark(#d9dadc, #111416);
-  --md-sys-color-surface-bright: light-dark(#f8f9fc, #37393b);
-  --md-sys-color-surface-container-lowest: light-dark(#ffffff, #0c0f10);
-  --md-sys-color-surface-container-low: light-dark(#f3f3f6, #191c1e);
-  --md-sys-color-surface-container: light-dark(#edeef0, #1d2022);
-  --md-sys-color-surface-container-high: light-dark(#e7e8ea, #282a2c);
-  --md-sys-color-surface-container-highest: light-dark(#e1e2e5, #323537);
-  --md-sys-color-on-surface: light-dark(#191c1e, #e1e2e5);
-  --md-sys-color-surface-variant: light-dark(#dce3e9, #40484d);
-  --md-sys-color-on-surface-variant: light-dark(#40484d, #c0c7cd);
-  --md-sys-color-inverse-surface: light-dark(#2e3133, #e1e2e5);
-  --md-sys-color-inverse-on-surface: light-dark(#f0f1f3, #2e3133);
-  --md-sys-color-outline: light-dark(#71787d, #8a9297);
-  --md-sys-color-outline-variant: light-dark(#c0c7cd, #40484d);
-  --md-sys-color-shadow: light-dark(#000000, #000000);
-  --md-sys-color-scrim: light-dark(#000000, #000000);
-  --md-sys-color-surface-tint: light-dark(#2747d6, #b2c5ff);
-  --md-sys-color-primary: light-dark(#2747d6, #b2c5ff);
-  --md-sys-color-on-primary: light-dark(#ffffff, #002b72);
-  --md-sys-color-primary-container: light-dark(#dae2ff, #0040a1);
-  --md-sys-color-on-primary-container: light-dark(#0040a1, #dae2ff);
-  --md-sys-color-inverse-primary: light-dark(#b2c5ff, #0856cf);
-  --md-sys-color-secondary: light-dark(#585e71, #c0c6dd);
-  --md-sys-color-on-secondary: light-dark(#ffffff, #2a3042);
-  --md-sys-color-secondary-container: light-dark(#dce2f9, #404659);
-  --md-sys-color-on-secondary-container: light-dark(#404659, #dce2f9);
-  --md-sys-color-tertiary: light-dark(#7f5700, #ffba3e);
-  --md-sys-color-on-tertiary: light-dark(#ffffff, #432c00);
-  --md-sys-color-tertiary-container: light-dark(#ffdeae, #604100);
-  --md-sys-color-on-tertiary-container: light-dark(#604100, #ffdeae);
-  --md-sys-color-error: light-dark(#ba1a1a, #ffb4ab);
-  --md-sys-color-on-error: light-dark(#ffffff, #690005);
-  --md-sys-color-error-container: light-dark(#ffdad6, #93000a);
-  --md-sys-color-on-error-container: light-dark(#93000a, #ffdad6);
-  --md-ref-typeface-brand: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
-  --md-ref-typeface-plain: "Public Sans", "Helvetica Neue", Arial, sans-serif;
-  --brand-corner: 0.5;
-}
-
-/* Brand: Privacy Squared (seed #0e5c6b, accent #b4532a) */
-[data-brand="privacy"] {
-  --md-sys-color-background: light-dark(#f9f9f9, #111414);
-  --md-sys-color-on-background: light-dark(#1a1c1c, #e2e2e2);
-  --md-sys-color-surface: light-dark(#f9f9f9, #111414);
-  --md-sys-color-surface-dim: light-dark(#d9dada, #111414);
-  --md-sys-color-surface-bright: light-dark(#f9f9f9, #373a3a);
-  --md-sys-color-surface-container-lowest: light-dark(#ffffff, #0c0f0f);
-  --md-sys-color-surface-container-low: light-dark(#f3f4f3, #1a1c1c);
-  --md-sys-color-surface-container: light-dark(#edeeee, #1e2020);
-  --md-sys-color-surface-container-high: light-dark(#e8e8e8, #282a2b);
-  --md-sys-color-surface-container-highest: light-dark(#e2e2e2, #333535);
-  --md-sys-color-on-surface: light-dark(#1a1c1c, #e2e2e2);
-  --md-sys-color-surface-variant: light-dark(#dce4e5, #404849);
-  --md-sys-color-on-surface-variant: light-dark(#404849, #c0c8c9);
-  --md-sys-color-inverse-surface: light-dark(#2f3131, #e2e2e2);
-  --md-sys-color-inverse-on-surface: light-dark(#f0f1f1, #2f3131);
-  --md-sys-color-outline: light-dark(#707979, #8a9293);
-  --md-sys-color-outline-variant: light-dark(#c0c8c9, #404849);
-  --md-sys-color-shadow: light-dark(#000000, #000000);
-  --md-sys-color-scrim: light-dark(#000000, #000000);
-  --md-sys-color-surface-tint: light-dark(#0e5c6b, #7fcfdd);
-  --md-sys-color-primary: light-dark(#0e5c6b, #7fcfdd);
-  --md-sys-color-on-primary: light-dark(#ffffff, #003640);
-  --md-sys-color-primary-container: light-dark(#aaedff, #004e5c);
-  --md-sys-color-on-primary-container: light-dark(#004e5c, #aaedff);
-  --md-sys-color-inverse-primary: light-dark(#84d2e6, #006879);
-  --md-sys-color-secondary: light-dark(#4b6269, #b2cbd2);
-  --md-sys-color-on-secondary: light-dark(#ffffff, #1d343a);
-  --md-sys-color-secondary-container: light-dark(#cee7ee, #334a51);
-  --md-sys-color-on-secondary-container: light-dark(#334a51, #cee7ee);
-  --md-sys-color-tertiary: light-dark(#9e421a, #ffb599);
-  --md-sys-color-on-tertiary: light-dark(#ffffff, #5a1c00);
-  --md-sys-color-tertiary-container: light-dark(#ffdbce, #7e2c03);
-  --md-sys-color-on-tertiary-container: light-dark(#7e2c03, #ffdbce);
-  --md-sys-color-error: light-dark(#ba1a1a, #ffb4ab);
-  --md-sys-color-on-error: light-dark(#ffffff, #690005);
-  --md-sys-color-error-container: light-dark(#ffdad6, #93000a);
-  --md-sys-color-on-error-container: light-dark(#93000a, #ffdad6);
-  --md-ref-typeface-brand: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
-  --md-ref-typeface-plain: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
-  --brand-corner: 0.75;
-}
-
-/* Derived tokens. A var() resolves where it's declared, so these are
-   re-declared on every brand scope: a brand set on any element (not just
-   <html>) reaches its shapes. */
 :root,
 [data-brand] {
-  /* M3 shape scale, scaled by the brand's corner factor */
+
   --md-sys-shape-corner-none: 0;
   --md-sys-shape-corner-extra-small: calc(4px * var(--brand-corner));
   --md-sys-shape-corner-small: calc(8px * var(--brand-corner));
@@ -293,21 +132,14 @@
   --md-sys-shape-corner-extra-large: calc(28px * var(--brand-corner));
   --md-sys-shape-corner-full: 9999px;
 
-  /* Semantic extras: the brand's spark (tertiary), and success and warning,
-     which M3 leaves to the product */
   --spark: var(--md-sys-color-tertiary);
   --success: light-dark(#1d6b3a, #7fd99a);
   --warning: light-dark(#8a5a00, #f5c065);
 
-  /* Font roles */
   --font-sans: var(--md-ref-typeface-plain);
   --font-heading: var(--md-ref-typeface-brand);
   --font-mono: var(--md-ref-typeface-mono);
 }
-
-/* Components: Material 3 for pages without a component library (static
-   pages, the portal). Same tokens as the Material Web components. Prefix ds-.
-   State layers are an ::after over the element in the on-color, M3 style. */
 
 .ds {
   background: var(--md-sys-color-surface);
@@ -326,7 +158,6 @@
 .ds :where(:focus-visible) { outline: 3px solid var(--md-sys-color-secondary); outline-offset: 2px; }
 .ds :where(code, kbd, samp) { font-family: var(--md-ref-typeface-mono); font-size: 0.9em; }
 
-/* Type roles as classes: .ds-display-large … .ds-label-small */
 .ds-display-large { font: var(--md-sys-typescale-display-large-weight) var(--md-sys-typescale-display-large-size)/var(--md-sys-typescale-display-large-line-height) var(--md-ref-typeface-brand); letter-spacing: var(--md-sys-typescale-display-large-tracking); }
 .ds-display-medium { font: var(--md-sys-typescale-display-medium-weight) var(--md-sys-typescale-display-medium-size)/var(--md-sys-typescale-display-medium-line-height) var(--md-ref-typeface-brand); letter-spacing: var(--md-sys-typescale-display-medium-tracking); }
 .ds-display-small { font: var(--md-sys-typescale-display-small-weight) var(--md-sys-typescale-display-small-size)/var(--md-sys-typescale-display-small-line-height) var(--md-ref-typeface-brand); letter-spacing: var(--md-sys-typescale-display-small-tracking); }
@@ -347,14 +178,12 @@
 .ds-figure { font-family: var(--md-ref-typeface-mono); font-variant-numeric: tabular-nums; }
 .ds-spark { color: var(--md-sys-color-tertiary); }
 
-/* Layout */
 .ds-container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: max(var(--gutter), env(safe-area-inset-left, 0px)) max(var(--gutter), env(safe-area-inset-right, 0px)); }
 .ds-stack { display: grid; gap: var(--space-4); align-content: start; }
 .ds-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
 .ds-grid { display: grid; gap: var(--space-6); grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr)); }
 .ds-grid > *, .ds-stack > * { min-width: 0; }
 
-/* State layer shared by interactive pieces */
 .ds-btn, .ds-chip, .ds-tab, .ds-segmented > button, .ds-list-item.interactive { position: relative; isolation: isolate; }
 .ds-btn::after, .ds-chip::after, .ds-tab::after, .ds-segmented > button::after, .ds-list-item.interactive::after {
   content: ""; position: absolute; inset: 0; border-radius: inherit; background: currentColor; opacity: 0; pointer-events: none; z-index: -1;
@@ -364,7 +193,6 @@
 :is(.ds-btn, .ds-chip, .ds-tab, .ds-segmented > button, .ds-list-item.interactive):focus-visible::after { opacity: var(--md-sys-state-focus-opacity); }
 :is(.ds-btn, .ds-chip, .ds-tab, .ds-segmented > button, .ds-list-item.interactive):active::after { opacity: var(--md-sys-state-pressed-opacity); }
 
-/* Buttons: filled (default), tonal, outlined, text, elevated, error; sm, lg, icon */
 .ds-btn {
   display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
   height: 2.5rem; padding: 0 var(--space-6); border: 0; border-radius: var(--md-sys-shape-corner-full);
@@ -391,7 +219,6 @@
 .ds-btn.icon { width: 2.5rem; padding: 0; }
 .ds-btn svg { width: 1.125rem; height: 1.125rem; flex: none; }
 
-/* Cards: elevated (default), filled, outlined */
 .ds-card {
   display: flex; flex-direction: column; gap: var(--space-4); min-width: 0; padding: var(--space-6);
   border-radius: var(--md-sys-shape-corner-medium);
@@ -404,7 +231,6 @@
 .ds-card-subtitle { font: var(--md-sys-typescale-body-medium-weight) var(--md-sys-typescale-body-medium-size)/var(--md-sys-typescale-body-medium-line-height) var(--md-ref-typeface-plain); color: var(--md-sys-color-on-surface-variant); }
 .ds-card-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: var(--space-2); }
 
-/* Chips: assist (default), filter (aria-pressed), and status chips */
 .ds-chip {
   display: inline-flex; align-items: center; gap: var(--space-2); height: 2rem; padding: 0 var(--space-4);
   border: 0; border-radius: var(--md-sys-shape-corner-small); background: transparent; color: var(--md-sys-color-on-surface-variant);
@@ -423,20 +249,21 @@
 .ds-chip.status.error { background: var(--md-sys-color-error-container); color: var(--md-sys-color-on-error-container); }
 .ds-badge { display: inline-grid; place-items: center; min-width: 1rem; height: 1rem; padding: 0 0.25rem; border-radius: var(--md-sys-shape-corner-full);
   background: var(--md-sys-color-error); color: var(--md-sys-color-on-error); font: 500 var(--md-sys-typescale-label-small-size)/1 var(--md-ref-typeface-plain); }
-/* "Needs you" on navigation (badges.js): one item = small dot, 2+ = count. Absolutely placed, so showing,
-   changing or clearing a badge never moves the nav (no layout jump). Error color, never series or brand colors. */
+
 .ds-badge.dot { min-width: 0; width: 0.375rem; height: 0.375rem; padding: 0; }
-.ds-tab[data-nav] { padding-right: 3rem; }  /* room reserved on every badgeable tab, so a badge never widens it */
+.ds-tab[data-nav] { padding-right: 3rem; }
 .ds-tab > .ds-badge[data-needs] { position: absolute; top: 50%; right: 0.5rem; transform: translateY(-50%); }
 .ds-tab > .ds-badge.dot[data-needs] { right: 1.25rem; }
 .ds-nav-icon { position: relative; display: inline-grid; place-items: center; }
 .ds-nav-icon > .ds-badge[data-needs] { position: absolute; top: -0.25rem; left: calc(100% - 0.5rem); }
 .ds-nav-icon > .ds-badge.dot[data-needs] { top: 0; left: calc(100% - 0.25rem); }
 .ds-list-item > .ds-badge[data-needs] { margin-left: auto; }
+.ds-nav-inline[data-nav] { position: relative; padding-inline-end: 2.25rem; }
+.ds-nav-inline > .ds-badge[data-needs] { position: absolute; top: 50%; right: 0.5rem; transform: translateY(-50%); }
+.ds-nav-inline > .ds-badge.dot[data-needs] { right: 0.875rem; }
 .ds-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 @media (forced-colors: active) { .ds-badge { forced-color-adjust: none; background: Mark; color: MarkText; } }
 
-/* Text fields: outlined, label above (adapted from M3's floating label) */
 .ds-field { display: grid; gap: var(--space-1); }
 .ds-field > label, .ds-field-label { font: var(--md-sys-typescale-body-small-weight) var(--md-sys-typescale-body-small-size)/1.4 var(--md-ref-typeface-plain); color: var(--md-sys-color-on-surface-variant); }
 .ds-input, .ds-textarea, .ds-select {
@@ -453,7 +280,6 @@
 .ds-field:focus-within > label { color: var(--md-sys-color-primary); }
 .ds-supporting { font: var(--md-sys-typescale-body-small-weight) var(--md-sys-typescale-body-small-size)/var(--md-sys-typescale-body-small-line-height) var(--md-ref-typeface-plain); color: var(--md-sys-color-on-surface-variant); }
 
-/* Checkbox and switch */
 .ds-check { display: inline-flex; align-items: center; gap: var(--space-3); min-height: 2.5rem; cursor: pointer; font: var(--md-sys-typescale-body-large-weight) var(--md-sys-typescale-body-medium-size)/1.4 var(--md-ref-typeface-plain); }
 .ds-check input[type="checkbox"]:not(.ds-switch), .ds-check input[type="radio"] { width: 1.125rem; height: 1.125rem; margin: 0; accent-color: var(--md-sys-color-primary); }
 .ds-switch {
@@ -468,7 +294,6 @@
 .ds-switch:checked { background: var(--md-sys-color-primary); box-shadow: none; }
 .ds-switch:checked::after { left: 1.5rem; width: 1.5rem; height: 1.5rem; background: var(--md-sys-color-on-primary); }
 
-/* Tabs (primary tabs) and segmented buttons */
 .ds-tabs { display: flex; max-width: 100%; overflow-x: auto; border-bottom: 1px solid var(--md-sys-color-outline-variant); scrollbar-width: none; }
 .ds-tab {
   flex: 0 0 auto; display: inline-flex; align-items: center; gap: var(--space-2); height: 3rem; padding: 0 var(--space-4); border: 0; background: transparent; cursor: pointer; text-decoration: none;
@@ -490,7 +315,6 @@
 .ds-segmented > [aria-pressed="true"] { background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); }
 .ds-segmented > [aria-pressed="true"]::before { content: "✓"; font-size: 0.9em; }
 
-/* Lists */
 .ds-list { list-style: none; margin: 0; padding: var(--space-2) 0; }
 .ds-list-item { display: flex; align-items: center; gap: var(--space-4); min-height: 3.5rem; padding: var(--space-2) var(--space-4); color: inherit; text-decoration: none; }
 .ds-list-item > .text { display: grid; flex: 1; min-width: 0; }
@@ -499,19 +323,16 @@
 .ds-list-item .trailing { font: var(--md-sys-typescale-label-small-weight) var(--md-sys-typescale-label-small-size)/1 var(--md-ref-typeface-plain); color: var(--md-sys-color-on-surface-variant); }
 .ds-divider { border: 0; height: 1px; margin: 0; background: var(--md-sys-color-outline-variant); }
 
-/* Banner (inline message) */
 .ds-banner { display: grid; gap: var(--space-1); padding: var(--space-4); border-radius: var(--md-sys-shape-corner-medium);
   background: var(--md-sys-color-surface-container-high); font: var(--md-sys-typescale-body-medium-weight) var(--md-sys-typescale-body-medium-size)/1.43 var(--md-ref-typeface-plain); }
 .ds-banner > strong { font: var(--md-sys-typescale-title-small-weight) var(--md-sys-typescale-title-small-size)/1.43 var(--md-ref-typeface-plain); }
 .ds-banner.error { background: var(--md-sys-color-error-container); color: var(--md-sys-color-on-error-container); }
 .ds-banner.primary { background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); }
 
-/* Progress (linear) */
 .ds-progress { height: 0.25rem; border-radius: var(--md-sys-shape-corner-full); background: var(--md-sys-color-secondary-container); overflow: hidden; }
 .ds-progress > span { display: block; height: 100%; width: var(--value, 0%); background: var(--md-sys-color-primary); border-radius: inherit;
   transition: width var(--md-sys-motion-duration-long2) var(--md-sys-motion-easing-emphasized-decelerate); }
 
-/* Table */
 .ds-table-wrap { width: 100%; overflow-x: auto; }
 .ds-table { width: 100%; border-collapse: collapse; font: var(--md-sys-typescale-body-medium-weight) var(--md-sys-typescale-body-medium-size)/1.43 var(--md-ref-typeface-plain); }
 .ds-table th { text-align: left; padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--md-sys-color-outline-variant); white-space: nowrap;
@@ -520,7 +341,6 @@
 .ds-table tr:last-child td { border-bottom: 0; }
 .ds-table :is(td, th).num { text-align: right; font-variant-numeric: tabular-nums; }
 
-/* Language menu (i18n.js langMenu): a native select styled as an M3 outlined menu */
 .ds-lang { display: inline-flex; }
 .ds-lang label { position: relative; display: inline-flex; align-items: center; }
 .ds-lang-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
@@ -533,10 +353,8 @@
 .ds-lang select:hover { border-color: var(--md-sys-color-on-surface); }
 .ds-lang select:focus-visible { outline: 3px solid var(--md-sys-color-secondary); outline-offset: 2px; }
 
-/* People avatars (svg from avatars.js) */
 .ds-person { display: block; flex: none; border-radius: 50%; overflow: visible; }
 
-/* Small pieces */
 .ds-avatar { display: inline-grid; place-items: center; flex: none; width: 2.5rem; height: 2.5rem; border-radius: 50%; overflow: hidden;
   background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); font: 500 var(--md-sys-typescale-title-medium-size)/1 var(--md-ref-typeface-plain); }
 .ds-avatar img { width: 100%; height: 100%; object-fit: cover; }
@@ -546,15 +364,12 @@
 @keyframes ds-pulse { 50% { opacity: 0.5; } }
 @media (prefers-reduced-motion: reduce) { .ds-skeleton { animation: none; } }
 
-/* Top app bar */
 .ds-bar {
   position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: var(--space-3);
   min-height: 4rem; padding: var(--space-2) max(var(--gutter), env(safe-area-inset-right, 0px)) var(--space-2) max(var(--gutter), env(safe-area-inset-left, 0px));
   background: var(--md-sys-color-surface-container);
 }
 
-/* Confirm with a code (v0.9, 11/19): the dialog for deliberate, destructive actions (BEST-PRACTICES practice 2).
-   Built by confirm.js; shipped in design-system.css and, inside @layer components, in tailwind.css. */
 .ds-dialog {
   width: min(28rem, calc(100vw - 2rem)); max-height: calc(100dvh - 3rem); padding: 0; border: none;
   border-radius: var(--md-sys-shape-corner-extra-large); background: var(--md-sys-color-surface-container-high);
@@ -574,7 +389,6 @@
 .ds-confirm-lost li + li { margin-top: var(--space-1); }
 .ds-dialog p.ds-confirm-window { color: var(--md-sys-color-on-surface); }
 
-/* The code: one real input (paste and one-time-code autofill work) laid over six drawn slots */
 .ds-code { display: grid; gap: var(--space-2); justify-items: center; }
 .ds-code label { font: var(--md-sys-typescale-body-small-size)/1.4 var(--md-ref-typeface-plain); color: var(--md-sys-color-on-surface-variant); }
 .ds-code-field { --slot: 2.75rem; position: relative; display: grid; grid-template-columns: repeat(6, var(--slot)); gap: 0.5rem; }
@@ -594,16 +408,10 @@
 .ds-code-resend:disabled { color: var(--md-sys-color-on-surface-variant); cursor: default; }
 .ds-code-resend:focus-visible { outline: 3px solid var(--md-sys-color-secondary); outline-offset: 2px; }
 
-/* Shared by design-system.css and the Tailwind layer (v0.12). */
-
-/* Icons: Material Symbols as inline SVG (24px grid, currentColor). No icon fonts: a font shows its ligature
-   words ("chat", "groups") until it loads. Copy the SVG path from fonts.google.com/icons (Apache 2.0). */
 .ds-icon { width: 1.5rem; height: 1.5rem; flex: none; fill: currentColor; vertical-align: middle; }
 .ds-icon.sm { width: 1.25rem; height: 1.25rem; }
 .ds-icon.lg { width: 2rem; height: 2rem; }
 
-/* Third-party logos (brokers, banks, partners): a light plate in both themes, so dark marks with transparent
-   backgrounds stay visible on dark surfaces. Size the tile with width/height; the image fits inside. */
 .ds-logo {
   display: inline-grid; place-items: center; flex: none; width: 2.5rem; height: 2.5rem; padding: var(--space-1);
   border-radius: var(--md-sys-shape-corner-small); background: var(--ds-logo-plate);
@@ -612,9 +420,6 @@
 .ds-logo img, .ds-logo svg { max-width: 100%; max-height: 100%; object-fit: contain; }
 .ds-logo.lg { width: 3.5rem; height: 3.5rem; padding: var(--space-2); }
 
-/* Account (v0.13, Rod 11/19: "a login button on the home page … they need way to login and logoff").
-   Signed out: a text "Log in" button at the trailing end of the app bar, visible at every width.
-   Signed in: an avatar button opening .ds-menu with name and email, Open app, Settings, Log out. */
 .ds-account { position: relative; display: inline-flex; }
 .ds-account > button { border: 0; padding: 0; background: none; border-radius: 50%; cursor: pointer; }
 .ds-account > button:focus-visible { outline: 3px solid var(--md-sys-color-secondary); outline-offset: 2px; }
@@ -635,7 +440,6 @@
 .ds-menu :is(a, button):hover { background: color-mix(in srgb, var(--md-sys-color-on-surface) 8%, transparent); }
 .ds-menu :is(a, button):focus-visible { outline: 2px solid var(--md-sys-color-secondary); outline-offset: -2px; }
 
-/* Charts (v0.14, charts.js). Text uses the text roles; color marks carry identity. */
 .ds-chart { display: grid; gap: var(--space-2); min-width: 0; font-family: var(--md-ref-typeface-plain); }
 .ds-chart-title { font: var(--md-sys-typescale-title-small-weight) var(--md-sys-typescale-title-small-size)/1.4 var(--md-ref-typeface-plain); color: var(--md-sys-color-on-surface); }
 .ds-chart-plot { position: relative; min-width: 0; }

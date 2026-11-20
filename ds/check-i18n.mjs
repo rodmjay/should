@@ -1,8 +1,4 @@
 #!/usr/bin/env node
-// Fails (exit 1) when English and Spanish don't match, or a page uses a key the dictionary lacks.
-//   node check-i18n.mjs --dict i18n/en.js --dict i18n/es.js [--html index.html ...]
-// Dictionary files may be JSON, an ES module with a default export, or a classic script that
-// assigns window.<NAME>.<lang> = {...} (as static pages do).
 import { readFileSync } from "node:fs";
 import { createContext, runInContext } from "node:vm";
 import { resolve } from "node:path";

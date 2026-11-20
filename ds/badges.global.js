@@ -1,16 +1,4 @@
-/* @should/design-system 0.16.0: generated from src/ by scripts/build.mjs; edit src/, not this file */
 (() => {
-// "Needs you" badges on navigation (Rod 11/20: "red badge next to nav item if there is something needed of them on
-// that tab"). M3 Badge in the error color: a small dot for one item, a count for two or more (99+ caps it).
-// Only steps waiting on this user count, never general news. Plain DOM, EN and ES; updates in place, no reflow.
-//   import { needsYou, navBadges } from "@should/design-system/badges.js";
-//   needsYou(tabEl, 3);                                   // one nav item
-//   navBadges(navEl, { brokers: 7, mail: 2, phone: 0 });  // items marked data-nav="brokers" etc.
-//   navBadgesFrom(navEl, { brokers: "/brokers/api/badge", mail: () => getMailCount() }, { every: 60000 });
-// A count may be a number, a promise or a function returning either (each micro-frontend exposes its own badge
-// endpoint, Rod 11/20). An endpoint returns JSON { "needsYou": n } (or { "count": n }, or a bare number).
-// While a count loads, its room stays reserved and nothing shows; 0, an error or no answer shows nothing, never an error.
-// Works on .ds-tab, rail/bar items (put the icon in .ds-nav-icon) and drawer rows (.ds-list-item).
 const STRINGS = {
   en: { one: "1 item needs you", many: "{n} items need you" },
   es: { one: "1 pendiente para ti", many: "{n} pendientes para ti" },
@@ -27,7 +15,7 @@ function needsYou(el, count, opts = {}) {
   }
   el.__dsNeeds = (el.__dsNeeds || 0) + 1;  // a plain count also cancels any count still loading
   const n = Math.max(0, Math.floor(Number(count) || 0));
-  const host = el.querySelector(":scope > .ds-nav-icon") || el;
+  const host = (!el.matches(".ds-nav-inline") && el.querySelector(":scope > .ds-nav-icon")) || el;  // inline icon + label: badge after the label
   let b = host.querySelector(":scope > .ds-badge[data-needs]");
   if (!n) { b?.remove(); el.removeAttribute("data-needs-you"); return; }
   const S = Object.assign({}, STRINGS[langOf(el, opts.lang)], opts.strings);
@@ -58,7 +46,6 @@ function navBadges(root, counts = {}, opts = {}) {
 const fromUrl = (url) => fetch(url, { credentials: "include", headers: { accept: "application/json" } })
   .then((r) => (r.ok ? r.json() : 0)).then((j) => (typeof j === "number" ? j : j?.needsYou ?? j?.count ?? 0));
 
-// Polls each nav item's own source. Returns a stop() function. Sources: a URL string, a function or a promise.
 function navBadgesFrom(root, sources = {}, opts = {}) {
   const run = () => root.querySelectorAll("[data-nav]").forEach((el) => {
     const src = sources[el.dataset.nav];

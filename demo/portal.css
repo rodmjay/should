@@ -397,8 +397,7 @@ details > summary { color: var(--md-sys-color-on-surface-variant); }
     .mid { display: none; }
     .right { margin-left: auto; }
     .brand .word { font-size: 1.05rem; }
-    .seg { justify-content: flex-start; padding-left: 10px; padding-right: 10px; }
-    .segin a span { display: none; }
+    .seg { position: static; justify-content: flex-start; padding-left: 10px; padding-right: 10px; }  .segin a span { display: none; }
     .segin a.on span { display: inline; }
     .panel { position: fixed; top: 56px; right: 10px; left: 10px; width: auto; transform: none; }
   }

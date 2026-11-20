@@ -406,3 +406,5 @@ a.pj-tile:hover, button.pj-tile:not(:disabled):hover { background: var(--md-sys-
 .us-grid .block { min-width: 0; margin: 0; }
 .us-wide { grid-column: 1 / -1; }
 h2.ds-chart-title { font: inherit; margin: 0 0 8px; }
+/* Phones: the desk pill scrolls away instead of floating over the cards (Designer 11/19) */
+@media (max-width: 600px) { nav.seg { position: static; } }

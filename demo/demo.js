@@ -41,7 +41,7 @@
     it: ['IT Guy', 'Internet, phones, the computer and account security', 'All services healthy. Phone bill is on AutoPay; one upgrade window opens Dec 24.', ['Health check, every 15 min']],
     legal: ['Legal Advisor', 'Agreements, deadlines and questions for a lawyer', 'Lease renewal is in your email: the rent stays the same, 12 months. Sign by 12/1.', []]
   };
-  var menu = null;
+  var menu = null, pageName = '', OFFTAB = { usage: 'Agent usage' };
   function parse() {
     var h = (location.hash || '#/').slice(2).split('/');
     if (h[0] === 'c') return { co: h[1] || 'northstar', sec: h[2] || '' };
@@ -55,7 +55,9 @@
     var r = parse(), co = r.co && COMPANIES.filter(function (c) { return c.slug === r.co; })[0];
     var g = co ? null : groupOf(r.key);
     document.documentElement.dataset.area = co ? 'business' : (AREA[r.key] || g.tile);
-    document.title = (co ? co.name : g.name) + ' · Should demo';
+    // Desks off the area tabs (the gear's Systems pages) name themselves, not the area they fall back to
+    pageName = co ? co.name : (OFFTAB[r.key] || g.name);
+    document.title = pageName + ' · Should demo';
     renderBar(g, co);
     renderSeg(g, co, r);
     CH = [];
@@ -88,7 +90,7 @@
     var me = '<div class="panel list" role="menu" aria-label="' + D.me.name + '"><p class="who"><b>' + D.me.name + '</b><span class="small muted">' + D.me.email + '</span></p><a role="menuitem" href="#/coach">Coach and values</a><a role="menuitem" href="../">The Should page ↗</a></div>';
     bar.innerHTML =
       '<a href="#/" class="brand" aria-label="Should, Today"><svg viewBox="0 0 64 64" width="26" height="26" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#1f6f54"/><path d="M17 34.5 L27.5 44.5 L45 23" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="16.5" r="5" fill="#e88a60"/></svg><span class="word">Should</span></a>' +
-      '<div class="mid"><span class="pop"><button class="pillbtn" data-menu="ctx" aria-haspopup="listbox" aria-expanded="' + (menu === 'ctx') + '"><span class="sw" style="background:' + (co ? co.color : 'var(--nc-blue)') + '"></span><span class="pname">' + esc(co ? co.name : g.name) + '</span><span class="chev' + (menu === 'ctx' ? ' up' : '') + '" aria-hidden="true">▾</span></button>' + (menu === 'ctx' ? ctx : '') + '</span></div>' +
+      '<div class="mid"><span class="pop"><button class="pillbtn" data-menu="ctx" aria-haspopup="listbox" aria-expanded="' + (menu === 'ctx') + '"><span class="sw" style="background:' + (co ? co.color : 'var(--nc-blue)') + '"></span><span class="pname">' + esc(pageName) + '</span><span class="chev' + (menu === 'ctx' ? ' up' : '') + '" aria-hidden="true">▾</span></button>' + (menu === 'ctx' ? ctx : '') + '</span></div>' +
       '<div class="right">' +
       '<span class="pop"><button class="round" data-menu="add" aria-label="Quick add" aria-expanded="' + (menu === 'add') + '"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>' + (menu === 'add' ? add : '') + '</span>' +
       '<span class="pop"><button class="round dot" data-menu="apps" aria-label="All desks" aria-expanded="' + (menu === 'apps') + '"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">' + [5, 12, 19].map(function (y) { return [5, 12, 19].map(function (x) { return '<circle cx="' + x + '" cy="' + y + '" r="2.1" fill="currentColor"/>'; }).join(''); }).join('') + '</svg></button>' + (menu === 'apps' ? launcher : '') + '</span>' +

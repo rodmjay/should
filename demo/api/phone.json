@@ -15,7 +15,7 @@
    "bill": "-$26.50 a month"
   }
  ],
- "tmobile": {
+ "carrier_acct": {
   "name": "Peak Wireless, 3 lines",
   "amount_usd": 118.0,
   "frequency": "monthly",

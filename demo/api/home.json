@@ -425,9 +425,9 @@
   },
   "weather": null,
   "low_point": {
-   "report": "Covered",
+   "report": "2026-11-21",
    "line": "Low point stays at $449.39 before payday.",
-   "payday": null,
+   "payday": "2026-12-04",
    "covers": true,
    "alert": false
   }

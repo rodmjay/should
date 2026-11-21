@@ -194,7 +194,7 @@
   demo_note: "Todo es ficticio, excepto lo público, como películas, lugares y el clima.",
   tv_cap: "También funciona en su televisor",
   tv_sub: "La vista de la sala muestra lo que la familia puede ver: el día, las tareas, las recetas y las citas. Todo lo privado queda detrás de un PIN.",
-  tv_lang_note: "Por ahora, la app de la TV está en inglés.",
+  tv_lang_note: "Con datos inventados. Por ahora, la app de la TV está en inglés.",
   tv_tab_home: "Inicio",
   tv_tab_recipes: "Recetas",
   tv_tab_cooking: "Cocinando",

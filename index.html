@@ -419,13 +419,16 @@ svg.chart{width:100%;height:auto;display:block;margin-top:8px}
 .reach-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 /* TV showcase: a plain living-room screen, thin bezel, no glow (Rod 11/20 via EA; fake data from product/scripts/tvdemo) */
 .tvshow{margin:28px 0 0}
-.tvshow .tv{background:#0e0e0d;border-radius:10px;padding:1.1%;box-shadow:0 1px 0 var(--line)}
+.tvshow .tv{background:#0e0e0d;border-radius:10px;padding:1.1%;border:1px solid var(--md-sys-color-outline-variant)}
 .tvshow .tv img{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:3px;background:#141412}
-.tvshow .stand{width:22%;height:10px;margin:0 auto;background:#0e0e0d;border-radius:0 0 6px 6px}
-.tvshow figcaption{margin-top:14px;display:flex;flex-direction:column;gap:2px}
+.tvshow .stand{width:22%;height:10px;margin:0 auto;background:#0e0e0d;border-radius:0 0 6px 6px;border:1px solid var(--md-sys-color-outline-variant);border-top:0}
+.tvshow figcaption{margin-bottom:14px;display:flex;flex-direction:column;gap:2px}
+.tvshow .tvlang{font-size:14px}
+.tvshow .tvlang:empty{display:none}
 .tvshow figcaption b{font-family:var(--md-ref-typeface-brand);font-size:20px}
 .tvshow figcaption span{color:var(--muted);font-size:15px}
-.tvshow .reach-tabs{margin-top:10px}
+.tvshow .reach-tabs{margin-top:12px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+@media (max-width:480px){.tvshow .tab{padding:7px 11px;font-size:13px}}
 .reach-tabs::-webkit-scrollbar{display:none}
 
 /* goal ladder */
@@ -555,9 +558,9 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
   <a class="btn primary" href="demo/" data-i18n="ui.demo_btn"></a>
   <p class="muted" style="margin-top:10px;font-size:14px" data-i18n="ui.demo_note"></p>
   <figure class="tvshow" id="tvShow">
+    <figcaption><b data-i18n="ui.tv_cap"></b><span data-i18n="ui.tv_sub"></span><span class="tvlang" data-i18n="ui.tv_lang_note"></span></figcaption>
     <div class="tv"><img id="tvImg" src="img/tv/tv-home.webp" width="1280" height="720" loading="lazy" data-i18n-attr="alt:ui.tv_alt_home"></div>
     <div class="stand" aria-hidden="true"></div>
-    <figcaption><b data-i18n="ui.tv_cap"></b><span data-i18n="ui.tv_sub"></span></figcaption>
     <div class="reach-tabs" role="tablist" data-i18n-attr="aria-label:ui.tv_cap">
       <button class="tab" role="tab" aria-selected="true" data-tv="home" data-i18n="ui.tv_tab_home"></button>
       <button class="tab" role="tab" aria-selected="false" data-tv="recipes" data-i18n="ui.tv_tab_recipes"></button>

@@ -194,6 +194,7 @@
   demo_note: "Everything in it is fake except public things like movies, places and the weather.",
   tv_cap: "Also runs on your TV",
   tv_sub: "The living-room view shows what the family can see: the day, chores, recipes and quotes. Everything private stays behind a PIN.",
+  tv_lang_note: "",
   tv_tab_home: "Home",
   tv_tab_recipes: "Recipes",
   tv_tab_cooking: "Cooking",

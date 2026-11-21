@@ -417,6 +417,15 @@ svg.chart{width:100%;height:auto;display:block;margin-top:8px}
 .trust{margin-top:16px;padding:14px 16px;border-radius:14px;background:var(--md-sys-color-tertiary-container);color:var(--md-sys-color-on-tertiary-container);font-size:16px;line-height:1.5}
 .reach-h{margin-top:26px;font-size:18px}
 .reach-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+/* TV showcase: a plain living-room screen, thin bezel, no glow (Rod 11/20 via EA; fake data from product/scripts/tvdemo) */
+.tvshow{margin:28px 0 0}
+.tvshow .tv{background:#0e0e0d;border-radius:10px;padding:1.1%;box-shadow:0 1px 0 var(--line)}
+.tvshow .tv img{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:3px;background:#141412}
+.tvshow .stand{width:22%;height:10px;margin:0 auto;background:#0e0e0d;border-radius:0 0 6px 6px}
+.tvshow figcaption{margin-top:14px;display:flex;flex-direction:column;gap:2px}
+.tvshow figcaption b{font-family:var(--md-ref-typeface-brand);font-size:20px}
+.tvshow figcaption span{color:var(--muted);font-size:15px}
+.tvshow .reach-tabs{margin-top:10px}
 .reach-tabs::-webkit-scrollbar{display:none}
 
 /* goal ladder */
@@ -545,6 +554,17 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
   <p data-i18n="ui.demo_p"></p>
   <a class="btn primary" href="demo/" data-i18n="ui.demo_btn"></a>
   <p class="muted" style="margin-top:10px;font-size:14px" data-i18n="ui.demo_note"></p>
+  <figure class="tvshow" id="tvShow">
+    <div class="tv"><img id="tvImg" src="img/tv/tv-home.webp" width="1280" height="720" loading="lazy" data-i18n-attr="alt:ui.tv_alt_home"></div>
+    <div class="stand" aria-hidden="true"></div>
+    <figcaption><b data-i18n="ui.tv_cap"></b><span data-i18n="ui.tv_sub"></span></figcaption>
+    <div class="reach-tabs" role="tablist" data-i18n-attr="aria-label:ui.tv_cap">
+      <button class="tab" role="tab" aria-selected="true" data-tv="home" data-i18n="ui.tv_tab_home"></button>
+      <button class="tab" role="tab" aria-selected="false" data-tv="recipes" data-i18n="ui.tv_tab_recipes"></button>
+      <button class="tab" role="tab" aria-selected="false" data-tv="cooking" data-i18n="ui.tv_tab_cooking"></button>
+      <button class="tab" role="tab" aria-selected="false" data-tv="idle" data-i18n="ui.tv_tab_idle"></button>
+    </div>
+  </figure>
 </section>
 
 <section id="staff">
@@ -915,6 +935,10 @@ function renderReach(){
   const ph=$("#reachPhone"); ph.setAttribute("aria-label",ex[reachI].tab);
   ph.innerHTML=ex[reachI].phone.map(([k,h])=>k==="who"?`<div class="whoname">${h}</div>`:k==="time"?`<div class="time">${h}</div>`:`<div class="msg ${k}">${h}</div>`).join("");
 }
+// TV showcase: swap the framed screenshot; its alt text follows the tab and the language
+document.addEventListener("click",e=>{const b=e.target.closest("[data-tv]");if(!b)return;const k=b.dataset.tv,img=$("#tvImg");
+  document.querySelectorAll("[data-tv]").forEach(x=>x.setAttribute("aria-selected",String(x===b)));
+  img.src=`img/tv/tv-${k}.webp`;img.setAttribute("data-i18n-attr",`alt:ui.tv_alt_${k}`);img.alt=L.ui[`tv_alt_${k}`];});
 document.addEventListener("click",e=>{const b=e.target.closest("[data-reach]");if(b){reachI=+b.dataset.reach;renderReach();}});
 function renderStaff(){
   const order=Object.keys(AGENTS).filter(k=>!AGENTS[k].bg&&!LEADS.includes(k)&&!COACHES.includes(k));

@@ -1,0 +1,91 @@
+{
+ "project": {
+  "id": "p-leo-birthday",
+  "key": "leo-birthday",
+  "kind": "event",
+  "title": "Leo's 16th birthday party",
+  "outcome": "A backyard party for 14 friends, done by 9 PM, under $350.",
+  "status": "active",
+  "owner_role": "events",
+  "entity_id": null,
+  "goal_id": null,
+  "todoist_section_id": null,
+  "todoist_task_id": null,
+  "ref": {},
+  "started_on": "2026-11-09",
+  "target_date": null,
+  "done_on": null,
+  "sort": 0,
+  "notes": "Cake ordered. Waiting on three RSVPs.",
+  "updated_at": "2026-11-20T09:00:00-07:00",
+  "tasks": [
+   {
+    "id": "t8128",
+    "content": "Pay the $120 bounce house deposit for Leo's party",
+    "description": "Hold expires in a week.",
+    "project": "Family",
+    "labels": [
+     "Money"
+    ],
+    "flagged": false,
+    "due": "2026-11-26",
+    "days_left": 5,
+    "overdue": false,
+    "duration_min": 10,
+    "view": null,
+    "parent_id": null
+   }
+  ],
+  "done": [
+   {
+    "content": "Pick the date",
+    "completed_at": "2026-11-19"
+   },
+   {
+    "content": "Send invites",
+    "completed_at": "2026-11-16"
+   },
+   {
+    "content": "Order the cake",
+    "completed_at": "2026-11-13"
+   },
+   {
+    "content": "Plan the menu",
+    "completed_at": "2026-11-10"
+   },
+   {
+    "content": "Book the yard games",
+    "completed_at": "2026-11-07"
+   }
+  ],
+  "next": {
+   "content": "Pay the $120 bounce house deposit for Leo's party",
+   "due": "2026-11-26"
+  },
+  "flags": [],
+  "progress": {
+   "done": 5,
+   "total": 6,
+   "pct": 83
+  },
+  "waits": [
+   {
+    "id": "w1",
+    "waiting_on": "Owen Brooks",
+    "item": "RSVP for his two kids",
+    "check_on": "2026-11-24"
+   }
+  ],
+  "goal": {
+   "level": "year",
+   "title": "Show up for the kids"
+  },
+  "dates": [],
+  "section": "Leo's party",
+  "owner_name": "Event Planner",
+  "when": "2026-12-12",
+  "days_left": 21,
+  "trip": null
+ },
+ "tasks_error": null
+}

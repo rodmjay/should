@@ -1,0 +1,16 @@
+{
+ "counts": {
+  "email": 1
+ },
+ "rows": [
+  {
+   "at": "2026-11-07T10:00:00-07:00",
+   "channel": "email",
+   "direction": "in",
+   "summary": "Hello!",
+   "group": null,
+   "via": null
+  }
+ ],
+ "count": 1
+}

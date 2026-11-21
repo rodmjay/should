@@ -1,0 +1,376 @@
+{
+ "role": {
+  "key": "coach",
+  "name": "Life Coach",
+  "nav": "coach",
+  "file": "coach/README.md",
+  "owns": "How Sam is doing on everything: weekly scorecard, gauges, goals and the Saturday sit-down",
+  "areas": [],
+  "widgets": [
+   "coach"
+  ]
+ },
+ "status": "active",
+ "summary": "Strong week on money and family; fitness slipped to 2 workouts.",
+ "items": [],
+ "needs": [],
+ "watch": [],
+ "tasks": [],
+ "routines": [
+  {
+   "name": "weekly-progress-request",
+   "when": "Fri 5:00 PM",
+   "does": "Asks every role for its week",
+   "prompt": null
+  },
+  {
+   "name": "weekly-coach-review",
+   "when": "Sat 9:00 AM",
+   "does": "Scores the week before the sit-down",
+   "prompt": null
+  }
+ ],
+ "report": {
+  "latest": {
+   "path": "coach/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "Strong week on money and family; fitness slipped to 2 workouts.",
+   "html": "<p>Strong week on money and family; fitness slipped to 2 workouts.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "coach/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Overall",
+   "value": "78",
+   "sub": "slipping on fitness",
+   "tone": "watch",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Commitments",
+   "value": "2 of 3",
+   "sub": "this week",
+   "tone": "",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [],
+ "widgets": {
+  "coach": {
+   "scorecard": {
+    "path": "coach/scorecards/2026-11-21.md",
+    "date": "2026-11-21",
+    "older": 9,
+    "html": "<p>Good week for money and family. Fitness slipped: two workouts of four. One commitment for next week: three workouts before Friday.</p>"
+   },
+   "scores": {
+    "overall": 78,
+    "overall_grade": "🟡",
+    "areas": [
+     {
+      "area": "Money",
+      "grade": "🟢",
+      "score": 86,
+      "trend": "↑",
+      "confidence": 0.9
+     },
+     {
+      "area": "Family",
+      "grade": "🟢",
+      "score": 91,
+      "trend": "→",
+      "confidence": 0.8
+     },
+     {
+      "area": "Health",
+      "grade": "🟡",
+      "score": 64,
+      "trend": "↓",
+      "confidence": 0.7
+     },
+     {
+      "area": "Home",
+      "grade": "🟢",
+      "score": 80,
+      "trend": "→",
+      "confidence": 0.6
+     },
+     {
+      "area": "Work",
+      "grade": "🟡",
+      "score": 77,
+      "trend": "↑",
+      "confidence": 0.7
+     },
+     {
+      "area": "Rest",
+      "grade": "🟡",
+      "score": 72,
+      "trend": "→",
+      "confidence": 0.5
+     }
+    ]
+   },
+   "areas": [
+    {
+     "area": "Money",
+     "scenario": "Steady",
+     "owner": "Life Coach",
+     "gauges": [
+      {
+       "name": "Low point above $250",
+       "score": 100,
+       "now": "$449",
+       "now_on": "2026-11-20",
+       "week_ago": null,
+       "target": "≥ $250",
+       "dir": "↑",
+       "good": "≥ $250",
+       "source": "database",
+       "status": "active",
+       "from_card": false,
+       "scored_as": null
+      },
+      {
+       "name": "Bills on time",
+       "score": 100,
+       "now": "100%",
+       "now_on": "2026-11-20",
+       "week_ago": null,
+       "target": "100%",
+       "dir": "✓",
+       "good": "100%",
+       "source": "database",
+       "status": "active",
+       "from_card": false,
+       "scored_as": null
+      }
+     ]
+    },
+    {
+     "area": "Family",
+     "scenario": "Steady",
+     "owner": "Life Coach",
+     "gauges": [
+      {
+       "name": "Dinners together",
+       "score": 90,
+       "now": "6 of 7",
+       "now_on": "2026-11-20",
+       "week_ago": null,
+       "target": "5+",
+       "dir": "↑",
+       "good": "5+",
+       "source": "database",
+       "status": "active",
+       "from_card": false,
+       "scored_as": null
+      },
+      {
+       "name": "One-on-one time",
+       "score": 85,
+       "now": "3",
+       "now_on": "2026-11-20",
+       "week_ago": null,
+       "target": "2 a week",
+       "dir": "↑",
+       "good": "2 a week",
+       "source": "database",
+       "status": "active",
+       "from_card": false,
+       "scored_as": null
+      }
+     ]
+    },
+    {
+     "area": "Health",
+     "scenario": "Steady",
+     "owner": "Life Coach",
+     "gauges": [
+      {
+       "name": "Workouts",
+       "score": 50,
+       "now": "2",
+       "now_on": "2026-11-20",
+       "week_ago": null,
+       "target": "4 a week",
+       "dir": "↑",
+       "good": "4 a week",
+       "source": "database",
+       "status": "active",
+       "from_card": false,
+       "scored_as": null
+      },
+      {
+       "name": "Weight",
+       "score": 70,
+       "now": "194.6",
+       "now_on": "2026-11-20",
+       "week_ago": null,
+       "target": "185",
+       "dir": "↓",
+       "good": "185",
+       "source": "database",
+       "status": "active",
+       "from_card": false,
+       "scored_as": null
+      }
+     ]
+    },
+    {
+     "area": "Home",
+     "scenario": "Steady",
+     "owner": "Life Coach",
+     "gauges": [
+      {
+       "name": "Chores on time",
+       "score": 80,
+       "now": "8 of 10",
+       "now_on": "2026-11-20",
+       "week_ago": null,
+       "target": "90%",
+       "dir": "↑",
+       "good": "90%",
+       "source": "database",
+       "status": "active",
+       "from_card": false,
+       "scored_as": null
+      }
+     ]
+    },
+    {
+     "area": "Work",
+     "scenario": "Steady",
+     "owner": "Life Coach",
+     "gauges": [
+      {
+       "name": "Focus hours",
+       "score": 77,
+       "now": "9.5",
+       "now_on": "2026-11-20",
+       "week_ago": null,
+       "target": "12",
+       "dir": "↑",
+       "good": "12",
+       "source": "database",
+       "status": "active",
+       "from_card": false,
+       "scored_as": null
+      }
+     ]
+    },
+    {
+     "area": "Rest",
+     "scenario": "Steady",
+     "owner": "Life Coach",
+     "gauges": [
+      {
+       "name": "Sunday kept clear",
+       "score": 100,
+       "now": "yes",
+       "now_on": "2026-11-20",
+       "week_ago": null,
+       "target": "yes",
+       "dir": "✓",
+       "good": "yes",
+       "source": "database",
+       "status": "active",
+       "from_card": false,
+       "scored_as": null
+      }
+     ]
+    }
+   ],
+   "source": "supabase",
+   "goals_path": "coach/GOALS.md",
+   "scenarios_path": "coach/SCENARIOS.md",
+   "scores_error": null,
+   "scenarios": [
+    {
+     "area": "Health",
+     "scenarios": [
+      {
+       "name": "Steady",
+       "active": true,
+       "owner": "Health Agent",
+       "description": "Lose slowly, keep strength",
+       "settings": [
+        {
+         "gauge": "Workouts",
+         "setting": "4 a week"
+        },
+        {
+         "gauge": "Weight",
+         "setting": "185 by June"
+        }
+       ]
+      },
+      {
+       "name": "Faster",
+       "active": false,
+       "owner": "Health Agent",
+       "description": "Tighter calories",
+       "settings": [
+        {
+         "gauge": "Workouts",
+         "setting": "5 a week"
+        },
+        {
+         "gauge": "Weight",
+         "setting": "185 by March"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "folders": [
+  {
+   "name": "coach",
+   "files": [
+    {
+     "path": "coach/README.md",
+     "size": 1799
+    },
+    {
+     "path": "coach/notes.md",
+     "size": 1984
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>coach</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

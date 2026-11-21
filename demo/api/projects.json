@@ -1,0 +1,520 @@
+{
+ "live": true,
+ "tasks_error": null,
+ "projects": [
+  {
+   "id": "p-leo-birthday",
+   "key": "leo-birthday",
+   "kind": "event",
+   "title": "Leo's 16th birthday party",
+   "outcome": "A backyard party for 14 friends, done by 9 PM, under $350.",
+   "status": "active",
+   "owner_role": "events",
+   "entity_id": null,
+   "goal_id": null,
+   "todoist_section_id": null,
+   "todoist_task_id": null,
+   "ref": {},
+   "started_on": "2026-11-09",
+   "target_date": null,
+   "done_on": null,
+   "sort": 0,
+   "notes": "Cake ordered. Waiting on three RSVPs.",
+   "updated_at": "2026-11-20T09:00:00-07:00",
+   "tasks": [
+    {
+     "id": "t8128",
+     "content": "Pay the $120 bounce house deposit for Leo's party",
+     "description": "Hold expires in a week.",
+     "project": "Family",
+     "labels": [
+      "Money"
+     ],
+     "flagged": false,
+     "due": "2026-11-26",
+     "days_left": 5,
+     "overdue": false,
+     "duration_min": 10,
+     "view": null,
+     "parent_id": null
+    }
+   ],
+   "done": [
+    {
+     "content": "Pick the date",
+     "completed_at": "2026-11-19"
+    },
+    {
+     "content": "Send invites",
+     "completed_at": "2026-11-16"
+    },
+    {
+     "content": "Order the cake",
+     "completed_at": "2026-11-13"
+    },
+    {
+     "content": "Plan the menu",
+     "completed_at": "2026-11-10"
+    },
+    {
+     "content": "Book the yard games",
+     "completed_at": "2026-11-07"
+    }
+   ],
+   "next": {
+    "content": "Pay the $120 bounce house deposit for Leo's party",
+    "due": "2026-11-26"
+   },
+   "flags": [],
+   "progress": {
+    "done": 5,
+    "total": 6,
+    "pct": 83
+   },
+   "waits": [
+    {
+     "id": "w1",
+     "waiting_on": "Owen Brooks",
+     "item": "RSVP for his two kids",
+     "check_on": "2026-11-24"
+    }
+   ],
+   "goal": {
+    "level": "year",
+    "title": "Show up for the kids"
+   },
+   "dates": [],
+   "section": "Leo's party",
+   "owner_name": "Event Planner",
+   "when": "2026-12-12",
+   "days_left": 21,
+   "trip": null
+  },
+  {
+   "id": "p-spring-coast",
+   "key": "spring-coast",
+   "kind": "vacation",
+   "title": "Spring coast trip",
+   "outcome": "Five nights by the ocean over spring break, all four of us, under $2,500.",
+   "status": "active",
+   "owner_role": "travel",
+   "entity_id": null,
+   "goal_id": null,
+   "todoist_section_id": null,
+   "todoist_task_id": null,
+   "ref": {
+    "trip_group": "spring-coast"
+   },
+   "started_on": "2026-11-01",
+   "target_date": null,
+   "done_on": null,
+   "sort": 0,
+   "notes": "Three options priced; fares dropped $38 this week.",
+   "updated_at": "2026-11-20T09:00:00-07:00",
+   "tasks": [
+    {
+     "id": "t8132",
+     "content": "Pick dates for the spring coast trip",
+     "description": "Three options are priced on the Travel desk.",
+     "project": "Travel",
+     "labels": [],
+     "flagged": false,
+     "due": null,
+     "days_left": null,
+     "overdue": false,
+     "duration_min": 15,
+     "view": null,
+     "parent_id": null
+    },
+    {
+     "id": "t8133",
+     "content": "Book Maya's passport appointment at the post office",
+     "description": "",
+     "project": "Travel",
+     "labels": [
+      "Errands"
+     ],
+     "flagged": false,
+     "due": null,
+     "days_left": null,
+     "overdue": false,
+     "duration_min": 20,
+     "view": null,
+     "parent_id": null
+    }
+   ],
+   "done": [
+    {
+     "content": "Set the budget",
+     "completed_at": "2026-11-14"
+    },
+    {
+     "content": "List three places",
+     "completed_at": "2026-11-12"
+    }
+   ],
+   "next": {
+    "content": "Pick dates for the spring coast trip",
+    "due": null
+   },
+   "flags": [],
+   "progress": {
+    "done": 2,
+    "total": 4,
+    "pct": 50
+   },
+   "waits": [],
+   "goal": {
+    "level": "year",
+    "title": "One family trip a year"
+   },
+   "dates": [],
+   "section": null,
+   "owner_name": "Travel Agent",
+   "when": null,
+   "days_left": 125,
+   "trip": {
+    "options": 3,
+    "dropped": 0,
+    "dest": [
+     "Harbor Point",
+     "Old Town",
+     "Red Mesa"
+    ],
+    "start": "2027-03-21",
+    "end": "2027-03-26",
+    "low": 2140.0,
+    "high": 2780.0,
+    "picked": null
+   }
+  },
+  {
+   "id": "p-thanksgiving",
+   "key": "thanksgiving",
+   "kind": "event",
+   "title": "Thanksgiving dinner",
+   "outcome": "Dinner for nine at our place with Grandpa Ray and the Wynns.",
+   "status": "active",
+   "owner_role": "events",
+   "entity_id": null,
+   "goal_id": null,
+   "todoist_section_id": null,
+   "todoist_task_id": null,
+   "ref": {},
+   "started_on": "2026-11-12",
+   "target_date": null,
+   "done_on": null,
+   "sort": 0,
+   "notes": "Menu set; Jess brings pies.",
+   "updated_at": "2026-11-20T09:00:00-07:00",
+   "tasks": [],
+   "done": [
+    {
+     "content": "Invite everyone",
+     "completed_at": "2026-11-20"
+    },
+    {
+     "content": "Plan the menu",
+     "completed_at": "2026-11-17"
+    },
+    {
+     "content": "Borrow folding chairs",
+     "completed_at": "2026-11-14"
+    }
+   ],
+   "next": null,
+   "flags": [],
+   "progress": {
+    "done": 3,
+    "total": 3,
+    "pct": 100
+   },
+   "waits": [],
+   "goal": null,
+   "dates": [],
+   "section": "Thanksgiving",
+   "owner_name": "Event Planner",
+   "when": "2026-11-27",
+   "days_left": 6,
+   "trip": null
+  },
+  {
+   "id": "p-lease-renewal",
+   "key": "lease-renewal",
+   "kind": "move",
+   "title": "Lease renewal",
+   "outcome": "Renew the lease for 12 months at the offered rent, with the faucet fixed first.",
+   "status": "active",
+   "owner_role": "relocation",
+   "entity_id": null,
+   "goal_id": null,
+   "todoist_section_id": null,
+   "todoist_task_id": null,
+   "ref": {},
+   "started_on": "2026-11-07",
+   "target_date": "2026-12-21",
+   "done_on": null,
+   "sort": 0,
+   "notes": "Staying is cheaper than moving this year.",
+   "updated_at": "2026-11-20T09:00:00-07:00",
+   "tasks": [
+    {
+     "id": "t8129",
+     "content": "Read and sign the lease renewal (2 pages)",
+     "description": "Rent goes up $35 a month; the rest is unchanged.",
+     "project": "Home",
+     "labels": [
+      "Home"
+     ],
+     "flagged": false,
+     "due": "2026-11-28",
+     "days_left": 7,
+     "overdue": false,
+     "duration_min": 20,
+     "view": null,
+     "parent_id": null
+    },
+    {
+     "id": "t8141",
+     "content": "Update the address at the DMV",
+     "description": "",
+     "project": "Home",
+     "labels": [
+      "Computer"
+     ],
+     "flagged": false,
+     "due": null,
+     "days_left": null,
+     "overdue": false,
+     "duration_min": 10,
+     "view": null,
+     "parent_id": null
+    }
+   ],
+   "done": [
+    {
+     "content": "Compare three listings",
+     "completed_at": "2026-11-16"
+    },
+    {
+     "content": "Price movers",
+     "completed_at": "2026-11-13"
+    }
+   ],
+   "next": {
+    "content": "Read and sign the lease renewal (2 pages)",
+    "due": "2026-11-28"
+   },
+   "flags": [],
+   "progress": {
+    "done": 2,
+    "total": 4,
+    "pct": 50
+   },
+   "waits": [
+    {
+     "id": "w2",
+     "waiting_on": "Aspen Court Properties",
+     "item": "Fix the kitchen faucet before signing",
+     "check_on": "2026-11-24"
+    }
+   ],
+   "goal": {
+    "level": "year",
+    "title": "A calm, affordable home"
+   },
+   "dates": [],
+   "section": null,
+   "owner_name": "Relocation Expert",
+   "when": null,
+   "days_left": 30,
+   "trip": null
+  },
+  {
+   "id": "p-emergency-fund",
+   "key": "emergency-fund",
+   "kind": "generic",
+   "title": "Emergency fund to $6,000",
+   "outcome": "Six thousand dollars in savings, never touched for fun.",
+   "status": "active",
+   "owner_role": "financial",
+   "entity_id": null,
+   "goal_id": null,
+   "todoist_section_id": null,
+   "todoist_task_id": null,
+   "ref": {},
+   "started_on": "2026-05-25",
+   "target_date": "2027-10-17",
+   "done_on": null,
+   "sort": 0,
+   "notes": "$150 each payday.",
+   "updated_at": "2026-11-20T09:00:00-07:00",
+   "tasks": [
+    {
+     "id": "t8102",
+     "content": "Move $150 to the emergency fund",
+     "description": "Savings ending 4425. Keeps the fund on pace for 6,000 by next fall.",
+     "project": "Money",
+     "labels": [
+      "Money"
+     ],
+     "flagged": false,
+     "due": "2026-12-04",
+     "days_left": 13,
+     "overdue": false,
+     "duration_min": 5,
+     "view": null,
+     "parent_id": null
+    }
+   ],
+   "done": [
+    {
+     "content": "Open the savings account",
+     "completed_at": "2026-09-22"
+    },
+    {
+     "content": "Set up the payday transfer",
+     "completed_at": "2026-09-19"
+    }
+   ],
+   "next": {
+    "content": "Move $150 to the emergency fund",
+    "due": "2026-12-04"
+   },
+   "flags": [],
+   "progress": {
+    "done": 2,
+    "total": 3,
+    "pct": 67
+   },
+   "waits": [],
+   "goal": {
+    "level": "year",
+    "title": "Money stays calm"
+   },
+   "dates": [],
+   "section": null,
+   "owner_name": "Financial Advisor",
+   "when": null,
+   "days_left": 330,
+   "trip": null
+  },
+  {
+   "id": "p-brightline-launch",
+   "key": "brightline-launch",
+   "kind": "business_launch",
+   "title": "Brightline Labs pilot",
+   "outcome": "Juniper Dental takes bookings through the pilot by spring.",
+   "status": "active",
+   "owner_role": "as-architect",
+   "entity_id": null,
+   "goal_id": null,
+   "todoist_section_id": null,
+   "todoist_task_id": null,
+   "ref": {},
+   "started_on": "2026-09-22",
+   "target_date": null,
+   "done_on": null,
+   "sort": 0,
+   "notes": "112 of 118 tests pass; payouts are next.",
+   "updated_at": "2026-11-20T09:00:00-07:00",
+   "tasks": [
+    {
+     "id": "t8122",
+     "content": "Review the Brightline Labs pricing page draft",
+     "description": "",
+     "project": "Business",
+     "labels": [
+      "Computer"
+     ],
+     "flagged": false,
+     "due": null,
+     "days_left": null,
+     "overdue": false,
+     "duration_min": 20,
+     "view": null,
+     "parent_id": null
+    }
+   ],
+   "done": [
+    {
+     "content": "Write the plan",
+     "completed_at": "2026-11-11"
+    },
+    {
+     "content": "Pick the stack",
+     "completed_at": "2026-11-07"
+    },
+    {
+     "content": "Build bookings",
+     "completed_at": "2026-11-05"
+    }
+   ],
+   "next": {
+    "content": "Review the Brightline Labs pricing page draft",
+    "due": null
+   },
+   "flags": [],
+   "progress": {
+    "done": 3,
+    "total": 4,
+    "pct": 75
+   },
+   "waits": [
+    {
+     "id": "w3",
+     "waiting_on": "Juniper Dental",
+     "item": "Confirm the pilot start date",
+     "check_on": "2026-11-25"
+    }
+   ],
+   "goal": {
+    "level": "year",
+    "title": "Grow the studio"
+   },
+   "dates": [],
+   "section": null,
+   "owner_name": "Software Architect",
+   "when": null,
+   "days_left": null,
+   "trip": null
+  },
+  {
+   "id": "p-garage",
+   "key": "garage",
+   "kind": "generic",
+   "title": "Clean out the garage",
+   "outcome": "Room to park the car before the first snow.",
+   "status": "someday",
+   "owner_role": "home-manager",
+   "entity_id": null,
+   "goal_id": null,
+   "todoist_section_id": null,
+   "todoist_task_id": null,
+   "ref": {},
+   "started_on": "2026-11-16",
+   "target_date": null,
+   "done_on": null,
+   "sort": 0,
+   "notes": "",
+   "updated_at": "2026-11-20T09:00:00-07:00",
+   "tasks": [],
+   "done": [],
+   "next": null,
+   "flags": [],
+   "progress": {
+    "done": 0,
+    "total": 0,
+    "pct": null
+   },
+   "waits": [],
+   "goal": null,
+   "dates": [],
+   "section": null,
+   "owner_name": "Home Manager",
+   "when": null,
+   "days_left": null,
+   "trip": null
+  }
+ ]
+}

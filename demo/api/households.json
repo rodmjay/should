@@ -1,0 +1,107 @@
+{
+ "editable": false,
+ "households": [
+  {
+   "id": "h1",
+   "name": "The Carters",
+   "address": "418 Juniper Lane",
+   "city": "Cedar Falls",
+   "region": "CO",
+   "country": "US",
+   "address_confirmed": true,
+   "members": [
+    {
+     "id": "c-0001",
+     "name": "Sam Carter",
+     "role": "head",
+     "primary_home": true
+    },
+    {
+     "id": "c-0002",
+     "name": "Nora Ellis",
+     "role": "partner",
+     "primary_home": true
+    },
+    {
+     "id": "c-0003",
+     "name": "Maya Carter",
+     "role": "child",
+     "primary_home": true
+    },
+    {
+     "id": "c-0004",
+     "name": "Leo Carter",
+     "role": "child",
+     "primary_home": true
+    }
+   ],
+   "notes": "Biscuit the dog lives here too."
+  },
+  {
+   "id": "h2",
+   "name": "Grandpa Ray",
+   "address": "22 Aspen Way",
+   "city": "Ridgeway",
+   "region": "CO",
+   "country": "US",
+   "address_confirmed": true,
+   "members": [
+    {
+     "id": "c-0005",
+     "name": "Ray Carter",
+     "role": "head",
+     "primary_home": true
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "h3",
+   "name": "The Wynns",
+   "address": "9 Larkspur Court",
+   "city": "Ridgeway",
+   "region": "CO",
+   "country": "US",
+   "address_confirmed": false,
+   "members": [
+    {
+     "id": "c-0007",
+     "name": "Jess Wynn",
+     "role": "head",
+     "primary_home": true
+    },
+    {
+     "id": "c-0008",
+     "name": "Tom Wynn",
+     "role": "partner",
+     "primary_home": true
+    },
+    {
+     "id": "c-0009",
+     "name": "Ivy Wynn",
+     "role": "child",
+     "primary_home": true
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "h4",
+   "name": "Aunt June",
+   "address": null,
+   "city": null,
+   "region": null,
+   "country": "US",
+   "address_confirmed": false,
+   "members": [
+    {
+     "id": "c-0010",
+     "name": "June Hollis",
+     "role": "head",
+     "primary_home": true
+    }
+   ],
+   "notes": ""
+  }
+ ]
+}

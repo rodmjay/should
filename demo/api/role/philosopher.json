@@ -1,0 +1,91 @@
+{
+ "role": {
+  "key": "philosopher",
+  "name": "Philosopher",
+  "nav": "philosopher",
+  "file": "knowledge/PHILOSOPHER.md",
+  "owns": "How Should thinks: the north star, the knowledge base, the reading list and feature proposals",
+  "areas": [],
+  "widgets": []
+ },
+ "status": "active",
+ "summary": "Added a page on weekly reviews; two features are being tried.",
+ "items": [],
+ "needs": [],
+ "watch": [],
+ "tasks": [],
+ "routines": [],
+ "report": {
+  "latest": {
+   "path": "knowledge/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "Added a page on weekly reviews; two features are being tried.",
+   "html": "<p>Added a page on weekly reviews; two features are being tried.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "knowledge/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Books",
+   "value": "3",
+   "sub": "on the list",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Proposals",
+   "value": "2",
+   "sub": "trying",
+   "tone": "",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [],
+ "widgets": {},
+ "folders": [
+  {
+   "name": "knowledge",
+   "files": [
+    {
+     "path": "knowledge/README.md",
+     "size": 1799
+    },
+    {
+     "path": "knowledge/notes.md",
+     "size": 1984
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>knowledge</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

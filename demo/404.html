@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" data-brand="should">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Should demo</title>
+    <!-- htmx drives the database panels the new pages borrow from the old site (/db/*) -->
+    <script>(()=>{const B='/should/demo',F=window.fetch.bind(window);
+const q=new URLSearchParams(location.search).get('p');if(q)history.replaceState(null,'',B+q);
+window.fetch=(u,o={})=>{const url=typeof u==='string'?u:u.url;
+if(url.startsWith('/api/')){if((o.method||'GET').toUpperCase()!=='GET')return Promise.resolve(new Response(JSON.stringify({ok:true,demo:true}),{headers:{'content-type':'application/json'}}));
+const path=url.split('?')[0].replace(/\/$/,'');return F(B+path+'.json').then(r=>r.ok?r:new Response('{}',{status:200,headers:{'content-type':'application/json'}}));}
+return F(u,o);};
+document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href^="/next/"]');if(a){a.setAttribute('href',B+a.getAttribute('href').slice(5));}},true);
+})();</script>
+    <script src="https://unpkg.com/htmx.org@1.9.12/dist/htmx.min.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/svg+xml" href="/should/demo/favicon.svg" />
+    <link href="/should/demo/_app/immutable/entry/start.Drbk-IAl.js" rel="modulepreload">
+		<link href="/should/demo/_app/immutable/entry/payload.DSmR2FwN.js" rel="modulepreload">
+		<link href="/should/demo/_app/immutable/chunks/CRzLMJPS.js" rel="modulepreload">
+		<link href="/should/demo/_app/immutable/chunks/CeQeG1Ok.js" rel="modulepreload">
+		<link href="/should/demo/_app/immutable/chunks/Bfge4Lr-.js" rel="modulepreload">
+		<link href="/should/demo/_app/immutable/chunks/C6skP9if.js" rel="modulepreload">
+		<link href="/should/demo/_app/immutable/chunks/DlDk9Tly.js" rel="modulepreload">
+		<link href="/should/demo/_app/immutable/chunks/DwVzjJam.js" rel="modulepreload">
+		<link href="/should/demo/_app/immutable/entry/app.CzrzjPzI.js" rel="modulepreload">
+		<link href="/should/demo/_app/immutable/nodes/0.DeaM_5rr.js" rel="modulepreload">
+		<link href="/should/demo/_app/immutable/chunks/DSnm1b4P.js" rel="modulepreload">
+		<link href="/should/demo/_app/immutable/chunks/CcAZg1_5.js" rel="modulepreload">
+		<link href="/should/demo/_app/immutable/chunks/iJVZzwMz.js" rel="modulepreload">
+		<link href="/should/demo/_app/immutable/chunks/B7BWJlkk.js" rel="modulepreload">
+		<link href="/should/demo/_app/immutable/chunks/DT2rIWjj.js" rel="modulepreload">
+		<link href="/should/demo/_app/immutable/chunks/BM1wyW0R.js" rel="modulepreload">
+		
+		<link href="/should/demo/_app/immutable/assets/Icon.DWahk0DO.css" rel="stylesheet">
+		<link href="/should/demo/_app/immutable/assets/Person.BZSMUUmg.css" rel="stylesheet">
+		<link href="/should/demo/_app/immutable/assets/0.BY_567_D.css" rel="stylesheet">
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <style>.demo-bar{white-space:nowrap}.demo-bar .db-short{display:none}@media (max-width:600px){.demo-bar .db-long{display:none}.demo-bar .db-short{display:inline}}</style><div class="demo-bar" style="font:13px/1.4 var(--md-ref-typeface-plain,system-ui);background:var(--md-sys-color-secondary-container);color:var(--md-sys-color-on-secondary-container);padding:6px max(16px,env(safe-area-inset-left,0px));text-align:center"><span class="db-long">Demo with made-up data.</span><span class="db-short">Made-up data ·</span> <a href="/should/demo/tv" style="color:inherit;font-weight:600">See it on a TV</a> · <a href="https://rodmjay.github.io/should/" style="color:inherit">Back to Should</a></div>
+    <div style="display: contents">
+			<script>
+				{
+					__sveltekit_17l4xhy = {
+						base: "/should/demo",
+						version: "1795252170486",
+						assets: "/should/demo"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					import("/should/demo/_app/immutable/entry/start.Drbk-IAl.js").then(async (kit) => {
+						kit.init(__sveltekit_17l4xhy);
+						const app = await import("/should/demo/_app/immutable/entry/app.CzrzjPzI.js");
+						kit.start(app, element);
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>

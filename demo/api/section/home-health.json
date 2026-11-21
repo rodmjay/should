@@ -1,0 +1,488 @@
+{
+ "desks": [
+  {
+   "key": "home-manager",
+   "name": "Home Manager",
+   "status": "watch",
+   "tiles": [
+    {
+     "label": "Chores this week",
+     "value": "5",
+     "sub": "2 h 15 m",
+     "tone": ""
+    },
+    {
+     "label": "Repairs",
+     "value": "1",
+     "sub": "with the landlord",
+     "tone": "watch"
+    },
+    {
+     "label": "Supplies",
+     "value": "$54",
+     "sub": "a month",
+     "tone": ""
+    }
+   ],
+   "report": {
+    "summary": "Faucet repair is with the landlord; furnace filter due Thursday.",
+    "date": "2026-11-20"
+   },
+   "act": 0,
+   "tasks": 10
+  },
+  {
+   "key": "relocation",
+   "name": "Relocation Expert",
+   "status": "watch",
+   "tiles": [
+    {
+     "label": "Lease ends",
+     "value": "1/30",
+     "sub": "renewal offered",
+     "tone": ""
+    },
+    {
+     "label": "Rent change",
+     "value": "+$35",
+     "sub": "a month",
+     "tone": ""
+    }
+   ],
+   "report": {
+    "summary": "Renewal offer reviewed; staying is cheaper than moving this year.",
+    "date": "2026-11-20"
+   },
+   "act": 0,
+   "tasks": 3
+  },
+  {
+   "key": "pets",
+   "name": "Pet Expert",
+   "status": "ok",
+   "tiles": [
+    {
+     "label": "Vet visit",
+     "value": "due",
+     "sub": "next month",
+     "tone": ""
+    },
+    {
+     "label": "Food",
+     "value": "3 weeks",
+     "sub": "left",
+     "tone": ""
+    }
+   ],
+   "report": {
+    "summary": "Vaccines are due next month; food lasts three weeks.",
+    "date": "2026-11-20"
+   },
+   "act": 0,
+   "tasks": 1
+  },
+  {
+   "key": "health",
+   "name": "Health Agent",
+   "status": "watch",
+   "tiles": [
+    {
+     "label": "Weight",
+     "value": "194.6 lb",
+     "sub": "9.6 to 185",
+     "tone": ""
+    },
+    {
+     "label": "Workouts",
+     "value": "2 of 4",
+     "sub": "this week",
+     "tone": "watch"
+    },
+    {
+     "label": "Groceries",
+     "value": "$142",
+     "sub": "this week's cart",
+     "tone": ""
+    }
+   ],
+   "report": {
+    "summary": "Meal plan is set through next Friday; groceries came in $8 under the cap.",
+    "date": "2026-11-20"
+   },
+   "act": 0,
+   "tasks": 5
+  }
+ ],
+ "tasks": [
+  {
+   "id": "t8107",
+   "content": "Renew the Subaru registration, $86",
+   "description": "Online renewal; the emissions check passed last month.",
+   "project": "Car",
+   "labels": [
+    "Computer",
+    "Money"
+   ],
+   "flagged": false,
+   "due": "2026-11-30",
+   "days_left": 9,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8108",
+   "content": "Book the oil change at Ridgeline Auto, (970) 555-0120",
+   "description": "Due by mileage (about 300 miles left).",
+   "project": "Car",
+   "labels": [
+    "Phone"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": "call"
+  },
+  {
+   "id": "t8109",
+   "content": "Rotate the tires",
+   "description": "",
+   "project": "Car",
+   "labels": [
+    "Errands"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 45,
+   "view": null
+  },
+  {
+   "id": "t8134",
+   "content": "Choose the paint color for Leo's room",
+   "description": "Three samples are on the wall.",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8135",
+   "content": "Replace the furnace filter (20x25x1)",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-24",
+   "days_left": 3,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8136",
+   "content": "Call the landlord about the dripping kitchen faucet, (970) 555-0124",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Phone"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": "call"
+  },
+  {
+   "id": "t8137",
+   "content": "Clean the gutters",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-12-04",
+   "days_left": 13,
+   "overdue": false,
+   "duration_min": 60,
+   "view": null
+  },
+  {
+   "id": "t8138",
+   "content": "Deep clean the fridge",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-27",
+   "days_left": 6,
+   "overdue": false,
+   "duration_min": 30,
+   "view": null
+  },
+  {
+   "id": "t8139",
+   "content": "Test the smoke alarms",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-12-11",
+   "days_left": 20,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8140",
+   "content": "Take the donation boxes to the thrift store",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Errands"
+   ],
+   "flagged": false,
+   "due": "2026-11-30",
+   "days_left": 9,
+   "overdue": false,
+   "duration_min": 30,
+   "view": null
+  },
+  {
+   "id": "t8129",
+   "content": "Read and sign the lease renewal (2 pages)",
+   "description": "Rent goes up $35 a month; the rest is unchanged.",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-28",
+   "days_left": 7,
+   "overdue": false,
+   "duration_min": 20,
+   "view": null
+  },
+  {
+   "id": "t8141",
+   "content": "Update the address at the DMV",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8130",
+   "content": "Book Biscuit's yearly vet visit, (970) 555-0122",
+   "description": "Vaccines due next month.",
+   "project": "Home",
+   "labels": [
+    "Phone"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": "call"
+  },
+  {
+   "id": "t8110",
+   "content": "Schedule Leo's sports physical, (970) 555-0119",
+   "description": "Needed before spring soccer sign-ups.",
+   "project": "Health",
+   "labels": [
+    "Phone"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": "call"
+  },
+  {
+   "id": "t8111",
+   "content": "Pick up the prescription at Pine Street Pharmacy",
+   "description": "Ready after 3 PM.",
+   "project": "Health",
+   "labels": [
+    "Errands"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 15,
+   "view": null
+  },
+  {
+   "id": "t8112",
+   "content": "Cook: chicken tinga tacos",
+   "description": "Thaw the chicken in the morning.",
+   "project": "Health",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-21",
+   "days_left": 0,
+   "overdue": false,
+   "duration_min": 45,
+   "view": "recipe"
+  },
+  {
+   "id": "t8113",
+   "content": "Workout: upper body",
+   "description": "",
+   "project": "Health",
+   "labels": [
+    "Health"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 50,
+   "view": null
+  },
+  {
+   "id": "t8114",
+   "content": "Approve the Walmart cart for the week, $142",
+   "description": "Cart filled from the meal plan.",
+   "project": "Shopping",
+   "labels": [
+    "Computer",
+    "Money"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  }
+ ],
+ "task_count": 18,
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "hi": {
+  "error": null,
+  "weight": {
+   "readings": [
+    [
+     "2026-10-17",
+     196.5
+    ],
+    [
+     "2026-10-24",
+     196.1
+    ],
+    [
+     "2026-10-31",
+     195.4
+    ],
+    [
+     "2026-11-07",
+     195.3
+    ],
+    [
+     "2026-11-14",
+     195.2
+    ],
+    [
+     "2026-11-21",
+     194.5
+    ]
+   ],
+   "goal": 185.0
+  },
+  "events": [
+   {
+    "day": "2026-11-21",
+    "time": "17:00",
+    "title": "Soccer practice",
+    "location": "Ridgeway Park"
+   },
+   {
+    "day": "2026-11-22",
+    "time": "",
+    "title": "Family day",
+    "location": null
+   },
+   {
+    "day": "2026-11-23",
+    "time": "08:30",
+    "title": "Dentist, Maya",
+    "location": "Cedar Falls Dental"
+   },
+   {
+    "day": "2026-11-24",
+    "time": "19:00",
+    "title": "Date night",
+    "location": "Trailhead Tacos"
+   },
+   {
+    "day": "2026-11-24",
+    "time": "12:00",
+    "title": "Grandpa Ray visits for lunch",
+    "location": null
+   },
+   {
+    "day": "2026-11-25",
+    "time": "10:30",
+    "title": "Library story time",
+    "location": "Cedar Falls Library"
+   },
+   {
+    "day": "2026-11-26",
+    "time": "16:00",
+    "title": "Leo's game",
+    "location": "Ridgeway Park"
+   },
+   {
+    "day": "2026-11-26",
+    "time": "17:00",
+    "title": "Soccer practice",
+    "location": "Ridgeway Park"
+   }
+  ]
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "channels": [
+  "text",
+  "call",
+  "whatsapp",
+  "linkedin",
+  "email",
+  "event",
+  "contact",
+  "company",
+  "document",
+  "money"
+ ],
+ "results": [
+  {
+   "channel": "text",
+   "at": "2026-11-18T18:00:00-07:00",
+   "title": "Text with Nora Ellis",
+   "contact_name": "Nora Ellis",
+   "contact_id": "c-0002",
+   "snippet": "Can you grab tortillas on the way home? Tacos tonight."
+  },
+  {
+   "channel": "money",
+   "at": "2026-11-17T12:00:00-07:00",
+   "title": "Valley Fresh Market",
+   "contact_name": null,
+   "contact_id": null,
+   "snippet": "Groceries, $86.40, checking ending 4417."
+  },
+  {
+   "channel": "event",
+   "at": "2026-11-15T10:00:00-07:00",
+   "title": "Taco night with the Wynns",
+   "contact_name": "Jess Wynn",
+   "contact_id": "c-0007",
+   "snippet": "Dinner at our place; Jess brings dessert."
+  },
+  {
+   "channel": "contact",
+   "at": "2026-10-22T09:00:00-07:00",
+   "title": "Trailhead Tacos",
+   "contact_name": null,
+   "contact_id": null,
+   "snippet": "Favorite spot, patio, 4.5 stars."
+  }
+ ]
+}

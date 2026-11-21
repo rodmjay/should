@@ -1,0 +1,870 @@
+{
+ "role": {
+  "key": "health",
+  "name": "Health Agent",
+  "nav": "health",
+  "file": "nutrition/COACH.md",
+  "owns": "Training, targets, meal plans, recipes, grocery lists and carts, weigh-ins, appointments and claims",
+  "areas": [
+   "health"
+  ],
+  "widgets": [
+   "body",
+   "training"
+  ]
+ },
+ "status": "watch",
+ "summary": "Meal plan is set through next Friday; groceries came in $8 under the cap.",
+ "items": [
+  {
+   "text": "Workouts: 2 of 4 this week",
+   "when": null,
+   "level": "watch",
+   "link": "/next/r/health#training"
+  },
+  {
+   "text": "Leo's sports physical isn't booked",
+   "when": null,
+   "level": "watch",
+   "link": "/next/r/health#todos"
+  }
+ ],
+ "needs": [],
+ "watch": [
+  {
+   "text": "Workouts: 2 of 4 this week",
+   "when": null,
+   "level": "watch",
+   "link": "/next/r/health#training"
+  },
+  {
+   "text": "Leo's sports physical isn't booked",
+   "when": null,
+   "level": "watch",
+   "link": "/next/r/health#todos"
+  }
+ ],
+ "tasks": [
+  {
+   "id": "t8110",
+   "content": "Schedule Leo's sports physical, (970) 555-0119",
+   "description": "Needed before spring soccer sign-ups.",
+   "project": "Health",
+   "labels": [
+    "Phone"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": "call"
+  },
+  {
+   "id": "t8111",
+   "content": "Pick up the prescription at Pine Street Pharmacy",
+   "description": "Ready after 3 PM.",
+   "project": "Health",
+   "labels": [
+    "Errands"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 15,
+   "view": null
+  },
+  {
+   "id": "t8112",
+   "content": "Cook: chicken tinga tacos",
+   "description": "Thaw the chicken in the morning.",
+   "project": "Health",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-21",
+   "days_left": 0,
+   "overdue": false,
+   "duration_min": 45,
+   "view": "recipe"
+  },
+  {
+   "id": "t8113",
+   "content": "Workout: upper body",
+   "description": "",
+   "project": "Health",
+   "labels": [
+    "Health"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 50,
+   "view": null
+  },
+  {
+   "id": "t8114",
+   "content": "Approve the Walmart cart for the week, $142",
+   "description": "Cart filled from the meal plan.",
+   "project": "Shopping",
+   "labels": [
+    "Computer",
+    "Money"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  }
+ ],
+ "routines": [
+  {
+   "name": "biweekly-meal-plan",
+   "when": "Fri 6:00 PM",
+   "does": "Plans two weeks of meals",
+   "prompt": null
+  },
+  {
+   "name": "weekly-walmart-cart",
+   "when": "Sat 9:00 AM",
+   "does": "Fills the grocery cart from the plan",
+   "prompt": null
+  },
+  {
+   "name": "weekly-weigh-in",
+   "when": "Sun 8:00 AM",
+   "does": "Reads the scale into the database",
+   "prompt": null
+  }
+ ],
+ "report": {
+  "latest": {
+   "path": "nutrition/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "Meal plan is set through next Friday; groceries came in $8 under the cap.",
+   "html": "<p>Meal plan is set through next Friday; groceries came in $8 under the cap.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "nutrition/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Weight",
+   "value": "194.6 lb",
+   "sub": "9.6 to 185",
+   "tone": "",
+   "trend": [
+    196.5,
+    196.1,
+    195.4,
+    195.3,
+    195.2,
+    194.5,
+    196.5,
+    196.1,
+    195.4,
+    195.3,
+    195.2,
+    194.5
+   ],
+   "link": null
+  },
+  {
+   "label": "Workouts",
+   "value": "2 of 4",
+   "sub": "this week",
+   "tone": "watch",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Groceries",
+   "value": "$142",
+   "sub": "this week's cart",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Protein",
+   "value": "141 g",
+   "sub": "7-day average",
+   "tone": "",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [
+  {
+   "key": "health",
+   "name": "Health",
+   "d": {
+    "sec": {
+     "key": "health",
+     "name": "Health",
+     "folders": [
+      "nutrition",
+      "shopping"
+     ],
+     "brief": [
+      "Weight, meals, groceries and training."
+     ],
+     "blurb": "Weight, meals, groceries and training.",
+     "words": [
+      "health"
+     ]
+    },
+    "area": {
+     "sec": {
+      "key": "health",
+      "name": "Health",
+      "folders": [
+       "nutrition",
+       "shopping"
+      ],
+      "brief": [
+       "Weight, meals, groceries and training."
+      ],
+      "blurb": "Weight, meals, groceries and training.",
+      "words": [
+       "health"
+      ]
+     },
+     "status": "watch",
+     "summary": "Meal plan is set through next Friday; groceries came in $8 under the cap.",
+     "items": [
+      {
+       "text": "Workouts: 2 of 4 this week",
+       "when": null,
+       "level": "watch",
+       "link": "/next/r/health#training"
+      },
+      {
+       "text": "Leo's sports physical isn't booked",
+       "when": null,
+       "level": "watch",
+       "link": "/next/r/health#todos"
+      }
+     ],
+     "tasks": [
+      {
+       "id": "t8110",
+       "content": "Schedule Leo's sports physical, (970) 555-0119",
+       "description": "Needed before spring soccer sign-ups.",
+       "project": "Health",
+       "labels": [
+        "Phone"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": "call"
+      },
+      {
+       "id": "t8111",
+       "content": "Pick up the prescription at Pine Street Pharmacy",
+       "description": "Ready after 3 PM.",
+       "project": "Health",
+       "labels": [
+        "Errands"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 15,
+       "view": null
+      },
+      {
+       "id": "t8112",
+       "content": "Cook: chicken tinga tacos",
+       "description": "Thaw the chicken in the morning.",
+       "project": "Health",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-21",
+       "days_left": 0,
+       "overdue": false,
+       "duration_min": 45,
+       "view": "recipe"
+      },
+      {
+       "id": "t8113",
+       "content": "Workout: upper body",
+       "description": "",
+       "project": "Health",
+       "labels": [
+        "Health"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 50,
+       "view": null
+      },
+      {
+       "id": "t8114",
+       "content": "Approve the Walmart cart for the week, $142",
+       "description": "Cart filled from the meal plan.",
+       "project": "Shopping",
+       "labels": [
+        "Computer",
+        "Money"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      }
+     ]
+    },
+    "weight": {
+     "latest": [
+      "2026-11-20T06:40:00-07:00",
+      194.6
+     ],
+     "goal": 185.0,
+     "start": [
+      "2026-10-17",
+      196.5
+     ],
+     "daily": [
+      [
+       "2026-10-22",
+       196.4
+      ],
+      [
+       "2026-10-23",
+       196.2
+      ],
+      [
+       "2026-10-24",
+       195.9
+      ],
+      [
+       "2026-10-25",
+       195.7
+      ],
+      [
+       "2026-10-26",
+       195.5
+      ],
+      [
+       "2026-10-27",
+       195.4
+      ],
+      [
+       "2026-10-28",
+       195.4
+      ],
+      [
+       "2026-10-29",
+       195.5
+      ],
+      [
+       "2026-10-30",
+       195.3
+      ],
+      [
+       "2026-10-31",
+       195.2
+      ],
+      [
+       "2026-11-01",
+       195.2
+      ],
+      [
+       "2026-11-02",
+       195.0
+      ],
+      [
+       "2026-11-03",
+       195.1
+      ],
+      [
+       "2026-11-04",
+       195.2
+      ],
+      [
+       "2026-11-05",
+       195.2
+      ],
+      [
+       "2026-11-06",
+       195.2
+      ],
+      [
+       "2026-11-07",
+       195.0
+      ],
+      [
+       "2026-11-08",
+       195.1
+      ],
+      [
+       "2026-11-09",
+       195.1
+      ],
+      [
+       "2026-11-10",
+       195.2
+      ],
+      [
+       "2026-11-11",
+       195.3
+      ],
+      [
+       "2026-11-12",
+       195.3
+      ],
+      [
+       "2026-11-13",
+       195.2
+      ],
+      [
+       "2026-11-14",
+       195.0
+      ],
+      [
+       "2026-11-15",
+       195.1
+      ],
+      [
+       "2026-11-16",
+       195.0
+      ],
+      [
+       "2026-11-17",
+       194.8
+      ],
+      [
+       "2026-11-18",
+       194.7
+      ],
+      [
+       "2026-11-19",
+       194.7
+      ],
+      [
+       "2026-11-20",
+       194.6
+      ]
+     ],
+     "weekly": [
+      [
+       "2026-10-17",
+       196.5
+      ],
+      [
+       "2026-10-24",
+       196.1
+      ],
+      [
+       "2026-10-31",
+       195.4
+      ],
+      [
+       "2026-11-07",
+       195.3
+      ],
+      [
+       "2026-11-14",
+       195.2
+      ],
+      [
+       "2026-11-21",
+       194.5
+      ]
+     ],
+     "progress": [
+      {
+       "week_of": "2026-10-17",
+       "avg_weight_lb": 196.5,
+       "avg_body_fat_pct": 24.6,
+       "avg_steps": 6800,
+       "groceries_usd": 138,
+       "dining_usd": 42,
+       "notes": ""
+      },
+      {
+       "week_of": "2026-10-24",
+       "avg_weight_lb": 196.1,
+       "avg_body_fat_pct": 24.5,
+       "avg_steps": 7010,
+       "groceries_usd": 140,
+       "dining_usd": 39,
+       "notes": ""
+      },
+      {
+       "week_of": "2026-10-31",
+       "avg_weight_lb": 195.4,
+       "avg_body_fat_pct": 24.4,
+       "avg_steps": 7220,
+       "groceries_usd": 142,
+       "dining_usd": 36,
+       "notes": ""
+      },
+      {
+       "week_of": "2026-11-07",
+       "avg_weight_lb": 195.3,
+       "avg_body_fat_pct": 24.3,
+       "avg_steps": 7430,
+       "groceries_usd": 144,
+       "dining_usd": 33,
+       "notes": ""
+      },
+      {
+       "week_of": "2026-11-14",
+       "avg_weight_lb": 195.2,
+       "avg_body_fat_pct": 24.2,
+       "avg_steps": 7640,
+       "groceries_usd": 146,
+       "dining_usd": 30,
+       "notes": ""
+      },
+      {
+       "week_of": "2026-11-21",
+       "avg_weight_lb": 194.5,
+       "avg_body_fat_pct": 24.1,
+       "avg_steps": 7850,
+       "groceries_usd": 148,
+       "dining_usd": 27,
+       "notes": ""
+      }
+     ]
+    },
+    "weight_svg": "<svg viewBox=\"0 0 640 160\" role=\"img\" aria-label=\"Weight, last 30 days\" style=\"width:100%;height:auto\"><polyline fill=\"none\" stroke=\"var(--r-health, #2e7d32)\" stroke-width=\"2.5\" points=\"20.0,20.0 40.7,33.3 61.4,53.3 82.1,66.7 102.8,80.0 123.4,86.7 144.1,86.7 164.8,80.0 185.5,93.3 206.2,100.0 226.9,100.0 247.6,113.3 268.3,106.7 289.0,100.0 309.7,100.0 330.3,100.0 351.0,113.3 371.7,106.7 392.4,106.7 413.1,100.0 433.8,93.3 454.5,93.3 475.2,100.0 495.9,113.3 516.6,106.7 537.2,113.3 557.9,126.7 578.6,133.3 599.3,133.3 620.0,140.0\"/></svg>",
+    "weight_sync": {
+     "synced": "11/21 6:05 AM",
+     "latest": "194.6 lb on 11/20"
+    },
+    "plan": {
+     "days": {
+      "2026-11-21": {
+       "breakfast": "Veggie egg scramble and fruit",
+       "lunch": "Turkey wraps",
+       "snack": "Apple and peanut butter",
+       "dinner": "Chicken tinga tacos",
+       "sweet": "Mango rice pudding"
+      },
+      "2026-11-22": {
+       "breakfast": "Oatmeal with berries",
+       "lunch": "Leftover taco bowl",
+       "snack": "Greek yogurt",
+       "dinner": "Sheet-pan lemon salmon",
+       "sweet": "Dark chocolate square"
+      },
+      "2026-11-23": {
+       "breakfast": "Eggs and toast",
+       "lunch": "Chicken salad",
+       "snack": "Carrots and hummus",
+       "dinner": "Slow-cooker beef chili",
+       "sweet": "Cornbread"
+      },
+      "2026-11-24": {
+       "breakfast": "Smoothie",
+       "lunch": "Chili leftovers",
+       "snack": "Trail mix",
+       "dinner": "Rice pilaf and chicken",
+       "sweet": "Fruit"
+      },
+      "2026-11-25": {
+       "breakfast": "Veggie egg scramble and fruit",
+       "lunch": "Turkey wraps",
+       "snack": "Apple and peanut butter",
+       "dinner": "Chicken tinga tacos",
+       "sweet": "Mango rice pudding"
+      },
+      "2026-11-26": {
+       "breakfast": "Oatmeal with berries",
+       "lunch": "Leftover taco bowl",
+       "snack": "Greek yogurt",
+       "dinner": "Sheet-pan lemon salmon",
+       "sweet": "Dark chocolate square"
+      },
+      "2026-11-27": {
+       "breakfast": "Eggs and toast",
+       "lunch": "Chicken salad",
+       "snack": "Carrots and hummus",
+       "dinner": "Slow-cooker beef chili",
+       "sweet": "Cornbread"
+      }
+     },
+     "grocery_cap_per_week": [
+      150
+     ],
+     "note": "Cooking at home five nights; one pizza night with the kids.",
+     "shops": [
+      {
+       "date": "2026-11-21",
+       "est_total": 76.25,
+       "cap": 150,
+       "items": [
+        {
+         "item": "Chicken thighs, 2 lb",
+         "qty": 2,
+         "est_cost": 9.48
+        },
+        {
+         "item": "Corn tortillas",
+         "qty": 1,
+         "est_cost": 2.98
+        },
+        {
+         "item": "Salmon fillets",
+         "qty": 1,
+         "est_cost": 14.97
+        },
+        {
+         "item": "Green beans, 1 lb",
+         "qty": 2,
+         "est_cost": 3.96
+        },
+        {
+         "item": "Ground beef, 2 lb",
+         "qty": 1,
+         "est_cost": 10.42
+        },
+        {
+         "item": "Kidney beans",
+         "qty": 2,
+         "est_cost": 1.96
+        },
+        {
+         "item": "Long-grain rice",
+         "qty": 1,
+         "est_cost": 3.24
+        },
+        {
+         "item": "Mangoes",
+         "qty": 3,
+         "est_cost": 2.97
+        },
+        {
+         "item": "Eggs, 18 count",
+         "qty": 1,
+         "est_cost": 3.88
+        },
+        {
+         "item": "Berries",
+         "qty": 2,
+         "est_cost": 7.96
+        },
+        {
+         "item": "Apples, 3 lb",
+         "qty": 1,
+         "est_cost": 4.47
+        },
+        {
+         "item": "Greek yogurt",
+         "qty": 2,
+         "est_cost": 9.96
+        }
+       ]
+      }
+     ],
+     "cut": [
+      "Swapped steak night for chili to stay under the cap."
+     ],
+     "start": "2026-11-21",
+     "end": "2026-11-27",
+     "path": "nutrition/plans/this-week.md"
+    }
+   }
+  }
+ ],
+ "widgets": {
+  "training": {
+   "path": "nutrition/plan.md",
+   "week": [
+    {
+     "day": "Mon",
+     "session": "Upper body",
+     "where": "Home gym",
+     "rest": false,
+     "lifts": [
+      {
+       "name": "Bench press",
+       "sets": "3 × 8",
+       "metric": "bench_lb",
+       "log": {
+        "last": 135,
+        "next": 140,
+        "on": "2026-11-14",
+        "why": "All reps done last time",
+        "note": ""
+       }
+      },
+      {
+       "name": "Rows",
+       "sets": "3 × 10",
+       "metric": null,
+       "log": null
+      }
+     ]
+    },
+    {
+     "day": "Tue",
+     "session": "Walk",
+     "where": "River trail",
+     "rest": false,
+     "lifts": []
+    },
+    {
+     "day": "Wed",
+     "session": "Lower body",
+     "where": "Home gym",
+     "rest": false,
+     "lifts": [
+      {
+       "name": "Squat",
+       "sets": "3 × 5",
+       "metric": "squat_lb",
+       "log": {
+        "last": 165,
+        "next": 170,
+        "on": "2026-11-14",
+        "why": "All reps done last time",
+        "note": ""
+       }
+      },
+      {
+       "name": "Lunges",
+       "sets": "3 × 10",
+       "metric": null,
+       "log": null
+      }
+     ]
+    },
+    {
+     "day": "Thu",
+     "session": "Rest",
+     "where": "",
+     "rest": true,
+     "lifts": []
+    },
+    {
+     "day": "Fri",
+     "session": "Full body",
+     "where": "Home gym",
+     "rest": false,
+     "lifts": [
+      {
+       "name": "Deadlift",
+       "sets": "1 × 5",
+       "metric": "deadlift_lb",
+       "log": {
+        "last": 205,
+        "next": 210,
+        "on": "2026-11-14",
+        "why": "All reps done last time",
+        "note": ""
+       }
+      },
+      {
+       "name": "Push-ups",
+       "sets": "3 × 15",
+       "metric": null,
+       "log": null
+      }
+     ]
+    },
+    {
+     "day": "Sat",
+     "session": "Family hike",
+     "where": "Cedar Hollow",
+     "rest": false,
+     "lifts": []
+    }
+   ],
+   "lifts_live": true,
+   "lifts_logged": true,
+   "garage": "<p>Bar, plates and a bench in the garage.</p>",
+   "clean_rules": null,
+   "rules": "<p>Add 5 lb when every set is done with good form.</p>"
+  }
+ },
+ "folders": [
+  {
+   "name": "nutrition",
+   "files": [
+    {
+     "path": "nutrition/README.md",
+     "size": 1799
+    },
+    {
+     "path": "nutrition/COACH.md",
+     "size": 1984
+    },
+    {
+     "path": "nutrition/menu.md",
+     "size": 2095
+    },
+    {
+     "path": "nutrition/plan.md",
+     "size": 2354
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>nutrition</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  },
+  {
+   "name": "shopping",
+   "files": [
+    {
+     "path": "shopping/README.md",
+     "size": 1799
+    },
+    {
+     "path": "shopping/wishlist.md",
+     "size": 2428
+    },
+    {
+     "path": "shopping/staples.csv",
+     "size": 2835
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>shopping</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

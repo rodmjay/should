@@ -1,0 +1,284 @@
+{
+ "role": {
+  "key": "gifts",
+  "name": "Gift Concierge",
+  "nav": "gifts",
+  "file": "gifts/CONCIERGE.md",
+  "owns": "Birthdays and occasions for family and close friends: gifts, budgets and cards; fills the cart, Sam checks out",
+  "areas": [],
+  "widgets": [
+   "gifts"
+  ]
+ },
+ "status": "watch",
+ "summary": "Maya's gift is picked and in the cart; two cards go out next week.",
+ "items": [
+  {
+   "text": "Maya's birthday in 4 days: order the gift today",
+   "when": "2026-11-21",
+   "level": "watch",
+   "link": "/next/r/gifts#gifts"
+  }
+ ],
+ "needs": [],
+ "watch": [
+  {
+   "text": "Maya's birthday in 4 days: order the gift today",
+   "when": "2026-11-21",
+   "level": "watch",
+   "link": "/next/r/gifts#gifts"
+  }
+ ],
+ "tasks": [
+  {
+   "id": "t8115",
+   "content": "Order Maya's birthday gift (link in the notes)",
+   "description": "Watercolor set, $34. Arrives in 2 days.",
+   "project": "Shopping",
+   "labels": [
+    "Computer",
+    "Money"
+   ],
+   "flagged": true,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  }
+ ],
+ "routines": [
+  {
+   "name": "weekly-gift-check",
+   "when": "Mon 7:00 AM",
+   "does": "Looks 90 days ahead for birthdays and occasions",
+   "prompt": null
+  }
+ ],
+ "report": {
+  "latest": {
+   "path": "gifts/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "Maya's gift is picked and in the cart; two cards go out next week.",
+   "html": "<p>Maya's gift is picked and in the cart; two cards go out next week.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "gifts/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Next occasion",
+   "value": "Maya",
+   "sub": "in 4 days",
+   "tone": "watch",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Gift budget",
+   "value": "$1,140",
+   "sub": "this year",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Cards to mail",
+   "value": "2",
+   "sub": "this month",
+   "tone": "",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [],
+ "widgets": {
+  "gifts": {
+   "live": true,
+   "days": 90,
+   "error": null,
+   "upcoming": [
+    {
+     "date": "2026-11-25",
+     "name": "Maya",
+     "occasion": "birthday (12)",
+     "address_ok": true,
+     "notes": "Watercolor set picked",
+     "days_left": 4,
+     "lead_days": 5,
+     "budget": 60
+    },
+    {
+     "date": "2026-12-10",
+     "name": "Leo",
+     "occasion": "birthday (16)",
+     "address_ok": true,
+     "notes": "Party on the Saturday",
+     "days_left": 19,
+     "lead_days": 7,
+     "budget": 80
+    },
+    {
+     "date": "2026-12-29",
+     "name": "Ivy Wynn",
+     "occasion": "birthday (9)",
+     "address_ok": false,
+     "notes": "",
+     "days_left": 38,
+     "lead_days": 10,
+     "budget": 30
+    },
+    {
+     "date": "2027-02-06",
+     "name": "Grandpa Ray",
+     "occasion": "birthday (71)",
+     "address_ok": true,
+     "notes": "Photo book idea",
+     "days_left": 77,
+     "lead_days": 14,
+     "budget": 50
+    }
+   ],
+   "budget": {
+    "path": "gifts/budget.md",
+    "people": [
+     {
+      "person": "Maya",
+      "birthday": "11/25",
+      "birthday_amt": 60,
+      "christmas": "$80 art kit",
+      "other": "Easter $15",
+      "year": 155
+     },
+     {
+      "person": "Leo",
+      "birthday": "12/10",
+      "birthday_amt": 80,
+      "christmas": "$80 headphones",
+      "other": "",
+      "year": 160
+     },
+     {
+      "person": "Nora",
+      "birthday": "7/2",
+      "birthday_amt": 75,
+      "christmas": "$90 boots",
+      "other": "Anniversary $60",
+      "year": 225
+     },
+     {
+      "person": "Grandpa Ray",
+      "birthday": "2/6",
+      "birthday_amt": 50,
+      "christmas": "$40 photo book",
+      "other": "",
+      "year": 90
+     },
+     {
+      "person": "Jess and Tom",
+      "birthday": "5/21",
+      "birthday_amt": 30,
+      "christmas": "$40 game",
+      "other": "",
+      "year": 70
+     },
+     {
+      "person": "Ivy Wynn",
+      "birthday": "12/29",
+      "birthday_amt": 30,
+      "christmas": "$25 books",
+      "other": "",
+      "year": 55
+     }
+    ],
+    "total": {
+     "birthday_amt": 325,
+     "christmas": "$355",
+     "other": "$75",
+     "year": 755
+    }
+   },
+   "bills": [
+    {
+     "name": "Gift fund",
+     "frequency": "monthly",
+     "next_due": "2026-12-01",
+     "status": "active",
+     "amount_usd": 60
+    }
+   ],
+   "christmas": {
+    "path": "gifts/holidays.md",
+    "on_time": [
+     {
+      "Person": "Maya",
+      "Gift": "Art kit",
+      "Price": "$80",
+      "Where": "[Art store](https://example.com/art-kit)"
+     },
+     {
+      "Person": "Leo",
+      "Gift": "Headphones",
+      "Price": "$80",
+      "Where": "[Electronics shop](https://example.com/headphones)"
+     }
+    ],
+    "january": [],
+    "missing": "Ivy's mailing address."
+   },
+   "missing": [
+    {
+     "name": "Ivy Wynn",
+     "what": "mailing address"
+    },
+    {
+     "name": "Marco Reyes",
+     "what": "birthday"
+    }
+   ]
+  }
+ },
+ "folders": [
+  {
+   "name": "gifts",
+   "files": [
+    {
+     "path": "gifts/README.md",
+     "size": 1799
+    },
+    {
+     "path": "gifts/notes.md",
+     "size": 1984
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>gifts</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

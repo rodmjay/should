@@ -1,0 +1,2470 @@
+{
+ "from": "2026-11-21",
+ "to": "2027-02-20",
+ "days": 91,
+ "settings": {
+  "cashflow_daily_spend": "18.0",
+  "cashflow_account_last4": "4417",
+  "cashflow_payday_anchor": "2026-01-02",
+  "cashflow_payday_every_days": "14",
+  "cashflow_low_point_bar": "250",
+  "cashflow_net_pay": "2180.4"
+ },
+ "periods": [
+  {
+   "period_start": "2026-11-21",
+   "period_end": "2026-12-03",
+   "payday": "2026-12-04",
+   "opening": 2240.39,
+   "income": 0.0,
+   "bills": 1345.0,
+   "extra": 446.0,
+   "low_point": 449.39,
+   "low_on": "2026-12-03",
+   "closing": 449.39,
+   "below_bar": false,
+   "bar": 250,
+   "extra_items": [
+    {
+     "label": "Everyday spending",
+     "amount": 216
+    },
+    {
+     "label": "Gas",
+     "amount": 90
+    },
+    {
+     "label": "Groceries",
+     "amount": 140
+    }
+   ]
+  },
+  {
+   "period_start": "2026-12-04",
+   "period_end": "2026-12-17",
+   "payday": "2026-12-18",
+   "opening": 449.39,
+   "income": 2180.4,
+   "bills": 1124.08,
+   "extra": 772.0,
+   "low_point": 733.71,
+   "low_on": "2026-12-17",
+   "closing": 733.71,
+   "below_bar": false,
+   "bar": 250,
+   "extra_items": [
+    {
+     "label": "Emergency fund transfer",
+     "amount": 150
+    },
+    {
+     "label": "Everyday spending",
+     "amount": 252
+    },
+    {
+     "label": "Groceries",
+     "amount": 280
+    },
+    {
+     "label": "Gas",
+     "amount": 90
+    }
+   ]
+  },
+  {
+   "period_start": "2026-12-18",
+   "period_end": "2026-12-31",
+   "payday": "2027-01-01",
+   "opening": 733.71,
+   "income": 2180.4,
+   "bills": 203.74,
+   "extra": 772.0,
+   "low_point": 1938.37,
+   "low_on": "2026-12-31",
+   "closing": 1938.37,
+   "below_bar": false,
+   "bar": 250,
+   "extra_items": [
+    {
+     "label": "Emergency fund transfer",
+     "amount": 150
+    },
+    {
+     "label": "Everyday spending",
+     "amount": 252
+    },
+    {
+     "label": "Groceries",
+     "amount": 280
+    },
+    {
+     "label": "Gas",
+     "amount": 90
+    }
+   ]
+  },
+  {
+   "period_start": "2027-01-01",
+   "period_end": "2027-01-14",
+   "payday": "2027-01-15",
+   "opening": 1938.37,
+   "income": 2180.4,
+   "bills": 1942.08,
+   "extra": 772.0,
+   "low_point": 1404.69,
+   "low_on": "2027-01-14",
+   "closing": 1404.69,
+   "below_bar": false,
+   "bar": 250,
+   "extra_items": [
+    {
+     "label": "Emergency fund transfer",
+     "amount": 150
+    },
+    {
+     "label": "Everyday spending",
+     "amount": 252
+    },
+    {
+     "label": "Groceries",
+     "amount": 280
+    },
+    {
+     "label": "Gas",
+     "amount": 90
+    }
+   ]
+  },
+  {
+   "period_start": "2027-01-15",
+   "period_end": "2027-01-28",
+   "payday": "2027-01-29",
+   "opening": 1404.69,
+   "income": 2180.4,
+   "bills": 612.74,
+   "extra": 772.0,
+   "low_point": 2200.35,
+   "low_on": "2027-01-28",
+   "closing": 2200.35,
+   "below_bar": false,
+   "bar": 250,
+   "extra_items": [
+    {
+     "label": "Emergency fund transfer",
+     "amount": 150
+    },
+    {
+     "label": "Everyday spending",
+     "amount": 252
+    },
+    {
+     "label": "Groceries",
+     "amount": 280
+    },
+    {
+     "label": "Gas",
+     "amount": 90
+    }
+   ]
+  },
+  {
+   "period_start": "2027-01-29",
+   "period_end": "2027-02-11",
+   "payday": "2027-02-12",
+   "opening": 2200.35,
+   "income": 2180.4,
+   "bills": 1809.89,
+   "extra": 772.0,
+   "low_point": 1798.86,
+   "low_on": "2027-02-11",
+   "closing": 1798.86,
+   "below_bar": false,
+   "bar": 250,
+   "extra_items": [
+    {
+     "label": "Emergency fund transfer",
+     "amount": 150
+    },
+    {
+     "label": "Everyday spending",
+     "amount": 252
+    },
+    {
+     "label": "Groceries",
+     "amount": 280
+    },
+    {
+     "label": "Gas",
+     "amount": 90
+    }
+   ]
+  },
+  {
+   "period_start": "2027-02-12",
+   "period_end": "2027-02-25",
+   "payday": "2027-02-26",
+   "opening": 1798.86,
+   "income": 2180.4,
+   "bills": 612.93,
+   "extra": 637.0,
+   "low_point": 2729.33,
+   "low_on": "2027-02-20",
+   "closing": 2729.33,
+   "below_bar": false,
+   "bar": 250,
+   "extra_items": [
+    {
+     "label": "Emergency fund transfer",
+     "amount": 150
+    },
+    {
+     "label": "Everyday spending",
+     "amount": 162
+    },
+    {
+     "label": "Groceries",
+     "amount": 280
+    },
+    {
+     "label": "Gas",
+     "amount": 45
+    }
+   ]
+  }
+ ],
+ "daily": [
+  {
+   "day": "2026-11-22",
+   "balance": 2104.39,
+   "income": 0.0,
+   "bills": 118.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Peak Wireless, 3 lines",
+     "amount": -118.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-11-23",
+   "balance": 2086.39,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-11-24",
+   "balance": 2068.39,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-11-25",
+   "balance": 2005.39,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 63.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Gas",
+     "amount": -45.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-11-26",
+   "balance": 1987.39,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-11-27",
+   "balance": 1969.39,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-11-28",
+   "balance": 1811.39,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 158.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Groceries",
+     "amount": -140.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-11-29",
+   "balance": 1793.39,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-11-30",
+   "balance": 1775.39,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-01",
+   "balance": 562.39,
+   "income": 0.0,
+   "bills": 1195.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Rent, Aspen Court",
+     "amount": -1195.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-02",
+   "balance": 499.39,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 63.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Gas",
+     "amount": -45.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-03",
+   "balance": 449.39,
+   "income": 0.0,
+   "bills": 32.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Cedar Rec Center",
+     "amount": -32.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-04",
+   "balance": 2349.39,
+   "income": 2180.4,
+   "bills": 112.4,
+   "extra": 168.0,
+   "items": [
+    {
+     "kind": "pay",
+     "label": "Ridgeway Systems paycheck",
+     "amount": 2180.4
+    },
+    {
+     "kind": "extra",
+     "label": "Emergency fund transfer",
+     "amount": -150.0
+    },
+    {
+     "kind": "bill",
+     "label": "Car insurance, Granite Mutual",
+     "amount": -112.4
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-05",
+   "balance": 2191.39,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 158.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Groceries",
+     "amount": -140.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-06",
+   "balance": 2173.39,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-07",
+   "balance": 2139.9,
+   "income": 0.0,
+   "bills": 15.49,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Netflix",
+     "amount": -15.49
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-08",
+   "balance": 1941.9,
+   "income": 0.0,
+   "bills": 180.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Student loan",
+     "amount": -180.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-09",
+   "balance": 1813.9,
+   "income": 0.0,
+   "bills": 65.0,
+   "extra": 63.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Ridgeway Internet",
+     "amount": -65.0
+    },
+    {
+     "kind": "extra",
+     "label": "Gas",
+     "amount": -45.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-10",
+   "balance": 1585.9,
+   "income": 0.0,
+   "bills": 210.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "After-school club",
+     "amount": -210.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-11",
+   "balance": 1567.9,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-12",
+   "balance": 1280.7,
+   "income": 0.0,
+   "bills": 129.2,
+   "extra": 158.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Mesa Electric Co-op",
+     "amount": -84.2
+    },
+    {
+     "kind": "bill",
+     "label": "Summit Card minimum",
+     "amount": -45.0
+    },
+    {
+     "kind": "extra",
+     "label": "Groceries",
+     "amount": -140.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-13",
+   "balance": 1262.7,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-14",
+   "balance": 1241.71,
+   "income": 0.0,
+   "bills": 2.99,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Cloud storage",
+     "amount": -2.99
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-15",
+   "balance": 814.71,
+   "income": 0.0,
+   "bills": 409.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Car loan, Valley Auto Finance",
+     "amount": -289.0
+    },
+    {
+     "kind": "bill",
+     "label": "Piano lessons, Rosa",
+     "amount": -120.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-16",
+   "balance": 751.71,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 63.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Gas",
+     "amount": -45.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-17",
+   "balance": 733.71,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-18",
+   "balance": 2684.36,
+   "income": 2180.4,
+   "bills": 61.75,
+   "extra": 168.0,
+   "items": [
+    {
+     "kind": "pay",
+     "label": "Ridgeway Systems paycheck",
+     "amount": 2180.4
+    },
+    {
+     "kind": "extra",
+     "label": "Emergency fund transfer",
+     "amount": -150.0
+    },
+    {
+     "kind": "bill",
+     "label": "Cedar Falls Water & Trash",
+     "amount": -61.75
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-19",
+   "balance": 2516.37,
+   "income": 0.0,
+   "bills": 9.99,
+   "extra": 158.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Disney+",
+     "amount": -9.99
+    },
+    {
+     "kind": "extra",
+     "label": "Groceries",
+     "amount": -140.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-20",
+   "balance": 2498.37,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-21",
+   "balance": 2466.37,
+   "income": 0.0,
+   "bills": 14.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Renter's insurance",
+     "amount": -14.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-22",
+   "balance": 2330.37,
+   "income": 0.0,
+   "bills": 118.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Peak Wireless, 3 lines",
+     "amount": -118.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-23",
+   "balance": 2267.37,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 63.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Gas",
+     "amount": -45.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-24",
+   "balance": 2249.37,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-25",
+   "balance": 2231.37,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-26",
+   "balance": 2073.37,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 158.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Groceries",
+     "amount": -140.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-27",
+   "balance": 2055.37,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-28",
+   "balance": 2037.37,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-29",
+   "balance": 2019.37,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-30",
+   "balance": 1956.37,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 63.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Gas",
+     "amount": -45.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2026-12-31",
+   "balance": 1938.37,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-01",
+   "balance": 2755.77,
+   "income": 2180.4,
+   "bills": 1195.0,
+   "extra": 168.0,
+   "items": [
+    {
+     "kind": "pay",
+     "label": "Ridgeway Systems paycheck",
+     "amount": 2180.4
+    },
+    {
+     "kind": "extra",
+     "label": "Emergency fund transfer",
+     "amount": -150.0
+    },
+    {
+     "kind": "bill",
+     "label": "Rent, Aspen Court",
+     "amount": -1195.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-02",
+   "balance": 2597.77,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 158.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Groceries",
+     "amount": -140.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-03",
+   "balance": 2547.77,
+   "income": 0.0,
+   "bills": 32.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Cedar Rec Center",
+     "amount": -32.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-04",
+   "balance": 2417.37,
+   "income": 0.0,
+   "bills": 112.4,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Car insurance, Granite Mutual",
+     "amount": -112.4
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-05",
+   "balance": 2399.37,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-06",
+   "balance": 2336.37,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 63.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Gas",
+     "amount": -45.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-07",
+   "balance": 2302.88,
+   "income": 0.0,
+   "bills": 15.49,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Netflix",
+     "amount": -15.49
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-08",
+   "balance": 2104.88,
+   "income": 0.0,
+   "bills": 180.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Student loan",
+     "amount": -180.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-09",
+   "balance": 1881.88,
+   "income": 0.0,
+   "bills": 65.0,
+   "extra": 158.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Ridgeway Internet",
+     "amount": -65.0
+    },
+    {
+     "kind": "extra",
+     "label": "Groceries",
+     "amount": -140.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-10",
+   "balance": 1653.88,
+   "income": 0.0,
+   "bills": 210.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "After-school club",
+     "amount": -210.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-11",
+   "balance": 1635.88,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-12",
+   "balance": 1488.68,
+   "income": 0.0,
+   "bills": 129.2,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Mesa Electric Co-op",
+     "amount": -84.2
+    },
+    {
+     "kind": "bill",
+     "label": "Summit Card minimum",
+     "amount": -45.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-13",
+   "balance": 1425.68,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 63.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Gas",
+     "amount": -45.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-14",
+   "balance": 1404.69,
+   "income": 0.0,
+   "bills": 2.99,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Cloud storage",
+     "amount": -2.99
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-15",
+   "balance": 3008.09,
+   "income": 2180.4,
+   "bills": 409.0,
+   "extra": 168.0,
+   "items": [
+    {
+     "kind": "pay",
+     "label": "Ridgeway Systems paycheck",
+     "amount": 2180.4
+    },
+    {
+     "kind": "extra",
+     "label": "Emergency fund transfer",
+     "amount": -150.0
+    },
+    {
+     "kind": "bill",
+     "label": "Car loan, Valley Auto Finance",
+     "amount": -289.0
+    },
+    {
+     "kind": "bill",
+     "label": "Piano lessons, Rosa",
+     "amount": -120.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-16",
+   "balance": 2850.09,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 158.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Groceries",
+     "amount": -140.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-17",
+   "balance": 2832.09,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-18",
+   "balance": 2752.34,
+   "income": 0.0,
+   "bills": 61.75,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Cedar Falls Water & Trash",
+     "amount": -61.75
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-19",
+   "balance": 2724.35,
+   "income": 0.0,
+   "bills": 9.99,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Disney+",
+     "amount": -9.99
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-20",
+   "balance": 2661.35,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 63.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Gas",
+     "amount": -45.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-21",
+   "balance": 2629.35,
+   "income": 0.0,
+   "bills": 14.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Renter's insurance",
+     "amount": -14.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-22",
+   "balance": 2493.35,
+   "income": 0.0,
+   "bills": 118.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Peak Wireless, 3 lines",
+     "amount": -118.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-23",
+   "balance": 2335.35,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 158.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Groceries",
+     "amount": -140.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-24",
+   "balance": 2317.35,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-25",
+   "balance": 2299.35,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-26",
+   "balance": 2281.35,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-27",
+   "balance": 2218.35,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 63.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Gas",
+     "amount": -45.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-28",
+   "balance": 2200.35,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-29",
+   "balance": 4212.75,
+   "income": 2180.4,
+   "bills": 0.0,
+   "extra": 168.0,
+   "items": [
+    {
+     "kind": "pay",
+     "label": "Ridgeway Systems paycheck",
+     "amount": 2180.4
+    },
+    {
+     "kind": "extra",
+     "label": "Emergency fund transfer",
+     "amount": -150.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-30",
+   "balance": 4054.75,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 158.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Groceries",
+     "amount": -140.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-01-31",
+   "balance": 4036.75,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-02-01",
+   "balance": 2823.75,
+   "income": 0.0,
+   "bills": 1195.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Rent, Aspen Court",
+     "amount": -1195.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-02-02",
+   "balance": 2805.75,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-02-03",
+   "balance": 2710.75,
+   "income": 0.0,
+   "bills": 32.0,
+   "extra": 63.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Cedar Rec Center",
+     "amount": -32.0
+    },
+    {
+     "kind": "extra",
+     "label": "Gas",
+     "amount": -45.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-02-04",
+   "balance": 2580.35,
+   "income": 0.0,
+   "bills": 112.4,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Car insurance, Granite Mutual",
+     "amount": -112.4
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-02-05",
+   "balance": 2562.35,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-02-06",
+   "balance": 2404.35,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 158.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Groceries",
+     "amount": -140.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-02-07",
+   "balance": 2370.86,
+   "income": 0.0,
+   "bills": 15.49,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Netflix",
+     "amount": -15.49
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-02-08",
+   "balance": 2172.86,
+   "income": 0.0,
+   "bills": 180.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Student loan",
+     "amount": -180.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-02-09",
+   "balance": 2089.86,
+   "income": 0.0,
+   "bills": 65.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Ridgeway Internet",
+     "amount": -65.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-02-10",
+   "balance": 1816.86,
+   "income": 0.0,
+   "bills": 210.0,
+   "extra": 63.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "After-school club",
+     "amount": -210.0
+    },
+    {
+     "kind": "extra",
+     "label": "Gas",
+     "amount": -45.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-02-11",
+   "balance": 1798.86,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-02-12",
+   "balance": 3682.06,
+   "income": 2180.4,
+   "bills": 129.2,
+   "extra": 168.0,
+   "items": [
+    {
+     "kind": "pay",
+     "label": "Ridgeway Systems paycheck",
+     "amount": 2180.4
+    },
+    {
+     "kind": "extra",
+     "label": "Emergency fund transfer",
+     "amount": -150.0
+    },
+    {
+     "kind": "bill",
+     "label": "Mesa Electric Co-op",
+     "amount": -84.2
+    },
+    {
+     "kind": "bill",
+     "label": "Summit Card minimum",
+     "amount": -45.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-02-13",
+   "balance": 3524.06,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 158.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Groceries",
+     "amount": -140.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-02-14",
+   "balance": 3503.07,
+   "income": 0.0,
+   "bills": 2.99,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Cloud storage",
+     "amount": -2.99
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-02-15",
+   "balance": 3076.07,
+   "income": 0.0,
+   "bills": 409.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Car loan, Valley Auto Finance",
+     "amount": -289.0
+    },
+    {
+     "kind": "bill",
+     "label": "Piano lessons, Rosa",
+     "amount": -120.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-02-16",
+   "balance": 3058.07,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-02-17",
+   "balance": 2995.07,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 63.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Gas",
+     "amount": -45.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-02-18",
+   "balance": 2915.32,
+   "income": 0.0,
+   "bills": 61.75,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Cedar Falls Water & Trash",
+     "amount": -61.75
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-02-19",
+   "balance": 2887.33,
+   "income": 0.0,
+   "bills": 9.99,
+   "extra": 18.0,
+   "items": [
+    {
+     "kind": "bill",
+     "label": "Disney+",
+     "amount": -9.99
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  },
+  {
+   "day": "2027-02-20",
+   "balance": 2729.33,
+   "income": 0.0,
+   "bills": 0.0,
+   "extra": 158.0,
+   "items": [
+    {
+     "kind": "extra",
+     "label": "Groceries",
+     "amount": -140.0
+    },
+    {
+     "kind": "extra",
+     "label": "Everyday spending",
+     "amount": -18.0
+    }
+   ]
+  }
+ ],
+ "ends": [
+  {
+   "name": "Car loan, Valley Auto Finance",
+   "amount_usd": 289.0,
+   "frequency": "monthly",
+   "ends_on": "2029-09-26"
+  },
+  {
+   "name": "Phone payment, Leo's phone",
+   "amount_usd": 18.5,
+   "frequency": "monthly",
+   "ends_on": "2027-04-20"
+  }
+ ],
+ "extras": [
+  {
+   "date": "2026-11-28",
+   "label": "Groceries",
+   "amount": -140
+  },
+  {
+   "date": "2026-12-04",
+   "label": "Emergency fund transfer",
+   "amount": -150
+  },
+  {
+   "date": "2026-12-05",
+   "label": "Groceries",
+   "amount": -140
+  },
+  {
+   "date": "2026-12-12",
+   "label": "Groceries",
+   "amount": -140
+  },
+  {
+   "date": "2026-12-18",
+   "label": "Emergency fund transfer",
+   "amount": -150
+  },
+  {
+   "date": "2026-12-19",
+   "label": "Groceries",
+   "amount": -140
+  },
+  {
+   "date": "2026-12-26",
+   "label": "Groceries",
+   "amount": -140
+  },
+  {
+   "date": "2027-01-01",
+   "label": "Emergency fund transfer",
+   "amount": -150
+  },
+  {
+   "date": "2027-01-02",
+   "label": "Groceries",
+   "amount": -140
+  },
+  {
+   "date": "2027-01-09",
+   "label": "Groceries",
+   "amount": -140
+  },
+  {
+   "date": "2027-01-15",
+   "label": "Emergency fund transfer",
+   "amount": -150
+  },
+  {
+   "date": "2027-01-16",
+   "label": "Groceries",
+   "amount": -140
+  },
+  {
+   "date": "2027-01-23",
+   "label": "Groceries",
+   "amount": -140
+  },
+  {
+   "date": "2027-01-29",
+   "label": "Emergency fund transfer",
+   "amount": -150
+  },
+  {
+   "date": "2027-01-30",
+   "label": "Groceries",
+   "amount": -140
+  },
+  {
+   "date": "2027-02-06",
+   "label": "Groceries",
+   "amount": -140
+  },
+  {
+   "date": "2027-02-12",
+   "label": "Emergency fund transfer",
+   "amount": -150
+  },
+  {
+   "date": "2027-02-13",
+   "label": "Groceries",
+   "amount": -140
+  },
+  {
+   "date": "2027-02-20",
+   "label": "Groceries",
+   "amount": -140
+  }
+ ],
+ "events": [
+  {
+   "date": "2026-11-22",
+   "label": "Peak Wireless, 3 lines",
+   "amount": -118.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-11-28",
+   "label": "Groceries",
+   "amount": -140.0,
+   "kind": "oneoff",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-12-01",
+   "label": "Rent, Aspen Court",
+   "amount": -1195.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-12-03",
+   "label": "Cedar Rec Center",
+   "amount": -32.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-12-04",
+   "label": "Ridgeway Systems paycheck",
+   "amount": 2180.4,
+   "kind": "pay",
+   "per": "biweekly"
+  },
+  {
+   "date": "2026-12-04",
+   "label": "Emergency fund transfer",
+   "amount": -150.0,
+   "kind": "oneoff",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-12-04",
+   "label": "Car insurance, Granite Mutual",
+   "amount": -112.4,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-12-05",
+   "label": "Groceries",
+   "amount": -140.0,
+   "kind": "oneoff",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-12-07",
+   "label": "Netflix",
+   "amount": -15.49,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-12-08",
+   "label": "Student loan",
+   "amount": -180.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-12-09",
+   "label": "Ridgeway Internet",
+   "amount": -65.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-12-10",
+   "label": "After-school club",
+   "amount": -210.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-12-12",
+   "label": "Mesa Electric Co-op",
+   "amount": -84.2,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-12-12",
+   "label": "Summit Card minimum",
+   "amount": -45.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-12-12",
+   "label": "Groceries",
+   "amount": -140.0,
+   "kind": "oneoff",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-12-14",
+   "label": "Cloud storage",
+   "amount": -2.99,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-12-15",
+   "label": "Car loan, Valley Auto Finance",
+   "amount": -289.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-12-15",
+   "label": "Piano lessons, Rosa",
+   "amount": -120.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-12-18",
+   "label": "Ridgeway Systems paycheck",
+   "amount": 2180.4,
+   "kind": "pay",
+   "per": "biweekly"
+  },
+  {
+   "date": "2026-12-18",
+   "label": "Emergency fund transfer",
+   "amount": -150.0,
+   "kind": "oneoff",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-12-18",
+   "label": "Cedar Falls Water & Trash",
+   "amount": -61.75,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-12-19",
+   "label": "Disney+",
+   "amount": -9.99,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-12-19",
+   "label": "Groceries",
+   "amount": -140.0,
+   "kind": "oneoff",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-12-21",
+   "label": "Renter's insurance",
+   "amount": -14.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-12-22",
+   "label": "Peak Wireless, 3 lines",
+   "amount": -118.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2026-12-26",
+   "label": "Groceries",
+   "amount": -140.0,
+   "kind": "oneoff",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-01",
+   "label": "Ridgeway Systems paycheck",
+   "amount": 2180.4,
+   "kind": "pay",
+   "per": "biweekly"
+  },
+  {
+   "date": "2027-01-01",
+   "label": "Emergency fund transfer",
+   "amount": -150.0,
+   "kind": "oneoff",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-01",
+   "label": "Rent, Aspen Court",
+   "amount": -1195.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-02",
+   "label": "Groceries",
+   "amount": -140.0,
+   "kind": "oneoff",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-03",
+   "label": "Cedar Rec Center",
+   "amount": -32.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-04",
+   "label": "Car insurance, Granite Mutual",
+   "amount": -112.4,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-07",
+   "label": "Netflix",
+   "amount": -15.49,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-08",
+   "label": "Student loan",
+   "amount": -180.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-09",
+   "label": "Ridgeway Internet",
+   "amount": -65.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-09",
+   "label": "Groceries",
+   "amount": -140.0,
+   "kind": "oneoff",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-10",
+   "label": "After-school club",
+   "amount": -210.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-12",
+   "label": "Mesa Electric Co-op",
+   "amount": -84.2,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-12",
+   "label": "Summit Card minimum",
+   "amount": -45.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-14",
+   "label": "Cloud storage",
+   "amount": -2.99,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-15",
+   "label": "Ridgeway Systems paycheck",
+   "amount": 2180.4,
+   "kind": "pay",
+   "per": "biweekly"
+  },
+  {
+   "date": "2027-01-15",
+   "label": "Emergency fund transfer",
+   "amount": -150.0,
+   "kind": "oneoff",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-15",
+   "label": "Car loan, Valley Auto Finance",
+   "amount": -289.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-15",
+   "label": "Piano lessons, Rosa",
+   "amount": -120.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-16",
+   "label": "Groceries",
+   "amount": -140.0,
+   "kind": "oneoff",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-18",
+   "label": "Cedar Falls Water & Trash",
+   "amount": -61.75,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-19",
+   "label": "Disney+",
+   "amount": -9.99,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-21",
+   "label": "Renter's insurance",
+   "amount": -14.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-22",
+   "label": "Peak Wireless, 3 lines",
+   "amount": -118.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-23",
+   "label": "Groceries",
+   "amount": -140.0,
+   "kind": "oneoff",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-29",
+   "label": "Ridgeway Systems paycheck",
+   "amount": 2180.4,
+   "kind": "pay",
+   "per": "biweekly"
+  },
+  {
+   "date": "2027-01-29",
+   "label": "Emergency fund transfer",
+   "amount": -150.0,
+   "kind": "oneoff",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-01-30",
+   "label": "Groceries",
+   "amount": -140.0,
+   "kind": "oneoff",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-02-01",
+   "label": "Rent, Aspen Court",
+   "amount": -1195.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-02-03",
+   "label": "Cedar Rec Center",
+   "amount": -32.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-02-04",
+   "label": "Car insurance, Granite Mutual",
+   "amount": -112.4,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-02-06",
+   "label": "Groceries",
+   "amount": -140.0,
+   "kind": "oneoff",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-02-07",
+   "label": "Netflix",
+   "amount": -15.49,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-02-08",
+   "label": "Student loan",
+   "amount": -180.0,
+   "kind": "bill",
+   "per": "monthly"
+  },
+  {
+   "date": "2027-02-09",
+   "label": "Ridgeway Internet",
+   "amount": -65.0,
+   "kind": "bill",
+   "per": "monthly"
+  }
+ ],
+ "bar": 250.0
+}

@@ -1,0 +1,207 @@
+{
+ "role": {
+  "key": "relationship-manager",
+  "name": "Relationship Manager",
+  "nav": "relationship manager",
+  "file": "relationships/MANAGER.md",
+  "owns": "People lead: family and friends, contacts and households, staying in touch",
+  "areas": [],
+  "widgets": [
+   "people"
+  ]
+ },
+ "status": "watch",
+ "summary": "Two check-ins suggested: Aunt June and Marco.",
+ "items": [
+  {
+   "text": "Haven't talked to Aunt June in 6 weeks",
+   "when": null,
+   "level": "watch",
+   "link": "/next/phonebook"
+  }
+ ],
+ "needs": [],
+ "watch": [
+  {
+   "text": "Haven't talked to Aunt June in 6 weeks",
+   "when": null,
+   "level": "watch",
+   "link": "/next/phonebook"
+  }
+ ],
+ "tasks": [
+  {
+   "id": "t8125",
+   "content": "Sign Maya's field trip permission slip",
+   "description": "Science museum, $12 for the bus.",
+   "project": "Family",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  },
+  {
+   "id": "t8126",
+   "content": "Call Grandpa Ray to plan lunch, (970) 555-0105",
+   "description": "",
+   "project": "Family",
+   "labels": [
+    "Phone"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 15,
+   "view": "call"
+  },
+  {
+   "id": "t8146",
+   "content": "Sign up Leo for spring soccer, $95",
+   "description": "",
+   "project": "Family",
+   "labels": [
+    "Computer",
+    "Money"
+   ],
+   "flagged": false,
+   "due": "2026-12-21",
+   "days_left": 30,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  }
+ ],
+ "routines": [
+  {
+   "name": "stay-in-touch",
+   "when": "Mon 8:00 AM",
+   "does": "Suggests who to check on this week",
+   "prompt": null
+  }
+ ],
+ "report": {
+  "latest": {
+   "path": "relationships/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "Two check-ins suggested: Aunt June and Marco.",
+   "html": "<p>Two check-ins suggested: Aunt June and Marco.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "relationships/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Family",
+   "value": "10",
+   "sub": "in the book",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Check-ins due",
+   "value": "2",
+   "sub": "this week",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Gaps",
+   "value": "3",
+   "sub": "missing info",
+   "tone": "",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [],
+ "widgets": {
+  "people": {
+   "family": [
+    {
+     "id": "c-0003",
+     "name": "Maya Carter",
+     "missing": []
+    },
+    {
+     "id": "c-0004",
+     "name": "Leo Carter",
+     "missing": []
+    },
+    {
+     "id": "c-0009",
+     "name": "Ivy Wynn",
+     "missing": [
+      "address"
+     ]
+    },
+    {
+     "id": "c-0011",
+     "name": "Marco Reyes",
+     "missing": [
+      "birthday",
+      "address"
+     ]
+    },
+    {
+     "id": "c-0010",
+     "name": "June Hollis",
+     "missing": [
+      "phone"
+     ]
+    }
+   ],
+   "error": null
+  }
+ },
+ "folders": [
+  {
+   "name": "relationships",
+   "files": [
+    {
+     "path": "relationships/README.md",
+     "size": 1799
+    },
+    {
+     "path": "relationships/notes.md",
+     "size": 1984
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>relationships</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

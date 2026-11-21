@@ -1,0 +1,230 @@
+{
+ "rows": [
+  {
+   "id": "c-0002",
+   "name": "Nora Ellis",
+   "relationship": "partner",
+   "deceased": false,
+   "deceased_on": null,
+   "phone": [
+    "(970) 555-0102"
+   ],
+   "whatsapp": [],
+   "email": [
+    "nora@example.com"
+   ],
+   "address": [
+    "418 Juniper Lane, Cedar Falls, CO"
+   ],
+   "birthday": {
+    "contact_id": "c-0002",
+    "occasion": "birthday",
+    "month": 7,
+    "day": 2,
+    "year_born": 1988
+   },
+   "where": "Cedar Falls, CO",
+   "missing": []
+  },
+  {
+   "id": "c-0003",
+   "name": "Maya Carter",
+   "relationship": "daughter",
+   "deceased": false,
+   "deceased_on": null,
+   "phone": [],
+   "whatsapp": [],
+   "email": [],
+   "address": [
+    "418 Juniper Lane, Cedar Falls, CO"
+   ],
+   "birthday": {
+    "contact_id": "c-0003",
+    "occasion": "birthday",
+    "month": 11,
+    "day": 25,
+    "year_born": 2015
+   },
+   "where": "Cedar Falls, CO",
+   "missing": []
+  },
+  {
+   "id": "c-0004",
+   "name": "Leo Carter",
+   "relationship": "son",
+   "deceased": false,
+   "deceased_on": null,
+   "phone": [
+    "(970) 555-0104"
+   ],
+   "whatsapp": [],
+   "email": [
+    "leo@example.com"
+   ],
+   "address": [
+    "418 Juniper Lane, Cedar Falls, CO"
+   ],
+   "birthday": {
+    "contact_id": "c-0004",
+    "occasion": "birthday",
+    "month": 12,
+    "day": 10,
+    "year_born": 2011
+   },
+   "where": "Cedar Falls, CO",
+   "missing": []
+  },
+  {
+   "id": "c-0005",
+   "name": "Ray Carter",
+   "relationship": "father",
+   "deceased": false,
+   "deceased_on": null,
+   "phone": [
+    "(970) 555-0105"
+   ],
+   "whatsapp": [],
+   "email": [],
+   "address": [
+    "22 Aspen Way, Ridgeway, CO"
+   ],
+   "birthday": {
+    "contact_id": "c-0005",
+    "occasion": "birthday",
+    "month": 2,
+    "day": 6,
+    "year_born": 1956
+   },
+   "where": "Colorado",
+   "missing": []
+  },
+  {
+   "id": "c-0006",
+   "name": "Elena Carter",
+   "relationship": "grandmother",
+   "deceased": true,
+   "deceased_on": null,
+   "phone": [],
+   "whatsapp": [],
+   "email": [],
+   "address": [],
+   "birthday": {
+    "contact_id": "c-0006",
+    "occasion": "birthday",
+    "month": 9,
+    "day": 30,
+    "year_born": 1931
+   },
+   "where": "Colorado",
+   "missing": []
+  },
+  {
+   "id": "c-0007",
+   "name": "Jess Wynn",
+   "relationship": "sister",
+   "deceased": false,
+   "deceased_on": null,
+   "phone": [
+    "(970) 555-0107"
+   ],
+   "whatsapp": [],
+   "email": [
+    "jess@example.net"
+   ],
+   "address": [],
+   "birthday": {
+    "contact_id": "c-0007",
+    "occasion": "birthday",
+    "month": 5,
+    "day": 21,
+    "year_born": 1990
+   },
+   "where": "Colorado",
+   "missing": []
+  },
+  {
+   "id": "c-0008",
+   "name": "Tom Wynn",
+   "relationship": "brother-in-law",
+   "deceased": false,
+   "deceased_on": null,
+   "phone": [
+    "(970) 555-0108"
+   ],
+   "whatsapp": [],
+   "email": [],
+   "address": [],
+   "birthday": {
+    "contact_id": "c-0008",
+    "occasion": "birthday",
+    "month": 11,
+    "day": 3,
+    "year_born": 1987
+   },
+   "where": "Colorado",
+   "missing": []
+  },
+  {
+   "id": "c-0009",
+   "name": "Ivy Wynn",
+   "relationship": "niece",
+   "deceased": false,
+   "deceased_on": null,
+   "phone": [],
+   "whatsapp": [],
+   "email": [],
+   "address": [],
+   "birthday": {
+    "contact_id": "c-0009",
+    "occasion": "birthday",
+    "month": 12,
+    "day": 29,
+    "year_born": 2018
+   },
+   "where": "Colorado",
+   "missing": []
+  },
+  {
+   "id": "c-0010",
+   "name": "June Hollis",
+   "relationship": "aunt",
+   "deceased": false,
+   "deceased_on": null,
+   "phone": [
+    "(970) 555-0110"
+   ],
+   "whatsapp": [],
+   "email": [
+    "june@example.org"
+   ],
+   "address": [],
+   "birthday": {
+    "contact_id": "c-0010",
+    "occasion": "birthday",
+    "month": 2,
+    "day": 11,
+    "year_born": 1958
+   },
+   "where": "Colorado",
+   "missing": []
+  },
+  {
+   "id": "c-0011",
+   "name": "Marco Reyes",
+   "relationship": "cousin",
+   "deceased": false,
+   "deceased_on": null,
+   "phone": [
+    "(970) 555-0111"
+   ],
+   "whatsapp": [],
+   "email": [],
+   "address": [],
+   "birthday": null,
+   "where": "Colorado",
+   "missing": [
+    "birthday"
+   ]
+  }
+ ]
+}

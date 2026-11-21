@@ -1,0 +1,586 @@
+{
+ "role": {
+  "key": "media",
+  "name": "Media Concierge",
+  "nav": "media",
+  "file": "media/CONCIERGE.md",
+  "owns": "Picks what the family watches: one strong pick, where to stream it, the queue and the watched log",
+  "areas": [],
+  "widgets": [
+   "movies"
+  ]
+ },
+ "status": "active",
+ "summary": "Friday's pick is set; two films leave streaming this month.",
+ "items": [],
+ "needs": [],
+ "watch": [],
+ "tasks": [
+  {
+   "id": "t8142",
+   "content": "Pick a movie for Friday family night",
+   "description": "Media Concierge left three picks.",
+   "project": "Inbox",
+   "labels": [],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  }
+ ],
+ "routines": [
+  {
+   "name": "weekly-pick",
+   "when": "Fri 4:00 PM",
+   "does": "Chooses the family movie",
+   "prompt": null
+  }
+ ],
+ "report": {
+  "latest": {
+   "path": "media/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "Friday's pick is set; two films leave streaming this month.",
+   "html": "<p>Friday's pick is set; two films leave streaming this month.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "media/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Tonight's pick",
+   "value": "Paddington 2",
+   "sub": "on Netflix",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Queue",
+   "value": "11",
+   "sub": "films",
+   "tone": "",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [],
+ "widgets": {
+  "movies": {
+   "path": "media/movies.json",
+   "error": null,
+   "pick": {
+    "id": "m1",
+    "title": "Paddington 2",
+    "year": 2017,
+    "director": "Paul King",
+    "runtime_min": 103,
+    "rated": "PG",
+    "genres": [
+     "Comedy",
+     "Family"
+    ],
+    "language": "English",
+    "country": "",
+    "synopsis": "A marmalade-loving bear clears his name; warm and very funny.",
+    "why": "Funny for the kids, clever for the grown-ups.",
+    "pick_for": "Friday family night",
+    "poster": null,
+    "cast": [],
+    "writers": null,
+    "cinematographer": null,
+    "awards": null,
+    "content_note": "Mild peril",
+    "with_eli": null,
+    "where": {
+     "included": [
+      "Netflix"
+     ],
+     "leaving": null,
+     "free": [],
+     "other_subs": [],
+     "rent": ""
+    },
+    "checked": "2026-11-20",
+    "trailer": null,
+    "imdb": null,
+    "wikipedia": null,
+    "justwatch": null
+   },
+   "queue": [
+    {
+     "id": "m2",
+     "title": "The Princess Bride",
+     "year": 1987,
+     "director": "Rob Reiner",
+     "runtime_min": 98,
+     "rated": "PG",
+     "genres": [
+      "Adventure",
+      "Comedy"
+     ],
+     "language": "English",
+     "country": "",
+     "synopsis": "Swordfights, giants and true love; quotable for years.",
+     "why": "",
+     "pick_for": null,
+     "poster": null,
+     "cast": [],
+     "writers": null,
+     "cinematographer": null,
+     "awards": null,
+     "content_note": "Mild peril",
+     "with_eli": null,
+     "where": {
+      "included": [
+       "Disney+"
+      ],
+      "leaving": null,
+      "free": [],
+      "other_subs": [],
+      "rent": ""
+     },
+     "checked": "2026-11-20",
+     "trailer": null,
+     "imdb": null,
+     "wikipedia": null,
+     "justwatch": null
+    },
+    {
+     "id": "m3",
+     "title": "Spirited Away",
+     "year": 2001,
+     "director": "Hayao Miyazaki",
+     "runtime_min": 125,
+     "rated": "PG",
+     "genres": [
+      "Animation",
+      "Fantasy"
+     ],
+     "language": "English",
+     "country": "",
+     "synopsis": "A girl works in a spirit bathhouse to save her parents.",
+     "why": "",
+     "pick_for": null,
+     "poster": null,
+     "cast": [],
+     "writers": null,
+     "cinematographer": null,
+     "awards": null,
+     "content_note": "Mild peril",
+     "with_eli": null,
+     "where": {
+      "included": [
+       "Prime Video"
+      ],
+      "leaving": "2026-12-03",
+      "free": [],
+      "other_subs": [],
+      "rent": ""
+     },
+     "checked": "2026-11-20",
+     "trailer": null,
+     "imdb": null,
+     "wikipedia": null,
+     "justwatch": null
+    },
+    {
+     "id": "m4",
+     "title": "Back to the Future",
+     "year": 1985,
+     "director": "Robert Zemeckis",
+     "runtime_min": 116,
+     "rated": "PG",
+     "genres": [
+      "Sci-fi",
+      "Comedy"
+     ],
+     "language": "English",
+     "country": "",
+     "synopsis": "A teen in a time machine meets his parents in high school.",
+     "why": "",
+     "pick_for": null,
+     "poster": null,
+     "cast": [],
+     "writers": null,
+     "cinematographer": null,
+     "awards": null,
+     "content_note": "Mild peril",
+     "with_eli": null,
+     "where": {
+      "included": [
+       "Netflix"
+      ],
+      "leaving": null,
+      "free": [],
+      "other_subs": [],
+      "rent": ""
+     },
+     "checked": "2026-11-20",
+     "trailer": null,
+     "imdb": null,
+     "wikipedia": null,
+     "justwatch": null
+    },
+    {
+     "id": "m5",
+     "title": "Hidden Figures",
+     "year": 2016,
+     "director": "Theodore Melfi",
+     "runtime_min": 127,
+     "rated": "PG",
+     "genres": [
+      "Drama",
+      "History"
+     ],
+     "language": "English",
+     "country": "",
+     "synopsis": "Three mathematicians behind the early space program.",
+     "why": "",
+     "pick_for": null,
+     "poster": null,
+     "cast": [],
+     "writers": null,
+     "cinematographer": null,
+     "awards": null,
+     "content_note": "Mild peril",
+     "with_eli": null,
+     "where": {
+      "included": [
+       "Disney+"
+      ],
+      "leaving": null,
+      "free": [],
+      "other_subs": [],
+      "rent": ""
+     },
+     "checked": "2026-11-20",
+     "trailer": null,
+     "imdb": null,
+     "wikipedia": null,
+     "justwatch": null
+    },
+    {
+     "id": "m6",
+     "title": "The Iron Giant",
+     "year": 1999,
+     "director": "Brad Bird",
+     "runtime_min": 86,
+     "rated": "PG",
+     "genres": [
+      "Animation",
+      "Sci-fi"
+     ],
+     "language": "English",
+     "country": "",
+     "synopsis": "A boy befriends a giant robot from space.",
+     "why": "",
+     "pick_for": null,
+     "poster": null,
+     "cast": [],
+     "writers": null,
+     "cinematographer": null,
+     "awards": null,
+     "content_note": "Mild peril",
+     "with_eli": null,
+     "where": {
+      "included": [],
+      "leaving": null,
+      "free": [],
+      "other_subs": [],
+      "rent": "$3.99"
+     },
+     "checked": "2026-11-20",
+     "trailer": null,
+     "imdb": null,
+     "wikipedia": null,
+     "justwatch": null
+    },
+    {
+     "id": "m7",
+     "title": "Apollo 13",
+     "year": 1995,
+     "director": "Ron Howard",
+     "runtime_min": 140,
+     "rated": "PG",
+     "genres": [
+      "Drama",
+      "History"
+     ],
+     "language": "English",
+     "country": "",
+     "synopsis": "Getting three astronauts home against the odds.",
+     "why": "",
+     "pick_for": null,
+     "poster": null,
+     "cast": [],
+     "writers": null,
+     "cinematographer": null,
+     "awards": null,
+     "content_note": "Mild peril",
+     "with_eli": null,
+     "where": {
+      "included": [
+       "Prime Video"
+      ],
+      "leaving": null,
+      "free": [],
+      "other_subs": [],
+      "rent": ""
+     },
+     "checked": "2026-11-20",
+     "trailer": null,
+     "imdb": null,
+     "wikipedia": null,
+     "justwatch": null
+    },
+    {
+     "id": "m8",
+     "title": "Hugo",
+     "year": 2011,
+     "director": "Martin Scorsese",
+     "runtime_min": 126,
+     "rated": "PG",
+     "genres": [
+      "Adventure",
+      "Family"
+     ],
+     "language": "English",
+     "country": "",
+     "synopsis": "An orphan in a Paris train station and a mystery automaton.",
+     "why": "",
+     "pick_for": null,
+     "poster": null,
+     "cast": [],
+     "writers": null,
+     "cinematographer": null,
+     "awards": null,
+     "content_note": "Mild peril",
+     "with_eli": null,
+     "where": {
+      "included": [],
+      "leaving": null,
+      "free": [],
+      "other_subs": [],
+      "rent": "$3.99"
+     },
+     "checked": "2026-11-20",
+     "trailer": null,
+     "imdb": null,
+     "wikipedia": null,
+     "justwatch": null
+    },
+    {
+     "id": "m9",
+     "title": "WALL-E",
+     "year": 2008,
+     "director": "Andrew Stanton",
+     "runtime_min": 98,
+     "rated": "G",
+     "genres": [
+      "Animation",
+      "Sci-fi"
+     ],
+     "language": "English",
+     "country": "",
+     "synopsis": "A lonely robot cleaning up Earth falls in love.",
+     "why": "",
+     "pick_for": null,
+     "poster": null,
+     "cast": [],
+     "writers": null,
+     "cinematographer": null,
+     "awards": null,
+     "content_note": "Mild peril",
+     "with_eli": null,
+     "where": {
+      "included": [
+       "Disney+"
+      ],
+      "leaving": null,
+      "free": [],
+      "other_subs": [],
+      "rent": ""
+     },
+     "checked": "2026-11-20",
+     "trailer": null,
+     "imdb": null,
+     "wikipedia": null,
+     "justwatch": null
+    },
+    {
+     "id": "m10",
+     "title": "October Sky",
+     "year": 1999,
+     "director": "Joe Johnston",
+     "runtime_min": 108,
+     "rated": "PG",
+     "genres": [
+      "Drama"
+     ],
+     "language": "English",
+     "country": "",
+     "synopsis": "A coal miner's son builds rockets.",
+     "why": "",
+     "pick_for": null,
+     "poster": null,
+     "cast": [],
+     "writers": null,
+     "cinematographer": null,
+     "awards": null,
+     "content_note": "Mild peril",
+     "with_eli": null,
+     "where": {
+      "included": [],
+      "leaving": null,
+      "free": [],
+      "other_subs": [],
+      "rent": "$3.99"
+     },
+     "checked": "2026-11-20",
+     "trailer": null,
+     "imdb": null,
+     "wikipedia": null,
+     "justwatch": null
+    },
+    {
+     "id": "m11",
+     "title": "The Incredibles",
+     "year": 2004,
+     "director": "Brad Bird",
+     "runtime_min": 115,
+     "rated": "PG",
+     "genres": [
+      "Animation",
+      "Action"
+     ],
+     "language": "English",
+     "country": "",
+     "synopsis": "A family of superheroes back in action.",
+     "why": "",
+     "pick_for": null,
+     "poster": null,
+     "cast": [],
+     "writers": null,
+     "cinematographer": null,
+     "awards": null,
+     "content_note": "Mild peril",
+     "with_eli": null,
+     "where": {
+      "included": [
+       "Disney+"
+      ],
+      "leaving": null,
+      "free": [],
+      "other_subs": [],
+      "rent": ""
+     },
+     "checked": "2026-11-20",
+     "trailer": null,
+     "imdb": null,
+     "wikipedia": null,
+     "justwatch": null
+    },
+    {
+     "id": "m12",
+     "title": "School of Rock",
+     "year": 2003,
+     "director": "Richard Linklater",
+     "runtime_min": 109,
+     "rated": "PG-13",
+     "genres": [
+      "Comedy",
+      "Music"
+     ],
+     "language": "English",
+     "country": "",
+     "synopsis": "A wannabe rock star turns a class into a band.",
+     "why": "",
+     "pick_for": null,
+     "poster": null,
+     "cast": [],
+     "writers": null,
+     "cinematographer": null,
+     "awards": null,
+     "content_note": "Mild peril",
+     "with_eli": null,
+     "where": {
+      "included": [
+       "Netflix"
+      ],
+      "leaving": null,
+      "free": [],
+      "other_subs": [],
+      "rent": ""
+     },
+     "checked": "2026-11-20",
+     "trailer": null,
+     "imdb": null,
+     "wikipedia": null,
+     "justwatch": null
+    }
+   ],
+   "watched": [
+    {
+     "title": "Toy Story",
+     "year": 1995,
+     "watched_on": "2026-11-14",
+     "rating": "★★★★",
+     "notes": "Leo laughed the most"
+    },
+    {
+     "title": "Finding Nemo",
+     "year": 2003,
+     "watched_on": "2026-11-07",
+     "rating": "★★★★★",
+     "notes": ""
+    }
+   ]
+  }
+ },
+ "folders": [
+  {
+   "name": "media",
+   "files": [
+    {
+     "path": "media/README.md",
+     "size": 1799
+    },
+    {
+     "path": "media/notes.md",
+     "size": 1984
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>media</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

@@ -1,0 +1,195 @@
+{
+ "role": {
+  "key": "investigator",
+  "name": "Investigator",
+  "nav": "investigator",
+  "file": "investigator/README.md",
+  "owns": "Who is this and can we trust it: unknown numbers, duplicates, family gaps, scams; data-broker removals",
+  "areas": [],
+  "widgets": [
+   "merges",
+   "casework",
+   "people"
+  ]
+ },
+ "status": "active",
+ "summary": "Fourteen broker listings removed; one duplicate contact proposed for merging.",
+ "items": [],
+ "needs": [],
+ "watch": [],
+ "tasks": [],
+ "routines": [
+  {
+   "name": "broker-discovery",
+   "when": "Mon 7:40 AM",
+   "does": "Finds listings on people-search sites",
+   "prompt": null
+  },
+  {
+   "name": "broker-removal",
+   "when": "Wed 7:40 AM",
+   "does": "Files opt-outs",
+   "prompt": null
+  }
+ ],
+ "report": {
+  "latest": {
+   "path": "investigator/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "Fourteen broker listings removed; one duplicate contact proposed for merging.",
+   "html": "<p>Fourteen broker listings removed; one duplicate contact proposed for merging.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "investigator/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Unknown numbers",
+   "value": "2",
+   "sub": "to name",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Duplicates",
+   "value": "1",
+   "sub": "pair",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Brokers",
+   "value": "14 of 20",
+   "sub": "removed",
+   "tone": "good",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [],
+ "widgets": {
+  "casework": {
+   "editable": false,
+   "error": null,
+   "cases": {
+    "number_only": {
+     "count": 2,
+     "newest": [
+      {
+       "id": "c-0026",
+       "name": "(970) 555-0126"
+      },
+      {
+       "id": "c-0027",
+       "name": "(970) 555-0127"
+      }
+     ]
+    },
+    "email_only": {
+     "count": 1,
+     "newest": [
+      {
+       "id": "c-0028",
+       "name": "hello@example.net"
+      }
+     ]
+    },
+    "duplicates": {
+     "count": 1,
+     "groups": [
+      {
+       "name": "Ben Okafor",
+       "ids": [
+        "c-0013",
+        "c-0029"
+       ]
+      }
+     ]
+    },
+    "total": 30
+   }
+  },
+  "people": {
+   "family": [
+    {
+     "id": "c-0003",
+     "name": "Maya Carter",
+     "missing": []
+    },
+    {
+     "id": "c-0004",
+     "name": "Leo Carter",
+     "missing": []
+    },
+    {
+     "id": "c-0009",
+     "name": "Ivy Wynn",
+     "missing": [
+      "address"
+     ]
+    },
+    {
+     "id": "c-0011",
+     "name": "Marco Reyes",
+     "missing": [
+      "birthday",
+      "address"
+     ]
+    },
+    {
+     "id": "c-0010",
+     "name": "June Hollis",
+     "missing": [
+      "phone"
+     ]
+    }
+   ],
+   "error": null
+  }
+ },
+ "folders": [
+  {
+   "name": "investigator",
+   "files": [
+    {
+     "path": "investigator/README.md",
+     "size": 1799
+    },
+    {
+     "path": "investigator/notes.md",
+     "size": 1984
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>investigator</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

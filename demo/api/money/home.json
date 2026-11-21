@@ -1,0 +1,2197 @@
+{
+ "live": true,
+ "today": "2026-11-21",
+ "accounts": [
+  {
+   "id": "a1",
+   "name": "Checking",
+   "institution": "First Mesa Credit Union",
+   "kind": "checking",
+   "last4": "4417",
+   "status": "active",
+   "url": "",
+   "balance": 2240.39,
+   "as_of": "2026-11-21",
+   "read_at": "2026-11-21T06:15:00-07:00",
+   "history": [
+    2150.77,
+    2168.7,
+    2186.62,
+    2204.54,
+    2222.47,
+    2240.39
+   ]
+  },
+  {
+   "id": "a2",
+   "name": "Savings",
+   "institution": "First Mesa Credit Union",
+   "kind": "savings",
+   "last4": "4425",
+   "status": "active",
+   "url": "",
+   "balance": 1850.0,
+   "as_of": "2026-11-21",
+   "read_at": "2026-11-21T06:15:00-07:00",
+   "history": [
+    1776.0,
+    1790.8,
+    1805.6,
+    1820.4,
+    1835.2,
+    1850.0
+   ]
+  },
+  {
+   "id": "a3",
+   "name": "Summit Card",
+   "institution": "Summit Card",
+   "kind": "credit",
+   "last4": "0932",
+   "status": "active",
+   "url": "",
+   "balance": -1240.18,
+   "as_of": "2026-11-21",
+   "read_at": "2026-11-21T06:15:00-07:00",
+   "history": [
+    -1190.57,
+    -1200.49,
+    -1210.42,
+    -1220.34,
+    -1230.26,
+    -1240.18
+   ]
+  },
+  {
+   "id": "a4",
+   "name": "Car loan",
+   "institution": "Valley Auto Finance",
+   "kind": "loan",
+   "last4": "7731",
+   "status": "active",
+   "url": "",
+   "balance": -9820.0,
+   "as_of": "2026-11-21",
+   "read_at": "2026-11-21T06:15:00-07:00",
+   "history": [
+    -9427.2,
+    -9505.76,
+    -9584.32,
+    -9662.88,
+    -9741.44,
+    -9820.0
+   ]
+  },
+  {
+   "id": "a5",
+   "name": "Student loan",
+   "institution": "Student loan servicer",
+   "kind": "loan",
+   "last4": "5560",
+   "status": "active",
+   "url": "",
+   "balance": -14350.0,
+   "as_of": "2026-11-21",
+   "read_at": "2026-11-21T06:15:00-07:00",
+   "history": [
+    -13776.0,
+    -13890.8,
+    -14005.6,
+    -14120.4,
+    -14235.2,
+    -14350.0
+   ]
+  },
+  {
+   "id": "a6",
+   "name": "401(k)",
+   "institution": "Ridgeway Systems plan",
+   "kind": "retirement",
+   "last4": null,
+   "status": "active",
+   "url": "",
+   "balance": 23480.0,
+   "as_of": "2026-11-21",
+   "read_at": "2026-11-21T06:15:00-07:00",
+   "history": [
+    22540.8,
+    22728.64,
+    22916.48,
+    23104.32,
+    23292.16,
+    23480.0
+   ]
+  },
+  {
+   "id": "a7",
+   "name": "Roth IRA",
+   "institution": "Evergreen Funds",
+   "kind": "retirement",
+   "last4": "2208",
+   "status": "active",
+   "url": "",
+   "balance": 3120.0,
+   "as_of": "2026-11-21",
+   "read_at": "2026-11-21T06:15:00-07:00",
+   "history": [
+    2995.2,
+    3020.16,
+    3045.12,
+    3070.08,
+    3095.04,
+    3120.0
+   ]
+  },
+  {
+   "id": "a8",
+   "name": "HSA",
+   "institution": "Evergreen Funds",
+   "kind": "hsa",
+   "last4": "9014",
+   "status": "active",
+   "url": "",
+   "balance": 640.0,
+   "as_of": "2026-11-21",
+   "read_at": "2026-11-21T06:15:00-07:00",
+   "history": [
+    614.4,
+    619.52,
+    624.64,
+    629.76,
+    634.88,
+    640.0
+   ]
+  },
+  {
+   "id": "a9",
+   "name": "2017 Subaru Outback",
+   "institution": "Estimated value",
+   "kind": "asset",
+   "last4": null,
+   "status": "active",
+   "url": "",
+   "balance": 11500.0,
+   "as_of": "2026-11-21",
+   "read_at": "2026-11-21T06:15:00-07:00",
+   "history": [
+    11040.0,
+    11132.0,
+    11224.0,
+    11316.0,
+    11408.0,
+    11500.0
+   ]
+  },
+  {
+   "id": "a10",
+   "name": "PocketPay wallet",
+   "institution": "PocketPay",
+   "kind": "wallet",
+   "last4": null,
+   "status": "active",
+   "url": "",
+   "balance": 38.0,
+   "as_of": "2026-11-21",
+   "read_at": "2026-11-21T06:15:00-07:00",
+   "history": [
+    36.48,
+    36.78,
+    37.09,
+    37.39,
+    37.7,
+    38.0
+   ]
+  },
+  {
+   "id": "a11",
+   "name": "529 for Maya",
+   "institution": "State college plan",
+   "kind": "investment",
+   "last4": null,
+   "status": "planned",
+   "url": "",
+   "balance": null,
+   "as_of": null,
+   "read_at": null,
+   "history": []
+  },
+  {
+   "id": "a12",
+   "name": "Paper trading",
+   "institution": "Simulated",
+   "kind": "investment",
+   "last4": null,
+   "status": "paper",
+   "url": "",
+   "balance": null,
+   "as_of": null,
+   "read_at": null,
+   "history": []
+  }
+ ],
+ "transactions": [
+  {
+   "id": 109,
+   "day": "2026-11-21",
+   "amount": -34.39,
+   "merchant": "Little Sprouts Toys",
+   "category": "Kids",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 108,
+   "day": "2026-11-21",
+   "amount": -14.0,
+   "merchant": "Renter's insurance",
+   "category": "Home",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 107,
+   "day": "2026-11-20",
+   "amount": -40.32,
+   "merchant": "Cedar Falls Co-op",
+   "category": "Groceries",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 106,
+   "day": "2026-11-20",
+   "amount": 2180.4,
+   "merchant": "Ridgeway Systems payroll",
+   "category": "Income",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 105,
+   "day": "2026-11-19",
+   "amount": -8.66,
+   "merchant": "Juniper Coffee",
+   "category": "Dining & Drinks",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 104,
+   "day": "2026-11-19",
+   "amount": -23.82,
+   "merchant": "Pine Street Pharmacy",
+   "category": "Health",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 103,
+   "day": "2026-11-19",
+   "amount": -9.99,
+   "merchant": "Disney+",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 102,
+   "day": "2026-11-18",
+   "amount": -29.87,
+   "merchant": "Pine Street Pharmacy",
+   "category": "Health",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 101,
+   "day": "2026-11-18",
+   "amount": -18.34,
+   "merchant": "Old Mill Market",
+   "category": "Groceries",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 100,
+   "day": "2026-11-18",
+   "amount": -61.75,
+   "merchant": "Cedar Falls Water & Trash",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 99,
+   "day": "2026-11-17",
+   "amount": -27.66,
+   "merchant": "Old Mill Market",
+   "category": "Groceries",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 98,
+   "day": "2026-11-17",
+   "amount": -24.28,
+   "merchant": "Pine Street Pharmacy",
+   "category": "Health",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 97,
+   "day": "2026-11-16",
+   "amount": -11.9,
+   "merchant": "Bookworm Books",
+   "category": "Entertainment",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 96,
+   "day": "2026-11-15",
+   "amount": -26.25,
+   "merchant": "Little Sprouts Toys",
+   "category": "Kids",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 95,
+   "day": "2026-11-15",
+   "amount": -38.98,
+   "merchant": "Trailhead Tacos",
+   "category": "Dining & Drinks",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 94,
+   "day": "2026-11-15",
+   "amount": -34.52,
+   "merchant": "Mesa Fuel Stop",
+   "category": "Auto & Transport",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 93,
+   "day": "2026-11-15",
+   "amount": -120.0,
+   "merchant": "Piano lessons, Rosa",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 92,
+   "day": "2026-11-15",
+   "amount": -289.0,
+   "merchant": "Car loan, Valley Auto Finance",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 91,
+   "day": "2026-11-14",
+   "amount": -2.99,
+   "merchant": "Cloud storage",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 90,
+   "day": "2026-11-12",
+   "amount": -138.61,
+   "merchant": "Valley Fresh Market",
+   "category": "Groceries",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 89,
+   "day": "2026-11-12",
+   "amount": -45.0,
+   "merchant": "Summit Card minimum",
+   "category": "Credit card payment",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 88,
+   "day": "2026-11-12",
+   "amount": -84.2,
+   "merchant": "Mesa Electric Co-op",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 87,
+   "day": "2026-11-10",
+   "amount": -30.52,
+   "merchant": "Pine Street Pharmacy",
+   "category": "Health",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 86,
+   "day": "2026-11-10",
+   "amount": -37.83,
+   "merchant": "Peak Pizza",
+   "category": "Dining & Drinks",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 85,
+   "day": "2026-11-10",
+   "amount": -16.52,
+   "merchant": "Old Mill Market",
+   "category": "Groceries",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 84,
+   "day": "2026-11-10",
+   "amount": -210.0,
+   "merchant": "After-school club",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 83,
+   "day": "2026-11-09",
+   "amount": -14.82,
+   "merchant": "Lyft",
+   "category": "Auto & Transport",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 82,
+   "day": "2026-11-09",
+   "amount": -19.03,
+   "merchant": "Trailhead Tacos",
+   "category": "Dining & Drinks",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 81,
+   "day": "2026-11-09",
+   "amount": -21.34,
+   "merchant": "Old Mill Market",
+   "category": "Groceries",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 80,
+   "day": "2026-11-09",
+   "amount": -65.0,
+   "merchant": "Ridgeway Internet",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 79,
+   "day": "2026-11-08",
+   "amount": -180.0,
+   "merchant": "Student loan",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 78,
+   "day": "2026-11-07",
+   "amount": -15.84,
+   "merchant": "Bookworm Books",
+   "category": "Entertainment",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 77,
+   "day": "2026-11-07",
+   "amount": -26.44,
+   "merchant": "Cedar Falls Co-op",
+   "category": "Groceries",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 76,
+   "day": "2026-11-07",
+   "amount": -15.49,
+   "merchant": "Netflix",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 75,
+   "day": "2026-11-06",
+   "amount": -27.7,
+   "merchant": "Peak Pizza",
+   "category": "Dining & Drinks",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 74,
+   "day": "2026-11-06",
+   "amount": -54.77,
+   "merchant": "Mesa Fuel Stop",
+   "category": "Auto & Transport",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 73,
+   "day": "2026-11-06",
+   "amount": 2180.4,
+   "merchant": "Ridgeway Systems payroll",
+   "category": "Income",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 72,
+   "day": "2026-11-04",
+   "amount": -19.05,
+   "merchant": "Cedar Falls Co-op",
+   "category": "Groceries",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 71,
+   "day": "2026-11-04",
+   "amount": -112.4,
+   "merchant": "Car insurance, Granite Mutual",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 70,
+   "day": "2026-11-03",
+   "amount": -34.22,
+   "merchant": "Peak Pizza",
+   "category": "Dining & Drinks",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 69,
+   "day": "2026-11-03",
+   "amount": -56.53,
+   "merchant": "Cedar Falls Co-op",
+   "category": "Groceries",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 68,
+   "day": "2026-11-03",
+   "amount": -54.43,
+   "merchant": "Cedar Falls Co-op",
+   "category": "Groceries",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 67,
+   "day": "2026-11-03",
+   "amount": -32.0,
+   "merchant": "Cedar Rec Center",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 66,
+   "day": "2026-11-02",
+   "amount": -27.98,
+   "merchant": "Pine Street Pharmacy",
+   "category": "Health",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 65,
+   "day": "2026-11-01",
+   "amount": -22.13,
+   "merchant": "Peak Pizza",
+   "category": "Dining & Drinks",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 64,
+   "day": "2026-11-01",
+   "amount": -24.8,
+   "merchant": "Bookworm Books",
+   "category": "Entertainment",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 63,
+   "day": "2026-11-01",
+   "amount": -1195.0,
+   "merchant": "Rent, Aspen Court",
+   "category": "Home",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 62,
+   "day": "2026-10-31",
+   "amount": -13.0,
+   "merchant": "Cedar Falls Co-op",
+   "category": "Groceries",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 61,
+   "day": "2026-10-31",
+   "amount": -30.75,
+   "merchant": "Pine Street Pharmacy",
+   "category": "Health",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 60,
+   "day": "2026-10-31",
+   "amount": -49.23,
+   "merchant": "Mesa Fuel Stop",
+   "category": "Auto & Transport",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 59,
+   "day": "2026-10-30",
+   "amount": -7.14,
+   "merchant": "Juniper Coffee",
+   "category": "Dining & Drinks",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 58,
+   "day": "2026-10-30",
+   "amount": -44.66,
+   "merchant": "Trailhead Tacos",
+   "category": "Dining & Drinks",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 57,
+   "day": "2026-10-29",
+   "amount": -120.84,
+   "merchant": "Valley Fresh Market",
+   "category": "Groceries",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 56,
+   "day": "2026-10-27",
+   "amount": -31.92,
+   "merchant": "Little Sprouts Toys",
+   "category": "Kids",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 55,
+   "day": "2026-10-27",
+   "amount": -55.33,
+   "merchant": "Cedar Falls Co-op",
+   "category": "Groceries",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 54,
+   "day": "2026-10-26",
+   "amount": -7.94,
+   "merchant": "Juniper Coffee",
+   "category": "Dining & Drinks",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 53,
+   "day": "2026-10-26",
+   "amount": -25.66,
+   "merchant": "Pine Street Pharmacy",
+   "category": "Health",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 52,
+   "day": "2026-10-26",
+   "amount": -32.4,
+   "merchant": "Peak Pizza",
+   "category": "Dining & Drinks",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 51,
+   "day": "2026-10-25",
+   "amount": -12.54,
+   "merchant": "Bookworm Books",
+   "category": "Entertainment",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 50,
+   "day": "2026-10-25",
+   "amount": -12.17,
+   "merchant": "Lyft",
+   "category": "Auto & Transport",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 49,
+   "day": "2026-10-23",
+   "amount": 2180.4,
+   "merchant": "Ridgeway Systems payroll",
+   "category": "Income",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 48,
+   "day": "2026-10-22",
+   "amount": -19.14,
+   "merchant": "Lyft",
+   "category": "Auto & Transport",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 47,
+   "day": "2026-10-22",
+   "amount": -118.0,
+   "merchant": "Peak Wireless, 3 lines",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 46,
+   "day": "2026-10-21",
+   "amount": -18.26,
+   "merchant": "Trailhead Tacos",
+   "category": "Dining & Drinks",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 45,
+   "day": "2026-10-21",
+   "amount": -14.0,
+   "merchant": "Renter's insurance",
+   "category": "Home",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 44,
+   "day": "2026-10-20",
+   "amount": -19.2,
+   "merchant": "Bookworm Books",
+   "category": "Entertainment",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 43,
+   "day": "2026-10-20",
+   "amount": -109.62,
+   "merchant": "Valley Fresh Market",
+   "category": "Groceries",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 42,
+   "day": "2026-10-20",
+   "amount": -13.46,
+   "merchant": "Little Sprouts Toys",
+   "category": "Kids",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 41,
+   "day": "2026-10-19",
+   "amount": -28.92,
+   "merchant": "Little Sprouts Toys",
+   "category": "Kids",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 40,
+   "day": "2026-10-19",
+   "amount": -9.99,
+   "merchant": "Disney+",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 39,
+   "day": "2026-10-18",
+   "amount": -22.55,
+   "merchant": "Old Mill Market",
+   "category": "Groceries",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 38,
+   "day": "2026-10-18",
+   "amount": -61.75,
+   "merchant": "Cedar Falls Water & Trash",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 37,
+   "day": "2026-10-16",
+   "amount": -21.64,
+   "merchant": "Lyft",
+   "category": "Auto & Transport",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 36,
+   "day": "2026-10-16",
+   "amount": -29.23,
+   "merchant": "Peak Pizza",
+   "category": "Dining & Drinks",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 35,
+   "day": "2026-10-15",
+   "amount": -22.82,
+   "merchant": "Corner Hardware",
+   "category": "Home",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 34,
+   "day": "2026-10-15",
+   "amount": -12.34,
+   "merchant": "Lyft",
+   "category": "Auto & Transport",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 33,
+   "day": "2026-10-15",
+   "amount": -120.0,
+   "merchant": "Piano lessons, Rosa",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 32,
+   "day": "2026-10-15",
+   "amount": -289.0,
+   "merchant": "Car loan, Valley Auto Finance",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 31,
+   "day": "2026-10-14",
+   "amount": -44.94,
+   "merchant": "Corner Hardware",
+   "category": "Home",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 30,
+   "day": "2026-10-14",
+   "amount": -17.52,
+   "merchant": "Cedar Falls Co-op",
+   "category": "Groceries",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 29,
+   "day": "2026-10-14",
+   "amount": -13.0,
+   "merchant": "Bookworm Books",
+   "category": "Entertainment",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 28,
+   "day": "2026-10-14",
+   "amount": -2.99,
+   "merchant": "Cloud storage",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 27,
+   "day": "2026-10-13",
+   "amount": -13.56,
+   "merchant": "Lyft",
+   "category": "Auto & Transport",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 26,
+   "day": "2026-10-13",
+   "amount": -24.38,
+   "merchant": "Cedar Falls Co-op",
+   "category": "Groceries",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 25,
+   "day": "2026-10-13",
+   "amount": -37.03,
+   "merchant": "Trailhead Tacos",
+   "category": "Dining & Drinks",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 24,
+   "day": "2026-10-12",
+   "amount": -45.0,
+   "merchant": "Summit Card minimum",
+   "category": "Credit card payment",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 23,
+   "day": "2026-10-12",
+   "amount": -84.2,
+   "merchant": "Mesa Electric Co-op",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 22,
+   "day": "2026-10-11",
+   "amount": -135.03,
+   "merchant": "Valley Fresh Market",
+   "category": "Groceries",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 21,
+   "day": "2026-10-11",
+   "amount": -9.69,
+   "merchant": "Old Mill Market",
+   "category": "Groceries",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 20,
+   "day": "2026-10-11",
+   "amount": -26.3,
+   "merchant": "Trailhead Tacos",
+   "category": "Dining & Drinks",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 19,
+   "day": "2026-10-10",
+   "amount": -80.21,
+   "merchant": "Valley Fresh Market",
+   "category": "Groceries",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 18,
+   "day": "2026-10-10",
+   "amount": -210.0,
+   "merchant": "After-school club",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 17,
+   "day": "2026-10-09",
+   "amount": -65.0,
+   "merchant": "Ridgeway Internet",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 16,
+   "day": "2026-10-09",
+   "amount": 2180.4,
+   "merchant": "Ridgeway Systems payroll",
+   "category": "Income",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 15,
+   "day": "2026-10-08",
+   "amount": -180.0,
+   "merchant": "Student loan",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 14,
+   "day": "2026-10-07",
+   "amount": -6.04,
+   "merchant": "Juniper Coffee",
+   "category": "Dining & Drinks",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 13,
+   "day": "2026-10-07",
+   "amount": -19.49,
+   "merchant": "Corner Hardware",
+   "category": "Home",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 12,
+   "day": "2026-10-07",
+   "amount": -15.49,
+   "merchant": "Netflix",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 11,
+   "day": "2026-10-06",
+   "amount": -97.59,
+   "merchant": "Valley Fresh Market",
+   "category": "Groceries",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 10,
+   "day": "2026-10-05",
+   "amount": -23.36,
+   "merchant": "Old Mill Market",
+   "category": "Groceries",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 9,
+   "day": "2026-10-05",
+   "amount": -17.78,
+   "merchant": "Lyft",
+   "category": "Auto & Transport",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 8,
+   "day": "2026-10-04",
+   "amount": -112.4,
+   "merchant": "Car insurance, Granite Mutual",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 7,
+   "day": "2026-10-03",
+   "amount": -32.0,
+   "merchant": "Cedar Rec Center",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 6,
+   "day": "2026-10-02",
+   "amount": -22.83,
+   "merchant": "Peak Pizza",
+   "category": "Dining & Drinks",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 5,
+   "day": "2026-10-02",
+   "amount": -83.36,
+   "merchant": "Valley Fresh Market",
+   "category": "Groceries",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 4,
+   "day": "2026-10-02",
+   "amount": -24.74,
+   "merchant": "Peak Pizza",
+   "category": "Dining & Drinks",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 3,
+   "day": "2026-10-01",
+   "amount": -10.69,
+   "merchant": "Corner Hardware",
+   "category": "Home",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 2,
+   "day": "2026-10-01",
+   "amount": -30.11,
+   "merchant": "Corner Hardware",
+   "category": "Home",
+   "account": "Checking ••4417"
+  },
+  {
+   "id": 1,
+   "day": "2026-10-01",
+   "amount": -1195.0,
+   "merchant": "Rent, Aspen Court",
+   "category": "Home",
+   "account": "Checking ••4417"
+  }
+ ],
+ "spending": {
+  "month": "2026-11",
+  "last_month": "2026-10",
+  "this": [
+   1241.93,
+   1269.91,
+   1447.09,
+   1578.54,
+   1578.54,
+   1661.01,
+   1718.78,
+   1898.78,
+   2018.97,
+   2313.84,
+   2313.84,
+   2536.65,
+   2536.65,
+   2539.64,
+   3048.39,
+   3060.29,
+   3112.23,
+   3222.19,
+   3264.66,
+   3304.98,
+   3353.37
+  ],
+  "last": [
+   1235.8,
+   1366.73,
+   1398.73,
+   1511.13,
+   1552.27,
+   1649.86,
+   1690.88,
+   1870.88,
+   1935.88,
+   2226.09,
+   2397.11,
+   2481.31,
+   2556.28,
+   2634.73,
+   3078.89,
+   3129.76,
+   3129.76,
+   3214.06,
+   3252.97,
+   3395.25,
+   3427.51,
+   3564.65,
+   3564.65,
+   3564.65,
+   3589.36,
+   3655.36,
+   3742.61,
+   3742.61,
+   3863.45,
+   3915.25,
+   4008.23
+  ],
+  "months": [
+   [
+    "2026-10",
+    4008.23
+   ],
+   [
+    "2026-11",
+    3353.37
+   ]
+  ],
+  "since": "2026-10-01"
+ },
+ "recurring": [
+  {
+   "name": "Rent, Aspen Court",
+   "amount": 1195.0,
+   "frequency": "monthly",
+   "due": "2026-12-01",
+   "days_left": 10,
+   "autopay": false,
+   "paid": false,
+   "pay_from": null,
+   "pay_link": null,
+   "per_month": 1195.0
+  },
+  {
+   "name": "Mesa Electric Co-op",
+   "amount": 84.2,
+   "frequency": "monthly",
+   "due": "2026-12-12",
+   "days_left": 21,
+   "autopay": true,
+   "paid": false,
+   "pay_from": null,
+   "pay_link": null,
+   "per_month": 84.2
+  },
+  {
+   "name": "Cedar Falls Water & Trash",
+   "amount": 61.75,
+   "frequency": "monthly",
+   "due": "2026-12-18",
+   "days_left": 27,
+   "autopay": false,
+   "paid": false,
+   "pay_from": null,
+   "pay_link": null,
+   "per_month": 61.75
+  },
+  {
+   "name": "Ridgeway Internet",
+   "amount": 65.0,
+   "frequency": "monthly",
+   "due": "2026-12-09",
+   "days_left": 18,
+   "autopay": true,
+   "paid": false,
+   "pay_from": null,
+   "pay_link": null,
+   "per_month": 65.0
+  },
+  {
+   "name": "Peak Wireless, 3 lines",
+   "amount": 118.0,
+   "frequency": "monthly",
+   "due": "2026-11-22",
+   "days_left": 1,
+   "autopay": true,
+   "paid": false,
+   "pay_from": null,
+   "pay_link": null,
+   "per_month": 118.0
+  },
+  {
+   "name": "Summit Card minimum",
+   "amount": 45.0,
+   "frequency": "monthly",
+   "due": "2026-12-12",
+   "days_left": 21,
+   "autopay": false,
+   "paid": false,
+   "pay_from": null,
+   "pay_link": null,
+   "per_month": 45.0
+  },
+  {
+   "name": "Car loan, Valley Auto Finance",
+   "amount": 289.0,
+   "frequency": "monthly",
+   "due": "2026-12-15",
+   "days_left": 24,
+   "autopay": true,
+   "paid": false,
+   "pay_from": null,
+   "pay_link": null,
+   "per_month": 289.0
+  },
+  {
+   "name": "Car insurance, Granite Mutual",
+   "amount": 112.4,
+   "frequency": "monthly",
+   "due": "2026-12-04",
+   "days_left": 13,
+   "autopay": true,
+   "paid": false,
+   "pay_from": null,
+   "pay_link": null,
+   "per_month": 112.4
+  },
+  {
+   "name": "Netflix",
+   "amount": 15.49,
+   "frequency": "monthly",
+   "due": "2026-12-07",
+   "days_left": 16,
+   "autopay": true,
+   "paid": false,
+   "pay_from": null,
+   "pay_link": null,
+   "per_month": 15.49
+  },
+  {
+   "name": "Disney+",
+   "amount": 9.99,
+   "frequency": "monthly",
+   "due": "2026-12-19",
+   "days_left": 28,
+   "autopay": true,
+   "paid": false,
+   "pay_from": null,
+   "pay_link": null,
+   "per_month": 9.99
+  },
+  {
+   "name": "Cedar Rec Center",
+   "amount": 32.0,
+   "frequency": "monthly",
+   "due": "2026-12-03",
+   "days_left": 12,
+   "autopay": true,
+   "paid": false,
+   "pay_from": null,
+   "pay_link": null,
+   "per_month": 32.0
+  },
+  {
+   "name": "Student loan",
+   "amount": 180.0,
+   "frequency": "monthly",
+   "due": "2026-12-08",
+   "days_left": 17,
+   "autopay": true,
+   "paid": false,
+   "pay_from": null,
+   "pay_link": null,
+   "per_month": 180.0
+  },
+  {
+   "name": "Piano lessons, Rosa",
+   "amount": 120.0,
+   "frequency": "monthly",
+   "due": "2026-12-15",
+   "days_left": 24,
+   "autopay": false,
+   "paid": false,
+   "pay_from": null,
+   "pay_link": null,
+   "per_month": 120.0
+  },
+  {
+   "name": "After-school club",
+   "amount": 210.0,
+   "frequency": "monthly",
+   "due": "2026-12-10",
+   "days_left": 19,
+   "autopay": false,
+   "paid": false,
+   "pay_from": null,
+   "pay_link": null,
+   "per_month": 210.0
+  },
+  {
+   "name": "Renter's insurance",
+   "amount": 14.0,
+   "frequency": "monthly",
+   "due": "2026-11-21",
+   "days_left": 0,
+   "autopay": true,
+   "paid": false,
+   "pay_from": null,
+   "pay_link": null,
+   "per_month": 14.0
+  },
+  {
+   "name": "Cloud storage",
+   "amount": 2.99,
+   "frequency": "monthly",
+   "due": "2026-12-14",
+   "days_left": 23,
+   "autopay": true,
+   "paid": false,
+   "pay_from": null,
+   "pay_link": null,
+   "per_month": 2.99
+  },
+  {
+   "name": "Gift fund",
+   "amount": 60.0,
+   "frequency": "monthly",
+   "due": null,
+   "days_left": null,
+   "autopay": false,
+   "paid": false,
+   "pay_from": null,
+   "pay_link": null,
+   "per_month": 60.0
+  }
+ ],
+ "inactive_bills": [
+  {
+   "name": "StreamBox",
+   "amount": 11.99,
+   "status": "trial"
+  },
+  {
+   "name": "Old gym",
+   "amount": 45.0,
+   "status": "closed"
+  },
+  {
+   "name": "Meal kit",
+   "amount": 59.99,
+   "status": "closed"
+  },
+  {
+   "name": "Magazine",
+   "amount": 4.99,
+   "status": "closed"
+  }
+ ],
+ "debts": [
+  {
+   "name": "Summit Card",
+   "institution": "Summit Card",
+   "group": "cards",
+   "kind": "credit card",
+   "status": "open",
+   "balance": 1240.18,
+   "as_of": "2026-11-21",
+   "payment": null,
+   "frees_per_month": 45,
+   "frees_per_paycheck": 22
+  },
+  {
+   "name": "Car loan",
+   "institution": "Valley Auto Finance",
+   "group": "loans",
+   "kind": "auto loan",
+   "status": "open",
+   "balance": 9820.0,
+   "as_of": "2026-11-21",
+   "payment": null,
+   "frees_per_month": 289,
+   "frees_per_paycheck": 144
+  },
+  {
+   "name": "Student loan",
+   "institution": "Student loan servicer",
+   "group": "loans",
+   "kind": "student loan",
+   "status": "open",
+   "balance": 14350.0,
+   "as_of": "2026-11-21",
+   "payment": null,
+   "frees_per_month": 180,
+   "frees_per_paycheck": 90
+  },
+  {
+   "name": "Mesa Medical (collection)",
+   "institution": "Collection agency",
+   "group": "other",
+   "kind": "collection",
+   "status": "open",
+   "balance": 180.0,
+   "as_of": "2026-11-21",
+   "payment": null,
+   "frees_per_month": 0,
+   "frees_per_paycheck": 0
+  }
+ ],
+ "irs": {
+  "text": "Nothing owed; last year's return was filed and accepted.",
+  "source": "IRS online account",
+  "as_of": "2026-10-12"
+ },
+ "strip": {
+  "low": {
+   "amount": 449.39,
+   "on": "2026-12-03",
+   "below_bar": false,
+   "bar": 250,
+   "tone": "ok",
+   "status": "ok",
+   "action": null
+  },
+  "checking_acct": {
+   "amount": 2240.39,
+   "read_at": "2026-11-21T06:15:00-07:00",
+   "stale": false
+  },
+  "payday": {
+   "day": "2026-12-04",
+   "days": 13
+  },
+  "fun": {
+   "status": "active",
+   "remaining": 60,
+   "reason": ""
+  },
+  "on_time": {
+   "gauge_key": "bills_on_time",
+   "name": "Bills on time",
+   "unit": "%",
+   "target": 100,
+   "current": 100,
+   "current_on": "2026-11-20"
+  },
+  "overdrafts": {
+   "gauge_key": "overdrafts",
+   "name": "Overdraft fees",
+   "unit": "count",
+   "target": 0,
+   "current": 0,
+   "current_on": "2026-11-20"
+  }
+ },
+ "retirement": {
+  "total": 26600.0,
+  "unread": [],
+  "election_pct": 6.0,
+  "full_match": true,
+  "ytd": 3970.0,
+  "limit": 23500
+ },
+ "goal": {
+  "name": "Emergency fund",
+  "target": 6000.0,
+  "by": "2027-10-17",
+  "per_month": 300.0,
+  "starts": "2026-05-25",
+  "saved": 1850.0,
+  "saved_as_of": "2026-11-21",
+  "on_pace": 1800.0,
+  "status": "on_track",
+  "notes": "$150 each payday.",
+  "source": "Savings ••4425"
+ },
+ "credit_gauges": {
+  "negative": [
+   "Mesa Medical collection",
+   "One late payment, 2023",
+   "High card use",
+   "One hard inquiry"
+  ],
+  "negatives": 1,
+  "utilization": 24.8,
+  "inquiries": 1,
+  "as_of": "2026-11-15"
+ },
+ "bot_equity": [
+  {
+   "day": "2026-11-17",
+   "value": 10350.14,
+   "source": "paper",
+   "notes": ""
+  },
+  {
+   "day": "2026-11-18",
+   "value": 10354.24,
+   "source": "paper",
+   "notes": ""
+  },
+  {
+   "day": "2026-11-19",
+   "value": 10374.69,
+   "source": "paper",
+   "notes": ""
+  },
+  {
+   "day": "2026-11-20",
+   "value": 10403.46,
+   "source": "paper",
+   "notes": ""
+  },
+  {
+   "day": "2026-11-21",
+   "value": 10428.61,
+   "source": "paper",
+   "notes": ""
+  }
+ ],
+ "net_worth": {
+  "real": [
+   {
+    "day": "2026-11-21",
+    "value": 17458.21,
+    "source": "accounts",
+    "notes": "Every balance, all debts"
+   }
+  ],
+  "linked": [
+   {
+    "day": "2026-10-22",
+    "value": 17048.21,
+    "source": "accounts",
+    "notes": ""
+   },
+   {
+    "day": "2026-11-21",
+    "value": 17458.21,
+    "source": "accounts",
+    "notes": ""
+   }
+  ]
+ },
+ "credit": {
+  "scores": [
+   {
+    "day": "2026-09-22",
+    "value": 692,
+    "source": "Experian",
+    "notes": ""
+   },
+   {
+    "day": "2026-10-22",
+    "value": 697,
+    "source": "Experian",
+    "notes": ""
+   },
+   {
+    "day": "2026-11-21",
+    "value": 702,
+    "source": "Experian",
+    "notes": ""
+   }
+  ],
+  "bureaus": [
+   {
+    "date": "2026-11-15",
+    "bureau": "Experian",
+    "score": 702,
+    "change": 6,
+    "reason": "Card balance went down",
+    "source": "Credit monitoring"
+   },
+   {
+    "date": "2026-11-15",
+    "bureau": "TransUnion",
+    "score": 696,
+    "change": 4,
+    "reason": "Card balance went down",
+    "source": "Credit monitoring"
+   }
+  ],
+  "history": [
+   {
+    "date": "2026-11-15",
+    "bureau": "Experian",
+    "score": 702,
+    "change": 4,
+    "reason": "Balance change",
+    "source": "Credit monitoring"
+   },
+   {
+    "date": "2026-10-16",
+    "bureau": "Experian",
+    "score": 698,
+    "change": 4,
+    "reason": "Balance change",
+    "source": "Credit monitoring"
+   },
+   {
+    "date": "2026-09-16",
+    "bureau": "Experian",
+    "score": 694,
+    "change": 4,
+    "reason": "Balance change",
+    "source": "Credit monitoring"
+   },
+   {
+    "date": "2026-08-17",
+    "bureau": "Experian",
+    "score": 690,
+    "change": 4,
+    "reason": "Balance change",
+    "source": "Credit monitoring"
+   }
+  ],
+  "summary": {
+   "as_of": "2026-11-15",
+   "report_updated": "2026-11-15",
+   "hard_inquiries": 1,
+   "inquiries_drop_off": "2027-06-19",
+   "public_records": 0,
+   "goal": 740,
+   "note": "Paying the card under $300 is the fastest gain."
+  },
+  "actions": [
+   {
+    "rank": 1,
+    "action": "Pay the Summit Card down to under $300",
+    "why": "Utilization is the biggest lever",
+    "impact": "+15 to +25",
+    "due": "2026-12-21",
+    "status": "open",
+    "in_todoist": false
+   },
+   {
+    "rank": 2,
+    "action": "Dispute the duplicate Mesa Medical collection",
+    "why": "It's reported twice",
+    "impact": "+10 to +20",
+    "due": "",
+    "status": "open",
+    "in_todoist": true
+   },
+   {
+    "rank": 3,
+    "action": "Keep the oldest card open",
+    "why": "Account age",
+    "impact": "protects",
+    "due": "",
+    "status": "open",
+    "in_todoist": false
+   },
+   {
+    "rank": 4,
+    "action": "Freeze the third bureau",
+    "why": "Fraud protection",
+    "impact": "none",
+    "due": "",
+    "status": "open",
+    "in_todoist": true
+   },
+   {
+    "rank": 5,
+    "action": "Set autopay for the minimum",
+    "why": "No late payments",
+    "impact": "protects",
+    "due": "",
+    "status": "done",
+    "in_todoist": false
+   }
+  ],
+  "accounts": [
+   {
+    "account": "Summit Card ••0932",
+    "kind": "credit card",
+    "group": "cards",
+    "balance": 1240,
+    "limit": 5000,
+    "revolving": true,
+    "flag": "warn",
+    "note": "24.8% used",
+    "as_of": "2026-11-15"
+   },
+   {
+    "account": "Valley Auto Finance",
+    "kind": "auto loan",
+    "group": "loans",
+    "balance": 9820,
+    "limit": null,
+    "revolving": false,
+    "flag": "ok",
+    "note": "On time 31 months",
+    "as_of": "2026-11-15"
+   },
+   {
+    "account": "Student loan",
+    "kind": "student loan",
+    "group": "loans",
+    "balance": 14350,
+    "limit": null,
+    "revolving": false,
+    "flag": "ok",
+    "note": "",
+    "as_of": "2026-11-15"
+   },
+   {
+    "account": "Mesa Medical (collection)",
+    "kind": "collection",
+    "group": "negative",
+    "balance": 180,
+    "limit": null,
+    "revolving": false,
+    "flag": "bad",
+    "note": "Reported twice",
+    "as_of": "2026-11-15"
+   },
+   {
+    "account": "First Mesa Credit Union card",
+    "kind": "credit card",
+    "group": "cards",
+    "balance": 0,
+    "limit": 1500,
+    "revolving": true,
+    "flag": "ok",
+    "note": "Oldest account",
+    "as_of": "2026-11-15"
+   },
+   {
+    "account": "Store card",
+    "kind": "credit card",
+    "group": "cards",
+    "balance": 0,
+    "limit": 800,
+    "revolving": true,
+    "flag": "ok",
+    "note": "",
+    "as_of": "2026-11-15"
+   }
+  ]
+ },
+ "cash": {
+  "next_payday": "2026-12-04",
+  "bar": 250.0,
+  "periods": [
+   {
+    "period_start": "2026-11-21",
+    "period_end": "2026-12-03",
+    "payday": "2026-12-04",
+    "opening": 2240.39,
+    "income": 0.0,
+    "bills": 1345.0,
+    "extra": 446.0,
+    "low_point": 449.39,
+    "low_on": "2026-12-03",
+    "closing": 449.39,
+    "below_bar": false,
+    "bar": 250,
+    "extra_items": [
+     {
+      "label": "Everyday spending",
+      "amount": 216
+     },
+     {
+      "label": "Gas",
+      "amount": 90
+     },
+     {
+      "label": "Groceries",
+      "amount": 140
+     }
+    ]
+   },
+   {
+    "period_start": "2026-12-04",
+    "period_end": "2026-12-17",
+    "payday": "2026-12-18",
+    "opening": 449.39,
+    "income": 2180.4,
+    "bills": 1124.08,
+    "extra": 772.0,
+    "low_point": 733.71,
+    "low_on": "2026-12-17",
+    "closing": 733.71,
+    "below_bar": false,
+    "bar": 250,
+    "extra_items": [
+     {
+      "label": "Emergency fund transfer",
+      "amount": 150
+     },
+     {
+      "label": "Everyday spending",
+      "amount": 252
+     },
+     {
+      "label": "Groceries",
+      "amount": 280
+     },
+     {
+      "label": "Gas",
+      "amount": 90
+     }
+    ]
+   },
+   {
+    "period_start": "2026-12-18",
+    "period_end": "2026-12-31",
+    "payday": "2027-01-01",
+    "opening": 733.71,
+    "income": 2180.4,
+    "bills": 203.74,
+    "extra": 772.0,
+    "low_point": 1938.37,
+    "low_on": "2026-12-31",
+    "closing": 1938.37,
+    "below_bar": false,
+    "bar": 250,
+    "extra_items": [
+     {
+      "label": "Emergency fund transfer",
+      "amount": 150
+     },
+     {
+      "label": "Everyday spending",
+      "amount": 252
+     },
+     {
+      "label": "Groceries",
+      "amount": 280
+     },
+     {
+      "label": "Gas",
+      "amount": 90
+     }
+    ]
+   }
+  ],
+  "left_to_spend": 436.63,
+  "budget": [
+   {
+    "slug": "groceries",
+    "name": "Groceries",
+    "budget": 600,
+    "spent": 419.24,
+    "left": 180.76
+   },
+   {
+    "slug": "dining",
+    "name": "Dining & Drinks",
+    "budget": 160,
+    "spent": 188.55,
+    "left": -28.55
+   },
+   {
+    "slug": "auto",
+    "name": "Auto & Transport",
+    "budget": 220,
+    "spent": 104.11,
+    "left": 115.89
+   },
+   {
+    "slug": "health",
+    "name": "Health",
+    "budget": 80,
+    "spent": 136.47,
+    "left": -56.47
+   },
+   {
+    "slug": "home",
+    "name": "Home",
+    "budget": 1600,
+    "spent": 1209.0,
+    "left": 391.0
+   },
+   {
+    "slug": "kids",
+    "name": "Kids",
+    "budget": 150,
+    "spent": 60.64,
+    "left": 89.36
+   },
+   {
+    "slug": "ent",
+    "name": "Entertainment",
+    "budget": 60,
+    "spent": 52.54,
+    "left": 7.46
+   },
+   {
+    "slug": "bills",
+    "name": "Bills & Utilities",
+    "budget": 700,
+    "spent": 1182.82,
+    "left": -482.82
+   },
+   {
+    "slug": "shop",
+    "name": "Shopping",
+    "budget": 100,
+    "spent": 0.0,
+    "left": 100.0
+   },
+   {
+    "slug": "gifts",
+    "name": "Gifts",
+    "budget": 60,
+    "spent": 0.0,
+    "left": 60.0
+   },
+   {
+    "slug": "pets",
+    "name": "Pets",
+    "budget": 60,
+    "spent": 0.0,
+    "left": 60.0
+   },
+   {
+    "slug": "fees",
+    "name": "Fees",
+    "budget": 0,
+    "spent": 0.0,
+    "left": 0.0
+   },
+   {
+    "slug": "spending_total",
+    "name": "All spending",
+    "budget": 3790,
+    "spent": 3353.37,
+    "left": 436.63
+   }
+  ],
+  "earnings": {
+   "budget": 4360,
+   "actual": 4360.8
+  },
+  "actions": [],
+  "error": null
+ },
+ "paychecks": [
+  {
+   "pay_date": "2026-11-20",
+   "gross": 3150.0,
+   "net": 2180.4,
+   "retirement_contrib": 189,
+   "pretax_benefits": 212.35,
+   "pto_hours_balance": 46.5,
+   "ytd_gross": 75600.0
+  },
+  {
+   "pay_date": "2026-11-06",
+   "gross": 3150.0,
+   "net": 2180.4,
+   "retirement_contrib": 189,
+   "pretax_benefits": 212.35,
+   "pto_hours_balance": 43.4,
+   "ytd_gross": 72450.0
+  },
+  {
+   "pay_date": "2026-10-23",
+   "gross": 3150.0,
+   "net": 2180.4,
+   "retirement_contrib": 189,
+   "pretax_benefits": 212.35,
+   "pto_hours_balance": 40.3,
+   "ytd_gross": 69300.0
+  },
+  {
+   "pay_date": "2026-10-09",
+   "gross": 3150.0,
+   "net": 2180.4,
+   "retirement_contrib": 189,
+   "pretax_benefits": 212.35,
+   "pto_hours_balance": 37.2,
+   "ytd_gross": 66150.0
+  },
+  {
+   "pay_date": "2026-09-25",
+   "gross": 3150.0,
+   "net": 2180.4,
+   "retirement_contrib": 189,
+   "pretax_benefits": 212.35,
+   "pto_hours_balance": 34.1,
+   "ytd_gross": 63000.0
+  }
+ ],
+ "benefits": [
+  {
+   "kind": "retirement_401k",
+   "plan_name": "Ridgeway Systems 401(k)",
+   "status": "elected",
+   "cost_per_paycheck": 189,
+   "employer_contribution": "100% of the first 3%, 50% of the next 2%",
+   "provider": "Plan provider",
+   "enrollment_deadline": "",
+   "notes": ""
+  },
+  {
+   "kind": "medical",
+   "plan_name": "Family PPO",
+   "status": "elected",
+   "cost_per_paycheck": 168,
+   "employer_contribution": "80% of premium",
+   "provider": "Health plan",
+   "enrollment_deadline": "2026-12-16",
+   "notes": "Open enrollment"
+  },
+  {
+   "kind": "dental",
+   "plan_name": "Family dental",
+   "status": "elected",
+   "cost_per_paycheck": 22,
+   "employer_contribution": "50%",
+   "provider": "Dental plan",
+   "enrollment_deadline": "2026-12-16",
+   "notes": ""
+  },
+  {
+   "kind": "espp",
+   "plan_name": "Stock purchase plan",
+   "status": "not enrolled",
+   "cost_per_paycheck": 0,
+   "employer_contribution": "15% discount",
+   "provider": "",
+   "enrollment_deadline": "2026-12-31",
+   "notes": ""
+  }
+ ],
+ "lyft": {
+  "budget": 40.0,
+  "note": "Rides only when the car is in the shop.",
+  "week_start": "2026-11-16",
+  "spent": 0.0
+ },
+ "fun": {
+  "status": "active",
+  "reason": "Every bill this pay period is covered.",
+  "period_start": "2026-11-20",
+  "period_end": "2026-12-03",
+  "spent": 40,
+  "remaining": 60,
+  "as_of": null,
+  "charges": [],
+  "ideas": [
+   {
+    "name": "Tacos at Trailhead",
+    "kind": "eat",
+    "est_cost_usd": 48,
+    "when_text": null,
+    "city": "Cedar Falls",
+    "link": "",
+    "why": "Your favorite patio"
+   },
+   {
+    "name": "The Scoop ice cream",
+    "kind": "eat",
+    "est_cost_usd": 14,
+    "when_text": null,
+    "city": "Cedar Falls",
+    "link": "",
+    "why": "Kids' pick"
+   },
+   {
+    "name": "Blue Door Bakery brunch",
+    "kind": "eat",
+    "est_cost_usd": 32,
+    "when_text": null,
+    "city": "Cedar Falls",
+    "link": "",
+    "why": "Saturday treat"
+   },
+   {
+    "name": "Copper Kettle Diner",
+    "kind": "eat",
+    "est_cost_usd": 38,
+    "when_text": null,
+    "city": "Cedar Falls",
+    "link": "",
+    "why": "Cheap and quick"
+   },
+   {
+    "name": "Saffron Kitchen takeout",
+    "kind": "eat",
+    "est_cost_usd": 42,
+    "when_text": null,
+    "city": "Cedar Falls",
+    "link": "",
+    "why": "Nora's pick"
+   }
+  ],
+  "over": 0
+ },
+ "bot": {
+  "status": "running",
+  "summary": "Paper account is up 4.1% since it started, ahead of SPY by 0.6%.",
+  "mode": "paper",
+  "strategy": "trend-follow",
+  "pick": "trend-follow",
+  "working_cap": 10000.0,
+  "equity": 10412.33,
+  "cash": 1041.2,
+  "targets": {
+   "SPY": 0.4,
+   "QQQ": 0.2,
+   "BND": 0.2,
+   "GLD": 0.1,
+   "CASH": 0.1
+  },
+  "updated": "2026-11-20T14:45:00-07:00",
+  "day": "2026-11-20"
+ },
+ "business": {
+  "company": "Carter Studio LLC",
+  "as_of": "2026-11-21T06:00:00-07:00",
+  "expense_total": 2340.55,
+  "expenses": [
+   {
+    "account": "6100 - Software - CS",
+    "debit": 1188.0,
+    "credit": 0.0,
+    "last": "2026-11-12",
+    "net": 1188.0,
+    "number": "6100",
+    "name": "Software",
+    "schedule_c": "18"
+   },
+   {
+    "account": "6200 - Equipment - CS",
+    "debit": 899.0,
+    "credit": 0.0,
+    "last": "2026-11-12",
+    "net": 899.0,
+    "number": "6200",
+    "name": "Equipment",
+    "schedule_c": "13"
+   },
+   {
+    "account": "6300 - Phone and internet - CS",
+    "debit": 253.55,
+    "credit": 0.0,
+    "last": "2026-11-12",
+    "net": 253.55,
+    "number": "6300",
+    "name": "Phone and internet",
+    "schedule_c": "25"
+   }
+  ],
+  "balanced": true,
+  "contributions": 2500.0
+ }
+}

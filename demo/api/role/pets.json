@@ -1,0 +1,107 @@
+{
+ "role": {
+  "key": "pets",
+  "name": "Pet Expert",
+  "nav": "pets",
+  "file": "pets/EXPERT.md",
+  "owns": "Biscuit the dog: the vet, food and supplies, and the plan for trips",
+  "areas": [],
+  "widgets": []
+ },
+ "status": "active",
+ "summary": "Vaccines are due next month; food lasts three weeks.",
+ "items": [],
+ "needs": [],
+ "watch": [],
+ "tasks": [
+  {
+   "id": "t8130",
+   "content": "Book Biscuit's yearly vet visit, (970) 555-0122",
+   "description": "Vaccines due next month.",
+   "project": "Home",
+   "labels": [
+    "Phone"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": "call"
+  }
+ ],
+ "routines": [],
+ "report": {
+  "latest": {
+   "path": "pets/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "Vaccines are due next month; food lasts three weeks.",
+   "html": "<p>Vaccines are due next month; food lasts three weeks.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "pets/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Vet visit",
+   "value": "due",
+   "sub": "next month",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Food",
+   "value": "3 weeks",
+   "sub": "left",
+   "tone": "",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [],
+ "widgets": {},
+ "folders": [
+  {
+   "name": "pets",
+   "files": [
+    {
+     "path": "pets/README.md",
+     "size": 1799
+    },
+    {
+     "path": "pets/notes.md",
+     "size": 1984
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>pets</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

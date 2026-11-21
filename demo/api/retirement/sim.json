@@ -1,0 +1,352 @@
+{
+ "ready": true,
+ "values": {
+  "monthly_save": 800,
+  "real_growth": 5.0,
+  "retire_spend": 52000,
+  "ss_age": 67,
+  "borrow": false,
+  "annuity_share": 0
+ },
+ "levers": [
+  {
+   "key": "monthly_save",
+   "label": "Saved each month",
+   "unit": "usd",
+   "min": 0,
+   "max": 3000,
+   "step": 50,
+   "default": 800,
+   "help": "401(k), Roth and HSA together"
+  },
+  {
+   "key": "real_growth",
+   "label": "Growth after inflation",
+   "unit": "pct",
+   "min": 2,
+   "max": 8,
+   "step": 0.5,
+   "default": 5.0,
+   "help": ""
+  },
+  {
+   "key": "retire_spend",
+   "label": "Spending a year in retirement",
+   "unit": "usd",
+   "min": 30000,
+   "max": 90000,
+   "step": 1000,
+   "default": 52000,
+   "help": "In today's dollars"
+  },
+  {
+   "key": "ss_age",
+   "label": "Social Security from",
+   "unit": "choice",
+   "options": [
+    [
+     62,
+     "62"
+    ],
+    [
+     67,
+     "67"
+    ],
+    [
+     70,
+     "70"
+    ]
+   ],
+   "default": 67
+  },
+  {
+   "key": "borrow",
+   "label": "Borrow instead of selling",
+   "unit": "bool",
+   "default": false
+  },
+  {
+   "key": "annuity_share",
+   "label": "Share of savings into an annuity",
+   "unit": "pct",
+   "min": 0,
+   "max": 50,
+   "step": 5,
+   "default": 0
+  }
+ ],
+ "retire_year": 2055,
+ "retire_age": 69,
+ "retire_age_exact": 68.7,
+ "nominal_growth": 7.6,
+ "summary": "At $800 a month and 5% growth, savings cover $52,000 a year from age 69.",
+ "savings_needed": 1120000,
+ "debt_free_year": 2030,
+ "guaranteed_income": {
+  "total_yearly": 28560,
+  "social_security": 28560,
+  "annuity": 0,
+  "starts_at": "67",
+  "rises_with_inflation": true
+ },
+ "path": [
+  {
+   "year": 2026,
+   "balance": 37430,
+   "needed": 820000
+  },
+  {
+   "year": 2027,
+   "balance": 48802,
+   "needed": 828200
+  },
+  {
+   "year": 2028,
+   "balance": 60742,
+   "needed": 836400
+  },
+  {
+   "year": 2029,
+   "balance": 73279,
+   "needed": 844600
+  },
+  {
+   "year": 2030,
+   "balance": 86443,
+   "needed": 852800
+  },
+  {
+   "year": 2031,
+   "balance": 100265,
+   "needed": 861000
+  },
+  {
+   "year": 2032,
+   "balance": 114778,
+   "needed": 869200
+  },
+  {
+   "year": 2033,
+   "balance": 130017,
+   "needed": 877400
+  },
+  {
+   "year": 2034,
+   "balance": 146018,
+   "needed": 885600
+  },
+  {
+   "year": 2035,
+   "balance": 162819,
+   "needed": 893800
+  },
+  {
+   "year": 2036,
+   "balance": 180460,
+   "needed": 902000
+  },
+  {
+   "year": 2037,
+   "balance": 198982,
+   "needed": 910200
+  },
+  {
+   "year": 2038,
+   "balance": 218432,
+   "needed": 918400
+  },
+  {
+   "year": 2039,
+   "balance": 238853,
+   "needed": 926600
+  },
+  {
+   "year": 2040,
+   "balance": 260296,
+   "needed": 934800
+  },
+  {
+   "year": 2041,
+   "balance": 282811,
+   "needed": 943000
+  },
+  {
+   "year": 2042,
+   "balance": 306451,
+   "needed": 951200
+  },
+  {
+   "year": 2043,
+   "balance": 331274,
+   "needed": 959400
+  },
+  {
+   "year": 2044,
+   "balance": 357337,
+   "needed": 967600
+  },
+  {
+   "year": 2045,
+   "balance": 384704,
+   "needed": 975800
+  },
+  {
+   "year": 2046,
+   "balance": 413439,
+   "needed": 984000
+  },
+  {
+   "year": 2047,
+   "balance": 443611,
+   "needed": 992200
+  },
+  {
+   "year": 2048,
+   "balance": 475292,
+   "needed": 1000400
+  },
+  {
+   "year": 2049,
+   "balance": 508557,
+   "needed": 1008600
+  },
+  {
+   "year": 2050,
+   "balance": 543484,
+   "needed": 1016800
+  },
+  {
+   "year": 2051,
+   "balance": 580159,
+   "needed": 1025000
+  },
+  {
+   "year": 2052,
+   "balance": 618667,
+   "needed": 1033200
+  },
+  {
+   "year": 2053,
+   "balance": 659100,
+   "needed": 1041400
+  },
+  {
+   "year": 2054,
+   "balance": 701555,
+   "needed": 1049600
+  },
+  {
+   "year": 2055,
+   "balance": 684633,
+   "needed": 1057800
+  },
+  {
+   "year": 2056,
+   "balance": 666864,
+   "needed": 1066000
+  },
+  {
+   "year": 2057,
+   "balance": 648208,
+   "needed": 1074200
+  },
+  {
+   "year": 2058,
+   "balance": 628618,
+   "needed": 1082400
+  },
+  {
+   "year": 2059,
+   "balance": 608049,
+   "needed": 1090600
+  },
+  {
+   "year": 2060,
+   "balance": 586451,
+   "needed": 1098800
+  },
+  {
+   "year": 2061,
+   "balance": 563774,
+   "needed": 1107000
+  },
+  {
+   "year": 2062,
+   "balance": 539963,
+   "needed": 1115200
+  },
+  {
+   "year": 2063,
+   "balance": 514961,
+   "needed": 1123400
+  },
+  {
+   "year": 2064,
+   "balance": 488709,
+   "needed": 1131600
+  },
+  {
+   "year": 2065,
+   "balance": 461144,
+   "needed": 1139800
+  },
+  {
+   "year": 2066,
+   "balance": 432201,
+   "needed": 1148000
+  },
+  {
+   "year": 2067,
+   "balance": 401811,
+   "needed": 1156200
+  },
+  {
+   "year": 2068,
+   "balance": 369902,
+   "needed": 1164400
+  },
+  {
+   "year": 2069,
+   "balance": 336397,
+   "needed": 1172600
+  },
+  {
+   "year": 2070,
+   "balance": 301217,
+   "needed": 1180800
+  },
+  {
+   "year": 2071,
+   "balance": 264278,
+   "needed": 1189000
+  }
+ ],
+ "legacy": {
+  "70": 1180000,
+  "80": 940000,
+  "90": 510000
+ },
+ "borrow": {
+  "on": false
+ },
+ "death_benefits": null,
+ "notes": [
+  "**Biggest lever:** saving $200 more a month moves retirement about two years earlier.",
+  "This is a model, not financial advice."
+ ],
+ "explain": {
+  "purpose": "See how saving, growth and spending move the year you could retire.",
+  "captions": {
+   "retire_age": "The first year savings plus Social Security cover spending for life.",
+   "savings_needed": "What the plan needs saved by then."
+  },
+  "how_it_fits": [
+   "Savings: grow each year by the growth rate.",
+   "Social Security: starts at the age you pick.",
+   "Spending: comes out every year after retiring."
+  ]
+ },
+ "how_to": [],
+ "fallback": null,
+ "note": ""
+}

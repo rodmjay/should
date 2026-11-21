@@ -1,0 +1,991 @@
+{
+ "role": {
+  "key": "bookkeeper",
+  "name": "Accountant",
+  "nav": "accountant",
+  "file": "bookkeeper/README.md",
+  "owns": "Balances, transactions, bills, net worth and the business expense split",
+  "areas": [
+   "money"
+  ],
+  "widgets": [
+   "billsline"
+  ]
+ },
+ "status": "act",
+ "summary": "Every bill this pay period is covered; low point stays above the $250 bar.",
+ "items": [
+  {
+   "text": "Money: Summit Card minimum, $45, due 12/4",
+   "when": "2026-12-04",
+   "level": "act",
+   "link": "/s/money#bills"
+  },
+  {
+   "text": "StreamBox trial renews in 6 days at $11.99",
+   "when": "2026-11-27",
+   "level": "watch",
+   "link": "/s/money#bills"
+  },
+  {
+   "text": "Overdraft fee of $35 last month; refund call queued",
+   "when": null,
+   "level": "watch",
+   "link": "/s/money#bills"
+  }
+ ],
+ "needs": [
+  {
+   "text": "Money: Summit Card minimum, $45, due 12/4",
+   "when": "2026-12-04",
+   "level": "act",
+   "link": "/s/money#bills",
+   "wait": true
+  }
+ ],
+ "watch": [
+  {
+   "text": "StreamBox trial renews in 6 days at $11.99",
+   "when": "2026-11-27",
+   "level": "watch",
+   "link": "/s/money#bills"
+  },
+  {
+   "text": "Overdraft fee of $35 last month; refund call queued",
+   "when": null,
+   "level": "watch",
+   "link": "/s/money#bills"
+  }
+ ],
+ "tasks": [
+  {
+   "id": "t8100",
+   "content": "Pay the Summit Card minimum, $45 (card ending 0932)",
+   "description": "Pay from First Mesa checking ending 4417 after the paycheck lands.",
+   "project": "Money",
+   "labels": [
+    "Money"
+   ],
+   "flagged": true,
+   "due": "2026-12-04",
+   "days_left": 13,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  },
+  {
+   "id": "t8101",
+   "content": "Call First Mesa about refunding the $35 overdraft fee, (970) 555-0123",
+   "description": "Ask for a one-time courtesy refund. Reference: statement dated last month.",
+   "project": "Money",
+   "labels": [
+    "Phone",
+    "Money"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 15,
+   "view": "call"
+  },
+  {
+   "id": "t8102",
+   "content": "Move $150 to the emergency fund",
+   "description": "Savings ending 4425. Keeps the fund on pace for 6,000 by next fall.",
+   "project": "Money",
+   "labels": [
+    "Money"
+   ],
+   "flagged": false,
+   "due": "2026-12-04",
+   "days_left": 13,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  },
+  {
+   "id": "t8103",
+   "content": "Make the Q4 estimated tax payment, $400",
+   "description": "Carter Studio side income. Use the IRS Direct Pay link in the tax folder.",
+   "project": "Taxes",
+   "labels": [
+    "Money",
+    "Computer"
+   ],
+   "flagged": false,
+   "due": "2026-12-16",
+   "days_left": 25,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8104",
+   "content": "Upload the 1099 forms to the tax folder",
+   "description": "",
+   "project": "Taxes",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8116",
+   "content": "Cancel the unused StreamBox trial before it renews",
+   "description": "Renews at $11.99 a month.",
+   "project": "Subscriptions",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": "2026-11-27",
+   "days_left": 6,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  },
+  {
+   "id": "t8121",
+   "content": "Send the November invoice to Juniper Dental (draft ready)",
+   "description": "$1,200 for the booking page refresh.",
+   "project": "Business",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  }
+ ],
+ "routines": [
+  {
+   "name": "daily-balance",
+   "when": "6:15 AM",
+   "does": "Reads balances and new transactions",
+   "prompt": null
+  },
+  {
+   "name": "bills-check",
+   "when": "7:00 AM",
+   "does": "Matches payments to bills",
+   "prompt": null
+  },
+  {
+   "name": "monthly-close",
+   "when": "1st of the month",
+   "does": "Closes last month and the business split",
+   "prompt": null
+  }
+ ],
+ "report": {
+  "latest": {
+   "path": "bookkeeper/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "Every bill this pay period is covered; low point stays above the $250 bar.",
+   "html": "<p>Every bill this pay period is covered; low point stays above the $250 bar.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "bookkeeper/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Checking",
+   "value": "$2,240.39",
+   "sub": "as of 6:15 AM",
+   "tone": "",
+   "trend": [
+    1718,
+    1794,
+    1810,
+    1935,
+    1969,
+    2053,
+    2075,
+    2190,
+    2276,
+    2279,
+    2272,
+    2299
+   ],
+   "link": null
+  },
+  {
+   "label": "Low before payday",
+   "value": "$449.39",
+   "sub": "bar $250",
+   "tone": "ok",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Bills, 14 days",
+   "value": "$1,471.40",
+   "sub": "unpaid",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Left to spend",
+   "value": "$312",
+   "sub": "this month",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Net worth",
+   "value": "$9,180",
+   "sub": "all debts",
+   "tone": "",
+   "trend": [
+    7472.7,
+    7585.9,
+    7696.0,
+    7735.5,
+    7892.1,
+    8092.6,
+    8309.3,
+    8416.5,
+    8621.6,
+    8860.2,
+    8953.1,
+    8988.5
+   ],
+   "link": null
+  }
+ ],
+ "views": [
+  {
+   "key": "money",
+   "name": "Money",
+   "d": {
+    "sec": {
+     "key": "money",
+     "name": "Money",
+     "folders": [
+      "budget",
+      "bookkeeper",
+      "taxes"
+     ],
+     "brief": [
+      "Cash, bills and the forecast to payday."
+     ],
+     "blurb": "Cash, bills and the forecast to payday.",
+     "words": [
+      "money"
+     ]
+    },
+    "area": {
+     "sec": {
+      "key": "money",
+      "name": "Money",
+      "folders": [
+       "budget",
+       "bookkeeper",
+       "taxes"
+      ],
+      "brief": [
+       "Cash, bills and the forecast to payday."
+      ],
+      "blurb": "Cash, bills and the forecast to payday.",
+      "words": [
+       "money"
+      ]
+     },
+     "status": "act",
+     "summary": "Every bill this pay period is covered; low point stays above the $250 bar.",
+     "items": [
+      {
+       "text": "Money: Summit Card minimum, $45, due 12/4",
+       "when": "2026-12-04",
+       "level": "act",
+       "link": "/s/money#bills"
+      },
+      {
+       "text": "StreamBox trial renews in 6 days at $11.99",
+       "when": "2026-11-27",
+       "level": "watch",
+       "link": "/s/money#bills"
+      },
+      {
+       "text": "Overdraft fee of $35 last month; refund call queued",
+       "when": null,
+       "level": "watch",
+       "link": "/s/money#bills"
+      }
+     ],
+     "tasks": [
+      {
+       "id": "t8100",
+       "content": "Pay the Summit Card minimum, $45 (card ending 0932)",
+       "description": "Pay from First Mesa checking ending 4417 after the paycheck lands.",
+       "project": "Money",
+       "labels": [
+        "Money"
+       ],
+       "flagged": true,
+       "due": "2026-12-04",
+       "days_left": 13,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8101",
+       "content": "Call First Mesa about refunding the $35 overdraft fee, (970) 555-0123",
+       "description": "Ask for a one-time courtesy refund. Reference: statement dated last month.",
+       "project": "Money",
+       "labels": [
+        "Phone",
+        "Money"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 15,
+       "view": "call"
+      },
+      {
+       "id": "t8102",
+       "content": "Move $150 to the emergency fund",
+       "description": "Savings ending 4425. Keeps the fund on pace for 6,000 by next fall.",
+       "project": "Money",
+       "labels": [
+        "Money"
+       ],
+       "flagged": false,
+       "due": "2026-12-04",
+       "days_left": 13,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8103",
+       "content": "Make the Q4 estimated tax payment, $400",
+       "description": "Carter Studio side income. Use the IRS Direct Pay link in the tax folder.",
+       "project": "Taxes",
+       "labels": [
+        "Money",
+        "Computer"
+       ],
+       "flagged": false,
+       "due": "2026-12-16",
+       "days_left": 25,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8104",
+       "content": "Upload the 1099 forms to the tax folder",
+       "description": "",
+       "project": "Taxes",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8116",
+       "content": "Cancel the unused StreamBox trial before it renews",
+       "description": "Renews at $11.99 a month.",
+       "project": "Subscriptions",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": "2026-11-27",
+       "days_left": 6,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8121",
+       "content": "Send the November invoice to Juniper Dental (draft ready)",
+       "description": "$1,200 for the booking page refresh.",
+       "project": "Business",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      }
+     ]
+    },
+    "bills": {
+     "rows": [
+      {
+       "bill": "Cedar Falls Water & Trash",
+       "amount": 61.75,
+       "frequency": "monthly",
+       "day": "18",
+       "next_due": "2026-11-18",
+       "autopay": "No",
+       "status": "active",
+       "notes": "",
+       "pay_link": "",
+       "due": "2026-11-18",
+       "days_left": -3,
+       "marked": true,
+       "paid": true
+      },
+      {
+       "bill": "Disney+",
+       "amount": 9.99,
+       "frequency": "monthly",
+       "day": "19",
+       "next_due": "2026-11-19",
+       "autopay": "Yes",
+       "status": "active",
+       "notes": "",
+       "pay_link": "",
+       "due": "2026-11-19",
+       "days_left": -2,
+       "marked": true,
+       "paid": true
+      },
+      {
+       "bill": "Renter's insurance",
+       "amount": 14.0,
+       "frequency": "monthly",
+       "day": "21",
+       "next_due": "2026-11-21",
+       "autopay": "Yes",
+       "status": "active",
+       "notes": "",
+       "pay_link": "",
+       "due": "2026-11-21",
+       "days_left": 0,
+       "marked": false,
+       "paid": false
+      },
+      {
+       "bill": "Peak Wireless, 3 lines",
+       "amount": 118.0,
+       "frequency": "monthly",
+       "day": "22",
+       "next_due": "2026-11-22",
+       "autopay": "Yes",
+       "status": "active",
+       "notes": "",
+       "pay_link": "",
+       "due": "2026-11-22",
+       "days_left": 1,
+       "marked": false,
+       "paid": false
+      },
+      {
+       "bill": "Rent, Aspen Court",
+       "amount": 1195.0,
+       "frequency": "monthly",
+       "day": "1",
+       "next_due": "2026-12-01",
+       "autopay": "No",
+       "status": "active",
+       "notes": "Pay in the tenant portal",
+       "pay_link": "",
+       "due": "2026-12-01",
+       "days_left": 10,
+       "marked": false,
+       "paid": false
+      },
+      {
+       "bill": "Cedar Rec Center",
+       "amount": 32.0,
+       "frequency": "monthly",
+       "day": "3",
+       "next_due": "2026-12-03",
+       "autopay": "Yes",
+       "status": "active",
+       "notes": "Family pass",
+       "pay_link": "",
+       "due": "2026-12-03",
+       "days_left": 12,
+       "marked": false,
+       "paid": false
+      },
+      {
+       "bill": "Car insurance, Granite Mutual",
+       "amount": 112.4,
+       "frequency": "monthly",
+       "day": "4",
+       "next_due": "2026-12-04",
+       "autopay": "Yes",
+       "status": "active",
+       "notes": "",
+       "pay_link": "",
+       "due": "2026-12-04",
+       "days_left": 13,
+       "marked": false,
+       "paid": false
+      },
+      {
+       "bill": "Netflix",
+       "amount": 15.49,
+       "frequency": "monthly",
+       "day": "7",
+       "next_due": "2026-12-07",
+       "autopay": "Yes",
+       "status": "active",
+       "notes": "",
+       "pay_link": "",
+       "due": "2026-12-07",
+       "days_left": 16,
+       "marked": false,
+       "paid": false
+      },
+      {
+       "bill": "Student loan",
+       "amount": 180.0,
+       "frequency": "monthly",
+       "day": "8",
+       "next_due": "2026-12-08",
+       "autopay": "Yes",
+       "status": "active",
+       "notes": "",
+       "pay_link": "",
+       "due": "2026-12-08",
+       "days_left": 17,
+       "marked": false,
+       "paid": false
+      },
+      {
+       "bill": "Ridgeway Internet",
+       "amount": 65.0,
+       "frequency": "monthly",
+       "day": "9",
+       "next_due": "2026-12-09",
+       "autopay": "Yes",
+       "status": "active",
+       "notes": "",
+       "pay_link": "",
+       "due": "2026-12-09",
+       "days_left": 18,
+       "marked": false,
+       "paid": false
+      },
+      {
+       "bill": "After-school club",
+       "amount": 210.0,
+       "frequency": "monthly",
+       "day": "10",
+       "next_due": "2026-12-10",
+       "autopay": "No",
+       "status": "active",
+       "notes": "",
+       "pay_link": "",
+       "due": "2026-12-10",
+       "days_left": 19,
+       "marked": false,
+       "paid": false
+      },
+      {
+       "bill": "Mesa Electric Co-op",
+       "amount": 84.2,
+       "frequency": "monthly",
+       "day": "12",
+       "next_due": "2026-12-12",
+       "autopay": "Yes",
+       "status": "active",
+       "notes": "",
+       "pay_link": "",
+       "due": "2026-12-12",
+       "days_left": 21,
+       "marked": false,
+       "paid": false
+      },
+      {
+       "bill": "Summit Card minimum",
+       "amount": 45.0,
+       "frequency": "monthly",
+       "day": "12",
+       "next_due": "2026-12-12",
+       "autopay": "No",
+       "status": "active",
+       "notes": "Card ending 0932",
+       "pay_link": "",
+       "due": "2026-12-12",
+       "days_left": 21,
+       "marked": false,
+       "paid": false
+      },
+      {
+       "bill": "Cloud storage",
+       "amount": 2.99,
+       "frequency": "monthly",
+       "day": "14",
+       "next_due": "2026-12-14",
+       "autopay": "Yes",
+       "status": "active",
+       "notes": "",
+       "pay_link": "",
+       "due": "2026-12-14",
+       "days_left": 23,
+       "marked": false,
+       "paid": false
+      },
+      {
+       "bill": "Car loan, Valley Auto Finance",
+       "amount": 289.0,
+       "frequency": "monthly",
+       "day": "15",
+       "next_due": "2026-12-15",
+       "autopay": "Yes",
+       "status": "active",
+       "notes": "",
+       "pay_link": "",
+       "due": "2026-12-15",
+       "days_left": 24,
+       "marked": false,
+       "paid": false
+      },
+      {
+       "bill": "Piano lessons, Rosa",
+       "amount": 120.0,
+       "frequency": "monthly",
+       "day": "15",
+       "next_due": "2026-12-15",
+       "autopay": "No",
+       "status": "active",
+       "notes": "Venmo or check",
+       "pay_link": "",
+       "due": "2026-12-15",
+       "days_left": 24,
+       "marked": false,
+       "paid": false
+      },
+      {
+       "bill": "Cedar Falls Water & Trash",
+       "amount": 61.75,
+       "frequency": "monthly",
+       "day": "18",
+       "next_due": "2026-12-18",
+       "autopay": "No",
+       "status": "active",
+       "notes": "",
+       "pay_link": "",
+       "due": "2026-12-18",
+       "days_left": 27,
+       "marked": false,
+       "paid": false
+      },
+      {
+       "bill": "Disney+",
+       "amount": 9.99,
+       "frequency": "monthly",
+       "day": "19",
+       "next_due": "2026-12-19",
+       "autopay": "Yes",
+       "status": "active",
+       "notes": "",
+       "pay_link": "",
+       "due": "2026-12-19",
+       "days_left": 28,
+       "marked": false,
+       "paid": false
+      },
+      {
+       "bill": "Renter's insurance",
+       "amount": 14.0,
+       "frequency": "monthly",
+       "day": "21",
+       "next_due": "2026-12-21",
+       "autopay": "Yes",
+       "status": "active",
+       "notes": "",
+       "pay_link": "",
+       "due": "2026-12-21",
+       "days_left": 30,
+       "marked": false,
+       "paid": false
+      },
+      {
+       "bill": "Peak Wireless, 3 lines",
+       "amount": 118.0,
+       "frequency": "monthly",
+       "day": "22",
+       "next_due": "2026-12-22",
+       "autopay": "Yes",
+       "status": "active",
+       "notes": "",
+       "pay_link": "",
+       "due": "2026-12-22",
+       "days_left": 31,
+       "marked": false,
+       "paid": false
+      }
+     ],
+     "undated": [
+      {
+       "bill": "Dentist copay",
+       "amount": 40,
+       "frequency": "once",
+       "day": "",
+       "next_due": "",
+       "autopay": "No",
+       "status": "active",
+       "notes": "",
+       "pay_link": ""
+      },
+      {
+       "bill": "Library fine",
+       "amount": 6,
+       "frequency": "once",
+       "day": "",
+       "next_due": "",
+       "autopay": "No",
+       "status": "active",
+       "notes": "",
+       "pay_link": ""
+      }
+     ],
+     "total": 2686.82,
+     "days": 35,
+     "source": "bills"
+    },
+    "balance": {
+     "date": "2026-11-21",
+     "read_at": "06:15",
+     "checking": 2240.39,
+     "notes": "Read from the credit union this morning.",
+     "savings": "1850.00"
+    },
+    "cashflow": "budget/cashflow.md"
+   }
+  }
+ ],
+ "widgets": {
+  "billsline": {
+   "today": "2026-11-21",
+   "days": 35,
+   "paydays": [
+    "2026-12-04",
+    "2026-12-18",
+    "2027-01-01"
+   ],
+   "rows": [
+    {
+     "due": "2026-11-18",
+     "bill": "Cedar Falls Water & Trash",
+     "amount": 61.75,
+     "paid": true
+    },
+    {
+     "due": "2026-11-19",
+     "bill": "Disney+",
+     "amount": 9.99,
+     "paid": true
+    },
+    {
+     "due": "2026-11-21",
+     "bill": "Renter's insurance",
+     "amount": 14.0,
+     "paid": false
+    },
+    {
+     "due": "2026-11-22",
+     "bill": "Peak Wireless, 3 lines",
+     "amount": 118.0,
+     "paid": false
+    },
+    {
+     "due": "2026-12-01",
+     "bill": "Rent, Aspen Court",
+     "amount": 1195.0,
+     "paid": false
+    },
+    {
+     "due": "2026-12-03",
+     "bill": "Cedar Rec Center",
+     "amount": 32.0,
+     "paid": false
+    },
+    {
+     "due": "2026-12-04",
+     "bill": "Car insurance, Granite Mutual",
+     "amount": 112.4,
+     "paid": false
+    },
+    {
+     "due": "2026-12-07",
+     "bill": "Netflix",
+     "amount": 15.49,
+     "paid": false
+    },
+    {
+     "due": "2026-12-08",
+     "bill": "Student loan",
+     "amount": 180.0,
+     "paid": false
+    },
+    {
+     "due": "2026-12-09",
+     "bill": "Ridgeway Internet",
+     "amount": 65.0,
+     "paid": false
+    },
+    {
+     "due": "2026-12-10",
+     "bill": "After-school club",
+     "amount": 210.0,
+     "paid": false
+    },
+    {
+     "due": "2026-12-12",
+     "bill": "Mesa Electric Co-op",
+     "amount": 84.2,
+     "paid": false
+    },
+    {
+     "due": "2026-12-12",
+     "bill": "Summit Card minimum",
+     "amount": 45.0,
+     "paid": false
+    },
+    {
+     "due": "2026-12-14",
+     "bill": "Cloud storage",
+     "amount": 2.99,
+     "paid": false
+    },
+    {
+     "due": "2026-12-15",
+     "bill": "Car loan, Valley Auto Finance",
+     "amount": 289.0,
+     "paid": false
+    },
+    {
+     "due": "2026-12-15",
+     "bill": "Piano lessons, Rosa",
+     "amount": 120.0,
+     "paid": false
+    },
+    {
+     "due": "2026-12-18",
+     "bill": "Cedar Falls Water & Trash",
+     "amount": 61.75,
+     "paid": false
+    },
+    {
+     "due": "2026-12-19",
+     "bill": "Disney+",
+     "amount": 9.99,
+     "paid": false
+    },
+    {
+     "due": "2026-12-21",
+     "bill": "Renter's insurance",
+     "amount": 14.0,
+     "paid": false
+    },
+    {
+     "due": "2026-12-22",
+     "bill": "Peak Wireless, 3 lines",
+     "amount": 118.0,
+     "paid": false
+    }
+   ]
+  }
+ },
+ "folders": [
+  {
+   "name": "budget",
+   "files": [
+    {
+     "path": "budget/README.md",
+     "size": 1799
+    },
+    {
+     "path": "budget/cashflow.md",
+     "size": 2428
+    },
+    {
+     "path": "budget/categories.md",
+     "size": 3205
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>budget</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  },
+  {
+   "name": "bookkeeper",
+   "files": [
+    {
+     "path": "bookkeeper/README.md",
+     "size": 1799
+    },
+    {
+     "path": "bookkeeper/close-checklist.md",
+     "size": 3464
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>bookkeeper</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  },
+  {
+   "name": "taxes",
+   "files": [
+    {
+     "path": "taxes/README.md",
+     "size": 1799
+    },
+    {
+     "path": "taxes/2025-notes.md",
+     "size": 2724
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>taxes</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

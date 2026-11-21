@@ -1,0 +1,6095 @@
+{
+ "role": {
+  "key": "assistant",
+  "name": "Executive Assistant",
+  "nav": "assistant",
+  "file": "CLAUDE.md",
+  "owns": "Runs the other roles, the daily brief, every task and the inbox; answers Sam's texts",
+  "areas": [
+   "admin",
+   "tech"
+  ],
+  "widgets": [
+   "desks",
+   "activity"
+  ]
+ },
+ "status": "act",
+ "summary": "",
+ "items": [
+  {
+   "text": "Money: approve the $45 Summit Card payment for payday",
+   "when": "2026-11-21",
+   "level": "act",
+   "link": "/s/money#bills",
+   "desk": "bookkeeper"
+  },
+  {
+   "text": "Sends to Nora: the weekend plan text (draft ready)",
+   "when": "2026-11-21",
+   "level": "act",
+   "link": "/next/r/assistant#attention",
+   "desk": "assistant"
+  },
+  {
+   "text": "Kitchen faucet: landlord said this week",
+   "when": "2026-11-24",
+   "level": "watch",
+   "link": "/s/home",
+   "desk": "home-manager"
+  },
+  {
+   "text": "Registration renews in 9 days",
+   "when": "2026-11-30",
+   "level": "watch",
+   "link": "/s/home",
+   "desk": "home-manager"
+  }
+ ],
+ "needs": [
+  {
+   "text": "Money: approve the $45 Summit Card payment for payday",
+   "when": "2026-11-21",
+   "level": "act",
+   "link": "/s/money#bills",
+   "wait": true
+  },
+  {
+   "text": "Sends to Nora: the weekend plan text (draft ready)",
+   "when": "2026-11-21",
+   "level": "act",
+   "link": "/next/r/assistant#attention",
+   "wait": true
+  }
+ ],
+ "watch": [
+  {
+   "text": "Kitchen faucet: landlord said this week",
+   "when": "2026-11-24",
+   "level": "watch",
+   "link": "/s/home",
+   "desk": "home-manager"
+  },
+  {
+   "text": "Registration renews in 9 days",
+   "when": "2026-11-30",
+   "level": "watch",
+   "link": "/s/home",
+   "desk": "home-manager"
+  }
+ ],
+ "tasks": [
+  {
+   "id": "t8100",
+   "content": "Pay the Summit Card minimum, $45 (card ending 0932)",
+   "description": "Pay from First Mesa checking ending 4417 after the paycheck lands.",
+   "project": "Money",
+   "labels": [
+    "Money"
+   ],
+   "flagged": true,
+   "due": "2026-12-04",
+   "days_left": 13,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  },
+  {
+   "id": "t8101",
+   "content": "Call First Mesa about refunding the $35 overdraft fee, (970) 555-0123",
+   "description": "Ask for a one-time courtesy refund. Reference: statement dated last month.",
+   "project": "Money",
+   "labels": [
+    "Phone",
+    "Money"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 15,
+   "view": "call"
+  },
+  {
+   "id": "t8102",
+   "content": "Move $150 to the emergency fund",
+   "description": "Savings ending 4425. Keeps the fund on pace for 6,000 by next fall.",
+   "project": "Money",
+   "labels": [
+    "Money"
+   ],
+   "flagged": false,
+   "due": "2026-12-04",
+   "days_left": 13,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  },
+  {
+   "id": "t8103",
+   "content": "Make the Q4 estimated tax payment, $400",
+   "description": "Carter Studio side income. Use the IRS Direct Pay link in the tax folder.",
+   "project": "Taxes",
+   "labels": [
+    "Money",
+    "Computer"
+   ],
+   "flagged": false,
+   "due": "2026-12-16",
+   "days_left": 25,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8104",
+   "content": "Upload the 1099 forms to the tax folder",
+   "description": "",
+   "project": "Taxes",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8105",
+   "content": "Dispute the duplicate Mesa Medical collection",
+   "description": "Letter drafted by Financial Advisor; you sign and mail it.",
+   "project": "Credit",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 30,
+   "view": null
+  },
+  {
+   "id": "t8106",
+   "content": "Freeze credit at the third bureau",
+   "description": "Two bureaus are frozen already.",
+   "project": "Credit",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8107",
+   "content": "Renew the Subaru registration, $86",
+   "description": "Online renewal; the emissions check passed last month.",
+   "project": "Car",
+   "labels": [
+    "Computer",
+    "Money"
+   ],
+   "flagged": false,
+   "due": "2026-11-30",
+   "days_left": 9,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8108",
+   "content": "Book the oil change at Ridgeline Auto, (970) 555-0120",
+   "description": "Due by mileage (about 300 miles left).",
+   "project": "Car",
+   "labels": [
+    "Phone"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": "call"
+  },
+  {
+   "id": "t8109",
+   "content": "Rotate the tires",
+   "description": "",
+   "project": "Car",
+   "labels": [
+    "Errands"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 45,
+   "view": null
+  },
+  {
+   "id": "t8110",
+   "content": "Schedule Leo's sports physical, (970) 555-0119",
+   "description": "Needed before spring soccer sign-ups.",
+   "project": "Health",
+   "labels": [
+    "Phone"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": "call"
+  },
+  {
+   "id": "t8111",
+   "content": "Pick up the prescription at Pine Street Pharmacy",
+   "description": "Ready after 3 PM.",
+   "project": "Health",
+   "labels": [
+    "Errands"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 15,
+   "view": null
+  },
+  {
+   "id": "t8112",
+   "content": "Cook: chicken tinga tacos",
+   "description": "Thaw the chicken in the morning.",
+   "project": "Health",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-21",
+   "days_left": 0,
+   "overdue": false,
+   "duration_min": 45,
+   "view": "recipe"
+  },
+  {
+   "id": "t8113",
+   "content": "Workout: upper body",
+   "description": "",
+   "project": "Health",
+   "labels": [
+    "Health"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 50,
+   "view": null
+  },
+  {
+   "id": "t8114",
+   "content": "Approve the Walmart cart for the week, $142",
+   "description": "Cart filled from the meal plan.",
+   "project": "Shopping",
+   "labels": [
+    "Computer",
+    "Money"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  },
+  {
+   "id": "t8115",
+   "content": "Order Maya's birthday gift (link in the notes)",
+   "description": "Watercolor set, $34. Arrives in 2 days.",
+   "project": "Shopping",
+   "labels": [
+    "Computer",
+    "Money"
+   ],
+   "flagged": true,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8116",
+   "content": "Cancel the unused StreamBox trial before it renews",
+   "description": "Renews at $11.99 a month.",
+   "project": "Subscriptions",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": "2026-11-27",
+   "days_left": 6,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  },
+  {
+   "id": "t8117",
+   "content": "Turn on two-step sign-in for the credit union app",
+   "description": "",
+   "project": "Computer & Security",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8118",
+   "content": "Change the reused password on the library account",
+   "description": "",
+   "project": "Computer & Security",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  },
+  {
+   "id": "t8119",
+   "content": "Plug the phone in overnight for the backup",
+   "description": "",
+   "project": "Computer & Security",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  },
+  {
+   "id": "t8120",
+   "content": "Sign the Carter Studio annual report, $10 fee",
+   "description": "Everything is filled in; you sign and pay on the state site.",
+   "project": "Business",
+   "labels": [
+    "Computer",
+    "Money"
+   ],
+   "flagged": true,
+   "due": "2026-12-03",
+   "days_left": 12,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8121",
+   "content": "Send the November invoice to Juniper Dental (draft ready)",
+   "description": "$1,200 for the booking page refresh.",
+   "project": "Business",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  },
+  {
+   "id": "t8122",
+   "content": "Review the Brightline Labs pricing page draft",
+   "description": "",
+   "project": "Business",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 20,
+   "view": null
+  },
+  {
+   "id": "t8123",
+   "content": "Reply to Alex at Northgate Systems (draft in the comments)",
+   "description": "Draft asks for the salary range before a call.",
+   "project": "Career",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8124",
+   "content": "Add the Harbor app case study to the portfolio",
+   "description": "",
+   "project": "Career",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 45,
+   "view": null
+  },
+  {
+   "id": "t8125",
+   "content": "Sign Maya's field trip permission slip",
+   "description": "Science museum, $12 for the bus.",
+   "project": "Family",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  },
+  {
+   "id": "t8126",
+   "content": "Call Grandpa Ray to plan lunch, (970) 555-0105",
+   "description": "",
+   "project": "Family",
+   "labels": [
+    "Phone"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 15,
+   "view": "call"
+  },
+  {
+   "id": "t8127",
+   "content": "RSVP to the Brooks family's holiday party",
+   "description": "",
+   "project": "Family",
+   "labels": [
+    "Phone"
+   ],
+   "flagged": false,
+   "due": "2026-11-25",
+   "days_left": 4,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  },
+  {
+   "id": "t8128",
+   "content": "Pay the $120 bounce house deposit for Leo's party",
+   "description": "Hold expires in a week.",
+   "project": "Family",
+   "labels": [
+    "Money"
+   ],
+   "flagged": false,
+   "due": "2026-11-26",
+   "days_left": 5,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8129",
+   "content": "Read and sign the lease renewal (2 pages)",
+   "description": "Rent goes up $35 a month; the rest is unchanged.",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-28",
+   "days_left": 7,
+   "overdue": false,
+   "duration_min": 20,
+   "view": null
+  },
+  {
+   "id": "t8130",
+   "content": "Book Biscuit's yearly vet visit, (970) 555-0122",
+   "description": "Vaccines due next month.",
+   "project": "Home",
+   "labels": [
+    "Phone"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": "call"
+  },
+  {
+   "id": "t8131",
+   "content": "Return the library books",
+   "description": "",
+   "project": "Errands",
+   "labels": [
+    "Errands"
+   ],
+   "flagged": false,
+   "due": "2026-11-19",
+   "days_left": -2,
+   "overdue": true,
+   "duration_min": 15,
+   "view": null
+  },
+  {
+   "id": "t8132",
+   "content": "Pick dates for the spring coast trip",
+   "description": "Three options are priced on the Travel desk.",
+   "project": "Travel",
+   "labels": [],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 15,
+   "view": null
+  },
+  {
+   "id": "t8133",
+   "content": "Book Maya's passport appointment at the post office",
+   "description": "",
+   "project": "Travel",
+   "labels": [
+    "Errands"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 20,
+   "view": null
+  },
+  {
+   "id": "t8134",
+   "content": "Choose the paint color for Leo's room",
+   "description": "Three samples are on the wall.",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8135",
+   "content": "Replace the furnace filter (20x25x1)",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-24",
+   "days_left": 3,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8136",
+   "content": "Call the landlord about the dripping kitchen faucet, (970) 555-0124",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Phone"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": "call"
+  },
+  {
+   "id": "t8137",
+   "content": "Clean the gutters",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-12-04",
+   "days_left": 13,
+   "overdue": false,
+   "duration_min": 60,
+   "view": null
+  },
+  {
+   "id": "t8138",
+   "content": "Deep clean the fridge",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-27",
+   "days_left": 6,
+   "overdue": false,
+   "duration_min": 30,
+   "view": null
+  },
+  {
+   "id": "t8139",
+   "content": "Test the smoke alarms",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-12-11",
+   "days_left": 20,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8140",
+   "content": "Take the donation boxes to the thrift store",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Errands"
+   ],
+   "flagged": false,
+   "due": "2026-11-30",
+   "days_left": 9,
+   "overdue": false,
+   "duration_min": 30,
+   "view": null
+  },
+  {
+   "id": "t8141",
+   "content": "Update the address at the DMV",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8142",
+   "content": "Pick a movie for Friday family night",
+   "description": "Media Concierge left three picks.",
+   "project": "Inbox",
+   "labels": [],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  },
+  {
+   "id": "t8143",
+   "content": "Record Maya's recital piece for Grandpa Ray",
+   "description": "",
+   "project": "Family",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 20,
+   "view": null
+  },
+  {
+   "id": "t8144",
+   "content": "Approve the weekly social post draft",
+   "description": "",
+   "project": "Career",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  },
+  {
+   "id": "t8145",
+   "content": "Decide on the winter jacket (two options saved)",
+   "description": "",
+   "project": "Shopping",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  },
+  {
+   "id": "t8146",
+   "content": "Sign up Leo for spring soccer, $95",
+   "description": "",
+   "project": "Family",
+   "labels": [
+    "Computer",
+    "Money"
+   ],
+   "flagged": false,
+   "due": "2026-12-21",
+   "days_left": 30,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  }
+ ],
+ "routines": [
+  {
+   "name": "morning-text",
+   "when": "8:00 AM",
+   "does": "Texts Sam the day: top 3, waiting on, quick batch",
+   "prompt": null
+  },
+  {
+   "name": "daily-hygiene",
+   "when": "5:45 AM",
+   "does": "Sweeps the task list: duplicates, dates, stale tasks",
+   "prompt": null
+  },
+  {
+   "name": "gmail-tidy",
+   "when": "6:15 AM",
+   "does": "Archives marketing mail and processed threads",
+   "prompt": null
+  },
+  {
+   "name": "daily-organizer",
+   "when": "6:30 AM",
+   "does": "Writes the brief and the day plan",
+   "prompt": null
+  },
+  {
+   "name": "todoist-comments",
+   "when": "hourly",
+   "does": "Reads comments Sam leaves on tasks and acts on them",
+   "prompt": null
+  },
+  {
+   "name": "backup",
+   "when": "2:30 AM",
+   "does": "Backs up the workspace",
+   "prompt": null
+  }
+ ],
+ "report": {
+  "latest": null,
+  "where": "inbox/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Needs you",
+   "value": "2",
+   "sub": "one-way doors waiting",
+   "tone": "act",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Tasks open",
+   "value": "47",
+   "sub": "across every desk",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Done this week",
+   "value": "14",
+   "sub": "tasks finished",
+   "tone": "good",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Texts handled",
+   "value": "38",
+   "sub": "last 7 days",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Waiting on others",
+   "value": "4",
+   "sub": "with check dates",
+   "tone": "",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [
+  {
+   "key": "admin",
+   "name": "Admin",
+   "d": {
+    "sec": {
+     "key": "admin",
+     "name": "Admin",
+     "folders": [
+      "inbox",
+      "daily-organizer",
+      "todos"
+     ],
+     "brief": [
+      "The daily brief, every task, texting and the life database."
+     ],
+     "blurb": "The daily brief, every task, texting and the life database.",
+     "words": [
+      "admin"
+     ]
+    },
+    "area": {
+     "sec": {
+      "key": "admin",
+      "name": "Admin",
+      "folders": [
+       "inbox",
+       "daily-organizer",
+       "todos"
+      ],
+      "brief": [
+       "The daily brief, every task, texting and the life database."
+      ],
+      "blurb": "The daily brief, every task, texting and the life database.",
+      "words": [
+       "admin"
+      ]
+     },
+     "status": "act",
+     "summary": "",
+     "items": [
+      {
+       "text": "Money: approve the $45 Summit Card payment for payday",
+       "when": "2026-11-21",
+       "level": "act",
+       "link": "/s/money#bills"
+      },
+      {
+       "text": "Sends to Nora: the weekend plan text (draft ready)",
+       "when": "2026-11-21",
+       "level": "act",
+       "link": "/next/r/assistant#attention"
+      },
+      {
+       "text": "Kitchen faucet: landlord said this week",
+       "when": "2026-11-24",
+       "level": "watch",
+       "link": "/s/home"
+      },
+      {
+       "text": "Registration renews in 9 days",
+       "when": "2026-11-30",
+       "level": "watch",
+       "link": "/s/home"
+      }
+     ],
+     "tasks": [
+      {
+       "id": "t8100",
+       "content": "Pay the Summit Card minimum, $45 (card ending 0932)",
+       "description": "Pay from First Mesa checking ending 4417 after the paycheck lands.",
+       "project": "Money",
+       "labels": [
+        "Money"
+       ],
+       "flagged": true,
+       "due": "2026-12-04",
+       "days_left": 13,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8101",
+       "content": "Call First Mesa about refunding the $35 overdraft fee, (970) 555-0123",
+       "description": "Ask for a one-time courtesy refund. Reference: statement dated last month.",
+       "project": "Money",
+       "labels": [
+        "Phone",
+        "Money"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 15,
+       "view": "call"
+      },
+      {
+       "id": "t8102",
+       "content": "Move $150 to the emergency fund",
+       "description": "Savings ending 4425. Keeps the fund on pace for 6,000 by next fall.",
+       "project": "Money",
+       "labels": [
+        "Money"
+       ],
+       "flagged": false,
+       "due": "2026-12-04",
+       "days_left": 13,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8103",
+       "content": "Make the Q4 estimated tax payment, $400",
+       "description": "Carter Studio side income. Use the IRS Direct Pay link in the tax folder.",
+       "project": "Taxes",
+       "labels": [
+        "Money",
+        "Computer"
+       ],
+       "flagged": false,
+       "due": "2026-12-16",
+       "days_left": 25,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8104",
+       "content": "Upload the 1099 forms to the tax folder",
+       "description": "",
+       "project": "Taxes",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8105",
+       "content": "Dispute the duplicate Mesa Medical collection",
+       "description": "Letter drafted by Financial Advisor; you sign and mail it.",
+       "project": "Credit",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 30,
+       "view": null
+      },
+      {
+       "id": "t8106",
+       "content": "Freeze credit at the third bureau",
+       "description": "Two bureaus are frozen already.",
+       "project": "Credit",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8107",
+       "content": "Renew the Subaru registration, $86",
+       "description": "Online renewal; the emissions check passed last month.",
+       "project": "Car",
+       "labels": [
+        "Computer",
+        "Money"
+       ],
+       "flagged": false,
+       "due": "2026-11-30",
+       "days_left": 9,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8108",
+       "content": "Book the oil change at Ridgeline Auto, (970) 555-0120",
+       "description": "Due by mileage (about 300 miles left).",
+       "project": "Car",
+       "labels": [
+        "Phone"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": "call"
+      },
+      {
+       "id": "t8109",
+       "content": "Rotate the tires",
+       "description": "",
+       "project": "Car",
+       "labels": [
+        "Errands"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 45,
+       "view": null
+      },
+      {
+       "id": "t8110",
+       "content": "Schedule Leo's sports physical, (970) 555-0119",
+       "description": "Needed before spring soccer sign-ups.",
+       "project": "Health",
+       "labels": [
+        "Phone"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": "call"
+      },
+      {
+       "id": "t8111",
+       "content": "Pick up the prescription at Pine Street Pharmacy",
+       "description": "Ready after 3 PM.",
+       "project": "Health",
+       "labels": [
+        "Errands"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 15,
+       "view": null
+      },
+      {
+       "id": "t8112",
+       "content": "Cook: chicken tinga tacos",
+       "description": "Thaw the chicken in the morning.",
+       "project": "Health",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-21",
+       "days_left": 0,
+       "overdue": false,
+       "duration_min": 45,
+       "view": "recipe"
+      },
+      {
+       "id": "t8113",
+       "content": "Workout: upper body",
+       "description": "",
+       "project": "Health",
+       "labels": [
+        "Health"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 50,
+       "view": null
+      },
+      {
+       "id": "t8114",
+       "content": "Approve the Walmart cart for the week, $142",
+       "description": "Cart filled from the meal plan.",
+       "project": "Shopping",
+       "labels": [
+        "Computer",
+        "Money"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8115",
+       "content": "Order Maya's birthday gift (link in the notes)",
+       "description": "Watercolor set, $34. Arrives in 2 days.",
+       "project": "Shopping",
+       "labels": [
+        "Computer",
+        "Money"
+       ],
+       "flagged": true,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8116",
+       "content": "Cancel the unused StreamBox trial before it renews",
+       "description": "Renews at $11.99 a month.",
+       "project": "Subscriptions",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": "2026-11-27",
+       "days_left": 6,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8117",
+       "content": "Turn on two-step sign-in for the credit union app",
+       "description": "",
+       "project": "Computer & Security",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8118",
+       "content": "Change the reused password on the library account",
+       "description": "",
+       "project": "Computer & Security",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8119",
+       "content": "Plug the phone in overnight for the backup",
+       "description": "",
+       "project": "Computer & Security",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8120",
+       "content": "Sign the Carter Studio annual report, $10 fee",
+       "description": "Everything is filled in; you sign and pay on the state site.",
+       "project": "Business",
+       "labels": [
+        "Computer",
+        "Money"
+       ],
+       "flagged": true,
+       "due": "2026-12-03",
+       "days_left": 12,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8121",
+       "content": "Send the November invoice to Juniper Dental (draft ready)",
+       "description": "$1,200 for the booking page refresh.",
+       "project": "Business",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8122",
+       "content": "Review the Brightline Labs pricing page draft",
+       "description": "",
+       "project": "Business",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 20,
+       "view": null
+      },
+      {
+       "id": "t8123",
+       "content": "Reply to Alex at Northgate Systems (draft in the comments)",
+       "description": "Draft asks for the salary range before a call.",
+       "project": "Career",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8124",
+       "content": "Add the Harbor app case study to the portfolio",
+       "description": "",
+       "project": "Career",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 45,
+       "view": null
+      },
+      {
+       "id": "t8125",
+       "content": "Sign Maya's field trip permission slip",
+       "description": "Science museum, $12 for the bus.",
+       "project": "Family",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8126",
+       "content": "Call Grandpa Ray to plan lunch, (970) 555-0105",
+       "description": "",
+       "project": "Family",
+       "labels": [
+        "Phone"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 15,
+       "view": "call"
+      },
+      {
+       "id": "t8127",
+       "content": "RSVP to the Brooks family's holiday party",
+       "description": "",
+       "project": "Family",
+       "labels": [
+        "Phone"
+       ],
+       "flagged": false,
+       "due": "2026-11-25",
+       "days_left": 4,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8128",
+       "content": "Pay the $120 bounce house deposit for Leo's party",
+       "description": "Hold expires in a week.",
+       "project": "Family",
+       "labels": [
+        "Money"
+       ],
+       "flagged": false,
+       "due": "2026-11-26",
+       "days_left": 5,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8129",
+       "content": "Read and sign the lease renewal (2 pages)",
+       "description": "Rent goes up $35 a month; the rest is unchanged.",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-28",
+       "days_left": 7,
+       "overdue": false,
+       "duration_min": 20,
+       "view": null
+      },
+      {
+       "id": "t8130",
+       "content": "Book Biscuit's yearly vet visit, (970) 555-0122",
+       "description": "Vaccines due next month.",
+       "project": "Home",
+       "labels": [
+        "Phone"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": "call"
+      },
+      {
+       "id": "t8131",
+       "content": "Return the library books",
+       "description": "",
+       "project": "Errands",
+       "labels": [
+        "Errands"
+       ],
+       "flagged": false,
+       "due": "2026-11-19",
+       "days_left": -2,
+       "overdue": true,
+       "duration_min": 15,
+       "view": null
+      },
+      {
+       "id": "t8132",
+       "content": "Pick dates for the spring coast trip",
+       "description": "Three options are priced on the Travel desk.",
+       "project": "Travel",
+       "labels": [],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 15,
+       "view": null
+      },
+      {
+       "id": "t8133",
+       "content": "Book Maya's passport appointment at the post office",
+       "description": "",
+       "project": "Travel",
+       "labels": [
+        "Errands"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 20,
+       "view": null
+      },
+      {
+       "id": "t8134",
+       "content": "Choose the paint color for Leo's room",
+       "description": "Three samples are on the wall.",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8135",
+       "content": "Replace the furnace filter (20x25x1)",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-24",
+       "days_left": 3,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8136",
+       "content": "Call the landlord about the dripping kitchen faucet, (970) 555-0124",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Phone"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": "call"
+      },
+      {
+       "id": "t8137",
+       "content": "Clean the gutters",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-12-04",
+       "days_left": 13,
+       "overdue": false,
+       "duration_min": 60,
+       "view": null
+      },
+      {
+       "id": "t8138",
+       "content": "Deep clean the fridge",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-27",
+       "days_left": 6,
+       "overdue": false,
+       "duration_min": 30,
+       "view": null
+      },
+      {
+       "id": "t8139",
+       "content": "Test the smoke alarms",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-12-11",
+       "days_left": 20,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8140",
+       "content": "Take the donation boxes to the thrift store",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Errands"
+       ],
+       "flagged": false,
+       "due": "2026-11-30",
+       "days_left": 9,
+       "overdue": false,
+       "duration_min": 30,
+       "view": null
+      },
+      {
+       "id": "t8141",
+       "content": "Update the address at the DMV",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8142",
+       "content": "Pick a movie for Friday family night",
+       "description": "Media Concierge left three picks.",
+       "project": "Inbox",
+       "labels": [],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8143",
+       "content": "Record Maya's recital piece for Grandpa Ray",
+       "description": "",
+       "project": "Family",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 20,
+       "view": null
+      },
+      {
+       "id": "t8144",
+       "content": "Approve the weekly social post draft",
+       "description": "",
+       "project": "Career",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8145",
+       "content": "Decide on the winter jacket (two options saved)",
+       "description": "",
+       "project": "Shopping",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8146",
+       "content": "Sign up Leo for spring soccer, $95",
+       "description": "",
+       "project": "Family",
+       "labels": [
+        "Computer",
+        "Money"
+       ],
+       "flagged": false,
+       "due": "2026-12-21",
+       "days_left": 30,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      }
+     ]
+    },
+    "brief": {
+     "date": "2026-11-21",
+     "generated_at": "2026-11-21T06:30:00-07:00",
+     "headline": "A calm Saturday. Payday is 12/4 and every bill is covered. Two quick asks today: the Summit Card payment and Maya's gift.",
+     "today": [
+      {
+       "title": "Order Maya's birthday gift",
+       "why": "Arrives in 2 days; her birthday is in 4.",
+       "domain": "family",
+       "due": "2026-11-21",
+       "urgency": "act",
+       "done": false
+      },
+      {
+       "title": "Call First Mesa about the overdraft fee",
+       "why": "A one-time refund is likely if you ask.",
+       "domain": "money",
+       "due": "2026-11-21",
+       "urgency": "watch",
+       "done": false
+      },
+      {
+       "title": "Sign Maya's field trip slip",
+       "why": "Due at school tomorrow.",
+       "domain": "family",
+       "due": "2026-11-22",
+       "urgency": "watch",
+       "done": true
+      },
+      {
+       "title": "Workout: upper body",
+       "why": "Keeps the week at 4 sessions.",
+       "domain": "health",
+       "due": "2026-11-21",
+       "urgency": "ok",
+       "done": false
+      },
+      {
+       "title": "Reply to Alex at Northgate Systems",
+       "why": "Draft is ready; it takes two minutes.",
+       "domain": "work",
+       "due": "2026-11-21",
+       "urgency": "ok",
+       "done": true
+      }
+     ],
+     "domains": [
+      {
+       "key": "money",
+       "name": "Money",
+       "status": "ok",
+       "summary": "Checking $2,240.39; low point $449.39 before payday 12/4, above the $250 bar.",
+       "metrics": [
+        {
+         "label": "Checking",
+         "value": "$2,240.39",
+         "note": "this morning"
+        },
+        {
+         "label": "Low point",
+         "value": "$449.39",
+         "note": "12/3"
+        },
+        {
+         "label": "Bills, 14 days",
+         "value": "$1,471.40",
+         "note": "unpaid"
+        }
+       ],
+       "bullets": [
+        "Checking $2,240.39.",
+        "Nothing needs a decision today.",
+        "Owner role is on it.",
+        "Details on the desk."
+       ],
+       "series": [
+        [
+         "2026-11-17",
+         "32.5"
+        ],
+        [
+         "2026-11-18",
+         "73.1"
+        ],
+        [
+         "2026-11-19",
+         "16.6"
+        ],
+        [
+         "2026-11-20",
+         "15.9"
+        ],
+        [
+         "2026-11-21",
+         "86.9"
+        ]
+       ]
+      },
+      {
+       "key": "health",
+       "name": "Health",
+       "status": "watch",
+       "summary": "Two workouts this week so far; weight down 0.8 lb this month.",
+       "metrics": [
+        {
+         "label": "Weight",
+         "value": "193.4 lb",
+         "note": "goal 185"
+        },
+        {
+         "label": "Workouts",
+         "value": "2 of 4",
+         "note": "this week"
+        },
+        {
+         "label": "Sleep",
+         "value": "7.1 h",
+         "note": "average"
+        }
+       ],
+       "bullets": [
+        "Two workouts this week so far.",
+        "Nothing needs a decision today.",
+        "Owner role is on it.",
+        "Details on the desk."
+       ],
+       "series": [
+        [
+         "2026-11-17",
+         "22.8"
+        ],
+        [
+         "2026-11-18",
+         "38.0"
+        ],
+        [
+         "2026-11-19",
+         "23.1"
+        ],
+        [
+         "2026-11-20",
+         "39.1"
+        ],
+        [
+         "2026-11-21",
+         "38.1"
+        ]
+       ]
+      },
+      {
+       "key": "family",
+       "name": "Family",
+       "status": "ok",
+       "summary": "Maya's birthday is in 4 days; the gift is picked.",
+       "metrics": [
+        {
+         "label": "Birthdays",
+         "value": "2",
+         "note": "next 30 days"
+        },
+        {
+         "label": "Kids' events",
+         "value": "3",
+         "note": "this week"
+        },
+        {
+         "label": "Calls owed",
+         "value": "1",
+         "note": "Grandpa Ray"
+        }
+       ],
+       "bullets": [
+        "Maya's birthday is in 4 days.",
+        "Nothing needs a decision today.",
+        "Owner role is on it.",
+        "Details on the desk."
+       ],
+       "series": [
+        [
+         "2026-11-17",
+         "58.2"
+        ],
+        [
+         "2026-11-18",
+         "19.2"
+        ],
+        [
+         "2026-11-19",
+         "42.7"
+        ],
+        [
+         "2026-11-20",
+         "16.2"
+        ],
+        [
+         "2026-11-21",
+         "16.3"
+        ]
+       ]
+      },
+      {
+       "key": "home",
+       "name": "Home",
+       "status": "ok",
+       "summary": "Furnace filter due; faucet repair is with the landlord.",
+       "metrics": [
+        {
+         "label": "Chores",
+         "value": "5",
+         "note": "this week"
+        },
+        {
+         "label": "Repairs",
+         "value": "1",
+         "note": "open"
+        },
+        {
+         "label": "Supplies",
+         "value": "ok",
+         "note": ""
+        }
+       ],
+       "bullets": [
+        "Furnace filter due.",
+        "Nothing needs a decision today.",
+        "Owner role is on it.",
+        "Details on the desk."
+       ],
+       "series": [
+        [
+         "2026-11-17",
+         "21.9"
+        ],
+        [
+         "2026-11-18",
+         "28.4"
+        ],
+        [
+         "2026-11-19",
+         "26.8"
+        ],
+        [
+         "2026-11-20",
+         "10.2"
+        ],
+        [
+         "2026-11-21",
+         "38.1"
+        ]
+       ]
+      },
+      {
+       "key": "work",
+       "name": "Work",
+       "status": "ok",
+       "summary": "One recruiter reply drafted; the Carter Studio invoice is ready.",
+       "metrics": [
+        {
+         "label": "Leads",
+         "value": "3",
+         "note": "open"
+        },
+        {
+         "label": "Invoices",
+         "value": "$1,200",
+         "note": "to send"
+        },
+        {
+         "label": "Deadlines",
+         "value": "1",
+         "note": "this month"
+        }
+       ],
+       "bullets": [
+        "One recruiter reply drafted.",
+        "Nothing needs a decision today.",
+        "Owner role is on it.",
+        "Details on the desk."
+       ],
+       "series": [
+        [
+         "2026-11-17",
+         "70.1"
+        ],
+        [
+         "2026-11-18",
+         "82.4"
+        ],
+        [
+         "2026-11-19",
+         "44.5"
+        ],
+        [
+         "2026-11-20",
+         "27.4"
+        ],
+        [
+         "2026-11-21",
+         "79.4"
+        ]
+       ]
+      },
+      {
+       "key": "car",
+       "name": "Car",
+       "status": "watch",
+       "summary": "Registration renews in 9 days; oil change due soon.",
+       "metrics": [
+        {
+         "label": "Registration",
+         "value": "11/30",
+         "note": "$86"
+        },
+        {
+         "label": "Oil",
+         "value": "300 mi",
+         "note": "left"
+        },
+        {
+         "label": "Insurance",
+         "value": "paid",
+         "note": ""
+        }
+       ],
+       "bullets": [
+        "Registration renews in 9 days.",
+        "Nothing needs a decision today.",
+        "Owner role is on it.",
+        "Details on the desk."
+       ],
+       "series": [
+        [
+         "2026-11-17",
+         "24.0"
+        ],
+        [
+         "2026-11-18",
+         "31.0"
+        ],
+        [
+         "2026-11-19",
+         "66.9"
+        ],
+        [
+         "2026-11-20",
+         "59.6"
+        ],
+        [
+         "2026-11-21",
+         "81.0"
+        ]
+       ]
+      },
+      {
+       "key": "plans",
+       "name": "Plans",
+       "status": "ok",
+       "summary": "Spring coast trip: three options priced, dates not picked.",
+       "metrics": [
+        {
+         "label": "Trip options",
+         "value": "3",
+         "note": "priced"
+        },
+        {
+         "label": "Weekend",
+         "value": "hike",
+         "note": "Saturday"
+        },
+        {
+         "label": "Date night",
+         "value": "11/29",
+         "note": "booked"
+        }
+       ],
+       "bullets": [
+        "Spring coast trip: three options priced, dates not picked..",
+        "Nothing needs a decision today.",
+        "Owner role is on it.",
+        "Details on the desk."
+       ],
+       "series": [
+        [
+         "2026-11-17",
+         "40.8"
+        ],
+        [
+         "2026-11-18",
+         "84.5"
+        ],
+        [
+         "2026-11-19",
+         "62.9"
+        ],
+        [
+         "2026-11-20",
+         "46.7"
+        ],
+        [
+         "2026-11-21",
+         "31.2"
+        ]
+       ]
+      }
+     ],
+     "bills": [
+      {
+       "due": "2026-11-21",
+       "bill": "Renter's insurance",
+       "amount": "$14",
+       "note": "autopay",
+       "overdue": false
+      },
+      {
+       "due": "2026-11-22",
+       "bill": "Peak Wireless, 3 lines",
+       "amount": "$118",
+       "note": "autopay",
+       "overdue": false
+      },
+      {
+       "due": "2026-12-01",
+       "bill": "Rent, Aspen Court",
+       "amount": "$1,195",
+       "note": "",
+       "overdue": false
+      },
+      {
+       "due": "2026-12-03",
+       "bill": "Cedar Rec Center",
+       "amount": "$32",
+       "note": "autopay",
+       "overdue": false
+      },
+      {
+       "due": "2026-12-04",
+       "bill": "Car insurance, Granite Mutual",
+       "amount": "$112.40",
+       "note": "autopay",
+       "overdue": false
+      }
+     ],
+     "bills_note": "Every bill in the next two weeks is covered by the balance and Friday's paycheck.",
+     "changes": [
+      "Maya's gift moved to today so it arrives on time.",
+      "Oil change pushed to next week.",
+      "Added the lease renewal to Home.",
+      "Closed the windshield claim; insurance paid it.",
+      "Grocery cart filled from the meal plan."
+     ],
+     "open_loops": [
+      {
+       "due": "2026-11-21",
+       "domain": "money",
+       "item": "Overdraft fee refund",
+       "status": "open"
+      },
+      {
+       "due": "2026-11-23",
+       "domain": "home",
+       "item": "Kitchen faucet repair",
+       "status": "waiting"
+      },
+      {
+       "due": "2026-11-25",
+       "domain": "car",
+       "item": "Registration renewal",
+       "status": "open"
+      },
+      {
+       "due": "2026-11-27",
+       "domain": "family",
+       "item": "Leo's party bounce house",
+       "status": "open"
+      },
+      {
+       "due": "2026-11-30",
+       "domain": "work",
+       "item": "Juniper Dental invoice",
+       "status": "open"
+      },
+      {
+       "due": "2026-12-01",
+       "domain": "credit",
+       "item": "Collection dispute letter",
+       "status": "waiting"
+      },
+      {
+       "due": "2026-12-03",
+       "domain": "health",
+       "item": "Leo's sports physical",
+       "status": "open"
+      },
+      {
+       "due": "2026-12-05",
+       "domain": "travel",
+       "item": "Spring trip dates",
+       "status": "open"
+      },
+      {
+       "due": "2026-12-07",
+       "domain": "family",
+       "item": "Holiday party RSVP",
+       "status": "open"
+      },
+      {
+       "due": "2026-12-09",
+       "domain": "home",
+       "item": "Lease renewal",
+       "status": "open"
+      },
+      {
+       "due": "2026-12-11",
+       "domain": "pets",
+       "item": "Vet visit",
+       "status": "open"
+      },
+      {
+       "due": "2026-12-14",
+       "domain": "security",
+       "item": "Two-step sign-in",
+       "status": "open"
+      },
+      {
+       "due": "2026-12-15",
+       "domain": "taxes",
+       "item": "Q4 estimate",
+       "status": "open"
+      }
+     ],
+     "questions": [
+      "Should the spring trip be four nights or five?"
+     ],
+     "learned": [
+      "Thursday evenings work best for calls.",
+      "The family prefers hikes under 4 miles.",
+      "Grocery runs are cheaper on Saturdays."
+     ],
+     "sources": "Calendar, Todoist, bills, balances, weather",
+     "done_count": 2
+    },
+    "schedule": {
+     "date": "2026-11-21",
+     "generated_at": "2026-11-21T06:00:00-07:00",
+     "summary": "A light day built around family time.",
+     "blocks": [
+      {
+       "start": "07:00",
+       "end": "07:30",
+       "title": "Coffee and the weekly list",
+       "kind": "routine",
+       "source": "plan",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "",
+       "done": true
+      },
+      {
+       "start": "07:30",
+       "end": "08:30",
+       "title": "Pancake breakfast",
+       "kind": "personal",
+       "source": "calendar",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "evt00015473",
+       "done": true
+      },
+      {
+       "start": "08:30",
+       "end": "09:30",
+       "title": "Weekly review with Life Coach",
+       "kind": "routine",
+       "source": "plan",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "",
+       "done": true
+      },
+      {
+       "start": "09:30",
+       "end": "11:30",
+       "title": "Family hike",
+       "kind": "personal",
+       "source": "calendar",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "evt00006459",
+       "done": false
+      },
+      {
+       "start": "11:30",
+       "end": "12:30",
+       "title": "Lunch",
+       "kind": "personal",
+       "source": "calendar",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "evt00001556",
+       "done": false
+      },
+      {
+       "start": "12:30",
+       "end": "13:30",
+       "title": "Replace the furnace filter",
+       "kind": "task",
+       "source": "todoist",
+       "todoist_id": "t8135",
+       "note": "",
+       "calendar_event_id": "",
+       "done": false
+      },
+      {
+       "start": "13:30",
+       "end": "15:00",
+       "title": "Open afternoon",
+       "kind": "buffer",
+       "source": "plan",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "",
+       "done": false
+      },
+      {
+       "start": "15:00",
+       "end": "16:00",
+       "title": "Grocery pickup",
+       "kind": "task",
+       "source": "plan",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "",
+       "done": false
+      },
+      {
+       "start": "16:00",
+       "end": "17:30",
+       "title": "Leo's game",
+       "kind": "personal",
+       "source": "calendar",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "evt00005022",
+       "done": false
+      },
+      {
+       "start": "17:30",
+       "end": "18:30",
+       "title": "Dinner",
+       "kind": "personal",
+       "source": "calendar",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "evt00002237",
+       "done": false
+      },
+      {
+       "start": "18:30",
+       "end": "20:30",
+       "title": "Pizza and board games",
+       "kind": "personal",
+       "source": "calendar",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "evt00021882",
+       "done": false
+      },
+      {
+       "start": "20:30",
+       "end": "22:00",
+       "title": "Movie",
+       "kind": "personal",
+       "source": "calendar",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "evt00001578",
+       "done": false
+      }
+     ],
+     "budget": {
+      "day_spend_cap": {
+       "lyft": 0,
+       "food_out": 15
+      },
+      "lyft_until": "2026-12-04",
+      "lyft_note": "Car is fine; no rides needed.",
+      "money_order_today": [
+       "Keep spending under $15 until payday",
+       "Groceries are covered",
+       "No new subscriptions",
+       "Fun money: $60 left",
+       "Payday 12/4"
+      ]
+     },
+     "nutrition": {
+      "targets": "About 2,200 kcal and 150 g protein",
+      "breakfast": "Veggie egg scramble and fruit",
+      "lunch": "Turkey wraps",
+      "snack": "Apple and peanut butter",
+      "dinner": "Chicken tinga tacos",
+      "sweet": "Mango rice pudding"
+     },
+     "unscheduled": [
+      {
+       "title": "Book the oil change",
+       "why": "No call window left today"
+      },
+      {
+       "title": "Pick dates for the spring coast trip",
+       "why": "Better on Saturday"
+      },
+      {
+       "title": "Update the portfolio",
+       "why": "Needs a long block"
+      },
+      {
+       "title": "Book Biscuit's vet visit",
+       "why": "Clinic closed at lunch"
+      }
+     ],
+     "notes": [
+      "Payday is Friday 12/4.",
+      "Nora works late on Thursdays.",
+      "Leo has practice at 5.",
+      "Keep Sunday clear.",
+      "The oil change can wait until next week.",
+      "Grandpa Ray visits for lunch this week.",
+      "Recycling goes out tonight."
+     ]
+    },
+    "todos": {
+     "error": null,
+     "overdue": [
+      {
+       "id": "t8131",
+       "content": "Return the library books",
+       "description": "",
+       "project": "Errands",
+       "labels": [
+        "Errands"
+       ],
+       "flagged": false,
+       "due": "2026-11-19",
+       "days_left": -2,
+       "overdue": true,
+       "duration_min": 15,
+       "view": null
+      }
+     ],
+     "due_soon": [
+      {
+       "id": "t8111",
+       "content": "Pick up the prescription at Pine Street Pharmacy",
+       "description": "Ready after 3 PM.",
+       "project": "Health",
+       "labels": [
+        "Errands"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 15,
+       "view": null
+      },
+      {
+       "id": "t8112",
+       "content": "Cook: chicken tinga tacos",
+       "description": "Thaw the chicken in the morning.",
+       "project": "Health",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-21",
+       "days_left": 0,
+       "overdue": false,
+       "duration_min": 45,
+       "view": "recipe"
+      },
+      {
+       "id": "t8113",
+       "content": "Workout: upper body",
+       "description": "",
+       "project": "Health",
+       "labels": [
+        "Health"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 50,
+       "view": null
+      },
+      {
+       "id": "t8114",
+       "content": "Approve the Walmart cart for the week, $142",
+       "description": "Cart filled from the meal plan.",
+       "project": "Shopping",
+       "labels": [
+        "Computer",
+        "Money"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8115",
+       "content": "Order Maya's birthday gift (link in the notes)",
+       "description": "Watercolor set, $34. Arrives in 2 days.",
+       "project": "Shopping",
+       "labels": [
+        "Computer",
+        "Money"
+       ],
+       "flagged": true,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8116",
+       "content": "Cancel the unused StreamBox trial before it renews",
+       "description": "Renews at $11.99 a month.",
+       "project": "Subscriptions",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": "2026-11-27",
+       "days_left": 6,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8119",
+       "content": "Plug the phone in overnight for the backup",
+       "description": "",
+       "project": "Computer & Security",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8121",
+       "content": "Send the November invoice to Juniper Dental (draft ready)",
+       "description": "$1,200 for the booking page refresh.",
+       "project": "Business",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8123",
+       "content": "Reply to Alex at Northgate Systems (draft in the comments)",
+       "description": "Draft asks for the salary range before a call.",
+       "project": "Career",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8125",
+       "content": "Sign Maya's field trip permission slip",
+       "description": "Science museum, $12 for the bus.",
+       "project": "Family",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8127",
+       "content": "RSVP to the Brooks family's holiday party",
+       "description": "",
+       "project": "Family",
+       "labels": [
+        "Phone"
+       ],
+       "flagged": false,
+       "due": "2026-11-25",
+       "days_left": 4,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8128",
+       "content": "Pay the $120 bounce house deposit for Leo's party",
+       "description": "Hold expires in a week.",
+       "project": "Family",
+       "labels": [
+        "Money"
+       ],
+       "flagged": false,
+       "due": "2026-11-26",
+       "days_left": 5,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8129",
+       "content": "Read and sign the lease renewal (2 pages)",
+       "description": "Rent goes up $35 a month; the rest is unchanged.",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-28",
+       "days_left": 7,
+       "overdue": false,
+       "duration_min": 20,
+       "view": null
+      },
+      {
+       "id": "t8135",
+       "content": "Replace the furnace filter (20x25x1)",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-24",
+       "days_left": 3,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8138",
+       "content": "Deep clean the fridge",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-27",
+       "days_left": 6,
+       "overdue": false,
+       "duration_min": 30,
+       "view": null
+      },
+      {
+       "id": "t8144",
+       "content": "Approve the weekly social post draft",
+       "description": "",
+       "project": "Career",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      }
+     ],
+     "undated": [
+      {
+       "id": "t8101",
+       "content": "Call First Mesa about refunding the $35 overdraft fee, (970) 555-0123",
+       "description": "Ask for a one-time courtesy refund. Reference: statement dated last month.",
+       "project": "Money",
+       "labels": [
+        "Phone",
+        "Money"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 15,
+       "view": "call"
+      },
+      {
+       "id": "t8104",
+       "content": "Upload the 1099 forms to the tax folder",
+       "description": "",
+       "project": "Taxes",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8105",
+       "content": "Dispute the duplicate Mesa Medical collection",
+       "description": "Letter drafted by Financial Advisor; you sign and mail it.",
+       "project": "Credit",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 30,
+       "view": null
+      },
+      {
+       "id": "t8106",
+       "content": "Freeze credit at the third bureau",
+       "description": "Two bureaus are frozen already.",
+       "project": "Credit",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8108",
+       "content": "Book the oil change at Ridgeline Auto, (970) 555-0120",
+       "description": "Due by mileage (about 300 miles left).",
+       "project": "Car",
+       "labels": [
+        "Phone"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": "call"
+      },
+      {
+       "id": "t8109",
+       "content": "Rotate the tires",
+       "description": "",
+       "project": "Car",
+       "labels": [
+        "Errands"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 45,
+       "view": null
+      },
+      {
+       "id": "t8110",
+       "content": "Schedule Leo's sports physical, (970) 555-0119",
+       "description": "Needed before spring soccer sign-ups.",
+       "project": "Health",
+       "labels": [
+        "Phone"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": "call"
+      },
+      {
+       "id": "t8117",
+       "content": "Turn on two-step sign-in for the credit union app",
+       "description": "",
+       "project": "Computer & Security",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8118",
+       "content": "Change the reused password on the library account",
+       "description": "",
+       "project": "Computer & Security",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8122",
+       "content": "Review the Brightline Labs pricing page draft",
+       "description": "",
+       "project": "Business",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 20,
+       "view": null
+      },
+      {
+       "id": "t8124",
+       "content": "Add the Harbor app case study to the portfolio",
+       "description": "",
+       "project": "Career",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 45,
+       "view": null
+      },
+      {
+       "id": "t8126",
+       "content": "Call Grandpa Ray to plan lunch, (970) 555-0105",
+       "description": "",
+       "project": "Family",
+       "labels": [
+        "Phone"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 15,
+       "view": "call"
+      },
+      {
+       "id": "t8130",
+       "content": "Book Biscuit's yearly vet visit, (970) 555-0122",
+       "description": "Vaccines due next month.",
+       "project": "Home",
+       "labels": [
+        "Phone"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": "call"
+      },
+      {
+       "id": "t8132",
+       "content": "Pick dates for the spring coast trip",
+       "description": "Three options are priced on the Travel desk.",
+       "project": "Travel",
+       "labels": [],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 15,
+       "view": null
+      },
+      {
+       "id": "t8133",
+       "content": "Book Maya's passport appointment at the post office",
+       "description": "",
+       "project": "Travel",
+       "labels": [
+        "Errands"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 20,
+       "view": null
+      },
+      {
+       "id": "t8134",
+       "content": "Choose the paint color for Leo's room",
+       "description": "Three samples are on the wall.",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8136",
+       "content": "Call the landlord about the dripping kitchen faucet, (970) 555-0124",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Phone"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": "call"
+      },
+      {
+       "id": "t8141",
+       "content": "Update the address at the DMV",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8142",
+       "content": "Pick a movie for Friday family night",
+       "description": "Media Concierge left three picks.",
+       "project": "Inbox",
+       "labels": [],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8143",
+       "content": "Record Maya's recital piece for Grandpa Ray",
+       "description": "",
+       "project": "Family",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 20,
+       "view": null
+      },
+      {
+       "id": "t8145",
+       "content": "Decide on the winter jacket (two options saved)",
+       "description": "",
+       "project": "Shopping",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      }
+     ],
+     "later": [
+      {
+       "id": "t8100",
+       "content": "Pay the Summit Card minimum, $45 (card ending 0932)",
+       "description": "Pay from First Mesa checking ending 4417 after the paycheck lands.",
+       "project": "Money",
+       "labels": [
+        "Money"
+       ],
+       "flagged": true,
+       "due": "2026-12-04",
+       "days_left": 13,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8102",
+       "content": "Move $150 to the emergency fund",
+       "description": "Savings ending 4425. Keeps the fund on pace for 6,000 by next fall.",
+       "project": "Money",
+       "labels": [
+        "Money"
+       ],
+       "flagged": false,
+       "due": "2026-12-04",
+       "days_left": 13,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8103",
+       "content": "Make the Q4 estimated tax payment, $400",
+       "description": "Carter Studio side income. Use the IRS Direct Pay link in the tax folder.",
+       "project": "Taxes",
+       "labels": [
+        "Money",
+        "Computer"
+       ],
+       "flagged": false,
+       "due": "2026-12-16",
+       "days_left": 25,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8107",
+       "content": "Renew the Subaru registration, $86",
+       "description": "Online renewal; the emissions check passed last month.",
+       "project": "Car",
+       "labels": [
+        "Computer",
+        "Money"
+       ],
+       "flagged": false,
+       "due": "2026-11-30",
+       "days_left": 9,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8120",
+       "content": "Sign the Carter Studio annual report, $10 fee",
+       "description": "Everything is filled in; you sign and pay on the state site.",
+       "project": "Business",
+       "labels": [
+        "Computer",
+        "Money"
+       ],
+       "flagged": true,
+       "due": "2026-12-03",
+       "days_left": 12,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8137",
+       "content": "Clean the gutters",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-12-04",
+       "days_left": 13,
+       "overdue": false,
+       "duration_min": 60,
+       "view": null
+      },
+      {
+       "id": "t8139",
+       "content": "Test the smoke alarms",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-12-11",
+       "days_left": 20,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8140",
+       "content": "Take the donation boxes to the thrift store",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Errands"
+       ],
+       "flagged": false,
+       "due": "2026-11-30",
+       "days_left": 9,
+       "overdue": false,
+       "duration_min": 30,
+       "view": null
+      },
+      {
+       "id": "t8146",
+       "content": "Sign up Leo for spring soccer, $95",
+       "description": "",
+       "project": "Family",
+       "labels": [
+        "Computer",
+        "Money"
+       ],
+       "flagged": false,
+       "due": "2026-12-21",
+       "days_left": 30,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      }
+     ],
+     "completed": [
+      {
+       "content": "Pay the internet bill, $65",
+       "completed_at": "2026-11-20T09:15:00-07:00",
+       "project": "Money"
+      },
+      {
+       "content": "Book Maya's dentist cleaning",
+       "completed_at": "2026-11-20T12:15:00-07:00",
+       "project": "Health"
+      },
+      {
+       "content": "Return the Amazon package",
+       "completed_at": "2026-11-19T17:15:00-07:00",
+       "project": "Errands"
+      },
+      {
+       "content": "Sign the after-school club form",
+       "completed_at": "2026-11-19T08:15:00-07:00",
+       "project": "Family"
+      },
+      {
+       "content": "Call the insurance company about the windshield claim",
+       "completed_at": "2026-11-18T11:15:00-07:00",
+       "project": "Car"
+      },
+      {
+       "content": "Update the budget categories",
+       "completed_at": "2026-11-17T19:15:00-07:00",
+       "project": "Money"
+      },
+      {
+       "content": "Order furnace filters",
+       "completed_at": "2026-11-16T20:15:00-07:00",
+       "project": "Home"
+      },
+      {
+       "content": "Confirm Grandpa Ray's ride to the clinic",
+       "completed_at": "2026-11-14T10:15:00-07:00",
+       "project": "Family"
+      }
+     ],
+     "completed_days": 7
+    },
+    "contacts": [
+     {
+      "id": "c-0019",
+      "name": "Cedar Falls Family Clinic",
+      "category": "service",
+      "relationship": null,
+      "phone": "(970) 555-0119",
+      "website": "",
+      "hours": "Mon–Fri 8–5",
+      "account_last4": null,
+      "ref_ids": null,
+      "notes": "",
+      "role": "doctor"
+     },
+     {
+      "id": "c-0020",
+      "name": "Ridgeline Auto",
+      "category": "service",
+      "relationship": null,
+      "phone": "(970) 555-0120",
+      "website": "",
+      "hours": "Mon–Fri 8–5",
+      "account_last4": null,
+      "ref_ids": null,
+      "notes": "",
+      "role": "mechanic"
+     },
+     {
+      "id": "c-0021",
+      "name": "Pine Street Pharmacy",
+      "category": "service",
+      "relationship": null,
+      "phone": "(970) 555-0121",
+      "website": "",
+      "hours": "Mon–Fri 8–5",
+      "account_last4": null,
+      "ref_ids": null,
+      "notes": "",
+      "role": "pharmacy"
+     },
+     {
+      "id": "c-0022",
+      "name": "Cedar Falls Animal Hospital",
+      "category": "service",
+      "relationship": null,
+      "phone": "(970) 555-0122",
+      "website": "",
+      "hours": "Mon–Fri 8–5",
+      "account_last4": null,
+      "ref_ids": null,
+      "notes": "",
+      "role": "vet"
+     },
+     {
+      "id": "c-0023",
+      "name": "First Mesa Credit Union",
+      "category": "service",
+      "relationship": null,
+      "phone": "(970) 555-0123",
+      "website": "",
+      "hours": "Mon–Fri 8–5",
+      "account_last4": null,
+      "ref_ids": null,
+      "notes": "",
+      "role": "bank"
+     },
+     {
+      "id": "c-0024",
+      "name": "Aspen Court Properties",
+      "category": "service",
+      "relationship": null,
+      "phone": "(970) 555-0124",
+      "website": "",
+      "hours": "Mon–Fri 8–5",
+      "account_last4": null,
+      "ref_ids": null,
+      "notes": "",
+      "role": "landlord"
+     },
+     {
+      "id": "c-0025",
+      "name": "Juniper Dental",
+      "category": "service",
+      "relationship": null,
+      "phone": "(970) 555-0125",
+      "website": "",
+      "hours": "Mon–Fri 8–5",
+      "account_last4": null,
+      "ref_ids": null,
+      "notes": "",
+      "role": "client"
+     },
+     {
+      "id": "c-0030",
+      "name": "Granite Mutual Insurance",
+      "category": "service",
+      "relationship": null,
+      "phone": "(970) 555-0130",
+      "website": "",
+      "hours": "Mon–Fri 8–5",
+      "account_last4": null,
+      "ref_ids": null,
+      "notes": "",
+      "role": "insurance"
+     }
+    ],
+    "texting": {
+     "log": [
+      {
+       "at": "2026-11-21T08:00:00-07:00",
+       "direction": "in",
+       "number": "Sam's cell",
+       "body": "Good morning. Top 3: order Maya's gift, call First Mesa, upper-body workout.",
+       "channel": "sms",
+       "source": "morning-text",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-21T11:07:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "what's for dinner",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-21T14:14:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "Chicken tinga tacos. Thaw the chicken this morning.",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-21T17:21:00-07:00",
+       "direction": "in",
+       "number": "Sam's cell",
+       "body": "Payday is Friday. Every bill is covered.",
+       "channel": "sms",
+       "source": "morning-text",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-20T08:28:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "done with the slip",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-20T11:35:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "Marked done: Maya's field trip slip.",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-20T14:42:00-07:00",
+       "direction": "in",
+       "number": "Sam's cell",
+       "body": "Weekend plan is ready. Reply 1 to send it to Nora.",
+       "channel": "sms",
+       "source": "ask-rod",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-20T17:49:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "1",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-19T08:56:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "Sent to Nora.",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-19T11:03:00-07:00",
+       "direction": "in",
+       "number": "Sam's cell",
+       "body": "Recycling goes out tonight.",
+       "channel": "sms",
+       "source": "reminder",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-19T14:10:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "cash",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-19T17:17:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "Checking $2,240.39.",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-18T08:24:00-07:00",
+       "direction": "in",
+       "number": "Sam's cell",
+       "body": "Good morning. Top 3: order Maya's gift, call First Mesa, upper-body workout.",
+       "channel": "sms",
+       "source": "morning-text",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-18T11:31:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "what's for dinner",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-18T14:38:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "Chicken tinga tacos. Thaw the chicken this morning.",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-18T17:45:00-07:00",
+       "direction": "in",
+       "number": "Sam's cell",
+       "body": "Payday is Friday. Every bill is covered.",
+       "channel": "sms",
+       "source": "morning-text",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-17T08:52:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "done with the slip",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-17T11:59:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "Marked done: Maya's field trip slip.",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-17T14:06:00-07:00",
+       "direction": "in",
+       "number": "Sam's cell",
+       "body": "Weekend plan is ready. Reply 1 to send it to Nora.",
+       "channel": "sms",
+       "source": "ask-rod",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-17T17:13:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "1",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      }
+     ],
+     "prompts": [],
+     "inbound": [
+      {
+       "received_at": "2026-11-21T09:00:00-07:00",
+       "from_number": "Sam's cell",
+       "is_rod": true,
+       "status": "handled",
+       "result": "answered"
+      },
+      {
+       "received_at": "2026-11-21T10:11:00-07:00",
+       "from_number": "Sam's cell",
+       "is_rod": true,
+       "status": "handled",
+       "result": "answered"
+      },
+      {
+       "received_at": "2026-11-21T11:22:00-07:00",
+       "from_number": "Sam's cell",
+       "is_rod": true,
+       "status": "handled",
+       "result": "answered"
+      },
+      {
+       "received_at": "2026-11-20T12:33:00-07:00",
+       "from_number": "(970) 555-0102",
+       "is_rod": false,
+       "status": "handled",
+       "result": "answered"
+      },
+      {
+       "received_at": "2026-11-20T13:44:00-07:00",
+       "from_number": "Sam's cell",
+       "is_rod": true,
+       "status": "handled",
+       "result": "answered"
+      },
+      {
+       "received_at": "2026-11-20T14:55:00-07:00",
+       "from_number": "Sam's cell",
+       "is_rod": true,
+       "status": "handled",
+       "result": "answered"
+      },
+      {
+       "received_at": "2026-11-19T15:06:00-07:00",
+       "from_number": "Sam's cell",
+       "is_rod": true,
+       "status": "handled",
+       "result": "answered"
+      },
+      {
+       "received_at": "2026-11-19T16:17:00-07:00",
+       "from_number": "(970) 555-0102",
+       "is_rod": false,
+       "status": "handled",
+       "result": "answered"
+      },
+      {
+       "received_at": "2026-11-19T17:28:00-07:00",
+       "from_number": "Sam's cell",
+       "is_rod": true,
+       "status": "handled",
+       "result": "answered"
+      },
+      {
+       "received_at": "2026-11-18T18:39:00-07:00",
+       "from_number": "Sam's cell",
+       "is_rod": true,
+       "status": "handled",
+       "result": "answered"
+      },
+      {
+       "received_at": "2026-11-18T09:50:00-07:00",
+       "from_number": "Sam's cell",
+       "is_rod": true,
+       "status": "handled",
+       "result": "answered"
+      },
+      {
+       "received_at": "2026-11-18T10:01:00-07:00",
+       "from_number": "(970) 555-0102",
+       "is_rod": false,
+       "status": "handled",
+       "result": "answered"
+      }
+     ]
+    },
+    "db": {
+     "counts": {
+      "inbound_texts": 412,
+      "bills": 18,
+      "text_prompts": 57,
+      "contact_methods": 96,
+      "important_dates": 31,
+      "entities": 4,
+      "relationships": 28,
+      "text_log": 688,
+      "linkedin_messages": 140,
+      "whatsapp_messages": 1210,
+      "phone_messages": 530,
+      "phone_calls": 214,
+      "contacts": 30
+     }
+    },
+    "knowledge": [
+     "family.md",
+     "money.md",
+     "schedule.md",
+     "school.md",
+     "car.md",
+     "home.md",
+     "health.md",
+     "work.md",
+     "pets.md",
+     "travel.md",
+     "values.md"
+    ],
+    "projects": [
+     "Inbox",
+     "Money",
+     "Car",
+     "Credit",
+     "Taxes",
+     "Home",
+     "Travel",
+     "Health",
+     "Shopping",
+     "Subscriptions",
+     "Computer & Security",
+     "Business",
+     "Family"
+    ]
+   }
+  },
+  {
+   "key": "tech",
+   "name": "Tech",
+   "d": {
+    "sec": {
+     "key": "tech",
+     "name": "Tech",
+     "folders": [
+      "it",
+      "portal",
+      "database"
+     ],
+     "brief": [
+      "The computer, the portal and the agent services."
+     ],
+     "blurb": "The computer, the portal and the agent services.",
+     "words": [
+      "tech"
+     ]
+    },
+    "area": {
+     "sec": {
+      "key": "tech",
+      "name": "Tech",
+      "folders": [
+       "it",
+       "portal",
+       "database"
+      ],
+      "brief": [
+       "The computer, the portal and the agent services."
+      ],
+      "blurb": "The computer, the portal and the agent services.",
+      "words": [
+       "tech"
+      ]
+     },
+     "status": "act",
+     "summary": "",
+     "items": [
+      {
+       "text": "Money: approve the $45 Summit Card payment for payday",
+       "when": "2026-11-21",
+       "level": "act",
+       "link": "/s/money#bills"
+      },
+      {
+       "text": "Sends to Nora: the weekend plan text (draft ready)",
+       "when": "2026-11-21",
+       "level": "act",
+       "link": "/next/r/assistant#attention"
+      },
+      {
+       "text": "Kitchen faucet: landlord said this week",
+       "when": "2026-11-24",
+       "level": "watch",
+       "link": "/s/home"
+      },
+      {
+       "text": "Registration renews in 9 days",
+       "when": "2026-11-30",
+       "level": "watch",
+       "link": "/s/home"
+      }
+     ],
+     "tasks": [
+      {
+       "id": "t8100",
+       "content": "Pay the Summit Card minimum, $45 (card ending 0932)",
+       "description": "Pay from First Mesa checking ending 4417 after the paycheck lands.",
+       "project": "Money",
+       "labels": [
+        "Money"
+       ],
+       "flagged": true,
+       "due": "2026-12-04",
+       "days_left": 13,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8101",
+       "content": "Call First Mesa about refunding the $35 overdraft fee, (970) 555-0123",
+       "description": "Ask for a one-time courtesy refund. Reference: statement dated last month.",
+       "project": "Money",
+       "labels": [
+        "Phone",
+        "Money"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 15,
+       "view": "call"
+      },
+      {
+       "id": "t8102",
+       "content": "Move $150 to the emergency fund",
+       "description": "Savings ending 4425. Keeps the fund on pace for 6,000 by next fall.",
+       "project": "Money",
+       "labels": [
+        "Money"
+       ],
+       "flagged": false,
+       "due": "2026-12-04",
+       "days_left": 13,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8103",
+       "content": "Make the Q4 estimated tax payment, $400",
+       "description": "Carter Studio side income. Use the IRS Direct Pay link in the tax folder.",
+       "project": "Taxes",
+       "labels": [
+        "Money",
+        "Computer"
+       ],
+       "flagged": false,
+       "due": "2026-12-16",
+       "days_left": 25,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8104",
+       "content": "Upload the 1099 forms to the tax folder",
+       "description": "",
+       "project": "Taxes",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8105",
+       "content": "Dispute the duplicate Mesa Medical collection",
+       "description": "Letter drafted by Financial Advisor; you sign and mail it.",
+       "project": "Credit",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 30,
+       "view": null
+      },
+      {
+       "id": "t8106",
+       "content": "Freeze credit at the third bureau",
+       "description": "Two bureaus are frozen already.",
+       "project": "Credit",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8107",
+       "content": "Renew the Subaru registration, $86",
+       "description": "Online renewal; the emissions check passed last month.",
+       "project": "Car",
+       "labels": [
+        "Computer",
+        "Money"
+       ],
+       "flagged": false,
+       "due": "2026-11-30",
+       "days_left": 9,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8108",
+       "content": "Book the oil change at Ridgeline Auto, (970) 555-0120",
+       "description": "Due by mileage (about 300 miles left).",
+       "project": "Car",
+       "labels": [
+        "Phone"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": "call"
+      },
+      {
+       "id": "t8109",
+       "content": "Rotate the tires",
+       "description": "",
+       "project": "Car",
+       "labels": [
+        "Errands"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 45,
+       "view": null
+      },
+      {
+       "id": "t8110",
+       "content": "Schedule Leo's sports physical, (970) 555-0119",
+       "description": "Needed before spring soccer sign-ups.",
+       "project": "Health",
+       "labels": [
+        "Phone"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": "call"
+      },
+      {
+       "id": "t8111",
+       "content": "Pick up the prescription at Pine Street Pharmacy",
+       "description": "Ready after 3 PM.",
+       "project": "Health",
+       "labels": [
+        "Errands"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 15,
+       "view": null
+      },
+      {
+       "id": "t8112",
+       "content": "Cook: chicken tinga tacos",
+       "description": "Thaw the chicken in the morning.",
+       "project": "Health",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-21",
+       "days_left": 0,
+       "overdue": false,
+       "duration_min": 45,
+       "view": "recipe"
+      },
+      {
+       "id": "t8113",
+       "content": "Workout: upper body",
+       "description": "",
+       "project": "Health",
+       "labels": [
+        "Health"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 50,
+       "view": null
+      },
+      {
+       "id": "t8114",
+       "content": "Approve the Walmart cart for the week, $142",
+       "description": "Cart filled from the meal plan.",
+       "project": "Shopping",
+       "labels": [
+        "Computer",
+        "Money"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8115",
+       "content": "Order Maya's birthday gift (link in the notes)",
+       "description": "Watercolor set, $34. Arrives in 2 days.",
+       "project": "Shopping",
+       "labels": [
+        "Computer",
+        "Money"
+       ],
+       "flagged": true,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8116",
+       "content": "Cancel the unused StreamBox trial before it renews",
+       "description": "Renews at $11.99 a month.",
+       "project": "Subscriptions",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": "2026-11-27",
+       "days_left": 6,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8117",
+       "content": "Turn on two-step sign-in for the credit union app",
+       "description": "",
+       "project": "Computer & Security",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8118",
+       "content": "Change the reused password on the library account",
+       "description": "",
+       "project": "Computer & Security",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8119",
+       "content": "Plug the phone in overnight for the backup",
+       "description": "",
+       "project": "Computer & Security",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8120",
+       "content": "Sign the Carter Studio annual report, $10 fee",
+       "description": "Everything is filled in; you sign and pay on the state site.",
+       "project": "Business",
+       "labels": [
+        "Computer",
+        "Money"
+       ],
+       "flagged": true,
+       "due": "2026-12-03",
+       "days_left": 12,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8121",
+       "content": "Send the November invoice to Juniper Dental (draft ready)",
+       "description": "$1,200 for the booking page refresh.",
+       "project": "Business",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8122",
+       "content": "Review the Brightline Labs pricing page draft",
+       "description": "",
+       "project": "Business",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 20,
+       "view": null
+      },
+      {
+       "id": "t8123",
+       "content": "Reply to Alex at Northgate Systems (draft in the comments)",
+       "description": "Draft asks for the salary range before a call.",
+       "project": "Career",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8124",
+       "content": "Add the Harbor app case study to the portfolio",
+       "description": "",
+       "project": "Career",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 45,
+       "view": null
+      },
+      {
+       "id": "t8125",
+       "content": "Sign Maya's field trip permission slip",
+       "description": "Science museum, $12 for the bus.",
+       "project": "Family",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8126",
+       "content": "Call Grandpa Ray to plan lunch, (970) 555-0105",
+       "description": "",
+       "project": "Family",
+       "labels": [
+        "Phone"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 15,
+       "view": "call"
+      },
+      {
+       "id": "t8127",
+       "content": "RSVP to the Brooks family's holiday party",
+       "description": "",
+       "project": "Family",
+       "labels": [
+        "Phone"
+       ],
+       "flagged": false,
+       "due": "2026-11-25",
+       "days_left": 4,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8128",
+       "content": "Pay the $120 bounce house deposit for Leo's party",
+       "description": "Hold expires in a week.",
+       "project": "Family",
+       "labels": [
+        "Money"
+       ],
+       "flagged": false,
+       "due": "2026-11-26",
+       "days_left": 5,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8129",
+       "content": "Read and sign the lease renewal (2 pages)",
+       "description": "Rent goes up $35 a month; the rest is unchanged.",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-28",
+       "days_left": 7,
+       "overdue": false,
+       "duration_min": 20,
+       "view": null
+      },
+      {
+       "id": "t8130",
+       "content": "Book Biscuit's yearly vet visit, (970) 555-0122",
+       "description": "Vaccines due next month.",
+       "project": "Home",
+       "labels": [
+        "Phone"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": "call"
+      },
+      {
+       "id": "t8131",
+       "content": "Return the library books",
+       "description": "",
+       "project": "Errands",
+       "labels": [
+        "Errands"
+       ],
+       "flagged": false,
+       "due": "2026-11-19",
+       "days_left": -2,
+       "overdue": true,
+       "duration_min": 15,
+       "view": null
+      },
+      {
+       "id": "t8132",
+       "content": "Pick dates for the spring coast trip",
+       "description": "Three options are priced on the Travel desk.",
+       "project": "Travel",
+       "labels": [],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 15,
+       "view": null
+      },
+      {
+       "id": "t8133",
+       "content": "Book Maya's passport appointment at the post office",
+       "description": "",
+       "project": "Travel",
+       "labels": [
+        "Errands"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 20,
+       "view": null
+      },
+      {
+       "id": "t8134",
+       "content": "Choose the paint color for Leo's room",
+       "description": "Three samples are on the wall.",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8135",
+       "content": "Replace the furnace filter (20x25x1)",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-24",
+       "days_left": 3,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8136",
+       "content": "Call the landlord about the dripping kitchen faucet, (970) 555-0124",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Phone"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": "call"
+      },
+      {
+       "id": "t8137",
+       "content": "Clean the gutters",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-12-04",
+       "days_left": 13,
+       "overdue": false,
+       "duration_min": 60,
+       "view": null
+      },
+      {
+       "id": "t8138",
+       "content": "Deep clean the fridge",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-27",
+       "days_left": 6,
+       "overdue": false,
+       "duration_min": 30,
+       "view": null
+      },
+      {
+       "id": "t8139",
+       "content": "Test the smoke alarms",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-12-11",
+       "days_left": 20,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8140",
+       "content": "Take the donation boxes to the thrift store",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Errands"
+       ],
+       "flagged": false,
+       "due": "2026-11-30",
+       "days_left": 9,
+       "overdue": false,
+       "duration_min": 30,
+       "view": null
+      },
+      {
+       "id": "t8141",
+       "content": "Update the address at the DMV",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8142",
+       "content": "Pick a movie for Friday family night",
+       "description": "Media Concierge left three picks.",
+       "project": "Inbox",
+       "labels": [],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8143",
+       "content": "Record Maya's recital piece for Grandpa Ray",
+       "description": "",
+       "project": "Family",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 20,
+       "view": null
+      },
+      {
+       "id": "t8144",
+       "content": "Approve the weekly social post draft",
+       "description": "",
+       "project": "Career",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8145",
+       "content": "Decide on the winter jacket (two options saved)",
+       "description": "",
+       "project": "Shopping",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      },
+      {
+       "id": "t8146",
+       "content": "Sign up Leo for spring soccer, $95",
+       "description": "",
+       "project": "Family",
+       "labels": [
+        "Computer",
+        "Money"
+       ],
+       "flagged": false,
+       "due": "2026-12-21",
+       "days_left": 30,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      }
+     ]
+    },
+    "brief": {
+     "date": "2026-11-21",
+     "generated_at": "2026-11-21T06:30:00-07:00",
+     "headline": "A calm Saturday. Payday is 12/4 and every bill is covered. Two quick asks today: the Summit Card payment and Maya's gift.",
+     "today": [
+      {
+       "title": "Order Maya's birthday gift",
+       "why": "Arrives in 2 days; her birthday is in 4.",
+       "domain": "family",
+       "due": "2026-11-21",
+       "urgency": "act",
+       "done": false
+      },
+      {
+       "title": "Call First Mesa about the overdraft fee",
+       "why": "A one-time refund is likely if you ask.",
+       "domain": "money",
+       "due": "2026-11-21",
+       "urgency": "watch",
+       "done": false
+      },
+      {
+       "title": "Sign Maya's field trip slip",
+       "why": "Due at school tomorrow.",
+       "domain": "family",
+       "due": "2026-11-22",
+       "urgency": "watch",
+       "done": true
+      },
+      {
+       "title": "Workout: upper body",
+       "why": "Keeps the week at 4 sessions.",
+       "domain": "health",
+       "due": "2026-11-21",
+       "urgency": "ok",
+       "done": false
+      },
+      {
+       "title": "Reply to Alex at Northgate Systems",
+       "why": "Draft is ready; it takes two minutes.",
+       "domain": "work",
+       "due": "2026-11-21",
+       "urgency": "ok",
+       "done": true
+      }
+     ],
+     "domains": [
+      {
+       "key": "money",
+       "name": "Money",
+       "status": "ok",
+       "summary": "Checking $2,240.39; low point $449.39 before payday 12/4, above the $250 bar.",
+       "metrics": [
+        {
+         "label": "Checking",
+         "value": "$2,240.39",
+         "note": "this morning"
+        },
+        {
+         "label": "Low point",
+         "value": "$449.39",
+         "note": "12/3"
+        },
+        {
+         "label": "Bills, 14 days",
+         "value": "$1,471.40",
+         "note": "unpaid"
+        }
+       ],
+       "bullets": [
+        "Checking $2,240.39.",
+        "Nothing needs a decision today.",
+        "Owner role is on it.",
+        "Details on the desk."
+       ],
+       "series": [
+        [
+         "2026-11-17",
+         "32.5"
+        ],
+        [
+         "2026-11-18",
+         "73.1"
+        ],
+        [
+         "2026-11-19",
+         "16.6"
+        ],
+        [
+         "2026-11-20",
+         "15.9"
+        ],
+        [
+         "2026-11-21",
+         "86.9"
+        ]
+       ]
+      },
+      {
+       "key": "health",
+       "name": "Health",
+       "status": "watch",
+       "summary": "Two workouts this week so far; weight down 0.8 lb this month.",
+       "metrics": [
+        {
+         "label": "Weight",
+         "value": "193.4 lb",
+         "note": "goal 185"
+        },
+        {
+         "label": "Workouts",
+         "value": "2 of 4",
+         "note": "this week"
+        },
+        {
+         "label": "Sleep",
+         "value": "7.1 h",
+         "note": "average"
+        }
+       ],
+       "bullets": [
+        "Two workouts this week so far.",
+        "Nothing needs a decision today.",
+        "Owner role is on it.",
+        "Details on the desk."
+       ],
+       "series": [
+        [
+         "2026-11-17",
+         "22.8"
+        ],
+        [
+         "2026-11-18",
+         "38.0"
+        ],
+        [
+         "2026-11-19",
+         "23.1"
+        ],
+        [
+         "2026-11-20",
+         "39.1"
+        ],
+        [
+         "2026-11-21",
+         "38.1"
+        ]
+       ]
+      },
+      {
+       "key": "family",
+       "name": "Family",
+       "status": "ok",
+       "summary": "Maya's birthday is in 4 days; the gift is picked.",
+       "metrics": [
+        {
+         "label": "Birthdays",
+         "value": "2",
+         "note": "next 30 days"
+        },
+        {
+         "label": "Kids' events",
+         "value": "3",
+         "note": "this week"
+        },
+        {
+         "label": "Calls owed",
+         "value": "1",
+         "note": "Grandpa Ray"
+        }
+       ],
+       "bullets": [
+        "Maya's birthday is in 4 days.",
+        "Nothing needs a decision today.",
+        "Owner role is on it.",
+        "Details on the desk."
+       ],
+       "series": [
+        [
+         "2026-11-17",
+         "58.2"
+        ],
+        [
+         "2026-11-18",
+         "19.2"
+        ],
+        [
+         "2026-11-19",
+         "42.7"
+        ],
+        [
+         "2026-11-20",
+         "16.2"
+        ],
+        [
+         "2026-11-21",
+         "16.3"
+        ]
+       ]
+      },
+      {
+       "key": "home",
+       "name": "Home",
+       "status": "ok",
+       "summary": "Furnace filter due; faucet repair is with the landlord.",
+       "metrics": [
+        {
+         "label": "Chores",
+         "value": "5",
+         "note": "this week"
+        },
+        {
+         "label": "Repairs",
+         "value": "1",
+         "note": "open"
+        },
+        {
+         "label": "Supplies",
+         "value": "ok",
+         "note": ""
+        }
+       ],
+       "bullets": [
+        "Furnace filter due.",
+        "Nothing needs a decision today.",
+        "Owner role is on it.",
+        "Details on the desk."
+       ],
+       "series": [
+        [
+         "2026-11-17",
+         "21.9"
+        ],
+        [
+         "2026-11-18",
+         "28.4"
+        ],
+        [
+         "2026-11-19",
+         "26.8"
+        ],
+        [
+         "2026-11-20",
+         "10.2"
+        ],
+        [
+         "2026-11-21",
+         "38.1"
+        ]
+       ]
+      },
+      {
+       "key": "work",
+       "name": "Work",
+       "status": "ok",
+       "summary": "One recruiter reply drafted; the Carter Studio invoice is ready.",
+       "metrics": [
+        {
+         "label": "Leads",
+         "value": "3",
+         "note": "open"
+        },
+        {
+         "label": "Invoices",
+         "value": "$1,200",
+         "note": "to send"
+        },
+        {
+         "label": "Deadlines",
+         "value": "1",
+         "note": "this month"
+        }
+       ],
+       "bullets": [
+        "One recruiter reply drafted.",
+        "Nothing needs a decision today.",
+        "Owner role is on it.",
+        "Details on the desk."
+       ],
+       "series": [
+        [
+         "2026-11-17",
+         "70.1"
+        ],
+        [
+         "2026-11-18",
+         "82.4"
+        ],
+        [
+         "2026-11-19",
+         "44.5"
+        ],
+        [
+         "2026-11-20",
+         "27.4"
+        ],
+        [
+         "2026-11-21",
+         "79.4"
+        ]
+       ]
+      },
+      {
+       "key": "car",
+       "name": "Car",
+       "status": "watch",
+       "summary": "Registration renews in 9 days; oil change due soon.",
+       "metrics": [
+        {
+         "label": "Registration",
+         "value": "11/30",
+         "note": "$86"
+        },
+        {
+         "label": "Oil",
+         "value": "300 mi",
+         "note": "left"
+        },
+        {
+         "label": "Insurance",
+         "value": "paid",
+         "note": ""
+        }
+       ],
+       "bullets": [
+        "Registration renews in 9 days.",
+        "Nothing needs a decision today.",
+        "Owner role is on it.",
+        "Details on the desk."
+       ],
+       "series": [
+        [
+         "2026-11-17",
+         "24.0"
+        ],
+        [
+         "2026-11-18",
+         "31.0"
+        ],
+        [
+         "2026-11-19",
+         "66.9"
+        ],
+        [
+         "2026-11-20",
+         "59.6"
+        ],
+        [
+         "2026-11-21",
+         "81.0"
+        ]
+       ]
+      },
+      {
+       "key": "plans",
+       "name": "Plans",
+       "status": "ok",
+       "summary": "Spring coast trip: three options priced, dates not picked.",
+       "metrics": [
+        {
+         "label": "Trip options",
+         "value": "3",
+         "note": "priced"
+        },
+        {
+         "label": "Weekend",
+         "value": "hike",
+         "note": "Saturday"
+        },
+        {
+         "label": "Date night",
+         "value": "11/29",
+         "note": "booked"
+        }
+       ],
+       "bullets": [
+        "Spring coast trip: three options priced, dates not picked..",
+        "Nothing needs a decision today.",
+        "Owner role is on it.",
+        "Details on the desk."
+       ],
+       "series": [
+        [
+         "2026-11-17",
+         "40.8"
+        ],
+        [
+         "2026-11-18",
+         "84.5"
+        ],
+        [
+         "2026-11-19",
+         "62.9"
+        ],
+        [
+         "2026-11-20",
+         "46.7"
+        ],
+        [
+         "2026-11-21",
+         "31.2"
+        ]
+       ]
+      }
+     ],
+     "bills": [
+      {
+       "due": "2026-11-21",
+       "bill": "Renter's insurance",
+       "amount": "$14",
+       "note": "autopay",
+       "overdue": false
+      },
+      {
+       "due": "2026-11-22",
+       "bill": "Peak Wireless, 3 lines",
+       "amount": "$118",
+       "note": "autopay",
+       "overdue": false
+      },
+      {
+       "due": "2026-12-01",
+       "bill": "Rent, Aspen Court",
+       "amount": "$1,195",
+       "note": "",
+       "overdue": false
+      },
+      {
+       "due": "2026-12-03",
+       "bill": "Cedar Rec Center",
+       "amount": "$32",
+       "note": "autopay",
+       "overdue": false
+      },
+      {
+       "due": "2026-12-04",
+       "bill": "Car insurance, Granite Mutual",
+       "amount": "$112.40",
+       "note": "autopay",
+       "overdue": false
+      }
+     ],
+     "bills_note": "Every bill in the next two weeks is covered by the balance and Friday's paycheck.",
+     "changes": [
+      "Maya's gift moved to today so it arrives on time.",
+      "Oil change pushed to next week.",
+      "Added the lease renewal to Home.",
+      "Closed the windshield claim; insurance paid it.",
+      "Grocery cart filled from the meal plan."
+     ],
+     "open_loops": [
+      {
+       "due": "2026-11-21",
+       "domain": "money",
+       "item": "Overdraft fee refund",
+       "status": "open"
+      },
+      {
+       "due": "2026-11-23",
+       "domain": "home",
+       "item": "Kitchen faucet repair",
+       "status": "waiting"
+      },
+      {
+       "due": "2026-11-25",
+       "domain": "car",
+       "item": "Registration renewal",
+       "status": "open"
+      },
+      {
+       "due": "2026-11-27",
+       "domain": "family",
+       "item": "Leo's party bounce house",
+       "status": "open"
+      },
+      {
+       "due": "2026-11-30",
+       "domain": "work",
+       "item": "Juniper Dental invoice",
+       "status": "open"
+      },
+      {
+       "due": "2026-12-01",
+       "domain": "credit",
+       "item": "Collection dispute letter",
+       "status": "waiting"
+      },
+      {
+       "due": "2026-12-03",
+       "domain": "health",
+       "item": "Leo's sports physical",
+       "status": "open"
+      },
+      {
+       "due": "2026-12-05",
+       "domain": "travel",
+       "item": "Spring trip dates",
+       "status": "open"
+      },
+      {
+       "due": "2026-12-07",
+       "domain": "family",
+       "item": "Holiday party RSVP",
+       "status": "open"
+      },
+      {
+       "due": "2026-12-09",
+       "domain": "home",
+       "item": "Lease renewal",
+       "status": "open"
+      },
+      {
+       "due": "2026-12-11",
+       "domain": "pets",
+       "item": "Vet visit",
+       "status": "open"
+      },
+      {
+       "due": "2026-12-14",
+       "domain": "security",
+       "item": "Two-step sign-in",
+       "status": "open"
+      },
+      {
+       "due": "2026-12-15",
+       "domain": "taxes",
+       "item": "Q4 estimate",
+       "status": "open"
+      }
+     ],
+     "questions": [
+      "Should the spring trip be four nights or five?"
+     ],
+     "learned": [
+      "Thursday evenings work best for calls.",
+      "The family prefers hikes under 4 miles.",
+      "Grocery runs are cheaper on Saturdays."
+     ],
+     "sources": "Calendar, Todoist, bills, balances, weather",
+     "done_count": 2
+    },
+    "schedule": {
+     "date": "2026-11-21",
+     "generated_at": "2026-11-21T06:00:00-07:00",
+     "summary": "A light day built around family time.",
+     "blocks": [
+      {
+       "start": "07:00",
+       "end": "07:30",
+       "title": "Coffee and the weekly list",
+       "kind": "routine",
+       "source": "plan",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "",
+       "done": true
+      },
+      {
+       "start": "07:30",
+       "end": "08:30",
+       "title": "Pancake breakfast",
+       "kind": "personal",
+       "source": "calendar",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "evt00015473",
+       "done": true
+      },
+      {
+       "start": "08:30",
+       "end": "09:30",
+       "title": "Weekly review with Life Coach",
+       "kind": "routine",
+       "source": "plan",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "",
+       "done": true
+      },
+      {
+       "start": "09:30",
+       "end": "11:30",
+       "title": "Family hike",
+       "kind": "personal",
+       "source": "calendar",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "evt00006459",
+       "done": false
+      },
+      {
+       "start": "11:30",
+       "end": "12:30",
+       "title": "Lunch",
+       "kind": "personal",
+       "source": "calendar",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "evt00001556",
+       "done": false
+      },
+      {
+       "start": "12:30",
+       "end": "13:30",
+       "title": "Replace the furnace filter",
+       "kind": "task",
+       "source": "todoist",
+       "todoist_id": "t8135",
+       "note": "",
+       "calendar_event_id": "",
+       "done": false
+      },
+      {
+       "start": "13:30",
+       "end": "15:00",
+       "title": "Open afternoon",
+       "kind": "buffer",
+       "source": "plan",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "",
+       "done": false
+      },
+      {
+       "start": "15:00",
+       "end": "16:00",
+       "title": "Grocery pickup",
+       "kind": "task",
+       "source": "plan",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "",
+       "done": false
+      },
+      {
+       "start": "16:00",
+       "end": "17:30",
+       "title": "Leo's game",
+       "kind": "personal",
+       "source": "calendar",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "evt00005022",
+       "done": false
+      },
+      {
+       "start": "17:30",
+       "end": "18:30",
+       "title": "Dinner",
+       "kind": "personal",
+       "source": "calendar",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "evt00002237",
+       "done": false
+      },
+      {
+       "start": "18:30",
+       "end": "20:30",
+       "title": "Pizza and board games",
+       "kind": "personal",
+       "source": "calendar",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "evt00021882",
+       "done": false
+      },
+      {
+       "start": "20:30",
+       "end": "22:00",
+       "title": "Movie",
+       "kind": "personal",
+       "source": "calendar",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "evt00001578",
+       "done": false
+      }
+     ],
+     "budget": {
+      "day_spend_cap": {
+       "lyft": 0,
+       "food_out": 15
+      },
+      "lyft_until": "2026-12-04",
+      "lyft_note": "Car is fine; no rides needed.",
+      "money_order_today": [
+       "Keep spending under $15 until payday",
+       "Groceries are covered",
+       "No new subscriptions",
+       "Fun money: $60 left",
+       "Payday 12/4"
+      ]
+     },
+     "nutrition": {
+      "targets": "About 2,200 kcal and 150 g protein",
+      "breakfast": "Veggie egg scramble and fruit",
+      "lunch": "Turkey wraps",
+      "snack": "Apple and peanut butter",
+      "dinner": "Chicken tinga tacos",
+      "sweet": "Mango rice pudding"
+     },
+     "unscheduled": [
+      {
+       "title": "Book the oil change",
+       "why": "No call window left today"
+      },
+      {
+       "title": "Pick dates for the spring coast trip",
+       "why": "Better on Saturday"
+      },
+      {
+       "title": "Update the portfolio",
+       "why": "Needs a long block"
+      },
+      {
+       "title": "Book Biscuit's vet visit",
+       "why": "Clinic closed at lunch"
+      }
+     ],
+     "notes": [
+      "Payday is Friday 12/4.",
+      "Nora works late on Thursdays.",
+      "Leo has practice at 5.",
+      "Keep Sunday clear.",
+      "The oil change can wait until next week.",
+      "Grandpa Ray visits for lunch this week.",
+      "Recycling goes out tonight."
+     ]
+    },
+    "todos": {
+     "error": null,
+     "overdue": [],
+     "due_soon": [
+      {
+       "id": "t8119",
+       "content": "Plug the phone in overnight for the backup",
+       "description": "",
+       "project": "Computer & Security",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 5,
+       "view": null
+      }
+     ],
+     "undated": [
+      {
+       "id": "t8117",
+       "content": "Turn on two-step sign-in for the credit union app",
+       "description": "",
+       "project": "Computer & Security",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      }
+     ],
+     "later": [],
+     "completed": [
+      {
+       "content": "Pay the internet bill, $65",
+       "completed_at": "2026-11-20T09:15:00-07:00",
+       "project": "Money"
+      },
+      {
+       "content": "Book Maya's dentist cleaning",
+       "completed_at": "2026-11-20T12:15:00-07:00",
+       "project": "Health"
+      },
+      {
+       "content": "Return the Amazon package",
+       "completed_at": "2026-11-19T17:15:00-07:00",
+       "project": "Errands"
+      },
+      {
+       "content": "Sign the after-school club form",
+       "completed_at": "2026-11-19T08:15:00-07:00",
+       "project": "Family"
+      },
+      {
+       "content": "Call the insurance company about the windshield claim",
+       "completed_at": "2026-11-18T11:15:00-07:00",
+       "project": "Car"
+      },
+      {
+       "content": "Update the budget categories",
+       "completed_at": "2026-11-17T19:15:00-07:00",
+       "project": "Money"
+      },
+      {
+       "content": "Order furnace filters",
+       "completed_at": "2026-11-16T20:15:00-07:00",
+       "project": "Home"
+      },
+      {
+       "content": "Confirm Grandpa Ray's ride to the clinic",
+       "completed_at": "2026-11-14T10:15:00-07:00",
+       "project": "Family"
+      }
+     ],
+     "completed_days": 7
+    },
+    "contacts": [],
+    "texting": {
+     "log": [
+      {
+       "at": "2026-11-21T08:00:00-07:00",
+       "direction": "in",
+       "number": "Sam's cell",
+       "body": "Good morning. Top 3: order Maya's gift, call First Mesa, upper-body workout.",
+       "channel": "sms",
+       "source": "morning-text",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-21T11:07:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "what's for dinner",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-21T14:14:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "Chicken tinga tacos. Thaw the chicken this morning.",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-21T17:21:00-07:00",
+       "direction": "in",
+       "number": "Sam's cell",
+       "body": "Payday is Friday. Every bill is covered.",
+       "channel": "sms",
+       "source": "morning-text",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-20T08:28:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "done with the slip",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-20T11:35:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "Marked done: Maya's field trip slip.",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-20T14:42:00-07:00",
+       "direction": "in",
+       "number": "Sam's cell",
+       "body": "Weekend plan is ready. Reply 1 to send it to Nora.",
+       "channel": "sms",
+       "source": "ask-rod",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-20T17:49:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "1",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-19T08:56:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "Sent to Nora.",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-19T11:03:00-07:00",
+       "direction": "in",
+       "number": "Sam's cell",
+       "body": "Recycling goes out tonight.",
+       "channel": "sms",
+       "source": "reminder",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-19T14:10:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "cash",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-19T17:17:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "Checking $2,240.39.",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-18T08:24:00-07:00",
+       "direction": "in",
+       "number": "Sam's cell",
+       "body": "Good morning. Top 3: order Maya's gift, call First Mesa, upper-body workout.",
+       "channel": "sms",
+       "source": "morning-text",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-18T11:31:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "what's for dinner",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-18T14:38:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "Chicken tinga tacos. Thaw the chicken this morning.",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-18T17:45:00-07:00",
+       "direction": "in",
+       "number": "Sam's cell",
+       "body": "Payday is Friday. Every bill is covered.",
+       "channel": "sms",
+       "source": "morning-text",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-17T08:52:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "done with the slip",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-17T11:59:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "Marked done: Maya's field trip slip.",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-17T14:06:00-07:00",
+       "direction": "in",
+       "number": "Sam's cell",
+       "body": "Weekend plan is ready. Reply 1 to send it to Nora.",
+       "channel": "sms",
+       "source": "ask-rod",
+       "result": "sent"
+      },
+      {
+       "at": "2026-11-17T17:13:00-07:00",
+       "direction": "out",
+       "number": "Sam",
+       "body": "1",
+       "channel": "sms",
+       "source": "listener",
+       "result": "sent"
+      }
+     ],
+     "prompts": [],
+     "inbound": [
+      {
+       "received_at": "2026-11-21T09:00:00-07:00",
+       "from_number": "Sam's cell",
+       "is_rod": true,
+       "status": "handled",
+       "result": "answered"
+      },
+      {
+       "received_at": "2026-11-21T10:11:00-07:00",
+       "from_number": "Sam's cell",
+       "is_rod": true,
+       "status": "handled",
+       "result": "answered"
+      },
+      {
+       "received_at": "2026-11-21T11:22:00-07:00",
+       "from_number": "Sam's cell",
+       "is_rod": true,
+       "status": "handled",
+       "result": "answered"
+      },
+      {
+       "received_at": "2026-11-20T12:33:00-07:00",
+       "from_number": "(970) 555-0102",
+       "is_rod": false,
+       "status": "handled",
+       "result": "answered"
+      },
+      {
+       "received_at": "2026-11-20T13:44:00-07:00",
+       "from_number": "Sam's cell",
+       "is_rod": true,
+       "status": "handled",
+       "result": "answered"
+      },
+      {
+       "received_at": "2026-11-20T14:55:00-07:00",
+       "from_number": "Sam's cell",
+       "is_rod": true,
+       "status": "handled",
+       "result": "answered"
+      },
+      {
+       "received_at": "2026-11-19T15:06:00-07:00",
+       "from_number": "Sam's cell",
+       "is_rod": true,
+       "status": "handled",
+       "result": "answered"
+      },
+      {
+       "received_at": "2026-11-19T16:17:00-07:00",
+       "from_number": "(970) 555-0102",
+       "is_rod": false,
+       "status": "handled",
+       "result": "answered"
+      },
+      {
+       "received_at": "2026-11-19T17:28:00-07:00",
+       "from_number": "Sam's cell",
+       "is_rod": true,
+       "status": "handled",
+       "result": "answered"
+      },
+      {
+       "received_at": "2026-11-18T18:39:00-07:00",
+       "from_number": "Sam's cell",
+       "is_rod": true,
+       "status": "handled",
+       "result": "answered"
+      },
+      {
+       "received_at": "2026-11-18T09:50:00-07:00",
+       "from_number": "Sam's cell",
+       "is_rod": true,
+       "status": "handled",
+       "result": "answered"
+      },
+      {
+       "received_at": "2026-11-18T10:01:00-07:00",
+       "from_number": "(970) 555-0102",
+       "is_rod": false,
+       "status": "handled",
+       "result": "answered"
+      }
+     ]
+    },
+    "db": {
+     "counts": {
+      "contacts": 30
+     }
+    },
+    "knowledge": [
+     "devices.md",
+     "network.md"
+    ],
+    "projects": [
+     "Inbox",
+     "Money",
+     "Car",
+     "Credit",
+     "Taxes",
+     "Home",
+     "Travel",
+     "Health",
+     "Shopping",
+     "Subscriptions",
+     "Computer & Security",
+     "Business",
+     "Family"
+    ]
+   }
+  }
+ ],
+ "widgets": {
+  "desks": [
+   {
+    "key": "scheduler",
+    "name": "Scheduler",
+    "nav": "scheduler",
+    "owns": "Sam's time: the routine, calendars, school and kids' activities, appointments, trips and due dates",
+    "status": "watch",
+    "items": [],
+    "count": 2,
+    "tasks": 4,
+    "needs": 0
+   },
+   {
+    "key": "bookkeeper",
+    "name": "Accountant",
+    "nav": "accountant",
+    "owns": "Balances, transactions, bills, net worth and the business expense split",
+    "status": "act",
+    "items": [],
+    "count": 3,
+    "tasks": 7,
+    "needs": 1
+   },
+   {
+    "key": "health",
+    "name": "Health Agent",
+    "nav": "health",
+    "owns": "Training, targets, meal plans, recipes, grocery lists and carts, weigh-ins, appointments and claims",
+    "status": "watch",
+    "items": [],
+    "count": 2,
+    "tasks": 5,
+    "needs": 0
+   },
+   {
+    "key": "gifts",
+    "name": "Gift Concierge",
+    "nav": "gifts",
+    "owns": "Birthdays and occasions for family and close friends: gifts, budgets and cards; fills the cart, Sam checks out",
+    "status": "watch",
+    "items": [],
+    "count": 1,
+    "tasks": 1,
+    "needs": 0
+   },
+   {
+    "key": "relationship-manager",
+    "name": "Relationship Manager",
+    "nav": "relationship manager",
+    "owns": "People lead: family and friends, contacts and households, staying in touch",
+    "status": "watch",
+    "items": [],
+    "count": 1,
+    "tasks": 3,
+    "needs": 0
+   },
+   {
+    "key": "home-manager",
+    "name": "Home Manager",
+    "nav": "home manager",
+    "owns": "The home and the car: chores and supplies, repairs and who pays under the lease, upkeep and registration",
+    "status": "watch",
+    "items": [],
+    "count": 2,
+    "tasks": 10,
+    "needs": 0
+   },
+   {
+    "key": "financial",
+    "name": "Financial Advisor",
+    "nav": "financial",
+    "owns": "Credit (scores, reports, negative items) and investing and retirement (the paper bot, the 401(k), the emergency fund)",
+    "status": "watch",
+    "items": [],
+    "count": 1,
+    "tasks": 3,
+    "needs": 0
+   },
+   {
+    "key": "product",
+    "name": "Product Manager",
+    "nav": "product",
+    "owns": "Should as a product: name, logo, brand, roadmap and the public page",
+    "status": "ok",
+    "items": [],
+    "count": 0,
+    "tasks": 1,
+    "needs": 0
+   },
+   {
+    "key": "business",
+    "name": "Business Executive",
+    "nav": "business",
+    "owns": "Sam's companies: Carter Studio LLC and the planned Brightline Labs; filings, renewals and taxes",
+    "status": "watch",
+    "items": [],
+    "count": 1,
+    "tasks": 3,
+    "needs": 0
+   },
+   {
+    "key": "relationships",
+    "name": "Relationship Coach",
+    "nav": "relationship coach",
+    "owns": "Sam and Nora's relationship (a placeholder until Sam turns it on)",
+    "status": "ok",
+    "items": [],
+    "count": 0,
+    "tasks": 0,
+    "needs": 0
+   },
+   {
+    "key": "it",
+    "name": "IT Guy",
+    "nav": "it",
+    "owns": "Internet, Wi-Fi, phones and lines, devices, service health and the technical security fixes",
+    "status": "ok",
+    "items": [],
+    "count": 0,
+    "tasks": 2,
+    "needs": 0
+   },
+   {
+    "key": "as-architect",
+    "name": "Software Architect",
+    "nav": "architect",
+    "owns": "Brightline Labs lead: the product API, the plan and ADRs, the software team",
+    "status": "ok",
+    "items": [],
+    "count": 0,
+    "tasks": 1,
+    "needs": 0
+   },
+   {
+    "key": "events",
+    "name": "Event Planner",
+    "nav": "events",
+    "owns": "Events Sam hosts: guests, RSVPs, invites, timeline, run sheet",
+    "status": "watch",
+    "items": [],
+    "count": 1,
+    "tasks": 2,
+    "needs": 0
+   },
+   {
+    "key": "local-guide",
+    "name": "Local Guide",
+    "nav": "local-guide",
+    "owns": "Places Sam has been, places the family might like, local events, weekend picks and the weather",
+    "status": "ok",
+    "items": [],
+    "count": 0,
+    "tasks": 0,
+    "needs": 0
+   },
+   {
+    "key": "text-concierge",
+    "name": "Text Concierge",
+    "nav": "texting",
+    "owns": "The texting flow: the listener, intake, groups and menus, prompts and rules",
+    "status": "ok",
+    "items": [],
+    "count": 0,
+    "tasks": 0,
+    "needs": 0
+   },
+   {
+    "key": "philosopher",
+    "name": "Philosopher",
+    "nav": "philosopher",
+    "owns": "How Should thinks: the north star, the knowledge base, the reading list and feature proposals",
+    "status": "ok",
+    "items": [],
+    "count": 0,
+    "tasks": 0,
+    "needs": 0
+   },
+   {
+    "key": "security",
+    "name": "Security Officer",
+    "nav": "security",
+    "owns": "Security threats: suspicious logins, breaches, weak and reused passwords, two-step sign-in",
+    "status": "watch",
+    "items": [],
+    "count": 1,
+    "tasks": 3,
+    "needs": 0
+   },
+   {
+    "key": "compliance",
+    "name": "Compliance Officer",
+    "nav": "compliance",
+    "owns": "Checks agent actions against Sam's values, the law and each site's terms",
+    "status": "ok",
+    "items": [],
+    "count": 0,
+    "tasks": 0,
+    "needs": 0
+   },
+   {
+    "key": "dba",
+    "name": "Database Administrator",
+    "nav": "dba",
+    "owns": "Every database schema change, plus performance, health and backups",
+    "status": "ok",
+    "items": [],
+    "count": 0,
+    "tasks": 0,
+    "needs": 0
+   },
+   {
+    "key": "designer",
+    "name": "Designer",
+    "nav": "designer",
+    "owns": "The design system and the look of everything Should builds",
+    "status": "ok",
+    "items": [],
+    "count": 0,
+    "tasks": 0,
+    "needs": 0
+   },
+   {
+    "key": "media",
+    "name": "Media Concierge",
+    "nav": "media",
+    "owns": "Picks what the family watches: one strong pick, where to stream it, the queue and the watched log",
+    "status": "ok",
+    "items": [],
+    "count": 0,
+    "tasks": 1,
+    "needs": 0
+   },
+   {
+    "key": "relocation",
+    "name": "Relocation Expert",
+    "nav": "relocation",
+    "owns": "Moves end to end: the lease, the search, the move plan, movers, utilities and address changes",
+    "status": "watch",
+    "items": [],
+    "count": 1,
+    "tasks": 3,
+    "needs": 0
+   },
+   {
+    "key": "career",
+    "name": "Career Assistant",
+    "nav": "career",
+    "owns": "Job search and freelance work: leads, recruiter replies, the resume and the portfolio",
+    "status": "ok",
+    "items": [],
+    "count": 0,
+    "tasks": 2,
+    "needs": 0
+   },
+   {
+    "key": "pr",
+    "name": "PR Person",
+    "nav": "pr",
+    "owns": "Sam's public profile: bios, the portfolio site and drafted posts (nothing posts without Sam's yes)",
+    "status": "ok",
+    "items": [],
+    "count": 0,
+    "tasks": 2,
+    "needs": 0
+   },
+   {
+    "key": "shopping",
+    "name": "Shopping Expert",
+    "nav": "shopping",
+    "owns": "Wise purchases: research, the wish list, price watch and cart prep (never buys)",
+    "status": "ok",
+    "items": [],
+    "count": 0,
+    "tasks": 2,
+    "needs": 0
+   },
+   {
+    "key": "clothier",
+    "name": "Clothier",
+    "nav": "clothier",
+    "owns": "Sam's clothes: wardrobe, outfit of the day, packing lists and care",
+    "status": "ok",
+    "items": [],
+    "count": 0,
+    "tasks": 1,
+    "needs": 0
+   },
+   {
+    "key": "pets",
+    "name": "Pet Expert",
+    "nav": "pets",
+    "owns": "Biscuit the dog: the vet, food and supplies, and the plan for trips",
+    "status": "ok",
+    "items": [],
+    "count": 0,
+    "tasks": 1,
+    "needs": 0
+   },
+   {
+    "key": "coach",
+    "name": "Life Coach",
+    "nav": "coach",
+    "owns": "How Sam is doing on everything: weekly scorecard, gauges, goals and the Saturday sit-down",
+    "status": "ok",
+    "items": [],
+    "count": 0,
+    "tasks": 0,
+    "needs": 0
+   },
+   {
+    "key": "business_coach",
+    "name": "Business Coach",
+    "nav": "business-coach",
+    "owns": "Long-term coaching for Carter Studio and Brightline Labs",
+    "status": "ok",
+    "items": [],
+    "count": 0,
+    "tasks": 1,
+    "needs": 0
+   },
+   {
+    "key": "travel",
+    "name": "Travel Agent",
+    "nav": "travel",
+    "owns": "Trips, fares, stays and cars; search and read only, Sam books from a link",
+    "status": "watch",
+    "items": [],
+    "count": 1,
+    "tasks": 2,
+    "needs": 0
+   },
+   {
+    "key": "investigator",
+    "name": "Investigator",
+    "nav": "investigator",
+    "owns": "Who is this and can we trust it: unknown numbers, duplicates, family gaps, scams; data-broker removals",
+    "status": "ok",
+    "items": [],
+    "count": 0,
+    "tasks": 0,
+    "needs": 0
+   },
+   {
+    "key": "legal",
+    "name": "Legal Advisor",
+    "nav": "legal",
+    "owns": "Agreements and deadlines: the lease, the LLC, the family trust plan (not a lawyer)",
+    "status": "act",
+    "items": [],
+    "count": 2,
+    "tasks": 2,
+    "needs": 1
+   },
+   {
+    "key": "music",
+    "name": "Music Producer",
+    "nav": "music",
+    "owns": "The family piano and music software: recordings and sheet music",
+    "status": "ok",
+    "items": [],
+    "count": 0,
+    "tasks": 1,
+    "needs": 0
+   },
+   {
+    "key": "webmaster",
+    "name": "Webmaster",
+    "nav": "webmaster",
+    "owns": "The portal: pages, views and fixes",
+    "status": "ok",
+    "items": [],
+    "count": 0,
+    "tasks": 0,
+    "needs": 0
+   }
+  ],
+  "activity": {
+   "act": {
+    "days": 30,
+    "rows": [
+     {
+      "day": "2026-11-21",
+      "call": 0,
+      "text": 9,
+      "whatsapp": 10
+     },
+     {
+      "day": "2026-11-20",
+      "call": 4,
+      "text": 3,
+      "whatsapp": 1
+     },
+     {
+      "day": "2026-11-19",
+      "call": 2,
+      "text": 6,
+      "whatsapp": 13
+     },
+     {
+      "day": "2026-11-18",
+      "call": 0,
+      "text": 5,
+      "whatsapp": 8
+     },
+     {
+      "day": "2026-11-17",
+      "call": 3,
+      "text": 15,
+      "whatsapp": 8
+     },
+     {
+      "day": "2026-11-16",
+      "call": 0,
+      "text": 4,
+      "whatsapp": 8
+     },
+     {
+      "day": "2026-11-15",
+      "call": 1,
+      "text": 6,
+      "whatsapp": 16
+     },
+     {
+      "day": "2026-11-14",
+      "call": 0,
+      "text": 6,
+      "whatsapp": 2
+     },
+     {
+      "day": "2026-11-13",
+      "call": 3,
+      "text": 4,
+      "whatsapp": 2
+     },
+     {
+      "day": "2026-11-12",
+      "call": 0,
+      "text": 10,
+      "whatsapp": 18
+     },
+     {
+      "day": "2026-11-11",
+      "call": 3,
+      "text": 8,
+      "whatsapp": 1
+     },
+     {
+      "day": "2026-11-10",
+      "call": 0,
+      "text": 4,
+      "whatsapp": 18
+     },
+     {
+      "day": "2026-11-09",
+      "call": 1,
+      "text": 16,
+      "whatsapp": 2
+     },
+     {
+      "day": "2026-11-08",
+      "call": 2,
+      "text": 10,
+      "whatsapp": 9
+     },
+     {
+      "day": "2026-11-07",
+      "call": 3,
+      "text": 6,
+      "whatsapp": 13
+     },
+     {
+      "day": "2026-11-06",
+      "call": 0,
+      "text": 11,
+      "whatsapp": 6
+     },
+     {
+      "day": "2026-11-05",
+      "call": 4,
+      "text": 5,
+      "whatsapp": 9
+     },
+     {
+      "day": "2026-11-04",
+      "call": 4,
+      "text": 4,
+      "whatsapp": 4
+     },
+     {
+      "day": "2026-11-03",
+      "call": 1,
+      "text": 8,
+      "whatsapp": 16
+     },
+     {
+      "day": "2026-11-02",
+      "call": 2,
+      "text": 9,
+      "whatsapp": 22
+     },
+     {
+      "day": "2026-11-01",
+      "call": 4,
+      "text": 7,
+      "whatsapp": 15
+     },
+     {
+      "day": "2026-10-31",
+      "call": 0,
+      "text": 15,
+      "whatsapp": 6
+     },
+     {
+      "day": "2026-10-30",
+      "call": 0,
+      "text": 13,
+      "whatsapp": 21
+     },
+     {
+      "day": "2026-10-29",
+      "call": 2,
+      "text": 13,
+      "whatsapp": 7
+     },
+     {
+      "day": "2026-10-28",
+      "call": 2,
+      "text": 9,
+      "whatsapp": 10
+     },
+     {
+      "day": "2026-10-27",
+      "call": 4,
+      "text": 8,
+      "whatsapp": 18
+     },
+     {
+      "day": "2026-10-26",
+      "call": 3,
+      "text": 8,
+      "whatsapp": 22
+     },
+     {
+      "day": "2026-10-25",
+      "call": 4,
+      "text": 14,
+      "whatsapp": 2
+     },
+     {
+      "day": "2026-10-24",
+      "call": 0,
+      "text": 10,
+      "whatsapp": 10
+     },
+     {
+      "day": "2026-10-23",
+      "call": 1,
+      "text": 6,
+      "whatsapp": 4
+     },
+     {
+      "day": "2026-10-22",
+      "call": 3,
+      "text": 14,
+      "whatsapp": 18
+     }
+    ]
+   },
+   "error": null
+  }
+ },
+ "folders": [
+  {
+   "name": "inbox",
+   "files": [
+    {
+     "path": "inbox/README.md",
+     "size": 1799
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>inbox</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  },
+  {
+   "name": "daily-organizer",
+   "files": [
+    {
+     "path": "daily-organizer/README.md",
+     "size": 1799
+    },
+    {
+     "path": "daily-organizer/SCHEDULE.md",
+     "size": 2428
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>daily-organizer</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  },
+  {
+   "name": "todos",
+   "files": [
+    {
+     "path": "todos/README.md",
+     "size": 1799
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>todos</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

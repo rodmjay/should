@@ -1,0 +1,283 @@
+{
+ "entity": {
+  "id": "e-sub",
+  "legal_name": "Brightline Labs LLC",
+  "short_name": "Brightline Labs",
+  "role": "subsidiary",
+  "entity_type": "llc",
+  "tax_class": "disregarded",
+  "formation_state": "CO",
+  "state_file_number": "",
+  "formed_on": null,
+  "ein_last4": null,
+  "purpose": "Booking software for small clinics",
+  "status": "planned"
+ },
+ "slug": "brightline-labs",
+ "tree": [
+  {
+   "id": "e-holding",
+   "legal_name": "Carter Studio LLC",
+   "short_name": "Carter Studio",
+   "role": "holding",
+   "entity_type": "llc",
+   "status": "active",
+   "parent_id": null,
+   "parent_percent": null,
+   "tax_class": "single-member LLC",
+   "formation_state": "CO",
+   "state_file_number": "20141234567",
+   "formed_on": "2014-04-02",
+   "ein_last4": "0417",
+   "purpose": "Freelance design studio and the holding company for new products",
+   "registered_agent": "Sam Carter",
+   "records_path": "business/carter-studio",
+   "website": "",
+   "slug": "carter-studio",
+   "depth": 0,
+   "path": [
+    "carter-studio"
+   ],
+   "people": [
+    {
+     "name": "Sam Carter",
+     "role": "Owner and manager",
+     "notes": ""
+    }
+   ]
+  },
+  {
+   "id": "e-sub",
+   "legal_name": "Brightline Labs LLC",
+   "short_name": "Brightline Labs",
+   "role": "subsidiary",
+   "entity_type": "llc",
+   "status": "planned",
+   "parent_id": "e-holding",
+   "parent_percent": 100,
+   "tax_class": "disregarded",
+   "formation_state": "CO",
+   "state_file_number": "",
+   "formed_on": null,
+   "ein_last4": null,
+   "purpose": "Booking software for small clinics",
+   "registered_agent": "",
+   "records_path": "business/brightline",
+   "website": "",
+   "slug": "brightline-labs",
+   "depth": 1,
+   "path": [
+    "brightline-labs"
+   ],
+   "people": [
+    {
+     "name": "Sam Carter",
+     "role": "Owner and manager",
+     "notes": ""
+    }
+   ]
+  },
+  {
+   "id": "e-trust",
+   "legal_name": "Carter Family Trust",
+   "short_name": "Family Trust",
+   "role": "trust",
+   "entity_type": "trust",
+   "status": "planned",
+   "parent_id": null,
+   "parent_percent": null,
+   "tax_class": "revocable trust",
+   "formation_state": "CO",
+   "state_file_number": "",
+   "formed_on": null,
+   "ein_last4": null,
+   "purpose": "Holds the family's assets for the kids",
+   "registered_agent": "",
+   "records_path": "trust",
+   "website": "",
+   "slug": "family-trust",
+   "depth": 0,
+   "path": [
+    "family-trust"
+   ],
+   "people": [
+    {
+     "name": "Sam Carter",
+     "role": "Trustee",
+     "notes": ""
+    },
+    {
+     "name": "Nora Ellis",
+     "role": "Successor trustee",
+     "notes": ""
+    }
+   ]
+  },
+  {
+   "id": "e-old",
+   "legal_name": "Mesa Print Co. LLC",
+   "short_name": "Mesa Print",
+   "role": "holding",
+   "entity_type": "llc",
+   "status": "inactive",
+   "parent_id": null,
+   "parent_percent": null,
+   "tax_class": "single-member LLC",
+   "formation_state": "CO",
+   "state_file_number": "20090007788",
+   "formed_on": "2009-06-01",
+   "ein_last4": "2210",
+   "purpose": "Old print shop, closed",
+   "registered_agent": "",
+   "records_path": "business/old",
+   "website": "",
+   "slug": "mesa-print",
+   "depth": 0,
+   "path": [
+    "mesa-print"
+   ],
+   "people": [
+    {
+     "name": "Sam Carter",
+     "role": "Owner and manager",
+     "notes": ""
+    }
+   ]
+  }
+ ],
+ "deadlines": [
+  {
+   "next_due": "2027-01-05",
+   "short_name": "Brightline Labs",
+   "legal_name": "Brightline Labs LLC",
+   "title": "Form the LLC",
+   "jurisdiction": "Colorado Secretary of State",
+   "fee_usd": 50,
+   "how_to": "Business Executive prepares; Sam files",
+   "frequency": "once",
+   "todoist_task_id": "",
+   "days_left": 45
+  }
+ ],
+ "tasks": [
+  {
+   "id": "t8122",
+   "content": "Review the Brightline Labs pricing page draft",
+   "description": "",
+   "project": "Business",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 20,
+   "view": null
+  }
+ ],
+ "tasks_error": null,
+ "task_tags": [
+  "brightline-labs"
+ ],
+ "accounts": [
+  {
+   "entity_id": "e-sub",
+   "kind": "bank",
+   "provider": "First Mesa Credit Union",
+   "account_last4": null,
+   "label": "To open",
+   "status": "planned",
+   "url": "",
+   "notes": null
+  }
+ ],
+ "bank_accounts": [],
+ "bills": [],
+ "documents": [
+  {
+   "title": "Draft operating agreement",
+   "signed": false,
+   "kind": "operating_agreement",
+   "dated": "2026-11-11",
+   "location": "Drive, Business folder"
+  }
+ ],
+ "drive": [],
+ "email": [],
+ "calendar": [],
+ "registrations": [
+  {
+   "entity_id": "e-sub",
+   "kind": "state_llc",
+   "jurisdiction": "Colorado",
+   "number": null,
+   "filed_on": null,
+   "expires_on": null,
+   "status": "needed",
+   "portal_url": "",
+   "notes": "Not formed yet"
+  }
+ ],
+ "roles": [
+  {
+   "name": "Sam Carter",
+   "role": "Manager",
+   "since": null,
+   "notes": ""
+  }
+ ],
+ "ownership": [
+  {
+   "owner": "Carter Studio LLC",
+   "percent": 100,
+   "unit_class": "Common units"
+  }
+ ],
+ "cap": {
+  "table": [
+   {
+    "holder": "Carter Studio LLC",
+    "holder_kind": "entity",
+    "class": "Common units",
+    "recorded_pct": 100,
+    "outstanding_pct": 0,
+    "outstanding_units": 1000,
+    "fd_pct": 100,
+    "fd_units": 1000,
+    "unsigned_fd_units": 1000,
+    "paper_status": "draft"
+   }
+  ],
+  "safes": [],
+  "capitalization": {
+   "basis": "units",
+   "outstanding_units": 1000,
+   "fd_units": 1000
+  },
+  "issues": [],
+  "check": [],
+  "tree": [
+   {
+    "depth": 1,
+    "entity": "Carter Studio LLC",
+    "owner": "Sam Carter",
+    "effective_pct": 100,
+    "direct_pct": 100,
+    "entity_status": "active",
+    "paper_status": "signed"
+   },
+   {
+    "depth": 2,
+    "entity": "Brightline Labs LLC",
+    "owner": "Carter Studio LLC",
+    "effective_pct": 100,
+    "direct_pct": 100,
+    "entity_status": "planned",
+    "paper_status": "draft"
+   }
+  ]
+ },
+ "books": null,
+ "transactions": []
+}

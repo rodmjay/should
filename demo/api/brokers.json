@@ -1,0 +1,1064 @@
+{
+ "live": true,
+ "sites": [
+  {
+   "id": "b1",
+   "broker_id": "br1",
+   "name": "PeopleFinderPro",
+   "site": "peoplefinderpro.example",
+   "category": "people search",
+   "parent": null,
+   "status": "confirmed",
+   "state": "confirmed",
+   "logo": null,
+   "optout_url": "https://peoplefinderpro.example/optout",
+   "optout_method": "email",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "found_at": null,
+   "filed_at": "2026-10-27T09:00:00-07:00",
+   "confirmed_at": null,
+   "next_recheck_on": "2026-12-21",
+   "last_action_at": "2026-11-01T09:00:00-07:00",
+   "history": [
+    {
+     "at": "2026-11-01T09:00:00-07:00",
+     "action": "confirmed",
+     "to": "confirmed",
+     "ref": null
+    }
+   ]
+  },
+  {
+   "id": "b2",
+   "broker_id": "br2",
+   "name": "SearchMyName",
+   "site": "searchmyname.example",
+   "category": "people search",
+   "parent": null,
+   "status": "confirmed",
+   "state": "confirmed",
+   "logo": null,
+   "optout_url": "https://searchmyname.example/optout",
+   "optout_method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "found_at": null,
+   "filed_at": "2026-10-28T09:00:00-07:00",
+   "confirmed_at": null,
+   "next_recheck_on": "2026-12-22",
+   "last_action_at": "2026-11-02T09:00:00-07:00",
+   "history": [
+    {
+     "at": "2026-11-02T09:00:00-07:00",
+     "action": "confirmed",
+     "to": "confirmed",
+     "ref": null
+    }
+   ]
+  },
+  {
+   "id": "b3",
+   "broker_id": "br3",
+   "name": "LookupLane",
+   "site": "lookuplane.example",
+   "category": "people search",
+   "parent": null,
+   "status": "confirmed",
+   "state": "confirmed",
+   "logo": null,
+   "optout_url": "https://lookuplane.example/optout",
+   "optout_method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "found_at": null,
+   "filed_at": "2026-10-29T09:00:00-07:00",
+   "confirmed_at": null,
+   "next_recheck_on": "2026-12-23",
+   "last_action_at": "2026-11-03T09:00:00-07:00",
+   "history": [
+    {
+     "at": "2026-11-03T09:00:00-07:00",
+     "action": "confirmed",
+     "to": "confirmed",
+     "ref": null
+    }
+   ]
+  },
+  {
+   "id": "b4",
+   "broker_id": "br4",
+   "name": "TruePeopleDirectory",
+   "site": "truepeopledirectory.example",
+   "category": "people search",
+   "parent": null,
+   "status": "confirmed",
+   "state": "confirmed",
+   "logo": null,
+   "optout_url": "https://truepeopledirectory.example/optout",
+   "optout_method": "email",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "found_at": null,
+   "filed_at": "2026-10-30T09:00:00-07:00",
+   "confirmed_at": null,
+   "next_recheck_on": "2026-12-24",
+   "last_action_at": "2026-11-04T09:00:00-07:00",
+   "history": [
+    {
+     "at": "2026-11-04T09:00:00-07:00",
+     "action": "confirmed",
+     "to": "confirmed",
+     "ref": null
+    }
+   ]
+  },
+  {
+   "id": "b5",
+   "broker_id": "br5",
+   "name": "AddressAtlas",
+   "site": "addressatlas.example",
+   "category": "people search",
+   "parent": null,
+   "status": "confirmed",
+   "state": "confirmed",
+   "logo": null,
+   "optout_url": "https://addressatlas.example/optout",
+   "optout_method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "found_at": null,
+   "filed_at": "2026-10-31T09:00:00-07:00",
+   "confirmed_at": null,
+   "next_recheck_on": "2026-12-25",
+   "last_action_at": "2026-11-05T09:00:00-07:00",
+   "history": [
+    {
+     "at": "2026-11-05T09:00:00-07:00",
+     "action": "confirmed",
+     "to": "confirmed",
+     "ref": null
+    }
+   ]
+  },
+  {
+   "id": "b6",
+   "broker_id": "br6",
+   "name": "PhoneTracer",
+   "site": "phonetracer.example",
+   "category": "people search",
+   "parent": null,
+   "status": "confirmed",
+   "state": "confirmed",
+   "logo": null,
+   "optout_url": "https://phonetracer.example/optout",
+   "optout_method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "found_at": null,
+   "filed_at": "2026-11-01T09:00:00-07:00",
+   "confirmed_at": null,
+   "next_recheck_on": "2026-12-26",
+   "last_action_at": "2026-11-06T09:00:00-07:00",
+   "history": [
+    {
+     "at": "2026-11-06T09:00:00-07:00",
+     "action": "confirmed",
+     "to": "confirmed",
+     "ref": null
+    }
+   ]
+  },
+  {
+   "id": "b7",
+   "broker_id": "br7",
+   "name": "PublicRecordsHub",
+   "site": "publicrecordshub.example",
+   "category": "people search",
+   "parent": null,
+   "status": "confirmed",
+   "state": "confirmed",
+   "logo": null,
+   "optout_url": "https://publicrecordshub.example/optout",
+   "optout_method": "email",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "found_at": null,
+   "filed_at": "2026-11-02T09:00:00-07:00",
+   "confirmed_at": null,
+   "next_recheck_on": "2026-12-27",
+   "last_action_at": "2026-11-07T09:00:00-07:00",
+   "history": [
+    {
+     "at": "2026-11-07T09:00:00-07:00",
+     "action": "confirmed",
+     "to": "confirmed",
+     "ref": null
+    }
+   ]
+  },
+  {
+   "id": "b8",
+   "broker_id": "br8",
+   "name": "FindThemFast",
+   "site": "findthemfast.example",
+   "category": "people search",
+   "parent": null,
+   "status": "confirmed",
+   "state": "confirmed",
+   "logo": null,
+   "optout_url": "https://findthemfast.example/optout",
+   "optout_method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "found_at": null,
+   "filed_at": "2026-11-03T09:00:00-07:00",
+   "confirmed_at": null,
+   "next_recheck_on": "2026-12-28",
+   "last_action_at": "2026-11-08T09:00:00-07:00",
+   "history": [
+    {
+     "at": "2026-11-08T09:00:00-07:00",
+     "action": "confirmed",
+     "to": "confirmed",
+     "ref": null
+    }
+   ]
+  },
+  {
+   "id": "b9",
+   "broker_id": "br9",
+   "name": "NameRadar",
+   "site": "nameradar.example",
+   "category": "people search",
+   "parent": null,
+   "status": "confirmed",
+   "state": "confirmed",
+   "logo": null,
+   "optout_url": "https://nameradar.example/optout",
+   "optout_method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "found_at": null,
+   "filed_at": "2026-11-04T09:00:00-07:00",
+   "confirmed_at": null,
+   "next_recheck_on": "2026-12-29",
+   "last_action_at": "2026-11-09T09:00:00-07:00",
+   "history": [
+    {
+     "at": "2026-11-09T09:00:00-07:00",
+     "action": "confirmed",
+     "to": "confirmed",
+     "ref": null
+    }
+   ]
+  },
+  {
+   "id": "b10",
+   "broker_id": "br10",
+   "name": "BackgroundBeacon",
+   "site": "backgroundbeacon.example",
+   "category": "people search",
+   "parent": null,
+   "status": "confirmed",
+   "state": "confirmed",
+   "logo": null,
+   "optout_url": "https://backgroundbeacon.example/optout",
+   "optout_method": "email",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "found_at": null,
+   "filed_at": "2026-11-05T09:00:00-07:00",
+   "confirmed_at": null,
+   "next_recheck_on": "2026-12-30",
+   "last_action_at": "2026-11-10T09:00:00-07:00",
+   "history": [
+    {
+     "at": "2026-11-10T09:00:00-07:00",
+     "action": "confirmed",
+     "to": "confirmed",
+     "ref": null
+    }
+   ]
+  },
+  {
+   "id": "b11",
+   "broker_id": "br11",
+   "name": "ClearDossier",
+   "site": "cleardossier.example",
+   "category": "people search",
+   "parent": null,
+   "status": "confirmed",
+   "state": "confirmed",
+   "logo": null,
+   "optout_url": "https://cleardossier.example/optout",
+   "optout_method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "found_at": null,
+   "filed_at": "2026-11-06T09:00:00-07:00",
+   "confirmed_at": null,
+   "next_recheck_on": "2026-12-31",
+   "last_action_at": "2026-11-11T09:00:00-07:00",
+   "history": [
+    {
+     "at": "2026-11-11T09:00:00-07:00",
+     "action": "confirmed",
+     "to": "confirmed",
+     "ref": null
+    }
+   ]
+  },
+  {
+   "id": "b12",
+   "broker_id": "br12",
+   "name": "PeopleIndex",
+   "site": "peopleindex.example",
+   "category": "people search",
+   "parent": null,
+   "status": "confirmed",
+   "state": "confirmed",
+   "logo": null,
+   "optout_url": "https://peopleindex.example/optout",
+   "optout_method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "found_at": null,
+   "filed_at": "2026-11-07T09:00:00-07:00",
+   "confirmed_at": null,
+   "next_recheck_on": "2027-01-01",
+   "last_action_at": "2026-11-12T09:00:00-07:00",
+   "history": [
+    {
+     "at": "2026-11-12T09:00:00-07:00",
+     "action": "confirmed",
+     "to": "confirmed",
+     "ref": null
+    }
+   ]
+  },
+  {
+   "id": "b13",
+   "broker_id": "br13",
+   "name": "RecordRover",
+   "site": "recordrover.example",
+   "category": "people search",
+   "parent": null,
+   "status": "confirmed",
+   "state": "confirmed",
+   "logo": null,
+   "optout_url": "https://recordrover.example/optout",
+   "optout_method": "email",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "found_at": null,
+   "filed_at": "2026-11-08T09:00:00-07:00",
+   "confirmed_at": null,
+   "next_recheck_on": "2027-01-02",
+   "last_action_at": "2026-11-13T09:00:00-07:00",
+   "history": [
+    {
+     "at": "2026-11-13T09:00:00-07:00",
+     "action": "confirmed",
+     "to": "confirmed",
+     "ref": null
+    }
+   ]
+  },
+  {
+   "id": "b14",
+   "broker_id": "br14",
+   "name": "WhoLivesHere",
+   "site": "wholiveshere.example",
+   "category": "people search",
+   "parent": null,
+   "status": "confirmed",
+   "state": "confirmed",
+   "logo": null,
+   "optout_url": "https://wholiveshere.example/optout",
+   "optout_method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "found_at": null,
+   "filed_at": "2026-11-09T09:00:00-07:00",
+   "confirmed_at": null,
+   "next_recheck_on": "2027-01-03",
+   "last_action_at": "2026-11-14T09:00:00-07:00",
+   "history": [
+    {
+     "at": "2026-11-14T09:00:00-07:00",
+     "action": "confirmed",
+     "to": "confirmed",
+     "ref": null
+    }
+   ]
+  },
+  {
+   "id": "b15",
+   "broker_id": "br15",
+   "name": "NeighborLookup",
+   "site": "neighborlookup.example",
+   "category": "people search",
+   "parent": null,
+   "status": "filed",
+   "state": "filed",
+   "logo": null,
+   "optout_url": "https://neighborlookup.example/optout",
+   "optout_method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "found_at": null,
+   "filed_at": "2026-11-10T09:00:00-07:00",
+   "confirmed_at": null,
+   "next_recheck_on": "2027-01-04",
+   "last_action_at": "2026-11-15T09:00:00-07:00",
+   "history": [
+    {
+     "at": "2026-11-15T09:00:00-07:00",
+     "action": "filed",
+     "to": "filed",
+     "ref": null
+    }
+   ]
+  },
+  {
+   "id": "b16",
+   "broker_id": "br16",
+   "name": "ContactCompass",
+   "site": "contactcompass.example",
+   "category": "people search",
+   "parent": null,
+   "status": "filed",
+   "state": "filed",
+   "logo": null,
+   "optout_url": "https://contactcompass.example/optout",
+   "optout_method": "email",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "found_at": null,
+   "filed_at": "2026-11-11T09:00:00-07:00",
+   "confirmed_at": null,
+   "next_recheck_on": "2027-01-05",
+   "last_action_at": "2026-11-16T09:00:00-07:00",
+   "history": [
+    {
+     "at": "2026-11-16T09:00:00-07:00",
+     "action": "filed",
+     "to": "filed",
+     "ref": null
+    }
+   ]
+  },
+  {
+   "id": "b17",
+   "broker_id": "br17",
+   "name": "OpenProfiles",
+   "site": "openprofiles.example",
+   "category": "people search",
+   "parent": null,
+   "status": "filed",
+   "state": "filed",
+   "logo": null,
+   "optout_url": "https://openprofiles.example/optout",
+   "optout_method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "found_at": null,
+   "filed_at": "2026-11-12T09:00:00-07:00",
+   "confirmed_at": null,
+   "next_recheck_on": "2027-01-06",
+   "last_action_at": "2026-11-17T09:00:00-07:00",
+   "history": [
+    {
+     "at": "2026-11-17T09:00:00-07:00",
+     "action": "filed",
+     "to": "filed",
+     "ref": null
+    }
+   ]
+  },
+  {
+   "id": "b18",
+   "broker_id": "br18",
+   "name": "DataTrail",
+   "site": "datatrail.example",
+   "category": "people search",
+   "parent": null,
+   "status": "needs_rod",
+   "state": "needs_rod",
+   "logo": null,
+   "optout_url": "https://datatrail.example/optout",
+   "optout_method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "found_at": null,
+   "filed_at": "2026-11-13T09:00:00-07:00",
+   "confirmed_at": null,
+   "next_recheck_on": "2027-01-07",
+   "last_action_at": "2026-11-18T09:00:00-07:00",
+   "history": [
+    {
+     "at": "2026-11-18T09:00:00-07:00",
+     "action": "needs_rod",
+     "to": "needs_rod",
+     "ref": null
+    }
+   ]
+  },
+  {
+   "id": "b19",
+   "broker_id": "br19",
+   "name": "InfoAnchor",
+   "site": "infoanchor.example",
+   "category": "people search",
+   "parent": null,
+   "status": "blocked",
+   "state": "blocked",
+   "logo": null,
+   "optout_url": "https://infoanchor.example/optout",
+   "optout_method": "email",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "found_at": null,
+   "filed_at": "2026-11-14T09:00:00-07:00",
+   "confirmed_at": null,
+   "next_recheck_on": "2027-01-08",
+   "last_action_at": "2026-11-19T09:00:00-07:00",
+   "history": [
+    {
+     "at": "2026-11-19T09:00:00-07:00",
+     "action": "blocked",
+     "to": "blocked",
+     "ref": null
+    }
+   ]
+  },
+  {
+   "id": "b20",
+   "broker_id": "br20",
+   "name": "PersonPage",
+   "site": "personpage.example",
+   "category": "people search",
+   "parent": null,
+   "status": "not_checked",
+   "state": "not_checked",
+   "logo": null,
+   "optout_url": "https://personpage.example/optout",
+   "optout_method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "found_at": null,
+   "filed_at": "2026-11-15T09:00:00-07:00",
+   "confirmed_at": null,
+   "next_recheck_on": "2027-01-09",
+   "last_action_at": "2026-11-20T09:00:00-07:00",
+   "history": [
+    {
+     "at": "2026-11-20T09:00:00-07:00",
+     "action": "not_checked",
+     "to": "not_checked",
+     "ref": null
+    }
+   ]
+  }
+ ],
+ "counts": {
+  "not_checked": 1,
+  "confirmed": 14,
+  "blocked": 1,
+  "needs_rod": 1,
+  "filed": 3
+ },
+ "feed": [
+  {
+   "at": "2026-11-20T09:00:00-07:00",
+   "action": "not_checked",
+   "to": "not_checked",
+   "ref": "r19",
+   "site": "personpage.example"
+  },
+  {
+   "at": "2026-11-19T09:00:00-07:00",
+   "action": "blocked",
+   "to": "blocked",
+   "ref": "r18",
+   "site": "infoanchor.example"
+  },
+  {
+   "at": "2026-11-18T09:00:00-07:00",
+   "action": "needs_rod",
+   "to": "needs_rod",
+   "ref": "r17",
+   "site": "datatrail.example"
+  },
+  {
+   "at": "2026-11-17T09:00:00-07:00",
+   "action": "filed",
+   "to": "filed",
+   "ref": "r16",
+   "site": "openprofiles.example"
+  },
+  {
+   "at": "2026-11-16T09:00:00-07:00",
+   "action": "filed",
+   "to": "filed",
+   "ref": "r15",
+   "site": "contactcompass.example"
+  },
+  {
+   "at": "2026-11-15T09:00:00-07:00",
+   "action": "filed",
+   "to": "filed",
+   "ref": "r14",
+   "site": "neighborlookup.example"
+  },
+  {
+   "at": "2026-11-14T09:00:00-07:00",
+   "action": "confirmed",
+   "to": "confirmed",
+   "ref": "r13",
+   "site": "wholiveshere.example"
+  },
+  {
+   "at": "2026-11-13T09:00:00-07:00",
+   "action": "confirmed",
+   "to": "confirmed",
+   "ref": "r12",
+   "site": "recordrover.example"
+  },
+  {
+   "at": "2026-11-12T09:00:00-07:00",
+   "action": "confirmed",
+   "to": "confirmed",
+   "ref": "r11",
+   "site": "peopleindex.example"
+  },
+  {
+   "at": "2026-11-11T09:00:00-07:00",
+   "action": "confirmed",
+   "to": "confirmed",
+   "ref": "r10",
+   "site": "cleardossier.example"
+  },
+  {
+   "at": "2026-11-10T09:00:00-07:00",
+   "action": "confirmed",
+   "to": "confirmed",
+   "ref": "r9",
+   "site": "backgroundbeacon.example"
+  },
+  {
+   "at": "2026-11-09T09:00:00-07:00",
+   "action": "confirmed",
+   "to": "confirmed",
+   "ref": "r8",
+   "site": "nameradar.example"
+  },
+  {
+   "at": "2026-11-08T09:00:00-07:00",
+   "action": "confirmed",
+   "to": "confirmed",
+   "ref": "r7",
+   "site": "findthemfast.example"
+  },
+  {
+   "at": "2026-11-07T09:00:00-07:00",
+   "action": "confirmed",
+   "to": "confirmed",
+   "ref": "r6",
+   "site": "publicrecordshub.example"
+  },
+  {
+   "at": "2026-11-06T09:00:00-07:00",
+   "action": "confirmed",
+   "to": "confirmed",
+   "ref": "r5",
+   "site": "phonetracer.example"
+  },
+  {
+   "at": "2026-11-05T09:00:00-07:00",
+   "action": "confirmed",
+   "to": "confirmed",
+   "ref": "r4",
+   "site": "addressatlas.example"
+  },
+  {
+   "at": "2026-11-04T09:00:00-07:00",
+   "action": "confirmed",
+   "to": "confirmed",
+   "ref": "r3",
+   "site": "truepeopledirectory.example"
+  },
+  {
+   "at": "2026-11-03T09:00:00-07:00",
+   "action": "confirmed",
+   "to": "confirmed",
+   "ref": "r2",
+   "site": "lookuplane.example"
+  },
+  {
+   "at": "2026-11-02T09:00:00-07:00",
+   "action": "confirmed",
+   "to": "confirmed",
+   "ref": "r1",
+   "site": "searchmyname.example"
+  },
+  {
+   "at": "2026-11-01T09:00:00-07:00",
+   "action": "confirmed",
+   "to": "confirmed",
+   "ref": "r0",
+   "site": "peoplefinderpro.example"
+  }
+ ],
+ "needs_rod": [
+  {
+   "name": "DataTrail",
+   "url": "https://datatrail.example/optout",
+   "logo": null
+  }
+ ],
+ "due": [
+  {
+   "name": "PeopleFinderPro",
+   "site": "peoplefinderpro.example",
+   "status": "confirmed",
+   "on": "2026-12-21"
+  },
+  {
+   "name": "SearchMyName",
+   "site": "searchmyname.example",
+   "status": "confirmed",
+   "on": "2026-12-22"
+  },
+  {
+   "name": "LookupLane",
+   "site": "lookuplane.example",
+   "status": "confirmed",
+   "on": "2026-12-23"
+  }
+ ],
+ "brokers": [
+  {
+   "name": "PeopleFinderPro",
+   "site": "peoplefinderpro.example",
+   "category": "people search",
+   "status": "active",
+   "parent": null,
+   "method": "email",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "logo": null,
+   "optout_url": "https://peoplefinderpro.example/optout"
+  },
+  {
+   "name": "SearchMyName",
+   "site": "searchmyname.example",
+   "category": "people search",
+   "status": "active",
+   "parent": null,
+   "method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "logo": null,
+   "optout_url": "https://searchmyname.example/optout"
+  },
+  {
+   "name": "LookupLane",
+   "site": "lookuplane.example",
+   "category": "people search",
+   "status": "active",
+   "parent": null,
+   "method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "logo": null,
+   "optout_url": "https://lookuplane.example/optout"
+  },
+  {
+   "name": "TruePeopleDirectory",
+   "site": "truepeopledirectory.example",
+   "category": "people search",
+   "status": "active",
+   "parent": null,
+   "method": "email",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "logo": null,
+   "optout_url": "https://truepeopledirectory.example/optout"
+  },
+  {
+   "name": "AddressAtlas",
+   "site": "addressatlas.example",
+   "category": "people search",
+   "status": "active",
+   "parent": null,
+   "method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "logo": null,
+   "optout_url": "https://addressatlas.example/optout"
+  },
+  {
+   "name": "PhoneTracer",
+   "site": "phonetracer.example",
+   "category": "people search",
+   "status": "active",
+   "parent": null,
+   "method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "logo": null,
+   "optout_url": "https://phonetracer.example/optout"
+  },
+  {
+   "name": "PublicRecordsHub",
+   "site": "publicrecordshub.example",
+   "category": "people search",
+   "status": "active",
+   "parent": null,
+   "method": "email",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "logo": null,
+   "optout_url": "https://publicrecordshub.example/optout"
+  },
+  {
+   "name": "FindThemFast",
+   "site": "findthemfast.example",
+   "category": "people search",
+   "status": "active",
+   "parent": null,
+   "method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "logo": null,
+   "optout_url": "https://findthemfast.example/optout"
+  },
+  {
+   "name": "NameRadar",
+   "site": "nameradar.example",
+   "category": "people search",
+   "status": "active",
+   "parent": null,
+   "method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "logo": null,
+   "optout_url": "https://nameradar.example/optout"
+  },
+  {
+   "name": "BackgroundBeacon",
+   "site": "backgroundbeacon.example",
+   "category": "people search",
+   "status": "active",
+   "parent": null,
+   "method": "email",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "logo": null,
+   "optout_url": "https://backgroundbeacon.example/optout"
+  },
+  {
+   "name": "ClearDossier",
+   "site": "cleardossier.example",
+   "category": "people search",
+   "status": "active",
+   "parent": null,
+   "method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "logo": null,
+   "optout_url": "https://cleardossier.example/optout"
+  },
+  {
+   "name": "PeopleIndex",
+   "site": "peopleindex.example",
+   "category": "people search",
+   "status": "active",
+   "parent": null,
+   "method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "logo": null,
+   "optout_url": "https://peopleindex.example/optout"
+  },
+  {
+   "name": "RecordRover",
+   "site": "recordrover.example",
+   "category": "people search",
+   "status": "active",
+   "parent": null,
+   "method": "email",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "logo": null,
+   "optout_url": "https://recordrover.example/optout"
+  },
+  {
+   "name": "WhoLivesHere",
+   "site": "wholiveshere.example",
+   "category": "people search",
+   "status": "active",
+   "parent": null,
+   "method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "logo": null,
+   "optout_url": "https://wholiveshere.example/optout"
+  },
+  {
+   "name": "NeighborLookup",
+   "site": "neighborlookup.example",
+   "category": "people search",
+   "status": "active",
+   "parent": null,
+   "method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "logo": null,
+   "optout_url": "https://neighborlookup.example/optout"
+  },
+  {
+   "name": "ContactCompass",
+   "site": "contactcompass.example",
+   "category": "people search",
+   "status": "active",
+   "parent": null,
+   "method": "email",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "logo": null,
+   "optout_url": "https://contactcompass.example/optout"
+  },
+  {
+   "name": "OpenProfiles",
+   "site": "openprofiles.example",
+   "category": "people search",
+   "status": "active",
+   "parent": null,
+   "method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "logo": null,
+   "optout_url": "https://openprofiles.example/optout"
+  },
+  {
+   "name": "DataTrail",
+   "site": "datatrail.example",
+   "category": "people search",
+   "status": "active",
+   "parent": null,
+   "method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "logo": null,
+   "optout_url": "https://datatrail.example/optout"
+  },
+  {
+   "name": "InfoAnchor",
+   "site": "infoanchor.example",
+   "category": "people search",
+   "status": "active",
+   "parent": null,
+   "method": "email",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "logo": null,
+   "optout_url": "https://infoanchor.example/optout"
+  },
+  {
+   "name": "PersonPage",
+   "site": "personpage.example",
+   "category": "people search",
+   "status": "active",
+   "parent": null,
+   "method": "web form",
+   "requires": [
+    "name",
+    "city"
+   ],
+   "logo": null,
+   "optout_url": "https://personpage.example/optout"
+  }
+ ],
+ "next_check": "2026-11-25"
+}

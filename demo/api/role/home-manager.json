@@ -1,0 +1,597 @@
+{
+ "role": {
+  "key": "home-manager",
+  "name": "Home Manager",
+  "nav": "home manager",
+  "file": "home/MANAGER.md",
+  "owns": "The home and the car: chores and supplies, repairs and who pays under the lease, upkeep and registration",
+  "areas": [
+   "home"
+  ],
+  "widgets": []
+ },
+ "status": "watch",
+ "summary": "Faucet repair is with the landlord; furnace filter due Thursday.",
+ "items": [
+  {
+   "text": "Car registration renews in 9 days, $86",
+   "when": "2026-11-30",
+   "level": "watch",
+   "link": "/next/chores"
+  },
+  {
+   "text": "Kitchen faucet: waiting on the landlord",
+   "when": "2026-11-24",
+   "level": "watch",
+   "link": "/next/chores"
+  }
+ ],
+ "needs": [],
+ "watch": [
+  {
+   "text": "Car registration renews in 9 days, $86",
+   "when": "2026-11-30",
+   "level": "watch",
+   "link": "/next/chores"
+  },
+  {
+   "text": "Kitchen faucet: waiting on the landlord",
+   "when": "2026-11-24",
+   "level": "watch",
+   "link": "/next/chores"
+  }
+ ],
+ "tasks": [
+  {
+   "id": "t8107",
+   "content": "Renew the Subaru registration, $86",
+   "description": "Online renewal; the emissions check passed last month.",
+   "project": "Car",
+   "labels": [
+    "Computer",
+    "Money"
+   ],
+   "flagged": false,
+   "due": "2026-11-30",
+   "days_left": 9,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8108",
+   "content": "Book the oil change at Ridgeline Auto, (970) 555-0120",
+   "description": "Due by mileage (about 300 miles left).",
+   "project": "Car",
+   "labels": [
+    "Phone"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": "call"
+  },
+  {
+   "id": "t8109",
+   "content": "Rotate the tires",
+   "description": "",
+   "project": "Car",
+   "labels": [
+    "Errands"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 45,
+   "view": null
+  },
+  {
+   "id": "t8134",
+   "content": "Choose the paint color for Leo's room",
+   "description": "Three samples are on the wall.",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8135",
+   "content": "Replace the furnace filter (20x25x1)",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-24",
+   "days_left": 3,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8136",
+   "content": "Call the landlord about the dripping kitchen faucet, (970) 555-0124",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Phone"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": "call"
+  },
+  {
+   "id": "t8137",
+   "content": "Clean the gutters",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-12-04",
+   "days_left": 13,
+   "overdue": false,
+   "duration_min": 60,
+   "view": null
+  },
+  {
+   "id": "t8138",
+   "content": "Deep clean the fridge",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-27",
+   "days_left": 6,
+   "overdue": false,
+   "duration_min": 30,
+   "view": null
+  },
+  {
+   "id": "t8139",
+   "content": "Test the smoke alarms",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-12-11",
+   "days_left": 20,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8140",
+   "content": "Take the donation boxes to the thrift store",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Errands"
+   ],
+   "flagged": false,
+   "due": "2026-11-30",
+   "days_left": 9,
+   "overdue": false,
+   "duration_min": 30,
+   "view": null
+  }
+ ],
+ "routines": [
+  {
+   "name": "chores-sweep",
+   "when": "Sat 7:30 AM",
+   "does": "Adds the week's chores and upkeep",
+   "prompt": null
+  }
+ ],
+ "report": {
+  "latest": {
+   "path": "home/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "Faucet repair is with the landlord; furnace filter due Thursday.",
+   "html": "<p>Faucet repair is with the landlord; furnace filter due Thursday.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "home/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Chores this week",
+   "value": "5",
+   "sub": "2 h 15 m",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Repairs",
+   "value": "1",
+   "sub": "with the landlord",
+   "tone": "watch",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Supplies",
+   "value": "$54",
+   "sub": "a month",
+   "tone": "",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [
+  {
+   "key": "home",
+   "name": "Home",
+   "d": {
+    "sec": {
+     "key": "home",
+     "name": "Home",
+     "folders": [
+      "home",
+      "housekeeping"
+     ],
+     "brief": [
+      "Household staples and upkeep."
+     ],
+     "blurb": "Household staples and upkeep.",
+     "words": [
+      "home"
+     ]
+    },
+    "area": {
+     "sec": {
+      "key": "home",
+      "name": "Home",
+      "folders": [
+       "home",
+       "housekeeping"
+      ],
+      "brief": [
+       "Household staples and upkeep."
+      ],
+      "blurb": "Household staples and upkeep.",
+      "words": [
+       "home"
+      ]
+     },
+     "status": "watch",
+     "summary": "Faucet repair is with the landlord; furnace filter due Thursday.",
+     "items": [
+      {
+       "text": "Car registration renews in 9 days, $86",
+       "when": "2026-11-30",
+       "level": "watch",
+       "link": "/next/chores"
+      },
+      {
+       "text": "Kitchen faucet: waiting on the landlord",
+       "when": "2026-11-24",
+       "level": "watch",
+       "link": "/next/chores"
+      }
+     ],
+     "tasks": [
+      {
+       "id": "t8107",
+       "content": "Renew the Subaru registration, $86",
+       "description": "Online renewal; the emissions check passed last month.",
+       "project": "Car",
+       "labels": [
+        "Computer",
+        "Money"
+       ],
+       "flagged": false,
+       "due": "2026-11-30",
+       "days_left": 9,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8108",
+       "content": "Book the oil change at Ridgeline Auto, (970) 555-0120",
+       "description": "Due by mileage (about 300 miles left).",
+       "project": "Car",
+       "labels": [
+        "Phone"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": "call"
+      },
+      {
+       "id": "t8109",
+       "content": "Rotate the tires",
+       "description": "",
+       "project": "Car",
+       "labels": [
+        "Errands"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 45,
+       "view": null
+      },
+      {
+       "id": "t8134",
+       "content": "Choose the paint color for Leo's room",
+       "description": "Three samples are on the wall.",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8135",
+       "content": "Replace the furnace filter (20x25x1)",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-24",
+       "days_left": 3,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8136",
+       "content": "Call the landlord about the dripping kitchen faucet, (970) 555-0124",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Phone"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": "call"
+      },
+      {
+       "id": "t8137",
+       "content": "Clean the gutters",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-12-04",
+       "days_left": 13,
+       "overdue": false,
+       "duration_min": 60,
+       "view": null
+      },
+      {
+       "id": "t8138",
+       "content": "Deep clean the fridge",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-27",
+       "days_left": 6,
+       "overdue": false,
+       "duration_min": 30,
+       "view": null
+      },
+      {
+       "id": "t8139",
+       "content": "Test the smoke alarms",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-12-11",
+       "days_left": 20,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8140",
+       "content": "Take the donation boxes to the thrift store",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Errands"
+       ],
+       "flagged": false,
+       "due": "2026-11-30",
+       "days_left": 9,
+       "overdue": false,
+       "duration_min": 30,
+       "view": null
+      }
+     ]
+    },
+    "staples": {
+     "food_month": 212.0,
+     "other_month": 54.0,
+     "rows": [
+      {
+       "category": "Kitchen",
+       "item": "Dish soap",
+       "qty": 1,
+       "unit_price": 3.48,
+       "every_weeks": 4,
+       "status": "active",
+       "notes": ""
+      },
+      {
+       "category": "Kitchen",
+       "item": "Paper towels, 6 rolls",
+       "qty": 1,
+       "unit_price": 8.97,
+       "every_weeks": 3,
+       "status": "active",
+       "notes": ""
+      },
+      {
+       "category": "Laundry",
+       "item": "Detergent pods",
+       "qty": 1,
+       "unit_price": 12.97,
+       "every_weeks": 6,
+       "status": "active",
+       "notes": ""
+      },
+      {
+       "category": "Bath",
+       "item": "Toilet paper, 12 rolls",
+       "qty": 1,
+       "unit_price": 11.48,
+       "every_weeks": 3,
+       "status": "active",
+       "notes": ""
+      },
+      {
+       "category": "Bath",
+       "item": "Shampoo",
+       "qty": 1,
+       "unit_price": 5.94,
+       "every_weeks": 8,
+       "status": "on hand",
+       "notes": ""
+      },
+      {
+       "category": "Pets",
+       "item": "Dog food, 30 lb",
+       "qty": 1,
+       "unit_price": 38.98,
+       "every_weeks": 5,
+       "status": "active",
+       "notes": "Biscuit"
+      },
+      {
+       "category": "Food",
+       "item": "Coffee, 2 lb",
+       "qty": 1,
+       "unit_price": 12.48,
+       "every_weeks": 2,
+       "status": "active",
+       "notes": ""
+      },
+      {
+       "category": "Food",
+       "item": "Olive oil",
+       "qty": 1,
+       "unit_price": 7.98,
+       "every_weeks": 6,
+       "status": "active",
+       "notes": ""
+      },
+      {
+       "category": "Cleaning",
+       "item": "All-purpose spray",
+       "qty": 1,
+       "unit_price": 3.97,
+       "every_weeks": 6,
+       "status": "skip",
+       "notes": "Making our own"
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "widgets": {},
+ "folders": [
+  {
+   "name": "home",
+   "files": [
+    {
+     "path": "home/README.md",
+     "size": 1799
+    },
+    {
+     "path": "home/notes.md",
+     "size": 1984
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>home</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  },
+  {
+   "name": "housekeeping",
+   "files": [
+    {
+     "path": "housekeeping/README.md",
+     "size": 1799
+    },
+    {
+     "path": "housekeeping/notes.md",
+     "size": 1984
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>housekeeping</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

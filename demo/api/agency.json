@@ -1,0 +1,316 @@
+{
+ "mode": "test",
+ "stripe_account": "test account",
+ "generated": "2026-11-21T06:00:00-07:00",
+ "age_minutes": 280,
+ "refresh": "make snapshot",
+ "start": "make up",
+ "up": true,
+ "down_reason": "",
+ "periods": {
+  "week": {
+   "hours": 21.5,
+   "billed": 2042.5,
+   "from": "2026-11-16",
+   "by_worker": [
+    {
+     "name": "Sam",
+     "hours": 9.5,
+     "cost": 570.0,
+     "billed": 902.5
+    },
+    {
+     "name": "Design agent",
+     "hours": 7.0,
+     "cost": 280.0,
+     "billed": 665.0
+    },
+    {
+     "name": "QA agent",
+     "hours": 5.0,
+     "cost": 200.0,
+     "billed": 475.0
+    }
+   ],
+   "by_project": [
+    {
+     "name": "Booking pilot",
+     "hours": 15.0,
+     "cost": 750.0,
+     "billed": 1425.0
+    },
+    {
+     "name": "Landing page",
+     "hours": 6.5,
+     "cost": 325.0,
+     "billed": 617.5
+    }
+   ],
+   "by_customer": [
+    {
+     "name": "Juniper Dental",
+     "hours": 21.5,
+     "cost": 1075.0,
+     "billed": 2042.5
+    }
+   ]
+  },
+  "month": {
+   "hours": 74.0,
+   "billed": 7030.0,
+   "from": "2026-11-01",
+   "by_worker": [
+    {
+     "name": "Sam",
+     "hours": 32.0,
+     "cost": 1920.0,
+     "billed": 3040.0
+    },
+    {
+     "name": "Design agent",
+     "hours": 24.0,
+     "cost": 960.0,
+     "billed": 2280.0
+    },
+    {
+     "name": "QA agent",
+     "hours": 18.0,
+     "cost": 720.0,
+     "billed": 1710.0
+    }
+   ],
+   "by_project": [
+    {
+     "name": "Booking pilot",
+     "hours": 52.0,
+     "cost": 2600.0,
+     "billed": 4940.0
+    },
+    {
+     "name": "Landing page",
+     "hours": 22.0,
+     "cost": 1100.0,
+     "billed": 2090.0
+    }
+   ],
+   "by_customer": [
+    {
+     "name": "Juniper Dental",
+     "hours": 74.0,
+     "cost": 3700.0,
+     "billed": 7030.0
+    }
+   ]
+  }
+ },
+ "invoices": [
+  {
+   "id": "inv0",
+   "status": "Paid",
+   "customer": "Juniper Dental",
+   "project": "Booking pilot",
+   "total": 1200.0,
+   "created": "2026-10-19T09:00:00-07:00",
+   "payment": {
+    "status": "succeeded",
+    "amountRefunded": 0,
+    "hostedUrl": null
+   }
+  },
+  {
+   "id": "inv1",
+   "status": "Issued",
+   "customer": "Juniper Dental",
+   "project": "Booking pilot",
+   "total": 1200.0,
+   "created": "2026-11-18T09:00:00-07:00",
+   "payment": {
+    "status": "pending",
+    "amountRefunded": 0,
+    "hostedUrl": null
+   }
+  },
+  {
+   "id": "inv2",
+   "status": "Draft",
+   "customer": "Juniper Dental",
+   "project": "Landing page",
+   "total": 617.5,
+   "created": "2026-11-20T09:00:00-07:00",
+   "payment": null
+  }
+ ],
+ "payouts": [
+  {
+   "payee": "Sam",
+   "stream": "design hours",
+   "amount": 570.0,
+   "status": "paid",
+   "clawed_back": 0
+  },
+  {
+   "payee": "Referral partner",
+   "stream": "referral",
+   "amount": 60.0,
+   "status": "pending",
+   "clawed_back": 0
+  }
+ ],
+ "ledger": {
+  "cash": 1200.0,
+  "balanced": true,
+  "rows": [
+   {
+    "code": "1000",
+    "name": "Cash",
+    "type": "asset",
+    "balance": 1200.0
+   },
+   {
+    "code": "2000",
+    "name": "Payable to workers",
+    "type": "liability",
+    "balance": 60.0
+   },
+   {
+    "code": "4000",
+    "name": "Revenue",
+    "type": "income",
+    "balance": 1140.0
+   }
+  ]
+ },
+ "affiliates": [
+  {
+   "name": "Referral partner",
+   "code": "PARTNER10",
+   "accrued": 120.0,
+   "payable": 60.0,
+   "paid": 60.0,
+   "clawed_back": 0.0
+  }
+ ],
+ "audit": [
+  {
+   "at": "2026-11-20T15:02:00-07:00",
+   "who": "QA agent",
+   "on_behalf_of": "Sam",
+   "what": "invoice.draft",
+   "status": "ok",
+   "why": "Monthly invoice",
+   "source": "api"
+  },
+  {
+   "at": "2026-11-19T10:40:00-07:00",
+   "who": "Sam",
+   "on_behalf_of": "Sam",
+   "what": "time.log",
+   "status": "ok",
+   "why": null,
+   "source": "app"
+  }
+ ],
+ "tests": {
+  "fail": 6,
+  "tests_passed": 112,
+  "tests_total": 118,
+  "pass": 40,
+  "not_tested": 3,
+  "deferred": 2,
+  "ran": "2026-11-21T01:00:00",
+  "runs": 57,
+  "file": "tests/latest.json",
+  "rows": [
+   {
+    "id": "BK-1",
+    "result": "FAIL",
+    "detail": "Refund flow"
+   },
+   {
+    "id": "BK-2",
+    "result": "PASS",
+    "detail": "ok"
+   },
+   {
+    "id": "BK-3",
+    "result": "PASS",
+    "detail": "ok"
+   },
+   {
+    "id": "BK-4",
+    "result": "PASS",
+    "detail": "ok"
+   },
+   {
+    "id": "BK-5",
+    "result": "PASS",
+    "detail": "ok"
+   },
+   {
+    "id": "BK-6",
+    "result": "PASS",
+    "detail": "ok"
+   },
+   {
+    "id": "BK-7",
+    "result": "PASS",
+    "detail": "ok"
+   },
+   {
+    "id": "BK-8",
+    "result": "PASS",
+    "detail": "ok"
+   },
+   {
+    "id": "BK-9",
+    "result": "PASS",
+    "detail": "ok"
+   },
+   {
+    "id": "BK-10",
+    "result": "FAIL",
+    "detail": "Refund flow"
+   },
+   {
+    "id": "BK-11",
+    "result": "PASS",
+    "detail": "ok"
+   },
+   {
+    "id": "BK-12",
+    "result": "PASS",
+    "detail": "ok"
+   },
+   {
+    "id": "BK-13",
+    "result": "PASS",
+    "detail": "ok"
+   },
+   {
+    "id": "BK-14",
+    "result": "PASS",
+    "detail": "ok"
+   },
+   {
+    "id": "BK-15",
+    "result": "PASS",
+    "detail": "ok"
+   },
+   {
+    "id": "BK-16",
+    "result": "PASS",
+    "detail": "ok"
+   },
+   {
+    "id": "BK-17",
+    "result": "PASS",
+    "detail": "ok"
+   },
+   {
+    "id": "BK-18",
+    "result": "PASS",
+    "detail": "ok"
+   }
+  ]
+ }
+}

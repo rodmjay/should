@@ -1,0 +1,220 @@
+{
+ "role": {
+  "key": "shopping",
+  "name": "Shopping Expert",
+  "nav": "shopping",
+  "file": "shopping/EXPERT.md",
+  "owns": "Wise purchases: research, the wish list, price watch and cart prep (never buys)",
+  "areas": [],
+  "widgets": [
+   "wishlist",
+   "recommendations"
+  ]
+ },
+ "status": "active",
+ "summary": "Two items hit their target price: the rice cooker and the hiking boots.",
+ "items": [],
+ "needs": [],
+ "watch": [],
+ "tasks": [
+  {
+   "id": "t8114",
+   "content": "Approve the Walmart cart for the week, $142",
+   "description": "Cart filled from the meal plan.",
+   "project": "Shopping",
+   "labels": [
+    "Computer",
+    "Money"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  },
+  {
+   "id": "t8145",
+   "content": "Decide on the winter jacket (two options saved)",
+   "description": "",
+   "project": "Shopping",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  }
+ ],
+ "routines": [
+  {
+   "name": "price-watch",
+   "when": "daily 7:00 AM",
+   "does": "Checks wish-list prices",
+   "prompt": null
+  }
+ ],
+ "report": {
+  "latest": {
+   "path": "shopping/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "Two items hit their target price: the rice cooker and the hiking boots.",
+   "html": "<p>Two items hit their target price: the rice cooker and the hiking boots.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "shopping/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Wish list",
+   "value": "7",
+   "sub": "items",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "At target",
+   "value": "2",
+   "sub": "prices",
+   "tone": "good",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [],
+ "widgets": {
+  "wishlist": {
+   "path": "shopping/wishlist.md",
+   "budget": "$150 a month, after payday",
+   "rows": [
+    {
+     "priority": "need",
+     "item": "Winter boots for Leo",
+     "url": "",
+     "now": "$68.00",
+     "target": "$60.00",
+     "where": "Outdoor store",
+     "buy when": "before the first snow",
+     "why": "His old pair is too small"
+    },
+    {
+     "priority": "need",
+     "item": "Rice cooker",
+     "url": "",
+     "now": "$39.99",
+     "target": "$40.00",
+     "where": "Walmart",
+     "buy when": "now",
+     "why": "At target"
+    },
+    {
+     "priority": "smart",
+     "item": "Hiking boots",
+     "url": "",
+     "now": "$94.00",
+     "target": "$95.00",
+     "where": "Outdoor store",
+     "buy when": "now",
+     "why": "At target; current pair is worn through"
+    },
+    {
+     "priority": "smart",
+     "item": "Air fryer",
+     "url": "",
+     "now": "$89.00",
+     "target": "$70.00",
+     "where": "Walmart",
+     "buy when": "Black Friday",
+     "why": ""
+    },
+    {
+     "priority": "want",
+     "item": "Board game: ticket-to-ride style",
+     "url": "",
+     "now": "$45.00",
+     "target": "$35.00",
+     "where": "Game shop",
+     "buy when": "holiday sale",
+     "why": ""
+    },
+    {
+     "priority": "want",
+     "item": "Desk lamp",
+     "url": "",
+     "now": "$32.00",
+     "target": "$25.00",
+     "where": "Hardware store",
+     "buy when": "any time",
+     "why": ""
+    },
+    {
+     "priority": "want",
+     "item": "Camping hammock",
+     "url": "",
+     "now": "$58.00",
+     "target": "$45.00",
+     "where": "Outdoor store",
+     "buy when": "spring",
+     "why": ""
+    }
+   ]
+  },
+  "recommendations": {
+   "path": "shopping/recommendations.md",
+   "older": 3,
+   "title": "Rice cooker: buy the 6-cup basic model",
+   "html": "<p>The basic 6-cup model at <b>$39.99</b> does everything the family needs. The fancier one adds a timer you won't use.</p><ul><li>Hit the $40 target today.</li><li>Two-year warranty.</li></ul>"
+  }
+ },
+ "folders": [
+  {
+   "name": "shopping",
+   "files": [
+    {
+     "path": "shopping/README.md",
+     "size": 1799
+    },
+    {
+     "path": "shopping/wishlist.md",
+     "size": 2428
+    },
+    {
+     "path": "shopping/staples.csv",
+     "size": 2835
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>shopping</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

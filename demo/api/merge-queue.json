@@ -1,0 +1,36 @@
+{
+ "editable": false,
+ "error": null,
+ "pairs": [
+  {
+   "keep": "c-0013",
+   "drop": "c-0029",
+   "keep_name": "Ben Okafor",
+   "drop_name": "Ben Okafor",
+   "keep_card": {
+    "name": "Ben Okafor",
+    "methods": [
+     {
+      "value": "(970) 555-0113"
+     }
+    ],
+    "activity": 48,
+    "relationship": "friend"
+   },
+   "drop_card": {
+    "name": "Ben Okafor",
+    "methods": [
+     {
+      "value": "(970) 555-0129"
+     },
+     {
+      "value": "ben.o@example.com"
+     }
+    ],
+    "activity": 3,
+    "relationship": "friend"
+   },
+   "why": "Same name; the second card has his email."
+  }
+ ]
+}

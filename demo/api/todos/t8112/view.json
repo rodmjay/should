@@ -1,0 +1,25 @@
+{
+ "view": "recipe",
+ "label": "Recipe",
+ "task": {
+  "content": "Cook: chicken tinga tacos",
+  "project": "Health",
+  "due": "2026-11-21"
+ },
+ "data": {
+  "recipes": [
+   {
+    "title": "Chicken tinga tacos",
+    "meta": [
+     "Serves 6",
+     "Prep 15 min",
+     "Cook 40 min"
+    ],
+    "cards": [],
+    "html": "<h4>Ingredients</h4><ul><li>2 lb chicken thighs</li><li>1 onion, sliced</li><li>3 garlic cloves</li><li>1 can (14 oz) fire-roasted tomatoes</li><li>2 chipotles in adobo</li><li>Corn tortillas</li></ul><h4>Steps</h4><ol><li>Simmer the chicken until tender, about 25 minutes. Shred.</li><li>Soften the onion, add garlic.</li><li>Blend tomatoes and chipotles; simmer 5 minutes.</li><li>Fold in the chicken and serve on warm tortillas.</li></ol>",
+    "path": "nutrition/recipes/chicken-tinga.md"
+   }
+  ]
+ },
+ "desc_html": "<p>Thaw the chicken in the morning.</p>"
+}

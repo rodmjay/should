@@ -1,0 +1,131 @@
+{
+ "card": {
+  "contact": {
+   "id": "c-0013",
+   "name": "Ben Okafor",
+   "important": false,
+   "relationship": "friend",
+   "circle": "friend",
+   "company": null,
+   "job_title": null,
+   "country": "US",
+   "region": "Colorado",
+   "location_source": "area code",
+   "kind": "person",
+   "gender": "male",
+   "gender_source": "first name",
+   "category": "WhatsApp",
+   "text_tier": "ask",
+   "language": "English",
+   "likes": "Hiking, board games",
+   "avoid": null,
+   "notes": ""
+  },
+  "homes": [],
+  "methods": [
+   {
+    "kind": "phone",
+    "value": "(970) 555-0113",
+    "label": "mobile"
+   }
+  ],
+  "relationships": [
+   {
+    "relationship": "friend",
+    "circle": "friend",
+    "closeness": 3,
+    "notes": ""
+   }
+  ],
+  "dates": [],
+  "texts": []
+ },
+ "names": {
+  "US": "United States",
+  "MX": "Mexico",
+  "CA": "Canada"
+ },
+ "channels": [
+  "text",
+  "call",
+  "whatsapp",
+  "linkedin",
+  "email",
+  "event"
+ ],
+ "timeline": {
+  "counts": {
+   "text": 4,
+   "call": 2,
+   "whatsapp": 1,
+   "event": 1
+  },
+  "rows": [
+   {
+    "at": "2026-11-20T09:00:00-07:00",
+    "channel": "text",
+    "direction": "out",
+    "summary": "Running 10 minutes late, sorry!",
+    "group": null,
+    "via": null
+   },
+   {
+    "at": "2026-11-17T10:05:00-07:00",
+    "channel": "text",
+    "direction": "in",
+    "summary": "No worries, see you soon",
+    "group": null,
+    "via": null
+   },
+   {
+    "at": "2026-11-14T11:10:00-07:00",
+    "channel": "call",
+    "direction": "out",
+    "summary": "Call, 4 min",
+    "group": null,
+    "via": null
+   },
+   {
+    "at": "2026-11-11T12:15:00-07:00",
+    "channel": "whatsapp",
+    "direction": "in",
+    "summary": "Photo from the weekend",
+    "group": null,
+    "via": null
+   },
+   {
+    "at": "2026-11-07T13:20:00-07:00",
+    "channel": "text",
+    "direction": "in",
+    "summary": "Are we still on for Saturday?",
+    "group": null,
+    "via": null
+   },
+   {
+    "at": "2026-11-05T14:25:00-07:00",
+    "channel": "text",
+    "direction": "out",
+    "summary": "Yes! 10 AM at the trailhead",
+    "group": null,
+    "via": null
+   },
+   {
+    "at": "2026-11-02T15:30:00-07:00",
+    "channel": "event",
+    "direction": null,
+    "summary": "Family hike",
+    "group": null,
+    "via": null
+   },
+   {
+    "at": "2026-10-30T16:35:00-07:00",
+    "channel": "call",
+    "direction": "in",
+    "summary": "Missed call",
+    "group": null,
+    "via": null
+   }
+  ],
+  "count": 8
+ }
+}

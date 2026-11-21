@@ -1,0 +1,151 @@
+{
+ "role": {
+  "key": "legal",
+  "name": "Legal Advisor",
+  "nav": "legal",
+  "file": "legal/README.md",
+  "owns": "Agreements and deadlines: the lease, the LLC, the family trust plan (not a lawyer)",
+  "areas": [],
+  "widgets": []
+ },
+ "status": "act",
+ "summary": "Annual report ready to sign; the lease renewal reads cleanly.",
+ "items": [
+  {
+   "text": "Legal: sign the Carter Studio annual report",
+   "when": "2026-12-03",
+   "level": "act",
+   "link": "/next/companies"
+  },
+  {
+   "text": "Lease renewal language checked: no surprises",
+   "when": "2026-11-28",
+   "level": "watch",
+   "link": "/next/projects"
+  }
+ ],
+ "needs": [
+  {
+   "text": "Legal: sign the Carter Studio annual report",
+   "when": "2026-12-03",
+   "level": "act",
+   "link": "/next/companies",
+   "wait": true
+  }
+ ],
+ "watch": [
+  {
+   "text": "Lease renewal language checked: no surprises",
+   "when": "2026-11-28",
+   "level": "watch",
+   "link": "/next/projects"
+  }
+ ],
+ "tasks": [
+  {
+   "id": "t8120",
+   "content": "Sign the Carter Studio annual report, $10 fee",
+   "description": "Everything is filled in; you sign and pay on the state site.",
+   "project": "Business",
+   "labels": [
+    "Computer",
+    "Money"
+   ],
+   "flagged": true,
+   "due": "2026-12-03",
+   "days_left": 12,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8129",
+   "content": "Read and sign the lease renewal (2 pages)",
+   "description": "Rent goes up $35 a month; the rest is unchanged.",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-28",
+   "days_left": 7,
+   "overdue": false,
+   "duration_min": 20,
+   "view": null
+  }
+ ],
+ "routines": [],
+ "report": {
+  "latest": {
+   "path": "legal/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "Annual report ready to sign; the lease renewal reads cleanly.",
+   "html": "<p>Annual report ready to sign; the lease renewal reads cleanly.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "legal/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Agreements",
+   "value": "6",
+   "sub": "on file",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Deadlines",
+   "value": "2",
+   "sub": "next 30 days",
+   "tone": "",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [],
+ "widgets": {},
+ "folders": [
+  {
+   "name": "legal",
+   "files": [
+    {
+     "path": "legal/README.md",
+     "size": 1799
+    },
+    {
+     "path": "legal/notes.md",
+     "size": 1984
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>legal</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

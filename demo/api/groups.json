@@ -1,0 +1,124 @@
+{
+ "commands": [
+  {
+   "key": "/today",
+   "label": "today",
+   "description": "The day's plan"
+  },
+  {
+   "key": "/menu",
+   "label": "menu",
+   "description": "What you can text"
+  },
+  {
+   "key": "/weather",
+   "label": "weather",
+   "description": "Today's weather"
+  },
+  {
+   "key": "/whats_for_dinner",
+   "label": "whats for dinner",
+   "description": "Tonight's dinner"
+  },
+  {
+   "key": "/movie",
+   "label": "movie",
+   "description": "The family movie pick"
+  },
+  {
+   "key": "/unfriend",
+   "label": "unfriend",
+   "description": "Leave the group"
+  }
+ ],
+ "groups": [
+  {
+   "key": "family_close",
+   "name": "Close family",
+   "members": [
+    {
+     "id": "c-0002",
+     "name": "Nora Ellis",
+     "relationship": "partner",
+     "phone": "(970) 555-0102"
+    },
+    {
+     "id": "c-0004",
+     "name": "Leo Carter",
+     "relationship": "son",
+     "phone": "(970) 555-0104"
+    },
+    {
+     "id": "c-0005",
+     "name": "Ray Carter",
+     "relationship": "father",
+     "phone": "(970) 555-0105"
+    },
+    {
+     "id": "c-0007",
+     "name": "Jess Wynn",
+     "relationship": "sister",
+     "phone": "(970) 555-0107"
+    }
+   ],
+   "commands": [
+    "/today",
+    "/menu",
+    "/whats_for_dinner",
+    "/movie"
+   ]
+  },
+  {
+   "key": "family_kids",
+   "name": "Kids",
+   "members": [
+    {
+     "id": "c-0003",
+     "name": "Maya Carter",
+     "relationship": "daughter",
+     "phone": null
+    },
+    {
+     "id": "c-0004",
+     "name": "Leo Carter",
+     "relationship": "son",
+     "phone": "(970) 555-0104"
+    }
+   ],
+   "commands": [
+    "/menu",
+    "/whats_for_dinner",
+    "/movie"
+   ]
+  },
+  {
+   "key": "friend",
+   "name": "Friends",
+   "members": [
+    {
+     "id": "c-0012",
+     "name": "Priya Nair",
+     "relationship": "friend",
+     "phone": "(970) 555-0112"
+    },
+    {
+     "id": "c-0013",
+     "name": "Ben Okafor",
+     "relationship": "friend",
+     "phone": "(970) 555-0113"
+    },
+    {
+     "id": "c-0015",
+     "name": "Owen Brooks",
+     "relationship": "neighbor",
+     "phone": "(970) 555-0115"
+    }
+   ],
+   "commands": [
+    "/menu",
+    "/weather",
+    "/unfriend"
+   ]
+  }
+ ]
+}

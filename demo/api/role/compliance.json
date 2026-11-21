@@ -1,0 +1,98 @@
+{
+ "role": {
+  "key": "compliance",
+  "name": "Compliance Officer",
+  "nav": "compliance",
+  "file": "compliance/OFFICER.md",
+  "owns": "Checks agent actions against Sam's values, the law and each site's terms",
+  "areas": [],
+  "widgets": []
+ },
+ "status": "active",
+ "summary": "Twelve spot checks, no findings.",
+ "items": [],
+ "needs": [],
+ "watch": [],
+ "tasks": [],
+ "routines": [
+  {
+   "name": "weekly-compliance-review",
+   "when": "Fri 4:00 PM",
+   "does": "Spot-checks sends and automations",
+   "prompt": null
+  }
+ ],
+ "report": {
+  "latest": {
+   "path": "compliance/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "Twelve spot checks, no findings.",
+   "html": "<p>Twelve spot checks, no findings.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "compliance/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Spot checks",
+   "value": "12",
+   "sub": "this week",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Findings",
+   "value": "0",
+   "sub": "open",
+   "tone": "good",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [],
+ "widgets": {},
+ "folders": [
+  {
+   "name": "compliance",
+   "files": [
+    {
+     "path": "compliance/README.md",
+     "size": 1799
+    },
+    {
+     "path": "compliance/notes.md",
+     "size": 1984
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>compliance</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

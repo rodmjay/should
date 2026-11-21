@@ -1,0 +1,20 @@
+{
+ "view": "call",
+ "label": "Call",
+ "task": {
+  "content": "Call Grandpa Ray to plan lunch, (970) 555-0105",
+  "project": "Family",
+  "due": null
+ },
+ "data": {
+  "tel": "+19705550105",
+  "phone": "(970) 555-0105",
+  "contact": {
+   "id": "c-0005",
+   "name": "Ray Carter",
+   "relationship": "father",
+   "company": null
+  }
+ },
+ "desc_html": ""
+}

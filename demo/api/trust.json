@@ -1,0 +1,123 @@
+{
+ "entity": {
+  "legal_name": "Carter Family Trust",
+  "entity_type": "trust",
+  "status": "planned"
+ },
+ "status": "Drafting",
+ "decided": "Nora as successor trustee; equal shares for the kids.",
+ "next": {
+  "title": "Book a call with an estate attorney",
+  "url": "https://example.com/attorney",
+  "due": "2026-12-07",
+  "days_left": 16
+ },
+ "package": [
+  {
+   "text": "Revocable living trust"
+  },
+  {
+   "text": "Pour-over wills for Sam and Nora"
+  },
+  {
+   "text": "Powers of attorney"
+  },
+  {
+   "text": "Health care directives"
+  }
+ ],
+ "roster": [
+  {
+   "name": "Sam Carter",
+   "role": "Grantor and trustee",
+   "notes": ""
+  },
+  {
+   "name": "Nora Ellis",
+   "role": "Successor trustee",
+   "notes": ""
+  },
+  {
+   "name": "Maya Carter",
+   "role": "Beneficiary",
+   "notes": ""
+  },
+  {
+   "name": "Leo Carter",
+   "role": "Beneficiary",
+   "notes": ""
+  }
+ ],
+ "people": [
+  {
+   "role": "Successor trustee",
+   "first": "Nora Ellis",
+   "backup": "Jess Wynn"
+  },
+  {
+   "role": "Guardian for the kids",
+   "first": "Nora Ellis",
+   "backup": "Jess and Tom Wynn"
+  },
+  {
+   "role": "Health care agent",
+   "first": "Nora Ellis",
+   "backup": "Jess Wynn"
+  }
+ ],
+ "after": [
+  {
+   "text": "Everything passes to the surviving partner first."
+  },
+  {
+   "text": "Then Maya and Leo in equal shares."
+  },
+  {
+   "text": "Each child's share stays in trust until age 25."
+  }
+ ],
+ "assets": [
+  {
+   "asset": "Checking and savings (last 4 only)",
+   "passes": "Payable-on-death to the trust",
+   "plan": "Add the trust as beneficiary"
+  },
+  {
+   "asset": "401(k) and Roth IRA",
+   "passes": "Beneficiary form",
+   "plan": "Name Nora, then the trust"
+  },
+  {
+   "asset": "Carter Studio LLC",
+   "passes": "Assignment of interest",
+   "plan": "Assign units to the trust after signing"
+  },
+  {
+   "asset": "Car",
+   "passes": "Title transfer",
+   "plan": "Leave outside the trust"
+  }
+ ],
+ "funding": [
+  {
+   "text": "Retitle savings into the trust's name."
+  },
+  {
+   "text": "Update beneficiaries on retirement accounts."
+  }
+ ],
+ "questions": [
+  {
+   "text": "Should the business units go in now or later?",
+   "sub": [
+    "Any tax effect?",
+    "Does the operating agreement allow it?"
+   ]
+  },
+  {
+   "text": "What does a backup guardian need to sign?",
+   "sub": []
+  }
+ ],
+ "next_error": null
+}

@@ -1,0 +1,114 @@
+{
+ "role": {
+  "key": "as-architect",
+  "name": "Software Architect",
+  "nav": "architect",
+  "file": "agency-squared/ARCHITECT.md",
+  "owns": "Brightline Labs lead: the product API, the plan and ADRs, the software team",
+  "areas": [],
+  "widgets": []
+ },
+ "status": "active",
+ "summary": "Booking API passes 112 of 118 checks; payouts are next.",
+ "items": [],
+ "needs": [],
+ "watch": [],
+ "tasks": [
+  {
+   "id": "t8122",
+   "content": "Review the Brightline Labs pricing page draft",
+   "description": "",
+   "project": "Business",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 20,
+   "view": null
+  }
+ ],
+ "routines": [
+  {
+   "name": "nightly-tests",
+   "when": "1:00 AM",
+   "does": "Runs the API test suite",
+   "prompt": null
+  }
+ ],
+ "report": {
+  "latest": {
+   "path": "agency-squared/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "Booking API passes 112 of 118 checks; payouts are next.",
+   "html": "<p>Booking API passes 112 of 118 checks; payouts are next.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "agency-squared/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Tests",
+   "value": "112 of 118",
+   "sub": "passing",
+   "tone": "watch",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "ADRs",
+   "value": "14",
+   "sub": "decided",
+   "tone": "",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [],
+ "widgets": {},
+ "folders": [
+  {
+   "name": "brightline",
+   "files": [
+    {
+     "path": "brightline/README.md",
+     "size": 1799
+    },
+    {
+     "path": "brightline/notes.md",
+     "size": 1984
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>brightline</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

@@ -1,0 +1,279 @@
+{
+ "role": {
+  "key": "career",
+  "name": "Career Assistant",
+  "nav": "career",
+  "file": "career/README.md",
+  "owns": "Job search and freelance work: leads, recruiter replies, the resume and the portfolio",
+  "areas": [
+   "career"
+  ],
+  "widgets": [
+   "leads"
+  ]
+ },
+ "status": "active",
+ "summary": "One strong lead at Northgate Systems; reply drafted.",
+ "items": [],
+ "needs": [],
+ "watch": [],
+ "tasks": [
+  {
+   "id": "t8123",
+   "content": "Reply to Alex at Northgate Systems (draft in the comments)",
+   "description": "Draft asks for the salary range before a call.",
+   "project": "Career",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8124",
+   "content": "Add the Harbor app case study to the portfolio",
+   "description": "",
+   "project": "Career",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 45,
+   "view": null
+  }
+ ],
+ "routines": [
+  {
+   "name": "job-leads",
+   "when": "6:15 AM",
+   "does": "Scores new job leads",
+   "prompt": null
+  }
+ ],
+ "report": {
+  "latest": {
+   "path": "career/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "One strong lead at Northgate Systems; reply drafted.",
+   "html": "<p>One strong lead at Northgate Systems; reply drafted.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "career/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Open leads",
+   "value": "3",
+   "sub": "1 strong",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Replies due",
+   "value": "1",
+   "sub": "today",
+   "tone": "",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [
+  {
+   "key": "career",
+   "name": "Career",
+   "d": {
+    "sec": {
+     "key": "career",
+     "name": "Career",
+     "folders": [
+      "career",
+      "resume"
+     ],
+     "brief": [
+      "The resume and job leads."
+     ],
+     "blurb": "The resume and job leads.",
+     "words": [
+      "career"
+     ]
+    },
+    "area": {
+     "sec": {
+      "key": "career",
+      "name": "Career",
+      "folders": [
+       "career",
+       "resume"
+      ],
+      "brief": [
+       "The resume and job leads."
+      ],
+      "blurb": "The resume and job leads.",
+      "words": [
+       "career"
+      ]
+     },
+     "status": "ok",
+     "summary": "One strong lead at Northgate Systems; reply drafted.",
+     "items": [],
+     "tasks": [
+      {
+       "id": "t8123",
+       "content": "Reply to Alex at Northgate Systems (draft in the comments)",
+       "description": "Draft asks for the salary range before a call.",
+       "project": "Career",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": "2026-11-23",
+       "days_left": 2,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8124",
+       "content": "Add the Harbor app case study to the portfolio",
+       "description": "",
+       "project": "Career",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 45,
+       "view": null
+      }
+     ]
+    },
+    "resume": {
+     "basics": {
+      "name": "Sam Carter",
+      "title": "Senior Product Designer"
+     },
+     "profile": "Product designer who turns messy workflows into calm, simple tools. Ten years across health, booking and small-business software.",
+     "experience": [
+      {
+       "start": "2021",
+       "end": "",
+       "title": "Senior Product Designer",
+       "company": "Ridgeway Systems"
+      },
+      {
+       "start": "2018",
+       "end": "2021",
+       "title": "Product Designer",
+       "company": "Harbor Health Apps"
+      },
+      {
+       "start": "2015",
+       "end": "2018",
+       "title": "UX Designer",
+       "company": "Pinecone Booking"
+      },
+      {
+       "start": "2014",
+       "end": "",
+       "title": "Owner, freelance design",
+       "company": "Carter Studio LLC"
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "widgets": {
+  "leads": {
+   "path": "career/leads.md",
+   "latest": "career/scans/today.md",
+   "summary": "One strong lead; two maybes. Nothing needs an answer today except Northgate.",
+   "closed": 7,
+   "open": [
+    {
+     "fit": "strong",
+     "company": "Northgate Systems",
+     "role": "Lead Product Designer",
+     "location": "Remote",
+     "comp": "$145k–$165k",
+     "recruiter (linkedin)": "Alex Moreno",
+     "status": "reply drafted",
+     "next step": "Sam sends the reply"
+    },
+    {
+     "fit": "maybe",
+     "company": "Bluebird Health",
+     "role": "Senior UX Designer",
+     "location": "Hybrid, Ridgeway",
+     "comp": "$130k",
+     "recruiter (linkedin)": "—",
+     "status": "saved",
+     "next step": "Watch for the salary range"
+    },
+    {
+     "fit": "maybe",
+     "company": "Trailhead Maps",
+     "role": "Product Designer, contract",
+     "location": "Remote",
+     "comp": "$70/h",
+     "recruiter (linkedin)": "—",
+     "status": "saved",
+     "next step": "Evenings only; check hours"
+    }
+   ]
+  }
+ },
+ "folders": [
+  {
+   "name": "career",
+   "files": [
+    {
+     "path": "career/README.md",
+     "size": 1799
+    },
+    {
+     "path": "career/notes.md",
+     "size": 1984
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>career</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

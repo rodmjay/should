@@ -1,0 +1,52 @@
+{
+ "role": {
+  "key": "relationships",
+  "name": "Relationship Coach",
+  "nav": "relationship coach",
+  "file": "relationships/COACH.md",
+  "owns": "Sam and Nora's relationship (a placeholder until Sam turns it on)",
+  "areas": [],
+  "widgets": []
+ },
+ "status": "active",
+ "summary": "",
+ "items": [],
+ "needs": [],
+ "watch": [],
+ "tasks": [],
+ "routines": [],
+ "report": {
+  "latest": null,
+  "where": "relationships/reports/*.md"
+ },
+ "tiles": [],
+ "views": [],
+ "widgets": {},
+ "folders": [],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

@@ -1,0 +1,332 @@
+{
+ "tree": [
+  {
+   "id": "e-holding",
+   "legal_name": "Carter Studio LLC",
+   "short_name": "Carter Studio",
+   "role": "holding",
+   "entity_type": "llc",
+   "status": "active",
+   "parent_id": null,
+   "parent_percent": null,
+   "tax_class": "single-member LLC",
+   "formation_state": "CO",
+   "state_file_number": "20141234567",
+   "formed_on": "2014-04-02",
+   "ein_last4": "0417",
+   "purpose": "Freelance design studio and the holding company for new products",
+   "registered_agent": "Sam Carter",
+   "records_path": "business/carter-studio",
+   "website": "",
+   "slug": "carter-studio",
+   "depth": 0,
+   "path": [
+    "carter-studio"
+   ],
+   "people": [
+    {
+     "name": "Sam Carter",
+     "role": "Owner and manager",
+     "notes": ""
+    }
+   ]
+  },
+  {
+   "id": "e-sub",
+   "legal_name": "Brightline Labs LLC",
+   "short_name": "Brightline Labs",
+   "role": "subsidiary",
+   "entity_type": "llc",
+   "status": "planned",
+   "parent_id": "e-holding",
+   "parent_percent": 100,
+   "tax_class": "disregarded",
+   "formation_state": "CO",
+   "state_file_number": "",
+   "formed_on": null,
+   "ein_last4": null,
+   "purpose": "Booking software for small clinics",
+   "registered_agent": "",
+   "records_path": "business/brightline",
+   "website": "",
+   "slug": "brightline-labs",
+   "depth": 1,
+   "path": [
+    "brightline-labs"
+   ],
+   "people": [
+    {
+     "name": "Sam Carter",
+     "role": "Owner and manager",
+     "notes": ""
+    }
+   ]
+  },
+  {
+   "id": "e-trust",
+   "legal_name": "Carter Family Trust",
+   "short_name": "Family Trust",
+   "role": "trust",
+   "entity_type": "trust",
+   "status": "planned",
+   "parent_id": null,
+   "parent_percent": null,
+   "tax_class": "revocable trust",
+   "formation_state": "CO",
+   "state_file_number": "",
+   "formed_on": null,
+   "ein_last4": null,
+   "purpose": "Holds the family's assets for the kids",
+   "registered_agent": "",
+   "records_path": "trust",
+   "website": "",
+   "slug": "family-trust",
+   "depth": 0,
+   "path": [
+    "family-trust"
+   ],
+   "people": [
+    {
+     "name": "Sam Carter",
+     "role": "Trustee",
+     "notes": ""
+    },
+    {
+     "name": "Nora Ellis",
+     "role": "Successor trustee",
+     "notes": ""
+    }
+   ]
+  },
+  {
+   "id": "e-old",
+   "legal_name": "Mesa Print Co. LLC",
+   "short_name": "Mesa Print",
+   "role": "holding",
+   "entity_type": "llc",
+   "status": "inactive",
+   "parent_id": null,
+   "parent_percent": null,
+   "tax_class": "single-member LLC",
+   "formation_state": "CO",
+   "state_file_number": "20090007788",
+   "formed_on": "2009-06-01",
+   "ein_last4": "2210",
+   "purpose": "Old print shop, closed",
+   "registered_agent": "",
+   "records_path": "business/old",
+   "website": "",
+   "slug": "mesa-print",
+   "depth": 0,
+   "path": [
+    "mesa-print"
+   ],
+   "people": [
+    {
+     "name": "Sam Carter",
+     "role": "Owner and manager",
+     "notes": ""
+    }
+   ]
+  }
+ ],
+ "deadlines": [
+  {
+   "next_due": "2026-12-03",
+   "short_name": "Carter Studio",
+   "legal_name": "Carter Studio LLC",
+   "title": "Annual report",
+   "jurisdiction": "Colorado Secretary of State",
+   "fee_usd": 10,
+   "how_to": "File online; Sam signs",
+   "frequency": "yearly",
+   "todoist_task_id": "t8120",
+   "days_left": 12
+  },
+  {
+   "next_due": "2026-12-16",
+   "short_name": "Carter Studio",
+   "legal_name": "Carter Studio LLC",
+   "title": "Q4 estimated tax",
+   "jurisdiction": "IRS",
+   "fee_usd": null,
+   "how_to": "Direct Pay from checking",
+   "frequency": "quarterly",
+   "todoist_task_id": "",
+   "days_left": 25
+  },
+  {
+   "next_due": "2027-01-30",
+   "short_name": "Carter Studio",
+   "legal_name": "Carter Studio LLC",
+   "title": "Business license renewal",
+   "jurisdiction": "City of Cedar Falls",
+   "fee_usd": 50,
+   "how_to": "Renew online",
+   "frequency": "yearly",
+   "todoist_task_id": "",
+   "days_left": 70
+  },
+  {
+   "next_due": "2027-01-05",
+   "short_name": "Brightline Labs",
+   "legal_name": "Brightline Labs LLC",
+   "title": "Form the LLC",
+   "jurisdiction": "Colorado Secretary of State",
+   "fee_usd": 50,
+   "how_to": "Business Executive prepares; Sam files",
+   "frequency": "once",
+   "todoist_task_id": "",
+   "days_left": 45
+  }
+ ],
+ "entities": [
+  {
+   "id": "e-holding",
+   "tax_class": "single-member LLC",
+   "formation_state": "CO",
+   "state_file_number": "20141234567",
+   "formed_on": "2014-04-02",
+   "ein_last4": "0417",
+   "purpose": "Freelance design studio and the holding company for new products",
+   "registered_agent": "Sam Carter",
+   "records_path": "business/carter-studio",
+   "website": ""
+  },
+  {
+   "id": "e-sub",
+   "tax_class": "disregarded",
+   "formation_state": "CO",
+   "state_file_number": "",
+   "formed_on": null,
+   "ein_last4": null,
+   "purpose": "Booking software for small clinics",
+   "registered_agent": "",
+   "records_path": "business/brightline",
+   "website": ""
+  },
+  {
+   "id": "e-trust",
+   "tax_class": "revocable trust",
+   "formation_state": "CO",
+   "state_file_number": "",
+   "formed_on": null,
+   "ein_last4": null,
+   "purpose": "Holds the family's assets for the kids",
+   "registered_agent": "",
+   "records_path": "trust",
+   "website": ""
+  },
+  {
+   "id": "e-old",
+   "tax_class": "single-member LLC",
+   "formation_state": "CO",
+   "state_file_number": "20090007788",
+   "formed_on": "2009-06-01",
+   "ein_last4": "2210",
+   "purpose": "Old print shop, closed",
+   "registered_agent": "",
+   "records_path": "business/old",
+   "website": ""
+  }
+ ],
+ "accounts": [
+  {
+   "entity_id": "e-holding",
+   "kind": "bank",
+   "provider": "First Mesa Credit Union",
+   "account_last4": null,
+   "label": "Business checking",
+   "status": "active",
+   "url": "",
+   "notes": null
+  },
+  {
+   "entity_id": "e-holding",
+   "kind": "payments",
+   "provider": "Card processor",
+   "account_last4": null,
+   "label": "Invoices",
+   "status": "active",
+   "url": "",
+   "notes": null
+  },
+  {
+   "entity_id": "e-sub",
+   "kind": "bank",
+   "provider": "First Mesa Credit Union",
+   "account_last4": null,
+   "label": "To open",
+   "status": "planned",
+   "url": "",
+   "notes": null
+  },
+  {
+   "entity_id": "e-holding",
+   "kind": "domain",
+   "provider": "Registrar",
+   "account_last4": null,
+   "label": "carterstudio.example",
+   "status": "active",
+   "url": "",
+   "notes": null
+  }
+ ],
+ "registrations": [
+  {
+   "entity_id": "e-holding",
+   "kind": "state_llc",
+   "jurisdiction": "Colorado",
+   "number": null,
+   "filed_on": null,
+   "expires_on": null,
+   "status": "active",
+   "portal_url": "",
+   "notes": ""
+  },
+  {
+   "entity_id": "e-holding",
+   "kind": "ein",
+   "jurisdiction": "IRS",
+   "number": null,
+   "filed_on": null,
+   "expires_on": null,
+   "status": "active",
+   "portal_url": "",
+   "notes": ""
+  },
+  {
+   "entity_id": "e-holding",
+   "kind": "business_license",
+   "jurisdiction": "City of Cedar Falls",
+   "number": null,
+   "filed_on": null,
+   "expires_on": "2027-01-30",
+   "status": "active",
+   "portal_url": "",
+   "notes": ""
+  },
+  {
+   "entity_id": "e-sub",
+   "kind": "state_llc",
+   "jurisdiction": "Colorado",
+   "number": null,
+   "filed_on": null,
+   "expires_on": null,
+   "status": "needed",
+   "portal_url": "",
+   "notes": "Not formed yet"
+  },
+  {
+   "entity_id": "e-old",
+   "kind": "state_llc",
+   "jurisdiction": "Colorado",
+   "number": null,
+   "filed_on": null,
+   "expires_on": null,
+   "status": "closed",
+   "portal_url": "",
+   "notes": ""
+  }
+ ]
+}

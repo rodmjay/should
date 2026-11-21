@@ -1,0 +1,562 @@
+{
+ "weather": {
+  "date": "2026-11-21",
+  "summary": "Dry and partly cloudy today, high 47°; a rain chance tomorrow afternoon.",
+  "generated_at": "2026-11-21T06:00:00-07:00",
+  "stale": false,
+  "places": [
+   {
+    "name": "Cedar Falls (home)",
+    "days": [
+     {
+      "date": "2026-11-21",
+      "sky": "Partly cloudy",
+      "high": 47,
+      "low": 29,
+      "feels_high": 45,
+      "feels_low": 24,
+      "feels_am": 27,
+      "precip_chance": 10,
+      "precip_in": 0.0,
+      "precip_type": "none",
+      "snow_in": 0.0,
+      "wind": 6,
+      "gusts": 14,
+      "sunrise": "06:58",
+      "sunset": "16:41",
+      "aqi_max": 31
+     },
+     {
+      "date": "2026-11-22",
+      "sky": "Sunny",
+      "high": 44,
+      "low": 26,
+      "feels_high": 42,
+      "feels_low": 21,
+      "feels_am": 24,
+      "precip_chance": 30,
+      "precip_in": 0.04,
+      "precip_type": "rain",
+      "snow_in": 0.0,
+      "wind": 10,
+      "gusts": 20,
+      "sunrise": "06:58",
+      "sunset": "16:41",
+      "aqi_max": 35
+     }
+    ],
+    "alerts": []
+   },
+   {
+    "name": "Ridgeway (office)",
+    "days": [
+     {
+      "date": "2026-11-21",
+      "sky": "Sunny",
+      "high": 49,
+      "low": 31,
+      "feels_high": 47,
+      "feels_low": 26,
+      "feels_am": 29,
+      "precip_chance": 10,
+      "precip_in": 0.0,
+      "precip_type": "none",
+      "snow_in": 0.0,
+      "wind": 6,
+      "gusts": 14,
+      "sunrise": "06:58",
+      "sunset": "16:41",
+      "aqi_max": 37
+     },
+     {
+      "date": "2026-11-22",
+      "sky": "Mostly cloudy",
+      "high": 46,
+      "low": 28,
+      "feels_high": 44,
+      "feels_low": 23,
+      "feels_am": 26,
+      "precip_chance": 30,
+      "precip_in": 0.04,
+      "precip_type": "rain",
+      "snow_in": 0.0,
+      "wind": 10,
+      "gusts": 20,
+      "sunrise": "06:58",
+      "sunset": "16:41",
+      "aqi_max": 41
+     }
+    ],
+    "alerts": []
+   }
+  ]
+ },
+ "watch": [
+  {
+   "id": "m1",
+   "title": "Paddington 2",
+   "year": 2017,
+   "poster": null,
+   "runtime_min": 103,
+   "why": "Funny for the kids, clever for the grown-ups.",
+   "genres": [
+    "Comedy",
+    "Family"
+   ],
+   "director": "Paul King",
+   "trailer": null,
+   "on": [
+    "Netflix"
+   ],
+   "leaving": null,
+   "rent": "",
+   "pick": true,
+   "my_list": true
+  },
+  {
+   "id": "m2",
+   "title": "The Princess Bride",
+   "year": 1987,
+   "poster": null,
+   "runtime_min": 98,
+   "why": "Swordfights, giants and true love; quotable for years.",
+   "genres": [
+    "Adventure",
+    "Comedy"
+   ],
+   "director": "Rob Reiner",
+   "trailer": null,
+   "on": [
+    "Disney+"
+   ],
+   "leaving": null,
+   "rent": "",
+   "pick": false,
+   "my_list": true
+  },
+  {
+   "id": "m3",
+   "title": "Spirited Away",
+   "year": 2001,
+   "poster": null,
+   "runtime_min": 125,
+   "why": "A girl works in a spirit bathhouse to save her parents.",
+   "genres": [
+    "Animation",
+    "Fantasy"
+   ],
+   "director": "Hayao Miyazaki",
+   "trailer": null,
+   "on": [
+    "Prime Video"
+   ],
+   "leaving": "2026-12-03",
+   "rent": "",
+   "pick": false,
+   "my_list": true
+  },
+  {
+   "id": "m4",
+   "title": "Back to the Future",
+   "year": 1985,
+   "poster": null,
+   "runtime_min": 116,
+   "why": "A teen in a time machine meets his parents in high school.",
+   "genres": [
+    "Sci-fi",
+    "Comedy"
+   ],
+   "director": "Robert Zemeckis",
+   "trailer": null,
+   "on": [
+    "Netflix"
+   ],
+   "leaving": null,
+   "rent": "",
+   "pick": false,
+   "my_list": true
+  },
+  {
+   "id": "m5",
+   "title": "Hidden Figures",
+   "year": 2016,
+   "poster": null,
+   "runtime_min": 127,
+   "why": "Three mathematicians behind the early space program.",
+   "genres": [
+    "Drama",
+    "History"
+   ],
+   "director": "Theodore Melfi",
+   "trailer": null,
+   "on": [
+    "Disney+"
+   ],
+   "leaving": null,
+   "rent": "",
+   "pick": false,
+   "my_list": true
+  },
+  {
+   "id": "m6",
+   "title": "The Iron Giant",
+   "year": 1999,
+   "poster": null,
+   "runtime_min": 86,
+   "why": "A boy befriends a giant robot from space.",
+   "genres": [
+    "Animation",
+    "Sci-fi"
+   ],
+   "director": "Brad Bird",
+   "trailer": null,
+   "on": [],
+   "leaving": null,
+   "rent": "$3.99",
+   "pick": false,
+   "my_list": false
+  },
+  {
+   "id": "m7",
+   "title": "Apollo 13",
+   "year": 1995,
+   "poster": null,
+   "runtime_min": 140,
+   "why": "Getting three astronauts home against the odds.",
+   "genres": [
+    "Drama",
+    "History"
+   ],
+   "director": "Ron Howard",
+   "trailer": null,
+   "on": [
+    "Prime Video"
+   ],
+   "leaving": null,
+   "rent": "",
+   "pick": false,
+   "my_list": false
+  },
+  {
+   "id": "m8",
+   "title": "Hugo",
+   "year": 2011,
+   "poster": null,
+   "runtime_min": 126,
+   "why": "An orphan in a Paris train station and a mystery automaton.",
+   "genres": [
+    "Adventure",
+    "Family"
+   ],
+   "director": "Martin Scorsese",
+   "trailer": null,
+   "on": [],
+   "leaving": null,
+   "rent": "$3.99",
+   "pick": false,
+   "my_list": false
+  },
+  {
+   "id": "m9",
+   "title": "WALL-E",
+   "year": 2008,
+   "poster": null,
+   "runtime_min": 98,
+   "why": "A lonely robot cleaning up Earth falls in love.",
+   "genres": [
+    "Animation",
+    "Sci-fi"
+   ],
+   "director": "Andrew Stanton",
+   "trailer": null,
+   "on": [
+    "Disney+"
+   ],
+   "leaving": null,
+   "rent": "",
+   "pick": false,
+   "my_list": false
+  },
+  {
+   "id": "m10",
+   "title": "October Sky",
+   "year": 1999,
+   "poster": null,
+   "runtime_min": 108,
+   "why": "A coal miner's son builds rockets.",
+   "genres": [
+    "Drama"
+   ],
+   "director": "Joe Johnston",
+   "trailer": null,
+   "on": [],
+   "leaving": null,
+   "rent": "$3.99",
+   "pick": false,
+   "my_list": false
+  },
+  {
+   "id": "m11",
+   "title": "The Incredibles",
+   "year": 2004,
+   "poster": null,
+   "runtime_min": 115,
+   "why": "A family of superheroes back in action.",
+   "genres": [
+    "Animation",
+    "Action"
+   ],
+   "director": "Brad Bird",
+   "trailer": null,
+   "on": [
+    "Disney+"
+   ],
+   "leaving": null,
+   "rent": "",
+   "pick": false,
+   "my_list": false
+  },
+  {
+   "id": "m12",
+   "title": "School of Rock",
+   "year": 2003,
+   "poster": null,
+   "runtime_min": 109,
+   "why": "A wannabe rock star turns a class into a band.",
+   "genres": [
+    "Comedy",
+    "Music"
+   ],
+   "director": "Richard Linklater",
+   "trailer": null,
+   "on": [
+    "Netflix"
+   ],
+   "leaving": null,
+   "rent": "",
+   "pick": false,
+   "my_list": false
+  }
+ ],
+ "services": [
+  "Netflix",
+  "Disney+",
+  "Prime Video"
+ ],
+ "night": {
+  "budget": [
+   {
+    "kind": "dinner",
+    "items": [
+     "Tacos and drinks, about $48",
+     "Tip included"
+    ]
+   },
+   {
+    "kind": "events",
+    "items": [
+     "Free jazz on the plaza",
+     "No tickets needed"
+    ]
+   },
+   {
+    "kind": "transport",
+    "items": [
+     "Drive; parking is free",
+     "Home by 10"
+    ]
+   },
+   {
+    "kind": "dessert",
+    "items": [
+     "Dessert at The Scoop, $9",
+     ""
+    ]
+   },
+   {
+    "kind": "sitter",
+    "items": [
+     "Sitter for 3 hours, $45",
+     "Jess offered to swap"
+    ]
+   }
+  ],
+  "date": "2026-11-30",
+  "title": "Date night: tacos and jazz",
+  "path": "local-guide/date-night.md",
+  "headline": "Tacos at Trailhead, then the free jazz set on the plaza.",
+  "plan": "Dinner at 6:30, music at 8, dessert on the walk back.",
+  "total": "$102",
+  "cheaper": {
+   "head": "Cheaper",
+   "text": "Skip dessert and swap sitting with Jess: about $48."
+  },
+  "reservation": "6:30 PM, table for two",
+  "venue": "Trailhead Tacos",
+  "stops": [
+   {
+    "time": "18:30",
+    "name": "Trailhead Tacos",
+    "what": "Dinner",
+    "cost": "$48",
+    "score": 88,
+    "why": "Your favorite, quiet patio"
+   },
+   {
+    "time": "20:00",
+    "name": "Plaza Jazz Night",
+    "what": "Live music",
+    "cost": "Free",
+    "score": 81,
+    "why": "Outdoor heaters, short set"
+   }
+  ],
+  "weather_note": "Clear and cool; bring a jacket.",
+  "links": [
+   {
+    "label": "Menu",
+    "url": "https://example.com/menu"
+   }
+  ],
+  "days_away": 9,
+  "task": {
+   "content": "Book the sitter for date night",
+   "due": null
+  },
+  "weather": null,
+  "low_point": {
+   "report": "Covered",
+   "line": "Low point stays at $449.39 before payday.",
+   "payday": null,
+   "covers": true,
+   "alert": false
+  }
+ },
+ "weekends": [
+  {
+   "date": "2026-11-21",
+   "title": "This weekend",
+   "path": "local-guide/weekend.md",
+   "picks": [
+    {
+     "name": "Cedar Hollow hot springs",
+     "when": "Sat morning",
+     "cost": "$36 for four",
+     "score": 86
+    },
+    {
+     "name": "Starlight Drive-In double feature",
+     "when": "Sat 6 PM",
+     "cost": "$25 a car",
+     "score": 79
+    }
+   ]
+  }
+ ],
+ "spots": [
+  {
+   "name": "Trailhead Tacos",
+   "category": "restaurant",
+   "city": "Ridgeway",
+   "visit_count": 7,
+   "first_seen": "2025-10-17",
+   "last_seen": "2026-11-07",
+   "rating_rod": 4.5,
+   "tags": [
+    "mexican",
+    "kid-friendly"
+   ],
+   "notes": "",
+   "source": "visits",
+   "visited": true
+  },
+  {
+   "name": "Peak Pizza",
+   "category": "restaurant",
+   "city": "Cedar Falls",
+   "visit_count": 1,
+   "first_seen": "2025-11-04",
+   "last_seen": "2026-09-19",
+   "rating_rod": 5,
+   "tags": [
+    "pizza",
+    "near-home"
+   ],
+   "notes": "",
+   "source": "visits",
+   "visited": true
+  },
+  {
+   "name": "Cedar Hollow Hot Springs",
+   "category": "outdoors",
+   "city": "Cedar Falls",
+   "visit_count": 4,
+   "first_seen": "2025-11-13",
+   "last_seen": "2026-11-12",
+   "rating_rod": 4.5,
+   "tags": [
+    "outdoors",
+    "kid-friendly"
+   ],
+   "notes": "",
+   "source": "visits",
+   "visited": true
+  },
+  {
+   "name": "Bookworm Books",
+   "category": "shop",
+   "city": "Cedar Falls",
+   "visit_count": 3,
+   "first_seen": "2025-12-01",
+   "last_seen": "2026-10-23",
+   "rating_rod": 4,
+   "tags": [
+    "books",
+    "near-home"
+   ],
+   "notes": "",
+   "source": "visits",
+   "visited": true
+  },
+  {
+   "name": "River Bend Trail",
+   "category": "trail",
+   "city": "Cedar Falls",
+   "visit_count": 4,
+   "first_seen": "2025-12-10",
+   "last_seen": "2026-10-16",
+   "rating_rod": 4,
+   "tags": [
+    "outdoors",
+    "kid-friendly"
+   ],
+   "notes": "",
+   "source": "visits",
+   "visited": true
+  },
+  {
+   "name": "Mesa Grill",
+   "category": "restaurant",
+   "city": "Cedar Falls",
+   "visit_count": 8,
+   "first_seen": "2025-12-19",
+   "last_seen": "2026-09-07",
+   "rating_rod": 5,
+   "tags": [
+    "grill",
+    "near-home"
+   ],
+   "notes": "",
+   "source": "visits",
+   "visited": true
+  }
+ ],
+ "tonight": {
+  "date": "2026-11-21",
+  "dinner": "Chicken tinga tacos",
+  "sweet": "Mango rice pudding",
+  "minutes": 45
+ },
+ "tomorrow": null,
+ "chores_due": 3
+}

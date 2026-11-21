@@ -1,0 +1,91 @@
+{
+ "role": {
+  "key": "webmaster",
+  "name": "Webmaster",
+  "nav": "webmaster",
+  "file": "portal/WEBMASTER.md",
+  "owns": "The portal: pages, views and fixes",
+  "areas": [],
+  "widgets": []
+ },
+ "status": "active",
+ "summary": "Shipped the chores page refresh.",
+ "items": [],
+ "needs": [],
+ "watch": [],
+ "tasks": [],
+ "routines": [],
+ "report": {
+  "latest": {
+   "path": "portal/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "Shipped the chores page refresh.",
+   "html": "<p>Shipped the chores page refresh.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "portal/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Pages",
+   "value": "34",
+   "sub": "",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Errors",
+   "value": "0",
+   "sub": "this week",
+   "tone": "good",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [],
+ "widgets": {},
+ "folders": [
+  {
+   "name": "portal",
+   "files": [
+    {
+     "path": "portal/README.md",
+     "size": 1799
+    },
+    {
+     "path": "portal/notes.md",
+     "size": 1984
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>portal</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

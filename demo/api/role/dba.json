@@ -1,0 +1,98 @@
+{
+ "role": {
+  "key": "dba",
+  "name": "Database Administrator",
+  "nav": "dba",
+  "file": "database/ADMINISTRATOR.md",
+  "owns": "Every database schema change, plus performance, health and backups",
+  "areas": [],
+  "widgets": []
+ },
+ "status": "active",
+ "summary": "Snapshots and health checks green all week.",
+ "items": [],
+ "needs": [],
+ "watch": [],
+ "tasks": [],
+ "routines": [
+  {
+   "name": "incident-scan",
+   "when": "every 5 min",
+   "does": "Raises incidents from health checks",
+   "prompt": null
+  }
+ ],
+ "report": {
+  "latest": {
+   "path": "database/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "Snapshots and health checks green all week.",
+   "html": "<p>Snapshots and health checks green all week.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "database/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Health",
+   "value": "ok",
+   "sub": "last check",
+   "tone": "good",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Snapshots",
+   "value": "30",
+   "sub": "kept",
+   "tone": "",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [],
+ "widgets": {},
+ "folders": [
+  {
+   "name": "database",
+   "files": [
+    {
+     "path": "database/README.md",
+     "size": 1799
+    },
+    {
+     "path": "database/notes.md",
+     "size": 1984
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>database</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

@@ -1,0 +1,1 @@
+import{s as e}from"./iJVZzwMz.js";var t=null;function n(){return t??=e(`/api/recipes`).catch(e=>{throw t=null,e}),t}export{n as t};

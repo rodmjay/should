@@ -1,0 +1,336 @@
+{
+ "role": {
+  "key": "relocation",
+  "name": "Relocation Expert",
+  "nav": "relocation",
+  "file": "apartment-search/RELOCATION.md",
+  "owns": "Moves end to end: the lease, the search, the move plan, movers, utilities and address changes",
+  "areas": [
+   "home"
+  ],
+  "widgets": []
+ },
+ "status": "watch",
+ "summary": "Renewal offer reviewed; staying is cheaper than moving this year.",
+ "items": [
+  {
+   "text": "Lease renewal: sign within 7 days",
+   "when": "2026-11-28",
+   "level": "watch",
+   "link": "/next/projects"
+  }
+ ],
+ "needs": [],
+ "watch": [
+  {
+   "text": "Lease renewal: sign within 7 days",
+   "when": "2026-11-28",
+   "level": "watch",
+   "link": "/next/projects"
+  }
+ ],
+ "tasks": [
+  {
+   "id": "t8129",
+   "content": "Read and sign the lease renewal (2 pages)",
+   "description": "Rent goes up $35 a month; the rest is unchanged.",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-28",
+   "days_left": 7,
+   "overdue": false,
+   "duration_min": 20,
+   "view": null
+  },
+  {
+   "id": "t8140",
+   "content": "Take the donation boxes to the thrift store",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Errands"
+   ],
+   "flagged": false,
+   "due": "2026-11-30",
+   "days_left": 9,
+   "overdue": false,
+   "duration_min": 30,
+   "view": null
+  },
+  {
+   "id": "t8141",
+   "content": "Update the address at the DMV",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  }
+ ],
+ "routines": [],
+ "report": {
+  "latest": {
+   "path": "apartment-search/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "Renewal offer reviewed; staying is cheaper than moving this year.",
+   "html": "<p>Renewal offer reviewed; staying is cheaper than moving this year.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "apartment-search/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Lease ends",
+   "value": "1/30",
+   "sub": "renewal offered",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Rent change",
+   "value": "+$35",
+   "sub": "a month",
+   "tone": "",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [
+  {
+   "key": "home",
+   "name": "Home",
+   "d": {
+    "sec": {
+     "key": "home",
+     "name": "Home",
+     "folders": [
+      "home",
+      "housekeeping"
+     ],
+     "brief": [
+      "Household staples and upkeep."
+     ],
+     "blurb": "Household staples and upkeep.",
+     "words": [
+      "home"
+     ]
+    },
+    "area": {
+     "sec": {
+      "key": "home",
+      "name": "Home",
+      "folders": [
+       "home",
+       "housekeeping"
+      ],
+      "brief": [
+       "Household staples and upkeep."
+      ],
+      "blurb": "Household staples and upkeep.",
+      "words": [
+       "home"
+      ]
+     },
+     "status": "watch",
+     "summary": "Renewal offer reviewed; staying is cheaper than moving this year.",
+     "items": [
+      {
+       "text": "Lease renewal: sign within 7 days",
+       "when": "2026-11-28",
+       "level": "watch",
+       "link": "/next/projects"
+      }
+     ],
+     "tasks": [
+      {
+       "id": "t8129",
+       "content": "Read and sign the lease renewal (2 pages)",
+       "description": "Rent goes up $35 a month; the rest is unchanged.",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-28",
+       "days_left": 7,
+       "overdue": false,
+       "duration_min": 20,
+       "view": null
+      },
+      {
+       "id": "t8140",
+       "content": "Take the donation boxes to the thrift store",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Errands"
+       ],
+       "flagged": false,
+       "due": "2026-11-30",
+       "days_left": 9,
+       "overdue": false,
+       "duration_min": 30,
+       "view": null
+      },
+      {
+       "id": "t8141",
+       "content": "Update the address at the DMV",
+       "description": "",
+       "project": "Home",
+       "labels": [
+        "Computer"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 10,
+       "view": null
+      }
+     ]
+    },
+    "staples": {
+     "food_month": 212.0,
+     "other_month": 54.0,
+     "rows": [
+      {
+       "category": "Kitchen",
+       "item": "Dish soap",
+       "qty": 1,
+       "unit_price": 3.48,
+       "every_weeks": 4,
+       "status": "active",
+       "notes": ""
+      },
+      {
+       "category": "Kitchen",
+       "item": "Paper towels, 6 rolls",
+       "qty": 1,
+       "unit_price": 8.97,
+       "every_weeks": 3,
+       "status": "active",
+       "notes": ""
+      },
+      {
+       "category": "Laundry",
+       "item": "Detergent pods",
+       "qty": 1,
+       "unit_price": 12.97,
+       "every_weeks": 6,
+       "status": "active",
+       "notes": ""
+      },
+      {
+       "category": "Bath",
+       "item": "Toilet paper, 12 rolls",
+       "qty": 1,
+       "unit_price": 11.48,
+       "every_weeks": 3,
+       "status": "active",
+       "notes": ""
+      },
+      {
+       "category": "Bath",
+       "item": "Shampoo",
+       "qty": 1,
+       "unit_price": 5.94,
+       "every_weeks": 8,
+       "status": "on hand",
+       "notes": ""
+      },
+      {
+       "category": "Pets",
+       "item": "Dog food, 30 lb",
+       "qty": 1,
+       "unit_price": 38.98,
+       "every_weeks": 5,
+       "status": "active",
+       "notes": "Biscuit"
+      },
+      {
+       "category": "Food",
+       "item": "Coffee, 2 lb",
+       "qty": 1,
+       "unit_price": 12.48,
+       "every_weeks": 2,
+       "status": "active",
+       "notes": ""
+      },
+      {
+       "category": "Food",
+       "item": "Olive oil",
+       "qty": 1,
+       "unit_price": 7.98,
+       "every_weeks": 6,
+       "status": "active",
+       "notes": ""
+      },
+      {
+       "category": "Cleaning",
+       "item": "All-purpose spray",
+       "qty": 1,
+       "unit_price": 3.97,
+       "every_weeks": 6,
+       "status": "skip",
+       "notes": "Making our own"
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "widgets": {},
+ "folders": [
+  {
+   "name": "moving",
+   "files": [
+    {
+     "path": "moving/README.md",
+     "size": 1799
+    },
+    {
+     "path": "moving/notes.md",
+     "size": 1984
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>moving</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

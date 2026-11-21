@@ -1,0 +1,65 @@
+{
+ "card": {
+  "contact": {
+   "id": "c-0028",
+   "name": "hello@example.net",
+   "important": false,
+   "relationship": null,
+   "circle": null,
+   "company": null,
+   "job_title": null,
+   "country": "US",
+   "region": "Colorado",
+   "location_source": "area code",
+   "kind": "person",
+   "gender": "unknown",
+   "gender_source": null,
+   "category": "workspace",
+   "text_tier": "ask",
+   "language": "English",
+   "likes": null,
+   "avoid": null,
+   "notes": ""
+  },
+  "homes": [],
+  "methods": [
+   {
+    "kind": "email",
+    "value": "hello@example.net",
+    "label": ""
+   }
+  ],
+  "relationships": [],
+  "dates": [],
+  "texts": []
+ },
+ "names": {
+  "US": "United States",
+  "MX": "Mexico",
+  "CA": "Canada"
+ },
+ "channels": [
+  "text",
+  "call",
+  "whatsapp",
+  "linkedin",
+  "email",
+  "event"
+ ],
+ "timeline": {
+  "counts": {
+   "email": 1
+  },
+  "rows": [
+   {
+    "at": "2026-11-07T10:00:00-07:00",
+    "channel": "email",
+    "direction": "in",
+    "summary": "Hello!",
+    "group": null,
+    "via": null
+   }
+  ],
+  "count": 1
+ }
+}

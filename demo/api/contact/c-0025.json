@@ -1,0 +1,77 @@
+{
+ "card": {
+  "contact": {
+   "id": "c-0025",
+   "name": "Juniper Dental",
+   "important": false,
+   "relationship": "client",
+   "circle": null,
+   "company": null,
+   "job_title": null,
+   "country": "US",
+   "region": "Colorado",
+   "location_source": "area code",
+   "kind": "business",
+   "gender": null,
+   "gender_source": null,
+   "category": "workspace",
+   "text_tier": "ask",
+   "language": "English",
+   "likes": null,
+   "avoid": null,
+   "notes": ""
+  },
+  "homes": [],
+  "methods": [
+   {
+    "kind": "phone",
+    "value": "(970) 555-0125",
+    "label": "mobile"
+   },
+   {
+    "kind": "email",
+    "value": "billing@example.com",
+    "label": ""
+   }
+  ],
+  "relationships": [
+   {
+    "relationship": "client",
+    "circle": null,
+    "closeness": 3,
+    "notes": ""
+   }
+  ],
+  "dates": [],
+  "texts": []
+ },
+ "names": {
+  "US": "United States",
+  "MX": "Mexico",
+  "CA": "Canada"
+ },
+ "channels": [
+  "text",
+  "call",
+  "whatsapp",
+  "linkedin",
+  "email",
+  "event"
+ ],
+ "timeline": {
+  "counts": {
+   "email": 1
+  },
+  "rows": [
+   {
+    "at": "2026-11-07T10:00:00-07:00",
+    "channel": "email",
+    "direction": "in",
+    "summary": "Appointment reminder",
+    "group": null,
+    "via": null
+   }
+  ],
+  "count": 1
+ }
+}

@@ -1,0 +1,148 @@
+{
+ "entity": {
+  "legal_name": "Carter Studio LLC",
+  "formation_state": "CO",
+  "formed_on": "2014-04-02"
+ },
+ "owner": "Sam Carter",
+ "subs": [
+  {
+   "id": "e-sub",
+   "name": "Brightline Labs",
+   "slug": "brightline-labs",
+   "stage": "building",
+   "purpose": "Booking software for small clinics",
+   "pulse": [
+    {
+     "label": "Tests",
+     "value": "112 of 118",
+     "note": "passing",
+     "ok": true
+    },
+    {
+     "label": "First customer",
+     "value": "Juniper Dental",
+     "note": "pilot",
+     "ok": true
+    },
+    {
+     "label": "Spend",
+     "value": "$0",
+     "note": "this month",
+     "ok": true
+    }
+   ],
+   "gates": [],
+   "next": "Form the LLC (Business Executive prepares; Sam files)",
+   "site": ""
+  },
+  {
+   "id": "e-design",
+   "name": "Carter Studio design",
+   "slug": "carter-studio",
+   "stage": "live",
+   "purpose": "Freelance design for small businesses",
+   "pulse": [
+    {
+     "label": "Revenue",
+     "value": "$3,600",
+     "note": "this quarter",
+     "ok": true
+    },
+    {
+     "label": "Clients",
+     "value": "2",
+     "note": "active",
+     "ok": true
+    }
+   ],
+   "gates": [],
+   "next": "Send the November invoice to Juniper Dental",
+   "site": ""
+  }
+ ],
+ "stages": [
+  "idea",
+  "planned",
+  "building",
+  "live"
+ ],
+ "goal": {
+  "target_date": "2027-12-26",
+  "target_usd": 120000,
+  "saved_usd": 96000,
+  "pct": 80,
+  "days_left": 400
+ },
+ "trust": true,
+ "stripe": {
+  "mode": "test",
+  "name": "Brightline Labs (test)"
+ },
+ "asks": [
+  {
+   "door": "Legal",
+   "item": "Legal: sign the Carter Studio annual report ($10 fee)",
+   "owner": "Business Executive",
+   "check_on": "2026-11-26"
+  }
+ ],
+ "deadlines": [
+  {
+   "next_due": "2026-12-03",
+   "short_name": "Carter Studio",
+   "legal_name": "Carter Studio LLC",
+   "title": "Annual report",
+   "jurisdiction": "Colorado Secretary of State",
+   "fee_usd": 10,
+   "how_to": "File online; Sam signs",
+   "frequency": "yearly",
+   "todoist_task_id": "t8120",
+   "days_left": 12
+  },
+  {
+   "next_due": "2026-12-16",
+   "short_name": "Carter Studio",
+   "legal_name": "Carter Studio LLC",
+   "title": "Q4 estimated tax",
+   "jurisdiction": "IRS",
+   "fee_usd": null,
+   "how_to": "Direct Pay from checking",
+   "frequency": "quarterly",
+   "todoist_task_id": "",
+   "days_left": 25
+  },
+  {
+   "next_due": "2027-01-30",
+   "short_name": "Carter Studio",
+   "legal_name": "Carter Studio LLC",
+   "title": "Business license renewal",
+   "jurisdiction": "City of Cedar Falls",
+   "fee_usd": 50,
+   "how_to": "Renew online",
+   "frequency": "yearly",
+   "todoist_task_id": "",
+   "days_left": 70
+  },
+  {
+   "next_due": "2027-01-05",
+   "short_name": "Brightline Labs",
+   "legal_name": "Brightline Labs LLC",
+   "title": "Form the LLC",
+   "jurisdiction": "Colorado Secretary of State",
+   "fee_usd": 50,
+   "how_to": "Business Executive prepares; Sam files",
+   "frequency": "once",
+   "todoist_task_id": "",
+   "days_left": 45
+  }
+ ],
+ "handoffs": [
+  {
+   "check_on": "2026-11-25",
+   "item": "Juniper Dental to confirm the pilot start date",
+   "waiting_on": "Juniper Dental"
+  }
+ ],
+ "old_deadlines": false
+}

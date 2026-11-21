@@ -1,0 +1,172 @@
+{
+ "role": {
+  "key": "security",
+  "name": "Security Officer",
+  "nav": "security",
+  "file": "security/OFFICER.md",
+  "owns": "Security threats: suspicious logins, breaches, weak and reused passwords, two-step sign-in",
+  "areas": [],
+  "widgets": []
+ },
+ "status": "watch",
+ "summary": "No new breaches; five accounts still need two-step sign-in.",
+ "items": [
+  {
+   "text": "One reused password on a low-risk account",
+   "when": null,
+   "level": "watch",
+   "link": "/next/r/security#todos"
+  }
+ ],
+ "needs": [],
+ "watch": [
+  {
+   "text": "One reused password on a low-risk account",
+   "when": null,
+   "level": "watch",
+   "link": "/next/r/security#todos"
+  }
+ ],
+ "tasks": [
+  {
+   "id": "t8106",
+   "content": "Freeze credit at the third bureau",
+   "description": "Two bureaus are frozen already.",
+   "project": "Credit",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8117",
+   "content": "Turn on two-step sign-in for the credit union app",
+   "description": "",
+   "project": "Computer & Security",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8118",
+   "content": "Change the reused password on the library account",
+   "description": "",
+   "project": "Computer & Security",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  }
+ ],
+ "routines": [
+  {
+   "name": "login-watch",
+   "when": "every 2 h",
+   "does": "Reads sign-in alerts",
+   "prompt": null
+  },
+  {
+   "name": "weekly-security-audit",
+   "when": "Fri 3:00 PM",
+   "does": "Audits every account",
+   "prompt": null
+  }
+ ],
+ "report": {
+  "latest": {
+   "path": "security/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "No new breaches; five accounts still need two-step sign-in.",
+   "html": "<p>No new breaches; five accounts still need two-step sign-in.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "security/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Accounts",
+   "value": "41",
+   "sub": "audited",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Two-step",
+   "value": "36 of 41",
+   "sub": "on",
+   "tone": "watch",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Breaches",
+   "value": "0",
+   "sub": "new",
+   "tone": "good",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [],
+ "widgets": {},
+ "folders": [
+  {
+   "name": "security",
+   "files": [
+    {
+     "path": "security/README.md",
+     "size": 1799
+    },
+    {
+     "path": "security/notes.md",
+     "size": 1984
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>security</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

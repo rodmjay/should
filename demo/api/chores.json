@@ -1,0 +1,375 @@
+{
+ "rows": [
+  {
+   "id": "t8600",
+   "content": "Run the dishwasher",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-21",
+   "days_left": 0,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null,
+   "group": "chores"
+  },
+  {
+   "id": "t8602",
+   "content": "Take out recycling",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-21",
+   "days_left": 0,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null,
+   "group": "chores"
+  },
+  {
+   "id": "t8601",
+   "content": "Water the plants",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null,
+   "group": "chores"
+  },
+  {
+   "id": "t8603",
+   "content": "Vacuum the living room",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 20,
+   "view": null,
+   "group": "chores"
+  },
+  {
+   "id": "t8606",
+   "content": "Fold laundry",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 25,
+   "view": null,
+   "group": "chores"
+  },
+  {
+   "id": "t8135",
+   "content": "Replace the furnace filter (20x25x1)",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-24",
+   "days_left": 3,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null,
+   "group": "chores"
+  },
+  {
+   "id": "t8604",
+   "content": "Wipe down the bathroom",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-24",
+   "days_left": 3,
+   "overdue": false,
+   "duration_min": 20,
+   "view": null,
+   "group": "chores"
+  },
+  {
+   "id": "t8607",
+   "content": "Change the bed sheets",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-26",
+   "days_left": 5,
+   "overdue": false,
+   "duration_min": 15,
+   "view": null,
+   "group": "chores"
+  },
+  {
+   "id": "t8138",
+   "content": "Deep clean the fridge",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-27",
+   "days_left": 6,
+   "overdue": false,
+   "duration_min": 30,
+   "view": null,
+   "group": "chores"
+  },
+  {
+   "id": "t8605",
+   "content": "Wash the car",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-27",
+   "days_left": 6,
+   "overdue": false,
+   "duration_min": 30,
+   "view": null,
+   "group": "chores"
+  },
+  {
+   "id": "t8129",
+   "content": "Read and sign the lease renewal (2 pages)",
+   "description": "Rent goes up $35 a month; the rest is unchanged.",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-28",
+   "days_left": 7,
+   "overdue": false,
+   "duration_min": 20,
+   "view": null,
+   "group": "move"
+  },
+  {
+   "id": "t8107",
+   "content": "Renew the Subaru registration, $86",
+   "description": "Online renewal; the emissions check passed last month.",
+   "project": "Car",
+   "labels": [
+    "Computer",
+    "Money"
+   ],
+   "flagged": false,
+   "due": "2026-11-30",
+   "days_left": 9,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null,
+   "group": "car"
+  },
+  {
+   "id": "t8140",
+   "content": "Take the donation boxes to the thrift store",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Errands"
+   ],
+   "flagged": false,
+   "due": "2026-11-30",
+   "days_left": 9,
+   "overdue": false,
+   "duration_min": 30,
+   "view": null,
+   "group": "move"
+  },
+  {
+   "id": "t8608",
+   "content": "Sweep the porch",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-30",
+   "days_left": 9,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null,
+   "group": "chores"
+  },
+  {
+   "id": "t8609",
+   "content": "Check the tire pressure",
+   "description": "",
+   "project": "Car",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-12-02",
+   "days_left": 11,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null,
+   "group": "car"
+  },
+  {
+   "id": "t8137",
+   "content": "Clean the gutters",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-12-04",
+   "days_left": 13,
+   "overdue": false,
+   "duration_min": 60,
+   "view": null,
+   "group": "chores"
+  },
+  {
+   "id": "t8139",
+   "content": "Test the smoke alarms",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-12-11",
+   "days_left": 20,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null,
+   "group": "chores"
+  },
+  {
+   "id": "t8108",
+   "content": "Book the oil change at Ridgeline Auto, (970) 555-0120",
+   "description": "Due by mileage (about 300 miles left).",
+   "project": "Car",
+   "labels": [
+    "Phone"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": "call",
+   "group": "car"
+  },
+  {
+   "id": "t8109",
+   "content": "Rotate the tires",
+   "description": "",
+   "project": "Car",
+   "labels": [
+    "Errands"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 45,
+   "view": null,
+   "group": "car"
+  },
+  {
+   "id": "t8134",
+   "content": "Choose the paint color for Leo's room",
+   "description": "Three samples are on the wall.",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null,
+   "group": "chores"
+  },
+  {
+   "id": "t8136",
+   "content": "Call the landlord about the dripping kitchen faucet, (970) 555-0124",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Phone"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": "call",
+   "group": "chores"
+  },
+  {
+   "id": "t8141",
+   "content": "Update the address at the DMV",
+   "description": "",
+   "project": "Home",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null,
+   "group": "move"
+  }
+ ],
+ "error": null,
+ "completed": [
+  {
+   "content": "Call the insurance company about the windshield claim",
+   "completed_at": "2026-11-18T11:15:00-07:00",
+   "project": "Car"
+  },
+  {
+   "content": "Order furnace filters",
+   "completed_at": "2026-11-16T20:15:00-07:00",
+   "project": "Home"
+  },
+  {
+   "content": "Mow the lawn",
+   "completed_at": "2026-11-18T16:00:00-07:00",
+   "project": "Home"
+  }
+ ]
+}

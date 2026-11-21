@@ -1,0 +1,323 @@
+{
+ "role": {
+  "key": "it",
+  "name": "IT Guy",
+  "nav": "it",
+  "file": "it/IT.md",
+  "owns": "Internet, Wi-Fi, phones and lines, devices, service health and the technical security fixes",
+  "areas": [],
+  "widgets": [
+   "health"
+  ]
+ },
+ "status": "active",
+ "summary": "All services up except the photo sync, which waits for the phone to be plugged in.",
+ "items": [],
+ "needs": [],
+ "watch": [],
+ "tasks": [
+  {
+   "id": "t8117",
+   "content": "Turn on two-step sign-in for the credit union app",
+   "description": "",
+   "project": "Computer & Security",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8119",
+   "content": "Plug the phone in overnight for the backup",
+   "description": "",
+   "project": "Computer & Security",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  }
+ ],
+ "routines": [
+  {
+   "name": "it-health",
+   "when": "every 15 min",
+   "does": "Checks timers, the listener and backups",
+   "prompt": null
+  },
+  {
+   "name": "offsite-backup",
+   "when": "3:00 AM",
+   "does": "Copies the backup offsite",
+   "prompt": null
+  }
+ ],
+ "report": {
+  "latest": {
+   "path": "it/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "All services up except the photo sync, which waits for the phone to be plugged in.",
+   "html": "<p>All services up except the photo sync, which waits for the phone to be plugged in.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "it/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Services",
+   "value": "11 of 12",
+   "sub": "healthy",
+   "tone": "watch",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Backups",
+   "value": "ok",
+   "sub": "last night",
+   "tone": "good",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Devices",
+   "value": "9",
+   "sub": "in the inventory",
+   "tone": "",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [],
+ "widgets": {
+  "health": {
+   "summary": "11 of 12 services healthy.",
+   "generated_at": "2026-11-21T10:30:00-07:00",
+   "stale": false,
+   "age_min": 10,
+   "items": [
+    {
+     "key": "listener",
+     "label": "Texting listener",
+     "kind": "service",
+     "ok": true,
+     "state": "active",
+     "result": "pass",
+     "since": "2026-11-18T07:00:00-07:00",
+     "last_run": "2026-11-21T06:00:00-07:00",
+     "next_run": "2026-11-22T06:00:00-07:00",
+     "age_hours": 4,
+     "detail": "",
+     "last_data": null
+    },
+    {
+     "key": "backup",
+     "label": "Nightly backup",
+     "kind": "backup",
+     "ok": true,
+     "state": "active",
+     "result": "pass",
+     "since": "2026-11-18T07:00:00-07:00",
+     "last_run": "2026-11-21T06:04:00-07:00",
+     "next_run": "2026-11-22T06:04:00-07:00",
+     "age_hours": 5,
+     "detail": "",
+     "last_data": null
+    },
+    {
+     "key": "offsite",
+     "label": "Offsite copy",
+     "kind": "backup",
+     "ok": true,
+     "state": "active",
+     "result": "pass",
+     "since": "2026-11-18T07:00:00-07:00",
+     "last_run": "2026-11-21T06:08:00-07:00",
+     "next_run": "2026-11-22T06:08:00-07:00",
+     "age_hours": 6,
+     "detail": "",
+     "last_data": null
+    },
+    {
+     "key": "weather",
+     "label": "Weather timer",
+     "kind": "timer",
+     "ok": true,
+     "state": "active",
+     "result": "pass",
+     "since": "2026-11-18T07:00:00-07:00",
+     "last_run": "2026-11-21T06:12:00-07:00",
+     "next_run": "2026-11-22T06:12:00-07:00",
+     "age_hours": 7,
+     "detail": "",
+     "last_data": null
+    },
+    {
+     "key": "calendar",
+     "label": "Calendar sync",
+     "kind": "timer",
+     "ok": true,
+     "state": "active",
+     "result": "pass",
+     "since": "2026-11-18T07:00:00-07:00",
+     "last_run": "2026-11-21T06:16:00-07:00",
+     "next_run": "2026-11-22T06:16:00-07:00",
+     "age_hours": 8,
+     "detail": "",
+     "last_data": null
+    },
+    {
+     "key": "hygiene",
+     "label": "Task hygiene",
+     "kind": "timer",
+     "ok": true,
+     "state": "active",
+     "result": "pass",
+     "since": "2026-11-18T07:00:00-07:00",
+     "last_run": "2026-11-21T06:20:00-07:00",
+     "next_run": "2026-11-22T06:20:00-07:00",
+     "age_hours": 4,
+     "detail": "",
+     "last_data": null
+    },
+    {
+     "key": "bot",
+     "label": "Paper bot",
+     "kind": "timer",
+     "ok": true,
+     "state": "active",
+     "result": "pass",
+     "since": "2026-11-18T07:00:00-07:00",
+     "last_run": "2026-11-21T06:24:00-07:00",
+     "next_run": "2026-11-22T06:24:00-07:00",
+     "age_hours": 5,
+     "detail": "",
+     "last_data": null
+    },
+    {
+     "key": "brokers",
+     "label": "Broker removals",
+     "kind": "timer",
+     "ok": true,
+     "state": "active",
+     "result": "pass",
+     "since": "2026-11-18T07:00:00-07:00",
+     "last_run": "2026-11-21T06:28:00-07:00",
+     "next_run": "2026-11-22T06:28:00-07:00",
+     "age_hours": 6,
+     "detail": "",
+     "last_data": null
+    },
+    {
+     "key": "db",
+     "label": "Database health",
+     "kind": "check",
+     "ok": true,
+     "state": "active",
+     "result": "pass",
+     "since": "2026-11-18T07:00:00-07:00",
+     "last_run": "2026-11-21T06:32:00-07:00",
+     "next_run": "2026-11-22T06:32:00-07:00",
+     "age_hours": 7,
+     "detail": "",
+     "last_data": null
+    },
+    {
+     "key": "photos",
+     "label": "Phone photo sync",
+     "kind": "timer",
+     "ok": false,
+     "state": "waiting",
+     "result": "skipped",
+     "since": "2026-11-18T07:00:00-07:00",
+     "last_run": "2026-11-21T06:36:00-07:00",
+     "next_run": "2026-11-22T06:36:00-07:00",
+     "age_hours": 8,
+     "detail": "Waits for the phone to be plugged in.",
+     "last_data": "2026-11-19T21:05:00-07:00"
+    },
+    {
+     "key": "snap",
+     "label": "Database snapshot",
+     "kind": "check",
+     "ok": true,
+     "state": "active",
+     "result": "pass",
+     "since": "2026-11-18T07:00:00-07:00",
+     "last_run": "2026-11-21T06:40:00-07:00",
+     "next_run": "2026-11-22T06:40:00-07:00",
+     "age_hours": 4,
+     "detail": "",
+     "last_data": null
+    },
+    {
+     "key": "scan",
+     "label": "Virus scan",
+     "kind": "timer",
+     "ok": true,
+     "state": "active",
+     "result": "pass",
+     "since": "2026-11-18T07:00:00-07:00",
+     "last_run": "2026-11-21T06:44:00-07:00",
+     "next_run": "2026-11-22T06:44:00-07:00",
+     "age_hours": 5,
+     "detail": "",
+     "last_data": null
+    }
+   ],
+   "supabase_note": ""
+  }
+ },
+ "folders": [
+  {
+   "name": "it",
+   "files": [
+    {
+     "path": "it/README.md",
+     "size": 1799
+    },
+    {
+     "path": "it/notes.md",
+     "size": 1984
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>it</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

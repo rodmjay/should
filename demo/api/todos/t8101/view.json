@@ -1,0 +1,20 @@
+{
+ "view": "call",
+ "label": "Call",
+ "task": {
+  "content": "Call First Mesa about refunding the $35 overdraft fee, (970) 555-0123",
+  "project": "Money",
+  "due": null
+ },
+ "data": {
+  "tel": "+19705550123",
+  "phone": "(970) 555-0123",
+  "contact": {
+   "id": "c-0023",
+   "name": "First Mesa Credit Union",
+   "relationship": "bank",
+   "company": null
+  }
+ },
+ "desc_html": "<p>Ask for a one-time courtesy refund. Reference: statement dated last month.</p>"
+}

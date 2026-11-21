@@ -1,0 +1,362 @@
+{
+ "plan": {
+  "approved": "2026-08-23",
+  "text": "Keep three lines on the family plan; pay off Leo's phone early if a bonus comes in."
+ },
+ "falloff": [
+  {
+   "from": "2027-08-18",
+   "equipment": "Pixel 7 payment ends",
+   "bill": "-$22.50 a month"
+  },
+  {
+   "from": "2027-05-20",
+   "equipment": "iPhone SE payment ends",
+   "bill": "-$26.50 a month"
+  }
+ ],
+ "tmobile": {
+  "name": "Peak Wireless, 3 lines",
+  "amount_usd": 118.0,
+  "frequency": "monthly",
+  "due_day": 22,
+  "next_due": "2026-11-22",
+  "autopay": true,
+  "status": "active",
+  "rows": [
+   {
+    "name": "Plan, 3 lines",
+    "amount_usd": 105.0
+   },
+   {
+    "name": "Device payments",
+    "amount_usd": 49.0
+   },
+   {
+    "name": "Protection",
+    "amount_usd": 9.0
+   },
+   {
+    "name": "Autopay discount",
+    "amount_usd": -15.0
+   },
+   {
+    "name": "Taxes and fees",
+    "amount_usd": 11.4
+   }
+  ]
+ },
+ "past_due": 0,
+ "promos": [
+  {
+   "line": "••3302",
+   "label": "Trade-in credit",
+   "note": "Ends in 8 months",
+   "usd": 10
+  }
+ ],
+ "lines": [
+  {
+   "id": "ln0",
+   "carrier": "Peak Wireless",
+   "number_last4": "3301",
+   "label": "Sam's line",
+   "user_name": "Sam",
+   "contact_id": "c-0001",
+   "hardware_id": "hw0",
+   "monthly_share_usd": 35,
+   "protection_360": false,
+   "promo_note": null,
+   "promo_usd": null,
+   "status": "active",
+   "change_note": null,
+   "change_on": null,
+   "notes": "",
+   "as_of": "2026-11-16",
+   "created_at": "2025-10-17T09:00:00-07:00",
+   "updated_at": "2026-11-16T09:00:00-07:00",
+   "device": "iPhone 13",
+   "installment": null,
+   "monthly_total": 35
+  },
+  {
+   "id": "ln1",
+   "carrier": "Peak Wireless",
+   "number_last4": "3302",
+   "label": "Nora's line",
+   "user_name": "Nora",
+   "contact_id": "c-0002",
+   "hardware_id": "hw1",
+   "monthly_share_usd": 35,
+   "protection_360": false,
+   "promo_note": null,
+   "promo_usd": null,
+   "status": "active",
+   "change_note": null,
+   "change_on": null,
+   "notes": "",
+   "as_of": "2026-11-16",
+   "created_at": "2025-10-17T09:00:00-07:00",
+   "updated_at": "2026-11-16T09:00:00-07:00",
+   "device": "Pixel 7",
+   "installment": {
+    "id": "in1",
+    "hardware_id": "hw1",
+    "line_id": "ln1",
+    "monthly_usd": 22.5,
+    "balance_usd": 182.0,
+    "payments_left": 9,
+    "final_month": "2027-08",
+    "credit_monthly_usd": null,
+    "credit_note": null,
+    "status": "active",
+    "as_of": "2026-11-16",
+    "notes": "",
+    "created_at": "2025-10-17T09:00:00-07:00",
+    "updated_at": "2026-11-16T09:00:00-07:00",
+    "payoff_usd": 182.0,
+    "final_payment_on": "2027-08-18",
+    "device": "Pixel 7",
+    "user": "Nora",
+    "line": "••3302",
+    "payoff": 182.0,
+    "final_payment": "2027-08-18"
+   },
+   "monthly_total": 57.5
+  },
+  {
+   "id": "ln2",
+   "carrier": "Peak Wireless",
+   "number_last4": "3303",
+   "label": "Leo's line",
+   "user_name": "Leo",
+   "contact_id": "c-0004",
+   "hardware_id": "hw2",
+   "monthly_share_usd": 35,
+   "protection_360": true,
+   "promo_note": null,
+   "promo_usd": null,
+   "status": "active",
+   "change_note": null,
+   "change_on": null,
+   "notes": "",
+   "as_of": "2026-11-16",
+   "created_at": "2025-10-17T09:00:00-07:00",
+   "updated_at": "2026-11-16T09:00:00-07:00",
+   "device": "iPhone SE",
+   "installment": {
+    "id": "in2",
+    "hardware_id": "hw2",
+    "line_id": "ln2",
+    "monthly_usd": 26.5,
+    "balance_usd": 142.0,
+    "payments_left": 6,
+    "final_month": "2027-05",
+    "credit_monthly_usd": null,
+    "credit_note": null,
+    "status": "active",
+    "as_of": "2026-11-16",
+    "notes": "",
+    "created_at": "2025-10-17T09:00:00-07:00",
+    "updated_at": "2026-11-16T09:00:00-07:00",
+    "payoff_usd": 142.0,
+    "final_payment_on": "2027-05-20",
+    "device": "iPhone SE",
+    "user": "Leo",
+    "line": "••3303",
+    "payoff": 142.0,
+    "final_payment": "2027-05-20"
+   },
+   "monthly_total": 61.5
+  }
+ ],
+ "installments": [
+  {
+   "id": "in1",
+   "hardware_id": "hw1",
+   "line_id": "ln1",
+   "monthly_usd": 22.5,
+   "balance_usd": 182.0,
+   "payments_left": 9,
+   "final_month": "2027-08",
+   "credit_monthly_usd": null,
+   "credit_note": null,
+   "status": "active",
+   "as_of": "2026-11-16",
+   "notes": "",
+   "created_at": "2025-10-17T09:00:00-07:00",
+   "updated_at": "2026-11-16T09:00:00-07:00",
+   "payoff_usd": 182.0,
+   "final_payment_on": "2027-08-18",
+   "device": "Pixel 7",
+   "user": "Nora",
+   "line": "••3302",
+   "payoff": 182.0,
+   "final_payment": "2027-08-18"
+  },
+  {
+   "id": "in2",
+   "hardware_id": "hw2",
+   "line_id": "ln2",
+   "monthly_usd": 26.5,
+   "balance_usd": 142.0,
+   "payments_left": 6,
+   "final_month": "2027-05",
+   "credit_monthly_usd": null,
+   "credit_note": null,
+   "status": "active",
+   "as_of": "2026-11-16",
+   "notes": "",
+   "created_at": "2025-10-17T09:00:00-07:00",
+   "updated_at": "2026-11-16T09:00:00-07:00",
+   "payoff_usd": 142.0,
+   "final_payment_on": "2027-05-20",
+   "device": "iPhone SE",
+   "user": "Leo",
+   "line": "••3303",
+   "payoff": 142.0,
+   "final_payment": "2027-05-20"
+  }
+ ],
+ "equipment_monthly": 49.0,
+ "equipment_owed": 324.0,
+ "owed_known": 2,
+ "owed_total": 2,
+ "total_payoff": 324.0,
+ "payoffs_known": 2,
+ "breakdown": [
+  {
+   "cat": "Plan",
+   "items": [
+    {
+     "cat": "Plan",
+     "label": "3 lines",
+     "usd": 105.0,
+     "line": "all"
+    }
+   ],
+   "usd": 105.0,
+   "unknown": false
+  },
+  {
+   "cat": "Devices",
+   "items": [
+    {
+     "cat": "Devices",
+     "label": "Nora's phone",
+     "usd": 22.5,
+     "line": "••3302"
+    },
+    {
+     "cat": "Devices",
+     "label": "Leo's phone",
+     "usd": 26.5,
+     "line": "••3303"
+    }
+   ],
+   "usd": 49.0,
+   "unknown": false
+  },
+  {
+   "cat": "Protection",
+   "items": [
+    {
+     "cat": "Protection",
+     "label": "Leo's phone",
+     "usd": 9.0,
+     "line": "••3303"
+    }
+   ],
+   "usd": 9.0,
+   "unknown": false
+  },
+  {
+   "cat": "Discounts",
+   "items": [
+    {
+     "cat": "Discounts",
+     "label": "Autopay",
+     "usd": -15.0,
+     "line": "all"
+    }
+   ],
+   "usd": -15.0,
+   "unknown": false
+  },
+  {
+   "cat": "Taxes and fees",
+   "items": [
+    {
+     "cat": "Taxes and fees",
+     "label": "Taxes",
+     "usd": 11.4,
+     "line": "all"
+    }
+   ],
+   "usd": 11.4,
+   "unknown": false
+  }
+ ],
+ "breakdown_known": 159.4,
+ "breakdown_rest": 0.0,
+ "bill_date": "2026-10-22",
+ "quo": [
+  {
+   "name": "Texting line",
+   "amount_usd": 15,
+   "frequency": "monthly",
+   "due_day": 6,
+   "next_due": "2026-12-06",
+   "autopay": true,
+   "status": "active"
+  }
+ ],
+ "spares": [
+  {
+   "id": "hw9",
+   "name": "Old iPhone 8",
+   "model": "iPhone 8",
+   "used_by": null,
+   "location": null,
+   "status": "spare",
+   "notes": "Kept as a backup"
+  }
+ ],
+ "timeline": [
+  {
+   "date": "2025-10-17",
+   "what": "Joined the family plan"
+  },
+  {
+   "date": "2025-12-16",
+   "what": "Added Leo's line"
+  },
+  {
+   "date": "2026-02-14",
+   "what": "Nora upgraded her phone"
+  },
+  {
+   "date": "2026-04-15",
+   "what": "Turned on autopay"
+  },
+  {
+   "date": "2026-06-14",
+   "what": "Added protection for Leo"
+  }
+ ],
+ "sync": {
+  "last_iphone_text": "2026-11-20T21:10:00-07:00",
+  "last_note": "Synced while charging overnight."
+ },
+ "counts": {
+  "quo": {
+   "calls": 214,
+   "texts": 530
+  },
+  "iphone": {
+   "calls": 880,
+   "texts": 4120
+  },
+  "rodbot_sends": 688
+ }
+}

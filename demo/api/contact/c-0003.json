@@ -1,0 +1,86 @@
+{
+ "card": {
+  "contact": {
+   "id": "c-0003",
+   "name": "Maya Carter",
+   "important": true,
+   "relationship": "daughter",
+   "circle": "family_kids",
+   "company": null,
+   "job_title": null,
+   "country": "US",
+   "region": "Colorado",
+   "location_source": "area code",
+   "kind": "person",
+   "gender": "female",
+   "gender_source": "first name",
+   "category": "iCloud",
+   "text_tier": "ask",
+   "language": "English",
+   "likes": null,
+   "avoid": null,
+   "notes": ""
+  },
+  "homes": [
+   {
+    "primary_home": true,
+    "household_id": "h1",
+    "household": "The Carters",
+    "role": "child",
+    "address": "418 Juniper Lane",
+    "city": "Cedar Falls",
+    "region": "CO",
+    "address_confirmed": true,
+    "lives_with": "Sam, Nora, Leo"
+   }
+  ],
+  "methods": [],
+  "relationships": [
+   {
+    "relationship": "daughter",
+    "circle": "family_kids",
+    "closeness": 5,
+    "notes": ""
+   }
+  ],
+  "dates": [
+   {
+    "occasion": "birthday",
+    "month": 11,
+    "day": 25,
+    "year_born": 2015,
+    "gift": true
+   }
+  ],
+  "texts": []
+ },
+ "names": {
+  "US": "United States",
+  "MX": "Mexico",
+  "CA": "Canada"
+ },
+ "channels": [
+  "text",
+  "call",
+  "whatsapp",
+  "linkedin",
+  "email",
+  "event"
+ ],
+ "timeline": {
+  "counts": {
+   "call": 1
+  },
+  "rows": [
+   {
+    "at": "2026-11-07T10:00:00-07:00",
+    "channel": "call",
+    "direction": "in",
+    "summary": "Hello!",
+    "group": null,
+    "via": null
+   }
+  ],
+  "count": 1
+ }
+}

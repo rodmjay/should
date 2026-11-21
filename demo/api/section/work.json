@@ -1,0 +1,262 @@
+{
+ "desks": [
+  {
+   "key": "career",
+   "name": "Career Assistant",
+   "status": "ok",
+   "tiles": [
+    {
+     "label": "Open leads",
+     "value": "3",
+     "sub": "1 strong",
+     "tone": ""
+    },
+    {
+     "label": "Replies due",
+     "value": "1",
+     "sub": "today",
+     "tone": ""
+    }
+   ],
+   "report": {
+    "summary": "One strong lead at Northgate Systems; reply drafted.",
+    "date": "2026-11-20"
+   },
+   "act": 0,
+   "tasks": 2
+  },
+  {
+   "key": "legal",
+   "name": "Legal Advisor",
+   "status": "act",
+   "tiles": [
+    {
+     "label": "Agreements",
+     "value": "6",
+     "sub": "on file",
+     "tone": ""
+    },
+    {
+     "label": "Deadlines",
+     "value": "2",
+     "sub": "next 30 days",
+     "tone": ""
+    }
+   ],
+   "report": {
+    "summary": "Annual report ready to sign; the lease renewal reads cleanly.",
+    "date": "2026-11-20"
+   },
+   "act": 1,
+   "tasks": 2
+  },
+  {
+   "key": "pr",
+   "name": "PR Person",
+   "status": "ok",
+   "tiles": [
+    {
+     "label": "Drafts",
+     "value": "2",
+     "sub": "waiting",
+     "tone": ""
+    },
+    {
+     "label": "Profile",
+     "value": "current",
+     "sub": "",
+     "tone": "good"
+    }
+   ],
+   "report": {
+    "summary": "Two posts drafted for the portfolio launch.",
+    "date": "2026-11-20"
+   },
+   "act": 0,
+   "tasks": 2
+  }
+ ],
+ "tasks": [
+  {
+   "id": "t8123",
+   "content": "Reply to Alex at Northgate Systems (draft in the comments)",
+   "description": "Draft asks for the salary range before a call.",
+   "project": "Career",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8124",
+   "content": "Add the Harbor app case study to the portfolio",
+   "description": "",
+   "project": "Career",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 45,
+   "view": null
+  },
+  {
+   "id": "t8120",
+   "content": "Sign the Carter Studio annual report, $10 fee",
+   "description": "Everything is filled in; you sign and pay on the state site.",
+   "project": "Business",
+   "labels": [
+    "Computer",
+    "Money"
+   ],
+   "flagged": true,
+   "due": "2026-12-03",
+   "days_left": 12,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8129",
+   "content": "Read and sign the lease renewal (2 pages)",
+   "description": "Rent goes up $35 a month; the rest is unchanged.",
+   "project": "Home",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-28",
+   "days_left": 7,
+   "overdue": false,
+   "duration_min": 20,
+   "view": null
+  },
+  {
+   "id": "t8144",
+   "content": "Approve the weekly social post draft",
+   "description": "",
+   "project": "Career",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  }
+ ],
+ "task_count": 5,
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "hi": {
+  "error": null,
+  "leads": {
+   "count": 3,
+   "summary": "One strong lead; two maybes. Nothing needs an answer today except Northgate.",
+   "open": [
+    {
+     "fit": "strong",
+     "company": "Northgate Systems",
+     "role": "Lead Product Designer",
+     "location": "Remote",
+     "comp": "$145k–$165k",
+     "recruiter (linkedin)": "Alex Moreno",
+     "status": "reply drafted",
+     "next step": "Sam sends the reply"
+    },
+    {
+     "fit": "maybe",
+     "company": "Bluebird Health",
+     "role": "Senior UX Designer",
+     "location": "Hybrid, Ridgeway",
+     "comp": "$130k",
+     "recruiter (linkedin)": "—",
+     "status": "saved",
+     "next step": "Watch for the salary range"
+    },
+    {
+     "fit": "maybe",
+     "company": "Trailhead Maps",
+     "role": "Product Designer, contract",
+     "location": "Remote",
+     "comp": "$70/h",
+     "recruiter (linkedin)": "—",
+     "status": "saved",
+     "next step": "Evenings only; check hours"
+    }
+   ]
+  },
+  "deadlines": [
+   {
+    "next_due": "2026-12-03",
+    "short_name": "Carter Studio",
+    "legal_name": "Carter Studio LLC",
+    "title": "Annual report",
+    "jurisdiction": "Colorado Secretary of State",
+    "fee_usd": 10,
+    "how_to": "File online; Sam signs",
+    "frequency": "yearly",
+    "todoist_task_id": "t8120",
+    "days_left": 12
+   },
+   {
+    "next_due": "2026-12-16",
+    "short_name": "Carter Studio",
+    "legal_name": "Carter Studio LLC",
+    "title": "Q4 estimated tax",
+    "jurisdiction": "IRS",
+    "fee_usd": null,
+    "how_to": "Direct Pay from checking",
+    "frequency": "quarterly",
+    "todoist_task_id": "",
+    "days_left": 25
+   },
+   {
+    "next_due": "2027-01-30",
+    "short_name": "Carter Studio",
+    "legal_name": "Carter Studio LLC",
+    "title": "Business license renewal",
+    "jurisdiction": "City of Cedar Falls",
+    "fee_usd": 50,
+    "how_to": "Renew online",
+    "frequency": "yearly",
+    "todoist_task_id": "",
+    "days_left": 70
+   },
+   {
+    "next_due": "2027-01-05",
+    "short_name": "Brightline Labs",
+    "legal_name": "Brightline Labs LLC",
+    "title": "Form the LLC",
+    "jurisdiction": "Colorado Secretary of State",
+    "fee_usd": 50,
+    "how_to": "Business Executive prepares; Sam files",
+    "frequency": "once",
+    "todoist_task_id": "",
+    "days_left": 45
+   }
+  ]
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "status": "active",
+ "reason": "Every bill this pay period is covered.",
+ "period_start": "2026-11-20",
+ "period_end": "2026-12-03",
+ "spent": 40,
+ "remaining": 60,
+ "as_of": null,
+ "charges": [],
+ "ideas": [
+  {
+   "name": "Tacos at Trailhead",
+   "kind": "eat",
+   "est_cost_usd": 48,
+   "when_text": null,
+   "city": "Cedar Falls",
+   "link": "",
+   "why": "Your favorite patio"
+  },
+  {
+   "name": "The Scoop ice cream",
+   "kind": "eat",
+   "est_cost_usd": 14,
+   "when_text": null,
+   "city": "Cedar Falls",
+   "link": "",
+   "why": "Kids' pick"
+  },
+  {
+   "name": "Blue Door Bakery brunch",
+   "kind": "eat",
+   "est_cost_usd": 32,
+   "when_text": null,
+   "city": "Cedar Falls",
+   "link": "",
+   "why": "Saturday treat"
+  },
+  {
+   "name": "Copper Kettle Diner",
+   "kind": "eat",
+   "est_cost_usd": 38,
+   "when_text": null,
+   "city": "Cedar Falls",
+   "link": "",
+   "why": "Cheap and quick"
+  },
+  {
+   "name": "Saffron Kitchen takeout",
+   "kind": "eat",
+   "est_cost_usd": 42,
+   "when_text": null,
+   "city": "Cedar Falls",
+   "link": "",
+   "why": "Nora's pick"
+  }
+ ],
+ "over": 0
+}

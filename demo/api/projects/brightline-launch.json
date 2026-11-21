@@ -1,0 +1,83 @@
+{
+ "project": {
+  "id": "p-brightline-launch",
+  "key": "brightline-launch",
+  "kind": "business_launch",
+  "title": "Brightline Labs pilot",
+  "outcome": "Juniper Dental takes bookings through the pilot by spring.",
+  "status": "active",
+  "owner_role": "as-architect",
+  "entity_id": null,
+  "goal_id": null,
+  "todoist_section_id": null,
+  "todoist_task_id": null,
+  "ref": {},
+  "started_on": "2026-09-22",
+  "target_date": null,
+  "done_on": null,
+  "sort": 0,
+  "notes": "112 of 118 tests pass; payouts are next.",
+  "updated_at": "2026-11-20T09:00:00-07:00",
+  "tasks": [
+   {
+    "id": "t8122",
+    "content": "Review the Brightline Labs pricing page draft",
+    "description": "",
+    "project": "Business",
+    "labels": [
+     "Computer"
+    ],
+    "flagged": false,
+    "due": null,
+    "days_left": null,
+    "overdue": false,
+    "duration_min": 20,
+    "view": null,
+    "parent_id": null
+   }
+  ],
+  "done": [
+   {
+    "content": "Write the plan",
+    "completed_at": "2026-11-11"
+   },
+   {
+    "content": "Pick the stack",
+    "completed_at": "2026-11-07"
+   },
+   {
+    "content": "Build bookings",
+    "completed_at": "2026-11-05"
+   }
+  ],
+  "next": {
+   "content": "Review the Brightline Labs pricing page draft",
+   "due": null
+  },
+  "flags": [],
+  "progress": {
+   "done": 3,
+   "total": 4,
+   "pct": 75
+  },
+  "waits": [
+   {
+    "id": "w3",
+    "waiting_on": "Juniper Dental",
+    "item": "Confirm the pilot start date",
+    "check_on": "2026-11-25"
+   }
+  ],
+  "goal": {
+   "level": "year",
+   "title": "Grow the studio"
+  },
+  "dates": [],
+  "section": null,
+  "owner_name": "Software Architect",
+  "when": null,
+  "days_left": null,
+  "trip": null
+ },
+ "tasks_error": null
+}

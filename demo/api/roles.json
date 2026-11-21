@@ -1,0 +1,676 @@
+{
+ "roles": [
+  {
+   "key": "assistant",
+   "name": "Executive Assistant",
+   "nav": "assistant",
+   "owns": "Runs the other roles, the daily brief, every task and the inbox; answers Sam's texts",
+   "status": "act",
+   "items": [
+    {
+     "text": "Money: approve the $45 Summit Card payment for payday",
+     "when": "2026-11-21",
+     "level": "act",
+     "link": "/s/money#bills",
+     "desk": "bookkeeper"
+    },
+    {
+     "text": "Sends to Nora: the weekend plan text (draft ready)",
+     "when": "2026-11-21",
+     "level": "act",
+     "link": "/next/r/assistant#attention",
+     "desk": "assistant"
+    },
+    {
+     "text": "Kitchen faucet: landlord said this week",
+     "when": "2026-11-24",
+     "level": "watch",
+     "link": "/s/home",
+     "desk": "home-manager"
+    }
+   ],
+   "count": 4,
+   "tasks": 47,
+   "needs": 2
+  },
+  {
+   "key": "scheduler",
+   "name": "Scheduler",
+   "nav": "scheduler",
+   "owns": "Sam's time: the routine, calendars, school and kids' activities, appointments, trips and due dates",
+   "status": "watch",
+   "items": [
+    {
+     "text": "Leo's physical isn't booked yet; spring sign-ups need it",
+     "when": null,
+     "level": "watch",
+     "link": "/next/r/scheduler#todos",
+     "desk": "scheduler"
+    },
+    {
+     "text": "Thursday has three evening commitments",
+     "when": "2026-11-24",
+     "level": "watch",
+     "link": "/next/r/scheduler#calendar",
+     "desk": "scheduler"
+    }
+   ],
+   "count": 2,
+   "tasks": 4,
+   "needs": 0
+  },
+  {
+   "key": "bookkeeper",
+   "name": "Accountant",
+   "nav": "accountant",
+   "owns": "Balances, transactions, bills, net worth and the business expense split",
+   "status": "act",
+   "items": [
+    {
+     "text": "Money: Summit Card minimum, $45, due 12/4",
+     "when": "2026-12-04",
+     "level": "act",
+     "link": "/s/money#bills",
+     "desk": "bookkeeper"
+    },
+    {
+     "text": "StreamBox trial renews in 6 days at $11.99",
+     "when": "2026-11-27",
+     "level": "watch",
+     "link": "/s/money#bills",
+     "desk": "bookkeeper"
+    },
+    {
+     "text": "Overdraft fee of $35 last month; refund call queued",
+     "when": null,
+     "level": "watch",
+     "link": "/s/money#bills",
+     "desk": "bookkeeper"
+    }
+   ],
+   "count": 3,
+   "tasks": 7,
+   "needs": 1
+  },
+  {
+   "key": "health",
+   "name": "Health Agent",
+   "nav": "health",
+   "owns": "Training, targets, meal plans, recipes, grocery lists and carts, weigh-ins, appointments and claims",
+   "status": "watch",
+   "items": [
+    {
+     "text": "Workouts: 2 of 4 this week",
+     "when": null,
+     "level": "watch",
+     "link": "/next/r/health#training",
+     "desk": "health"
+    },
+    {
+     "text": "Leo's sports physical isn't booked",
+     "when": null,
+     "level": "watch",
+     "link": "/next/r/health#todos",
+     "desk": "health"
+    }
+   ],
+   "count": 2,
+   "tasks": 5,
+   "needs": 0
+  },
+  {
+   "key": "gifts",
+   "name": "Gift Concierge",
+   "nav": "gifts",
+   "owns": "Birthdays and occasions for family and close friends: gifts, budgets and cards; fills the cart, Sam checks out",
+   "status": "watch",
+   "items": [
+    {
+     "text": "Maya's birthday in 4 days: order the gift today",
+     "when": "2026-11-21",
+     "level": "watch",
+     "link": "/next/r/gifts#gifts",
+     "desk": "gifts"
+    }
+   ],
+   "count": 1,
+   "tasks": 1,
+   "needs": 0
+  },
+  {
+   "key": "relationship-manager",
+   "name": "Relationship Manager",
+   "nav": "relationship manager",
+   "owns": "People lead: family and friends, contacts and households, staying in touch",
+   "status": "watch",
+   "items": [
+    {
+     "text": "Haven't talked to Aunt June in 6 weeks",
+     "when": null,
+     "level": "watch",
+     "link": "/next/phonebook",
+     "desk": "relationship-manager"
+    }
+   ],
+   "count": 1,
+   "tasks": 3,
+   "needs": 0
+  },
+  {
+   "key": "home-manager",
+   "name": "Home Manager",
+   "nav": "home manager",
+   "owns": "The home and the car: chores and supplies, repairs and who pays under the lease, upkeep and registration",
+   "status": "watch",
+   "items": [
+    {
+     "text": "Car registration renews in 9 days, $86",
+     "when": "2026-11-30",
+     "level": "watch",
+     "link": "/next/chores",
+     "desk": "home-manager"
+    },
+    {
+     "text": "Kitchen faucet: waiting on the landlord",
+     "when": "2026-11-24",
+     "level": "watch",
+     "link": "/next/chores",
+     "desk": "home-manager"
+    }
+   ],
+   "count": 2,
+   "tasks": 10,
+   "needs": 0
+  },
+  {
+   "key": "financial",
+   "name": "Financial Advisor",
+   "nav": "financial",
+   "owns": "Credit (scores, reports, negative items) and investing and retirement (the paper bot, the 401(k), the emergency fund)",
+   "status": "watch",
+   "items": [
+    {
+     "text": "One collection to dispute; letter drafted",
+     "when": null,
+     "level": "watch",
+     "link": "/s/credit#plan",
+     "desk": "financial"
+    }
+   ],
+   "count": 1,
+   "tasks": 3,
+   "needs": 0
+  },
+  {
+   "key": "product",
+   "name": "Product Manager",
+   "nav": "product",
+   "owns": "Should as a product: name, logo, brand, roadmap and the public page",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 1,
+   "needs": 0
+  },
+  {
+   "key": "business",
+   "name": "Business Executive",
+   "nav": "business",
+   "owns": "Sam's companies: Carter Studio LLC and the planned Brightline Labs; filings, renewals and taxes",
+   "status": "watch",
+   "items": [
+    {
+     "text": "Annual report due in 12 days ($10)",
+     "when": "2026-12-03",
+     "level": "watch",
+     "link": "/next/companies",
+     "desk": "business"
+    }
+   ],
+   "count": 1,
+   "tasks": 3,
+   "needs": 0
+  },
+  {
+   "key": "relationships",
+   "name": "Relationship Coach",
+   "nav": "relationship coach",
+   "owns": "Sam and Nora's relationship (a placeholder until Sam turns it on)",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 0,
+   "needs": 0
+  },
+  {
+   "key": "it",
+   "name": "IT Guy",
+   "nav": "it",
+   "owns": "Internet, Wi-Fi, phones and lines, devices, service health and the technical security fixes",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 2,
+   "needs": 0
+  },
+  {
+   "key": "as-architect",
+   "name": "Software Architect",
+   "nav": "architect",
+   "owns": "Brightline Labs lead: the product API, the plan and ADRs, the software team",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 1,
+   "needs": 0
+  },
+  {
+   "key": "events",
+   "name": "Event Planner",
+   "nav": "events",
+   "owns": "Events Sam hosts: guests, RSVPs, invites, timeline, run sheet",
+   "status": "watch",
+   "items": [
+    {
+     "text": "Leo's party: bounce house deposit due in 5 days",
+     "when": "2026-11-26",
+     "level": "watch",
+     "link": "/next/projects",
+     "desk": "events"
+    }
+   ],
+   "count": 1,
+   "tasks": 2,
+   "needs": 0
+  },
+  {
+   "key": "local-guide",
+   "name": "Local Guide",
+   "nav": "local-guide",
+   "owns": "Places Sam has been, places the family might like, local events, weekend picks and the weather",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 0,
+   "needs": 0
+  },
+  {
+   "key": "text-concierge",
+   "name": "Text Concierge",
+   "nav": "texting",
+   "owns": "The texting flow: the listener, intake, groups and menus, prompts and rules",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 0,
+   "needs": 0
+  },
+  {
+   "key": "philosopher",
+   "name": "Philosopher",
+   "nav": "philosopher",
+   "owns": "How Should thinks: the north star, the knowledge base, the reading list and feature proposals",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 0,
+   "needs": 0
+  },
+  {
+   "key": "security",
+   "name": "Security Officer",
+   "nav": "security",
+   "owns": "Security threats: suspicious logins, breaches, weak and reused passwords, two-step sign-in",
+   "status": "watch",
+   "items": [
+    {
+     "text": "One reused password on a low-risk account",
+     "when": null,
+     "level": "watch",
+     "link": "/next/r/security#todos",
+     "desk": "security"
+    }
+   ],
+   "count": 1,
+   "tasks": 3,
+   "needs": 0
+  },
+  {
+   "key": "compliance",
+   "name": "Compliance Officer",
+   "nav": "compliance",
+   "owns": "Checks agent actions against Sam's values, the law and each site's terms",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 0,
+   "needs": 0
+  },
+  {
+   "key": "dba",
+   "name": "Database Administrator",
+   "nav": "dba",
+   "owns": "Every database schema change, plus performance, health and backups",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 0,
+   "needs": 0
+  },
+  {
+   "key": "designer",
+   "name": "Designer",
+   "nav": "designer",
+   "owns": "The design system and the look of everything Should builds",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 0,
+   "needs": 0
+  },
+  {
+   "key": "media",
+   "name": "Media Concierge",
+   "nav": "media",
+   "owns": "Picks what the family watches: one strong pick, where to stream it, the queue and the watched log",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 1,
+   "needs": 0
+  },
+  {
+   "key": "relocation",
+   "name": "Relocation Expert",
+   "nav": "relocation",
+   "owns": "Moves end to end: the lease, the search, the move plan, movers, utilities and address changes",
+   "status": "watch",
+   "items": [
+    {
+     "text": "Lease renewal: sign within 7 days",
+     "when": "2026-11-28",
+     "level": "watch",
+     "link": "/next/projects",
+     "desk": "relocation"
+    }
+   ],
+   "count": 1,
+   "tasks": 3,
+   "needs": 0
+  },
+  {
+   "key": "career",
+   "name": "Career Assistant",
+   "nav": "career",
+   "owns": "Job search and freelance work: leads, recruiter replies, the resume and the portfolio",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 2,
+   "needs": 0
+  },
+  {
+   "key": "pr",
+   "name": "PR Person",
+   "nav": "pr",
+   "owns": "Sam's public profile: bios, the portfolio site and drafted posts (nothing posts without Sam's yes)",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 2,
+   "needs": 0
+  },
+  {
+   "key": "shopping",
+   "name": "Shopping Expert",
+   "nav": "shopping",
+   "owns": "Wise purchases: research, the wish list, price watch and cart prep (never buys)",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 2,
+   "needs": 0
+  },
+  {
+   "key": "clothier",
+   "name": "Clothier",
+   "nav": "clothier",
+   "owns": "Sam's clothes: wardrobe, outfit of the day, packing lists and care",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 1,
+   "needs": 0
+  },
+  {
+   "key": "pets",
+   "name": "Pet Expert",
+   "nav": "pets",
+   "owns": "Biscuit the dog: the vet, food and supplies, and the plan for trips",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 1,
+   "needs": 0
+  },
+  {
+   "key": "coach",
+   "name": "Life Coach",
+   "nav": "coach",
+   "owns": "How Sam is doing on everything: weekly scorecard, gauges, goals and the Saturday sit-down",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 0,
+   "needs": 0
+  },
+  {
+   "key": "business_coach",
+   "name": "Business Coach",
+   "nav": "business-coach",
+   "owns": "Long-term coaching for Carter Studio and Brightline Labs",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 1,
+   "needs": 0
+  },
+  {
+   "key": "travel",
+   "name": "Travel Agent",
+   "nav": "travel",
+   "owns": "Trips, fares, stays and cars; search and read only, Sam books from a link",
+   "status": "watch",
+   "items": [
+    {
+     "text": "Spring trip: pick dates to lock the fare",
+     "when": null,
+     "level": "watch",
+     "link": "/next/r/travel#trips",
+     "desk": "travel"
+    }
+   ],
+   "count": 1,
+   "tasks": 2,
+   "needs": 0
+  },
+  {
+   "key": "investigator",
+   "name": "Investigator",
+   "nav": "investigator",
+   "owns": "Who is this and can we trust it: unknown numbers, duplicates, family gaps, scams; data-broker removals",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 0,
+   "needs": 0
+  },
+  {
+   "key": "legal",
+   "name": "Legal Advisor",
+   "nav": "legal",
+   "owns": "Agreements and deadlines: the lease, the LLC, the family trust plan (not a lawyer)",
+   "status": "act",
+   "items": [
+    {
+     "text": "Legal: sign the Carter Studio annual report",
+     "when": "2026-12-03",
+     "level": "act",
+     "link": "/next/companies",
+     "desk": "legal"
+    },
+    {
+     "text": "Lease renewal language checked: no surprises",
+     "when": "2026-11-28",
+     "level": "watch",
+     "link": "/next/projects",
+     "desk": "legal"
+    }
+   ],
+   "count": 2,
+   "tasks": 2,
+   "needs": 1
+  },
+  {
+   "key": "music",
+   "name": "Music Producer",
+   "nav": "music",
+   "owns": "The family piano and music software: recordings and sheet music",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 1,
+   "needs": 0
+  },
+  {
+   "key": "webmaster",
+   "name": "Webmaster",
+   "nav": "webmaster",
+   "owns": "The portal: pages, views and fixes",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 0,
+   "needs": 0
+  }
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ },
+ "departments": [
+  {
+   "key": "money",
+   "name": "Money",
+   "lead": "bookkeeper",
+   "pages": [
+    "bookkeeper",
+    "financial"
+   ]
+  },
+  {
+   "key": "shopping-style",
+   "name": "Shopping & Style",
+   "lead": "shopping",
+   "pages": [
+    "shopping",
+    "clothier",
+    "gifts"
+   ]
+  },
+  {
+   "key": "time-travel",
+   "name": "Time & Travel",
+   "lead": "scheduler",
+   "pages": [
+    "scheduler",
+    "travel"
+   ]
+  },
+  {
+   "key": "home",
+   "name": "Home",
+   "lead": "home-manager",
+   "pages": [
+    "home-manager",
+    "relocation",
+    "pets"
+   ]
+  },
+  {
+   "key": "health-life",
+   "name": "Health",
+   "lead": "health",
+   "pages": [
+    "health"
+   ]
+  },
+  {
+   "key": "fun-local",
+   "name": "Fun & Local",
+   "lead": "local-guide",
+   "pages": [
+    "local-guide",
+    "events",
+    "media",
+    "music"
+   ]
+  },
+  {
+   "key": "people",
+   "name": "People",
+   "lead": "relationship-manager",
+   "pages": [
+    "relationship-manager",
+    "investigator",
+    "relationships"
+   ]
+  },
+  {
+   "key": "career-business",
+   "name": "Career & Business",
+   "lead": "career",
+   "pages": [
+    "career",
+    "business",
+    "legal",
+    "pr"
+   ]
+  },
+  {
+   "key": "systems",
+   "name": "Systems",
+   "lead": "it",
+   "pages": [
+    "it",
+    "webmaster",
+    "product",
+    "dba",
+    "designer"
+   ]
+  },
+  {
+   "key": "brightline-labs",
+   "name": "Brightline Labs",
+   "lead": "as-architect",
+   "pages": [
+    "as-architect"
+   ]
+  }
+ ],
+ "aliases": {
+  "housekeeper": "home-manager",
+  "handyman": "home-manager",
+  "fashion": "clothier",
+  "credit": "financial",
+  "wealth": "financial"
+ },
+ "needs_total": 4
+}

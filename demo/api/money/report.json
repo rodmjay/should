@@ -1,0 +1,293 @@
+{
+ "live": true,
+ "forecast": {
+  "to": "2026-12-18",
+  "next_payday": "2026-12-04",
+  "points": [
+   {
+    "day": "2026-11-22",
+    "balance": 2104.39,
+    "out": 136.0,
+    "income": 0.0
+   },
+   {
+    "day": "2026-11-23",
+    "balance": 2086.39,
+    "out": 18.0,
+    "income": 0.0
+   },
+   {
+    "day": "2026-11-24",
+    "balance": 2068.39,
+    "out": 18.0,
+    "income": 0.0
+   },
+   {
+    "day": "2026-11-25",
+    "balance": 2005.39,
+    "out": 63.0,
+    "income": 0.0
+   },
+   {
+    "day": "2026-11-26",
+    "balance": 1987.39,
+    "out": 18.0,
+    "income": 0.0
+   },
+   {
+    "day": "2026-11-27",
+    "balance": 1969.39,
+    "out": 18.0,
+    "income": 0.0
+   },
+   {
+    "day": "2026-11-28",
+    "balance": 1811.39,
+    "out": 158.0,
+    "income": 0.0
+   },
+   {
+    "day": "2026-11-29",
+    "balance": 1793.39,
+    "out": 18.0,
+    "income": 0.0
+   },
+   {
+    "day": "2026-11-30",
+    "balance": 1775.39,
+    "out": 18.0,
+    "income": 0.0
+   },
+   {
+    "day": "2026-12-01",
+    "balance": 562.39,
+    "out": 1213.0,
+    "income": 0.0
+   },
+   {
+    "day": "2026-12-02",
+    "balance": 499.39,
+    "out": 63.0,
+    "income": 0.0
+   },
+   {
+    "day": "2026-12-03",
+    "balance": 449.39,
+    "out": 50.0,
+    "income": 0.0
+   },
+   {
+    "day": "2026-12-04",
+    "balance": 2349.39,
+    "out": 280.4,
+    "income": 2180.4
+   },
+   {
+    "day": "2026-12-05",
+    "balance": 2191.39,
+    "out": 158.0,
+    "income": 0.0
+   },
+   {
+    "day": "2026-12-06",
+    "balance": 2173.39,
+    "out": 18.0,
+    "income": 0.0
+   },
+   {
+    "day": "2026-12-07",
+    "balance": 2139.9,
+    "out": 33.49,
+    "income": 0.0
+   },
+   {
+    "day": "2026-12-08",
+    "balance": 1941.9,
+    "out": 198.0,
+    "income": 0.0
+   },
+   {
+    "day": "2026-12-09",
+    "balance": 1813.9,
+    "out": 128.0,
+    "income": 0.0
+   },
+   {
+    "day": "2026-12-10",
+    "balance": 1585.9,
+    "out": 228.0,
+    "income": 0.0
+   },
+   {
+    "day": "2026-12-11",
+    "balance": 1567.9,
+    "out": 18.0,
+    "income": 0.0
+   },
+   {
+    "day": "2026-12-12",
+    "balance": 1280.7,
+    "out": 287.2,
+    "income": 0.0
+   },
+   {
+    "day": "2026-12-13",
+    "balance": 1262.7,
+    "out": 18.0,
+    "income": 0.0
+   },
+   {
+    "day": "2026-12-14",
+    "balance": 1241.71,
+    "out": 20.99,
+    "income": 0.0
+   },
+   {
+    "day": "2026-12-15",
+    "balance": 814.71,
+    "out": 427.0,
+    "income": 0.0
+   },
+   {
+    "day": "2026-12-16",
+    "balance": 751.71,
+    "out": 63.0,
+    "income": 0.0
+   },
+   {
+    "day": "2026-12-17",
+    "balance": 733.71,
+    "out": 18.0,
+    "income": 0.0
+   },
+   {
+    "day": "2026-12-18",
+    "balance": 2684.36,
+    "out": 229.75,
+    "income": 2180.4
+   }
+  ],
+  "periods": [
+   {
+    "opening": 2240.39,
+    "bar": 250
+   }
+  ]
+ },
+ "forecast_error": null,
+ "alert_as_of": "2026-11-21",
+ "actions": [
+  {
+   "rank": 1,
+   "action": "Cancel the StreamBox trial before it renews",
+   "effect_usd": 11.99,
+   "by_date": "2026-11-27"
+  },
+  {
+   "rank": 2,
+   "action": "Ask First Mesa to refund the $35 overdraft fee",
+   "effect_usd": 35,
+   "by_date": "2026-12-04"
+  }
+ ],
+ "as_of": "2026-11-21T06:15:00-07:00",
+ "left_to_spend": 436.63,
+ "earnings": {
+  "budget": 4360,
+  "actual": 4360.8
+ },
+ "budget": [
+  {
+   "slug": "groceries",
+   "name": "Groceries",
+   "budget": 600,
+   "spent": 419.24,
+   "left": 180.76
+  },
+  {
+   "slug": "dining",
+   "name": "Dining & Drinks",
+   "budget": 160,
+   "spent": 188.55,
+   "left": -28.55
+  },
+  {
+   "slug": "auto",
+   "name": "Auto & Transport",
+   "budget": 220,
+   "spent": 104.11,
+   "left": 115.89
+  },
+  {
+   "slug": "health",
+   "name": "Health",
+   "budget": 80,
+   "spent": 136.47,
+   "left": -56.47
+  },
+  {
+   "slug": "home",
+   "name": "Home",
+   "budget": 1600,
+   "spent": 1209.0,
+   "left": 391.0
+  },
+  {
+   "slug": "kids",
+   "name": "Kids",
+   "budget": 150,
+   "spent": 60.64,
+   "left": 89.36
+  },
+  {
+   "slug": "ent",
+   "name": "Entertainment",
+   "budget": 60,
+   "spent": 52.54,
+   "left": 7.46
+  },
+  {
+   "slug": "bills",
+   "name": "Bills & Utilities",
+   "budget": 700,
+   "spent": 1182.82,
+   "left": -482.82
+  },
+  {
+   "slug": "shop",
+   "name": "Shopping",
+   "budget": 100,
+   "spent": 0.0,
+   "left": 100.0
+  },
+  {
+   "slug": "gifts",
+   "name": "Gifts",
+   "budget": 60,
+   "spent": 0.0,
+   "left": 60.0
+  },
+  {
+   "slug": "pets",
+   "name": "Pets",
+   "budget": 60,
+   "spent": 0.0,
+   "left": 60.0
+  },
+  {
+   "slug": "fees",
+   "name": "Fees",
+   "budget": 0,
+   "spent": 0.0,
+   "left": 0.0
+  },
+  {
+   "slug": "spending_total",
+   "name": "All spending",
+   "budget": 3790,
+   "spent": 3353.37,
+   "left": 436.63
+  }
+ ],
+ "savings": 300
+}

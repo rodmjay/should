@@ -1,0 +1,53 @@
+{
+ "project": {
+  "id": "p-thanksgiving",
+  "key": "thanksgiving",
+  "kind": "event",
+  "title": "Thanksgiving dinner",
+  "outcome": "Dinner for nine at our place with Grandpa Ray and the Wynns.",
+  "status": "active",
+  "owner_role": "events",
+  "entity_id": null,
+  "goal_id": null,
+  "todoist_section_id": null,
+  "todoist_task_id": null,
+  "ref": {},
+  "started_on": "2026-11-12",
+  "target_date": null,
+  "done_on": null,
+  "sort": 0,
+  "notes": "Menu set; Jess brings pies.",
+  "updated_at": "2026-11-20T09:00:00-07:00",
+  "tasks": [],
+  "done": [
+   {
+    "content": "Invite everyone",
+    "completed_at": "2026-11-20"
+   },
+   {
+    "content": "Plan the menu",
+    "completed_at": "2026-11-17"
+   },
+   {
+    "content": "Borrow folding chairs",
+    "completed_at": "2026-11-14"
+   }
+  ],
+  "next": null,
+  "flags": [],
+  "progress": {
+   "done": 3,
+   "total": 3,
+   "pct": 100
+  },
+  "waits": [],
+  "goal": null,
+  "dates": [],
+  "section": "Thanksgiving",
+  "owner_name": "Event Planner",
+  "when": "2026-11-27",
+  "days_left": 6,
+  "trip": null
+ },
+ "tasks_error": null
+}

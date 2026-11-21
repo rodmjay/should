@@ -1,0 +1,826 @@
+{
+ "role": {
+  "key": "scheduler",
+  "name": "Scheduler",
+  "nav": "scheduler",
+  "file": "scheduler/README.md",
+  "owns": "Sam's time: the routine, calendars, school and kids' activities, appointments, trips and due dates",
+  "areas": [],
+  "widgets": [
+   "calendar",
+   "schedule",
+   "week"
+  ]
+ },
+ "status": "watch",
+ "summary": "Planned 9.5 focus hours this week and kept Sunday clear.",
+ "items": [
+  {
+   "text": "Leo's physical isn't booked yet; spring sign-ups need it",
+   "when": null,
+   "level": "watch",
+   "link": "/next/r/scheduler#todos"
+  },
+  {
+   "text": "Thursday has three evening commitments",
+   "when": "2026-11-24",
+   "level": "watch",
+   "link": "/next/r/scheduler#calendar"
+  }
+ ],
+ "needs": [],
+ "watch": [
+  {
+   "text": "Leo's physical isn't booked yet; spring sign-ups need it",
+   "when": null,
+   "level": "watch",
+   "link": "/next/r/scheduler#todos"
+  },
+  {
+   "text": "Thursday has three evening commitments",
+   "when": "2026-11-24",
+   "level": "watch",
+   "link": "/next/r/scheduler#calendar"
+  }
+ ],
+ "tasks": [
+  {
+   "id": "t8110",
+   "content": "Schedule Leo's sports physical, (970) 555-0119",
+   "description": "Needed before spring soccer sign-ups.",
+   "project": "Health",
+   "labels": [
+    "Phone"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 10,
+   "view": "call"
+  },
+  {
+   "id": "t8125",
+   "content": "Sign Maya's field trip permission slip",
+   "description": "Science museum, $12 for the bus.",
+   "project": "Family",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  },
+  {
+   "id": "t8132",
+   "content": "Pick dates for the spring coast trip",
+   "description": "Three options are priced on the Travel desk.",
+   "project": "Travel",
+   "labels": [],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 15,
+   "view": null
+  },
+  {
+   "id": "t8146",
+   "content": "Sign up Leo for spring soccer, $95",
+   "description": "",
+   "project": "Family",
+   "labels": [
+    "Computer",
+    "Money"
+   ],
+   "flagged": false,
+   "due": "2026-12-21",
+   "days_left": 30,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  }
+ ],
+ "routines": [
+  {
+   "name": "daily-schedule",
+   "when": "6:00 AM",
+   "does": "Builds today's time blocks from the calendar and tasks",
+   "prompt": null
+  },
+  {
+   "name": "calendar-sync",
+   "when": "hourly",
+   "does": "Copies the calendar into the database",
+   "prompt": null
+  }
+ ],
+ "report": {
+  "latest": {
+   "path": "scheduler/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "Planned 9.5 focus hours this week and kept Sunday clear.",
+   "html": "<p>Planned 9.5 focus hours this week and kept Sunday clear.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "scheduler/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Free evenings",
+   "value": "2",
+   "sub": "this week",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Events",
+   "value": "11",
+   "sub": "next 14 days",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Focus hours",
+   "value": "9.5",
+   "sub": "this week",
+   "tone": "good",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [],
+ "widgets": {
+  "calendar": {
+   "cal": {
+    "rows": [
+     {
+      "id": "ev0",
+      "day": "2026-11-21",
+      "time": "17:00",
+      "title": "Soccer practice",
+      "location": "Ridgeway Park",
+      "is_daily_plan": false
+     },
+     {
+      "id": "ev1",
+      "day": "2026-11-21",
+      "time": "08:00",
+      "title": "[daily-plan] Deep work",
+      "location": "",
+      "is_daily_plan": true
+     },
+     {
+      "id": "ev2",
+      "day": "2026-11-22",
+      "time": "",
+      "title": "Family day",
+      "location": "",
+      "is_daily_plan": false
+     },
+     {
+      "id": "ev3",
+      "day": "2026-11-23",
+      "time": "08:30",
+      "title": "Dentist, Maya",
+      "location": "Cedar Falls Dental",
+      "is_daily_plan": false
+     },
+     {
+      "id": "ev4",
+      "day": "2026-11-24",
+      "time": "19:00",
+      "title": "Date night",
+      "location": "Trailhead Tacos",
+      "is_daily_plan": false
+     },
+     {
+      "id": "ev5",
+      "day": "2026-11-24",
+      "time": "12:00",
+      "title": "Grandpa Ray visits for lunch",
+      "location": "",
+      "is_daily_plan": false
+     },
+     {
+      "id": "ev6",
+      "day": "2026-11-25",
+      "time": "10:30",
+      "title": "Library story time",
+      "location": "Cedar Falls Library",
+      "is_daily_plan": false
+     },
+     {
+      "id": "ev7",
+      "day": "2026-11-26",
+      "time": "16:00",
+      "title": "Leo's game",
+      "location": "Ridgeway Park",
+      "is_daily_plan": false
+     },
+     {
+      "id": "ev8",
+      "day": "2026-11-26",
+      "time": "17:00",
+      "title": "Soccer practice",
+      "location": "Ridgeway Park",
+      "is_daily_plan": false
+     },
+     {
+      "id": "ev9",
+      "day": "2026-11-27",
+      "time": "12:00",
+      "title": "Grandpa Ray visits for lunch",
+      "location": "",
+      "is_daily_plan": false
+     },
+     {
+      "id": "ev10",
+      "day": "2026-11-28",
+      "time": "15:30",
+      "title": "School conference",
+      "location": "Cedar Falls Middle",
+      "is_daily_plan": false
+     },
+     {
+      "id": "ev11",
+      "day": "2026-11-28",
+      "time": "08:30",
+      "title": "Dentist, Maya",
+      "location": "Cedar Falls Dental",
+      "is_daily_plan": false
+     },
+     {
+      "id": "ev12",
+      "day": "2026-11-29",
+      "time": "",
+      "title": "Family day",
+      "location": "",
+      "is_daily_plan": false
+     },
+     {
+      "id": "ev13",
+      "day": "2026-11-30",
+      "time": "16:00",
+      "title": "Piano lesson",
+      "location": "Rosa's studio",
+      "is_daily_plan": false
+     },
+     {
+      "id": "ev14",
+      "day": "2026-11-30",
+      "time": "10:30",
+      "title": "Library story time",
+      "location": "Cedar Falls Library",
+      "is_daily_plan": false
+     },
+     {
+      "id": "ev15",
+      "day": "2026-12-01",
+      "time": "08:30",
+      "title": "Dentist, Maya",
+      "location": "Cedar Falls Dental",
+      "is_daily_plan": false
+     },
+     {
+      "id": "ev16",
+      "day": "2026-12-02",
+      "time": "19:00",
+      "title": "Date night",
+      "location": "Trailhead Tacos",
+      "is_daily_plan": false
+     },
+     {
+      "id": "ev17",
+      "day": "2026-12-02",
+      "time": "12:00",
+      "title": "Grandpa Ray visits for lunch",
+      "location": "",
+      "is_daily_plan": false
+     },
+     {
+      "id": "ev18",
+      "day": "2026-12-03",
+      "time": "10:30",
+      "title": "Library story time",
+      "location": "Cedar Falls Library",
+      "is_daily_plan": false
+     },
+     {
+      "id": "ev19",
+      "day": "2026-12-04",
+      "time": "16:00",
+      "title": "Leo's game",
+      "location": "Ridgeway Park",
+      "is_daily_plan": false
+     },
+     {
+      "id": "ev20",
+      "day": "2026-12-04",
+      "time": "17:00",
+      "title": "Soccer practice",
+      "location": "Ridgeway Park",
+      "is_daily_plan": false
+     }
+    ]
+   },
+   "error": null
+  },
+  "schedule": {
+   "date": "2026-11-21",
+   "generated_at": "2026-11-21T06:00:00-07:00",
+   "summary": "A light day built around family time.",
+   "blocks": [
+    {
+     "start": "07:00",
+     "end": "07:30",
+     "title": "Coffee and the weekly list",
+     "kind": "routine",
+     "source": "plan",
+     "todoist_id": "",
+     "note": "",
+     "calendar_event_id": "",
+     "done": true
+    },
+    {
+     "start": "07:30",
+     "end": "08:30",
+     "title": "Pancake breakfast",
+     "kind": "personal",
+     "source": "calendar",
+     "todoist_id": "",
+     "note": "",
+     "calendar_event_id": "evt00015473",
+     "done": true
+    },
+    {
+     "start": "08:30",
+     "end": "09:30",
+     "title": "Weekly review with Life Coach",
+     "kind": "routine",
+     "source": "plan",
+     "todoist_id": "",
+     "note": "",
+     "calendar_event_id": "",
+     "done": true
+    },
+    {
+     "start": "09:30",
+     "end": "11:30",
+     "title": "Family hike",
+     "kind": "personal",
+     "source": "calendar",
+     "todoist_id": "",
+     "note": "",
+     "calendar_event_id": "evt00006459",
+     "done": false
+    },
+    {
+     "start": "11:30",
+     "end": "12:30",
+     "title": "Lunch",
+     "kind": "personal",
+     "source": "calendar",
+     "todoist_id": "",
+     "note": "",
+     "calendar_event_id": "evt00001556",
+     "done": false
+    },
+    {
+     "start": "12:30",
+     "end": "13:30",
+     "title": "Replace the furnace filter",
+     "kind": "task",
+     "source": "todoist",
+     "todoist_id": "t8135",
+     "note": "",
+     "calendar_event_id": "",
+     "done": false
+    },
+    {
+     "start": "13:30",
+     "end": "15:00",
+     "title": "Open afternoon",
+     "kind": "buffer",
+     "source": "plan",
+     "todoist_id": "",
+     "note": "",
+     "calendar_event_id": "",
+     "done": false
+    },
+    {
+     "start": "15:00",
+     "end": "16:00",
+     "title": "Grocery pickup",
+     "kind": "task",
+     "source": "plan",
+     "todoist_id": "",
+     "note": "",
+     "calendar_event_id": "",
+     "done": false
+    },
+    {
+     "start": "16:00",
+     "end": "17:30",
+     "title": "Leo's game",
+     "kind": "personal",
+     "source": "calendar",
+     "todoist_id": "",
+     "note": "",
+     "calendar_event_id": "evt00005022",
+     "done": false
+    },
+    {
+     "start": "17:30",
+     "end": "18:30",
+     "title": "Dinner",
+     "kind": "personal",
+     "source": "calendar",
+     "todoist_id": "",
+     "note": "",
+     "calendar_event_id": "evt00002237",
+     "done": false
+    },
+    {
+     "start": "18:30",
+     "end": "20:30",
+     "title": "Pizza and board games",
+     "kind": "personal",
+     "source": "calendar",
+     "todoist_id": "",
+     "note": "",
+     "calendar_event_id": "evt00021882",
+     "done": false
+    },
+    {
+     "start": "20:30",
+     "end": "22:00",
+     "title": "Movie",
+     "kind": "personal",
+     "source": "calendar",
+     "todoist_id": "",
+     "note": "",
+     "calendar_event_id": "evt00001578",
+     "done": false
+    }
+   ],
+   "budget": {
+    "day_spend_cap": {
+     "lyft": 0,
+     "food_out": 15
+    },
+    "lyft_until": "2026-12-04",
+    "lyft_note": "Car is fine; no rides needed.",
+    "money_order_today": [
+     "Keep spending under $15 until payday",
+     "Groceries are covered",
+     "No new subscriptions",
+     "Fun money: $60 left",
+     "Payday 12/4"
+    ]
+   },
+   "nutrition": {
+    "targets": "About 2,200 kcal and 150 g protein",
+    "breakfast": "Veggie egg scramble and fruit",
+    "lunch": "Turkey wraps",
+    "snack": "Apple and peanut butter",
+    "dinner": "Chicken tinga tacos",
+    "sweet": "Mango rice pudding"
+   },
+   "unscheduled": [
+    {
+     "title": "Book the oil change",
+     "why": "No call window left today"
+    },
+    {
+     "title": "Pick dates for the spring coast trip",
+     "why": "Better on Saturday"
+    },
+    {
+     "title": "Update the portfolio",
+     "why": "Needs a long block"
+    },
+    {
+     "title": "Book Biscuit's vet visit",
+     "why": "Clinic closed at lunch"
+    }
+   ],
+   "notes": [
+    "Payday is Friday 12/4.",
+    "Nora works late on Thursdays.",
+    "Leo has practice at 5.",
+    "Keep Sunday clear.",
+    "The oil change can wait until next week.",
+    "Grandpa Ray visits for lunch this week.",
+    "Recycling goes out tonight."
+   ]
+  },
+  "week": [
+   {
+    "id": "t8111",
+    "content": "Pick up the prescription at Pine Street Pharmacy",
+    "description": "Ready after 3 PM.",
+    "project": "Health",
+    "labels": [
+     "Errands"
+    ],
+    "flagged": false,
+    "due": "2026-11-23",
+    "days_left": 2,
+    "overdue": false,
+    "duration_min": 15,
+    "view": null
+   },
+   {
+    "id": "t8112",
+    "content": "Cook: chicken tinga tacos",
+    "description": "Thaw the chicken in the morning.",
+    "project": "Health",
+    "labels": [
+     "Home"
+    ],
+    "flagged": false,
+    "due": "2026-11-21",
+    "days_left": 0,
+    "overdue": false,
+    "duration_min": 45,
+    "view": "recipe"
+   },
+   {
+    "id": "t8113",
+    "content": "Workout: upper body",
+    "description": "",
+    "project": "Health",
+    "labels": [
+     "Health"
+    ],
+    "flagged": false,
+    "due": "2026-11-23",
+    "days_left": 2,
+    "overdue": false,
+    "duration_min": 50,
+    "view": null
+   },
+   {
+    "id": "t8114",
+    "content": "Approve the Walmart cart for the week, $142",
+    "description": "Cart filled from the meal plan.",
+    "project": "Shopping",
+    "labels": [
+     "Computer",
+     "Money"
+    ],
+    "flagged": false,
+    "due": "2026-11-23",
+    "days_left": 2,
+    "overdue": false,
+    "duration_min": 5,
+    "view": null
+   },
+   {
+    "id": "t8115",
+    "content": "Order Maya's birthday gift (link in the notes)",
+    "description": "Watercolor set, $34. Arrives in 2 days.",
+    "project": "Shopping",
+    "labels": [
+     "Computer",
+     "Money"
+    ],
+    "flagged": true,
+    "due": "2026-11-23",
+    "days_left": 2,
+    "overdue": false,
+    "duration_min": 10,
+    "view": null
+   },
+   {
+    "id": "t8116",
+    "content": "Cancel the unused StreamBox trial before it renews",
+    "description": "Renews at $11.99 a month.",
+    "project": "Subscriptions",
+    "labels": [
+     "Computer"
+    ],
+    "flagged": false,
+    "due": "2026-11-27",
+    "days_left": 6,
+    "overdue": false,
+    "duration_min": 5,
+    "view": null
+   },
+   {
+    "id": "t8119",
+    "content": "Plug the phone in overnight for the backup",
+    "description": "",
+    "project": "Computer & Security",
+    "labels": [
+     "Home"
+    ],
+    "flagged": false,
+    "due": "2026-11-23",
+    "days_left": 2,
+    "overdue": false,
+    "duration_min": 5,
+    "view": null
+   },
+   {
+    "id": "t8121",
+    "content": "Send the November invoice to Juniper Dental (draft ready)",
+    "description": "$1,200 for the booking page refresh.",
+    "project": "Business",
+    "labels": [
+     "Computer"
+    ],
+    "flagged": false,
+    "due": "2026-11-23",
+    "days_left": 2,
+    "overdue": false,
+    "duration_min": 5,
+    "view": null
+   },
+   {
+    "id": "t8123",
+    "content": "Reply to Alex at Northgate Systems (draft in the comments)",
+    "description": "Draft asks for the salary range before a call.",
+    "project": "Career",
+    "labels": [
+     "Computer"
+    ],
+    "flagged": false,
+    "due": "2026-11-23",
+    "days_left": 2,
+    "overdue": false,
+    "duration_min": 10,
+    "view": null
+   },
+   {
+    "id": "t8125",
+    "content": "Sign Maya's field trip permission slip",
+    "description": "Science museum, $12 for the bus.",
+    "project": "Family",
+    "labels": [
+     "Home"
+    ],
+    "flagged": false,
+    "due": "2026-11-23",
+    "days_left": 2,
+    "overdue": false,
+    "duration_min": 5,
+    "view": null
+   },
+   {
+    "id": "t8127",
+    "content": "RSVP to the Brooks family's holiday party",
+    "description": "",
+    "project": "Family",
+    "labels": [
+     "Phone"
+    ],
+    "flagged": false,
+    "due": "2026-11-25",
+    "days_left": 4,
+    "overdue": false,
+    "duration_min": 5,
+    "view": null
+   },
+   {
+    "id": "t8128",
+    "content": "Pay the $120 bounce house deposit for Leo's party",
+    "description": "Hold expires in a week.",
+    "project": "Family",
+    "labels": [
+     "Money"
+    ],
+    "flagged": false,
+    "due": "2026-11-26",
+    "days_left": 5,
+    "overdue": false,
+    "duration_min": 10,
+    "view": null
+   },
+   {
+    "id": "t8129",
+    "content": "Read and sign the lease renewal (2 pages)",
+    "description": "Rent goes up $35 a month; the rest is unchanged.",
+    "project": "Home",
+    "labels": [
+     "Home"
+    ],
+    "flagged": false,
+    "due": "2026-11-28",
+    "days_left": 7,
+    "overdue": false,
+    "duration_min": 20,
+    "view": null
+   },
+   {
+    "id": "t8131",
+    "content": "Return the library books",
+    "description": "",
+    "project": "Errands",
+    "labels": [
+     "Errands"
+    ],
+    "flagged": false,
+    "due": "2026-11-19",
+    "days_left": -2,
+    "overdue": true,
+    "duration_min": 15,
+    "view": null
+   },
+   {
+    "id": "t8135",
+    "content": "Replace the furnace filter (20x25x1)",
+    "description": "",
+    "project": "Home",
+    "labels": [
+     "Home"
+    ],
+    "flagged": false,
+    "due": "2026-11-24",
+    "days_left": 3,
+    "overdue": false,
+    "duration_min": 10,
+    "view": null
+   },
+   {
+    "id": "t8138",
+    "content": "Deep clean the fridge",
+    "description": "",
+    "project": "Home",
+    "labels": [
+     "Home"
+    ],
+    "flagged": false,
+    "due": "2026-11-27",
+    "days_left": 6,
+    "overdue": false,
+    "duration_min": 30,
+    "view": null
+   },
+   {
+    "id": "t8144",
+    "content": "Approve the weekly social post draft",
+    "description": "",
+    "project": "Career",
+    "labels": [
+     "Computer"
+    ],
+    "flagged": false,
+    "due": "2026-11-23",
+    "days_left": 2,
+    "overdue": false,
+    "duration_min": 5,
+    "view": null
+   }
+  ]
+ },
+ "folders": [
+  {
+   "name": "scheduler",
+   "files": [
+    {
+     "path": "scheduler/README.md",
+     "size": 1799
+    },
+    {
+     "path": "scheduler/notes.md",
+     "size": 1984
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>scheduler</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

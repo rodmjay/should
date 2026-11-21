@@ -199,7 +199,7 @@
   tv_tab_recipes: "Recetas",
   tv_tab_cooking: "Cocinando",
   tv_tab_idle: "Pantalla en reposo",
-  tv_alt_home: "La pantalla de inicio del televisor: hoy, tareas, esta semana, recetas, citas y proyectos, con datos inventados",
+  tv_alt_home: "La pantalla de inicio del televisor: hoy, tareas, esta semana, recetas, citas, un curso de estudio y proyectos, con datos inventados",
   tv_alt_recipes: "El recetario familiar en el televisor, con recetas inventadas",
   tv_alt_cooking: "Una receta abierta en el televisor, un paso grande a la vez para cocinar",
   tv_alt_idle: "La pantalla en reposo del televisor: un reloj grande, el clima y una cita",

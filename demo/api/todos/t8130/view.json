@@ -1,0 +1,20 @@
+{
+ "view": "call",
+ "label": "Call",
+ "task": {
+  "content": "Book Biscuit's yearly vet visit, (970) 555-0122",
+  "project": "Home",
+  "due": null
+ },
+ "data": {
+  "tel": "+19705550122",
+  "phone": "(970) 555-0122",
+  "contact": {
+   "id": "c-0022",
+   "name": "Cedar Falls Animal Hospital",
+   "relationship": "vet",
+   "company": null
+  }
+ },
+ "desc_html": "<p>Vaccines due next month.</p>"
+}

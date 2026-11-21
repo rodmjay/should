@@ -1,0 +1,107 @@
+{
+ "role": {
+  "key": "clothier",
+  "name": "Clothier",
+  "nav": "clothier",
+  "file": "fashion/CONSULTANT.md",
+  "owns": "Sam's clothes: wardrobe, outfit of the day, packing lists and care",
+  "areas": [],
+  "widgets": []
+ },
+ "status": "active",
+ "summary": "Two winter jacket options saved.",
+ "items": [],
+ "needs": [],
+ "watch": [],
+ "tasks": [
+  {
+   "id": "t8145",
+   "content": "Decide on the winter jacket (two options saved)",
+   "description": "",
+   "project": "Shopping",
+   "labels": [
+    "Computer"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  }
+ ],
+ "routines": [],
+ "report": {
+  "latest": {
+   "path": "fashion/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "Two winter jacket options saved.",
+   "html": "<p>Two winter jacket options saved.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "fashion/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Wardrobe",
+   "value": "64",
+   "sub": "items",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Gaps",
+   "value": "1",
+   "sub": "winter jacket",
+   "tone": "",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [],
+ "widgets": {},
+ "folders": [
+  {
+   "name": "fashion",
+   "files": [
+    {
+     "path": "fashion/README.md",
+     "size": 1799
+    },
+    {
+     "path": "fashion/notes.md",
+     "size": 1984
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>fashion</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

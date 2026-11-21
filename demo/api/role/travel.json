@@ -1,0 +1,327 @@
+{
+ "role": {
+  "key": "travel",
+  "name": "Travel Agent",
+  "nav": "travel",
+  "file": "travel/AGENT.md",
+  "owns": "Trips, fares, stays and cars; search and read only, Sam books from a link",
+  "areas": [
+   "travel"
+  ],
+  "widgets": [
+   "trips"
+  ]
+ },
+ "status": "watch",
+ "summary": "Fares dropped $38; the harbor option is cheapest.",
+ "items": [
+  {
+   "text": "Spring trip: pick dates to lock the fare",
+   "when": null,
+   "level": "watch",
+   "link": "/next/r/travel#trips"
+  }
+ ],
+ "needs": [],
+ "watch": [
+  {
+   "text": "Spring trip: pick dates to lock the fare",
+   "when": null,
+   "level": "watch",
+   "link": "/next/r/travel#trips"
+  }
+ ],
+ "tasks": [
+  {
+   "id": "t8132",
+   "content": "Pick dates for the spring coast trip",
+   "description": "Three options are priced on the Travel desk.",
+   "project": "Travel",
+   "labels": [],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 15,
+   "view": null
+  },
+  {
+   "id": "t8133",
+   "content": "Book Maya's passport appointment at the post office",
+   "description": "",
+   "project": "Travel",
+   "labels": [
+    "Errands"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 20,
+   "view": null
+  }
+ ],
+ "routines": [
+  {
+   "name": "travel-weekly",
+   "when": "Sat 7:00 AM",
+   "does": "Reprices every trip option",
+   "prompt": null
+  }
+ ],
+ "report": {
+  "latest": {
+   "path": "travel/reports/2026-11-20.md",
+   "date": "2026-11-20",
+   "summary": "Fares dropped $38; the harbor option is cheapest.",
+   "html": "<p>Fares dropped $38; the harbor option is cheapest.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
+  },
+  "where": "travel/reports/*.md"
+ },
+ "tiles": [
+  {
+   "label": "Trip options",
+   "value": "3",
+   "sub": "spring coast",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Cheapest",
+   "value": "$2,140",
+   "sub": "all four",
+   "tone": "",
+   "trend": [],
+   "link": null
+  },
+  {
+   "label": "Fare change",
+   "value": "-$38",
+   "sub": "since last week",
+   "tone": "good",
+   "trend": [],
+   "link": null
+  }
+ ],
+ "views": [
+  {
+   "key": "travel",
+   "name": "Travel",
+   "d": {
+    "sec": {
+     "key": "travel",
+     "name": "Travel",
+     "folders": [
+      "travel"
+     ],
+     "brief": [
+      "Trips, fares and where to stay."
+     ],
+     "blurb": "Trips, fares and where to stay.",
+     "words": [
+      "travel"
+     ]
+    },
+    "area": {
+     "sec": {
+      "key": "travel",
+      "name": "Travel",
+      "folders": [
+       "travel"
+      ],
+      "brief": [
+       "Trips, fares and where to stay."
+      ],
+      "blurb": "Trips, fares and where to stay.",
+      "words": [
+       "travel"
+      ]
+     },
+     "status": "watch",
+     "summary": "Fares dropped $38; the harbor option is cheapest.",
+     "items": [
+      {
+       "text": "Spring trip: pick dates to lock the fare",
+       "when": null,
+       "level": "watch",
+       "link": "/next/r/travel#trips"
+      }
+     ],
+     "tasks": [
+      {
+       "id": "t8132",
+       "content": "Pick dates for the spring coast trip",
+       "description": "Three options are priced on the Travel desk.",
+       "project": "Travel",
+       "labels": [],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 15,
+       "view": null
+      },
+      {
+       "id": "t8133",
+       "content": "Book Maya's passport appointment at the post office",
+       "description": "",
+       "project": "Travel",
+       "labels": [
+        "Errands"
+       ],
+       "flagged": false,
+       "due": null,
+       "days_left": null,
+       "overdue": false,
+       "duration_min": 20,
+       "view": null
+      }
+     ]
+    },
+    "trips": [
+     {
+      "name": "Spring coast trip",
+      "start": "2027-03-21",
+      "end": "2027-03-26",
+      "occasion": "Spring break, all four of us",
+      "budget_stay": 1200,
+      "status": "comparing",
+      "todo": "Pick dates to lock the fare",
+      "flight": {
+       "pick": "Nonstop, Tuesday out",
+       "out": "Out Sun Mar 21, 8:05 AM",
+       "back": "Back Fri Mar 26, 4:40 PM",
+       "fares": [
+        {
+         "airline": "Frontier",
+         "price": 612,
+         "note": "bags extra"
+        },
+        {
+         "airline": "Southwest",
+         "price": 744,
+         "note": "two bags free each"
+        },
+        {
+         "airline": "United",
+         "price": 798,
+         "note": "nonstop"
+        }
+       ]
+      }
+     }
+    ],
+    "stays_svg": "<svg viewBox=\"0 0 640 160\" role=\"img\" aria-label=\"Weight, last 30 days\" style=\"width:100%;height:auto\"><polyline fill=\"none\" stroke=\"var(--r-travel, #00695c)\" stroke-width=\"2.5\" points=\"20.0,59.1 140.0,98.1 260.0,120.5 380.0,20.0 500.0,140.0 620.0,78.6\"/></svg>",
+    "stays": [
+     {
+      "status": "top pick",
+      "name": "Harbor Point Cottage",
+      "link": "",
+      "kind": "house",
+      "source": "Airbnb",
+      "area": "Harbor Point",
+      "rating": 4.9,
+      "reviews": 128,
+      "total": 960,
+      "pool": "no",
+      "breakfast": "no",
+      "free_cancel_until": "2027-03-01",
+      "notes": "Walk to the beach"
+     },
+     {
+      "status": "shortlist",
+      "name": "Seabright Inn",
+      "link": "",
+      "kind": "hotel",
+      "source": "Booking",
+      "area": "Old Town",
+      "rating": 4.6,
+      "reviews": 840,
+      "total": 1110,
+      "pool": "yes",
+      "breakfast": "yes",
+      "free_cancel_until": "2027-03-01",
+      "notes": "Kids eat free"
+     },
+     {
+      "status": "shortlist",
+      "name": "Dune Grass Cabins",
+      "link": "",
+      "kind": "cabin",
+      "source": "Airbnb",
+      "area": "North Shore",
+      "rating": 4.8,
+      "reviews": 61,
+      "total": 890,
+      "pool": "no",
+      "breakfast": "no",
+      "free_cancel_until": "2027-03-01",
+      "notes": "Fire pit"
+     },
+     {
+      "status": "too expensive",
+      "name": "Lighthouse Resort",
+      "link": "",
+      "kind": "resort",
+      "source": "Booking",
+      "area": "Harbor Point",
+      "rating": 4.7,
+      "reviews": 2210,
+      "total": 1320,
+      "pool": "yes",
+      "breakfast": "yes",
+      "free_cancel_until": "2027-03-01",
+      "notes": ""
+     }
+    ],
+    "budget": 1200
+   }
+  }
+ ],
+ "widgets": {},
+ "folders": [
+  {
+   "name": "travel",
+   "files": [
+    {
+     "path": "travel/README.md",
+     "size": 1799
+    },
+    {
+     "path": "travel/notes.md",
+     "size": 1984
+    }
+   ],
+   "more": 0,
+   "readme_html": "<p>The <b>travel</b> folder: notes and records this role keeps. (Demo: file contents aren't included.)</p>",
+   "readme": null
+  }
+ ],
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "owners": {
+  "admin": "assistant",
+  "tech": "assistant",
+  "money": "bookkeeper",
+  "health": "health",
+  "home": "home-manager",
+  "credit": "financial",
+  "trading": "financial",
+  "career": "career",
+  "travel": "travel"
+ }
+}

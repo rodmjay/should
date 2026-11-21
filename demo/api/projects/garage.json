@@ -1,0 +1,40 @@
+{
+ "project": {
+  "id": "p-garage",
+  "key": "garage",
+  "kind": "generic",
+  "title": "Clean out the garage",
+  "outcome": "Room to park the car before the first snow.",
+  "status": "someday",
+  "owner_role": "home-manager",
+  "entity_id": null,
+  "goal_id": null,
+  "todoist_section_id": null,
+  "todoist_task_id": null,
+  "ref": {},
+  "started_on": "2026-11-16",
+  "target_date": null,
+  "done_on": null,
+  "sort": 0,
+  "notes": "",
+  "updated_at": "2026-11-20T09:00:00-07:00",
+  "tasks": [],
+  "done": [],
+  "next": null,
+  "flags": [],
+  "progress": {
+   "done": 0,
+   "total": 0,
+   "pct": null
+  },
+  "waits": [],
+  "goal": null,
+  "dates": [],
+  "section": null,
+  "owner_name": "Home Manager",
+  "when": null,
+  "days_left": null,
+  "trip": null
+ },
+ "tasks_error": null
+}

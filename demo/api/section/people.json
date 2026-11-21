@@ -1,0 +1,228 @@
+{
+ "desks": [
+  {
+   "key": "relationship-manager",
+   "name": "Relationship Manager",
+   "status": "watch",
+   "tiles": [
+    {
+     "label": "Family",
+     "value": "10",
+     "sub": "in the book",
+     "tone": ""
+    },
+    {
+     "label": "Check-ins due",
+     "value": "2",
+     "sub": "this week",
+     "tone": ""
+    },
+    {
+     "label": "Gaps",
+     "value": "3",
+     "sub": "missing info",
+     "tone": ""
+    }
+   ],
+   "report": {
+    "summary": "Two check-ins suggested: Aunt June and Marco.",
+    "date": "2026-11-20"
+   },
+   "act": 0,
+   "tasks": 3
+  },
+  {
+   "key": "investigator",
+   "name": "Investigator",
+   "status": "ok",
+   "tiles": [
+    {
+     "label": "Unknown numbers",
+     "value": "2",
+     "sub": "to name",
+     "tone": ""
+    },
+    {
+     "label": "Duplicates",
+     "value": "1",
+     "sub": "pair",
+     "tone": ""
+    },
+    {
+     "label": "Brokers",
+     "value": "14 of 20",
+     "sub": "removed",
+     "tone": "good"
+    }
+   ],
+   "report": {
+    "summary": "Fourteen broker listings removed; one duplicate contact proposed for merging.",
+    "date": "2026-11-20"
+   },
+   "act": 0,
+   "tasks": 0
+  },
+  {
+   "key": "relationships",
+   "name": "Relationship Coach",
+   "status": "ok",
+   "tiles": [],
+   "report": null,
+   "act": 0,
+   "tasks": 0
+  },
+  {
+   "key": "gifts",
+   "name": "Gift Concierge",
+   "status": "watch",
+   "tiles": [
+    {
+     "label": "Next occasion",
+     "value": "Maya",
+     "sub": "in 4 days",
+     "tone": "watch"
+    },
+    {
+     "label": "Gift budget",
+     "value": "$1,140",
+     "sub": "this year",
+     "tone": ""
+    },
+    {
+     "label": "Cards to mail",
+     "value": "2",
+     "sub": "this month",
+     "tone": ""
+    }
+   ],
+   "report": {
+    "summary": "Maya's gift is picked and in the cart; two cards go out next week.",
+    "date": "2026-11-20"
+   },
+   "act": 0,
+   "tasks": 1
+  }
+ ],
+ "tasks": [
+  {
+   "id": "t8125",
+   "content": "Sign Maya's field trip permission slip",
+   "description": "Science museum, $12 for the bus.",
+   "project": "Family",
+   "labels": [
+    "Home"
+   ],
+   "flagged": false,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 5,
+   "view": null
+  },
+  {
+   "id": "t8126",
+   "content": "Call Grandpa Ray to plan lunch, (970) 555-0105",
+   "description": "",
+   "project": "Family",
+   "labels": [
+    "Phone"
+   ],
+   "flagged": false,
+   "due": null,
+   "days_left": null,
+   "overdue": false,
+   "duration_min": 15,
+   "view": "call"
+  },
+  {
+   "id": "t8146",
+   "content": "Sign up Leo for spring soccer, $95",
+   "description": "",
+   "project": "Family",
+   "labels": [
+    "Computer",
+    "Money"
+   ],
+   "flagged": false,
+   "due": "2026-12-21",
+   "days_left": 30,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  },
+  {
+   "id": "t8115",
+   "content": "Order Maya's birthday gift (link in the notes)",
+   "description": "Watercolor set, $34. Arrives in 2 days.",
+   "project": "Shopping",
+   "labels": [
+    "Computer",
+    "Money"
+   ],
+   "flagged": true,
+   "due": "2026-11-23",
+   "days_left": 2,
+   "overdue": false,
+   "duration_min": 10,
+   "view": null
+  }
+ ],
+ "task_count": 4,
+ "projects": [
+  "Inbox",
+  "Money",
+  "Car",
+  "Credit",
+  "Taxes",
+  "Home",
+  "Travel",
+  "Health",
+  "Shopping",
+  "Subscriptions",
+  "Computer & Security",
+  "Business",
+  "Family"
+ ],
+ "hi": {
+  "error": null,
+  "dates": [
+   {
+    "date": "2026-11-25",
+    "name": "Maya",
+    "occasion": "birthday (12)",
+    "days_left": 4
+   },
+   {
+    "date": "2026-12-10",
+    "name": "Leo",
+    "occasion": "birthday (16)",
+    "days_left": 19
+   },
+   {
+    "date": "2026-12-29",
+    "name": "Ivy Wynn",
+    "occasion": "birthday (9)",
+    "days_left": 38
+   }
+  ],
+  "meetups": [
+   {
+    "kind": "coffee_request",
+    "name": "Priya Nair",
+    "status": "waiting_on_sam"
+   }
+  ],
+  "friends": {
+   "members": [
+    "Priya",
+    "Ben",
+    "Owen"
+   ],
+   "commands": [
+    "menu",
+    "weather",
+    "unfriend"
+   ]
+  }
+ }
+}

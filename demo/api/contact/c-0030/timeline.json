@@ -1,0 +1,16 @@
+{
+ "counts": {
+  "call": 1
+ },
+ "rows": [
+  {
+   "at": "2026-11-07T10:00:00-07:00",
+   "channel": "call",
+   "direction": "in",
+   "summary": "Appointment reminder",
+   "group": null,
+   "via": null
+  }
+ ],
+ "count": 1
+}

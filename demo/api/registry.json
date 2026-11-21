@@ -1,0 +1,2007 @@
+{
+ "exported_at": "2026-11-21T05:00:00-07:00",
+ "roles": [
+  {
+   "key": "assistant",
+   "name": "Executive Assistant",
+   "status": "running",
+   "role_file": "CLAUDE.md"
+  },
+  {
+   "key": "scheduler",
+   "name": "Scheduler",
+   "status": "running",
+   "role_file": "scheduler/README.md"
+  },
+  {
+   "key": "bookkeeper",
+   "name": "Accountant",
+   "status": "running",
+   "role_file": "bookkeeper/README.md"
+  },
+  {
+   "key": "health",
+   "name": "Health Agent",
+   "status": "running",
+   "role_file": "nutrition/COACH.md"
+  },
+  {
+   "key": "gifts",
+   "name": "Gift Concierge",
+   "status": "running",
+   "role_file": "gifts/CONCIERGE.md"
+  },
+  {
+   "key": "relationship-manager",
+   "name": "Relationship Manager",
+   "status": "running",
+   "role_file": "relationships/MANAGER.md"
+  },
+  {
+   "key": "home-manager",
+   "name": "Home Manager",
+   "status": "running",
+   "role_file": "home/MANAGER.md"
+  },
+  {
+   "key": "financial",
+   "name": "Financial Advisor",
+   "status": "running",
+   "role_file": "financial/ADVISOR.md"
+  },
+  {
+   "key": "product",
+   "name": "Product Manager",
+   "status": "running",
+   "role_file": "product/PRODUCT-MANAGER.md"
+  },
+  {
+   "key": "business",
+   "name": "Business Executive",
+   "status": "running",
+   "role_file": "business/EXECUTIVE.md"
+  },
+  {
+   "key": "relationships",
+   "name": "Relationship Coach",
+   "status": "placeholder",
+   "role_file": "relationships/COACH.md"
+  },
+  {
+   "key": "it",
+   "name": "IT Guy",
+   "status": "running",
+   "role_file": "it/IT.md"
+  },
+  {
+   "key": "as-architect",
+   "name": "Software Architect",
+   "status": "running",
+   "role_file": "agency-squared/ARCHITECT.md"
+  },
+  {
+   "key": "events",
+   "name": "Event Planner",
+   "status": "running",
+   "role_file": "events/PLANNER.md"
+  },
+  {
+   "key": "local-guide",
+   "name": "Local Guide",
+   "status": "running",
+   "role_file": "local-guide/GUIDE.md"
+  },
+  {
+   "key": "text-concierge",
+   "name": "Text Concierge",
+   "status": "running",
+   "role_file": "texting/CONCIERGE.md"
+  },
+  {
+   "key": "philosopher",
+   "name": "Philosopher",
+   "status": "running",
+   "role_file": "knowledge/PHILOSOPHER.md"
+  },
+  {
+   "key": "security",
+   "name": "Security Officer",
+   "status": "running",
+   "role_file": "security/OFFICER.md"
+  },
+  {
+   "key": "compliance",
+   "name": "Compliance Officer",
+   "status": "running",
+   "role_file": "compliance/OFFICER.md"
+  },
+  {
+   "key": "dba",
+   "name": "Database Administrator",
+   "status": "running",
+   "role_file": "database/ADMINISTRATOR.md"
+  },
+  {
+   "key": "designer",
+   "name": "Designer",
+   "status": "running",
+   "role_file": "design/DESIGNER.md"
+  },
+  {
+   "key": "media",
+   "name": "Media Concierge",
+   "status": "running",
+   "role_file": "media/CONCIERGE.md"
+  },
+  {
+   "key": "relocation",
+   "name": "Relocation Expert",
+   "status": "running",
+   "role_file": "apartment-search/RELOCATION.md"
+  },
+  {
+   "key": "career",
+   "name": "Career Assistant",
+   "status": "running",
+   "role_file": "career/README.md"
+  },
+  {
+   "key": "pr",
+   "name": "PR Person",
+   "status": "running",
+   "role_file": "pr/README.md"
+  },
+  {
+   "key": "shopping",
+   "name": "Shopping Expert",
+   "status": "running",
+   "role_file": "shopping/EXPERT.md"
+  },
+  {
+   "key": "clothier",
+   "name": "Clothier",
+   "status": "running",
+   "role_file": "fashion/CONSULTANT.md"
+  },
+  {
+   "key": "pets",
+   "name": "Pet Expert",
+   "status": "running",
+   "role_file": "pets/EXPERT.md"
+  },
+  {
+   "key": "coach",
+   "name": "Life Coach",
+   "status": "running",
+   "role_file": "coach/README.md"
+  },
+  {
+   "key": "business_coach",
+   "name": "Business Coach",
+   "status": "running",
+   "role_file": "business-coach/README.md"
+  },
+  {
+   "key": "travel",
+   "name": "Travel Agent",
+   "status": "running",
+   "role_file": "travel/AGENT.md"
+  },
+  {
+   "key": "investigator",
+   "name": "Investigator",
+   "status": "running",
+   "role_file": "investigator/README.md"
+  },
+  {
+   "key": "legal",
+   "name": "Legal Advisor",
+   "status": "running",
+   "role_file": "legal/README.md"
+  },
+  {
+   "key": "music",
+   "name": "Music Producer",
+   "status": "running",
+   "role_file": "music/COACH.md"
+  },
+  {
+   "key": "webmaster",
+   "name": "Webmaster",
+   "status": "running",
+   "role_file": "portal/WEBMASTER.md"
+  }
+ ],
+ "routines": [
+  {
+   "key": "morning-text",
+   "name": "Morning text",
+   "owner_role": "assistant",
+   "runner": "scheduled task",
+   "schedule": "8:00 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/morning-text.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "daily-hygiene",
+   "name": "Daily hygiene",
+   "owner_role": "assistant",
+   "runner": "scheduled task",
+   "schedule": "5:45 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/daily-hygiene.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "gmail-tidy",
+   "name": "Gmail tidy",
+   "owner_role": "assistant",
+   "runner": "scheduled task",
+   "schedule": "6:15 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/gmail-tidy.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "daily-organizer",
+   "name": "Daily organizer",
+   "owner_role": "assistant",
+   "runner": "scheduled task",
+   "schedule": "6:30 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/daily-organizer.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "todoist-comments",
+   "name": "Todoist comments",
+   "owner_role": "assistant",
+   "runner": "scheduled task",
+   "schedule": "hourly",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/todoist-comments.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "backup",
+   "name": "Backup",
+   "owner_role": "assistant",
+   "runner": "scheduled task",
+   "schedule": "2:30 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/backup.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "daily-schedule",
+   "name": "Daily schedule",
+   "owner_role": "scheduler",
+   "runner": "scheduled task",
+   "schedule": "6:00 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/daily-schedule.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "calendar-sync",
+   "name": "Calendar sync",
+   "owner_role": "scheduler",
+   "runner": "scheduled task",
+   "schedule": "hourly",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/calendar-sync.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "daily-balance",
+   "name": "Daily balance",
+   "owner_role": "bookkeeper",
+   "runner": "scheduled task",
+   "schedule": "6:15 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/daily-balance.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "bills-check",
+   "name": "Bills check",
+   "owner_role": "bookkeeper",
+   "runner": "scheduled task",
+   "schedule": "7:00 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/bills-check.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "monthly-close",
+   "name": "Monthly close",
+   "owner_role": "bookkeeper",
+   "runner": "scheduled task",
+   "schedule": "1st of the month",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/monthly-close.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "biweekly-meal-plan",
+   "name": "Biweekly meal plan",
+   "owner_role": "health",
+   "runner": "scheduled task",
+   "schedule": "Fri 6:00 PM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/biweekly-meal-plan.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "weekly-walmart-cart",
+   "name": "Weekly walmart cart",
+   "owner_role": "health",
+   "runner": "scheduled task",
+   "schedule": "Sat 9:00 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/weekly-walmart-cart.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "weekly-weigh-in",
+   "name": "Weekly weigh in",
+   "owner_role": "health",
+   "runner": "scheduled task",
+   "schedule": "Sun 8:00 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/weekly-weigh-in.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "weekly-gift-check",
+   "name": "Weekly gift check",
+   "owner_role": "gifts",
+   "runner": "scheduled task",
+   "schedule": "Mon 7:00 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/weekly-gift-check.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "stay-in-touch",
+   "name": "Stay in touch",
+   "owner_role": "relationship-manager",
+   "runner": "scheduled task",
+   "schedule": "Mon 8:00 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/stay-in-touch.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "chores-sweep",
+   "name": "Chores sweep",
+   "owner_role": "home-manager",
+   "runner": "scheduled task",
+   "schedule": "Sat 7:30 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/chores-sweep.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "weekly-credit-check",
+   "name": "Weekly credit check",
+   "owner_role": "financial",
+   "runner": "scheduled task",
+   "schedule": "Sat 7:30 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/weekly-credit-check.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "paper-trade",
+   "name": "Paper trade",
+   "owner_role": "financial",
+   "runner": "scheduled task",
+   "schedule": "weekdays 2:45 PM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/paper-trade.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "weekly-business-review",
+   "name": "Weekly business review",
+   "owner_role": "business",
+   "runner": "scheduled task",
+   "schedule": "Fri 3:00 PM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/weekly-business-review.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "it-health",
+   "name": "It health",
+   "owner_role": "it",
+   "runner": "scheduled task",
+   "schedule": "every 15 min",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/it-health.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "offsite-backup",
+   "name": "Offsite backup",
+   "owner_role": "it",
+   "runner": "scheduled task",
+   "schedule": "3:00 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/offsite-backup.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "nightly-tests",
+   "name": "Nightly tests",
+   "owner_role": "as-architect",
+   "runner": "scheduled task",
+   "schedule": "1:00 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/nightly-tests.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "weather-daily",
+   "name": "Weather daily",
+   "owner_role": "local-guide",
+   "runner": "scheduled task",
+   "schedule": "hourly",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/weather-daily.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "events-feed",
+   "name": "Events feed",
+   "owner_role": "local-guide",
+   "runner": "scheduled task",
+   "schedule": "Thu 6:00 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/events-feed.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "text-replies",
+   "name": "Text replies",
+   "owner_role": "text-concierge",
+   "runner": "scheduled task",
+   "schedule": "every 30 min",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/text-replies.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "login-watch",
+   "name": "Login watch",
+   "owner_role": "security",
+   "runner": "scheduled task",
+   "schedule": "every 2 h",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/login-watch.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "weekly-security-audit",
+   "name": "Weekly security audit",
+   "owner_role": "security",
+   "runner": "scheduled task",
+   "schedule": "Fri 3:00 PM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/weekly-security-audit.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "weekly-compliance-review",
+   "name": "Weekly compliance review",
+   "owner_role": "compliance",
+   "runner": "scheduled task",
+   "schedule": "Fri 4:00 PM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/weekly-compliance-review.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "incident-scan",
+   "name": "Incident scan",
+   "owner_role": "dba",
+   "runner": "scheduled task",
+   "schedule": "every 5 min",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/incident-scan.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "weekly-pick",
+   "name": "Weekly pick",
+   "owner_role": "media",
+   "runner": "scheduled task",
+   "schedule": "Fri 4:00 PM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/weekly-pick.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "job-leads",
+   "name": "Job leads",
+   "owner_role": "career",
+   "runner": "scheduled task",
+   "schedule": "6:15 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/job-leads.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "price-watch",
+   "name": "Price watch",
+   "owner_role": "shopping",
+   "runner": "scheduled task",
+   "schedule": "daily 7:00 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/price-watch.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "weekly-progress-request",
+   "name": "Weekly progress request",
+   "owner_role": "coach",
+   "runner": "scheduled task",
+   "schedule": "Fri 5:00 PM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/weekly-progress-request.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "weekly-coach-review",
+   "name": "Weekly coach review",
+   "owner_role": "coach",
+   "runner": "scheduled task",
+   "schedule": "Sat 9:00 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/weekly-coach-review.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "travel-weekly",
+   "name": "Travel weekly",
+   "owner_role": "travel",
+   "runner": "scheduled task",
+   "schedule": "Sat 7:00 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/travel-weekly.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "broker-discovery",
+   "name": "Broker discovery",
+   "owner_role": "investigator",
+   "runner": "scheduled task",
+   "schedule": "Mon 7:40 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/broker-discovery.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  },
+  {
+   "key": "broker-removal",
+   "name": "Broker removal",
+   "owner_role": "investigator",
+   "runner": "scheduled task",
+   "schedule": "Wed 7:40 AM",
+   "timezone": "America/Denver",
+   "prompt_path": "routines/broker-removal.md",
+   "status": "active",
+   "starts_on": "2026-09-22",
+   "notes": "",
+   "usage_tier": "normal"
+  }
+ ],
+ "skills": [
+  {
+   "key": "add-todo",
+   "name": "Add todo",
+   "owner_role": "assistant",
+   "path": "assistant/skills/add-todo/SKILL.md",
+   "text_command": "/add",
+   "status": "active",
+   "purpose": "Add todo for Sam"
+  },
+  {
+   "key": "todo-status",
+   "name": "Todo status",
+   "owner_role": "assistant",
+   "path": "assistant/skills/todo-status/SKILL.md",
+   "text_command": "/due",
+   "status": "active",
+   "purpose": "Todo status for Sam"
+  },
+  {
+   "key": "send-text",
+   "name": "Send text",
+   "owner_role": "text-concierge",
+   "path": "text-concierge/skills/send-text/SKILL.md",
+   "text_command": "",
+   "status": "active",
+   "purpose": "Send text for Sam"
+  },
+  {
+   "key": "ask-sam",
+   "name": "Ask sam",
+   "owner_role": "text-concierge",
+   "path": "text-concierge/skills/ask-sam/SKILL.md",
+   "text_command": "",
+   "status": "active",
+   "purpose": "Ask sam for Sam"
+  },
+  {
+   "key": "walmart-cart",
+   "name": "Walmart cart",
+   "owner_role": "health",
+   "path": "health/skills/walmart-cart/SKILL.md",
+   "text_command": "/cart",
+   "status": "active",
+   "purpose": "Walmart cart for Sam"
+  },
+  {
+   "key": "weather",
+   "name": "Weather",
+   "owner_role": "local-guide",
+   "path": "local-guide/skills/weather/SKILL.md",
+   "text_command": "/weather",
+   "status": "active",
+   "purpose": "Weather for Sam"
+  },
+  {
+   "key": "cash",
+   "name": "Cash",
+   "owner_role": "bookkeeper",
+   "path": "bookkeeper/skills/cash/SKILL.md",
+   "text_command": "/cash",
+   "status": "active",
+   "purpose": "Cash for Sam"
+  },
+  {
+   "key": "credit-check",
+   "name": "Credit check",
+   "owner_role": "financial",
+   "path": "financial/skills/credit-check/SKILL.md",
+   "text_command": "/credit",
+   "status": "active",
+   "purpose": "Credit check for Sam"
+  },
+  {
+   "key": "fares",
+   "name": "Fares",
+   "owner_role": "travel",
+   "path": "travel/skills/fares/SKILL.md",
+   "text_command": "/fares",
+   "status": "active",
+   "purpose": "Fares for Sam"
+  },
+  {
+   "key": "gift-ideas",
+   "name": "Gift ideas",
+   "owner_role": "gifts",
+   "path": "gifts/skills/gift-ideas/SKILL.md",
+   "text_command": "/gifts",
+   "status": "active",
+   "purpose": "Gift ideas for Sam"
+  },
+  {
+   "key": "movie-pick",
+   "name": "Movie pick",
+   "owner_role": "media",
+   "path": "media/skills/movie-pick/SKILL.md",
+   "text_command": "/movie",
+   "status": "active",
+   "purpose": "Movie pick for Sam"
+  },
+  {
+   "key": "chores",
+   "name": "Chores",
+   "owner_role": "home-manager",
+   "path": "home-manager/skills/chores/SKILL.md",
+   "text_command": "/chores",
+   "status": "active",
+   "purpose": "Chores for Sam"
+  },
+  {
+   "key": "deep-dive",
+   "name": "Deep dive",
+   "owner_role": "investigator",
+   "path": "investigator/skills/deep-dive/SKILL.md",
+   "text_command": "",
+   "status": "active",
+   "purpose": "Deep dive for Sam"
+  },
+  {
+   "key": "optout",
+   "name": "Optout",
+   "owner_role": "investigator",
+   "path": "investigator/skills/optout/SKILL.md",
+   "text_command": "",
+   "status": "active",
+   "purpose": "Optout for Sam"
+  },
+  {
+   "key": "design-check",
+   "name": "Design check",
+   "owner_role": "designer",
+   "path": "designer/skills/design-check/SKILL.md",
+   "text_command": "",
+   "status": "active",
+   "purpose": "Design check for Sam"
+  },
+  {
+   "key": "annual-report",
+   "name": "Annual report",
+   "owner_role": "business",
+   "path": "business/skills/annual-report/SKILL.md",
+   "text_command": "",
+   "status": "active",
+   "purpose": "Annual report for Sam"
+  }
+ ],
+ "text_commands": [
+  {
+   "command": "/today",
+   "aliases": [
+    "today",
+    "t"
+   ],
+   "usage": null,
+   "does": "The day's plan",
+   "sort": 0,
+   "status": "active"
+  },
+  {
+   "command": "/due",
+   "aliases": [
+    "due"
+   ],
+   "usage": null,
+   "does": "What's due this week",
+   "sort": 1,
+   "status": "active"
+  },
+  {
+   "command": "/cash",
+   "aliases": [
+    "cash",
+    "money"
+   ],
+   "usage": null,
+   "does": "Checking and the low point",
+   "sort": 2,
+   "status": "active"
+  },
+  {
+   "command": "/add",
+   "aliases": [
+    "add"
+   ],
+   "usage": null,
+   "does": "Add a task",
+   "sort": 3,
+   "status": "active"
+  },
+  {
+   "command": "/done",
+   "aliases": [
+    "done"
+   ],
+   "usage": null,
+   "does": "Mark a task done",
+   "sort": 4,
+   "status": "active"
+  },
+  {
+   "command": "/quiet",
+   "aliases": [
+    "quiet"
+   ],
+   "usage": null,
+   "does": "Pause texts for a while",
+   "sort": 5,
+   "status": "active"
+  },
+  {
+   "command": "/weather",
+   "aliases": [
+    "wx"
+   ],
+   "usage": null,
+   "does": "Today's weather",
+   "sort": 6,
+   "status": "active"
+  },
+  {
+   "command": "/movie",
+   "aliases": [
+    "movie"
+   ],
+   "usage": null,
+   "does": "Tonight's pick",
+   "sort": 7,
+   "status": "active"
+  },
+  {
+   "command": "/help",
+   "aliases": [
+    "menu"
+   ],
+   "usage": null,
+   "does": "What you can text",
+   "sort": 8,
+   "status": "active"
+  }
+ ],
+ "integrations": [
+  {
+   "key": "calendar",
+   "name": "Calendar",
+   "kind": "connector",
+   "direction": "read",
+   "owner_role": "it",
+   "endpoint": "",
+   "auth": "token in the vault",
+   "payload_schema": null,
+   "allowed": "read only",
+   "status": "active",
+   "site": ""
+  },
+  {
+   "key": "tasks",
+   "name": "Task list",
+   "kind": "connector",
+   "direction": "read-write",
+   "owner_role": "it",
+   "endpoint": "",
+   "auth": "token in the vault",
+   "payload_schema": null,
+   "allowed": "limited",
+   "status": "active",
+   "site": ""
+  },
+  {
+   "key": "texts",
+   "name": "Texting line",
+   "kind": "listener",
+   "direction": "both",
+   "owner_role": "it",
+   "endpoint": "",
+   "auth": "token in the vault",
+   "payload_schema": null,
+   "allowed": "limited",
+   "status": "active",
+   "site": ""
+  },
+  {
+   "key": "bank",
+   "name": "Bank balances",
+   "kind": "script",
+   "direction": "read",
+   "owner_role": "it",
+   "endpoint": "",
+   "auth": "token in the vault",
+   "payload_schema": null,
+   "allowed": "read only",
+   "status": "active",
+   "site": ""
+  },
+  {
+   "key": "weather",
+   "name": "Weather service",
+   "kind": "script",
+   "direction": "read",
+   "owner_role": "it",
+   "endpoint": "",
+   "auth": "token in the vault",
+   "payload_schema": null,
+   "allowed": "read only",
+   "status": "active",
+   "site": ""
+  },
+  {
+   "key": "scale",
+   "name": "Smart scale",
+   "kind": "script",
+   "direction": "read",
+   "owner_role": "it",
+   "endpoint": "",
+   "auth": "token in the vault",
+   "payload_schema": null,
+   "allowed": "read only",
+   "status": "active",
+   "site": ""
+  },
+  {
+   "key": "brokers",
+   "name": "Broker removals",
+   "kind": "script",
+   "direction": "write",
+   "owner_role": "it",
+   "endpoint": "",
+   "auth": "token in the vault",
+   "payload_schema": null,
+   "allowed": "limited",
+   "status": "active",
+   "site": ""
+  },
+  {
+   "key": "mail",
+   "name": "Email",
+   "kind": "connector",
+   "direction": "read",
+   "owner_role": "it",
+   "endpoint": "",
+   "auth": "token in the vault",
+   "payload_schema": null,
+   "allowed": "read only",
+   "status": "active",
+   "site": ""
+  }
+ ],
+ "routine_skills": [
+  [
+   "morning-text",
+   "send-text"
+  ],
+  [
+   "daily-hygiene",
+   "send-text"
+  ],
+  [
+   "gmail-tidy",
+   "send-text"
+  ],
+  [
+   "daily-organizer",
+   "send-text"
+  ],
+  [
+   "todoist-comments",
+   "send-text"
+  ],
+  [
+   "backup",
+   "send-text"
+  ]
+ ],
+ "routine_accounts": [
+  [
+   "morning-text",
+   "assistant",
+   "calendar"
+  ],
+  [
+   "daily-hygiene",
+   "assistant",
+   "calendar"
+  ],
+  [
+   "gmail-tidy",
+   "assistant",
+   "calendar"
+  ],
+  [
+   "daily-organizer",
+   "assistant",
+   "calendar"
+  ],
+  [
+   "todoist-comments",
+   "assistant",
+   "calendar"
+  ],
+  [
+   "backup",
+   "assistant",
+   "calendar"
+  ],
+  [
+   "daily-schedule",
+   "scheduler",
+   "calendar"
+  ],
+  [
+   "calendar-sync",
+   "scheduler",
+   "calendar"
+  ],
+  [
+   "daily-balance",
+   "bookkeeper",
+   "calendar"
+  ],
+  [
+   "bills-check",
+   "bookkeeper",
+   "calendar"
+  ]
+ ],
+ "skill_accounts": [
+  [
+   "add-todo",
+   "assistant",
+   "tasks"
+  ],
+  [
+   "todo-status",
+   "assistant",
+   "tasks"
+  ],
+  [
+   "send-text",
+   "text-concierge",
+   "tasks"
+  ],
+  [
+   "ask-sam",
+   "text-concierge",
+   "tasks"
+  ],
+  [
+   "walmart-cart",
+   "health",
+   "tasks"
+  ],
+  [
+   "weather",
+   "local-guide",
+   "tasks"
+  ],
+  [
+   "cash",
+   "bookkeeper",
+   "tasks"
+  ],
+  [
+   "credit-check",
+   "financial",
+   "tasks"
+  ],
+  [
+   "fares",
+   "travel",
+   "tasks"
+  ],
+  [
+   "gift-ideas",
+   "gifts",
+   "tasks"
+  ]
+ ],
+ "routine_tables": [
+  [
+   "morning-text",
+   "assistant",
+   "bills"
+  ],
+  [
+   "daily-hygiene",
+   "assistant",
+   "bills"
+  ],
+  [
+   "gmail-tidy",
+   "assistant",
+   "bills"
+  ],
+  [
+   "daily-organizer",
+   "assistant",
+   "bills"
+  ],
+  [
+   "todoist-comments",
+   "assistant",
+   "bills"
+  ],
+  [
+   "backup",
+   "assistant",
+   "bills"
+  ],
+  [
+   "daily-schedule",
+   "scheduler",
+   "bills"
+  ],
+  [
+   "calendar-sync",
+   "scheduler",
+   "bills"
+  ]
+ ],
+ "skill_tables": [
+  [
+   "add-todo",
+   "assistant",
+   "contacts"
+  ],
+  [
+   "todo-status",
+   "assistant",
+   "contacts"
+  ],
+  [
+   "send-text",
+   "text-concierge",
+   "contacts"
+  ],
+  [
+   "ask-sam",
+   "text-concierge",
+   "contacts"
+  ],
+  [
+   "walmart-cart",
+   "health",
+   "contacts"
+  ],
+  [
+   "weather",
+   "local-guide",
+   "contacts"
+  ],
+  [
+   "cash",
+   "bookkeeper",
+   "contacts"
+  ],
+  [
+   "credit-check",
+   "financial",
+   "contacts"
+  ]
+ ],
+ "integration_tables": [
+  [
+   "calendar",
+   "it",
+   "text_log"
+  ],
+  [
+   "tasks",
+   "it",
+   "text_log"
+  ],
+  [
+   "texts",
+   "it",
+   "text_log"
+  ],
+  [
+   "bank",
+   "it",
+   "text_log"
+  ]
+ ],
+ "problems": [],
+ "pg_cron": null,
+ "routine_catalog": [
+  {
+   "key": "morning-text",
+   "name": "Morning text",
+   "owner": "assistant",
+   "runner": "scheduled task",
+   "schedule": "8:00 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Texts Sam the day: top 3, waiting on, quick batch",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "daily-hygiene",
+   "name": "Daily hygiene",
+   "owner": "assistant",
+   "runner": "scheduled task",
+   "schedule": "5:45 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Sweeps the task list: duplicates, dates, stale tasks",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "gmail-tidy",
+   "name": "Gmail tidy",
+   "owner": "assistant",
+   "runner": "scheduled task",
+   "schedule": "6:15 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Archives marketing mail and processed threads",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "daily-organizer",
+   "name": "Daily organizer",
+   "owner": "assistant",
+   "runner": "scheduled task",
+   "schedule": "6:30 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Writes the brief and the day plan",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "todoist-comments",
+   "name": "Todoist comments",
+   "owner": "assistant",
+   "runner": "scheduled task",
+   "schedule": "hourly",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Reads comments Sam leaves on tasks and acts on them",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "backup",
+   "name": "Backup",
+   "owner": "assistant",
+   "runner": "scheduled task",
+   "schedule": "2:30 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Backs up the workspace",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "daily-schedule",
+   "name": "Daily schedule",
+   "owner": "scheduler",
+   "runner": "scheduled task",
+   "schedule": "6:00 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Builds today's time blocks from the calendar and tasks",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "calendar-sync",
+   "name": "Calendar sync",
+   "owner": "scheduler",
+   "runner": "scheduled task",
+   "schedule": "hourly",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Copies the calendar into the database",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "daily-balance",
+   "name": "Daily balance",
+   "owner": "bookkeeper",
+   "runner": "scheduled task",
+   "schedule": "6:15 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Reads balances and new transactions",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "bills-check",
+   "name": "Bills check",
+   "owner": "bookkeeper",
+   "runner": "scheduled task",
+   "schedule": "7:00 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Matches payments to bills",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "monthly-close",
+   "name": "Monthly close",
+   "owner": "bookkeeper",
+   "runner": "scheduled task",
+   "schedule": "1st of the month",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Closes last month and the business split",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "biweekly-meal-plan",
+   "name": "Biweekly meal plan",
+   "owner": "health",
+   "runner": "scheduled task",
+   "schedule": "Fri 6:00 PM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Plans two weeks of meals",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "weekly-walmart-cart",
+   "name": "Weekly walmart cart",
+   "owner": "health",
+   "runner": "scheduled task",
+   "schedule": "Sat 9:00 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Fills the grocery cart from the plan",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "weekly-weigh-in",
+   "name": "Weekly weigh in",
+   "owner": "health",
+   "runner": "scheduled task",
+   "schedule": "Sun 8:00 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Reads the scale into the database",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "weekly-gift-check",
+   "name": "Weekly gift check",
+   "owner": "gifts",
+   "runner": "scheduled task",
+   "schedule": "Mon 7:00 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Looks 90 days ahead for birthdays and occasions",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "stay-in-touch",
+   "name": "Stay in touch",
+   "owner": "relationship-manager",
+   "runner": "scheduled task",
+   "schedule": "Mon 8:00 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Suggests who to check on this week",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "chores-sweep",
+   "name": "Chores sweep",
+   "owner": "home-manager",
+   "runner": "scheduled task",
+   "schedule": "Sat 7:30 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Adds the week's chores and upkeep",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "weekly-credit-check",
+   "name": "Weekly credit check",
+   "owner": "financial",
+   "runner": "scheduled task",
+   "schedule": "Sat 7:30 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Reads scores and alerts",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "paper-trade",
+   "name": "Paper trade",
+   "owner": "financial",
+   "runner": "scheduled task",
+   "schedule": "weekdays 2:45 PM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Runs the paper bot (no real money)",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "weekly-business-review",
+   "name": "Weekly business review",
+   "owner": "business",
+   "runner": "scheduled task",
+   "schedule": "Fri 3:00 PM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Reviews the books, filings and invoices",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "it-health",
+   "name": "It health",
+   "owner": "it",
+   "runner": "scheduled task",
+   "schedule": "every 15 min",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Checks timers, the listener and backups",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "offsite-backup",
+   "name": "Offsite backup",
+   "owner": "it",
+   "runner": "scheduled task",
+   "schedule": "3:00 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Copies the backup offsite",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "nightly-tests",
+   "name": "Nightly tests",
+   "owner": "as-architect",
+   "runner": "scheduled task",
+   "schedule": "1:00 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Runs the API test suite",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "weather-daily",
+   "name": "Weather daily",
+   "owner": "local-guide",
+   "runner": "scheduled task",
+   "schedule": "hourly",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Reads the forecast for home and the office",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "events-feed",
+   "name": "Events feed",
+   "owner": "local-guide",
+   "runner": "scheduled task",
+   "schedule": "Thu 6:00 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Finds events near Cedar Falls",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "text-replies",
+   "name": "Text replies",
+   "owner": "text-concierge",
+   "runner": "scheduled task",
+   "schedule": "every 30 min",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Backup to the real-time listener",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "login-watch",
+   "name": "Login watch",
+   "owner": "security",
+   "runner": "scheduled task",
+   "schedule": "every 2 h",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Reads sign-in alerts",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "weekly-security-audit",
+   "name": "Weekly security audit",
+   "owner": "security",
+   "runner": "scheduled task",
+   "schedule": "Fri 3:00 PM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Audits every account",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "weekly-compliance-review",
+   "name": "Weekly compliance review",
+   "owner": "compliance",
+   "runner": "scheduled task",
+   "schedule": "Fri 4:00 PM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Spot-checks sends and automations",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "incident-scan",
+   "name": "Incident scan",
+   "owner": "dba",
+   "runner": "scheduled task",
+   "schedule": "every 5 min",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Raises incidents from health checks",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "weekly-pick",
+   "name": "Weekly pick",
+   "owner": "media",
+   "runner": "scheduled task",
+   "schedule": "Fri 4:00 PM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Chooses the family movie",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "job-leads",
+   "name": "Job leads",
+   "owner": "career",
+   "runner": "scheduled task",
+   "schedule": "6:15 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Scores new job leads",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "price-watch",
+   "name": "Price watch",
+   "owner": "shopping",
+   "runner": "scheduled task",
+   "schedule": "daily 7:00 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Checks wish-list prices",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "weekly-progress-request",
+   "name": "Weekly progress request",
+   "owner": "coach",
+   "runner": "scheduled task",
+   "schedule": "Fri 5:00 PM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Asks every role for its week",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "weekly-coach-review",
+   "name": "Weekly coach review",
+   "owner": "coach",
+   "runner": "scheduled task",
+   "schedule": "Sat 9:00 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Scores the week before the sit-down",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "travel-weekly",
+   "name": "Travel weekly",
+   "owner": "travel",
+   "runner": "scheduled task",
+   "schedule": "Sat 7:00 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Reprices every trip option",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "broker-discovery",
+   "name": "Broker discovery",
+   "owner": "investigator",
+   "runner": "scheduled task",
+   "schedule": "Mon 7:40 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Finds listings on people-search sites",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  },
+  {
+   "key": "broker-removal",
+   "name": "Broker removal",
+   "owner": "investigator",
+   "runner": "scheduled task",
+   "schedule": "Wed 7:40 AM",
+   "timezone": "America/Denver",
+   "status": "active",
+   "purpose": "Files opt-outs",
+   "skills": null,
+   "accounts": null,
+   "tables": null,
+   "owner_status": "running"
+  }
+ ],
+ "skill_catalog": [
+  {
+   "key": "add-todo",
+   "name": "Add todo",
+   "folder": null,
+   "owner": "assistant",
+   "text_command": "/add",
+   "status": "active",
+   "purpose": "Add todo for Sam",
+   "path": "assistant/skills/add-todo/SKILL.md",
+   "accounts": "tasks"
+  },
+  {
+   "key": "todo-status",
+   "name": "Todo status",
+   "folder": null,
+   "owner": "assistant",
+   "text_command": "/due",
+   "status": "active",
+   "purpose": "Todo status for Sam",
+   "path": "assistant/skills/todo-status/SKILL.md",
+   "accounts": "tasks"
+  },
+  {
+   "key": "send-text",
+   "name": "Send text",
+   "folder": null,
+   "owner": "text-concierge",
+   "text_command": "",
+   "status": "active",
+   "purpose": "Send text for Sam",
+   "path": "text-concierge/skills/send-text/SKILL.md",
+   "accounts": "tasks"
+  },
+  {
+   "key": "ask-sam",
+   "name": "Ask sam",
+   "folder": null,
+   "owner": "text-concierge",
+   "text_command": "",
+   "status": "active",
+   "purpose": "Ask sam for Sam",
+   "path": "text-concierge/skills/ask-sam/SKILL.md",
+   "accounts": "tasks"
+  },
+  {
+   "key": "walmart-cart",
+   "name": "Walmart cart",
+   "folder": null,
+   "owner": "health",
+   "text_command": "/cart",
+   "status": "active",
+   "purpose": "Walmart cart for Sam",
+   "path": "health/skills/walmart-cart/SKILL.md",
+   "accounts": "tasks"
+  },
+  {
+   "key": "weather",
+   "name": "Weather",
+   "folder": null,
+   "owner": "local-guide",
+   "text_command": "/weather",
+   "status": "active",
+   "purpose": "Weather for Sam",
+   "path": "local-guide/skills/weather/SKILL.md",
+   "accounts": "tasks"
+  },
+  {
+   "key": "cash",
+   "name": "Cash",
+   "folder": null,
+   "owner": "bookkeeper",
+   "text_command": "/cash",
+   "status": "active",
+   "purpose": "Cash for Sam",
+   "path": "bookkeeper/skills/cash/SKILL.md",
+   "accounts": "tasks"
+  },
+  {
+   "key": "credit-check",
+   "name": "Credit check",
+   "folder": null,
+   "owner": "financial",
+   "text_command": "/credit",
+   "status": "active",
+   "purpose": "Credit check for Sam",
+   "path": "financial/skills/credit-check/SKILL.md",
+   "accounts": "tasks"
+  },
+  {
+   "key": "fares",
+   "name": "Fares",
+   "folder": null,
+   "owner": "travel",
+   "text_command": "/fares",
+   "status": "active",
+   "purpose": "Fares for Sam",
+   "path": "travel/skills/fares/SKILL.md",
+   "accounts": "tasks"
+  },
+  {
+   "key": "gift-ideas",
+   "name": "Gift ideas",
+   "folder": null,
+   "owner": "gifts",
+   "text_command": "/gifts",
+   "status": "active",
+   "purpose": "Gift ideas for Sam",
+   "path": "gifts/skills/gift-ideas/SKILL.md",
+   "accounts": "tasks"
+  },
+  {
+   "key": "movie-pick",
+   "name": "Movie pick",
+   "folder": null,
+   "owner": "media",
+   "text_command": "/movie",
+   "status": "active",
+   "purpose": "Movie pick for Sam",
+   "path": "media/skills/movie-pick/SKILL.md",
+   "accounts": "tasks"
+  },
+  {
+   "key": "chores",
+   "name": "Chores",
+   "folder": null,
+   "owner": "home-manager",
+   "text_command": "/chores",
+   "status": "active",
+   "purpose": "Chores for Sam",
+   "path": "home-manager/skills/chores/SKILL.md",
+   "accounts": "tasks"
+  },
+  {
+   "key": "deep-dive",
+   "name": "Deep dive",
+   "folder": null,
+   "owner": "investigator",
+   "text_command": "",
+   "status": "active",
+   "purpose": "Deep dive for Sam",
+   "path": "investigator/skills/deep-dive/SKILL.md",
+   "accounts": "tasks"
+  },
+  {
+   "key": "optout",
+   "name": "Optout",
+   "folder": null,
+   "owner": "investigator",
+   "text_command": "",
+   "status": "active",
+   "purpose": "Optout for Sam",
+   "path": "investigator/skills/optout/SKILL.md",
+   "accounts": "tasks"
+  },
+  {
+   "key": "design-check",
+   "name": "Design check",
+   "folder": null,
+   "owner": "designer",
+   "text_command": "",
+   "status": "active",
+   "purpose": "Design check for Sam",
+   "path": "designer/skills/design-check/SKILL.md",
+   "accounts": "tasks"
+  },
+  {
+   "key": "annual-report",
+   "name": "Annual report",
+   "folder": null,
+   "owner": "business",
+   "text_command": "",
+   "status": "active",
+   "purpose": "Annual report for Sam",
+   "path": "business/skills/annual-report/SKILL.md",
+   "accounts": "tasks"
+  }
+ ]
+}

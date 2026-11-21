@@ -1,0 +1,806 @@
+{
+ "roles": [
+  {
+   "depth": 1,
+   "key": "assistant",
+   "name": "Executive Assistant",
+   "title": "Chief of staff",
+   "department_key": null,
+   "department": null,
+   "reports_to": "rod",
+   "reports_to_name": "Sam",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "CLAUDE.md",
+   "folder": "CLAUDE.md",
+   "direct_reports": 10,
+   "sort_path": [
+    0
+   ],
+   "desk": true,
+   "last_report": "2026-11-20"
+  },
+  {
+   "depth": 1,
+   "key": "coach",
+   "name": "Life Coach",
+   "title": "Independent oversight",
+   "department_key": null,
+   "department": null,
+   "reports_to": "rod",
+   "reports_to_name": "Sam",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "coach/README.md",
+   "folder": "coach",
+   "direct_reports": 0,
+   "sort_path": [
+    1
+   ],
+   "desk": true,
+   "last_report": "2026-11-20"
+  },
+  {
+   "depth": 1,
+   "key": "business_coach",
+   "name": "Business Coach",
+   "title": "Independent oversight",
+   "department_key": null,
+   "department": null,
+   "reports_to": "rod",
+   "reports_to_name": "Sam",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "business-coach/README.md",
+   "folder": "business-coach",
+   "direct_reports": 0,
+   "sort_path": [
+    2
+   ],
+   "desk": true,
+   "last_report": "2026-11-20"
+  },
+  {
+   "depth": 1,
+   "key": "security",
+   "name": "Security Officer",
+   "title": "Independent oversight",
+   "department_key": null,
+   "department": null,
+   "reports_to": "rod",
+   "reports_to_name": "Sam",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "security/OFFICER.md",
+   "folder": "security",
+   "direct_reports": 0,
+   "sort_path": [
+    3
+   ],
+   "desk": true,
+   "last_report": "2026-11-20"
+  },
+  {
+   "depth": 1,
+   "key": "compliance",
+   "name": "Compliance Officer",
+   "title": "Independent oversight",
+   "department_key": null,
+   "department": null,
+   "reports_to": "rod",
+   "reports_to_name": "Sam",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "compliance/OFFICER.md",
+   "folder": "compliance",
+   "direct_reports": 0,
+   "sort_path": [
+    4
+   ],
+   "desk": true,
+   "last_report": "2026-11-20"
+  },
+  {
+   "depth": 2,
+   "key": "text-concierge",
+   "name": "Text Concierge",
+   "title": "Staff",
+   "department_key": null,
+   "department": null,
+   "reports_to": "assistant",
+   "reports_to_name": "Executive Assistant",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "texting/CONCIERGE.md",
+   "folder": "texting",
+   "direct_reports": 0,
+   "sort_path": [
+    0,
+    5
+   ],
+   "desk": true,
+   "last_report": "2026-11-19"
+  },
+  {
+   "depth": 2,
+   "key": "philosopher",
+   "name": "Philosopher",
+   "title": "Staff",
+   "department_key": null,
+   "department": null,
+   "reports_to": "assistant",
+   "reports_to_name": "Executive Assistant",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "knowledge/PHILOSOPHER.md",
+   "folder": "knowledge",
+   "direct_reports": 0,
+   "sort_path": [
+    0,
+    6
+   ],
+   "desk": true,
+   "last_report": "2026-11-19"
+  },
+  {
+   "depth": 2,
+   "key": "bookkeeper",
+   "name": "Accountant",
+   "title": "Lead",
+   "department_key": "money",
+   "department": "Money",
+   "reports_to": "assistant",
+   "reports_to_name": "Executive Assistant",
+   "is_lead": true,
+   "status": "running",
+   "role_file": "bookkeeper/README.md",
+   "folder": "bookkeeper",
+   "direct_reports": 1,
+   "sort_path": [
+    1,
+    0
+   ],
+   "desk": true,
+   "last_report": "2026-11-20"
+  },
+  {
+   "depth": 3,
+   "key": "financial",
+   "name": "Financial Advisor",
+   "title": "",
+   "department_key": "money",
+   "department": "Money",
+   "reports_to": "bookkeeper",
+   "reports_to_name": "Accountant",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "financial/ADVISOR.md",
+   "folder": "financial",
+   "direct_reports": 0,
+   "sort_path": [
+    1,
+    1
+   ],
+   "desk": true,
+   "last_report": "2026-11-19"
+  },
+  {
+   "depth": 2,
+   "key": "shopping",
+   "name": "Shopping Expert",
+   "title": "Lead",
+   "department_key": "shopping-style",
+   "department": "Shopping & Style",
+   "reports_to": "assistant",
+   "reports_to_name": "Executive Assistant",
+   "is_lead": true,
+   "status": "running",
+   "role_file": "shopping/EXPERT.md",
+   "folder": "shopping",
+   "direct_reports": 2,
+   "sort_path": [
+    2,
+    0
+   ],
+   "desk": true,
+   "last_report": "2026-11-20"
+  },
+  {
+   "depth": 3,
+   "key": "clothier",
+   "name": "Clothier",
+   "title": "",
+   "department_key": "shopping-style",
+   "department": "Shopping & Style",
+   "reports_to": "shopping",
+   "reports_to_name": "Shopping Expert",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "fashion/CONSULTANT.md",
+   "folder": "fashion",
+   "direct_reports": 0,
+   "sort_path": [
+    2,
+    1
+   ],
+   "desk": true,
+   "last_report": "2026-11-19"
+  },
+  {
+   "depth": 3,
+   "key": "gifts",
+   "name": "Gift Concierge",
+   "title": "",
+   "department_key": "shopping-style",
+   "department": "Shopping & Style",
+   "reports_to": "shopping",
+   "reports_to_name": "Shopping Expert",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "gifts/CONCIERGE.md",
+   "folder": "gifts",
+   "direct_reports": 0,
+   "sort_path": [
+    2,
+    2
+   ],
+   "desk": true,
+   "last_report": "2026-11-18"
+  },
+  {
+   "depth": 2,
+   "key": "scheduler",
+   "name": "Scheduler",
+   "title": "Lead",
+   "department_key": "time-travel",
+   "department": "Time & Travel",
+   "reports_to": "assistant",
+   "reports_to_name": "Executive Assistant",
+   "is_lead": true,
+   "status": "running",
+   "role_file": "scheduler/README.md",
+   "folder": "scheduler",
+   "direct_reports": 1,
+   "sort_path": [
+    3,
+    0
+   ],
+   "desk": true,
+   "last_report": "2026-11-20"
+  },
+  {
+   "depth": 3,
+   "key": "travel",
+   "name": "Travel Agent",
+   "title": "",
+   "department_key": "time-travel",
+   "department": "Time & Travel",
+   "reports_to": "scheduler",
+   "reports_to_name": "Scheduler",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "travel/AGENT.md",
+   "folder": "travel",
+   "direct_reports": 0,
+   "sort_path": [
+    3,
+    1
+   ],
+   "desk": true,
+   "last_report": "2026-11-19"
+  },
+  {
+   "depth": 2,
+   "key": "home-manager",
+   "name": "Home Manager",
+   "title": "Lead",
+   "department_key": "home",
+   "department": "Home",
+   "reports_to": "assistant",
+   "reports_to_name": "Executive Assistant",
+   "is_lead": true,
+   "status": "running",
+   "role_file": "home/MANAGER.md",
+   "folder": "home",
+   "direct_reports": 2,
+   "sort_path": [
+    4,
+    0
+   ],
+   "desk": true,
+   "last_report": "2026-11-20"
+  },
+  {
+   "depth": 3,
+   "key": "relocation",
+   "name": "Relocation Expert",
+   "title": "",
+   "department_key": "home",
+   "department": "Home",
+   "reports_to": "home-manager",
+   "reports_to_name": "Home Manager",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "apartment-search/RELOCATION.md",
+   "folder": "apartment-search",
+   "direct_reports": 0,
+   "sort_path": [
+    4,
+    1
+   ],
+   "desk": true,
+   "last_report": "2026-11-19"
+  },
+  {
+   "depth": 3,
+   "key": "pets",
+   "name": "Pet Expert",
+   "title": "",
+   "department_key": "home",
+   "department": "Home",
+   "reports_to": "home-manager",
+   "reports_to_name": "Home Manager",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "pets/EXPERT.md",
+   "folder": "pets",
+   "direct_reports": 0,
+   "sort_path": [
+    4,
+    2
+   ],
+   "desk": true,
+   "last_report": "2026-11-18"
+  },
+  {
+   "depth": 2,
+   "key": "health",
+   "name": "Health Agent",
+   "title": "Lead",
+   "department_key": "health-life",
+   "department": "Health",
+   "reports_to": "assistant",
+   "reports_to_name": "Executive Assistant",
+   "is_lead": true,
+   "status": "running",
+   "role_file": "nutrition/COACH.md",
+   "folder": "nutrition",
+   "direct_reports": 0,
+   "sort_path": [
+    5,
+    0
+   ],
+   "desk": true,
+   "last_report": "2026-11-20"
+  },
+  {
+   "depth": 2,
+   "key": "local-guide",
+   "name": "Local Guide",
+   "title": "Lead",
+   "department_key": "fun-local",
+   "department": "Fun & Local",
+   "reports_to": "assistant",
+   "reports_to_name": "Executive Assistant",
+   "is_lead": true,
+   "status": "running",
+   "role_file": "local-guide/GUIDE.md",
+   "folder": "local-guide",
+   "direct_reports": 3,
+   "sort_path": [
+    6,
+    0
+   ],
+   "desk": true,
+   "last_report": "2026-11-20"
+  },
+  {
+   "depth": 3,
+   "key": "events",
+   "name": "Event Planner",
+   "title": "",
+   "department_key": "fun-local",
+   "department": "Fun & Local",
+   "reports_to": "local-guide",
+   "reports_to_name": "Local Guide",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "events/PLANNER.md",
+   "folder": "events",
+   "direct_reports": 0,
+   "sort_path": [
+    6,
+    1
+   ],
+   "desk": true,
+   "last_report": "2026-11-19"
+  },
+  {
+   "depth": 3,
+   "key": "media",
+   "name": "Media Concierge",
+   "title": "",
+   "department_key": "fun-local",
+   "department": "Fun & Local",
+   "reports_to": "local-guide",
+   "reports_to_name": "Local Guide",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "media/CONCIERGE.md",
+   "folder": "media",
+   "direct_reports": 0,
+   "sort_path": [
+    6,
+    2
+   ],
+   "desk": true,
+   "last_report": "2026-11-18"
+  },
+  {
+   "depth": 3,
+   "key": "music",
+   "name": "Music Producer",
+   "title": "",
+   "department_key": "fun-local",
+   "department": "Fun & Local",
+   "reports_to": "local-guide",
+   "reports_to_name": "Local Guide",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "music/COACH.md",
+   "folder": "music",
+   "direct_reports": 0,
+   "sort_path": [
+    6,
+    3
+   ],
+   "desk": true,
+   "last_report": "2026-11-17"
+  },
+  {
+   "depth": 2,
+   "key": "relationship-manager",
+   "name": "Relationship Manager",
+   "title": "Lead",
+   "department_key": "people",
+   "department": "People",
+   "reports_to": "assistant",
+   "reports_to_name": "Executive Assistant",
+   "is_lead": true,
+   "status": "running",
+   "role_file": "relationships/MANAGER.md",
+   "folder": "relationships",
+   "direct_reports": 2,
+   "sort_path": [
+    7,
+    0
+   ],
+   "desk": true,
+   "last_report": "2026-11-20"
+  },
+  {
+   "depth": 3,
+   "key": "investigator",
+   "name": "Investigator",
+   "title": "",
+   "department_key": "people",
+   "department": "People",
+   "reports_to": "relationship-manager",
+   "reports_to_name": "Relationship Manager",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "investigator/README.md",
+   "folder": "investigator",
+   "direct_reports": 0,
+   "sort_path": [
+    7,
+    1
+   ],
+   "desk": true,
+   "last_report": "2026-11-19"
+  },
+  {
+   "depth": 3,
+   "key": "relationships",
+   "name": "Relationship Coach",
+   "title": "",
+   "department_key": "people",
+   "department": "People",
+   "reports_to": "relationship-manager",
+   "reports_to_name": "Relationship Manager",
+   "is_lead": false,
+   "status": "placeholder",
+   "role_file": "relationships/COACH.md",
+   "folder": "relationships",
+   "direct_reports": 0,
+   "sort_path": [
+    7,
+    2
+   ],
+   "desk": true,
+   "last_report": null
+  },
+  {
+   "depth": 2,
+   "key": "career",
+   "name": "Career Assistant",
+   "title": "Lead",
+   "department_key": "career-business",
+   "department": "Career & Business",
+   "reports_to": "assistant",
+   "reports_to_name": "Executive Assistant",
+   "is_lead": true,
+   "status": "running",
+   "role_file": "career/README.md",
+   "folder": "career",
+   "direct_reports": 3,
+   "sort_path": [
+    8,
+    0
+   ],
+   "desk": true,
+   "last_report": "2026-11-20"
+  },
+  {
+   "depth": 3,
+   "key": "business",
+   "name": "Business Executive",
+   "title": "",
+   "department_key": "career-business",
+   "department": "Career & Business",
+   "reports_to": "career",
+   "reports_to_name": "Career Assistant",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "business/EXECUTIVE.md",
+   "folder": "business",
+   "direct_reports": 0,
+   "sort_path": [
+    8,
+    1
+   ],
+   "desk": true,
+   "last_report": "2026-11-19"
+  },
+  {
+   "depth": 3,
+   "key": "legal",
+   "name": "Legal Advisor",
+   "title": "",
+   "department_key": "career-business",
+   "department": "Career & Business",
+   "reports_to": "career",
+   "reports_to_name": "Career Assistant",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "legal/README.md",
+   "folder": "legal",
+   "direct_reports": 0,
+   "sort_path": [
+    8,
+    2
+   ],
+   "desk": true,
+   "last_report": "2026-11-18"
+  },
+  {
+   "depth": 3,
+   "key": "pr",
+   "name": "PR Person",
+   "title": "",
+   "department_key": "career-business",
+   "department": "Career & Business",
+   "reports_to": "career",
+   "reports_to_name": "Career Assistant",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "pr/README.md",
+   "folder": "pr",
+   "direct_reports": 0,
+   "sort_path": [
+    8,
+    3
+   ],
+   "desk": true,
+   "last_report": "2026-11-17"
+  },
+  {
+   "depth": 2,
+   "key": "it",
+   "name": "IT Guy",
+   "title": "Lead",
+   "department_key": "systems",
+   "department": "Systems",
+   "reports_to": "assistant",
+   "reports_to_name": "Executive Assistant",
+   "is_lead": true,
+   "status": "running",
+   "role_file": "it/IT.md",
+   "folder": "it",
+   "direct_reports": 4,
+   "sort_path": [
+    9,
+    0
+   ],
+   "desk": true,
+   "last_report": "2026-11-20"
+  },
+  {
+   "depth": 3,
+   "key": "webmaster",
+   "name": "Webmaster",
+   "title": "",
+   "department_key": "systems",
+   "department": "Systems",
+   "reports_to": "it",
+   "reports_to_name": "IT Guy",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "portal/WEBMASTER.md",
+   "folder": "portal",
+   "direct_reports": 0,
+   "sort_path": [
+    9,
+    1
+   ],
+   "desk": true,
+   "last_report": "2026-11-19"
+  },
+  {
+   "depth": 3,
+   "key": "product",
+   "name": "Product Manager",
+   "title": "",
+   "department_key": "systems",
+   "department": "Systems",
+   "reports_to": "it",
+   "reports_to_name": "IT Guy",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "product/PRODUCT-MANAGER.md",
+   "folder": "product",
+   "direct_reports": 0,
+   "sort_path": [
+    9,
+    2
+   ],
+   "desk": true,
+   "last_report": "2026-11-18"
+  },
+  {
+   "depth": 3,
+   "key": "dba",
+   "name": "Database Administrator",
+   "title": "",
+   "department_key": "systems",
+   "department": "Systems",
+   "reports_to": "it",
+   "reports_to_name": "IT Guy",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "database/ADMINISTRATOR.md",
+   "folder": "database",
+   "direct_reports": 0,
+   "sort_path": [
+    9,
+    3
+   ],
+   "desk": true,
+   "last_report": "2026-11-17"
+  },
+  {
+   "depth": 3,
+   "key": "designer",
+   "name": "Designer",
+   "title": "",
+   "department_key": "systems",
+   "department": "Systems",
+   "reports_to": "it",
+   "reports_to_name": "IT Guy",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "design/DESIGNER.md",
+   "folder": "design",
+   "direct_reports": 0,
+   "sort_path": [
+    9,
+    4
+   ],
+   "desk": true,
+   "last_report": "2026-11-16"
+  },
+  {
+   "depth": 2,
+   "key": "as-architect",
+   "name": "Software Architect",
+   "title": "Lead",
+   "department_key": "brightline-labs",
+   "department": "Brightline Labs",
+   "reports_to": "assistant",
+   "reports_to_name": "Executive Assistant",
+   "is_lead": true,
+   "status": "running",
+   "role_file": "agency-squared/ARCHITECT.md",
+   "folder": "agency-squared",
+   "direct_reports": 0,
+   "sort_path": [
+    10,
+    0
+   ],
+   "desk": true,
+   "last_report": "2026-11-20"
+  }
+ ],
+ "departments": [
+  {
+   "key": "money",
+   "name": "Money",
+   "lead_role_key": "bookkeeper",
+   "purpose": "Cash, bills, credit and investing",
+   "sort": 0
+  },
+  {
+   "key": "shopping-style",
+   "name": "Shopping & Style",
+   "lead_role_key": "shopping",
+   "purpose": "What to buy, clothes and gifts",
+   "sort": 1
+  },
+  {
+   "key": "time-travel",
+   "name": "Time & Travel",
+   "lead_role_key": "scheduler",
+   "purpose": "The calendar and trips",
+   "sort": 2
+  },
+  {
+   "key": "home",
+   "name": "Home",
+   "lead_role_key": "home-manager",
+   "purpose": "The home, the car, moves and the dog",
+   "sort": 3
+  },
+  {
+   "key": "health-life",
+   "name": "Health",
+   "lead_role_key": "health",
+   "purpose": "Food, training and care",
+   "sort": 4
+  },
+  {
+   "key": "fun-local",
+   "name": "Fun & Local",
+   "lead_role_key": "local-guide",
+   "purpose": "Going out, hosting, movies and music",
+   "sort": 5
+  },
+  {
+   "key": "people",
+   "name": "People",
+   "lead_role_key": "relationship-manager",
+   "purpose": "Family, friends and who to trust",
+   "sort": 6
+  },
+  {
+   "key": "career-business",
+   "name": "Career & Business",
+   "lead_role_key": "career",
+   "purpose": "Work, the companies and agreements",
+   "sort": 7
+  },
+  {
+   "key": "systems",
+   "name": "Systems",
+   "lead_role_key": "it",
+   "purpose": "The computer, the portal and the database",
+   "sort": 8
+  },
+  {
+   "key": "brightline-labs",
+   "name": "Brightline Labs",
+   "lead_role_key": "as-architect",
+   "purpose": "The product team for Brightline Labs",
+   "sort": 9
+  }
+ ]
+}

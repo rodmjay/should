@@ -1,0 +1,2325 @@
+{
+ "date": "2026-11-21",
+ "brief": {
+  "date": "2026-11-21",
+  "generated_at": "2026-11-21T06:30:00-07:00",
+  "headline": "A calm Saturday. Payday is 12/4 and every bill is covered. Two quick asks today: the Summit Card payment and Maya's gift.",
+  "today": [
+   {
+    "title": "Order Maya's birthday gift",
+    "why": "Arrives in 2 days; her birthday is in 4.",
+    "domain": "family",
+    "due": "2026-11-21",
+    "urgency": "act",
+    "done": false
+   },
+   {
+    "title": "Call First Mesa about the overdraft fee",
+    "why": "A one-time refund is likely if you ask.",
+    "domain": "money",
+    "due": "2026-11-21",
+    "urgency": "watch",
+    "done": false
+   },
+   {
+    "title": "Sign Maya's field trip slip",
+    "why": "Due at school tomorrow.",
+    "domain": "family",
+    "due": "2026-11-22",
+    "urgency": "watch",
+    "done": true
+   },
+   {
+    "title": "Workout: upper body",
+    "why": "Keeps the week at 4 sessions.",
+    "domain": "health",
+    "due": "2026-11-21",
+    "urgency": "ok",
+    "done": false
+   },
+   {
+    "title": "Reply to Alex at Northgate Systems",
+    "why": "Draft is ready; it takes two minutes.",
+    "domain": "work",
+    "due": "2026-11-21",
+    "urgency": "ok",
+    "done": true
+   }
+  ],
+  "domains": [
+   {
+    "key": "money",
+    "name": "Money",
+    "status": "ok",
+    "summary": "Checking $2,240.39; low point $449.39 before payday 12/4, above the $250 bar.",
+    "metrics": [
+     {
+      "label": "Checking",
+      "value": "$2,240.39",
+      "note": "this morning"
+     },
+     {
+      "label": "Low point",
+      "value": "$449.39",
+      "note": "12/3"
+     },
+     {
+      "label": "Bills, 14 days",
+      "value": "$1,471.40",
+      "note": "unpaid"
+     }
+    ],
+    "bullets": [
+     "Checking $2,240.39.",
+     "Nothing needs a decision today.",
+     "Owner role is on it.",
+     "Details on the desk."
+    ],
+    "series": [
+     [
+      "2026-11-17",
+      "32.5"
+     ],
+     [
+      "2026-11-18",
+      "73.1"
+     ],
+     [
+      "2026-11-19",
+      "16.6"
+     ],
+     [
+      "2026-11-20",
+      "15.9"
+     ],
+     [
+      "2026-11-21",
+      "86.9"
+     ]
+    ]
+   },
+   {
+    "key": "health",
+    "name": "Health",
+    "status": "watch",
+    "summary": "Two workouts this week so far; weight down 0.8 lb this month.",
+    "metrics": [
+     {
+      "label": "Weight",
+      "value": "193.4 lb",
+      "note": "goal 185"
+     },
+     {
+      "label": "Workouts",
+      "value": "2 of 4",
+      "note": "this week"
+     },
+     {
+      "label": "Sleep",
+      "value": "7.1 h",
+      "note": "average"
+     }
+    ],
+    "bullets": [
+     "Two workouts this week so far.",
+     "Nothing needs a decision today.",
+     "Owner role is on it.",
+     "Details on the desk."
+    ],
+    "series": [
+     [
+      "2026-11-17",
+      "22.8"
+     ],
+     [
+      "2026-11-18",
+      "38.0"
+     ],
+     [
+      "2026-11-19",
+      "23.1"
+     ],
+     [
+      "2026-11-20",
+      "39.1"
+     ],
+     [
+      "2026-11-21",
+      "38.1"
+     ]
+    ]
+   },
+   {
+    "key": "family",
+    "name": "Family",
+    "status": "ok",
+    "summary": "Maya's birthday is in 4 days; the gift is picked.",
+    "metrics": [
+     {
+      "label": "Birthdays",
+      "value": "2",
+      "note": "next 30 days"
+     },
+     {
+      "label": "Kids' events",
+      "value": "3",
+      "note": "this week"
+     },
+     {
+      "label": "Calls owed",
+      "value": "1",
+      "note": "Grandpa Ray"
+     }
+    ],
+    "bullets": [
+     "Maya's birthday is in 4 days.",
+     "Nothing needs a decision today.",
+     "Owner role is on it.",
+     "Details on the desk."
+    ],
+    "series": [
+     [
+      "2026-11-17",
+      "58.2"
+     ],
+     [
+      "2026-11-18",
+      "19.2"
+     ],
+     [
+      "2026-11-19",
+      "42.7"
+     ],
+     [
+      "2026-11-20",
+      "16.2"
+     ],
+     [
+      "2026-11-21",
+      "16.3"
+     ]
+    ]
+   },
+   {
+    "key": "home",
+    "name": "Home",
+    "status": "ok",
+    "summary": "Furnace filter due; faucet repair is with the landlord.",
+    "metrics": [
+     {
+      "label": "Chores",
+      "value": "5",
+      "note": "this week"
+     },
+     {
+      "label": "Repairs",
+      "value": "1",
+      "note": "open"
+     },
+     {
+      "label": "Supplies",
+      "value": "ok",
+      "note": ""
+     }
+    ],
+    "bullets": [
+     "Furnace filter due.",
+     "Nothing needs a decision today.",
+     "Owner role is on it.",
+     "Details on the desk."
+    ],
+    "series": [
+     [
+      "2026-11-17",
+      "21.9"
+     ],
+     [
+      "2026-11-18",
+      "28.4"
+     ],
+     [
+      "2026-11-19",
+      "26.8"
+     ],
+     [
+      "2026-11-20",
+      "10.2"
+     ],
+     [
+      "2026-11-21",
+      "38.1"
+     ]
+    ]
+   },
+   {
+    "key": "work",
+    "name": "Work",
+    "status": "ok",
+    "summary": "One recruiter reply drafted; the Carter Studio invoice is ready.",
+    "metrics": [
+     {
+      "label": "Leads",
+      "value": "3",
+      "note": "open"
+     },
+     {
+      "label": "Invoices",
+      "value": "$1,200",
+      "note": "to send"
+     },
+     {
+      "label": "Deadlines",
+      "value": "1",
+      "note": "this month"
+     }
+    ],
+    "bullets": [
+     "One recruiter reply drafted.",
+     "Nothing needs a decision today.",
+     "Owner role is on it.",
+     "Details on the desk."
+    ],
+    "series": [
+     [
+      "2026-11-17",
+      "70.1"
+     ],
+     [
+      "2026-11-18",
+      "82.4"
+     ],
+     [
+      "2026-11-19",
+      "44.5"
+     ],
+     [
+      "2026-11-20",
+      "27.4"
+     ],
+     [
+      "2026-11-21",
+      "79.4"
+     ]
+    ]
+   },
+   {
+    "key": "car",
+    "name": "Car",
+    "status": "watch",
+    "summary": "Registration renews in 9 days; oil change due soon.",
+    "metrics": [
+     {
+      "label": "Registration",
+      "value": "11/30",
+      "note": "$86"
+     },
+     {
+      "label": "Oil",
+      "value": "300 mi",
+      "note": "left"
+     },
+     {
+      "label": "Insurance",
+      "value": "paid",
+      "note": ""
+     }
+    ],
+    "bullets": [
+     "Registration renews in 9 days.",
+     "Nothing needs a decision today.",
+     "Owner role is on it.",
+     "Details on the desk."
+    ],
+    "series": [
+     [
+      "2026-11-17",
+      "24.0"
+     ],
+     [
+      "2026-11-18",
+      "31.0"
+     ],
+     [
+      "2026-11-19",
+      "66.9"
+     ],
+     [
+      "2026-11-20",
+      "59.6"
+     ],
+     [
+      "2026-11-21",
+      "81.0"
+     ]
+    ]
+   },
+   {
+    "key": "plans",
+    "name": "Plans",
+    "status": "ok",
+    "summary": "Spring coast trip: three options priced, dates not picked.",
+    "metrics": [
+     {
+      "label": "Trip options",
+      "value": "3",
+      "note": "priced"
+     },
+     {
+      "label": "Weekend",
+      "value": "hike",
+      "note": "Saturday"
+     },
+     {
+      "label": "Date night",
+      "value": "11/29",
+      "note": "booked"
+     }
+    ],
+    "bullets": [
+     "Spring coast trip: three options priced, dates not picked..",
+     "Nothing needs a decision today.",
+     "Owner role is on it.",
+     "Details on the desk."
+    ],
+    "series": [
+     [
+      "2026-11-17",
+      "40.8"
+     ],
+     [
+      "2026-11-18",
+      "84.5"
+     ],
+     [
+      "2026-11-19",
+      "62.9"
+     ],
+     [
+      "2026-11-20",
+      "46.7"
+     ],
+     [
+      "2026-11-21",
+      "31.2"
+     ]
+    ]
+   }
+  ],
+  "bills": [
+   {
+    "due": "2026-11-21",
+    "bill": "Renter's insurance",
+    "amount": "$14",
+    "note": "autopay",
+    "overdue": false
+   },
+   {
+    "due": "2026-11-22",
+    "bill": "Peak Wireless, 3 lines",
+    "amount": "$118",
+    "note": "autopay",
+    "overdue": false
+   },
+   {
+    "due": "2026-12-01",
+    "bill": "Rent, Aspen Court",
+    "amount": "$1,195",
+    "note": "",
+    "overdue": false
+   },
+   {
+    "due": "2026-12-03",
+    "bill": "Cedar Rec Center",
+    "amount": "$32",
+    "note": "autopay",
+    "overdue": false
+   },
+   {
+    "due": "2026-12-04",
+    "bill": "Car insurance, Granite Mutual",
+    "amount": "$112.40",
+    "note": "autopay",
+    "overdue": false
+   }
+  ],
+  "bills_note": "Every bill in the next two weeks is covered by the balance and Friday's paycheck.",
+  "changes": [
+   "Maya's gift moved to today so it arrives on time.",
+   "Oil change pushed to next week.",
+   "Added the lease renewal to Home.",
+   "Closed the windshield claim; insurance paid it.",
+   "Grocery cart filled from the meal plan."
+  ],
+  "open_loops": [
+   {
+    "due": "2026-11-21",
+    "domain": "money",
+    "item": "Overdraft fee refund",
+    "status": "open"
+   },
+   {
+    "due": "2026-11-23",
+    "domain": "home",
+    "item": "Kitchen faucet repair",
+    "status": "waiting"
+   },
+   {
+    "due": "2026-11-25",
+    "domain": "car",
+    "item": "Registration renewal",
+    "status": "open"
+   },
+   {
+    "due": "2026-11-27",
+    "domain": "family",
+    "item": "Leo's party bounce house",
+    "status": "open"
+   },
+   {
+    "due": "2026-11-30",
+    "domain": "work",
+    "item": "Juniper Dental invoice",
+    "status": "open"
+   },
+   {
+    "due": "2026-12-01",
+    "domain": "credit",
+    "item": "Collection dispute letter",
+    "status": "waiting"
+   },
+   {
+    "due": "2026-12-03",
+    "domain": "health",
+    "item": "Leo's sports physical",
+    "status": "open"
+   },
+   {
+    "due": "2026-12-05",
+    "domain": "travel",
+    "item": "Spring trip dates",
+    "status": "open"
+   },
+   {
+    "due": "2026-12-07",
+    "domain": "family",
+    "item": "Holiday party RSVP",
+    "status": "open"
+   },
+   {
+    "due": "2026-12-09",
+    "domain": "home",
+    "item": "Lease renewal",
+    "status": "open"
+   },
+   {
+    "due": "2026-12-11",
+    "domain": "pets",
+    "item": "Vet visit",
+    "status": "open"
+   },
+   {
+    "due": "2026-12-14",
+    "domain": "security",
+    "item": "Two-step sign-in",
+    "status": "open"
+   },
+   {
+    "due": "2026-12-15",
+    "domain": "taxes",
+    "item": "Q4 estimate",
+    "status": "open"
+   }
+  ],
+  "questions": [
+   "Should the spring trip be four nights or five?"
+  ],
+  "learned": [
+   "Thursday evenings work best for calls.",
+   "The family prefers hikes under 4 miles.",
+   "Grocery runs are cheaper on Saturdays."
+  ],
+  "sources": "Calendar, Todoist, bills, balances, weather",
+  "done_count": 2
+ },
+ "now": {
+  "current": {
+   "start": "09:30",
+   "end": "11:30",
+   "title": "Family hike",
+   "kind": "personal",
+   "source": "calendar",
+   "todoist_id": "",
+   "note": "",
+   "calendar_event_id": "evt00006459",
+   "done": false,
+   "s": 570,
+   "e": 690,
+   "past": false,
+   "left": 16.67,
+   "width": 13.33,
+   "left_min": 50,
+   "pct": 58
+  },
+  "next": [
+   {
+    "start": "11:30",
+    "end": "12:30",
+    "title": "Lunch",
+    "kind": "personal",
+    "source": "calendar",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "evt00001556",
+    "done": false,
+    "s": 690,
+    "e": 750,
+    "past": false,
+    "left": 30.0,
+    "width": 6.67
+   },
+   {
+    "start": "12:30",
+    "end": "13:30",
+    "title": "Replace the furnace filter",
+    "kind": "task",
+    "source": "todoist",
+    "todoist_id": "t8135",
+    "note": "",
+    "calendar_event_id": "",
+    "done": false,
+    "s": 750,
+    "e": 810,
+    "past": false,
+    "left": 36.67,
+    "width": 6.67
+   }
+  ],
+  "later": 6,
+  "blocks": [
+   {
+    "start": "07:00",
+    "end": "07:30",
+    "title": "Coffee and the weekly list",
+    "kind": "routine",
+    "source": "plan",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "",
+    "done": true,
+    "s": 420,
+    "e": 450,
+    "past": true,
+    "left": 0.0,
+    "width": 3.33,
+    "left_min": 0,
+    "pct": 100
+   },
+   {
+    "start": "07:30",
+    "end": "08:30",
+    "title": "Pancake breakfast",
+    "kind": "personal",
+    "source": "calendar",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "evt00015473",
+    "done": true,
+    "s": 450,
+    "e": 510,
+    "past": true,
+    "left": 3.33,
+    "width": 6.67,
+    "left_min": 0,
+    "pct": 100
+   },
+   {
+    "start": "08:30",
+    "end": "09:30",
+    "title": "Weekly review with Life Coach",
+    "kind": "routine",
+    "source": "plan",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "",
+    "done": true,
+    "s": 510,
+    "e": 570,
+    "past": true,
+    "left": 10.0,
+    "width": 6.67,
+    "left_min": 0,
+    "pct": 100
+   },
+   {
+    "start": "09:30",
+    "end": "11:30",
+    "title": "Family hike",
+    "kind": "personal",
+    "source": "calendar",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "evt00006459",
+    "done": false,
+    "s": 570,
+    "e": 690,
+    "past": false,
+    "left": 16.67,
+    "width": 13.33,
+    "left_min": 50,
+    "pct": 58
+   },
+   {
+    "start": "11:30",
+    "end": "12:30",
+    "title": "Lunch",
+    "kind": "personal",
+    "source": "calendar",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "evt00001556",
+    "done": false,
+    "s": 690,
+    "e": 750,
+    "past": false,
+    "left": 30.0,
+    "width": 6.67,
+    "left_min": 110,
+    "pct": 0
+   },
+   {
+    "start": "12:30",
+    "end": "13:30",
+    "title": "Replace the furnace filter",
+    "kind": "task",
+    "source": "todoist",
+    "todoist_id": "t8135",
+    "note": "",
+    "calendar_event_id": "",
+    "done": false,
+    "s": 750,
+    "e": 810,
+    "past": false,
+    "left": 36.67,
+    "width": 6.67,
+    "left_min": 170,
+    "pct": 0
+   },
+   {
+    "start": "13:30",
+    "end": "15:00",
+    "title": "Open afternoon",
+    "kind": "buffer",
+    "source": "plan",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "",
+    "done": false,
+    "s": 810,
+    "e": 900,
+    "past": false,
+    "left": 43.33,
+    "width": 10.0,
+    "left_min": 260,
+    "pct": 0
+   },
+   {
+    "start": "15:00",
+    "end": "16:00",
+    "title": "Grocery pickup",
+    "kind": "task",
+    "source": "plan",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "",
+    "done": false,
+    "s": 900,
+    "e": 960,
+    "past": false,
+    "left": 53.33,
+    "width": 6.67,
+    "left_min": 320,
+    "pct": 0
+   },
+   {
+    "start": "16:00",
+    "end": "17:30",
+    "title": "Leo's game",
+    "kind": "personal",
+    "source": "calendar",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "evt00005022",
+    "done": false,
+    "s": 960,
+    "e": 1050,
+    "past": false,
+    "left": 60.0,
+    "width": 10.0,
+    "left_min": 410,
+    "pct": 0
+   },
+   {
+    "start": "17:30",
+    "end": "18:30",
+    "title": "Dinner",
+    "kind": "personal",
+    "source": "calendar",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "evt00002237",
+    "done": false,
+    "s": 1050,
+    "e": 1110,
+    "past": false,
+    "left": 70.0,
+    "width": 6.67,
+    "left_min": 470,
+    "pct": 0
+   },
+   {
+    "start": "18:30",
+    "end": "20:30",
+    "title": "Pizza and board games",
+    "kind": "personal",
+    "source": "calendar",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "evt00021882",
+    "done": false,
+    "s": 1110,
+    "e": 1230,
+    "past": false,
+    "left": 76.67,
+    "width": 13.33,
+    "left_min": 590,
+    "pct": 0
+   },
+   {
+    "start": "20:30",
+    "end": "22:00",
+    "title": "Movie",
+    "kind": "personal",
+    "source": "calendar",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "evt00001578",
+    "done": false,
+    "s": 1230,
+    "e": 1320,
+    "past": false,
+    "left": 90.0,
+    "width": 10.0,
+    "left_min": 680,
+    "pct": 0
+   }
+  ],
+  "now_pct": 24.44,
+  "clock": "10:40",
+  "now_min": 640,
+  "before": false,
+  "after": false,
+  "ticks": [
+   {
+    "label": "8a",
+    "left": 6.67
+   },
+   {
+    "label": "10a",
+    "left": 20.0
+   },
+   {
+    "label": "12p",
+    "left": 33.33
+   },
+   {
+    "label": "2p",
+    "left": 46.67
+   },
+   {
+    "label": "4p",
+    "left": 60.0
+   },
+   {
+    "label": "6p",
+    "left": 73.33
+   },
+   {
+    "label": "8p",
+    "left": 86.67
+   },
+   {
+    "label": "10p",
+    "left": 100.0
+   }
+  ]
+ },
+ "schedule": {
+  "date": "2026-11-21",
+  "generated_at": "2026-11-21T06:00:00-07:00",
+  "summary": "A light day built around family time.",
+  "blocks": [
+   {
+    "start": "07:00",
+    "end": "07:30",
+    "title": "Coffee and the weekly list",
+    "kind": "routine",
+    "source": "plan",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "",
+    "done": true
+   },
+   {
+    "start": "07:30",
+    "end": "08:30",
+    "title": "Pancake breakfast",
+    "kind": "personal",
+    "source": "calendar",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "evt00015473",
+    "done": true
+   },
+   {
+    "start": "08:30",
+    "end": "09:30",
+    "title": "Weekly review with Life Coach",
+    "kind": "routine",
+    "source": "plan",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "",
+    "done": true
+   },
+   {
+    "start": "09:30",
+    "end": "11:30",
+    "title": "Family hike",
+    "kind": "personal",
+    "source": "calendar",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "evt00006459",
+    "done": false
+   },
+   {
+    "start": "11:30",
+    "end": "12:30",
+    "title": "Lunch",
+    "kind": "personal",
+    "source": "calendar",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "evt00001556",
+    "done": false
+   },
+   {
+    "start": "12:30",
+    "end": "13:30",
+    "title": "Replace the furnace filter",
+    "kind": "task",
+    "source": "todoist",
+    "todoist_id": "t8135",
+    "note": "",
+    "calendar_event_id": "",
+    "done": false
+   },
+   {
+    "start": "13:30",
+    "end": "15:00",
+    "title": "Open afternoon",
+    "kind": "buffer",
+    "source": "plan",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "",
+    "done": false
+   },
+   {
+    "start": "15:00",
+    "end": "16:00",
+    "title": "Grocery pickup",
+    "kind": "task",
+    "source": "plan",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "",
+    "done": false
+   },
+   {
+    "start": "16:00",
+    "end": "17:30",
+    "title": "Leo's game",
+    "kind": "personal",
+    "source": "calendar",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "evt00005022",
+    "done": false
+   },
+   {
+    "start": "17:30",
+    "end": "18:30",
+    "title": "Dinner",
+    "kind": "personal",
+    "source": "calendar",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "evt00002237",
+    "done": false
+   },
+   {
+    "start": "18:30",
+    "end": "20:30",
+    "title": "Pizza and board games",
+    "kind": "personal",
+    "source": "calendar",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "evt00021882",
+    "done": false
+   },
+   {
+    "start": "20:30",
+    "end": "22:00",
+    "title": "Movie",
+    "kind": "personal",
+    "source": "calendar",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "evt00001578",
+    "done": false
+   }
+  ],
+  "budget": {
+   "day_spend_cap": {
+    "lyft": 0,
+    "food_out": 15
+   },
+   "lyft_until": "2026-12-04",
+   "lyft_note": "Car is fine; no rides needed.",
+   "money_order_today": [
+    "Keep spending under $15 until payday",
+    "Groceries are covered",
+    "No new subscriptions",
+    "Fun money: $60 left",
+    "Payday 12/4"
+   ]
+  },
+  "nutrition": {
+   "targets": "About 2,200 kcal and 150 g protein",
+   "breakfast": "Veggie egg scramble and fruit",
+   "lunch": "Turkey wraps",
+   "snack": "Apple and peanut butter",
+   "dinner": "Chicken tinga tacos",
+   "sweet": "Mango rice pudding"
+  },
+  "unscheduled": [
+   {
+    "title": "Book the oil change",
+    "why": "No call window left today"
+   },
+   {
+    "title": "Pick dates for the spring coast trip",
+    "why": "Better on Saturday"
+   },
+   {
+    "title": "Update the portfolio",
+    "why": "Needs a long block"
+   },
+   {
+    "title": "Book Biscuit's vet visit",
+    "why": "Clinic closed at lunch"
+   }
+  ],
+  "notes": [
+   "Payday is Friday 12/4.",
+   "Nora works late on Thursdays.",
+   "Leo has practice at 5.",
+   "Keep Sunday clear.",
+   "The oil change can wait until next week.",
+   "Grandpa Ray visits for lunch this week.",
+   "Recycling goes out tonight."
+  ]
+ },
+ "bills": {
+  "rows": [
+   {
+    "bill": "Cedar Falls Water & Trash",
+    "amount": 61.75,
+    "frequency": "monthly",
+    "day": "18",
+    "next_due": "2026-11-18",
+    "autopay": "No",
+    "status": "active",
+    "notes": "",
+    "pay_link": "",
+    "due": "2026-11-18",
+    "days_left": -3,
+    "marked": true,
+    "paid": true
+   },
+   {
+    "bill": "Disney+",
+    "amount": 9.99,
+    "frequency": "monthly",
+    "day": "19",
+    "next_due": "2026-11-19",
+    "autopay": "Yes",
+    "status": "active",
+    "notes": "",
+    "pay_link": "",
+    "due": "2026-11-19",
+    "days_left": -2,
+    "marked": true,
+    "paid": true
+   },
+   {
+    "bill": "Renter's insurance",
+    "amount": 14.0,
+    "frequency": "monthly",
+    "day": "21",
+    "next_due": "2026-11-21",
+    "autopay": "Yes",
+    "status": "active",
+    "notes": "",
+    "pay_link": "",
+    "due": "2026-11-21",
+    "days_left": 0,
+    "marked": false,
+    "paid": false
+   },
+   {
+    "bill": "Peak Wireless, 3 lines",
+    "amount": 118.0,
+    "frequency": "monthly",
+    "day": "22",
+    "next_due": "2026-11-22",
+    "autopay": "Yes",
+    "status": "active",
+    "notes": "",
+    "pay_link": "",
+    "due": "2026-11-22",
+    "days_left": 1,
+    "marked": false,
+    "paid": false
+   },
+   {
+    "bill": "Rent, Aspen Court",
+    "amount": 1195.0,
+    "frequency": "monthly",
+    "day": "1",
+    "next_due": "2026-12-01",
+    "autopay": "No",
+    "status": "active",
+    "notes": "Pay in the tenant portal",
+    "pay_link": "",
+    "due": "2026-12-01",
+    "days_left": 10,
+    "marked": false,
+    "paid": false
+   },
+   {
+    "bill": "Cedar Rec Center",
+    "amount": 32.0,
+    "frequency": "monthly",
+    "day": "3",
+    "next_due": "2026-12-03",
+    "autopay": "Yes",
+    "status": "active",
+    "notes": "Family pass",
+    "pay_link": "",
+    "due": "2026-12-03",
+    "days_left": 12,
+    "marked": false,
+    "paid": false
+   },
+   {
+    "bill": "Car insurance, Granite Mutual",
+    "amount": 112.4,
+    "frequency": "monthly",
+    "day": "4",
+    "next_due": "2026-12-04",
+    "autopay": "Yes",
+    "status": "active",
+    "notes": "",
+    "pay_link": "",
+    "due": "2026-12-04",
+    "days_left": 13,
+    "marked": false,
+    "paid": false
+   }
+  ],
+  "undated": [
+   {
+    "bill": "Dentist copay",
+    "amount": 40,
+    "frequency": "once",
+    "day": "",
+    "next_due": "",
+    "autopay": "No",
+    "status": "active",
+    "notes": "",
+    "pay_link": ""
+   },
+   {
+    "bill": "Library fine",
+    "amount": 6,
+    "frequency": "once",
+    "day": "",
+    "next_due": "",
+    "autopay": "No",
+    "status": "active",
+    "notes": "",
+    "pay_link": ""
+   }
+  ],
+  "total": 1471.4,
+  "days": 14,
+  "source": "bills"
+ },
+ "balance": {
+  "date": "2026-11-21",
+  "read_at": "06:15",
+  "checking": 2240.39,
+  "notes": "Read from the credit union this morning.",
+  "savings": "1850.00"
+ },
+ "weight": {
+  "latest": [
+   "2026-11-20T06:40:00-07:00",
+   194.6
+  ],
+  "goal": 185.0,
+  "start": [
+   "2026-10-17",
+   196.5
+  ],
+  "daily": [
+   [
+    "2026-10-22",
+    196.4
+   ],
+   [
+    "2026-10-23",
+    196.2
+   ],
+   [
+    "2026-10-24",
+    195.9
+   ],
+   [
+    "2026-10-25",
+    195.7
+   ],
+   [
+    "2026-10-26",
+    195.5
+   ],
+   [
+    "2026-10-27",
+    195.4
+   ],
+   [
+    "2026-10-28",
+    195.4
+   ],
+   [
+    "2026-10-29",
+    195.5
+   ],
+   [
+    "2026-10-30",
+    195.3
+   ],
+   [
+    "2026-10-31",
+    195.2
+   ],
+   [
+    "2026-11-01",
+    195.2
+   ],
+   [
+    "2026-11-02",
+    195.0
+   ],
+   [
+    "2026-11-03",
+    195.1
+   ],
+   [
+    "2026-11-04",
+    195.2
+   ],
+   [
+    "2026-11-05",
+    195.2
+   ],
+   [
+    "2026-11-06",
+    195.2
+   ],
+   [
+    "2026-11-07",
+    195.0
+   ],
+   [
+    "2026-11-08",
+    195.1
+   ],
+   [
+    "2026-11-09",
+    195.1
+   ],
+   [
+    "2026-11-10",
+    195.2
+   ],
+   [
+    "2026-11-11",
+    195.3
+   ],
+   [
+    "2026-11-12",
+    195.3
+   ],
+   [
+    "2026-11-13",
+    195.2
+   ],
+   [
+    "2026-11-14",
+    195.0
+   ],
+   [
+    "2026-11-15",
+    195.1
+   ],
+   [
+    "2026-11-16",
+    195.0
+   ],
+   [
+    "2026-11-17",
+    194.8
+   ],
+   [
+    "2026-11-18",
+    194.7
+   ],
+   [
+    "2026-11-19",
+    194.7
+   ],
+   [
+    "2026-11-20",
+    194.6
+   ]
+  ],
+  "weekly": [
+   [
+    "2026-10-17",
+    196.5
+   ],
+   [
+    "2026-10-24",
+    196.1
+   ],
+   [
+    "2026-10-31",
+    195.4
+   ],
+   [
+    "2026-11-07",
+    195.3
+   ],
+   [
+    "2026-11-14",
+    195.2
+   ],
+   [
+    "2026-11-21",
+    194.5
+   ]
+  ]
+ },
+ "weight_sync": {
+  "synced": "11/21 6:05 AM",
+  "latest": "194.6 lb on 11/20"
+ },
+ "credit": {
+  "scores": [
+   {
+    "date": "2026-11-15",
+    "bureau": "Experian",
+    "score": 702,
+    "change": 6,
+    "reason": "Card balance went down",
+    "source": "Credit monitoring"
+   },
+   {
+    "date": "2026-11-15",
+    "bureau": "TransUnion",
+    "score": 696,
+    "change": 4,
+    "reason": "Card balance went down",
+    "source": "Credit monitoring"
+   }
+  ],
+  "goal": 740
+ },
+ "meals": {
+  "plan": {
+   "date": "2026-11-21",
+   "breakfast": "Veggie egg scramble and fruit",
+   "lunch": "Turkey wraps",
+   "snack": "Apple and peanut butter",
+   "dinner": "Chicken tinga tacos",
+   "sweet": "Mango rice pudding",
+   "prep": "Thaw the chicken",
+   "thaw": "Chicken thighs",
+   "tags": [
+    "paleo-ish"
+   ],
+   "minutes": {
+    "breakfast": 10,
+    "lunch": 5,
+    "snack": 2,
+    "dinner": 45,
+    "sweet": 30,
+    "prep": 5
+   },
+   "cost": {
+    "breakfast": 2.4,
+    "lunch": 3,
+    "snack": 0.9,
+    "dinner": 11.6,
+    "sweet": 3.2,
+    "prep": 0
+   },
+   "recipes": []
+  },
+  "log": {
+   "breakfast": "ate"
+  },
+  "names": [
+   "breakfast",
+   "lunch",
+   "snack",
+   "dinner"
+  ]
+ },
+ "todos": {
+  "error": null,
+  "overdue": [
+   {
+    "id": "t8131",
+    "content": "Return the library books",
+    "description": "",
+    "project": "Errands",
+    "labels": [
+     "Errands"
+    ],
+    "flagged": false,
+    "due": "2026-11-19",
+    "days_left": -2,
+    "overdue": true,
+    "duration_min": 15,
+    "view": null
+   }
+  ],
+  "due_soon": [
+   {
+    "id": "t8111",
+    "content": "Pick up the prescription at Pine Street Pharmacy",
+    "description": "Ready after 3 PM.",
+    "project": "Health",
+    "labels": [
+     "Errands"
+    ],
+    "flagged": false,
+    "due": "2026-11-23",
+    "days_left": 2,
+    "overdue": false,
+    "duration_min": 15,
+    "view": null
+   },
+   {
+    "id": "t8112",
+    "content": "Cook: chicken tinga tacos",
+    "description": "Thaw the chicken in the morning.",
+    "project": "Health",
+    "labels": [
+     "Home"
+    ],
+    "flagged": false,
+    "due": "2026-11-21",
+    "days_left": 0,
+    "overdue": false,
+    "duration_min": 45,
+    "view": "recipe"
+   },
+   {
+    "id": "t8113",
+    "content": "Workout: upper body",
+    "description": "",
+    "project": "Health",
+    "labels": [
+     "Health"
+    ],
+    "flagged": false,
+    "due": "2026-11-23",
+    "days_left": 2,
+    "overdue": false,
+    "duration_min": 50,
+    "view": null
+   },
+   {
+    "id": "t8114",
+    "content": "Approve the Walmart cart for the week, $142",
+    "description": "Cart filled from the meal plan.",
+    "project": "Shopping",
+    "labels": [
+     "Computer",
+     "Money"
+    ],
+    "flagged": false,
+    "due": "2026-11-23",
+    "days_left": 2,
+    "overdue": false,
+    "duration_min": 5,
+    "view": null
+   },
+   {
+    "id": "t8115",
+    "content": "Order Maya's birthday gift (link in the notes)",
+    "description": "Watercolor set, $34. Arrives in 2 days.",
+    "project": "Shopping",
+    "labels": [
+     "Computer",
+     "Money"
+    ],
+    "flagged": true,
+    "due": "2026-11-23",
+    "days_left": 2,
+    "overdue": false,
+    "duration_min": 10,
+    "view": null
+   },
+   {
+    "id": "t8116",
+    "content": "Cancel the unused StreamBox trial before it renews",
+    "description": "Renews at $11.99 a month.",
+    "project": "Subscriptions",
+    "labels": [
+     "Computer"
+    ],
+    "flagged": false,
+    "due": "2026-11-27",
+    "days_left": 6,
+    "overdue": false,
+    "duration_min": 5,
+    "view": null
+   },
+   {
+    "id": "t8119",
+    "content": "Plug the phone in overnight for the backup",
+    "description": "",
+    "project": "Computer & Security",
+    "labels": [
+     "Home"
+    ],
+    "flagged": false,
+    "due": "2026-11-23",
+    "days_left": 2,
+    "overdue": false,
+    "duration_min": 5,
+    "view": null
+   },
+   {
+    "id": "t8121",
+    "content": "Send the November invoice to Juniper Dental (draft ready)",
+    "description": "$1,200 for the booking page refresh.",
+    "project": "Business",
+    "labels": [
+     "Computer"
+    ],
+    "flagged": false,
+    "due": "2026-11-23",
+    "days_left": 2,
+    "overdue": false,
+    "duration_min": 5,
+    "view": null
+   },
+   {
+    "id": "t8123",
+    "content": "Reply to Alex at Northgate Systems (draft in the comments)",
+    "description": "Draft asks for the salary range before a call.",
+    "project": "Career",
+    "labels": [
+     "Computer"
+    ],
+    "flagged": false,
+    "due": "2026-11-23",
+    "days_left": 2,
+    "overdue": false,
+    "duration_min": 10,
+    "view": null
+   },
+   {
+    "id": "t8125",
+    "content": "Sign Maya's field trip permission slip",
+    "description": "Science museum, $12 for the bus.",
+    "project": "Family",
+    "labels": [
+     "Home"
+    ],
+    "flagged": false,
+    "due": "2026-11-23",
+    "days_left": 2,
+    "overdue": false,
+    "duration_min": 5,
+    "view": null
+   },
+   {
+    "id": "t8127",
+    "content": "RSVP to the Brooks family's holiday party",
+    "description": "",
+    "project": "Family",
+    "labels": [
+     "Phone"
+    ],
+    "flagged": false,
+    "due": "2026-11-25",
+    "days_left": 4,
+    "overdue": false,
+    "duration_min": 5,
+    "view": null
+   },
+   {
+    "id": "t8128",
+    "content": "Pay the $120 bounce house deposit for Leo's party",
+    "description": "Hold expires in a week.",
+    "project": "Family",
+    "labels": [
+     "Money"
+    ],
+    "flagged": false,
+    "due": "2026-11-26",
+    "days_left": 5,
+    "overdue": false,
+    "duration_min": 10,
+    "view": null
+   },
+   {
+    "id": "t8129",
+    "content": "Read and sign the lease renewal (2 pages)",
+    "description": "Rent goes up $35 a month; the rest is unchanged.",
+    "project": "Home",
+    "labels": [
+     "Home"
+    ],
+    "flagged": false,
+    "due": "2026-11-28",
+    "days_left": 7,
+    "overdue": false,
+    "duration_min": 20,
+    "view": null
+   },
+   {
+    "id": "t8135",
+    "content": "Replace the furnace filter (20x25x1)",
+    "description": "",
+    "project": "Home",
+    "labels": [
+     "Home"
+    ],
+    "flagged": false,
+    "due": "2026-11-24",
+    "days_left": 3,
+    "overdue": false,
+    "duration_min": 10,
+    "view": null
+   },
+   {
+    "id": "t8138",
+    "content": "Deep clean the fridge",
+    "description": "",
+    "project": "Home",
+    "labels": [
+     "Home"
+    ],
+    "flagged": false,
+    "due": "2026-11-27",
+    "days_left": 6,
+    "overdue": false,
+    "duration_min": 30,
+    "view": null
+   },
+   {
+    "id": "t8144",
+    "content": "Approve the weekly social post draft",
+    "description": "",
+    "project": "Career",
+    "labels": [
+     "Computer"
+    ],
+    "flagged": false,
+    "due": "2026-11-23",
+    "days_left": 2,
+    "overdue": false,
+    "duration_min": 5,
+    "view": null
+   }
+  ]
+ },
+ "roles": [
+  {
+   "key": "assistant",
+   "name": "Executive Assistant",
+   "nav": "assistant",
+   "owns": "Runs the other roles, the daily brief, every task and the inbox; answers Sam's texts",
+   "status": "act",
+   "items": [
+    {
+     "text": "Money: approve the $45 Summit Card payment for payday",
+     "when": "2026-11-21",
+     "level": "act",
+     "link": "/s/money#bills",
+     "desk": "bookkeeper"
+    },
+    {
+     "text": "Sends to Nora: the weekend plan text (draft ready)",
+     "when": "2026-11-21",
+     "level": "act",
+     "link": "/next/r/assistant#attention",
+     "desk": "assistant"
+    },
+    {
+     "text": "Kitchen faucet: landlord said this week",
+     "when": "2026-11-24",
+     "level": "watch",
+     "link": "/s/home",
+     "desk": "home-manager"
+    }
+   ],
+   "count": 4,
+   "tasks": 47,
+   "needs": 2
+  },
+  {
+   "key": "scheduler",
+   "name": "Scheduler",
+   "nav": "scheduler",
+   "owns": "Sam's time: the routine, calendars, school and kids' activities, appointments, trips and due dates",
+   "status": "watch",
+   "items": [
+    {
+     "text": "Leo's physical isn't booked yet; spring sign-ups need it",
+     "when": null,
+     "level": "watch",
+     "link": "/next/r/scheduler#todos",
+     "desk": "scheduler"
+    },
+    {
+     "text": "Thursday has three evening commitments",
+     "when": "2026-11-24",
+     "level": "watch",
+     "link": "/next/r/scheduler#calendar",
+     "desk": "scheduler"
+    }
+   ],
+   "count": 2,
+   "tasks": 4,
+   "needs": 0
+  },
+  {
+   "key": "bookkeeper",
+   "name": "Accountant",
+   "nav": "accountant",
+   "owns": "Balances, transactions, bills, net worth and the business expense split",
+   "status": "act",
+   "items": [
+    {
+     "text": "Money: Summit Card minimum, $45, due 12/4",
+     "when": "2026-12-04",
+     "level": "act",
+     "link": "/s/money#bills",
+     "desk": "bookkeeper"
+    },
+    {
+     "text": "StreamBox trial renews in 6 days at $11.99",
+     "when": "2026-11-27",
+     "level": "watch",
+     "link": "/s/money#bills",
+     "desk": "bookkeeper"
+    },
+    {
+     "text": "Overdraft fee of $35 last month; refund call queued",
+     "when": null,
+     "level": "watch",
+     "link": "/s/money#bills",
+     "desk": "bookkeeper"
+    }
+   ],
+   "count": 3,
+   "tasks": 7,
+   "needs": 1
+  },
+  {
+   "key": "health",
+   "name": "Health Agent",
+   "nav": "health",
+   "owns": "Training, targets, meal plans, recipes, grocery lists and carts, weigh-ins, appointments and claims",
+   "status": "watch",
+   "items": [
+    {
+     "text": "Workouts: 2 of 4 this week",
+     "when": null,
+     "level": "watch",
+     "link": "/next/r/health#training",
+     "desk": "health"
+    },
+    {
+     "text": "Leo's sports physical isn't booked",
+     "when": null,
+     "level": "watch",
+     "link": "/next/r/health#todos",
+     "desk": "health"
+    }
+   ],
+   "count": 2,
+   "tasks": 5,
+   "needs": 0
+  },
+  {
+   "key": "gifts",
+   "name": "Gift Concierge",
+   "nav": "gifts",
+   "owns": "Birthdays and occasions for family and close friends: gifts, budgets and cards; fills the cart, Sam checks out",
+   "status": "watch",
+   "items": [
+    {
+     "text": "Maya's birthday in 4 days: order the gift today",
+     "when": "2026-11-21",
+     "level": "watch",
+     "link": "/next/r/gifts#gifts",
+     "desk": "gifts"
+    }
+   ],
+   "count": 1,
+   "tasks": 1,
+   "needs": 0
+  },
+  {
+   "key": "relationship-manager",
+   "name": "Relationship Manager",
+   "nav": "relationship manager",
+   "owns": "People lead: family and friends, contacts and households, staying in touch",
+   "status": "watch",
+   "items": [
+    {
+     "text": "Haven't talked to Aunt June in 6 weeks",
+     "when": null,
+     "level": "watch",
+     "link": "/next/phonebook",
+     "desk": "relationship-manager"
+    }
+   ],
+   "count": 1,
+   "tasks": 3,
+   "needs": 0
+  },
+  {
+   "key": "home-manager",
+   "name": "Home Manager",
+   "nav": "home manager",
+   "owns": "The home and the car: chores and supplies, repairs and who pays under the lease, upkeep and registration",
+   "status": "watch",
+   "items": [
+    {
+     "text": "Car registration renews in 9 days, $86",
+     "when": "2026-11-30",
+     "level": "watch",
+     "link": "/next/chores",
+     "desk": "home-manager"
+    },
+    {
+     "text": "Kitchen faucet: waiting on the landlord",
+     "when": "2026-11-24",
+     "level": "watch",
+     "link": "/next/chores",
+     "desk": "home-manager"
+    }
+   ],
+   "count": 2,
+   "tasks": 10,
+   "needs": 0
+  },
+  {
+   "key": "financial",
+   "name": "Financial Advisor",
+   "nav": "financial",
+   "owns": "Credit (scores, reports, negative items) and investing and retirement (the paper bot, the 401(k), the emergency fund)",
+   "status": "watch",
+   "items": [
+    {
+     "text": "One collection to dispute; letter drafted",
+     "when": null,
+     "level": "watch",
+     "link": "/s/credit#plan",
+     "desk": "financial"
+    }
+   ],
+   "count": 1,
+   "tasks": 3,
+   "needs": 0
+  },
+  {
+   "key": "product",
+   "name": "Product Manager",
+   "nav": "product",
+   "owns": "Should as a product: name, logo, brand, roadmap and the public page",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 1,
+   "needs": 0
+  },
+  {
+   "key": "business",
+   "name": "Business Executive",
+   "nav": "business",
+   "owns": "Sam's companies: Carter Studio LLC and the planned Brightline Labs; filings, renewals and taxes",
+   "status": "watch",
+   "items": [
+    {
+     "text": "Annual report due in 12 days ($10)",
+     "when": "2026-12-03",
+     "level": "watch",
+     "link": "/next/companies",
+     "desk": "business"
+    }
+   ],
+   "count": 1,
+   "tasks": 3,
+   "needs": 0
+  },
+  {
+   "key": "relationships",
+   "name": "Relationship Coach",
+   "nav": "relationship coach",
+   "owns": "Sam and Nora's relationship (a placeholder until Sam turns it on)",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 0,
+   "needs": 0
+  },
+  {
+   "key": "it",
+   "name": "IT Guy",
+   "nav": "it",
+   "owns": "Internet, Wi-Fi, phones and lines, devices, service health and the technical security fixes",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 2,
+   "needs": 0
+  },
+  {
+   "key": "as-architect",
+   "name": "Software Architect",
+   "nav": "architect",
+   "owns": "Brightline Labs lead: the product API, the plan and ADRs, the software team",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 1,
+   "needs": 0
+  },
+  {
+   "key": "events",
+   "name": "Event Planner",
+   "nav": "events",
+   "owns": "Events Sam hosts: guests, RSVPs, invites, timeline, run sheet",
+   "status": "watch",
+   "items": [
+    {
+     "text": "Leo's party: bounce house deposit due in 5 days",
+     "when": "2026-11-26",
+     "level": "watch",
+     "link": "/next/projects",
+     "desk": "events"
+    }
+   ],
+   "count": 1,
+   "tasks": 2,
+   "needs": 0
+  },
+  {
+   "key": "local-guide",
+   "name": "Local Guide",
+   "nav": "local-guide",
+   "owns": "Places Sam has been, places the family might like, local events, weekend picks and the weather",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 0,
+   "needs": 0
+  },
+  {
+   "key": "text-concierge",
+   "name": "Text Concierge",
+   "nav": "texting",
+   "owns": "The texting flow: the listener, intake, groups and menus, prompts and rules",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 0,
+   "needs": 0
+  },
+  {
+   "key": "philosopher",
+   "name": "Philosopher",
+   "nav": "philosopher",
+   "owns": "How Should thinks: the north star, the knowledge base, the reading list and feature proposals",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 0,
+   "needs": 0
+  },
+  {
+   "key": "security",
+   "name": "Security Officer",
+   "nav": "security",
+   "owns": "Security threats: suspicious logins, breaches, weak and reused passwords, two-step sign-in",
+   "status": "watch",
+   "items": [
+    {
+     "text": "One reused password on a low-risk account",
+     "when": null,
+     "level": "watch",
+     "link": "/next/r/security#todos",
+     "desk": "security"
+    }
+   ],
+   "count": 1,
+   "tasks": 3,
+   "needs": 0
+  },
+  {
+   "key": "compliance",
+   "name": "Compliance Officer",
+   "nav": "compliance",
+   "owns": "Checks agent actions against Sam's values, the law and each site's terms",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 0,
+   "needs": 0
+  },
+  {
+   "key": "dba",
+   "name": "Database Administrator",
+   "nav": "dba",
+   "owns": "Every database schema change, plus performance, health and backups",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 0,
+   "needs": 0
+  },
+  {
+   "key": "designer",
+   "name": "Designer",
+   "nav": "designer",
+   "owns": "The design system and the look of everything Should builds",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 0,
+   "needs": 0
+  },
+  {
+   "key": "media",
+   "name": "Media Concierge",
+   "nav": "media",
+   "owns": "Picks what the family watches: one strong pick, where to stream it, the queue and the watched log",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 1,
+   "needs": 0
+  },
+  {
+   "key": "relocation",
+   "name": "Relocation Expert",
+   "nav": "relocation",
+   "owns": "Moves end to end: the lease, the search, the move plan, movers, utilities and address changes",
+   "status": "watch",
+   "items": [
+    {
+     "text": "Lease renewal: sign within 7 days",
+     "when": "2026-11-28",
+     "level": "watch",
+     "link": "/next/projects",
+     "desk": "relocation"
+    }
+   ],
+   "count": 1,
+   "tasks": 3,
+   "needs": 0
+  },
+  {
+   "key": "career",
+   "name": "Career Assistant",
+   "nav": "career",
+   "owns": "Job search and freelance work: leads, recruiter replies, the resume and the portfolio",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 2,
+   "needs": 0
+  },
+  {
+   "key": "pr",
+   "name": "PR Person",
+   "nav": "pr",
+   "owns": "Sam's public profile: bios, the portfolio site and drafted posts (nothing posts without Sam's yes)",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 2,
+   "needs": 0
+  },
+  {
+   "key": "shopping",
+   "name": "Shopping Expert",
+   "nav": "shopping",
+   "owns": "Wise purchases: research, the wish list, price watch and cart prep (never buys)",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 2,
+   "needs": 0
+  },
+  {
+   "key": "clothier",
+   "name": "Clothier",
+   "nav": "clothier",
+   "owns": "Sam's clothes: wardrobe, outfit of the day, packing lists and care",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 1,
+   "needs": 0
+  },
+  {
+   "key": "pets",
+   "name": "Pet Expert",
+   "nav": "pets",
+   "owns": "Biscuit the dog: the vet, food and supplies, and the plan for trips",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 1,
+   "needs": 0
+  },
+  {
+   "key": "coach",
+   "name": "Life Coach",
+   "nav": "coach",
+   "owns": "How Sam is doing on everything: weekly scorecard, gauges, goals and the Saturday sit-down",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 0,
+   "needs": 0
+  },
+  {
+   "key": "business_coach",
+   "name": "Business Coach",
+   "nav": "business-coach",
+   "owns": "Long-term coaching for Carter Studio and Brightline Labs",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 1,
+   "needs": 0
+  },
+  {
+   "key": "travel",
+   "name": "Travel Agent",
+   "nav": "travel",
+   "owns": "Trips, fares, stays and cars; search and read only, Sam books from a link",
+   "status": "watch",
+   "items": [
+    {
+     "text": "Spring trip: pick dates to lock the fare",
+     "when": null,
+     "level": "watch",
+     "link": "/next/r/travel#trips",
+     "desk": "travel"
+    }
+   ],
+   "count": 1,
+   "tasks": 2,
+   "needs": 0
+  },
+  {
+   "key": "investigator",
+   "name": "Investigator",
+   "nav": "investigator",
+   "owns": "Who is this and can we trust it: unknown numbers, duplicates, family gaps, scams; data-broker removals",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 0,
+   "needs": 0
+  },
+  {
+   "key": "legal",
+   "name": "Legal Advisor",
+   "nav": "legal",
+   "owns": "Agreements and deadlines: the lease, the LLC, the family trust plan (not a lawyer)",
+   "status": "act",
+   "items": [
+    {
+     "text": "Legal: sign the Carter Studio annual report",
+     "when": "2026-12-03",
+     "level": "act",
+     "link": "/next/companies",
+     "desk": "legal"
+    },
+    {
+     "text": "Lease renewal language checked: no surprises",
+     "when": "2026-11-28",
+     "level": "watch",
+     "link": "/next/projects",
+     "desk": "legal"
+    }
+   ],
+   "count": 2,
+   "tasks": 2,
+   "needs": 1
+  },
+  {
+   "key": "music",
+   "name": "Music Producer",
+   "nav": "music",
+   "owns": "The family piano and music software: recordings and sheet music",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 1,
+   "needs": 0
+  },
+  {
+   "key": "webmaster",
+   "name": "Webmaster",
+   "nav": "webmaster",
+   "owns": "The portal: pages, views and fixes",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 0,
+   "needs": 0
+  }
+ ],
+ "weather": {
+  "date": "2026-11-21",
+  "summary": "Dry and partly cloudy today, high 47°; a rain chance tomorrow afternoon.",
+  "generated_at": "2026-11-21T06:00:00-07:00",
+  "stale": false,
+  "places": [
+   {
+    "name": "Cedar Falls (home)",
+    "days": [
+     {
+      "date": "2026-11-21",
+      "sky": "Partly cloudy",
+      "high": 47,
+      "low": 29,
+      "feels_high": 45,
+      "feels_low": 24,
+      "feels_am": 27,
+      "precip_chance": 10,
+      "precip_in": 0.0,
+      "precip_type": "none",
+      "snow_in": 0.0,
+      "wind": 6,
+      "gusts": 14,
+      "sunrise": "06:58",
+      "sunset": "16:41",
+      "aqi_max": 31
+     },
+     {
+      "date": "2026-11-22",
+      "sky": "Sunny",
+      "high": 44,
+      "low": 26,
+      "feels_high": 42,
+      "feels_low": 21,
+      "feels_am": 24,
+      "precip_chance": 30,
+      "precip_in": 0.04,
+      "precip_type": "rain",
+      "snow_in": 0.0,
+      "wind": 10,
+      "gusts": 20,
+      "sunrise": "06:58",
+      "sunset": "16:41",
+      "aqi_max": 35
+     }
+    ],
+    "alerts": []
+   },
+   {
+    "name": "Ridgeway (office)",
+    "days": [
+     {
+      "date": "2026-11-21",
+      "sky": "Sunny",
+      "high": 49,
+      "low": 31,
+      "feels_high": 47,
+      "feels_low": 26,
+      "feels_am": 29,
+      "precip_chance": 10,
+      "precip_in": 0.0,
+      "precip_type": "none",
+      "snow_in": 0.0,
+      "wind": 6,
+      "gusts": 14,
+      "sunrise": "06:58",
+      "sunset": "16:41",
+      "aqi_max": 37
+     },
+     {
+      "date": "2026-11-22",
+      "sky": "Mostly cloudy",
+      "high": 46,
+      "low": 28,
+      "feels_high": 44,
+      "feels_low": 23,
+      "feels_am": 26,
+      "precip_chance": 30,
+      "precip_in": 0.04,
+      "precip_type": "rain",
+      "snow_in": 0.0,
+      "wind": 10,
+      "gusts": 20,
+      "sunrise": "06:58",
+      "sunset": "16:41",
+      "aqi_max": 41
+     }
+    ],
+    "alerts": []
+   }
+  ]
+ },
+ "night": null
+}

@@ -199,7 +199,7 @@
   tv_tab_recipes: "Recipes",
   tv_tab_cooking: "Cooking",
   tv_tab_idle: "Idle screen",
-  tv_alt_home: "The TV home screen: today, chores, this week, recipes, quotes and projects, with made-up data",
+  tv_alt_home: "The TV home screen: today, chores, this week, recipes, quotes, a study course and projects, with made-up data",
   tv_alt_recipes: "The family recipe book on the TV, with made-up recipes",
   tv_alt_cooking: "A recipe open on the TV, one large step at a time for cooking",
   tv_alt_idle: "The TV idle screen: a big clock, the weather and a quote",

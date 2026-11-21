@@ -1,0 +1,1 @@
+export{t as component}from"../chunks/CFo2vl16.js";

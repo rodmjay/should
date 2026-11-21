@@ -8,6 +8,8 @@
   close: "Cerrar",
  },
  ui: {
+  motto_q: "«Sea regular y ordenado en su vida, para poder ser violento y original en su obra».",
+  motto_by: "— Gustave Flaubert",
   hero_h1: "Ponga sus metas de vida en piloto automático.",
   hero_sub: "Un mejor trabajo, dinero bien cuidado mientras usted trabaja, un negocio que se maneja solo, un cuerpo del que se sienta orgulloso. Treinta y cinco agentes de IA trabajan en eso todos los días. Usted responde con 1, 2 o 3.",
   stat_agents: "agentes de IA",

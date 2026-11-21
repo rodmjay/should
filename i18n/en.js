@@ -8,6 +8,8 @@
   close: "Close",
  },
  ui: {
+  motto_q: "“Be regular and orderly in your life, so that you may be violent and original in your work.”",
+  motto_by: "— Gustave Flaubert",
   hero_h1: "Put your life goals on autopilot.",
   hero_sub: "A better job, money that's looked after while you work, a business that runs itself, a body you're proud of. Thirty-five AI agents work on it every day. You answer with 1, 2 or 3.",
   stat_agents: "AI agents",

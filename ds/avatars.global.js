@@ -39,6 +39,7 @@ const CUES = {
   code: "M8 7l-5 5 5 5M16 7l5 5-5 5",
   check: "M5 12l4 4 10-10",
   cloud: "M7 18h10a4 4 0 0 0 0-8 6 6 0 0 0-11 2 3 3 0 0 0 1 6z",
+  pie: "M12 4v8h8M12 4a8 8 0 1 0 8 8",
   list: "M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01",
 };
 
@@ -66,6 +67,7 @@ const AVATARS = {
   "media":                { name: "Media Concierge",        skin: 4, hair: 5, hairColor: 1, tone: 3, cue: "film" },
   "local-guide":          { name: "Local Guide",            skin: 1, hair: 3, hairColor: 3, tone: 2, cue: "pin" },
   "events":               { name: "Event Planner",          skin: 5, hair: 7, hairColor: 2, tone: 1, cue: "calendar" },
+  "business_analyst":     { name: "Business Analyst",       skin: 4, hair: 2, hairColor: 5, tone: 2, cue: "pie" },
   "business":             { name: "Business Executive",     skin: 3, hair: 1, hairColor: 5, tone: 4, cue: "building" },
   "it":                   { name: "IT Guy",                 skin: 2, hair: 3, hairColor: 2, tone: 4, cue: "wrench" },
   "webmaster":            { name: "Webmaster",              skin: 6, hair: 2, hairColor: 1, tone: 1, cue: "monitor" },

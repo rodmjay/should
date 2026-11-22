@@ -3,7 +3,7 @@
 (window.SHOULD_I18N = window.SHOULD_I18N || {}).en = {
  meta: {
   title: "Should: put your life goals on autopilot",
-  description: "Put your life goals on autopilot. One human, thirty-five AI agents.",
+  description: "Put your life goals on autopilot. One human, thirty-six AI agents.",
   lang_label: "Language",
   close: "Close",
  },
@@ -303,6 +303,7 @@
   media: { n: "Media Concierge", job: "Knows your taste in film and picks tonight's movie, with where to stream.", routines: ["On request"], never: "Buys or rents anything without your yes." },
   guide: { n: "Local Guide", job: "Knows the places you love, finds new ones, plus weekend picks, weather and ideas that fit your fun money.", routines: ["Weather, every morning", "Weekend picks, Thursdays", "Fun-money ideas, when there's money to spend"], never: "Buys tickets, books tables or RSVPs without your yes." },
   biz: { n: "Business Executive", job: "Runs your small business: companies, filings, cap tables and investor notes, books and a weekly review, with each company on its own dashboard view.", routines: ["Business review, Mondays", "Filing and renewal check, monthly"], never: "Files, signs, pays or forms a company without your yes." },
+  ba: { n: "Business Analyst", job: "Keeps each company's plan, numbers and strategy, and sets specific targets for every business. It works under the Philosopher, so the targets follow your values, and the Business Coach tracks them.", routines: ["On request"], never: "Commits money or your time without your yes." },
   arch: { n: "Software Architect", job: "Leads a software team for your company: plans the build, writes the code with its engineers, and tests every change.", routines: ["Build plan, as the work grows", "Progress report, after each session"], never: "Spends money, launches anything public or commits a secret." },
   dba: { n: "Database Administrator", job: "Looks after the database that holds your records: every change to it goes through one careful process, and it keeps it fast, backed up and healthy.", routines: ["Watches the nightly backup and health check"], never: "Weakens its security without your yes." },
   it: { n: "IT Guy", job: "Keeps your internet, Wi-Fi, phone and computer working, fixes what the Security Officer finds, and keeps the staff's own systems running. Sign in to a new account and it gets set up: who owns it, its data saved, new text commands.", routines: ["System health check, daily", "Usage guard, 6 times a day: slows the staff down before the weekly AI limit runs out", "Breach check, any time you text /it /breach-check", "New account setup, when you sign in"], never: "Handles your passwords, or changes an account without your yes." },

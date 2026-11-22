@@ -3,7 +3,7 @@
 (window.SHOULD_I18N = window.SHOULD_I18N || {}).es = {
  meta: {
   title: "Should: ponga sus metas de vida en piloto automático",
-  description: "Ponga sus metas de vida en piloto automático. Una persona, treinta y cinco agentes de IA.",
+  description: "Ponga sus metas de vida en piloto automático. Una persona, treinta y seis agentes de IA.",
   lang_label: "Idioma",
   close: "Cerrar",
  },
@@ -303,6 +303,7 @@
   media: { n: "Curador de películas", job: "Conoce su gusto en cine y elige la película de esta noche, con dónde verla.", routines: ["Cuando usted lo pida"], never: "Compra ni alquila nada sin su sí." },
   guide: { n: "Guía local", job: "Conoce los lugares que le encantan, encuentra nuevos, y además recomienda planes de fin de semana, el clima e ideas que caben en su dinero para gustos.", routines: ["Clima, cada mañana", "Planes de fin de semana, jueves", "Ideas para darse gustos, cuando hay dinero para eso"], never: "Compra entradas, reserva mesa ni confirma asistencia sin su sí." },
   biz: { n: "Ejecutivo de negocios", job: "Maneja su pequeño negocio: empresas, trámites, tablas de participación y notas para inversionistas, la contabilidad y una revisión semanal, con cada empresa en su propia vista del panel.", routines: ["Revisión del negocio, lunes", "Revisión de trámites y renovaciones, mensual"], never: "Presenta trámites, firma, paga ni constituye una empresa sin su sí." },
+  ba: { n: "Analista de negocios", job: "Lleva el plan, las cifras y la estrategia de cada empresa, y fija metas concretas para cada negocio. Trabaja bajo el Filósofo, así que las metas siguen sus valores, y el Coach de negocios les da seguimiento.", routines: ["Cuando usted lo pida"], never: "Compromete dinero ni su tiempo sin su sí." },
   arch: { n: "Arquitecto de software", job: "Dirige un equipo de software para su empresa: planifica lo que se construye, escribe el código con sus ingenieros y prueba cada cambio.", routines: ["Plan de construcción, a medida que crece el trabajo", "Informe de avance, después de cada sesión"], never: "Gasta dinero, lanza algo público ni sube un secreto al código." },
   dba: { n: "Administrador de bases de datos", job: "Cuida la base de datos con sus registros: cada cambio pasa por un mismo proceso cuidadoso, y la mantiene rápida, respaldada y sana.", routines: ["Vigila el respaldo nocturno y la revisión de salud"], never: "Debilita su seguridad sin su sí." },
   it: { n: "Técnico de TI", job: "Mantiene funcionando su internet, el Wi-Fi, el celular y la computadora, arregla lo que encuentra el Responsable de seguridad y mantiene en marcha los sistemas del equipo. Cuando usted inicia sesión en una cuenta nueva, la deja configurada: de quién es, sus datos guardados y nuevos comandos por mensaje.", routines: ["Revisión de salud del sistema, diaria", "Control de uso, 6 veces al día: baja el ritmo del equipo antes de que se acabe el límite semanal de IA", "Revisión de filtraciones, cada vez que escriba /it /breach-check", "Configuración de cuentas nuevas, cuando inicie sesión"], never: "Maneja sus contraseñas, ni cambia una cuenta sin su sí." },

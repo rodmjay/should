@@ -7,26 +7,26 @@
    "tiles": [
     {
      "label": "Checking",
-     "value": "$2,240.39",
+     "value": "$1,965.37",
      "sub": "as of 6:15 AM",
      "tone": ""
     },
     {
      "label": "Low before payday",
-     "value": "$449.39",
+     "value": "$310.37",
      "sub": "bar $250",
      "tone": "ok"
     },
     {
      "label": "Bills, 14 days",
-     "value": "$1,471.40",
+     "value": "$1,457.40",
      "sub": "unpaid",
      "tone": ""
     }
    ],
    "report": {
     "summary": "Every bill this pay period is covered; low point stays above the $250 bar.",
-    "date": "2026-11-20"
+    "date": "2026-11-21"
    },
    "act": 1,
    "tasks": 7
@@ -57,7 +57,7 @@
    ],
    "report": {
     "summary": "Scores up 6 points after the card paydown; the paper bot is ahead of SPY this month.",
-    "date": "2026-11-20"
+    "date": "2026-11-21"
    },
    "act": 0,
    "tasks": 3
@@ -82,7 +82,7 @@
    ],
    "report": {
     "summary": "Two items hit their target price: the rice cooker and the hiking boots.",
-    "date": "2026-11-20"
+    "date": "2026-11-21"
    },
    "act": 0,
    "tasks": 2
@@ -107,7 +107,7 @@
    ],
    "report": {
     "summary": "Two winter jacket options saved.",
-    "date": "2026-11-20"
+    "date": "2026-11-21"
    },
    "act": 0,
    "tasks": 1
@@ -124,7 +124,7 @@
    ],
    "flagged": true,
    "due": "2026-12-04",
-   "days_left": 13,
+   "days_left": 12,
    "overdue": false,
    "duration_min": 5,
    "view": null
@@ -155,7 +155,7 @@
    ],
    "flagged": false,
    "due": "2026-12-04",
-   "days_left": 13,
+   "days_left": 12,
    "overdue": false,
    "duration_min": 5,
    "view": null
@@ -170,7 +170,7 @@
     "Computer"
    ],
    "flagged": false,
-   "due": "2026-12-16",
+   "due": "2026-12-17",
    "days_left": 25,
    "overdue": false,
    "duration_min": 10,
@@ -200,7 +200,7 @@
     "Computer"
    ],
    "flagged": false,
-   "due": "2026-11-27",
+   "due": "2026-11-28",
    "days_left": 6,
    "overdue": false,
    "duration_min": 5,
@@ -215,7 +215,7 @@
     "Computer"
    ],
    "flagged": false,
-   "due": "2026-11-23",
+   "due": "2026-11-24",
    "days_left": 2,
    "overdue": false,
    "duration_min": 5,
@@ -262,7 +262,7 @@
    ],
    "flagged": false,
    "due": "2026-11-23",
-   "days_left": 2,
+   "days_left": 1,
    "overdue": false,
    "duration_min": 5,
    "view": null
@@ -303,7 +303,7 @@
   "error": null,
   "cash": {
    "low": {
-    "balance": 449.39,
+    "balance": 310.37,
     "day": "2026-12-03"
    },
    "bar": 250,
@@ -312,20 +312,15 @@
   },
   "net_worth": {
    "net_worth_real": {
-    "value": 17458.21,
-    "measured_at": "2026-11-21"
+    "value": 17183.19,
+    "measured_at": "2026-11-22"
    },
    "net_worth": {
-    "value": 17458.21,
-    "measured_at": "2026-11-21"
+    "value": 17183.19,
+    "measured_at": "2026-11-22"
    }
   },
   "bills": [
-   {
-    "due": "2026-11-21",
-    "bill": "Renter's insurance",
-    "amount": 14.0
-   },
    {
     "due": "2026-11-22",
     "bill": "Peak Wireless, 3 lines",

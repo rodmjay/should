@@ -28,7 +28,7 @@
    ],
    "flagged": false,
    "due": "2026-11-23",
-   "days_left": 2,
+   "days_left": 1,
    "overdue": false,
    "duration_min": 10,
    "view": null
@@ -59,8 +59,8 @@
  ],
  "report": {
   "latest": {
-   "path": "career/reports/2026-11-20.md",
-   "date": "2026-11-20",
+   "path": "career/reports/2026-11-21.md",
+   "date": "2026-11-21",
    "summary": "One strong lead at Northgate Systems; reply drafted.",
    "html": "<p>One strong lead at Northgate Systems; reply drafted.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
   },
@@ -134,7 +134,7 @@
        ],
        "flagged": false,
        "due": "2026-11-23",
-       "days_left": 2,
+       "days_left": 1,
        "overdue": false,
        "duration_min": 10,
        "view": null

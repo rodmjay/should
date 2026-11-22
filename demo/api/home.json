@@ -1,15 +1,15 @@
 {
  "weather": {
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "summary": "Dry and partly cloudy today, high 47°; a rain chance tomorrow afternoon.",
-  "generated_at": "2026-11-21T06:00:00-07:00",
+  "generated_at": "2026-11-22T06:00:00-07:00",
   "stale": false,
   "places": [
    {
     "name": "Cedar Falls (home)",
     "days": [
      {
-      "date": "2026-11-21",
+      "date": "2026-11-22",
       "sky": "Partly cloudy",
       "high": 47,
       "low": 29,
@@ -27,7 +27,7 @@
       "aqi_max": 31
      },
      {
-      "date": "2026-11-22",
+      "date": "2026-11-23",
       "sky": "Sunny",
       "high": 44,
       "low": 26,
@@ -51,7 +51,7 @@
     "name": "Ridgeway (office)",
     "days": [
      {
-      "date": "2026-11-21",
+      "date": "2026-11-22",
       "sky": "Sunny",
       "high": 49,
       "low": 31,
@@ -69,7 +69,7 @@
       "aqi_max": 37
      },
      {
-      "date": "2026-11-22",
+      "date": "2026-11-23",
       "sky": "Mostly cloudy",
       "high": 46,
       "low": 28,
@@ -150,7 +150,7 @@
    "on": [
     "Prime Video"
    ],
-   "leaving": "2026-12-03",
+   "leaving": "2026-12-04",
    "rent": "",
    "pick": false,
    "my_list": true
@@ -418,15 +418,15 @@
     "url": "https://example.com/menu"
    }
   ],
-  "days_away": 9,
+  "days_away": 8,
   "task": {
    "content": "Book the sitter for date night",
    "due": null
   },
   "weather": null,
   "low_point": {
-   "report": "2026-11-21",
-   "line": "Low point stays at $449.39 before payday.",
+   "report": "2026-11-22",
+   "line": "Low point stays at $310.37 before payday.",
    "payday": "2026-12-04",
    "covers": true,
    "alert": false
@@ -434,7 +434,7 @@
  },
  "weekends": [
   {
-   "date": "2026-11-21",
+   "date": "2026-11-28",
    "title": "This weekend",
    "path": "local-guide/weekend.md",
    "picks": [
@@ -459,8 +459,8 @@
    "category": "restaurant",
    "city": "Ridgeway",
    "visit_count": 7,
-   "first_seen": "2025-10-17",
-   "last_seen": "2026-11-07",
+   "first_seen": "2025-10-18",
+   "last_seen": "2026-11-08",
    "rating_rod": 4.5,
    "tags": [
     "mexican",
@@ -475,8 +475,8 @@
    "category": "restaurant",
    "city": "Cedar Falls",
    "visit_count": 1,
-   "first_seen": "2025-11-04",
-   "last_seen": "2026-09-19",
+   "first_seen": "2025-11-05",
+   "last_seen": "2026-09-20",
    "rating_rod": 5,
    "tags": [
     "pizza",
@@ -491,8 +491,8 @@
    "category": "outdoors",
    "city": "Cedar Falls",
    "visit_count": 4,
-   "first_seen": "2025-11-13",
-   "last_seen": "2026-11-12",
+   "first_seen": "2025-11-14",
+   "last_seen": "2026-11-13",
    "rating_rod": 4.5,
    "tags": [
     "outdoors",
@@ -507,8 +507,8 @@
    "category": "shop",
    "city": "Cedar Falls",
    "visit_count": 3,
-   "first_seen": "2025-12-01",
-   "last_seen": "2026-10-23",
+   "first_seen": "2025-12-02",
+   "last_seen": "2026-10-24",
    "rating_rod": 4,
    "tags": [
     "books",
@@ -523,8 +523,8 @@
    "category": "trail",
    "city": "Cedar Falls",
    "visit_count": 4,
-   "first_seen": "2025-12-10",
-   "last_seen": "2026-10-16",
+   "first_seen": "2025-12-11",
+   "last_seen": "2026-10-17",
    "rating_rod": 4,
    "tags": [
     "outdoors",
@@ -539,8 +539,8 @@
    "category": "restaurant",
    "city": "Cedar Falls",
    "visit_count": 8,
-   "first_seen": "2025-12-19",
-   "last_seen": "2026-09-07",
+   "first_seen": "2025-12-20",
+   "last_seen": "2026-09-08",
    "rating_rod": 5,
    "tags": [
     "grill",
@@ -552,11 +552,11 @@
   }
  ],
  "tonight": {
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "dinner": "Chicken tinga tacos",
   "sweet": "Mango rice pudding",
   "minutes": 45
  },
  "tomorrow": null,
- "chores_due": 3
+ "chores_due": 2
 }

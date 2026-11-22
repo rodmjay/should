@@ -20,7 +20,7 @@
    ],
    "report": {
     "summary": "One strong lead at Northgate Systems; reply drafted.",
-    "date": "2026-11-20"
+    "date": "2026-11-21"
    },
    "act": 0,
    "tasks": 2
@@ -45,7 +45,7 @@
    ],
    "report": {
     "summary": "Annual report ready to sign; the lease renewal reads cleanly.",
-    "date": "2026-11-20"
+    "date": "2026-11-21"
    },
    "act": 1,
    "tasks": 2
@@ -70,7 +70,7 @@
    ],
    "report": {
     "summary": "Two posts drafted for the portfolio launch.",
-    "date": "2026-11-20"
+    "date": "2026-11-21"
    },
    "act": 0,
    "tasks": 2
@@ -87,7 +87,7 @@
    ],
    "flagged": false,
    "due": "2026-11-23",
-   "days_left": 2,
+   "days_left": 1,
    "overdue": false,
    "duration_min": 10,
    "view": null
@@ -117,7 +117,7 @@
     "Money"
    ],
    "flagged": true,
-   "due": "2026-12-03",
+   "due": "2026-12-04",
    "days_left": 12,
    "overdue": false,
    "duration_min": 10,
@@ -132,8 +132,8 @@
     "Home"
    ],
    "flagged": false,
-   "due": "2026-11-28",
-   "days_left": 7,
+   "due": "2026-11-30",
+   "days_left": 8,
    "overdue": false,
    "duration_min": 20,
    "view": null
@@ -147,7 +147,7 @@
     "Computer"
    ],
    "flagged": false,
-   "due": "2026-11-23",
+   "due": "2026-11-24",
    "days_left": 2,
    "overdue": false,
    "duration_min": 5,
@@ -210,7 +210,7 @@
   },
   "deadlines": [
    {
-    "next_due": "2026-12-03",
+    "next_due": "2026-12-04",
     "short_name": "Carter Studio",
     "legal_name": "Carter Studio LLC",
     "title": "Annual report",
@@ -222,7 +222,7 @@
     "days_left": 12
    },
    {
-    "next_due": "2026-12-16",
+    "next_due": "2026-12-17",
     "short_name": "Carter Studio",
     "legal_name": "Carter Studio LLC",
     "title": "Q4 estimated tax",
@@ -234,7 +234,7 @@
     "days_left": 25
    },
    {
-    "next_due": "2027-01-30",
+    "next_due": "2027-02-01",
     "short_name": "Carter Studio",
     "legal_name": "Carter Studio LLC",
     "title": "Business license renewal",
@@ -243,10 +243,10 @@
     "how_to": "Renew online",
     "frequency": "yearly",
     "todoist_task_id": "",
-    "days_left": 70
+    "days_left": 71
    },
    {
-    "next_due": "2027-01-05",
+    "next_due": "2027-01-06",
     "short_name": "Brightline Labs",
     "legal_name": "Brightline Labs LLC",
     "title": "Form the LLC",

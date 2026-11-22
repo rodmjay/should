@@ -14,12 +14,12 @@
   "ref": {
    "trip_group": "spring-coast"
   },
-  "started_on": "2026-11-01",
+  "started_on": "2026-11-02",
   "target_date": null,
   "done_on": null,
   "sort": 0,
   "notes": "Three options priced; fares dropped $38 this week.",
-  "updated_at": "2026-11-20T09:00:00-07:00",
+  "updated_at": "2026-11-21T09:00:00-07:00",
   "tasks": [
    {
     "id": "t8132",
@@ -55,11 +55,11 @@
   "done": [
    {
     "content": "Set the budget",
-    "completed_at": "2026-11-14"
+    "completed_at": "2026-11-16"
    },
    {
     "content": "List three places",
-    "completed_at": "2026-11-12"
+    "completed_at": "2026-11-13"
    }
   ],
   "next": {
@@ -90,8 +90,8 @@
     "Old Town",
     "Red Mesa"
    ],
-   "start": "2027-03-21",
-   "end": "2027-03-26",
+   "start": "2027-03-22",
+   "end": "2027-03-27",
    "low": 2140.0,
    "high": 2780.0,
    "picked": null

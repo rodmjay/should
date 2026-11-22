@@ -99,6 +99,7 @@ api/role/as-architect.json
 api/role/assistant.json
 api/role/bookkeeper.json
 api/role/business.json
+api/role/business_analyst.json
 api/role/business_coach.json
 api/role/career.json
 api/role/clothier.json

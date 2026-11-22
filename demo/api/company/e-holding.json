@@ -147,7 +147,7 @@
  ],
  "deadlines": [
   {
-   "next_due": "2026-12-03",
+   "next_due": "2026-12-04",
    "short_name": "Carter Studio",
    "legal_name": "Carter Studio LLC",
    "title": "Annual report",
@@ -159,7 +159,7 @@
    "days_left": 12
   },
   {
-   "next_due": "2026-12-16",
+   "next_due": "2026-12-17",
    "short_name": "Carter Studio",
    "legal_name": "Carter Studio LLC",
    "title": "Q4 estimated tax",
@@ -171,7 +171,7 @@
    "days_left": 25
   },
   {
-   "next_due": "2027-01-30",
+   "next_due": "2027-02-01",
    "short_name": "Carter Studio",
    "legal_name": "Carter Studio LLC",
    "title": "Business license renewal",
@@ -180,7 +180,7 @@
    "how_to": "Renew online",
    "frequency": "yearly",
    "todoist_task_id": "",
-   "days_left": 70
+   "days_left": 71
   }
  ],
  "tasks": [
@@ -194,7 +194,7 @@
     "Money"
    ],
    "flagged": true,
-   "due": "2026-12-03",
+   "due": "2026-12-04",
    "days_left": 12,
    "overdue": false,
    "duration_min": 10,
@@ -209,7 +209,7 @@
     "Computer"
    ],
    "flagged": false,
-   "due": "2026-11-23",
+   "due": "2026-11-24",
    "days_left": 2,
    "overdue": false,
    "duration_min": 5,
@@ -282,14 +282,14 @@
    "name": "Design software",
    "amount_usd": 99.0,
    "frequency": "monthly",
-   "next_due": "2026-12-02",
+   "next_due": "2026-12-03",
    "autopay": true
   },
   {
    "name": "Domain renewal",
    "amount_usd": 18.0,
    "frequency": "yearly",
-   "next_due": "2027-04-10",
+   "next_due": "2027-04-11",
    "autopay": true
   }
  ],
@@ -312,7 +312,7 @@
    "title": "Client agreement, Juniper Dental",
    "signed": true,
    "kind": "contract",
-   "dated": "2026-07-24",
+   "dated": "2026-07-25",
    "location": "Drive, Business folder"
   }
  ],
@@ -321,13 +321,13 @@
   {
    "subject": "Invoice question",
    "url": "",
-   "last_message_at": "2026-11-18T09:00:00-07:00"
+   "last_message_at": "2026-11-19T09:00:00-07:00"
   }
  ],
  "calendar": [
   {
    "title": "Quarterly books review",
-   "starts_at": "2026-11-30T15:00:00-07:00"
+   "starts_at": "2026-12-01T15:00:00-07:00"
   }
  ],
  "registrations": [
@@ -359,7 +359,7 @@
    "jurisdiction": "City of Cedar Falls",
    "number": null,
    "filed_on": null,
-   "expires_on": "2027-01-30",
+   "expires_on": "2027-01-31",
    "status": "active",
    "portal_url": "",
    "notes": ""
@@ -426,7 +426,7 @@
  },
  "books": {
   "abbr": "CS",
-  "as_of": "2026-11-21T06:00:00-07:00",
+  "as_of": "2026-11-22T06:00:00-07:00",
   "balanced": true,
   "expense_total": 2340.55,
   "expenses": [
@@ -498,35 +498,35 @@
  },
  "transactions": [
   {
-   "posted_on": "2026-11-18",
+   "posted_on": "2026-11-19",
    "merchant": "Juniper Dental",
    "description": "Juniper Dental",
    "category": "Income",
    "amount": 1200.0
   },
   {
-   "posted_on": "2026-11-12",
+   "posted_on": "2026-11-13",
    "merchant": "Design software",
    "description": "Design software",
    "category": "Software",
    "amount": -99.0
   },
   {
-   "posted_on": "2026-11-05",
+   "posted_on": "2026-11-06",
    "merchant": "Domain renewal",
    "description": "Domain renewal",
    "category": "Software",
    "amount": -18.0
   },
   {
-   "posted_on": "2026-10-28",
+   "posted_on": "2026-10-29",
    "merchant": "Monitor",
    "description": "Monitor",
    "category": "Equipment",
    "amount": -329.0
   },
   {
-   "posted_on": "2026-10-19",
+   "posted_on": "2026-10-20",
    "merchant": "Juniper Dental",
    "description": "Juniper Dental",
    "category": "Income",

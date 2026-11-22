@@ -1,5 +1,5 @@
 {
- "exported_at": "2026-11-21T05:00:00-07:00",
+ "exported_at": "2026-11-22T05:00:00-07:00",
  "roles": [
   {
    "key": "assistant",
@@ -176,6 +176,12 @@
    "role_file": "coach/README.md"
   },
   {
+   "key": "business_analyst",
+   "name": "Business Analyst",
+   "status": "running",
+   "role_file": "business-analyst/README.md"
+  },
+  {
    "key": "business_coach",
    "name": "Business Coach",
    "status": "running",
@@ -222,7 +228,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/morning-text.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -235,7 +241,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/daily-hygiene.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -248,7 +254,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/gmail-tidy.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -261,7 +267,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/daily-organizer.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -274,7 +280,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/todoist-comments.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -287,7 +293,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/backup.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -300,7 +306,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/daily-schedule.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -313,7 +319,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/calendar-sync.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -326,7 +332,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/daily-balance.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -339,7 +345,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/bills-check.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -352,7 +358,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/monthly-close.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -365,7 +371,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/biweekly-meal-plan.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -378,7 +384,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/weekly-walmart-cart.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -391,7 +397,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/weekly-weigh-in.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -404,7 +410,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/weekly-gift-check.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -417,7 +423,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/stay-in-touch.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -430,7 +436,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/chores-sweep.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -443,7 +449,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/weekly-credit-check.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -456,7 +462,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/paper-trade.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -469,7 +475,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/weekly-business-review.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -482,7 +488,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/it-health.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -495,7 +501,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/offsite-backup.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -508,7 +514,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/nightly-tests.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -521,7 +527,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/weather-daily.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -534,7 +540,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/events-feed.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -547,7 +553,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/text-replies.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -560,7 +566,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/login-watch.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -573,7 +579,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/weekly-security-audit.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -586,7 +592,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/weekly-compliance-review.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -599,7 +605,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/incident-scan.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -612,7 +618,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/weekly-pick.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -625,7 +631,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/job-leads.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -638,7 +644,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/price-watch.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -651,7 +657,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/weekly-progress-request.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -664,7 +670,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/weekly-coach-review.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -677,7 +683,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/travel-weekly.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -690,7 +696,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/broker-discovery.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   },
@@ -703,7 +709,7 @@
    "timezone": "America/Denver",
    "prompt_path": "routines/broker-removal.md",
    "status": "active",
-   "starts_on": "2026-09-22",
+   "starts_on": "2026-09-23",
    "notes": "",
    "usage_tier": "normal"
   }

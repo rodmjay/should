@@ -1,7 +1,7 @@
 {
  "mode": "test",
  "stripe_account": "test account",
- "generated": "2026-11-21T06:00:00-07:00",
+ "generated": "2026-11-22T06:00:00-07:00",
  "age_minutes": 280,
  "refresh": "make snapshot",
  "start": "make up",
@@ -110,7 +110,7 @@
    "customer": "Juniper Dental",
    "project": "Booking pilot",
    "total": 1200.0,
-   "created": "2026-10-19T09:00:00-07:00",
+   "created": "2026-10-20T09:00:00-07:00",
    "payment": {
     "status": "succeeded",
     "amountRefunded": 0,
@@ -123,7 +123,7 @@
    "customer": "Juniper Dental",
    "project": "Booking pilot",
    "total": 1200.0,
-   "created": "2026-11-18T09:00:00-07:00",
+   "created": "2026-11-19T09:00:00-07:00",
    "payment": {
     "status": "pending",
     "amountRefunded": 0,
@@ -136,7 +136,7 @@
    "customer": "Juniper Dental",
    "project": "Landing page",
    "total": 617.5,
-   "created": "2026-11-20T09:00:00-07:00",
+   "created": "2026-11-21T09:00:00-07:00",
    "payment": null
   }
  ],
@@ -192,7 +192,7 @@
  ],
  "audit": [
   {
-   "at": "2026-11-20T15:02:00-07:00",
+   "at": "2026-11-21T15:02:00-07:00",
    "who": "QA agent",
    "on_behalf_of": "Sam",
    "what": "invoice.draft",
@@ -201,7 +201,7 @@
    "source": "api"
   },
   {
-   "at": "2026-11-19T10:40:00-07:00",
+   "at": "2026-11-20T10:40:00-07:00",
    "who": "Sam",
    "on_behalf_of": "Sam",
    "what": "time.log",
@@ -217,7 +217,7 @@
   "pass": 40,
   "not_tested": 3,
   "deferred": 2,
-  "ran": "2026-11-21T01:00:00",
+  "ran": "2026-11-22T01:00:00",
   "runs": 57,
   "file": "tests/latest.json",
   "rows": [

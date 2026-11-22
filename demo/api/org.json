@@ -18,7 +18,7 @@
     0
    ],
    "desk": true,
-   "last_report": "2026-11-20"
+   "last_report": "2026-11-21"
   },
   {
    "depth": 1,
@@ -38,7 +38,7 @@
     1
    ],
    "desk": true,
-   "last_report": "2026-11-20"
+   "last_report": "2026-11-21"
   },
   {
    "depth": 1,
@@ -58,7 +58,7 @@
     2
    ],
    "desk": true,
-   "last_report": "2026-11-20"
+   "last_report": "2026-11-21"
   },
   {
    "depth": 1,
@@ -78,7 +78,7 @@
     3
    ],
    "desk": true,
-   "last_report": "2026-11-20"
+   "last_report": "2026-11-21"
   },
   {
    "depth": 1,
@@ -98,7 +98,7 @@
     4
    ],
    "desk": true,
-   "last_report": "2026-11-20"
+   "last_report": "2026-11-21"
   },
   {
    "depth": 2,
@@ -119,7 +119,7 @@
     5
    ],
    "desk": true,
-   "last_report": "2026-11-19"
+   "last_report": "2026-11-20"
   },
   {
    "depth": 2,
@@ -134,13 +134,34 @@
    "status": "running",
    "role_file": "knowledge/PHILOSOPHER.md",
    "folder": "knowledge",
-   "direct_reports": 0,
+   "direct_reports": 1,
    "sort_path": [
     0,
     6
    ],
    "desk": true,
-   "last_report": "2026-11-19"
+   "last_report": "2026-11-20"
+  },
+  {
+   "depth": 3,
+   "key": "business_analyst",
+   "name": "Business Analyst",
+   "title": "",
+   "department_key": null,
+   "department": null,
+   "reports_to": "philosopher",
+   "reports_to_name": "Philosopher",
+   "is_lead": false,
+   "status": "running",
+   "role_file": "business-analyst/README.md",
+   "folder": "business-analyst",
+   "direct_reports": 0,
+   "sort_path": [
+    0,
+    7
+   ],
+   "desk": true,
+   "last_report": "2026-11-21"
   },
   {
    "depth": 2,
@@ -161,7 +182,7 @@
     0
    ],
    "desk": true,
-   "last_report": "2026-11-20"
+   "last_report": "2026-11-21"
   },
   {
    "depth": 3,
@@ -182,7 +203,7 @@
     1
    ],
    "desk": true,
-   "last_report": "2026-11-19"
+   "last_report": "2026-11-20"
   },
   {
    "depth": 2,
@@ -203,7 +224,7 @@
     0
    ],
    "desk": true,
-   "last_report": "2026-11-20"
+   "last_report": "2026-11-21"
   },
   {
    "depth": 3,
@@ -224,7 +245,7 @@
     1
    ],
    "desk": true,
-   "last_report": "2026-11-19"
+   "last_report": "2026-11-20"
   },
   {
    "depth": 3,
@@ -245,7 +266,7 @@
     2
    ],
    "desk": true,
-   "last_report": "2026-11-18"
+   "last_report": "2026-11-19"
   },
   {
    "depth": 2,
@@ -266,7 +287,7 @@
     0
    ],
    "desk": true,
-   "last_report": "2026-11-20"
+   "last_report": "2026-11-21"
   },
   {
    "depth": 3,
@@ -287,7 +308,7 @@
     1
    ],
    "desk": true,
-   "last_report": "2026-11-19"
+   "last_report": "2026-11-20"
   },
   {
    "depth": 2,
@@ -308,7 +329,7 @@
     0
    ],
    "desk": true,
-   "last_report": "2026-11-20"
+   "last_report": "2026-11-21"
   },
   {
    "depth": 3,
@@ -329,7 +350,7 @@
     1
    ],
    "desk": true,
-   "last_report": "2026-11-19"
+   "last_report": "2026-11-20"
   },
   {
    "depth": 3,
@@ -350,7 +371,7 @@
     2
    ],
    "desk": true,
-   "last_report": "2026-11-18"
+   "last_report": "2026-11-19"
   },
   {
    "depth": 2,
@@ -371,7 +392,7 @@
     0
    ],
    "desk": true,
-   "last_report": "2026-11-20"
+   "last_report": "2026-11-21"
   },
   {
    "depth": 2,
@@ -392,7 +413,7 @@
     0
    ],
    "desk": true,
-   "last_report": "2026-11-20"
+   "last_report": "2026-11-21"
   },
   {
    "depth": 3,
@@ -413,7 +434,7 @@
     1
    ],
    "desk": true,
-   "last_report": "2026-11-19"
+   "last_report": "2026-11-20"
   },
   {
    "depth": 3,
@@ -434,7 +455,7 @@
     2
    ],
    "desk": true,
-   "last_report": "2026-11-18"
+   "last_report": "2026-11-19"
   },
   {
    "depth": 3,
@@ -455,7 +476,7 @@
     3
    ],
    "desk": true,
-   "last_report": "2026-11-17"
+   "last_report": "2026-11-18"
   },
   {
    "depth": 2,
@@ -476,7 +497,7 @@
     0
    ],
    "desk": true,
-   "last_report": "2026-11-20"
+   "last_report": "2026-11-21"
   },
   {
    "depth": 3,
@@ -497,7 +518,7 @@
     1
    ],
    "desk": true,
-   "last_report": "2026-11-19"
+   "last_report": "2026-11-20"
   },
   {
    "depth": 3,
@@ -539,7 +560,7 @@
     0
    ],
    "desk": true,
-   "last_report": "2026-11-20"
+   "last_report": "2026-11-21"
   },
   {
    "depth": 3,
@@ -560,7 +581,7 @@
     1
    ],
    "desk": true,
-   "last_report": "2026-11-19"
+   "last_report": "2026-11-20"
   },
   {
    "depth": 3,
@@ -581,7 +602,7 @@
     2
    ],
    "desk": true,
-   "last_report": "2026-11-18"
+   "last_report": "2026-11-19"
   },
   {
    "depth": 3,
@@ -602,7 +623,7 @@
     3
    ],
    "desk": true,
-   "last_report": "2026-11-17"
+   "last_report": "2026-11-18"
   },
   {
    "depth": 2,
@@ -623,7 +644,7 @@
     0
    ],
    "desk": true,
-   "last_report": "2026-11-20"
+   "last_report": "2026-11-21"
   },
   {
    "depth": 3,
@@ -644,7 +665,7 @@
     1
    ],
    "desk": true,
-   "last_report": "2026-11-19"
+   "last_report": "2026-11-20"
   },
   {
    "depth": 3,
@@ -665,7 +686,7 @@
     2
    ],
    "desk": true,
-   "last_report": "2026-11-18"
+   "last_report": "2026-11-19"
   },
   {
    "depth": 3,
@@ -686,7 +707,7 @@
     3
    ],
    "desk": true,
-   "last_report": "2026-11-17"
+   "last_report": "2026-11-18"
   },
   {
    "depth": 3,
@@ -707,7 +728,7 @@
     4
    ],
    "desk": true,
-   "last_report": "2026-11-16"
+   "last_report": "2026-11-17"
   },
   {
    "depth": 2,
@@ -728,7 +749,7 @@
     0
    ],
    "desk": true,
-   "last_report": "2026-11-20"
+   "last_report": "2026-11-21"
   }
  ],
  "departments": [

@@ -28,7 +28,7 @@
    ],
    "flagged": false,
    "due": "2026-11-23",
-   "days_left": 2,
+   "days_left": 1,
    "overdue": false,
    "duration_min": 5,
    "view": null
@@ -59,8 +59,8 @@
  ],
  "report": {
   "latest": {
-   "path": "shopping/reports/2026-11-20.md",
-   "date": "2026-11-20",
+   "path": "shopping/reports/2026-11-21.md",
+   "date": "2026-11-21",
    "summary": "Two items hit their target price: the rice cooker and the hiking boots.",
    "html": "<p>Two items hit their target price: the rice cooker and the hiking boots.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
   },

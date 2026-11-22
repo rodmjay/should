@@ -17,8 +17,8 @@
  "routines": [],
  "report": {
   "latest": {
-   "path": "design/reports/2026-11-20.md",
-   "date": "2026-11-20",
+   "path": "design/reports/2026-11-21.md",
+   "date": "2026-11-21",
    "summary": "Passed three design checks; added a snackbar.",
    "html": "<p>Passed three design checks; added a snackbar.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
   },

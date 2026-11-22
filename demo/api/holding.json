@@ -68,7 +68,7 @@
   "live"
  ],
  "goal": {
-  "target_date": "2027-12-26",
+  "target_date": "2027-12-27",
   "target_usd": 120000,
   "saved_usd": 96000,
   "pct": 80,
@@ -84,12 +84,12 @@
    "door": "Legal",
    "item": "Legal: sign the Carter Studio annual report ($10 fee)",
    "owner": "Business Executive",
-   "check_on": "2026-11-26"
+   "check_on": "2026-11-27"
   }
  ],
  "deadlines": [
   {
-   "next_due": "2026-12-03",
+   "next_due": "2026-12-04",
    "short_name": "Carter Studio",
    "legal_name": "Carter Studio LLC",
    "title": "Annual report",
@@ -101,7 +101,7 @@
    "days_left": 12
   },
   {
-   "next_due": "2026-12-16",
+   "next_due": "2026-12-17",
    "short_name": "Carter Studio",
    "legal_name": "Carter Studio LLC",
    "title": "Q4 estimated tax",
@@ -113,7 +113,7 @@
    "days_left": 25
   },
   {
-   "next_due": "2027-01-30",
+   "next_due": "2027-02-01",
    "short_name": "Carter Studio",
    "legal_name": "Carter Studio LLC",
    "title": "Business license renewal",
@@ -122,10 +122,10 @@
    "how_to": "Renew online",
    "frequency": "yearly",
    "todoist_task_id": "",
-   "days_left": 70
+   "days_left": 71
   },
   {
-   "next_due": "2027-01-05",
+   "next_due": "2027-01-06",
    "short_name": "Brightline Labs",
    "legal_name": "Brightline Labs LLC",
    "title": "Form the LLC",
@@ -139,7 +139,7 @@
  ],
  "handoffs": [
   {
-   "check_on": "2026-11-25",
+   "check_on": "2026-11-26",
    "item": "Juniper Dental to confirm the pilot start date",
    "waiting_on": "Juniper Dental"
   }

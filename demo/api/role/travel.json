@@ -71,8 +71,8 @@
  ],
  "report": {
   "latest": {
-   "path": "travel/reports/2026-11-20.md",
-   "date": "2026-11-20",
+   "path": "travel/reports/2026-11-21.md",
+   "date": "2026-11-21",
    "summary": "Fares dropped $38; the harbor option is cheapest.",
    "html": "<p>Fares dropped $38; the harbor option is cheapest.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
   },
@@ -182,16 +182,16 @@
     "trips": [
      {
       "name": "Spring coast trip",
-      "start": "2027-03-21",
-      "end": "2027-03-26",
+      "start": "2027-03-22",
+      "end": "2027-03-27",
       "occasion": "Spring break, all four of us",
       "budget_stay": 1200,
       "status": "comparing",
       "todo": "Pick dates to lock the fare",
       "flight": {
        "pick": "Nonstop, Tuesday out",
-       "out": "Out Sun Mar 21, 8:05 AM",
-       "back": "Back Fri Mar 26, 4:40 PM",
+       "out": "Out Mon Mar 22, 8:05 AM",
+       "back": "Back Sat Mar 27, 4:40 PM",
        "fares": [
         {
          "airline": "Frontier",
@@ -226,7 +226,7 @@
       "total": 960,
       "pool": "no",
       "breakfast": "no",
-      "free_cancel_until": "2027-03-01",
+      "free_cancel_until": "2027-03-02",
       "notes": "Walk to the beach"
      },
      {
@@ -241,7 +241,7 @@
       "total": 1110,
       "pool": "yes",
       "breakfast": "yes",
-      "free_cancel_until": "2027-03-01",
+      "free_cancel_until": "2027-03-02",
       "notes": "Kids eat free"
      },
      {
@@ -256,7 +256,7 @@
       "total": 890,
       "pool": "no",
       "breakfast": "no",
-      "free_cancel_until": "2027-03-01",
+      "free_cancel_until": "2027-03-02",
       "notes": "Fire pit"
      },
      {
@@ -271,7 +271,7 @@
       "total": 1320,
       "pool": "yes",
       "breakfast": "yes",
-      "free_cancel_until": "2027-03-01",
+      "free_cancel_until": "2027-03-02",
       "notes": ""
      }
     ],

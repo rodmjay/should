@@ -1,6 +1,6 @@
 {
  "live": true,
- "today": "2026-11-21",
+ "today": "2026-11-22",
  "accounts": [
   {
    "id": "a1",
@@ -10,16 +10,16 @@
    "last4": "4417",
    "status": "active",
    "url": "",
-   "balance": 2240.39,
-   "as_of": "2026-11-21",
-   "read_at": "2026-11-21T06:15:00-07:00",
+   "balance": 1965.37,
+   "as_of": "2026-11-22",
+   "read_at": "2026-11-22T06:15:00-07:00",
    "history": [
-    2150.77,
-    2168.7,
-    2186.62,
-    2204.54,
-    2222.47,
-    2240.39
+    1886.76,
+    1902.48,
+    1918.2,
+    1933.92,
+    1949.65,
+    1965.37
    ]
   },
   {
@@ -31,8 +31,8 @@
    "status": "active",
    "url": "",
    "balance": 1850.0,
-   "as_of": "2026-11-21",
-   "read_at": "2026-11-21T06:15:00-07:00",
+   "as_of": "2026-11-22",
+   "read_at": "2026-11-22T06:15:00-07:00",
    "history": [
     1776.0,
     1790.8,
@@ -51,8 +51,8 @@
    "status": "active",
    "url": "",
    "balance": -1240.18,
-   "as_of": "2026-11-21",
-   "read_at": "2026-11-21T06:15:00-07:00",
+   "as_of": "2026-11-22",
+   "read_at": "2026-11-22T06:15:00-07:00",
    "history": [
     -1190.57,
     -1200.49,
@@ -71,8 +71,8 @@
    "status": "active",
    "url": "",
    "balance": -9820.0,
-   "as_of": "2026-11-21",
-   "read_at": "2026-11-21T06:15:00-07:00",
+   "as_of": "2026-11-22",
+   "read_at": "2026-11-22T06:15:00-07:00",
    "history": [
     -9427.2,
     -9505.76,
@@ -91,8 +91,8 @@
    "status": "active",
    "url": "",
    "balance": -14350.0,
-   "as_of": "2026-11-21",
-   "read_at": "2026-11-21T06:15:00-07:00",
+   "as_of": "2026-11-22",
+   "read_at": "2026-11-22T06:15:00-07:00",
    "history": [
     -13776.0,
     -13890.8,
@@ -111,8 +111,8 @@
    "status": "active",
    "url": "",
    "balance": 23480.0,
-   "as_of": "2026-11-21",
-   "read_at": "2026-11-21T06:15:00-07:00",
+   "as_of": "2026-11-22",
+   "read_at": "2026-11-22T06:15:00-07:00",
    "history": [
     22540.8,
     22728.64,
@@ -131,8 +131,8 @@
    "status": "active",
    "url": "",
    "balance": 3120.0,
-   "as_of": "2026-11-21",
-   "read_at": "2026-11-21T06:15:00-07:00",
+   "as_of": "2026-11-22",
+   "read_at": "2026-11-22T06:15:00-07:00",
    "history": [
     2995.2,
     3020.16,
@@ -151,8 +151,8 @@
    "status": "active",
    "url": "",
    "balance": 640.0,
-   "as_of": "2026-11-21",
-   "read_at": "2026-11-21T06:15:00-07:00",
+   "as_of": "2026-11-22",
+   "read_at": "2026-11-22T06:15:00-07:00",
    "history": [
     614.4,
     619.52,
@@ -171,8 +171,8 @@
    "status": "active",
    "url": "",
    "balance": 11500.0,
-   "as_of": "2026-11-21",
-   "read_at": "2026-11-21T06:15:00-07:00",
+   "as_of": "2026-11-22",
+   "read_at": "2026-11-22T06:15:00-07:00",
    "history": [
     11040.0,
     11132.0,
@@ -191,8 +191,8 @@
    "status": "active",
    "url": "",
    "balance": 38.0,
-   "as_of": "2026-11-21",
-   "read_at": "2026-11-21T06:15:00-07:00",
+   "as_of": "2026-11-22",
+   "read_at": "2026-11-22T06:15:00-07:00",
    "history": [
     36.48,
     36.78,
@@ -230,6 +230,22 @@
   }
  ],
  "transactions": [
+  {
+   "id": 111,
+   "day": "2026-11-22",
+   "amount": -27.23,
+   "merchant": "Pine Street Pharmacy",
+   "category": "Health",
+   "account": "Summit Card ••0932"
+  },
+  {
+   "id": 110,
+   "day": "2026-11-22",
+   "amount": -118.0,
+   "merchant": "Peak Wireless, 3 lines",
+   "category": "Bills & Utilities",
+   "account": "Checking ••4417"
+  },
   {
    "id": 109,
    "day": "2026-11-21",
@@ -1127,7 +1143,8 @@
    3222.19,
    3264.66,
    3304.98,
-   3353.37
+   3353.37,
+   3498.6
   ],
   "last": [
    1235.8,
@@ -1169,7 +1186,7 @@
    ],
    [
     "2026-11",
-    3353.37
+    3498.6
    ]
   ],
   "since": "2026-10-01"
@@ -1180,7 +1197,7 @@
    "amount": 1195.0,
    "frequency": "monthly",
    "due": "2026-12-01",
-   "days_left": 10,
+   "days_left": 9,
    "autopay": false,
    "paid": false,
    "pay_from": null,
@@ -1192,7 +1209,7 @@
    "amount": 84.2,
    "frequency": "monthly",
    "due": "2026-12-12",
-   "days_left": 21,
+   "days_left": 20,
    "autopay": true,
    "paid": false,
    "pay_from": null,
@@ -1204,7 +1221,7 @@
    "amount": 61.75,
    "frequency": "monthly",
    "due": "2026-12-18",
-   "days_left": 27,
+   "days_left": 26,
    "autopay": false,
    "paid": false,
    "pay_from": null,
@@ -1216,7 +1233,7 @@
    "amount": 65.0,
    "frequency": "monthly",
    "due": "2026-12-09",
-   "days_left": 18,
+   "days_left": 17,
    "autopay": true,
    "paid": false,
    "pay_from": null,
@@ -1228,7 +1245,7 @@
    "amount": 118.0,
    "frequency": "monthly",
    "due": "2026-11-22",
-   "days_left": 1,
+   "days_left": 0,
    "autopay": true,
    "paid": false,
    "pay_from": null,
@@ -1240,7 +1257,7 @@
    "amount": 45.0,
    "frequency": "monthly",
    "due": "2026-12-12",
-   "days_left": 21,
+   "days_left": 20,
    "autopay": false,
    "paid": false,
    "pay_from": null,
@@ -1252,7 +1269,7 @@
    "amount": 289.0,
    "frequency": "monthly",
    "due": "2026-12-15",
-   "days_left": 24,
+   "days_left": 23,
    "autopay": true,
    "paid": false,
    "pay_from": null,
@@ -1264,7 +1281,7 @@
    "amount": 112.4,
    "frequency": "monthly",
    "due": "2026-12-04",
-   "days_left": 13,
+   "days_left": 12,
    "autopay": true,
    "paid": false,
    "pay_from": null,
@@ -1276,7 +1293,7 @@
    "amount": 15.49,
    "frequency": "monthly",
    "due": "2026-12-07",
-   "days_left": 16,
+   "days_left": 15,
    "autopay": true,
    "paid": false,
    "pay_from": null,
@@ -1288,7 +1305,7 @@
    "amount": 9.99,
    "frequency": "monthly",
    "due": "2026-12-19",
-   "days_left": 28,
+   "days_left": 27,
    "autopay": true,
    "paid": false,
    "pay_from": null,
@@ -1300,7 +1317,7 @@
    "amount": 32.0,
    "frequency": "monthly",
    "due": "2026-12-03",
-   "days_left": 12,
+   "days_left": 11,
    "autopay": true,
    "paid": false,
    "pay_from": null,
@@ -1312,7 +1329,7 @@
    "amount": 180.0,
    "frequency": "monthly",
    "due": "2026-12-08",
-   "days_left": 17,
+   "days_left": 16,
    "autopay": true,
    "paid": false,
    "pay_from": null,
@@ -1324,7 +1341,7 @@
    "amount": 120.0,
    "frequency": "monthly",
    "due": "2026-12-15",
-   "days_left": 24,
+   "days_left": 23,
    "autopay": false,
    "paid": false,
    "pay_from": null,
@@ -1336,7 +1353,7 @@
    "amount": 210.0,
    "frequency": "monthly",
    "due": "2026-12-10",
-   "days_left": 19,
+   "days_left": 18,
    "autopay": false,
    "paid": false,
    "pay_from": null,
@@ -1347,8 +1364,8 @@
    "name": "Renter's insurance",
    "amount": 14.0,
    "frequency": "monthly",
-   "due": "2026-11-21",
-   "days_left": 0,
+   "due": "2026-12-21",
+   "days_left": 29,
    "autopay": true,
    "paid": false,
    "pay_from": null,
@@ -1360,7 +1377,7 @@
    "amount": 2.99,
    "frequency": "monthly",
    "due": "2026-12-14",
-   "days_left": 23,
+   "days_left": 22,
    "autopay": true,
    "paid": false,
    "pay_from": null,
@@ -1410,7 +1427,7 @@
    "kind": "credit card",
    "status": "open",
    "balance": 1240.18,
-   "as_of": "2026-11-21",
+   "as_of": "2026-11-22",
    "payment": null,
    "frees_per_month": 45,
    "frees_per_paycheck": 22
@@ -1422,7 +1439,7 @@
    "kind": "auto loan",
    "status": "open",
    "balance": 9820.0,
-   "as_of": "2026-11-21",
+   "as_of": "2026-11-22",
    "payment": null,
    "frees_per_month": 289,
    "frees_per_paycheck": 144
@@ -1434,7 +1451,7 @@
    "kind": "student loan",
    "status": "open",
    "balance": 14350.0,
-   "as_of": "2026-11-21",
+   "as_of": "2026-11-22",
    "payment": null,
    "frees_per_month": 180,
    "frees_per_paycheck": 90
@@ -1446,7 +1463,7 @@
    "kind": "collection",
    "status": "open",
    "balance": 180.0,
-   "as_of": "2026-11-21",
+   "as_of": "2026-11-22",
    "payment": null,
    "frees_per_month": 0,
    "frees_per_paycheck": 0
@@ -1455,11 +1472,11 @@
  "irs": {
   "text": "Nothing owed; last year's return was filed and accepted.",
   "source": "IRS online account",
-  "as_of": "2026-10-12"
+  "as_of": "2026-10-13"
  },
  "strip": {
   "low": {
-   "amount": 449.39,
+   "amount": 310.37,
    "on": "2026-12-03",
    "below_bar": false,
    "bar": 250,
@@ -1468,13 +1485,13 @@
    "action": null
   },
   "checking_acct": {
-   "amount": 2240.39,
-   "read_at": "2026-11-21T06:15:00-07:00",
+   "amount": 1965.37,
+   "read_at": "2026-11-22T06:15:00-07:00",
    "stale": false
   },
   "payday": {
    "day": "2026-12-04",
-   "days": 13
+   "days": 12
   },
   "fun": {
    "status": "active",
@@ -1487,7 +1504,7 @@
    "unit": "%",
    "target": 100,
    "current": 100,
-   "current_on": "2026-11-20"
+   "current_on": "2026-11-21"
   },
   "overdrafts": {
    "gauge_key": "overdrafts",
@@ -1495,7 +1512,7 @@
    "unit": "count",
    "target": 0,
    "current": 0,
-   "current_on": "2026-11-20"
+   "current_on": "2026-11-21"
   }
  },
  "retirement": {
@@ -1509,11 +1526,11 @@
  "goal": {
   "name": "Emergency fund",
   "target": 6000.0,
-  "by": "2027-10-17",
+  "by": "2027-10-18",
   "per_month": 300.0,
-  "starts": "2026-05-25",
+  "starts": "2026-05-26",
   "saved": 1850.0,
-  "saved_as_of": "2026-11-21",
+  "saved_as_of": "2026-11-22",
   "on_pace": 1800.0,
   "status": "on_track",
   "notes": "$150 each payday.",
@@ -1529,36 +1546,36 @@
   "negatives": 1,
   "utilization": 24.8,
   "inquiries": 1,
-  "as_of": "2026-11-15"
+  "as_of": "2026-11-16"
  },
  "bot_equity": [
   {
-   "day": "2026-11-17",
-   "value": 10350.14,
-   "source": "paper",
-   "notes": ""
-  },
-  {
    "day": "2026-11-18",
-   "value": 10354.24,
+   "value": 10356.61,
    "source": "paper",
    "notes": ""
   },
   {
    "day": "2026-11-19",
-   "value": 10374.69,
+   "value": 10346.66,
    "source": "paper",
    "notes": ""
   },
   {
    "day": "2026-11-20",
-   "value": 10403.46,
+   "value": 10380.1,
    "source": "paper",
    "notes": ""
   },
   {
    "day": "2026-11-21",
-   "value": 10428.61,
+   "value": 10386.89,
+   "source": "paper",
+   "notes": ""
+  },
+  {
+   "day": "2026-11-21",
+   "value": 10418.71,
    "source": "paper",
    "notes": ""
   }
@@ -1566,22 +1583,22 @@
  "net_worth": {
   "real": [
    {
-    "day": "2026-11-21",
-    "value": 17458.21,
+    "day": "2026-11-22",
+    "value": 17183.19,
     "source": "accounts",
     "notes": "Every balance, all debts"
    }
   ],
   "linked": [
    {
-    "day": "2026-10-22",
-    "value": 17048.21,
+    "day": "2026-10-23",
+    "value": 16773.19,
     "source": "accounts",
     "notes": ""
    },
    {
-    "day": "2026-11-21",
-    "value": 17458.21,
+    "day": "2026-11-22",
+    "value": 17183.19,
     "source": "accounts",
     "notes": ""
    }
@@ -1590,19 +1607,19 @@
  "credit": {
   "scores": [
    {
-    "day": "2026-09-22",
+    "day": "2026-09-23",
     "value": 692,
     "source": "Experian",
     "notes": ""
    },
    {
-    "day": "2026-10-22",
+    "day": "2026-10-23",
     "value": 697,
     "source": "Experian",
     "notes": ""
    },
    {
-    "day": "2026-11-21",
+    "day": "2026-11-22",
     "value": 702,
     "source": "Experian",
     "notes": ""
@@ -1610,7 +1627,7 @@
   ],
   "bureaus": [
    {
-    "date": "2026-11-15",
+    "date": "2026-11-16",
     "bureau": "Experian",
     "score": 702,
     "change": 6,
@@ -1618,7 +1635,7 @@
     "source": "Credit monitoring"
    },
    {
-    "date": "2026-11-15",
+    "date": "2026-11-16",
     "bureau": "TransUnion",
     "score": 696,
     "change": 4,
@@ -1628,7 +1645,7 @@
   ],
   "history": [
    {
-    "date": "2026-11-15",
+    "date": "2026-11-16",
     "bureau": "Experian",
     "score": 702,
     "change": 4,
@@ -1636,7 +1653,7 @@
     "source": "Credit monitoring"
    },
    {
-    "date": "2026-10-16",
+    "date": "2026-10-17",
     "bureau": "Experian",
     "score": 698,
     "change": 4,
@@ -1644,7 +1661,7 @@
     "source": "Credit monitoring"
    },
    {
-    "date": "2026-09-16",
+    "date": "2026-09-17",
     "bureau": "Experian",
     "score": 694,
     "change": 4,
@@ -1652,7 +1669,7 @@
     "source": "Credit monitoring"
    },
    {
-    "date": "2026-08-17",
+    "date": "2026-08-18",
     "bureau": "Experian",
     "score": 690,
     "change": 4,
@@ -1661,10 +1678,10 @@
    }
   ],
   "summary": {
-   "as_of": "2026-11-15",
-   "report_updated": "2026-11-15",
+   "as_of": "2026-11-16",
+   "report_updated": "2026-11-16",
    "hard_inquiries": 1,
-   "inquiries_drop_off": "2027-06-19",
+   "inquiries_drop_off": "2027-06-20",
    "public_records": 0,
    "goal": 740,
    "note": "Paying the card under $300 is the fastest gain."
@@ -1675,7 +1692,7 @@
     "action": "Pay the Summit Card down to under $300",
     "why": "Utilization is the biggest lever",
     "impact": "+15 to +25",
-    "due": "2026-12-21",
+    "due": "2026-12-22",
     "status": "open",
     "in_todoist": false
    },
@@ -1726,7 +1743,7 @@
     "revolving": true,
     "flag": "warn",
     "note": "24.8% used",
-    "as_of": "2026-11-15"
+    "as_of": "2026-11-16"
    },
    {
     "account": "Valley Auto Finance",
@@ -1737,7 +1754,7 @@
     "revolving": false,
     "flag": "ok",
     "note": "On time 31 months",
-    "as_of": "2026-11-15"
+    "as_of": "2026-11-16"
    },
    {
     "account": "Student loan",
@@ -1748,7 +1765,7 @@
     "revolving": false,
     "flag": "ok",
     "note": "",
-    "as_of": "2026-11-15"
+    "as_of": "2026-11-16"
    },
    {
     "account": "Mesa Medical (collection)",
@@ -1759,7 +1776,7 @@
     "revolving": false,
     "flag": "bad",
     "note": "Reported twice",
-    "as_of": "2026-11-15"
+    "as_of": "2026-11-16"
    },
    {
     "account": "First Mesa Credit Union card",
@@ -1770,7 +1787,7 @@
     "revolving": true,
     "flag": "ok",
     "note": "Oldest account",
-    "as_of": "2026-11-15"
+    "as_of": "2026-11-16"
    },
    {
     "account": "Store card",
@@ -1781,7 +1798,7 @@
     "revolving": true,
     "flag": "ok",
     "note": "",
-    "as_of": "2026-11-15"
+    "as_of": "2026-11-16"
    }
   ]
  },
@@ -1790,22 +1807,22 @@
   "bar": 250.0,
   "periods": [
    {
-    "period_start": "2026-11-21",
+    "period_start": "2026-11-22",
     "period_end": "2026-12-03",
     "payday": "2026-12-04",
-    "opening": 2240.39,
+    "opening": 1965.37,
     "income": 0.0,
-    "bills": 1345.0,
-    "extra": 446.0,
-    "low_point": 449.39,
+    "bills": 1227.0,
+    "extra": 428.0,
+    "low_point": 310.37,
     "low_on": "2026-12-03",
-    "closing": 449.39,
+    "closing": 310.37,
     "below_bar": false,
     "bar": 250,
     "extra_items": [
      {
       "label": "Everyday spending",
-      "amount": 216
+      "amount": 198
      },
      {
       "label": "Gas",
@@ -1821,13 +1838,13 @@
     "period_start": "2026-12-04",
     "period_end": "2026-12-17",
     "payday": "2026-12-18",
-    "opening": 449.39,
+    "opening": 310.37,
     "income": 2180.4,
     "bills": 1124.08,
     "extra": 772.0,
-    "low_point": 733.71,
+    "low_point": 594.69,
     "low_on": "2026-12-17",
-    "closing": 733.71,
+    "closing": 594.69,
     "below_bar": false,
     "bar": 250,
     "extra_items": [
@@ -1853,13 +1870,13 @@
     "period_start": "2026-12-18",
     "period_end": "2026-12-31",
     "payday": "2027-01-01",
-    "opening": 733.71,
+    "opening": 594.69,
     "income": 2180.4,
     "bills": 203.74,
     "extra": 772.0,
-    "low_point": 1938.37,
+    "low_point": 1799.35,
     "low_on": "2026-12-31",
-    "closing": 1938.37,
+    "closing": 1799.35,
     "below_bar": false,
     "bar": 250,
     "extra_items": [
@@ -1882,7 +1899,7 @@
     ]
    }
   ],
-  "left_to_spend": 436.63,
+  "left_to_spend": 291.4,
   "budget": [
    {
     "slug": "groceries",
@@ -1909,8 +1926,8 @@
     "slug": "health",
     "name": "Health",
     "budget": 80,
-    "spent": 136.47,
-    "left": -56.47
+    "spent": 163.7,
+    "left": -83.7
    },
    {
     "slug": "home",
@@ -1937,8 +1954,8 @@
     "slug": "bills",
     "name": "Bills & Utilities",
     "budget": 700,
-    "spent": 1182.82,
-    "left": -482.82
+    "spent": 1300.82,
+    "left": -600.82
    },
    {
     "slug": "shop",
@@ -1972,8 +1989,8 @@
     "slug": "spending_total",
     "name": "All spending",
     "budget": 3790,
-    "spent": 3353.37,
-    "left": 436.63
+    "spent": 3498.6,
+    "left": 291.4
    }
   ],
   "earnings": {
@@ -2048,7 +2065,7 @@
    "cost_per_paycheck": 168,
    "employer_contribution": "80% of premium",
    "provider": "Health plan",
-   "enrollment_deadline": "2026-12-16",
+   "enrollment_deadline": "2026-12-17",
    "notes": "Open enrollment"
   },
   {
@@ -2058,7 +2075,7 @@
    "cost_per_paycheck": 22,
    "employer_contribution": "50%",
    "provider": "Dental plan",
-   "enrollment_deadline": "2026-12-16",
+   "enrollment_deadline": "2026-12-17",
    "notes": ""
   },
   {
@@ -2068,7 +2085,7 @@
    "cost_per_paycheck": 0,
    "employer_contribution": "15% discount",
    "provider": "",
-   "enrollment_deadline": "2026-12-31",
+   "enrollment_deadline": "2027-01-01",
    "notes": ""
   }
  ],
@@ -2152,19 +2169,19 @@
    "GLD": 0.1,
    "CASH": 0.1
   },
-  "updated": "2026-11-20T14:45:00-07:00",
-  "day": "2026-11-20"
+  "updated": "2026-11-21T14:45:00-07:00",
+  "day": "2026-11-21"
  },
  "business": {
   "company": "Carter Studio LLC",
-  "as_of": "2026-11-21T06:00:00-07:00",
+  "as_of": "2026-11-22T06:00:00-07:00",
   "expense_total": 2340.55,
   "expenses": [
    {
     "account": "6100 - Software - CS",
     "debit": 1188.0,
     "credit": 0.0,
-    "last": "2026-11-12",
+    "last": "2026-11-13",
     "net": 1188.0,
     "number": "6100",
     "name": "Software",
@@ -2174,7 +2191,7 @@
     "account": "6200 - Equipment - CS",
     "debit": 899.0,
     "credit": 0.0,
-    "last": "2026-11-12",
+    "last": "2026-11-13",
     "net": 899.0,
     "number": "6200",
     "name": "Equipment",
@@ -2184,7 +2201,7 @@
     "account": "6300 - Phone and internet - CS",
     "debit": 253.55,
     "credit": 0.0,
-    "last": "2026-11-12",
+    "last": "2026-11-13",
     "net": 253.55,
     "number": "6300",
     "name": "Phone and internet",

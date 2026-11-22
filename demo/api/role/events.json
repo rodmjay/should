@@ -13,7 +13,7 @@
  "items": [
   {
    "text": "Leo's party: bounce house deposit due in 5 days",
-   "when": "2026-11-26",
+   "when": "2026-11-27",
    "level": "watch",
    "link": "/next/projects"
   }
@@ -22,7 +22,7 @@
  "watch": [
   {
    "text": "Leo's party: bounce house deposit due in 5 days",
-   "when": "2026-11-26",
+   "when": "2026-11-27",
    "level": "watch",
    "link": "/next/projects"
   }
@@ -37,7 +37,7 @@
     "Phone"
    ],
    "flagged": false,
-   "due": "2026-11-25",
+   "due": "2026-11-26",
    "days_left": 4,
    "overdue": false,
    "duration_min": 5,
@@ -52,7 +52,7 @@
     "Money"
    ],
    "flagged": false,
-   "due": "2026-11-26",
+   "due": "2026-11-27",
    "days_left": 5,
    "overdue": false,
    "duration_min": 10,
@@ -62,8 +62,8 @@
  "routines": [],
  "report": {
   "latest": {
-   "path": "events/reports/2026-11-20.md",
-   "date": "2026-11-20",
+   "path": "events/reports/2026-11-21.md",
+   "date": "2026-11-21",
    "summary": "Leo's party: 9 of 14 RSVPs in; the cake is ordered.",
    "html": "<p>Leo's party: 9 of 14 RSVPs in; the cake is ordered.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
   },

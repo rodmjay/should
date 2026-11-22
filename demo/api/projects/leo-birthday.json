@@ -12,12 +12,12 @@
   "todoist_section_id": null,
   "todoist_task_id": null,
   "ref": {},
-  "started_on": "2026-11-09",
+  "started_on": "2026-11-10",
   "target_date": null,
   "done_on": null,
   "sort": 0,
   "notes": "Cake ordered. Waiting on three RSVPs.",
-  "updated_at": "2026-11-20T09:00:00-07:00",
+  "updated_at": "2026-11-21T09:00:00-07:00",
   "tasks": [
    {
     "id": "t8128",
@@ -28,7 +28,7 @@
      "Money"
     ],
     "flagged": false,
-    "due": "2026-11-26",
+    "due": "2026-11-27",
     "days_left": 5,
     "overdue": false,
     "duration_min": 10,
@@ -39,19 +39,19 @@
   "done": [
    {
     "content": "Pick the date",
-    "completed_at": "2026-11-19"
+    "completed_at": "2026-11-20"
    },
    {
     "content": "Send invites",
-    "completed_at": "2026-11-16"
+    "completed_at": "2026-11-17"
    },
    {
     "content": "Order the cake",
-    "completed_at": "2026-11-13"
+    "completed_at": "2026-11-14"
    },
    {
     "content": "Plan the menu",
-    "completed_at": "2026-11-10"
+    "completed_at": "2026-11-11"
    },
    {
     "content": "Book the yard games",
@@ -60,7 +60,7 @@
   ],
   "next": {
    "content": "Pay the $120 bounce house deposit for Leo's party",
-   "due": "2026-11-26"
+   "due": "2026-11-27"
   },
   "flags": [],
   "progress": {
@@ -73,7 +73,7 @@
     "id": "w1",
     "waiting_on": "Owen Brooks",
     "item": "RSVP for his two kids",
-    "check_on": "2026-11-24"
+    "check_on": "2026-11-25"
    }
   ],
   "goal": {
@@ -84,7 +84,7 @@
   "section": "Leo's party",
   "owner_name": "Event Planner",
   "when": "2026-12-12",
-  "days_left": 21,
+  "days_left": 20,
   "trip": null
  },
  "tasks_error": null

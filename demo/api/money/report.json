@@ -5,183 +5,177 @@
   "next_payday": "2026-12-04",
   "points": [
    {
-    "day": "2026-11-22",
-    "balance": 2104.39,
-    "out": 136.0,
-    "income": 0.0
-   },
-   {
     "day": "2026-11-23",
-    "balance": 2086.39,
+    "balance": 1947.37,
     "out": 18.0,
     "income": 0.0
    },
    {
     "day": "2026-11-24",
-    "balance": 2068.39,
+    "balance": 1929.37,
     "out": 18.0,
     "income": 0.0
    },
    {
     "day": "2026-11-25",
-    "balance": 2005.39,
+    "balance": 1866.37,
     "out": 63.0,
     "income": 0.0
    },
    {
     "day": "2026-11-26",
-    "balance": 1987.39,
+    "balance": 1848.37,
     "out": 18.0,
     "income": 0.0
    },
    {
     "day": "2026-11-27",
-    "balance": 1969.39,
+    "balance": 1830.37,
     "out": 18.0,
     "income": 0.0
    },
    {
     "day": "2026-11-28",
-    "balance": 1811.39,
+    "balance": 1672.37,
     "out": 158.0,
     "income": 0.0
    },
    {
     "day": "2026-11-29",
-    "balance": 1793.39,
+    "balance": 1654.37,
     "out": 18.0,
     "income": 0.0
    },
    {
     "day": "2026-11-30",
-    "balance": 1775.39,
+    "balance": 1636.37,
     "out": 18.0,
     "income": 0.0
    },
    {
     "day": "2026-12-01",
-    "balance": 562.39,
+    "balance": 423.37,
     "out": 1213.0,
     "income": 0.0
    },
    {
     "day": "2026-12-02",
-    "balance": 499.39,
+    "balance": 360.37,
     "out": 63.0,
     "income": 0.0
    },
    {
     "day": "2026-12-03",
-    "balance": 449.39,
+    "balance": 310.37,
     "out": 50.0,
     "income": 0.0
    },
    {
     "day": "2026-12-04",
-    "balance": 2349.39,
+    "balance": 2210.37,
     "out": 280.4,
     "income": 2180.4
    },
    {
     "day": "2026-12-05",
-    "balance": 2191.39,
+    "balance": 2052.37,
     "out": 158.0,
     "income": 0.0
    },
    {
     "day": "2026-12-06",
-    "balance": 2173.39,
+    "balance": 2034.37,
     "out": 18.0,
     "income": 0.0
    },
    {
     "day": "2026-12-07",
-    "balance": 2139.9,
+    "balance": 2000.88,
     "out": 33.49,
     "income": 0.0
    },
    {
     "day": "2026-12-08",
-    "balance": 1941.9,
+    "balance": 1802.88,
     "out": 198.0,
     "income": 0.0
    },
    {
     "day": "2026-12-09",
-    "balance": 1813.9,
+    "balance": 1674.88,
     "out": 128.0,
     "income": 0.0
    },
    {
     "day": "2026-12-10",
-    "balance": 1585.9,
+    "balance": 1446.88,
     "out": 228.0,
     "income": 0.0
    },
    {
     "day": "2026-12-11",
-    "balance": 1567.9,
+    "balance": 1428.88,
     "out": 18.0,
     "income": 0.0
    },
    {
     "day": "2026-12-12",
-    "balance": 1280.7,
+    "balance": 1141.68,
     "out": 287.2,
     "income": 0.0
    },
    {
     "day": "2026-12-13",
-    "balance": 1262.7,
+    "balance": 1123.68,
     "out": 18.0,
     "income": 0.0
    },
    {
     "day": "2026-12-14",
-    "balance": 1241.71,
+    "balance": 1102.69,
     "out": 20.99,
     "income": 0.0
    },
    {
     "day": "2026-12-15",
-    "balance": 814.71,
+    "balance": 675.69,
     "out": 427.0,
     "income": 0.0
    },
    {
     "day": "2026-12-16",
-    "balance": 751.71,
+    "balance": 612.69,
     "out": 63.0,
     "income": 0.0
    },
    {
     "day": "2026-12-17",
-    "balance": 733.71,
+    "balance": 594.69,
     "out": 18.0,
     "income": 0.0
    },
    {
     "day": "2026-12-18",
-    "balance": 2684.36,
+    "balance": 2545.34,
     "out": 229.75,
     "income": 2180.4
    }
   ],
   "periods": [
    {
-    "opening": 2240.39,
+    "opening": 1965.37,
     "bar": 250
    }
   ]
  },
  "forecast_error": null,
- "alert_as_of": "2026-11-21",
+ "alert_as_of": "2026-11-22",
  "actions": [
   {
    "rank": 1,
    "action": "Cancel the StreamBox trial before it renews",
    "effect_usd": 11.99,
-   "by_date": "2026-11-27"
+   "by_date": "2026-11-28"
   },
   {
    "rank": 2,
@@ -190,8 +184,8 @@
    "by_date": "2026-12-04"
   }
  ],
- "as_of": "2026-11-21T06:15:00-07:00",
- "left_to_spend": 436.63,
+ "as_of": "2026-11-22T06:15:00-07:00",
+ "left_to_spend": 291.4,
  "earnings": {
   "budget": 4360,
   "actual": 4360.8
@@ -222,8 +216,8 @@
    "slug": "health",
    "name": "Health",
    "budget": 80,
-   "spent": 136.47,
-   "left": -56.47
+   "spent": 163.7,
+   "left": -83.7
   },
   {
    "slug": "home",
@@ -250,8 +244,8 @@
    "slug": "bills",
    "name": "Bills & Utilities",
    "budget": 700,
-   "spent": 1182.82,
-   "left": -482.82
+   "spent": 1300.82,
+   "left": -600.82
   },
   {
    "slug": "shop",
@@ -285,8 +279,8 @@
    "slug": "spending_total",
    "name": "All spending",
    "budget": 3790,
-   "spent": 3353.37,
-   "left": 436.63
+   "spent": 3498.6,
+   "left": 291.4
   }
  ],
  "savings": 300

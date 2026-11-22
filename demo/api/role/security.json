@@ -90,8 +90,8 @@
  ],
  "report": {
   "latest": {
-   "path": "security/reports/2026-11-20.md",
-   "date": "2026-11-20",
+   "path": "security/reports/2026-11-21.md",
+   "date": "2026-11-21",
    "summary": "No new breaches; five accounts still need two-step sign-in.",
    "html": "<p>No new breaches; five accounts still need two-step sign-in.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
   },

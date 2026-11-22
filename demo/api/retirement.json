@@ -3,73 +3,73 @@
  "summit": {
   "age_projected": {
    "value": 69.0,
-   "as_of": "2026-11-09",
+   "as_of": "2026-11-10",
    "source": "Plan provider projection",
    "notes": ""
   },
   "goal_pct": {
    "value": 71.0,
-   "as_of": "2026-11-09",
+   "as_of": "2026-11-10",
    "source": "Plan provider projection",
    "notes": ""
   },
   "income_savings": {
    "value": 1420.0,
-   "as_of": "2026-11-09",
+   "as_of": "2026-11-10",
    "source": "Plan provider projection",
    "notes": ""
   },
   "income_employer": {
    "value": 610.0,
-   "as_of": "2026-11-09",
+   "as_of": "2026-11-10",
    "source": "Plan provider projection",
    "notes": ""
   },
   "income_ss": {
    "value": 2380.0,
-   "as_of": "2026-11-09",
+   "as_of": "2026-11-10",
    "source": "Plan provider projection",
    "notes": ""
   },
   "income_other": {
    "value": 150.0,
-   "as_of": "2026-11-09",
+   "as_of": "2026-11-10",
    "source": "Plan provider projection",
    "notes": ""
   },
   "income_gap": {
    "value": 1880.0,
-   "as_of": "2026-11-09",
+   "as_of": "2026-11-10",
    "source": "Plan provider projection",
    "notes": ""
   },
   "goal_income_monthly": {
    "value": 6440.0,
-   "as_of": "2026-11-09",
+   "as_of": "2026-11-10",
    "source": "Plan provider projection",
    "notes": ""
   },
   "deferral_pct": {
    "value": 6.0,
-   "as_of": "2026-11-09",
+   "as_of": "2026-11-10",
    "source": "Plan provider projection",
    "notes": ""
   },
   "next_step": {
    "value": 7.0,
-   "as_of": "2026-11-09",
+   "as_of": "2026-11-10",
    "source": "Plan provider projection",
    "notes": "Raise by 1% each January"
   },
   "salary": {
    "value": 81900.0,
-   "as_of": "2026-11-09",
+   "as_of": "2026-11-10",
    "source": "Plan provider projection",
    "notes": ""
   },
   "age_at_lifestyle": {
    "value": 72.0,
-   "as_of": "2026-11-09",
+   "as_of": "2026-11-10",
    "source": "Plan provider projection",
    "notes": ""
   }
@@ -82,7 +82,7 @@
    "last4": null,
    "status": "active",
    "balance": 23480.0,
-   "as_of": "2026-11-20",
+   "as_of": "2026-11-21",
    "source": "statement"
   },
   {
@@ -92,7 +92,7 @@
    "last4": null,
    "status": "active",
    "balance": 3120.0,
-   "as_of": "2026-11-20",
+   "as_of": "2026-11-21",
    "source": "statement"
   },
   {
@@ -102,7 +102,7 @@
    "last4": null,
    "status": "active",
    "balance": 640.0,
-   "as_of": "2026-11-20",
+   "as_of": "2026-11-21",
    "source": "statement"
   },
   {
@@ -112,7 +112,7 @@
    "last4": null,
    "status": "active",
    "balance": 10412.33,
-   "as_of": "2026-11-20",
+   "as_of": "2026-11-21",
    "source": "statement"
   }
  ],
@@ -121,11 +121,11 @@
    "key": "emergency",
    "name": "Emergency fund",
    "target_usd": 6000,
-   "target_date": "2027-10-17",
-   "start_date": "2026-05-25",
+   "target_date": "2027-10-18",
+   "start_date": "2026-05-26",
    "monthly_needed_usd": 300,
    "saved_usd": 1850,
-   "saved_as_of": "2026-11-21",
+   "saved_as_of": "2026-11-22",
    "status": "on_track"
   }
  ],
@@ -178,7 +178,7 @@
     "trigger": "always",
     "status": "doing",
     "who": "Sam",
-    "next_review": "2026-12-21"
+    "next_review": "2026-12-22"
    },
    {
     "n": "2",
@@ -187,7 +187,7 @@
     "trigger": "January",
     "status": "ready",
     "who": "Sam",
-    "next_review": "2027-01-05"
+    "next_review": "2027-01-06"
    },
    {
     "n": "3",
@@ -196,7 +196,7 @@
     "trigger": "after the emergency fund",
     "status": "ready",
     "who": "Financial Advisor",
-    "next_review": "2027-01-20"
+    "next_review": "2027-01-21"
    },
    {
     "n": "4",
@@ -205,7 +205,7 @@
     "trigger": "balance over $1,000",
     "status": "ready",
     "who": "Financial Advisor",
-    "next_review": "2027-02-04"
+    "next_review": "2027-02-05"
    },
    {
     "n": "5",
@@ -214,7 +214,7 @@
     "trigger": "ongoing",
     "status": "doing",
     "who": "Financial Advisor",
-    "next_review": "2027-02-19"
+    "next_review": "2027-02-20"
    },
    {
     "n": "6",
@@ -223,7 +223,7 @@
     "trigger": "now",
     "status": "doing",
     "who": "Sam",
-    "next_review": "2027-03-06"
+    "next_review": "2027-03-07"
    }
   ],
   "counts": {
@@ -233,7 +233,7 @@
    "paused": 0
   },
   "last_change": {
-   "date": "2026-11-12",
+   "date": "2026-11-13",
    "what": "Moved the 401(k) to a target-date fund."
   }
  },

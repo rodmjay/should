@@ -19,28 +19,28 @@
  "items": [
   {
    "text": "Money: approve the $45 Summit Card payment for payday",
-   "when": "2026-11-21",
+   "when": "2026-11-23",
    "level": "act",
    "link": "/s/money#bills",
    "desk": "bookkeeper"
   },
   {
    "text": "Sends to Nora: the weekend plan text (draft ready)",
-   "when": "2026-11-21",
+   "when": "2026-11-23",
    "level": "act",
    "link": "/next/r/assistant#attention",
    "desk": "assistant"
   },
   {
    "text": "Kitchen faucet: landlord said this week",
-   "when": "2026-11-24",
+   "when": "2026-11-25",
    "level": "watch",
    "link": "/s/home",
    "desk": "home-manager"
   },
   {
    "text": "Registration renews in 9 days",
-   "when": "2026-11-30",
+   "when": "2026-12-01",
    "level": "watch",
    "link": "/s/home",
    "desk": "home-manager"
@@ -49,14 +49,14 @@
  "needs": [
   {
    "text": "Money: approve the $45 Summit Card payment for payday",
-   "when": "2026-11-21",
+   "when": "2026-11-23",
    "level": "act",
    "link": "/s/money#bills",
    "wait": true
   },
   {
    "text": "Sends to Nora: the weekend plan text (draft ready)",
-   "when": "2026-11-21",
+   "when": "2026-11-23",
    "level": "act",
    "link": "/next/r/assistant#attention",
    "wait": true
@@ -65,14 +65,14 @@
  "watch": [
   {
    "text": "Kitchen faucet: landlord said this week",
-   "when": "2026-11-24",
+   "when": "2026-11-25",
    "level": "watch",
    "link": "/s/home",
    "desk": "home-manager"
   },
   {
    "text": "Registration renews in 9 days",
-   "when": "2026-11-30",
+   "when": "2026-12-01",
    "level": "watch",
    "link": "/s/home",
    "desk": "home-manager"
@@ -89,7 +89,7 @@
    ],
    "flagged": true,
    "due": "2026-12-04",
-   "days_left": 13,
+   "days_left": 12,
    "overdue": false,
    "duration_min": 5,
    "view": null
@@ -120,7 +120,7 @@
    ],
    "flagged": false,
    "due": "2026-12-04",
-   "days_left": 13,
+   "days_left": 12,
    "overdue": false,
    "duration_min": 5,
    "view": null
@@ -135,7 +135,7 @@
     "Computer"
    ],
    "flagged": false,
-   "due": "2026-12-16",
+   "due": "2026-12-17",
    "days_left": 25,
    "overdue": false,
    "duration_min": 10,
@@ -196,7 +196,7 @@
     "Money"
    ],
    "flagged": false,
-   "due": "2026-11-30",
+   "due": "2026-12-01",
    "days_left": 9,
    "overdue": false,
    "duration_min": 10,
@@ -256,7 +256,7 @@
     "Errands"
    ],
    "flagged": false,
-   "due": "2026-11-23",
+   "due": "2026-11-24",
    "days_left": 2,
    "overdue": false,
    "duration_min": 15,
@@ -271,8 +271,8 @@
     "Home"
    ],
    "flagged": false,
-   "due": "2026-11-21",
-   "days_left": 0,
+   "due": "2026-11-23",
+   "days_left": 1,
    "overdue": false,
    "duration_min": 45,
    "view": "recipe"
@@ -287,7 +287,7 @@
    ],
    "flagged": false,
    "due": "2026-11-23",
-   "days_left": 2,
+   "days_left": 1,
    "overdue": false,
    "duration_min": 50,
    "view": null
@@ -303,7 +303,7 @@
    ],
    "flagged": false,
    "due": "2026-11-23",
-   "days_left": 2,
+   "days_left": 1,
    "overdue": false,
    "duration_min": 5,
    "view": null
@@ -319,7 +319,7 @@
    ],
    "flagged": true,
    "due": "2026-11-23",
-   "days_left": 2,
+   "days_left": 1,
    "overdue": false,
    "duration_min": 10,
    "view": null
@@ -333,7 +333,7 @@
     "Computer"
    ],
    "flagged": false,
-   "due": "2026-11-27",
+   "due": "2026-11-28",
    "days_left": 6,
    "overdue": false,
    "duration_min": 5,
@@ -379,7 +379,7 @@
    ],
    "flagged": false,
    "due": "2026-11-23",
-   "days_left": 2,
+   "days_left": 1,
    "overdue": false,
    "duration_min": 5,
    "view": null
@@ -394,7 +394,7 @@
     "Money"
    ],
    "flagged": true,
-   "due": "2026-12-03",
+   "due": "2026-12-04",
    "days_left": 12,
    "overdue": false,
    "duration_min": 10,
@@ -409,7 +409,7 @@
     "Computer"
    ],
    "flagged": false,
-   "due": "2026-11-23",
+   "due": "2026-11-24",
    "days_left": 2,
    "overdue": false,
    "duration_min": 5,
@@ -440,7 +440,7 @@
    ],
    "flagged": false,
    "due": "2026-11-23",
-   "days_left": 2,
+   "days_left": 1,
    "overdue": false,
    "duration_min": 10,
    "view": null
@@ -470,7 +470,7 @@
    ],
    "flagged": false,
    "due": "2026-11-23",
-   "days_left": 2,
+   "days_left": 1,
    "overdue": false,
    "duration_min": 5,
    "view": null
@@ -499,7 +499,7 @@
     "Phone"
    ],
    "flagged": false,
-   "due": "2026-11-25",
+   "due": "2026-11-26",
    "days_left": 4,
    "overdue": false,
    "duration_min": 5,
@@ -514,7 +514,7 @@
     "Money"
    ],
    "flagged": false,
-   "due": "2026-11-26",
+   "due": "2026-11-27",
    "days_left": 5,
    "overdue": false,
    "duration_min": 10,
@@ -529,8 +529,8 @@
     "Home"
    ],
    "flagged": false,
-   "due": "2026-11-28",
-   "days_left": 7,
+   "due": "2026-11-30",
+   "days_left": 8,
    "overdue": false,
    "duration_min": 20,
    "view": null
@@ -559,7 +559,7 @@
     "Errands"
    ],
    "flagged": false,
-   "due": "2026-11-19",
+   "due": "2026-11-20",
    "days_left": -2,
    "overdue": true,
    "duration_min": 15,
@@ -617,7 +617,7 @@
     "Home"
    ],
    "flagged": false,
-   "due": "2026-11-24",
+   "due": "2026-11-25",
    "days_left": 3,
    "overdue": false,
    "duration_min": 10,
@@ -647,7 +647,7 @@
     "Home"
    ],
    "flagged": false,
-   "due": "2026-12-04",
+   "due": "2026-12-05",
    "days_left": 13,
    "overdue": false,
    "duration_min": 60,
@@ -662,7 +662,7 @@
     "Home"
    ],
    "flagged": false,
-   "due": "2026-11-27",
+   "due": "2026-11-28",
    "days_left": 6,
    "overdue": false,
    "duration_min": 30,
@@ -677,7 +677,7 @@
     "Home"
    ],
    "flagged": false,
-   "due": "2026-12-11",
+   "due": "2026-12-12",
    "days_left": 20,
    "overdue": false,
    "duration_min": 10,
@@ -693,7 +693,7 @@
    ],
    "flagged": false,
    "due": "2026-11-30",
-   "days_left": 9,
+   "days_left": 8,
    "overdue": false,
    "duration_min": 30,
    "view": null
@@ -750,7 +750,7 @@
     "Computer"
    ],
    "flagged": false,
-   "due": "2026-11-23",
+   "due": "2026-11-24",
    "days_left": 2,
    "overdue": false,
    "duration_min": 5,
@@ -781,7 +781,7 @@
     "Money"
    ],
    "flagged": false,
-   "due": "2026-12-21",
+   "due": "2026-12-22",
    "days_left": 30,
    "overdue": false,
    "duration_min": 10,
@@ -915,25 +915,25 @@
      "items": [
       {
        "text": "Money: approve the $45 Summit Card payment for payday",
-       "when": "2026-11-21",
+       "when": "2026-11-23",
        "level": "act",
        "link": "/s/money#bills"
       },
       {
        "text": "Sends to Nora: the weekend plan text (draft ready)",
-       "when": "2026-11-21",
+       "when": "2026-11-23",
        "level": "act",
        "link": "/next/r/assistant#attention"
       },
       {
        "text": "Kitchen faucet: landlord said this week",
-       "when": "2026-11-24",
+       "when": "2026-11-25",
        "level": "watch",
        "link": "/s/home"
       },
       {
        "text": "Registration renews in 9 days",
-       "when": "2026-11-30",
+       "when": "2026-12-01",
        "level": "watch",
        "link": "/s/home"
       }
@@ -949,7 +949,7 @@
        ],
        "flagged": true,
        "due": "2026-12-04",
-       "days_left": 13,
+       "days_left": 12,
        "overdue": false,
        "duration_min": 5,
        "view": null
@@ -980,7 +980,7 @@
        ],
        "flagged": false,
        "due": "2026-12-04",
-       "days_left": 13,
+       "days_left": 12,
        "overdue": false,
        "duration_min": 5,
        "view": null
@@ -995,7 +995,7 @@
         "Computer"
        ],
        "flagged": false,
-       "due": "2026-12-16",
+       "due": "2026-12-17",
        "days_left": 25,
        "overdue": false,
        "duration_min": 10,
@@ -1056,7 +1056,7 @@
         "Money"
        ],
        "flagged": false,
-       "due": "2026-11-30",
+       "due": "2026-12-01",
        "days_left": 9,
        "overdue": false,
        "duration_min": 10,
@@ -1116,7 +1116,7 @@
         "Errands"
        ],
        "flagged": false,
-       "due": "2026-11-23",
+       "due": "2026-11-24",
        "days_left": 2,
        "overdue": false,
        "duration_min": 15,
@@ -1131,8 +1131,8 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-11-21",
-       "days_left": 0,
+       "due": "2026-11-23",
+       "days_left": 1,
        "overdue": false,
        "duration_min": 45,
        "view": "recipe"
@@ -1147,7 +1147,7 @@
        ],
        "flagged": false,
        "due": "2026-11-23",
-       "days_left": 2,
+       "days_left": 1,
        "overdue": false,
        "duration_min": 50,
        "view": null
@@ -1163,7 +1163,7 @@
        ],
        "flagged": false,
        "due": "2026-11-23",
-       "days_left": 2,
+       "days_left": 1,
        "overdue": false,
        "duration_min": 5,
        "view": null
@@ -1179,7 +1179,7 @@
        ],
        "flagged": true,
        "due": "2026-11-23",
-       "days_left": 2,
+       "days_left": 1,
        "overdue": false,
        "duration_min": 10,
        "view": null
@@ -1193,7 +1193,7 @@
         "Computer"
        ],
        "flagged": false,
-       "due": "2026-11-27",
+       "due": "2026-11-28",
        "days_left": 6,
        "overdue": false,
        "duration_min": 5,
@@ -1239,7 +1239,7 @@
        ],
        "flagged": false,
        "due": "2026-11-23",
-       "days_left": 2,
+       "days_left": 1,
        "overdue": false,
        "duration_min": 5,
        "view": null
@@ -1254,7 +1254,7 @@
         "Money"
        ],
        "flagged": true,
-       "due": "2026-12-03",
+       "due": "2026-12-04",
        "days_left": 12,
        "overdue": false,
        "duration_min": 10,
@@ -1269,7 +1269,7 @@
         "Computer"
        ],
        "flagged": false,
-       "due": "2026-11-23",
+       "due": "2026-11-24",
        "days_left": 2,
        "overdue": false,
        "duration_min": 5,
@@ -1300,7 +1300,7 @@
        ],
        "flagged": false,
        "due": "2026-11-23",
-       "days_left": 2,
+       "days_left": 1,
        "overdue": false,
        "duration_min": 10,
        "view": null
@@ -1330,7 +1330,7 @@
        ],
        "flagged": false,
        "due": "2026-11-23",
-       "days_left": 2,
+       "days_left": 1,
        "overdue": false,
        "duration_min": 5,
        "view": null
@@ -1359,7 +1359,7 @@
         "Phone"
        ],
        "flagged": false,
-       "due": "2026-11-25",
+       "due": "2026-11-26",
        "days_left": 4,
        "overdue": false,
        "duration_min": 5,
@@ -1374,7 +1374,7 @@
         "Money"
        ],
        "flagged": false,
-       "due": "2026-11-26",
+       "due": "2026-11-27",
        "days_left": 5,
        "overdue": false,
        "duration_min": 10,
@@ -1389,8 +1389,8 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-11-28",
-       "days_left": 7,
+       "due": "2026-11-30",
+       "days_left": 8,
        "overdue": false,
        "duration_min": 20,
        "view": null
@@ -1419,7 +1419,7 @@
         "Errands"
        ],
        "flagged": false,
-       "due": "2026-11-19",
+       "due": "2026-11-20",
        "days_left": -2,
        "overdue": true,
        "duration_min": 15,
@@ -1477,7 +1477,7 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-11-24",
+       "due": "2026-11-25",
        "days_left": 3,
        "overdue": false,
        "duration_min": 10,
@@ -1507,7 +1507,7 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-12-04",
+       "due": "2026-12-05",
        "days_left": 13,
        "overdue": false,
        "duration_min": 60,
@@ -1522,7 +1522,7 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-11-27",
+       "due": "2026-11-28",
        "days_left": 6,
        "overdue": false,
        "duration_min": 30,
@@ -1537,7 +1537,7 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-12-11",
+       "due": "2026-12-12",
        "days_left": 20,
        "overdue": false,
        "duration_min": 10,
@@ -1553,7 +1553,7 @@
        ],
        "flagged": false,
        "due": "2026-11-30",
-       "days_left": 9,
+       "days_left": 8,
        "overdue": false,
        "duration_min": 30,
        "view": null
@@ -1610,7 +1610,7 @@
         "Computer"
        ],
        "flagged": false,
-       "due": "2026-11-23",
+       "due": "2026-11-24",
        "days_left": 2,
        "overdue": false,
        "duration_min": 5,
@@ -1641,7 +1641,7 @@
         "Money"
        ],
        "flagged": false,
-       "due": "2026-12-21",
+       "due": "2026-12-22",
        "days_left": 30,
        "overdue": false,
        "duration_min": 10,
@@ -1650,15 +1650,15 @@
      ]
     },
     "brief": {
-     "date": "2026-11-21",
-     "generated_at": "2026-11-21T06:30:00-07:00",
-     "headline": "A calm Saturday. Payday is 12/4 and every bill is covered. Two quick asks today: the Summit Card payment and Maya's gift.",
+     "date": "2026-11-22",
+     "generated_at": "2026-11-22T06:30:00-07:00",
+     "headline": "A calm Sunday. Payday is 12/4 and every bill is covered. Two quick asks today: the Summit Card payment and Maya's gift.",
      "today": [
       {
        "title": "Order Maya's birthday gift",
        "why": "Arrives in 2 days; her birthday is in 4.",
        "domain": "family",
-       "due": "2026-11-21",
+       "due": "2026-11-22",
        "urgency": "act",
        "done": false
       },
@@ -1666,7 +1666,7 @@
        "title": "Call First Mesa about the overdraft fee",
        "why": "A one-time refund is likely if you ask.",
        "domain": "money",
-       "due": "2026-11-21",
+       "due": "2026-11-22",
        "urgency": "watch",
        "done": false
       },
@@ -1674,7 +1674,7 @@
        "title": "Sign Maya's field trip slip",
        "why": "Due at school tomorrow.",
        "domain": "family",
-       "due": "2026-11-22",
+       "due": "2026-11-23",
        "urgency": "watch",
        "done": true
       },
@@ -1682,7 +1682,7 @@
        "title": "Workout: upper body",
        "why": "Keeps the week at 4 sessions.",
        "domain": "health",
-       "due": "2026-11-21",
+       "due": "2026-11-22",
        "urgency": "ok",
        "done": false
       },
@@ -1690,7 +1690,7 @@
        "title": "Reply to Alex at Northgate Systems",
        "why": "Draft is ready; it takes two minutes.",
        "domain": "work",
-       "due": "2026-11-21",
+       "due": "2026-11-22",
        "urgency": "ok",
        "done": true
       }
@@ -1700,49 +1700,49 @@
        "key": "money",
        "name": "Money",
        "status": "ok",
-       "summary": "Checking $2,240.39; low point $449.39 before payday 12/4, above the $250 bar.",
+       "summary": "Checking $1,965.37; low point $310.37 before payday 12/4, above the $250 bar.",
        "metrics": [
         {
          "label": "Checking",
-         "value": "$2,240.39",
+         "value": "$1,965.37",
          "note": "this morning"
         },
         {
          "label": "Low point",
-         "value": "$449.39",
+         "value": "$310.37",
          "note": "12/3"
         },
         {
          "label": "Bills, 14 days",
-         "value": "$1,471.40",
+         "value": "$1,457.40",
          "note": "unpaid"
         }
        ],
        "bullets": [
-        "Checking $2,240.39.",
+        "Checking $1,965.37.",
         "Nothing needs a decision today.",
         "Owner role is on it.",
         "Details on the desk."
        ],
        "series": [
         [
-         "2026-11-17",
+         "2026-11-18",
          "32.5"
         ],
         [
-         "2026-11-18",
+         "2026-11-19",
          "73.1"
         ],
         [
-         "2026-11-19",
+         "2026-11-20",
          "16.6"
         ],
         [
-         "2026-11-20",
+         "2026-11-21",
          "15.9"
         ],
         [
-         "2026-11-21",
+         "2026-11-22",
          "86.9"
         ]
        ]
@@ -1777,23 +1777,23 @@
        ],
        "series": [
         [
-         "2026-11-17",
+         "2026-11-18",
          "22.8"
         ],
         [
-         "2026-11-18",
+         "2026-11-19",
          "38.0"
         ],
         [
-         "2026-11-19",
+         "2026-11-20",
          "23.1"
         ],
         [
-         "2026-11-20",
+         "2026-11-21",
          "39.1"
         ],
         [
-         "2026-11-21",
+         "2026-11-22",
          "38.1"
         ]
        ]
@@ -1828,23 +1828,23 @@
        ],
        "series": [
         [
-         "2026-11-17",
+         "2026-11-18",
          "58.2"
         ],
         [
-         "2026-11-18",
+         "2026-11-19",
          "19.2"
         ],
         [
-         "2026-11-19",
+         "2026-11-20",
          "42.7"
         ],
         [
-         "2026-11-20",
+         "2026-11-21",
          "16.2"
         ],
         [
-         "2026-11-21",
+         "2026-11-22",
          "16.3"
         ]
        ]
@@ -1879,23 +1879,23 @@
        ],
        "series": [
         [
-         "2026-11-17",
+         "2026-11-18",
          "21.9"
         ],
         [
-         "2026-11-18",
+         "2026-11-19",
          "28.4"
         ],
         [
-         "2026-11-19",
+         "2026-11-20",
          "26.8"
         ],
         [
-         "2026-11-20",
+         "2026-11-21",
          "10.2"
         ],
         [
-         "2026-11-21",
+         "2026-11-22",
          "38.1"
         ]
        ]
@@ -1930,23 +1930,23 @@
        ],
        "series": [
         [
-         "2026-11-17",
+         "2026-11-18",
          "70.1"
         ],
         [
-         "2026-11-18",
+         "2026-11-19",
          "82.4"
         ],
         [
-         "2026-11-19",
+         "2026-11-20",
          "44.5"
         ],
         [
-         "2026-11-20",
+         "2026-11-21",
          "27.4"
         ],
         [
-         "2026-11-21",
+         "2026-11-22",
          "79.4"
         ]
        ]
@@ -1959,7 +1959,7 @@
        "metrics": [
         {
          "label": "Registration",
-         "value": "11/30",
+         "value": "12/1",
          "note": "$86"
         },
         {
@@ -1981,23 +1981,23 @@
        ],
        "series": [
         [
-         "2026-11-17",
+         "2026-11-18",
          "24.0"
         ],
         [
-         "2026-11-18",
+         "2026-11-19",
          "31.0"
         ],
         [
-         "2026-11-19",
+         "2026-11-20",
          "66.9"
         ],
         [
-         "2026-11-20",
+         "2026-11-21",
          "59.6"
         ],
         [
-         "2026-11-21",
+         "2026-11-22",
          "81.0"
         ]
        ]
@@ -2020,7 +2020,7 @@
         },
         {
          "label": "Date night",
-         "value": "11/29",
+         "value": "11/30",
          "note": "booked"
         }
        ],
@@ -2032,36 +2032,29 @@
        ],
        "series": [
         [
-         "2026-11-17",
+         "2026-11-18",
          "40.8"
         ],
         [
-         "2026-11-18",
+         "2026-11-19",
          "84.5"
         ],
         [
-         "2026-11-19",
+         "2026-11-20",
          "62.9"
         ],
         [
-         "2026-11-20",
+         "2026-11-21",
          "46.7"
         ],
         [
-         "2026-11-21",
+         "2026-11-22",
          "31.2"
         ]
        ]
       }
      ],
      "bills": [
-      {
-       "due": "2026-11-21",
-       "bill": "Renter's insurance",
-       "amount": "$14",
-       "note": "autopay",
-       "overdue": false
-      },
       {
        "due": "2026-11-22",
        "bill": "Peak Wireless, 3 lines",
@@ -2101,25 +2094,25 @@
      ],
      "open_loops": [
       {
-       "due": "2026-11-21",
+       "due": "2026-11-23",
        "domain": "money",
        "item": "Overdraft fee refund",
        "status": "open"
       },
       {
-       "due": "2026-11-23",
+       "due": "2026-11-24",
        "domain": "home",
        "item": "Kitchen faucet repair",
        "status": "waiting"
       },
       {
-       "due": "2026-11-25",
+       "due": "2026-11-26",
        "domain": "car",
        "item": "Registration renewal",
        "status": "open"
       },
       {
-       "due": "2026-11-27",
+       "due": "2026-11-28",
        "domain": "family",
        "item": "Leo's party bounce house",
        "status": "open"
@@ -2131,37 +2124,37 @@
        "status": "open"
       },
       {
-       "due": "2026-12-01",
+       "due": "2026-12-02",
        "domain": "credit",
        "item": "Collection dispute letter",
        "status": "waiting"
       },
       {
-       "due": "2026-12-03",
+       "due": "2026-12-04",
        "domain": "health",
        "item": "Leo's sports physical",
        "status": "open"
       },
       {
-       "due": "2026-12-05",
+       "due": "2026-12-07",
        "domain": "travel",
        "item": "Spring trip dates",
        "status": "open"
       },
       {
-       "due": "2026-12-07",
+       "due": "2026-12-08",
        "domain": "family",
        "item": "Holiday party RSVP",
        "status": "open"
       },
       {
-       "due": "2026-12-09",
+       "due": "2026-12-10",
        "domain": "home",
        "item": "Lease renewal",
        "status": "open"
       },
       {
-       "due": "2026-12-11",
+       "due": "2026-12-12",
        "domain": "pets",
        "item": "Vet visit",
        "status": "open"
@@ -2173,7 +2166,7 @@
        "status": "open"
       },
       {
-       "due": "2026-12-15",
+       "due": "2026-12-16",
        "domain": "taxes",
        "item": "Q4 estimate",
        "status": "open"
@@ -2191,80 +2184,58 @@
      "done_count": 2
     },
     "schedule": {
-     "date": "2026-11-21",
-     "generated_at": "2026-11-21T06:00:00-07:00",
+     "date": "2026-11-22",
+     "generated_at": "2026-11-22T06:00:00-07:00",
      "summary": "A light day built around family time.",
      "blocks": [
       {
-       "start": "07:00",
-       "end": "07:30",
-       "title": "Coffee and the weekly list",
-       "kind": "routine",
-       "source": "plan",
-       "todoist_id": "",
-       "note": "",
-       "calendar_event_id": "",
-       "done": true
-      },
-      {
        "start": "07:30",
        "end": "08:30",
-       "title": "Pancake breakfast",
+       "title": "Slow breakfast",
        "kind": "personal",
        "source": "calendar",
        "todoist_id": "",
        "note": "",
-       "calendar_event_id": "evt00015473",
+       "calendar_event_id": "evt00010810",
        "done": true
       },
       {
        "start": "08:30",
-       "end": "09:30",
-       "title": "Weekly review with Life Coach",
-       "kind": "routine",
+       "end": "10:00",
+       "title": "Open morning",
+       "kind": "buffer",
        "source": "plan",
        "todoist_id": "",
        "note": "",
        "calendar_event_id": "",
-       "done": true
+       "done": false
       },
       {
-       "start": "09:30",
-       "end": "11:30",
-       "title": "Family hike",
+       "start": "10:00",
+       "end": "12:00",
+       "title": "Family walk by the river",
        "kind": "personal",
        "source": "calendar",
        "todoist_id": "",
        "note": "",
-       "calendar_event_id": "evt00006459",
+       "calendar_event_id": "evt00028605",
        "done": false
       },
       {
-       "start": "11:30",
-       "end": "12:30",
-       "title": "Lunch",
+       "start": "12:00",
+       "end": "13:00",
+       "title": "Lunch with Grandpa Ray",
        "kind": "personal",
        "source": "calendar",
        "todoist_id": "",
        "note": "",
-       "calendar_event_id": "evt00001556",
+       "calendar_event_id": "evt00023396",
        "done": false
       },
       {
-       "start": "12:30",
-       "end": "13:30",
-       "title": "Replace the furnace filter",
-       "kind": "task",
-       "source": "todoist",
-       "todoist_id": "t8135",
-       "note": "",
-       "calendar_event_id": "",
-       "done": false
-      },
-      {
-       "start": "13:30",
+       "start": "13:00",
        "end": "15:00",
-       "title": "Open afternoon",
+       "title": "Rest",
        "kind": "buffer",
        "source": "plan",
        "todoist_id": "",
@@ -2274,57 +2245,57 @@
       },
       {
        "start": "15:00",
-       "end": "16:00",
-       "title": "Grocery pickup",
-       "kind": "task",
-       "source": "plan",
-       "todoist_id": "",
-       "note": "",
-       "calendar_event_id": "",
-       "done": false
-      },
-      {
-       "start": "16:00",
-       "end": "17:30",
-       "title": "Leo's game",
+       "end": "17:00",
+       "title": "Cook for the week",
        "kind": "personal",
        "source": "calendar",
        "todoist_id": "",
        "note": "",
-       "calendar_event_id": "evt00005022",
+       "calendar_event_id": "evt00014347",
        "done": false
       },
       {
        "start": "17:30",
        "end": "18:30",
-       "title": "Dinner",
+       "title": "Family dinner",
        "kind": "personal",
        "source": "calendar",
        "todoist_id": "",
        "note": "",
-       "calendar_event_id": "evt00002237",
+       "calendar_event_id": "evt00009250",
        "done": false
       },
       {
        "start": "18:30",
-       "end": "20:30",
-       "title": "Pizza and board games",
+       "end": "20:00",
+       "title": "Board games",
        "kind": "personal",
        "source": "calendar",
        "todoist_id": "",
        "note": "",
-       "calendar_event_id": "evt00021882",
+       "calendar_event_id": "evt00006480",
        "done": false
       },
       {
-       "start": "20:30",
-       "end": "22:00",
-       "title": "Movie",
+       "start": "20:00",
+       "end": "21:30",
+       "title": "Read",
        "kind": "personal",
        "source": "calendar",
        "todoist_id": "",
        "note": "",
-       "calendar_event_id": "evt00001578",
+       "calendar_event_id": "evt00000975",
+       "done": false
+      },
+      {
+       "start": "21:30",
+       "end": "22:00",
+       "title": "Wind down",
+       "kind": "routine",
+       "source": "plan",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "",
        "done": false
       }
      ],
@@ -2391,7 +2362,7 @@
         "Errands"
        ],
        "flagged": false,
-       "due": "2026-11-19",
+       "due": "2026-11-20",
        "days_left": -2,
        "overdue": true,
        "duration_min": 15,
@@ -2408,7 +2379,7 @@
         "Errands"
        ],
        "flagged": false,
-       "due": "2026-11-23",
+       "due": "2026-11-24",
        "days_left": 2,
        "overdue": false,
        "duration_min": 15,
@@ -2423,8 +2394,8 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-11-21",
-       "days_left": 0,
+       "due": "2026-11-23",
+       "days_left": 1,
        "overdue": false,
        "duration_min": 45,
        "view": "recipe"
@@ -2439,7 +2410,7 @@
        ],
        "flagged": false,
        "due": "2026-11-23",
-       "days_left": 2,
+       "days_left": 1,
        "overdue": false,
        "duration_min": 50,
        "view": null
@@ -2455,7 +2426,7 @@
        ],
        "flagged": false,
        "due": "2026-11-23",
-       "days_left": 2,
+       "days_left": 1,
        "overdue": false,
        "duration_min": 5,
        "view": null
@@ -2471,7 +2442,7 @@
        ],
        "flagged": true,
        "due": "2026-11-23",
-       "days_left": 2,
+       "days_left": 1,
        "overdue": false,
        "duration_min": 10,
        "view": null
@@ -2485,7 +2456,7 @@
         "Computer"
        ],
        "flagged": false,
-       "due": "2026-11-27",
+       "due": "2026-11-28",
        "days_left": 6,
        "overdue": false,
        "duration_min": 5,
@@ -2501,7 +2472,7 @@
        ],
        "flagged": false,
        "due": "2026-11-23",
-       "days_left": 2,
+       "days_left": 1,
        "overdue": false,
        "duration_min": 5,
        "view": null
@@ -2515,7 +2486,7 @@
         "Computer"
        ],
        "flagged": false,
-       "due": "2026-11-23",
+       "due": "2026-11-24",
        "days_left": 2,
        "overdue": false,
        "duration_min": 5,
@@ -2531,7 +2502,7 @@
        ],
        "flagged": false,
        "due": "2026-11-23",
-       "days_left": 2,
+       "days_left": 1,
        "overdue": false,
        "duration_min": 10,
        "view": null
@@ -2546,7 +2517,7 @@
        ],
        "flagged": false,
        "due": "2026-11-23",
-       "days_left": 2,
+       "days_left": 1,
        "overdue": false,
        "duration_min": 5,
        "view": null
@@ -2560,7 +2531,7 @@
         "Phone"
        ],
        "flagged": false,
-       "due": "2026-11-25",
+       "due": "2026-11-26",
        "days_left": 4,
        "overdue": false,
        "duration_min": 5,
@@ -2575,25 +2546,10 @@
         "Money"
        ],
        "flagged": false,
-       "due": "2026-11-26",
+       "due": "2026-11-27",
        "days_left": 5,
        "overdue": false,
        "duration_min": 10,
-       "view": null
-      },
-      {
-       "id": "t8129",
-       "content": "Read and sign the lease renewal (2 pages)",
-       "description": "Rent goes up $35 a month; the rest is unchanged.",
-       "project": "Home",
-       "labels": [
-        "Home"
-       ],
-       "flagged": false,
-       "due": "2026-11-28",
-       "days_left": 7,
-       "overdue": false,
-       "duration_min": 20,
        "view": null
       },
       {
@@ -2605,7 +2561,7 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-11-24",
+       "due": "2026-11-25",
        "days_left": 3,
        "overdue": false,
        "duration_min": 10,
@@ -2620,7 +2576,7 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-11-27",
+       "due": "2026-11-28",
        "days_left": 6,
        "overdue": false,
        "duration_min": 30,
@@ -2635,7 +2591,7 @@
         "Computer"
        ],
        "flagged": false,
-       "due": "2026-11-23",
+       "due": "2026-11-24",
        "days_left": 2,
        "overdue": false,
        "duration_min": 5,
@@ -2967,7 +2923,7 @@
        ],
        "flagged": true,
        "due": "2026-12-04",
-       "days_left": 13,
+       "days_left": 12,
        "overdue": false,
        "duration_min": 5,
        "view": null
@@ -2982,7 +2938,7 @@
        ],
        "flagged": false,
        "due": "2026-12-04",
-       "days_left": 13,
+       "days_left": 12,
        "overdue": false,
        "duration_min": 5,
        "view": null
@@ -2997,7 +2953,7 @@
         "Computer"
        ],
        "flagged": false,
-       "due": "2026-12-16",
+       "due": "2026-12-17",
        "days_left": 25,
        "overdue": false,
        "duration_min": 10,
@@ -3013,7 +2969,7 @@
         "Money"
        ],
        "flagged": false,
-       "due": "2026-11-30",
+       "due": "2026-12-01",
        "days_left": 9,
        "overdue": false,
        "duration_min": 10,
@@ -3029,10 +2985,25 @@
         "Money"
        ],
        "flagged": true,
-       "due": "2026-12-03",
+       "due": "2026-12-04",
        "days_left": 12,
        "overdue": false,
        "duration_min": 10,
+       "view": null
+      },
+      {
+       "id": "t8129",
+       "content": "Read and sign the lease renewal (2 pages)",
+       "description": "Rent goes up $35 a month; the rest is unchanged.",
+       "project": "Home",
+       "labels": [
+        "Home"
+       ],
+       "flagged": false,
+       "due": "2026-11-30",
+       "days_left": 8,
+       "overdue": false,
+       "duration_min": 20,
        "view": null
       },
       {
@@ -3044,7 +3015,7 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-12-04",
+       "due": "2026-12-05",
        "days_left": 13,
        "overdue": false,
        "duration_min": 60,
@@ -3059,7 +3030,7 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-12-11",
+       "due": "2026-12-12",
        "days_left": 20,
        "overdue": false,
        "duration_min": 10,
@@ -3075,7 +3046,7 @@
        ],
        "flagged": false,
        "due": "2026-11-30",
-       "days_left": 9,
+       "days_left": 8,
        "overdue": false,
        "duration_min": 30,
        "view": null
@@ -3090,7 +3061,7 @@
         "Money"
        ],
        "flagged": false,
-       "due": "2026-12-21",
+       "due": "2026-12-22",
        "days_left": 30,
        "overdue": false,
        "duration_min": 10,
@@ -3100,42 +3071,42 @@
      "completed": [
       {
        "content": "Pay the internet bill, $65",
-       "completed_at": "2026-11-20T09:15:00-07:00",
+       "completed_at": "2026-11-21T09:15:00-07:00",
        "project": "Money"
       },
       {
        "content": "Book Maya's dentist cleaning",
-       "completed_at": "2026-11-20T12:15:00-07:00",
+       "completed_at": "2026-11-21T12:15:00-07:00",
        "project": "Health"
       },
       {
        "content": "Return the Amazon package",
-       "completed_at": "2026-11-19T17:15:00-07:00",
+       "completed_at": "2026-11-20T17:15:00-07:00",
        "project": "Errands"
       },
       {
        "content": "Sign the after-school club form",
-       "completed_at": "2026-11-19T08:15:00-07:00",
+       "completed_at": "2026-11-20T08:15:00-07:00",
        "project": "Family"
       },
       {
        "content": "Call the insurance company about the windshield claim",
-       "completed_at": "2026-11-18T11:15:00-07:00",
+       "completed_at": "2026-11-19T11:15:00-07:00",
        "project": "Car"
       },
       {
        "content": "Update the budget categories",
-       "completed_at": "2026-11-17T19:15:00-07:00",
+       "completed_at": "2026-11-18T19:15:00-07:00",
        "project": "Money"
       },
       {
        "content": "Order furnace filters",
-       "completed_at": "2026-11-16T20:15:00-07:00",
+       "completed_at": "2026-11-17T20:15:00-07:00",
        "project": "Home"
       },
       {
        "content": "Confirm Grandpa Ray's ride to the clinic",
-       "completed_at": "2026-11-14T10:15:00-07:00",
+       "completed_at": "2026-11-16T10:15:00-07:00",
        "project": "Family"
       }
      ],
@@ -3286,7 +3257,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-20T08:28:00-07:00",
+       "at": "2026-11-21T08:28:00-07:00",
        "direction": "out",
        "number": "Sam",
        "body": "done with the slip",
@@ -3295,7 +3266,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-20T11:35:00-07:00",
+       "at": "2026-11-21T11:35:00-07:00",
        "direction": "out",
        "number": "Sam",
        "body": "Marked done: Maya's field trip slip.",
@@ -3304,7 +3275,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-20T14:42:00-07:00",
+       "at": "2026-11-21T14:42:00-07:00",
        "direction": "in",
        "number": "Sam's cell",
        "body": "Weekend plan is ready. Reply 1 to send it to Nora.",
@@ -3313,7 +3284,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-20T17:49:00-07:00",
+       "at": "2026-11-21T17:49:00-07:00",
        "direction": "out",
        "number": "Sam",
        "body": "1",
@@ -3322,7 +3293,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-19T08:56:00-07:00",
+       "at": "2026-11-20T08:56:00-07:00",
        "direction": "out",
        "number": "Sam",
        "body": "Sent to Nora.",
@@ -3331,7 +3302,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-19T11:03:00-07:00",
+       "at": "2026-11-20T11:03:00-07:00",
        "direction": "in",
        "number": "Sam's cell",
        "body": "Recycling goes out tonight.",
@@ -3340,7 +3311,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-19T14:10:00-07:00",
+       "at": "2026-11-20T14:10:00-07:00",
        "direction": "out",
        "number": "Sam",
        "body": "cash",
@@ -3349,16 +3320,16 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-19T17:17:00-07:00",
+       "at": "2026-11-20T17:17:00-07:00",
        "direction": "out",
        "number": "Sam",
-       "body": "Checking $2,240.39.",
+       "body": "Checking $1,965.37.",
        "channel": "sms",
        "source": "listener",
        "result": "sent"
       },
       {
-       "at": "2026-11-18T08:24:00-07:00",
+       "at": "2026-11-19T08:24:00-07:00",
        "direction": "in",
        "number": "Sam's cell",
        "body": "Good morning. Top 3: order Maya's gift, call First Mesa, upper-body workout.",
@@ -3367,7 +3338,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-18T11:31:00-07:00",
+       "at": "2026-11-19T11:31:00-07:00",
        "direction": "out",
        "number": "Sam",
        "body": "what's for dinner",
@@ -3376,7 +3347,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-18T14:38:00-07:00",
+       "at": "2026-11-19T14:38:00-07:00",
        "direction": "out",
        "number": "Sam",
        "body": "Chicken tinga tacos. Thaw the chicken this morning.",
@@ -3385,7 +3356,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-18T17:45:00-07:00",
+       "at": "2026-11-19T17:45:00-07:00",
        "direction": "in",
        "number": "Sam's cell",
        "body": "Payday is Friday. Every bill is covered.",
@@ -3394,7 +3365,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-17T08:52:00-07:00",
+       "at": "2026-11-18T08:52:00-07:00",
        "direction": "out",
        "number": "Sam",
        "body": "done with the slip",
@@ -3403,7 +3374,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-17T11:59:00-07:00",
+       "at": "2026-11-18T11:59:00-07:00",
        "direction": "out",
        "number": "Sam",
        "body": "Marked done: Maya's field trip slip.",
@@ -3412,7 +3383,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-17T14:06:00-07:00",
+       "at": "2026-11-18T14:06:00-07:00",
        "direction": "in",
        "number": "Sam's cell",
        "body": "Weekend plan is ready. Reply 1 to send it to Nora.",
@@ -3421,7 +3392,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-17T17:13:00-07:00",
+       "at": "2026-11-18T17:13:00-07:00",
        "direction": "out",
        "number": "Sam",
        "body": "1",
@@ -3454,63 +3425,63 @@
        "result": "answered"
       },
       {
-       "received_at": "2026-11-20T12:33:00-07:00",
+       "received_at": "2026-11-21T12:33:00-07:00",
        "from_number": "(970) 555-0102",
        "is_rod": false,
        "status": "handled",
        "result": "answered"
       },
       {
-       "received_at": "2026-11-20T13:44:00-07:00",
+       "received_at": "2026-11-21T13:44:00-07:00",
        "from_number": "Sam's cell",
        "is_rod": true,
        "status": "handled",
        "result": "answered"
       },
       {
-       "received_at": "2026-11-20T14:55:00-07:00",
+       "received_at": "2026-11-21T14:55:00-07:00",
        "from_number": "Sam's cell",
        "is_rod": true,
        "status": "handled",
        "result": "answered"
       },
       {
-       "received_at": "2026-11-19T15:06:00-07:00",
+       "received_at": "2026-11-20T15:06:00-07:00",
        "from_number": "Sam's cell",
        "is_rod": true,
        "status": "handled",
        "result": "answered"
       },
       {
-       "received_at": "2026-11-19T16:17:00-07:00",
+       "received_at": "2026-11-20T16:17:00-07:00",
        "from_number": "(970) 555-0102",
        "is_rod": false,
        "status": "handled",
        "result": "answered"
       },
       {
-       "received_at": "2026-11-19T17:28:00-07:00",
+       "received_at": "2026-11-20T17:28:00-07:00",
        "from_number": "Sam's cell",
        "is_rod": true,
        "status": "handled",
        "result": "answered"
       },
       {
-       "received_at": "2026-11-18T18:39:00-07:00",
+       "received_at": "2026-11-19T18:39:00-07:00",
        "from_number": "Sam's cell",
        "is_rod": true,
        "status": "handled",
        "result": "answered"
       },
       {
-       "received_at": "2026-11-18T09:50:00-07:00",
+       "received_at": "2026-11-19T09:50:00-07:00",
        "from_number": "Sam's cell",
        "is_rod": true,
        "status": "handled",
        "result": "answered"
       },
       {
-       "received_at": "2026-11-18T10:01:00-07:00",
+       "received_at": "2026-11-19T10:01:00-07:00",
        "from_number": "(970) 555-0102",
        "is_rod": false,
        "status": "handled",
@@ -3607,25 +3578,25 @@
      "items": [
       {
        "text": "Money: approve the $45 Summit Card payment for payday",
-       "when": "2026-11-21",
+       "when": "2026-11-23",
        "level": "act",
        "link": "/s/money#bills"
       },
       {
        "text": "Sends to Nora: the weekend plan text (draft ready)",
-       "when": "2026-11-21",
+       "when": "2026-11-23",
        "level": "act",
        "link": "/next/r/assistant#attention"
       },
       {
        "text": "Kitchen faucet: landlord said this week",
-       "when": "2026-11-24",
+       "when": "2026-11-25",
        "level": "watch",
        "link": "/s/home"
       },
       {
        "text": "Registration renews in 9 days",
-       "when": "2026-11-30",
+       "when": "2026-12-01",
        "level": "watch",
        "link": "/s/home"
       }
@@ -3641,7 +3612,7 @@
        ],
        "flagged": true,
        "due": "2026-12-04",
-       "days_left": 13,
+       "days_left": 12,
        "overdue": false,
        "duration_min": 5,
        "view": null
@@ -3672,7 +3643,7 @@
        ],
        "flagged": false,
        "due": "2026-12-04",
-       "days_left": 13,
+       "days_left": 12,
        "overdue": false,
        "duration_min": 5,
        "view": null
@@ -3687,7 +3658,7 @@
         "Computer"
        ],
        "flagged": false,
-       "due": "2026-12-16",
+       "due": "2026-12-17",
        "days_left": 25,
        "overdue": false,
        "duration_min": 10,
@@ -3748,7 +3719,7 @@
         "Money"
        ],
        "flagged": false,
-       "due": "2026-11-30",
+       "due": "2026-12-01",
        "days_left": 9,
        "overdue": false,
        "duration_min": 10,
@@ -3808,7 +3779,7 @@
         "Errands"
        ],
        "flagged": false,
-       "due": "2026-11-23",
+       "due": "2026-11-24",
        "days_left": 2,
        "overdue": false,
        "duration_min": 15,
@@ -3823,8 +3794,8 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-11-21",
-       "days_left": 0,
+       "due": "2026-11-23",
+       "days_left": 1,
        "overdue": false,
        "duration_min": 45,
        "view": "recipe"
@@ -3839,7 +3810,7 @@
        ],
        "flagged": false,
        "due": "2026-11-23",
-       "days_left": 2,
+       "days_left": 1,
        "overdue": false,
        "duration_min": 50,
        "view": null
@@ -3855,7 +3826,7 @@
        ],
        "flagged": false,
        "due": "2026-11-23",
-       "days_left": 2,
+       "days_left": 1,
        "overdue": false,
        "duration_min": 5,
        "view": null
@@ -3871,7 +3842,7 @@
        ],
        "flagged": true,
        "due": "2026-11-23",
-       "days_left": 2,
+       "days_left": 1,
        "overdue": false,
        "duration_min": 10,
        "view": null
@@ -3885,7 +3856,7 @@
         "Computer"
        ],
        "flagged": false,
-       "due": "2026-11-27",
+       "due": "2026-11-28",
        "days_left": 6,
        "overdue": false,
        "duration_min": 5,
@@ -3931,7 +3902,7 @@
        ],
        "flagged": false,
        "due": "2026-11-23",
-       "days_left": 2,
+       "days_left": 1,
        "overdue": false,
        "duration_min": 5,
        "view": null
@@ -3946,7 +3917,7 @@
         "Money"
        ],
        "flagged": true,
-       "due": "2026-12-03",
+       "due": "2026-12-04",
        "days_left": 12,
        "overdue": false,
        "duration_min": 10,
@@ -3961,7 +3932,7 @@
         "Computer"
        ],
        "flagged": false,
-       "due": "2026-11-23",
+       "due": "2026-11-24",
        "days_left": 2,
        "overdue": false,
        "duration_min": 5,
@@ -3992,7 +3963,7 @@
        ],
        "flagged": false,
        "due": "2026-11-23",
-       "days_left": 2,
+       "days_left": 1,
        "overdue": false,
        "duration_min": 10,
        "view": null
@@ -4022,7 +3993,7 @@
        ],
        "flagged": false,
        "due": "2026-11-23",
-       "days_left": 2,
+       "days_left": 1,
        "overdue": false,
        "duration_min": 5,
        "view": null
@@ -4051,7 +4022,7 @@
         "Phone"
        ],
        "flagged": false,
-       "due": "2026-11-25",
+       "due": "2026-11-26",
        "days_left": 4,
        "overdue": false,
        "duration_min": 5,
@@ -4066,7 +4037,7 @@
         "Money"
        ],
        "flagged": false,
-       "due": "2026-11-26",
+       "due": "2026-11-27",
        "days_left": 5,
        "overdue": false,
        "duration_min": 10,
@@ -4081,8 +4052,8 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-11-28",
-       "days_left": 7,
+       "due": "2026-11-30",
+       "days_left": 8,
        "overdue": false,
        "duration_min": 20,
        "view": null
@@ -4111,7 +4082,7 @@
         "Errands"
        ],
        "flagged": false,
-       "due": "2026-11-19",
+       "due": "2026-11-20",
        "days_left": -2,
        "overdue": true,
        "duration_min": 15,
@@ -4169,7 +4140,7 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-11-24",
+       "due": "2026-11-25",
        "days_left": 3,
        "overdue": false,
        "duration_min": 10,
@@ -4199,7 +4170,7 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-12-04",
+       "due": "2026-12-05",
        "days_left": 13,
        "overdue": false,
        "duration_min": 60,
@@ -4214,7 +4185,7 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-11-27",
+       "due": "2026-11-28",
        "days_left": 6,
        "overdue": false,
        "duration_min": 30,
@@ -4229,7 +4200,7 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-12-11",
+       "due": "2026-12-12",
        "days_left": 20,
        "overdue": false,
        "duration_min": 10,
@@ -4245,7 +4216,7 @@
        ],
        "flagged": false,
        "due": "2026-11-30",
-       "days_left": 9,
+       "days_left": 8,
        "overdue": false,
        "duration_min": 30,
        "view": null
@@ -4302,7 +4273,7 @@
         "Computer"
        ],
        "flagged": false,
-       "due": "2026-11-23",
+       "due": "2026-11-24",
        "days_left": 2,
        "overdue": false,
        "duration_min": 5,
@@ -4333,7 +4304,7 @@
         "Money"
        ],
        "flagged": false,
-       "due": "2026-12-21",
+       "due": "2026-12-22",
        "days_left": 30,
        "overdue": false,
        "duration_min": 10,
@@ -4342,15 +4313,15 @@
      ]
     },
     "brief": {
-     "date": "2026-11-21",
-     "generated_at": "2026-11-21T06:30:00-07:00",
-     "headline": "A calm Saturday. Payday is 12/4 and every bill is covered. Two quick asks today: the Summit Card payment and Maya's gift.",
+     "date": "2026-11-22",
+     "generated_at": "2026-11-22T06:30:00-07:00",
+     "headline": "A calm Sunday. Payday is 12/4 and every bill is covered. Two quick asks today: the Summit Card payment and Maya's gift.",
      "today": [
       {
        "title": "Order Maya's birthday gift",
        "why": "Arrives in 2 days; her birthday is in 4.",
        "domain": "family",
-       "due": "2026-11-21",
+       "due": "2026-11-22",
        "urgency": "act",
        "done": false
       },
@@ -4358,7 +4329,7 @@
        "title": "Call First Mesa about the overdraft fee",
        "why": "A one-time refund is likely if you ask.",
        "domain": "money",
-       "due": "2026-11-21",
+       "due": "2026-11-22",
        "urgency": "watch",
        "done": false
       },
@@ -4366,7 +4337,7 @@
        "title": "Sign Maya's field trip slip",
        "why": "Due at school tomorrow.",
        "domain": "family",
-       "due": "2026-11-22",
+       "due": "2026-11-23",
        "urgency": "watch",
        "done": true
       },
@@ -4374,7 +4345,7 @@
        "title": "Workout: upper body",
        "why": "Keeps the week at 4 sessions.",
        "domain": "health",
-       "due": "2026-11-21",
+       "due": "2026-11-22",
        "urgency": "ok",
        "done": false
       },
@@ -4382,7 +4353,7 @@
        "title": "Reply to Alex at Northgate Systems",
        "why": "Draft is ready; it takes two minutes.",
        "domain": "work",
-       "due": "2026-11-21",
+       "due": "2026-11-22",
        "urgency": "ok",
        "done": true
       }
@@ -4392,49 +4363,49 @@
        "key": "money",
        "name": "Money",
        "status": "ok",
-       "summary": "Checking $2,240.39; low point $449.39 before payday 12/4, above the $250 bar.",
+       "summary": "Checking $1,965.37; low point $310.37 before payday 12/4, above the $250 bar.",
        "metrics": [
         {
          "label": "Checking",
-         "value": "$2,240.39",
+         "value": "$1,965.37",
          "note": "this morning"
         },
         {
          "label": "Low point",
-         "value": "$449.39",
+         "value": "$310.37",
          "note": "12/3"
         },
         {
          "label": "Bills, 14 days",
-         "value": "$1,471.40",
+         "value": "$1,457.40",
          "note": "unpaid"
         }
        ],
        "bullets": [
-        "Checking $2,240.39.",
+        "Checking $1,965.37.",
         "Nothing needs a decision today.",
         "Owner role is on it.",
         "Details on the desk."
        ],
        "series": [
         [
-         "2026-11-17",
+         "2026-11-18",
          "32.5"
         ],
         [
-         "2026-11-18",
+         "2026-11-19",
          "73.1"
         ],
         [
-         "2026-11-19",
+         "2026-11-20",
          "16.6"
         ],
         [
-         "2026-11-20",
+         "2026-11-21",
          "15.9"
         ],
         [
-         "2026-11-21",
+         "2026-11-22",
          "86.9"
         ]
        ]
@@ -4469,23 +4440,23 @@
        ],
        "series": [
         [
-         "2026-11-17",
+         "2026-11-18",
          "22.8"
         ],
         [
-         "2026-11-18",
+         "2026-11-19",
          "38.0"
         ],
         [
-         "2026-11-19",
+         "2026-11-20",
          "23.1"
         ],
         [
-         "2026-11-20",
+         "2026-11-21",
          "39.1"
         ],
         [
-         "2026-11-21",
+         "2026-11-22",
          "38.1"
         ]
        ]
@@ -4520,23 +4491,23 @@
        ],
        "series": [
         [
-         "2026-11-17",
+         "2026-11-18",
          "58.2"
         ],
         [
-         "2026-11-18",
+         "2026-11-19",
          "19.2"
         ],
         [
-         "2026-11-19",
+         "2026-11-20",
          "42.7"
         ],
         [
-         "2026-11-20",
+         "2026-11-21",
          "16.2"
         ],
         [
-         "2026-11-21",
+         "2026-11-22",
          "16.3"
         ]
        ]
@@ -4571,23 +4542,23 @@
        ],
        "series": [
         [
-         "2026-11-17",
+         "2026-11-18",
          "21.9"
         ],
         [
-         "2026-11-18",
+         "2026-11-19",
          "28.4"
         ],
         [
-         "2026-11-19",
+         "2026-11-20",
          "26.8"
         ],
         [
-         "2026-11-20",
+         "2026-11-21",
          "10.2"
         ],
         [
-         "2026-11-21",
+         "2026-11-22",
          "38.1"
         ]
        ]
@@ -4622,23 +4593,23 @@
        ],
        "series": [
         [
-         "2026-11-17",
+         "2026-11-18",
          "70.1"
         ],
         [
-         "2026-11-18",
+         "2026-11-19",
          "82.4"
         ],
         [
-         "2026-11-19",
+         "2026-11-20",
          "44.5"
         ],
         [
-         "2026-11-20",
+         "2026-11-21",
          "27.4"
         ],
         [
-         "2026-11-21",
+         "2026-11-22",
          "79.4"
         ]
        ]
@@ -4651,7 +4622,7 @@
        "metrics": [
         {
          "label": "Registration",
-         "value": "11/30",
+         "value": "12/1",
          "note": "$86"
         },
         {
@@ -4673,23 +4644,23 @@
        ],
        "series": [
         [
-         "2026-11-17",
+         "2026-11-18",
          "24.0"
         ],
         [
-         "2026-11-18",
+         "2026-11-19",
          "31.0"
         ],
         [
-         "2026-11-19",
+         "2026-11-20",
          "66.9"
         ],
         [
-         "2026-11-20",
+         "2026-11-21",
          "59.6"
         ],
         [
-         "2026-11-21",
+         "2026-11-22",
          "81.0"
         ]
        ]
@@ -4712,7 +4683,7 @@
         },
         {
          "label": "Date night",
-         "value": "11/29",
+         "value": "11/30",
          "note": "booked"
         }
        ],
@@ -4724,36 +4695,29 @@
        ],
        "series": [
         [
-         "2026-11-17",
+         "2026-11-18",
          "40.8"
         ],
         [
-         "2026-11-18",
+         "2026-11-19",
          "84.5"
         ],
         [
-         "2026-11-19",
+         "2026-11-20",
          "62.9"
         ],
         [
-         "2026-11-20",
+         "2026-11-21",
          "46.7"
         ],
         [
-         "2026-11-21",
+         "2026-11-22",
          "31.2"
         ]
        ]
       }
      ],
      "bills": [
-      {
-       "due": "2026-11-21",
-       "bill": "Renter's insurance",
-       "amount": "$14",
-       "note": "autopay",
-       "overdue": false
-      },
       {
        "due": "2026-11-22",
        "bill": "Peak Wireless, 3 lines",
@@ -4793,25 +4757,25 @@
      ],
      "open_loops": [
       {
-       "due": "2026-11-21",
+       "due": "2026-11-23",
        "domain": "money",
        "item": "Overdraft fee refund",
        "status": "open"
       },
       {
-       "due": "2026-11-23",
+       "due": "2026-11-24",
        "domain": "home",
        "item": "Kitchen faucet repair",
        "status": "waiting"
       },
       {
-       "due": "2026-11-25",
+       "due": "2026-11-26",
        "domain": "car",
        "item": "Registration renewal",
        "status": "open"
       },
       {
-       "due": "2026-11-27",
+       "due": "2026-11-28",
        "domain": "family",
        "item": "Leo's party bounce house",
        "status": "open"
@@ -4823,37 +4787,37 @@
        "status": "open"
       },
       {
-       "due": "2026-12-01",
+       "due": "2026-12-02",
        "domain": "credit",
        "item": "Collection dispute letter",
        "status": "waiting"
       },
       {
-       "due": "2026-12-03",
+       "due": "2026-12-04",
        "domain": "health",
        "item": "Leo's sports physical",
        "status": "open"
       },
       {
-       "due": "2026-12-05",
+       "due": "2026-12-07",
        "domain": "travel",
        "item": "Spring trip dates",
        "status": "open"
       },
       {
-       "due": "2026-12-07",
+       "due": "2026-12-08",
        "domain": "family",
        "item": "Holiday party RSVP",
        "status": "open"
       },
       {
-       "due": "2026-12-09",
+       "due": "2026-12-10",
        "domain": "home",
        "item": "Lease renewal",
        "status": "open"
       },
       {
-       "due": "2026-12-11",
+       "due": "2026-12-12",
        "domain": "pets",
        "item": "Vet visit",
        "status": "open"
@@ -4865,7 +4829,7 @@
        "status": "open"
       },
       {
-       "due": "2026-12-15",
+       "due": "2026-12-16",
        "domain": "taxes",
        "item": "Q4 estimate",
        "status": "open"
@@ -4883,80 +4847,58 @@
      "done_count": 2
     },
     "schedule": {
-     "date": "2026-11-21",
-     "generated_at": "2026-11-21T06:00:00-07:00",
+     "date": "2026-11-22",
+     "generated_at": "2026-11-22T06:00:00-07:00",
      "summary": "A light day built around family time.",
      "blocks": [
       {
-       "start": "07:00",
-       "end": "07:30",
-       "title": "Coffee and the weekly list",
-       "kind": "routine",
-       "source": "plan",
-       "todoist_id": "",
-       "note": "",
-       "calendar_event_id": "",
-       "done": true
-      },
-      {
        "start": "07:30",
        "end": "08:30",
-       "title": "Pancake breakfast",
+       "title": "Slow breakfast",
        "kind": "personal",
        "source": "calendar",
        "todoist_id": "",
        "note": "",
-       "calendar_event_id": "evt00015473",
+       "calendar_event_id": "evt00010810",
        "done": true
       },
       {
        "start": "08:30",
-       "end": "09:30",
-       "title": "Weekly review with Life Coach",
-       "kind": "routine",
+       "end": "10:00",
+       "title": "Open morning",
+       "kind": "buffer",
        "source": "plan",
        "todoist_id": "",
        "note": "",
        "calendar_event_id": "",
-       "done": true
+       "done": false
       },
       {
-       "start": "09:30",
-       "end": "11:30",
-       "title": "Family hike",
+       "start": "10:00",
+       "end": "12:00",
+       "title": "Family walk by the river",
        "kind": "personal",
        "source": "calendar",
        "todoist_id": "",
        "note": "",
-       "calendar_event_id": "evt00006459",
+       "calendar_event_id": "evt00028605",
        "done": false
       },
       {
-       "start": "11:30",
-       "end": "12:30",
-       "title": "Lunch",
+       "start": "12:00",
+       "end": "13:00",
+       "title": "Lunch with Grandpa Ray",
        "kind": "personal",
        "source": "calendar",
        "todoist_id": "",
        "note": "",
-       "calendar_event_id": "evt00001556",
+       "calendar_event_id": "evt00023396",
        "done": false
       },
       {
-       "start": "12:30",
-       "end": "13:30",
-       "title": "Replace the furnace filter",
-       "kind": "task",
-       "source": "todoist",
-       "todoist_id": "t8135",
-       "note": "",
-       "calendar_event_id": "",
-       "done": false
-      },
-      {
-       "start": "13:30",
+       "start": "13:00",
        "end": "15:00",
-       "title": "Open afternoon",
+       "title": "Rest",
        "kind": "buffer",
        "source": "plan",
        "todoist_id": "",
@@ -4966,57 +4908,57 @@
       },
       {
        "start": "15:00",
-       "end": "16:00",
-       "title": "Grocery pickup",
-       "kind": "task",
-       "source": "plan",
-       "todoist_id": "",
-       "note": "",
-       "calendar_event_id": "",
-       "done": false
-      },
-      {
-       "start": "16:00",
-       "end": "17:30",
-       "title": "Leo's game",
+       "end": "17:00",
+       "title": "Cook for the week",
        "kind": "personal",
        "source": "calendar",
        "todoist_id": "",
        "note": "",
-       "calendar_event_id": "evt00005022",
+       "calendar_event_id": "evt00014347",
        "done": false
       },
       {
        "start": "17:30",
        "end": "18:30",
-       "title": "Dinner",
+       "title": "Family dinner",
        "kind": "personal",
        "source": "calendar",
        "todoist_id": "",
        "note": "",
-       "calendar_event_id": "evt00002237",
+       "calendar_event_id": "evt00009250",
        "done": false
       },
       {
        "start": "18:30",
-       "end": "20:30",
-       "title": "Pizza and board games",
+       "end": "20:00",
+       "title": "Board games",
        "kind": "personal",
        "source": "calendar",
        "todoist_id": "",
        "note": "",
-       "calendar_event_id": "evt00021882",
+       "calendar_event_id": "evt00006480",
        "done": false
       },
       {
-       "start": "20:30",
-       "end": "22:00",
-       "title": "Movie",
+       "start": "20:00",
+       "end": "21:30",
+       "title": "Read",
        "kind": "personal",
        "source": "calendar",
        "todoist_id": "",
        "note": "",
-       "calendar_event_id": "evt00001578",
+       "calendar_event_id": "evt00000975",
+       "done": false
+      },
+      {
+       "start": "21:30",
+       "end": "22:00",
+       "title": "Wind down",
+       "kind": "routine",
+       "source": "plan",
+       "todoist_id": "",
+       "note": "",
+       "calendar_event_id": "",
        "done": false
       }
      ],
@@ -5085,7 +5027,7 @@
        ],
        "flagged": false,
        "due": "2026-11-23",
-       "days_left": 2,
+       "days_left": 1,
        "overdue": false,
        "duration_min": 5,
        "view": null
@@ -5112,42 +5054,42 @@
      "completed": [
       {
        "content": "Pay the internet bill, $65",
-       "completed_at": "2026-11-20T09:15:00-07:00",
+       "completed_at": "2026-11-21T09:15:00-07:00",
        "project": "Money"
       },
       {
        "content": "Book Maya's dentist cleaning",
-       "completed_at": "2026-11-20T12:15:00-07:00",
+       "completed_at": "2026-11-21T12:15:00-07:00",
        "project": "Health"
       },
       {
        "content": "Return the Amazon package",
-       "completed_at": "2026-11-19T17:15:00-07:00",
+       "completed_at": "2026-11-20T17:15:00-07:00",
        "project": "Errands"
       },
       {
        "content": "Sign the after-school club form",
-       "completed_at": "2026-11-19T08:15:00-07:00",
+       "completed_at": "2026-11-20T08:15:00-07:00",
        "project": "Family"
       },
       {
        "content": "Call the insurance company about the windshield claim",
-       "completed_at": "2026-11-18T11:15:00-07:00",
+       "completed_at": "2026-11-19T11:15:00-07:00",
        "project": "Car"
       },
       {
        "content": "Update the budget categories",
-       "completed_at": "2026-11-17T19:15:00-07:00",
+       "completed_at": "2026-11-18T19:15:00-07:00",
        "project": "Money"
       },
       {
        "content": "Order furnace filters",
-       "completed_at": "2026-11-16T20:15:00-07:00",
+       "completed_at": "2026-11-17T20:15:00-07:00",
        "project": "Home"
       },
       {
        "content": "Confirm Grandpa Ray's ride to the clinic",
-       "completed_at": "2026-11-14T10:15:00-07:00",
+       "completed_at": "2026-11-16T10:15:00-07:00",
        "project": "Family"
       }
      ],
@@ -5193,7 +5135,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-20T08:28:00-07:00",
+       "at": "2026-11-21T08:28:00-07:00",
        "direction": "out",
        "number": "Sam",
        "body": "done with the slip",
@@ -5202,7 +5144,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-20T11:35:00-07:00",
+       "at": "2026-11-21T11:35:00-07:00",
        "direction": "out",
        "number": "Sam",
        "body": "Marked done: Maya's field trip slip.",
@@ -5211,7 +5153,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-20T14:42:00-07:00",
+       "at": "2026-11-21T14:42:00-07:00",
        "direction": "in",
        "number": "Sam's cell",
        "body": "Weekend plan is ready. Reply 1 to send it to Nora.",
@@ -5220,7 +5162,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-20T17:49:00-07:00",
+       "at": "2026-11-21T17:49:00-07:00",
        "direction": "out",
        "number": "Sam",
        "body": "1",
@@ -5229,7 +5171,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-19T08:56:00-07:00",
+       "at": "2026-11-20T08:56:00-07:00",
        "direction": "out",
        "number": "Sam",
        "body": "Sent to Nora.",
@@ -5238,7 +5180,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-19T11:03:00-07:00",
+       "at": "2026-11-20T11:03:00-07:00",
        "direction": "in",
        "number": "Sam's cell",
        "body": "Recycling goes out tonight.",
@@ -5247,7 +5189,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-19T14:10:00-07:00",
+       "at": "2026-11-20T14:10:00-07:00",
        "direction": "out",
        "number": "Sam",
        "body": "cash",
@@ -5256,16 +5198,16 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-19T17:17:00-07:00",
+       "at": "2026-11-20T17:17:00-07:00",
        "direction": "out",
        "number": "Sam",
-       "body": "Checking $2,240.39.",
+       "body": "Checking $1,965.37.",
        "channel": "sms",
        "source": "listener",
        "result": "sent"
       },
       {
-       "at": "2026-11-18T08:24:00-07:00",
+       "at": "2026-11-19T08:24:00-07:00",
        "direction": "in",
        "number": "Sam's cell",
        "body": "Good morning. Top 3: order Maya's gift, call First Mesa, upper-body workout.",
@@ -5274,7 +5216,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-18T11:31:00-07:00",
+       "at": "2026-11-19T11:31:00-07:00",
        "direction": "out",
        "number": "Sam",
        "body": "what's for dinner",
@@ -5283,7 +5225,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-18T14:38:00-07:00",
+       "at": "2026-11-19T14:38:00-07:00",
        "direction": "out",
        "number": "Sam",
        "body": "Chicken tinga tacos. Thaw the chicken this morning.",
@@ -5292,7 +5234,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-18T17:45:00-07:00",
+       "at": "2026-11-19T17:45:00-07:00",
        "direction": "in",
        "number": "Sam's cell",
        "body": "Payday is Friday. Every bill is covered.",
@@ -5301,7 +5243,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-17T08:52:00-07:00",
+       "at": "2026-11-18T08:52:00-07:00",
        "direction": "out",
        "number": "Sam",
        "body": "done with the slip",
@@ -5310,7 +5252,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-17T11:59:00-07:00",
+       "at": "2026-11-18T11:59:00-07:00",
        "direction": "out",
        "number": "Sam",
        "body": "Marked done: Maya's field trip slip.",
@@ -5319,7 +5261,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-17T14:06:00-07:00",
+       "at": "2026-11-18T14:06:00-07:00",
        "direction": "in",
        "number": "Sam's cell",
        "body": "Weekend plan is ready. Reply 1 to send it to Nora.",
@@ -5328,7 +5270,7 @@
        "result": "sent"
       },
       {
-       "at": "2026-11-17T17:13:00-07:00",
+       "at": "2026-11-18T17:13:00-07:00",
        "direction": "out",
        "number": "Sam",
        "body": "1",
@@ -5361,63 +5303,63 @@
        "result": "answered"
       },
       {
-       "received_at": "2026-11-20T12:33:00-07:00",
+       "received_at": "2026-11-21T12:33:00-07:00",
        "from_number": "(970) 555-0102",
        "is_rod": false,
        "status": "handled",
        "result": "answered"
       },
       {
-       "received_at": "2026-11-20T13:44:00-07:00",
+       "received_at": "2026-11-21T13:44:00-07:00",
        "from_number": "Sam's cell",
        "is_rod": true,
        "status": "handled",
        "result": "answered"
       },
       {
-       "received_at": "2026-11-20T14:55:00-07:00",
+       "received_at": "2026-11-21T14:55:00-07:00",
        "from_number": "Sam's cell",
        "is_rod": true,
        "status": "handled",
        "result": "answered"
       },
       {
-       "received_at": "2026-11-19T15:06:00-07:00",
+       "received_at": "2026-11-20T15:06:00-07:00",
        "from_number": "Sam's cell",
        "is_rod": true,
        "status": "handled",
        "result": "answered"
       },
       {
-       "received_at": "2026-11-19T16:17:00-07:00",
+       "received_at": "2026-11-20T16:17:00-07:00",
        "from_number": "(970) 555-0102",
        "is_rod": false,
        "status": "handled",
        "result": "answered"
       },
       {
-       "received_at": "2026-11-19T17:28:00-07:00",
+       "received_at": "2026-11-20T17:28:00-07:00",
        "from_number": "Sam's cell",
        "is_rod": true,
        "status": "handled",
        "result": "answered"
       },
       {
-       "received_at": "2026-11-18T18:39:00-07:00",
+       "received_at": "2026-11-19T18:39:00-07:00",
        "from_number": "Sam's cell",
        "is_rod": true,
        "status": "handled",
        "result": "answered"
       },
       {
-       "received_at": "2026-11-18T09:50:00-07:00",
+       "received_at": "2026-11-19T09:50:00-07:00",
        "from_number": "Sam's cell",
        "is_rod": true,
        "status": "handled",
        "result": "answered"
       },
       {
-       "received_at": "2026-11-18T10:01:00-07:00",
+       "received_at": "2026-11-19T10:01:00-07:00",
        "from_number": "(970) 555-0102",
        "is_rod": false,
        "status": "handled",
@@ -5763,6 +5705,17 @@
     "needs": 0
    },
    {
+    "key": "business_analyst",
+    "name": "Business Analyst",
+    "nav": "business-analyst",
+    "owns": "Plans, numbers and strategy for Carter Studio and Brightline Labs, with a specific target for each",
+    "status": "ok",
+    "items": [],
+    "count": 0,
+    "tasks": 0,
+    "needs": 0
+   },
+   {
     "key": "business_coach",
     "name": "Business Coach",
     "nav": "business-coach",
@@ -5834,190 +5787,190 @@
     "days": 30,
     "rows": [
      {
+      "day": "2026-11-22",
+      "call": 4,
+      "text": 11,
+      "whatsapp": 0
+     },
+     {
       "day": "2026-11-21",
+      "call": 2,
+      "text": 6,
+      "whatsapp": 7
+     },
+     {
+      "day": "2026-11-20",
+      "call": 0,
+      "text": 4,
+      "whatsapp": 14
+     },
+     {
+      "day": "2026-11-19",
       "call": 0,
       "text": 9,
       "whatsapp": 10
      },
      {
-      "day": "2026-11-20",
+      "day": "2026-11-18",
       "call": 4,
       "text": 3,
       "whatsapp": 1
      },
      {
-      "day": "2026-11-19",
+      "day": "2026-11-17",
       "call": 2,
       "text": 6,
       "whatsapp": 13
      },
      {
-      "day": "2026-11-18",
+      "day": "2026-11-16",
       "call": 0,
       "text": 5,
       "whatsapp": 8
      },
      {
-      "day": "2026-11-17",
+      "day": "2026-11-15",
       "call": 3,
       "text": 15,
       "whatsapp": 8
      },
      {
-      "day": "2026-11-16",
+      "day": "2026-11-14",
       "call": 0,
       "text": 4,
       "whatsapp": 8
      },
      {
-      "day": "2026-11-15",
+      "day": "2026-11-13",
       "call": 1,
       "text": 6,
       "whatsapp": 16
      },
      {
-      "day": "2026-11-14",
+      "day": "2026-11-12",
       "call": 0,
       "text": 6,
       "whatsapp": 2
      },
      {
-      "day": "2026-11-13",
+      "day": "2026-11-11",
       "call": 3,
       "text": 4,
       "whatsapp": 2
      },
      {
-      "day": "2026-11-12",
+      "day": "2026-11-10",
       "call": 0,
       "text": 10,
       "whatsapp": 18
      },
      {
-      "day": "2026-11-11",
+      "day": "2026-11-09",
       "call": 3,
       "text": 8,
       "whatsapp": 1
      },
      {
-      "day": "2026-11-10",
+      "day": "2026-11-08",
       "call": 0,
       "text": 4,
       "whatsapp": 18
      },
      {
-      "day": "2026-11-09",
+      "day": "2026-11-07",
       "call": 1,
       "text": 16,
       "whatsapp": 2
      },
      {
-      "day": "2026-11-08",
+      "day": "2026-11-06",
       "call": 2,
       "text": 10,
       "whatsapp": 9
      },
      {
-      "day": "2026-11-07",
+      "day": "2026-11-05",
       "call": 3,
       "text": 6,
       "whatsapp": 13
      },
      {
-      "day": "2026-11-06",
+      "day": "2026-11-04",
       "call": 0,
       "text": 11,
       "whatsapp": 6
      },
      {
-      "day": "2026-11-05",
+      "day": "2026-11-03",
       "call": 4,
       "text": 5,
       "whatsapp": 9
      },
      {
-      "day": "2026-11-04",
+      "day": "2026-11-02",
       "call": 4,
       "text": 4,
       "whatsapp": 4
      },
      {
-      "day": "2026-11-03",
+      "day": "2026-11-01",
       "call": 1,
       "text": 8,
       "whatsapp": 16
      },
      {
-      "day": "2026-11-02",
+      "day": "2026-10-31",
       "call": 2,
       "text": 9,
       "whatsapp": 22
      },
      {
-      "day": "2026-11-01",
+      "day": "2026-10-30",
       "call": 4,
       "text": 7,
       "whatsapp": 15
      },
      {
-      "day": "2026-10-31",
+      "day": "2026-10-29",
       "call": 0,
       "text": 15,
       "whatsapp": 6
      },
      {
-      "day": "2026-10-30",
+      "day": "2026-10-28",
       "call": 0,
       "text": 13,
       "whatsapp": 21
      },
      {
-      "day": "2026-10-29",
+      "day": "2026-10-27",
       "call": 2,
       "text": 13,
       "whatsapp": 7
      },
      {
-      "day": "2026-10-28",
+      "day": "2026-10-26",
       "call": 2,
       "text": 9,
       "whatsapp": 10
      },
      {
-      "day": "2026-10-27",
+      "day": "2026-10-25",
       "call": 4,
       "text": 8,
       "whatsapp": 18
      },
      {
-      "day": "2026-10-26",
+      "day": "2026-10-24",
       "call": 3,
       "text": 8,
       "whatsapp": 22
      },
      {
-      "day": "2026-10-25",
+      "day": "2026-10-23",
       "call": 4,
       "text": 14,
       "whatsapp": 2
-     },
-     {
-      "day": "2026-10-24",
-      "call": 0,
-      "text": 10,
-      "whatsapp": 10
-     },
-     {
-      "day": "2026-10-23",
-      "call": 1,
-      "text": 6,
-      "whatsapp": 4
-     },
-     {
-      "day": "2026-10-22",
-      "call": 3,
-      "text": 14,
-      "whatsapp": 18
      }
     ]
    },

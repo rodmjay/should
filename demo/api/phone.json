@@ -1,16 +1,16 @@
 {
  "plan": {
-  "approved": "2026-08-23",
+  "approved": "2026-08-24",
   "text": "Keep three lines on the family plan; pay off Leo's phone early if a bonus comes in."
  },
  "falloff": [
   {
-   "from": "2027-08-18",
+   "from": "2027-08-19",
    "equipment": "Pixel 7 payment ends",
    "bill": "-$22.50 a month"
   },
   {
-   "from": "2027-05-20",
+   "from": "2027-05-21",
    "equipment": "iPhone SE payment ends",
    "bill": "-$26.50 a month"
   }
@@ -72,9 +72,9 @@
    "change_note": null,
    "change_on": null,
    "notes": "",
-   "as_of": "2026-11-16",
-   "created_at": "2025-10-17T09:00:00-07:00",
-   "updated_at": "2026-11-16T09:00:00-07:00",
+   "as_of": "2026-11-17",
+   "created_at": "2025-10-18T09:00:00-07:00",
+   "updated_at": "2026-11-17T09:00:00-07:00",
    "device": "iPhone 13",
    "installment": null,
    "monthly_total": 35
@@ -95,9 +95,9 @@
    "change_note": null,
    "change_on": null,
    "notes": "",
-   "as_of": "2026-11-16",
-   "created_at": "2025-10-17T09:00:00-07:00",
-   "updated_at": "2026-11-16T09:00:00-07:00",
+   "as_of": "2026-11-17",
+   "created_at": "2025-10-18T09:00:00-07:00",
+   "updated_at": "2026-11-17T09:00:00-07:00",
    "device": "Pixel 7",
    "installment": {
     "id": "in1",
@@ -110,17 +110,17 @@
     "credit_monthly_usd": null,
     "credit_note": null,
     "status": "active",
-    "as_of": "2026-11-16",
+    "as_of": "2026-11-17",
     "notes": "",
-    "created_at": "2025-10-17T09:00:00-07:00",
-    "updated_at": "2026-11-16T09:00:00-07:00",
+    "created_at": "2025-10-18T09:00:00-07:00",
+    "updated_at": "2026-11-17T09:00:00-07:00",
     "payoff_usd": 182.0,
-    "final_payment_on": "2027-08-18",
+    "final_payment_on": "2027-08-19",
     "device": "Pixel 7",
     "user": "Nora",
     "line": "••3302",
     "payoff": 182.0,
-    "final_payment": "2027-08-18"
+    "final_payment": "2027-08-19"
    },
    "monthly_total": 57.5
   },
@@ -140,9 +140,9 @@
    "change_note": null,
    "change_on": null,
    "notes": "",
-   "as_of": "2026-11-16",
-   "created_at": "2025-10-17T09:00:00-07:00",
-   "updated_at": "2026-11-16T09:00:00-07:00",
+   "as_of": "2026-11-17",
+   "created_at": "2025-10-18T09:00:00-07:00",
+   "updated_at": "2026-11-17T09:00:00-07:00",
    "device": "iPhone SE",
    "installment": {
     "id": "in2",
@@ -155,17 +155,17 @@
     "credit_monthly_usd": null,
     "credit_note": null,
     "status": "active",
-    "as_of": "2026-11-16",
+    "as_of": "2026-11-17",
     "notes": "",
-    "created_at": "2025-10-17T09:00:00-07:00",
-    "updated_at": "2026-11-16T09:00:00-07:00",
+    "created_at": "2025-10-18T09:00:00-07:00",
+    "updated_at": "2026-11-17T09:00:00-07:00",
     "payoff_usd": 142.0,
-    "final_payment_on": "2027-05-20",
+    "final_payment_on": "2027-05-21",
     "device": "iPhone SE",
     "user": "Leo",
     "line": "••3303",
     "payoff": 142.0,
-    "final_payment": "2027-05-20"
+    "final_payment": "2027-05-21"
    },
    "monthly_total": 61.5
   }
@@ -182,17 +182,17 @@
    "credit_monthly_usd": null,
    "credit_note": null,
    "status": "active",
-   "as_of": "2026-11-16",
+   "as_of": "2026-11-17",
    "notes": "",
-   "created_at": "2025-10-17T09:00:00-07:00",
-   "updated_at": "2026-11-16T09:00:00-07:00",
+   "created_at": "2025-10-18T09:00:00-07:00",
+   "updated_at": "2026-11-17T09:00:00-07:00",
    "payoff_usd": 182.0,
-   "final_payment_on": "2027-08-18",
+   "final_payment_on": "2027-08-19",
    "device": "Pixel 7",
    "user": "Nora",
    "line": "••3302",
    "payoff": 182.0,
-   "final_payment": "2027-08-18"
+   "final_payment": "2027-08-19"
   },
   {
    "id": "in2",
@@ -205,17 +205,17 @@
    "credit_monthly_usd": null,
    "credit_note": null,
    "status": "active",
-   "as_of": "2026-11-16",
+   "as_of": "2026-11-17",
    "notes": "",
-   "created_at": "2025-10-17T09:00:00-07:00",
-   "updated_at": "2026-11-16T09:00:00-07:00",
+   "created_at": "2025-10-18T09:00:00-07:00",
+   "updated_at": "2026-11-17T09:00:00-07:00",
    "payoff_usd": 142.0,
-   "final_payment_on": "2027-05-20",
+   "final_payment_on": "2027-05-21",
    "device": "iPhone SE",
    "user": "Leo",
    "line": "••3303",
    "payoff": 142.0,
-   "final_payment": "2027-05-20"
+   "final_payment": "2027-05-21"
   }
  ],
  "equipment_monthly": 49.0,
@@ -299,7 +299,7 @@
  ],
  "breakdown_known": 159.4,
  "breakdown_rest": 0.0,
- "bill_date": "2026-10-22",
+ "bill_date": "2026-11-22",
  "quo": [
   {
    "name": "Texting line",
@@ -324,28 +324,28 @@
  ],
  "timeline": [
   {
-   "date": "2025-10-17",
+   "date": "2025-10-18",
    "what": "Joined the family plan"
   },
   {
-   "date": "2025-12-16",
+   "date": "2025-12-17",
    "what": "Added Leo's line"
   },
   {
-   "date": "2026-02-14",
+   "date": "2026-02-15",
    "what": "Nora upgraded her phone"
   },
   {
-   "date": "2026-04-15",
+   "date": "2026-04-16",
    "what": "Turned on autopay"
   },
   {
-   "date": "2026-06-14",
+   "date": "2026-06-15",
    "what": "Added protection for Leo"
   }
  ],
  "sync": {
-  "last_iphone_text": "2026-11-20T21:10:00-07:00",
+  "last_iphone_text": "2026-11-21T21:10:00-07:00",
   "last_note": "Synced while charging overnight."
  },
  "counts": {

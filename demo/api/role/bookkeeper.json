@@ -23,7 +23,7 @@
   },
   {
    "text": "StreamBox trial renews in 6 days at $11.99",
-   "when": "2026-11-27",
+   "when": "2026-11-28",
    "level": "watch",
    "link": "/s/money#bills"
   },
@@ -46,7 +46,7 @@
  "watch": [
   {
    "text": "StreamBox trial renews in 6 days at $11.99",
-   "when": "2026-11-27",
+   "when": "2026-11-28",
    "level": "watch",
    "link": "/s/money#bills"
   },
@@ -68,7 +68,7 @@
    ],
    "flagged": true,
    "due": "2026-12-04",
-   "days_left": 13,
+   "days_left": 12,
    "overdue": false,
    "duration_min": 5,
    "view": null
@@ -99,7 +99,7 @@
    ],
    "flagged": false,
    "due": "2026-12-04",
-   "days_left": 13,
+   "days_left": 12,
    "overdue": false,
    "duration_min": 5,
    "view": null
@@ -114,7 +114,7 @@
     "Computer"
    ],
    "flagged": false,
-   "due": "2026-12-16",
+   "due": "2026-12-17",
    "days_left": 25,
    "overdue": false,
    "duration_min": 10,
@@ -144,7 +144,7 @@
     "Computer"
    ],
    "flagged": false,
-   "due": "2026-11-27",
+   "due": "2026-11-28",
    "days_left": 6,
    "overdue": false,
    "duration_min": 5,
@@ -159,7 +159,7 @@
     "Computer"
    ],
    "flagged": false,
-   "due": "2026-11-23",
+   "due": "2026-11-24",
    "days_left": 2,
    "overdue": false,
    "duration_min": 5,
@@ -188,8 +188,8 @@
  ],
  "report": {
   "latest": {
-   "path": "bookkeeper/reports/2026-11-20.md",
-   "date": "2026-11-20",
+   "path": "bookkeeper/reports/2026-11-21.md",
+   "date": "2026-11-21",
    "summary": "Every bill this pay period is covered; low point stays above the $250 bar.",
    "html": "<p>Every bill this pay period is covered; low point stays above the $250 bar.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
   },
@@ -198,28 +198,28 @@
  "tiles": [
   {
    "label": "Checking",
-   "value": "$2,240.39",
+   "value": "$1,965.37",
    "sub": "as of 6:15 AM",
    "tone": "",
    "trend": [
-    1718,
-    1794,
-    1810,
-    1935,
-    1969,
-    2053,
-    2075,
-    2190,
-    2276,
-    2279,
-    2272,
-    2299
+    1453,
+    1456,
+    1436,
+    1444,
+    1458,
+    1575,
+    1688,
+    1772,
+    1897,
+    1996,
+    2110,
+    2113
    ],
    "link": null
   },
   {
    "label": "Low before payday",
-   "value": "$449.39",
+   "value": "$310.37",
    "sub": "bar $250",
    "tone": "ok",
    "trend": [],
@@ -227,7 +227,7 @@
   },
   {
    "label": "Bills, 14 days",
-   "value": "$1,471.40",
+   "value": "$1,457.40",
    "sub": "unpaid",
    "tone": "",
    "trend": [],
@@ -247,18 +247,18 @@
    "sub": "all debts",
    "tone": "",
    "trend": [
-    7472.7,
-    7585.9,
-    7696.0,
-    7735.5,
-    7892.1,
-    8092.6,
-    8309.3,
-    8416.5,
-    8621.6,
-    8860.2,
-    8953.1,
-    8988.5
+    7633.1,
+    7885.9,
+    8125.5,
+    8259.0,
+    8472.0,
+    8713.3,
+    8929.8,
+    9001.2,
+    9116.0,
+    9181.2,
+    9225.6,
+    9420.1
    ],
    "link": null
   }
@@ -312,7 +312,7 @@
       },
       {
        "text": "StreamBox trial renews in 6 days at $11.99",
-       "when": "2026-11-27",
+       "when": "2026-11-28",
        "level": "watch",
        "link": "/s/money#bills"
       },
@@ -334,7 +334,7 @@
        ],
        "flagged": true,
        "due": "2026-12-04",
-       "days_left": 13,
+       "days_left": 12,
        "overdue": false,
        "duration_min": 5,
        "view": null
@@ -365,7 +365,7 @@
        ],
        "flagged": false,
        "due": "2026-12-04",
-       "days_left": 13,
+       "days_left": 12,
        "overdue": false,
        "duration_min": 5,
        "view": null
@@ -380,7 +380,7 @@
         "Computer"
        ],
        "flagged": false,
-       "due": "2026-12-16",
+       "due": "2026-12-17",
        "days_left": 25,
        "overdue": false,
        "duration_min": 10,
@@ -410,7 +410,7 @@
         "Computer"
        ],
        "flagged": false,
-       "due": "2026-11-27",
+       "due": "2026-11-28",
        "days_left": 6,
        "overdue": false,
        "duration_min": 5,
@@ -425,7 +425,7 @@
         "Computer"
        ],
        "flagged": false,
-       "due": "2026-11-23",
+       "due": "2026-11-24",
        "days_left": 2,
        "overdue": false,
        "duration_min": 5,
@@ -435,21 +435,6 @@
     },
     "bills": {
      "rows": [
-      {
-       "bill": "Cedar Falls Water & Trash",
-       "amount": 61.75,
-       "frequency": "monthly",
-       "day": "18",
-       "next_due": "2026-11-18",
-       "autopay": "No",
-       "status": "active",
-       "notes": "",
-       "pay_link": "",
-       "due": "2026-11-18",
-       "days_left": -3,
-       "marked": true,
-       "paid": true
-      },
       {
        "bill": "Disney+",
        "amount": 9.99,
@@ -461,7 +446,7 @@
        "notes": "",
        "pay_link": "",
        "due": "2026-11-19",
-       "days_left": -2,
+       "days_left": -3,
        "marked": true,
        "paid": true
       },
@@ -476,9 +461,9 @@
        "notes": "",
        "pay_link": "",
        "due": "2026-11-21",
-       "days_left": 0,
-       "marked": false,
-       "paid": false
+       "days_left": -1,
+       "marked": true,
+       "paid": true
       },
       {
        "bill": "Peak Wireless, 3 lines",
@@ -491,7 +476,7 @@
        "notes": "",
        "pay_link": "",
        "due": "2026-11-22",
-       "days_left": 1,
+       "days_left": 0,
        "marked": false,
        "paid": false
       },
@@ -506,7 +491,7 @@
        "notes": "Pay in the tenant portal",
        "pay_link": "",
        "due": "2026-12-01",
-       "days_left": 10,
+       "days_left": 9,
        "marked": false,
        "paid": false
       },
@@ -521,7 +506,7 @@
        "notes": "Family pass",
        "pay_link": "",
        "due": "2026-12-03",
-       "days_left": 12,
+       "days_left": 11,
        "marked": false,
        "paid": false
       },
@@ -536,7 +521,7 @@
        "notes": "",
        "pay_link": "",
        "due": "2026-12-04",
-       "days_left": 13,
+       "days_left": 12,
        "marked": false,
        "paid": false
       },
@@ -551,7 +536,7 @@
        "notes": "",
        "pay_link": "",
        "due": "2026-12-07",
-       "days_left": 16,
+       "days_left": 15,
        "marked": false,
        "paid": false
       },
@@ -566,7 +551,7 @@
        "notes": "",
        "pay_link": "",
        "due": "2026-12-08",
-       "days_left": 17,
+       "days_left": 16,
        "marked": false,
        "paid": false
       },
@@ -581,7 +566,7 @@
        "notes": "",
        "pay_link": "",
        "due": "2026-12-09",
-       "days_left": 18,
+       "days_left": 17,
        "marked": false,
        "paid": false
       },
@@ -596,7 +581,7 @@
        "notes": "",
        "pay_link": "",
        "due": "2026-12-10",
-       "days_left": 19,
+       "days_left": 18,
        "marked": false,
        "paid": false
       },
@@ -611,7 +596,7 @@
        "notes": "",
        "pay_link": "",
        "due": "2026-12-12",
-       "days_left": 21,
+       "days_left": 20,
        "marked": false,
        "paid": false
       },
@@ -626,7 +611,7 @@
        "notes": "Card ending 0932",
        "pay_link": "",
        "due": "2026-12-12",
-       "days_left": 21,
+       "days_left": 20,
        "marked": false,
        "paid": false
       },
@@ -641,7 +626,7 @@
        "notes": "",
        "pay_link": "",
        "due": "2026-12-14",
-       "days_left": 23,
+       "days_left": 22,
        "marked": false,
        "paid": false
       },
@@ -656,7 +641,7 @@
        "notes": "",
        "pay_link": "",
        "due": "2026-12-15",
-       "days_left": 24,
+       "days_left": 23,
        "marked": false,
        "paid": false
       },
@@ -671,7 +656,7 @@
        "notes": "Venmo or check",
        "pay_link": "",
        "due": "2026-12-15",
-       "days_left": 24,
+       "days_left": 23,
        "marked": false,
        "paid": false
       },
@@ -686,7 +671,7 @@
        "notes": "",
        "pay_link": "",
        "due": "2026-12-18",
-       "days_left": 27,
+       "days_left": 26,
        "marked": false,
        "paid": false
       },
@@ -701,7 +686,7 @@
        "notes": "",
        "pay_link": "",
        "due": "2026-12-19",
-       "days_left": 28,
+       "days_left": 27,
        "marked": false,
        "paid": false
       },
@@ -716,7 +701,7 @@
        "notes": "",
        "pay_link": "",
        "due": "2026-12-21",
-       "days_left": 30,
+       "days_left": 29,
        "marked": false,
        "paid": false
       },
@@ -731,7 +716,7 @@
        "notes": "",
        "pay_link": "",
        "due": "2026-12-22",
-       "days_left": 31,
+       "days_left": 30,
        "marked": false,
        "paid": false
       }
@@ -760,14 +745,14 @@
        "pay_link": ""
       }
      ],
-     "total": 2686.82,
+     "total": 2672.82,
      "days": 35,
      "source": "bills"
     },
     "balance": {
-     "date": "2026-11-21",
+     "date": "2026-11-22",
      "read_at": "06:15",
-     "checking": 2240.39,
+     "checking": 1965.37,
      "notes": "Read from the credit union this morning.",
      "savings": "1850.00"
     },
@@ -777,7 +762,7 @@
  ],
  "widgets": {
   "billsline": {
-   "today": "2026-11-21",
+   "today": "2026-11-22",
    "days": 35,
    "paydays": [
     "2026-12-04",
@@ -785,12 +770,6 @@
     "2027-01-01"
    ],
    "rows": [
-    {
-     "due": "2026-11-18",
-     "bill": "Cedar Falls Water & Trash",
-     "amount": 61.75,
-     "paid": true
-    },
     {
      "due": "2026-11-19",
      "bill": "Disney+",
@@ -801,7 +780,7 @@
      "due": "2026-11-21",
      "bill": "Renter's insurance",
      "amount": 14.0,
-     "paid": false
+     "paid": true
     },
     {
      "due": "2026-11-22",

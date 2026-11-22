@@ -40,8 +40,8 @@
  ],
  "report": {
   "latest": {
-   "path": "agency-squared/reports/2026-11-20.md",
-   "date": "2026-11-20",
+   "path": "agency-squared/reports/2026-11-21.md",
+   "date": "2026-11-21",
    "summary": "Booking API passes 112 of 118 checks; payouts are next.",
    "html": "<p>Booking API passes 112 of 118 checks; payouts are next.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
   },

@@ -1,15 +1,15 @@
 {
- "date": "2026-11-21",
+ "date": "2026-11-22",
  "brief": {
-  "date": "2026-11-21",
-  "generated_at": "2026-11-21T06:30:00-07:00",
-  "headline": "A calm Saturday. Payday is 12/4 and every bill is covered. Two quick asks today: the Summit Card payment and Maya's gift.",
+  "date": "2026-11-22",
+  "generated_at": "2026-11-22T06:30:00-07:00",
+  "headline": "A calm Sunday. Payday is 12/4 and every bill is covered. Two quick asks today: the Summit Card payment and Maya's gift.",
   "today": [
    {
     "title": "Order Maya's birthday gift",
     "why": "Arrives in 2 days; her birthday is in 4.",
     "domain": "family",
-    "due": "2026-11-21",
+    "due": "2026-11-22",
     "urgency": "act",
     "done": false
    },
@@ -17,7 +17,7 @@
     "title": "Call First Mesa about the overdraft fee",
     "why": "A one-time refund is likely if you ask.",
     "domain": "money",
-    "due": "2026-11-21",
+    "due": "2026-11-22",
     "urgency": "watch",
     "done": false
    },
@@ -25,7 +25,7 @@
     "title": "Sign Maya's field trip slip",
     "why": "Due at school tomorrow.",
     "domain": "family",
-    "due": "2026-11-22",
+    "due": "2026-11-23",
     "urgency": "watch",
     "done": true
    },
@@ -33,7 +33,7 @@
     "title": "Workout: upper body",
     "why": "Keeps the week at 4 sessions.",
     "domain": "health",
-    "due": "2026-11-21",
+    "due": "2026-11-22",
     "urgency": "ok",
     "done": false
    },
@@ -41,7 +41,7 @@
     "title": "Reply to Alex at Northgate Systems",
     "why": "Draft is ready; it takes two minutes.",
     "domain": "work",
-    "due": "2026-11-21",
+    "due": "2026-11-22",
     "urgency": "ok",
     "done": true
    }
@@ -51,49 +51,49 @@
     "key": "money",
     "name": "Money",
     "status": "ok",
-    "summary": "Checking $2,240.39; low point $449.39 before payday 12/4, above the $250 bar.",
+    "summary": "Checking $1,965.37; low point $310.37 before payday 12/4, above the $250 bar.",
     "metrics": [
      {
       "label": "Checking",
-      "value": "$2,240.39",
+      "value": "$1,965.37",
       "note": "this morning"
      },
      {
       "label": "Low point",
-      "value": "$449.39",
+      "value": "$310.37",
       "note": "12/3"
      },
      {
       "label": "Bills, 14 days",
-      "value": "$1,471.40",
+      "value": "$1,457.40",
       "note": "unpaid"
      }
     ],
     "bullets": [
-     "Checking $2,240.39.",
+     "Checking $1,965.37.",
      "Nothing needs a decision today.",
      "Owner role is on it.",
      "Details on the desk."
     ],
     "series": [
      [
-      "2026-11-17",
+      "2026-11-18",
       "32.5"
      ],
      [
-      "2026-11-18",
+      "2026-11-19",
       "73.1"
      ],
      [
-      "2026-11-19",
+      "2026-11-20",
       "16.6"
      ],
      [
-      "2026-11-20",
+      "2026-11-21",
       "15.9"
      ],
      [
-      "2026-11-21",
+      "2026-11-22",
       "86.9"
      ]
     ]
@@ -128,23 +128,23 @@
     ],
     "series": [
      [
-      "2026-11-17",
+      "2026-11-18",
       "22.8"
      ],
      [
-      "2026-11-18",
+      "2026-11-19",
       "38.0"
      ],
      [
-      "2026-11-19",
+      "2026-11-20",
       "23.1"
      ],
      [
-      "2026-11-20",
+      "2026-11-21",
       "39.1"
      ],
      [
-      "2026-11-21",
+      "2026-11-22",
       "38.1"
      ]
     ]
@@ -179,23 +179,23 @@
     ],
     "series": [
      [
-      "2026-11-17",
+      "2026-11-18",
       "58.2"
      ],
      [
-      "2026-11-18",
+      "2026-11-19",
       "19.2"
      ],
      [
-      "2026-11-19",
+      "2026-11-20",
       "42.7"
      ],
      [
-      "2026-11-20",
+      "2026-11-21",
       "16.2"
      ],
      [
-      "2026-11-21",
+      "2026-11-22",
       "16.3"
      ]
     ]
@@ -230,23 +230,23 @@
     ],
     "series": [
      [
-      "2026-11-17",
+      "2026-11-18",
       "21.9"
      ],
      [
-      "2026-11-18",
+      "2026-11-19",
       "28.4"
      ],
      [
-      "2026-11-19",
+      "2026-11-20",
       "26.8"
      ],
      [
-      "2026-11-20",
+      "2026-11-21",
       "10.2"
      ],
      [
-      "2026-11-21",
+      "2026-11-22",
       "38.1"
      ]
     ]
@@ -281,23 +281,23 @@
     ],
     "series": [
      [
-      "2026-11-17",
+      "2026-11-18",
       "70.1"
      ],
      [
-      "2026-11-18",
+      "2026-11-19",
       "82.4"
      ],
      [
-      "2026-11-19",
+      "2026-11-20",
       "44.5"
      ],
      [
-      "2026-11-20",
+      "2026-11-21",
       "27.4"
      ],
      [
-      "2026-11-21",
+      "2026-11-22",
       "79.4"
      ]
     ]
@@ -310,7 +310,7 @@
     "metrics": [
      {
       "label": "Registration",
-      "value": "11/30",
+      "value": "12/1",
       "note": "$86"
      },
      {
@@ -332,23 +332,23 @@
     ],
     "series": [
      [
-      "2026-11-17",
+      "2026-11-18",
       "24.0"
      ],
      [
-      "2026-11-18",
+      "2026-11-19",
       "31.0"
      ],
      [
-      "2026-11-19",
+      "2026-11-20",
       "66.9"
      ],
      [
-      "2026-11-20",
+      "2026-11-21",
       "59.6"
      ],
      [
-      "2026-11-21",
+      "2026-11-22",
       "81.0"
      ]
     ]
@@ -371,7 +371,7 @@
      },
      {
       "label": "Date night",
-      "value": "11/29",
+      "value": "11/30",
       "note": "booked"
      }
     ],
@@ -383,36 +383,29 @@
     ],
     "series": [
      [
-      "2026-11-17",
+      "2026-11-18",
       "40.8"
      ],
      [
-      "2026-11-18",
+      "2026-11-19",
       "84.5"
      ],
      [
-      "2026-11-19",
+      "2026-11-20",
       "62.9"
      ],
      [
-      "2026-11-20",
+      "2026-11-21",
       "46.7"
      ],
      [
-      "2026-11-21",
+      "2026-11-22",
       "31.2"
      ]
     ]
    }
   ],
   "bills": [
-   {
-    "due": "2026-11-21",
-    "bill": "Renter's insurance",
-    "amount": "$14",
-    "note": "autopay",
-    "overdue": false
-   },
    {
     "due": "2026-11-22",
     "bill": "Peak Wireless, 3 lines",
@@ -452,25 +445,25 @@
   ],
   "open_loops": [
    {
-    "due": "2026-11-21",
+    "due": "2026-11-23",
     "domain": "money",
     "item": "Overdraft fee refund",
     "status": "open"
    },
    {
-    "due": "2026-11-23",
+    "due": "2026-11-24",
     "domain": "home",
     "item": "Kitchen faucet repair",
     "status": "waiting"
    },
    {
-    "due": "2026-11-25",
+    "due": "2026-11-26",
     "domain": "car",
     "item": "Registration renewal",
     "status": "open"
    },
    {
-    "due": "2026-11-27",
+    "due": "2026-11-28",
     "domain": "family",
     "item": "Leo's party bounce house",
     "status": "open"
@@ -482,37 +475,37 @@
     "status": "open"
    },
    {
-    "due": "2026-12-01",
+    "due": "2026-12-02",
     "domain": "credit",
     "item": "Collection dispute letter",
     "status": "waiting"
    },
    {
-    "due": "2026-12-03",
+    "due": "2026-12-04",
     "domain": "health",
     "item": "Leo's sports physical",
     "status": "open"
    },
    {
-    "due": "2026-12-05",
+    "due": "2026-12-07",
     "domain": "travel",
     "item": "Spring trip dates",
     "status": "open"
    },
    {
-    "due": "2026-12-07",
+    "due": "2026-12-08",
     "domain": "family",
     "item": "Holiday party RSVP",
     "status": "open"
    },
    {
-    "due": "2026-12-09",
+    "due": "2026-12-10",
     "domain": "home",
     "item": "Lease renewal",
     "status": "open"
    },
    {
-    "due": "2026-12-11",
+    "due": "2026-12-12",
     "domain": "pets",
     "item": "Vet visit",
     "status": "open"
@@ -524,7 +517,7 @@
     "status": "open"
    },
    {
-    "due": "2026-12-15",
+    "due": "2026-12-16",
     "domain": "taxes",
     "item": "Q4 estimate",
     "status": "open"
@@ -543,277 +536,241 @@
  },
  "now": {
   "current": {
-   "start": "09:30",
-   "end": "11:30",
-   "title": "Family hike",
+   "start": "10:00",
+   "end": "12:00",
+   "title": "Family walk by the river",
    "kind": "personal",
    "source": "calendar",
    "todoist_id": "",
    "note": "",
-   "calendar_event_id": "evt00006459",
+   "calendar_event_id": "evt00028605",
    "done": false,
-   "s": 570,
-   "e": 690,
+   "s": 600,
+   "e": 720,
    "past": false,
-   "left": 16.67,
-   "width": 13.33,
-   "left_min": 50,
-   "pct": 58
+   "left": 17.24,
+   "width": 13.79,
+   "left_min": 80,
+   "pct": 33
   },
   "next": [
    {
-    "start": "11:30",
-    "end": "12:30",
-    "title": "Lunch",
+    "start": "12:00",
+    "end": "13:00",
+    "title": "Lunch with Grandpa Ray",
     "kind": "personal",
     "source": "calendar",
     "todoist_id": "",
     "note": "",
-    "calendar_event_id": "evt00001556",
+    "calendar_event_id": "evt00023396",
     "done": false,
-    "s": 690,
-    "e": 750,
+    "s": 720,
+    "e": 780,
     "past": false,
-    "left": 30.0,
-    "width": 6.67
+    "left": 31.03,
+    "width": 6.9
    },
    {
-    "start": "12:30",
-    "end": "13:30",
-    "title": "Replace the furnace filter",
-    "kind": "task",
-    "source": "todoist",
-    "todoist_id": "t8135",
-    "note": "",
-    "calendar_event_id": "",
-    "done": false,
-    "s": 750,
-    "e": 810,
-    "past": false,
-    "left": 36.67,
-    "width": 6.67
-   }
-  ],
-  "later": 6,
-  "blocks": [
-   {
-    "start": "07:00",
-    "end": "07:30",
-    "title": "Coffee and the weekly list",
-    "kind": "routine",
-    "source": "plan",
-    "todoist_id": "",
-    "note": "",
-    "calendar_event_id": "",
-    "done": true,
-    "s": 420,
-    "e": 450,
-    "past": true,
-    "left": 0.0,
-    "width": 3.33,
-    "left_min": 0,
-    "pct": 100
-   },
-   {
-    "start": "07:30",
-    "end": "08:30",
-    "title": "Pancake breakfast",
-    "kind": "personal",
-    "source": "calendar",
-    "todoist_id": "",
-    "note": "",
-    "calendar_event_id": "evt00015473",
-    "done": true,
-    "s": 450,
-    "e": 510,
-    "past": true,
-    "left": 3.33,
-    "width": 6.67,
-    "left_min": 0,
-    "pct": 100
-   },
-   {
-    "start": "08:30",
-    "end": "09:30",
-    "title": "Weekly review with Life Coach",
-    "kind": "routine",
-    "source": "plan",
-    "todoist_id": "",
-    "note": "",
-    "calendar_event_id": "",
-    "done": true,
-    "s": 510,
-    "e": 570,
-    "past": true,
-    "left": 10.0,
-    "width": 6.67,
-    "left_min": 0,
-    "pct": 100
-   },
-   {
-    "start": "09:30",
-    "end": "11:30",
-    "title": "Family hike",
-    "kind": "personal",
-    "source": "calendar",
-    "todoist_id": "",
-    "note": "",
-    "calendar_event_id": "evt00006459",
-    "done": false,
-    "s": 570,
-    "e": 690,
-    "past": false,
-    "left": 16.67,
-    "width": 13.33,
-    "left_min": 50,
-    "pct": 58
-   },
-   {
-    "start": "11:30",
-    "end": "12:30",
-    "title": "Lunch",
-    "kind": "personal",
-    "source": "calendar",
-    "todoist_id": "",
-    "note": "",
-    "calendar_event_id": "evt00001556",
-    "done": false,
-    "s": 690,
-    "e": 750,
-    "past": false,
-    "left": 30.0,
-    "width": 6.67,
-    "left_min": 110,
-    "pct": 0
-   },
-   {
-    "start": "12:30",
-    "end": "13:30",
-    "title": "Replace the furnace filter",
-    "kind": "task",
-    "source": "todoist",
-    "todoist_id": "t8135",
-    "note": "",
-    "calendar_event_id": "",
-    "done": false,
-    "s": 750,
-    "e": 810,
-    "past": false,
-    "left": 36.67,
-    "width": 6.67,
-    "left_min": 170,
-    "pct": 0
-   },
-   {
-    "start": "13:30",
+    "start": "13:00",
     "end": "15:00",
-    "title": "Open afternoon",
+    "title": "Rest",
     "kind": "buffer",
     "source": "plan",
     "todoist_id": "",
     "note": "",
     "calendar_event_id": "",
     "done": false,
-    "s": 810,
+    "s": 780,
     "e": 900,
     "past": false,
-    "left": 43.33,
-    "width": 10.0,
-    "left_min": 260,
-    "pct": 0
+    "left": 37.93,
+    "width": 13.79
+   }
+  ],
+  "later": 5,
+  "blocks": [
+   {
+    "start": "07:30",
+    "end": "08:30",
+    "title": "Slow breakfast",
+    "kind": "personal",
+    "source": "calendar",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "evt00010810",
+    "done": true,
+    "s": 450,
+    "e": 510,
+    "past": true,
+    "left": 0.0,
+    "width": 6.9,
+    "left_min": 0,
+    "pct": 100
    },
    {
-    "start": "15:00",
-    "end": "16:00",
-    "title": "Grocery pickup",
-    "kind": "task",
+    "start": "08:30",
+    "end": "10:00",
+    "title": "Open morning",
+    "kind": "buffer",
     "source": "plan",
     "todoist_id": "",
     "note": "",
     "calendar_event_id": "",
     "done": false,
-    "s": 900,
-    "e": 960,
-    "past": false,
-    "left": 53.33,
-    "width": 6.67,
-    "left_min": 320,
-    "pct": 0
+    "s": 510,
+    "e": 600,
+    "past": true,
+    "left": 6.9,
+    "width": 10.34,
+    "left_min": 0,
+    "pct": 100
    },
    {
-    "start": "16:00",
-    "end": "17:30",
-    "title": "Leo's game",
+    "start": "10:00",
+    "end": "12:00",
+    "title": "Family walk by the river",
     "kind": "personal",
     "source": "calendar",
     "todoist_id": "",
     "note": "",
-    "calendar_event_id": "evt00005022",
+    "calendar_event_id": "evt00028605",
     "done": false,
-    "s": 960,
-    "e": 1050,
+    "s": 600,
+    "e": 720,
     "past": false,
-    "left": 60.0,
-    "width": 10.0,
-    "left_min": 410,
+    "left": 17.24,
+    "width": 13.79,
+    "left_min": 80,
+    "pct": 33
+   },
+   {
+    "start": "12:00",
+    "end": "13:00",
+    "title": "Lunch with Grandpa Ray",
+    "kind": "personal",
+    "source": "calendar",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "evt00023396",
+    "done": false,
+    "s": 720,
+    "e": 780,
+    "past": false,
+    "left": 31.03,
+    "width": 6.9,
+    "left_min": 140,
+    "pct": 0
+   },
+   {
+    "start": "13:00",
+    "end": "15:00",
+    "title": "Rest",
+    "kind": "buffer",
+    "source": "plan",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "",
+    "done": false,
+    "s": 780,
+    "e": 900,
+    "past": false,
+    "left": 37.93,
+    "width": 13.79,
+    "left_min": 260,
+    "pct": 0
+   },
+   {
+    "start": "15:00",
+    "end": "17:00",
+    "title": "Cook for the week",
+    "kind": "personal",
+    "source": "calendar",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "evt00014347",
+    "done": false,
+    "s": 900,
+    "e": 1020,
+    "past": false,
+    "left": 51.72,
+    "width": 13.79,
+    "left_min": 380,
     "pct": 0
    },
    {
     "start": "17:30",
     "end": "18:30",
-    "title": "Dinner",
+    "title": "Family dinner",
     "kind": "personal",
     "source": "calendar",
     "todoist_id": "",
     "note": "",
-    "calendar_event_id": "evt00002237",
+    "calendar_event_id": "evt00009250",
     "done": false,
     "s": 1050,
     "e": 1110,
     "past": false,
-    "left": 70.0,
-    "width": 6.67,
+    "left": 68.97,
+    "width": 6.9,
     "left_min": 470,
     "pct": 0
    },
    {
     "start": "18:30",
-    "end": "20:30",
-    "title": "Pizza and board games",
+    "end": "20:00",
+    "title": "Board games",
     "kind": "personal",
     "source": "calendar",
     "todoist_id": "",
     "note": "",
-    "calendar_event_id": "evt00021882",
+    "calendar_event_id": "evt00006480",
     "done": false,
     "s": 1110,
-    "e": 1230,
+    "e": 1200,
     "past": false,
-    "left": 76.67,
-    "width": 13.33,
-    "left_min": 590,
+    "left": 75.86,
+    "width": 10.34,
+    "left_min": 560,
     "pct": 0
    },
    {
-    "start": "20:30",
-    "end": "22:00",
-    "title": "Movie",
+    "start": "20:00",
+    "end": "21:30",
+    "title": "Read",
     "kind": "personal",
     "source": "calendar",
     "todoist_id": "",
     "note": "",
-    "calendar_event_id": "evt00001578",
+    "calendar_event_id": "evt00000975",
     "done": false,
-    "s": 1230,
+    "s": 1200,
+    "e": 1290,
+    "past": false,
+    "left": 86.21,
+    "width": 10.34,
+    "left_min": 650,
+    "pct": 0
+   },
+   {
+    "start": "21:30",
+    "end": "22:00",
+    "title": "Wind down",
+    "kind": "routine",
+    "source": "plan",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "",
+    "done": false,
+    "s": 1290,
     "e": 1320,
     "past": false,
-    "left": 90.0,
-    "width": 10.0,
+    "left": 96.55,
+    "width": 3.45,
     "left_min": 680,
     "pct": 0
    }
   ],
-  "now_pct": 24.44,
+  "now_pct": 21.84,
   "clock": "10:40",
   "now_min": 640,
   "before": false,
@@ -821,31 +778,31 @@
   "ticks": [
    {
     "label": "8a",
-    "left": 6.67
+    "left": 3.45
    },
    {
     "label": "10a",
-    "left": 20.0
+    "left": 17.24
    },
    {
     "label": "12p",
-    "left": 33.33
+    "left": 31.03
    },
    {
     "label": "2p",
-    "left": 46.67
+    "left": 44.83
    },
    {
     "label": "4p",
-    "left": 60.0
+    "left": 58.62
    },
    {
     "label": "6p",
-    "left": 73.33
+    "left": 72.41
    },
    {
     "label": "8p",
-    "left": 86.67
+    "left": 86.21
    },
    {
     "label": "10p",
@@ -854,80 +811,58 @@
   ]
  },
  "schedule": {
-  "date": "2026-11-21",
-  "generated_at": "2026-11-21T06:00:00-07:00",
+  "date": "2026-11-22",
+  "generated_at": "2026-11-22T06:00:00-07:00",
   "summary": "A light day built around family time.",
   "blocks": [
    {
-    "start": "07:00",
-    "end": "07:30",
-    "title": "Coffee and the weekly list",
-    "kind": "routine",
-    "source": "plan",
-    "todoist_id": "",
-    "note": "",
-    "calendar_event_id": "",
-    "done": true
-   },
-   {
     "start": "07:30",
     "end": "08:30",
-    "title": "Pancake breakfast",
+    "title": "Slow breakfast",
     "kind": "personal",
     "source": "calendar",
     "todoist_id": "",
     "note": "",
-    "calendar_event_id": "evt00015473",
+    "calendar_event_id": "evt00010810",
     "done": true
    },
    {
     "start": "08:30",
-    "end": "09:30",
-    "title": "Weekly review with Life Coach",
-    "kind": "routine",
+    "end": "10:00",
+    "title": "Open morning",
+    "kind": "buffer",
     "source": "plan",
     "todoist_id": "",
     "note": "",
     "calendar_event_id": "",
-    "done": true
+    "done": false
    },
    {
-    "start": "09:30",
-    "end": "11:30",
-    "title": "Family hike",
+    "start": "10:00",
+    "end": "12:00",
+    "title": "Family walk by the river",
     "kind": "personal",
     "source": "calendar",
     "todoist_id": "",
     "note": "",
-    "calendar_event_id": "evt00006459",
+    "calendar_event_id": "evt00028605",
     "done": false
    },
    {
-    "start": "11:30",
-    "end": "12:30",
-    "title": "Lunch",
+    "start": "12:00",
+    "end": "13:00",
+    "title": "Lunch with Grandpa Ray",
     "kind": "personal",
     "source": "calendar",
     "todoist_id": "",
     "note": "",
-    "calendar_event_id": "evt00001556",
+    "calendar_event_id": "evt00023396",
     "done": false
    },
    {
-    "start": "12:30",
-    "end": "13:30",
-    "title": "Replace the furnace filter",
-    "kind": "task",
-    "source": "todoist",
-    "todoist_id": "t8135",
-    "note": "",
-    "calendar_event_id": "",
-    "done": false
-   },
-   {
-    "start": "13:30",
+    "start": "13:00",
     "end": "15:00",
-    "title": "Open afternoon",
+    "title": "Rest",
     "kind": "buffer",
     "source": "plan",
     "todoist_id": "",
@@ -937,57 +872,57 @@
    },
    {
     "start": "15:00",
-    "end": "16:00",
-    "title": "Grocery pickup",
-    "kind": "task",
-    "source": "plan",
-    "todoist_id": "",
-    "note": "",
-    "calendar_event_id": "",
-    "done": false
-   },
-   {
-    "start": "16:00",
-    "end": "17:30",
-    "title": "Leo's game",
+    "end": "17:00",
+    "title": "Cook for the week",
     "kind": "personal",
     "source": "calendar",
     "todoist_id": "",
     "note": "",
-    "calendar_event_id": "evt00005022",
+    "calendar_event_id": "evt00014347",
     "done": false
    },
    {
     "start": "17:30",
     "end": "18:30",
-    "title": "Dinner",
+    "title": "Family dinner",
     "kind": "personal",
     "source": "calendar",
     "todoist_id": "",
     "note": "",
-    "calendar_event_id": "evt00002237",
+    "calendar_event_id": "evt00009250",
     "done": false
    },
    {
     "start": "18:30",
-    "end": "20:30",
-    "title": "Pizza and board games",
+    "end": "20:00",
+    "title": "Board games",
     "kind": "personal",
     "source": "calendar",
     "todoist_id": "",
     "note": "",
-    "calendar_event_id": "evt00021882",
+    "calendar_event_id": "evt00006480",
     "done": false
    },
    {
-    "start": "20:30",
-    "end": "22:00",
-    "title": "Movie",
+    "start": "20:00",
+    "end": "21:30",
+    "title": "Read",
     "kind": "personal",
     "source": "calendar",
     "todoist_id": "",
     "note": "",
-    "calendar_event_id": "evt00001578",
+    "calendar_event_id": "evt00000975",
+    "done": false
+   },
+   {
+    "start": "21:30",
+    "end": "22:00",
+    "title": "Wind down",
+    "kind": "routine",
+    "source": "plan",
+    "todoist_id": "",
+    "note": "",
+    "calendar_event_id": "",
     "done": false
    }
   ],
@@ -1045,21 +980,6 @@
  "bills": {
   "rows": [
    {
-    "bill": "Cedar Falls Water & Trash",
-    "amount": 61.75,
-    "frequency": "monthly",
-    "day": "18",
-    "next_due": "2026-11-18",
-    "autopay": "No",
-    "status": "active",
-    "notes": "",
-    "pay_link": "",
-    "due": "2026-11-18",
-    "days_left": -3,
-    "marked": true,
-    "paid": true
-   },
-   {
     "bill": "Disney+",
     "amount": 9.99,
     "frequency": "monthly",
@@ -1070,7 +990,7 @@
     "notes": "",
     "pay_link": "",
     "due": "2026-11-19",
-    "days_left": -2,
+    "days_left": -3,
     "marked": true,
     "paid": true
    },
@@ -1085,9 +1005,9 @@
     "notes": "",
     "pay_link": "",
     "due": "2026-11-21",
-    "days_left": 0,
-    "marked": false,
-    "paid": false
+    "days_left": -1,
+    "marked": true,
+    "paid": true
    },
    {
     "bill": "Peak Wireless, 3 lines",
@@ -1100,7 +1020,7 @@
     "notes": "",
     "pay_link": "",
     "due": "2026-11-22",
-    "days_left": 1,
+    "days_left": 0,
     "marked": false,
     "paid": false
    },
@@ -1115,7 +1035,7 @@
     "notes": "Pay in the tenant portal",
     "pay_link": "",
     "due": "2026-12-01",
-    "days_left": 10,
+    "days_left": 9,
     "marked": false,
     "paid": false
    },
@@ -1130,7 +1050,7 @@
     "notes": "Family pass",
     "pay_link": "",
     "due": "2026-12-03",
-    "days_left": 12,
+    "days_left": 11,
     "marked": false,
     "paid": false
    },
@@ -1145,7 +1065,7 @@
     "notes": "",
     "pay_link": "",
     "due": "2026-12-04",
-    "days_left": 13,
+    "days_left": 12,
     "marked": false,
     "paid": false
    }
@@ -1174,51 +1094,47 @@
     "pay_link": ""
    }
   ],
-  "total": 1471.4,
+  "total": 1457.4,
   "days": 14,
   "source": "bills"
  },
  "balance": {
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "read_at": "06:15",
-  "checking": 2240.39,
+  "checking": 1965.37,
   "notes": "Read from the credit union this morning.",
   "savings": "1850.00"
  },
  "weight": {
   "latest": [
-   "2026-11-20T06:40:00-07:00",
+   "2026-11-21T06:40:00-07:00",
    194.6
   ],
   "goal": 185.0,
   "start": [
-   "2026-10-17",
+   "2026-10-18",
    196.5
   ],
   "daily": [
    [
-    "2026-10-22",
+    "2026-10-23",
     196.4
    ],
    [
-    "2026-10-23",
+    "2026-10-24",
     196.2
    ],
    [
-    "2026-10-24",
+    "2026-10-25",
     195.9
    ],
    [
-    "2026-10-25",
+    "2026-10-26",
     195.7
    ],
    [
-    "2026-10-26",
-    195.5
-   ],
-   [
     "2026-10-27",
-    195.4
+    195.5
    ],
    [
     "2026-10-28",
@@ -1226,15 +1142,15 @@
    ],
    [
     "2026-10-29",
-    195.5
+    195.4
    ],
    [
     "2026-10-30",
-    195.3
+    195.5
    ],
    [
     "2026-10-31",
-    195.2
+    195.3
    ],
    [
     "2026-11-01",
@@ -1242,15 +1158,15 @@
    ],
    [
     "2026-11-02",
-    195.0
+    195.2
    ],
    [
     "2026-11-03",
-    195.1
+    195.0
    ],
    [
     "2026-11-04",
-    195.2
+    195.1
    ],
    [
     "2026-11-05",
@@ -1262,11 +1178,11 @@
    ],
    [
     "2026-11-07",
-    195.0
+    195.2
    ],
    [
     "2026-11-08",
-    195.1
+    195.0
    ],
    [
     "2026-11-09",
@@ -1274,11 +1190,11 @@
    ],
    [
     "2026-11-10",
-    195.2
+    195.1
    ],
    [
     "2026-11-11",
-    195.3
+    195.2
    ],
    [
     "2026-11-12",
@@ -1286,52 +1202,6 @@
    ],
    [
     "2026-11-13",
-    195.2
-   ],
-   [
-    "2026-11-14",
-    195.0
-   ],
-   [
-    "2026-11-15",
-    195.1
-   ],
-   [
-    "2026-11-16",
-    195.0
-   ],
-   [
-    "2026-11-17",
-    194.8
-   ],
-   [
-    "2026-11-18",
-    194.7
-   ],
-   [
-    "2026-11-19",
-    194.7
-   ],
-   [
-    "2026-11-20",
-    194.6
-   ]
-  ],
-  "weekly": [
-   [
-    "2026-10-17",
-    196.5
-   ],
-   [
-    "2026-10-24",
-    196.1
-   ],
-   [
-    "2026-10-31",
-    195.4
-   ],
-   [
-    "2026-11-07",
     195.3
    ],
    [
@@ -1339,19 +1209,69 @@
     195.2
    ],
    [
+    "2026-11-15",
+    195.0
+   ],
+   [
+    "2026-11-16",
+    195.1
+   ],
+   [
+    "2026-11-17",
+    195.0
+   ],
+   [
+    "2026-11-18",
+    194.8
+   ],
+   [
+    "2026-11-19",
+    194.7
+   ],
+   [
+    "2026-11-20",
+    194.7
+   ],
+   [
     "2026-11-21",
+    194.6
+   ]
+  ],
+  "weekly": [
+   [
+    "2026-10-18",
+    196.5
+   ],
+   [
+    "2026-10-25",
+    196.1
+   ],
+   [
+    "2026-11-01",
+    195.4
+   ],
+   [
+    "2026-11-08",
+    195.3
+   ],
+   [
+    "2026-11-15",
+    195.2
+   ],
+   [
+    "2026-11-22",
     194.5
    ]
   ]
  },
  "weight_sync": {
-  "synced": "11/21 6:05 AM",
-  "latest": "194.6 lb on 11/20"
+  "synced": "11/22 6:05 AM",
+  "latest": "194.6 lb on 11/21"
  },
  "credit": {
   "scores": [
    {
-    "date": "2026-11-15",
+    "date": "2026-11-16",
     "bureau": "Experian",
     "score": 702,
     "change": 6,
@@ -1359,7 +1279,7 @@
     "source": "Credit monitoring"
    },
    {
-    "date": "2026-11-15",
+    "date": "2026-11-16",
     "bureau": "TransUnion",
     "score": 696,
     "change": 4,
@@ -1371,7 +1291,7 @@
  },
  "meals": {
   "plan": {
-   "date": "2026-11-21",
+   "date": "2026-11-22",
    "breakfast": "Veggie egg scramble and fruit",
    "lunch": "Turkey wraps",
    "snack": "Apple and peanut butter",
@@ -1422,7 +1342,7 @@
      "Errands"
     ],
     "flagged": false,
-    "due": "2026-11-19",
+    "due": "2026-11-20",
     "days_left": -2,
     "overdue": true,
     "duration_min": 15,
@@ -1439,7 +1359,7 @@
      "Errands"
     ],
     "flagged": false,
-    "due": "2026-11-23",
+    "due": "2026-11-24",
     "days_left": 2,
     "overdue": false,
     "duration_min": 15,
@@ -1454,8 +1374,8 @@
      "Home"
     ],
     "flagged": false,
-    "due": "2026-11-21",
-    "days_left": 0,
+    "due": "2026-11-23",
+    "days_left": 1,
     "overdue": false,
     "duration_min": 45,
     "view": "recipe"
@@ -1470,7 +1390,7 @@
     ],
     "flagged": false,
     "due": "2026-11-23",
-    "days_left": 2,
+    "days_left": 1,
     "overdue": false,
     "duration_min": 50,
     "view": null
@@ -1486,7 +1406,7 @@
     ],
     "flagged": false,
     "due": "2026-11-23",
-    "days_left": 2,
+    "days_left": 1,
     "overdue": false,
     "duration_min": 5,
     "view": null
@@ -1502,7 +1422,7 @@
     ],
     "flagged": true,
     "due": "2026-11-23",
-    "days_left": 2,
+    "days_left": 1,
     "overdue": false,
     "duration_min": 10,
     "view": null
@@ -1516,7 +1436,7 @@
      "Computer"
     ],
     "flagged": false,
-    "due": "2026-11-27",
+    "due": "2026-11-28",
     "days_left": 6,
     "overdue": false,
     "duration_min": 5,
@@ -1532,7 +1452,7 @@
     ],
     "flagged": false,
     "due": "2026-11-23",
-    "days_left": 2,
+    "days_left": 1,
     "overdue": false,
     "duration_min": 5,
     "view": null
@@ -1546,7 +1466,7 @@
      "Computer"
     ],
     "flagged": false,
-    "due": "2026-11-23",
+    "due": "2026-11-24",
     "days_left": 2,
     "overdue": false,
     "duration_min": 5,
@@ -1562,7 +1482,7 @@
     ],
     "flagged": false,
     "due": "2026-11-23",
-    "days_left": 2,
+    "days_left": 1,
     "overdue": false,
     "duration_min": 10,
     "view": null
@@ -1577,7 +1497,7 @@
     ],
     "flagged": false,
     "due": "2026-11-23",
-    "days_left": 2,
+    "days_left": 1,
     "overdue": false,
     "duration_min": 5,
     "view": null
@@ -1591,7 +1511,7 @@
      "Phone"
     ],
     "flagged": false,
-    "due": "2026-11-25",
+    "due": "2026-11-26",
     "days_left": 4,
     "overdue": false,
     "duration_min": 5,
@@ -1606,25 +1526,10 @@
      "Money"
     ],
     "flagged": false,
-    "due": "2026-11-26",
+    "due": "2026-11-27",
     "days_left": 5,
     "overdue": false,
     "duration_min": 10,
-    "view": null
-   },
-   {
-    "id": "t8129",
-    "content": "Read and sign the lease renewal (2 pages)",
-    "description": "Rent goes up $35 a month; the rest is unchanged.",
-    "project": "Home",
-    "labels": [
-     "Home"
-    ],
-    "flagged": false,
-    "due": "2026-11-28",
-    "days_left": 7,
-    "overdue": false,
-    "duration_min": 20,
     "view": null
    },
    {
@@ -1636,7 +1541,7 @@
      "Home"
     ],
     "flagged": false,
-    "due": "2026-11-24",
+    "due": "2026-11-25",
     "days_left": 3,
     "overdue": false,
     "duration_min": 10,
@@ -1651,7 +1556,7 @@
      "Home"
     ],
     "flagged": false,
-    "due": "2026-11-27",
+    "due": "2026-11-28",
     "days_left": 6,
     "overdue": false,
     "duration_min": 30,
@@ -1666,7 +1571,7 @@
      "Computer"
     ],
     "flagged": false,
-    "due": "2026-11-23",
+    "due": "2026-11-24",
     "days_left": 2,
     "overdue": false,
     "duration_min": 5,
@@ -1684,21 +1589,21 @@
    "items": [
     {
      "text": "Money: approve the $45 Summit Card payment for payday",
-     "when": "2026-11-21",
+     "when": "2026-11-23",
      "level": "act",
      "link": "/s/money#bills",
      "desk": "bookkeeper"
     },
     {
      "text": "Sends to Nora: the weekend plan text (draft ready)",
-     "when": "2026-11-21",
+     "when": "2026-11-23",
      "level": "act",
      "link": "/next/r/assistant#attention",
      "desk": "assistant"
     },
     {
      "text": "Kitchen faucet: landlord said this week",
-     "when": "2026-11-24",
+     "when": "2026-11-25",
      "level": "watch",
      "link": "/s/home",
      "desk": "home-manager"
@@ -1724,7 +1629,7 @@
     },
     {
      "text": "Thursday has three evening commitments",
-     "when": "2026-11-24",
+     "when": "2026-11-25",
      "level": "watch",
      "link": "/next/r/scheduler#calendar",
      "desk": "scheduler"
@@ -1750,7 +1655,7 @@
     },
     {
      "text": "StreamBox trial renews in 6 days at $11.99",
-     "when": "2026-11-27",
+     "when": "2026-11-28",
      "level": "watch",
      "link": "/s/money#bills",
      "desk": "bookkeeper"
@@ -1802,7 +1707,7 @@
    "items": [
     {
      "text": "Maya's birthday in 4 days: order the gift today",
-     "when": "2026-11-21",
+     "when": "2026-11-23",
      "level": "watch",
      "link": "/next/r/gifts#gifts",
      "desk": "gifts"
@@ -1840,14 +1745,14 @@
    "items": [
     {
      "text": "Car registration renews in 9 days, $86",
-     "when": "2026-11-30",
+     "when": "2026-12-01",
      "level": "watch",
      "link": "/next/chores",
      "desk": "home-manager"
     },
     {
      "text": "Kitchen faucet: waiting on the landlord",
-     "when": "2026-11-24",
+     "when": "2026-11-25",
      "level": "watch",
      "link": "/next/chores",
      "desk": "home-manager"
@@ -1896,7 +1801,7 @@
    "items": [
     {
      "text": "Annual report due in 12 days ($10)",
-     "when": "2026-12-03",
+     "when": "2026-12-04",
      "level": "watch",
      "link": "/next/companies",
      "desk": "business"
@@ -1948,7 +1853,7 @@
    "items": [
     {
      "text": "Leo's party: bounce house deposit due in 5 days",
-     "when": "2026-11-26",
+     "when": "2026-11-27",
      "level": "watch",
      "link": "/next/projects",
      "desk": "events"
@@ -2063,7 +1968,7 @@
    "items": [
     {
      "text": "Lease renewal: sign within 7 days",
-     "when": "2026-11-28",
+     "when": "2026-11-30",
      "level": "watch",
      "link": "/next/projects",
      "desk": "relocation"
@@ -2140,6 +2045,17 @@
    "needs": 0
   },
   {
+   "key": "business_analyst",
+   "name": "Business Analyst",
+   "nav": "business-analyst",
+   "owns": "Plans, numbers and strategy for Carter Studio and Brightline Labs, with a specific target for each",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 0,
+   "needs": 0
+  },
+  {
    "key": "business_coach",
    "name": "Business Coach",
    "nav": "business-coach",
@@ -2189,14 +2105,14 @@
    "items": [
     {
      "text": "Legal: sign the Carter Studio annual report",
-     "when": "2026-12-03",
+     "when": "2026-12-04",
      "level": "act",
      "link": "/next/companies",
      "desk": "legal"
     },
     {
      "text": "Lease renewal language checked: no surprises",
-     "when": "2026-11-28",
+     "when": "2026-11-30",
      "level": "watch",
      "link": "/next/projects",
      "desk": "legal"
@@ -2230,16 +2146,16 @@
   }
  ],
  "weather": {
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "summary": "Dry and partly cloudy today, high 47°; a rain chance tomorrow afternoon.",
-  "generated_at": "2026-11-21T06:00:00-07:00",
+  "generated_at": "2026-11-22T06:00:00-07:00",
   "stale": false,
   "places": [
    {
     "name": "Cedar Falls (home)",
     "days": [
      {
-      "date": "2026-11-21",
+      "date": "2026-11-22",
       "sky": "Partly cloudy",
       "high": 47,
       "low": 29,
@@ -2257,7 +2173,7 @@
       "aqi_max": 31
      },
      {
-      "date": "2026-11-22",
+      "date": "2026-11-23",
       "sky": "Sunny",
       "high": 44,
       "low": 26,
@@ -2281,7 +2197,7 @@
     "name": "Ridgeway (office)",
     "days": [
      {
-      "date": "2026-11-21",
+      "date": "2026-11-22",
       "sky": "Sunny",
       "high": 49,
       "low": 31,
@@ -2299,7 +2215,7 @@
       "aqi_max": 37
      },
      {
-      "date": "2026-11-22",
+      "date": "2026-11-23",
       "sky": "Mostly cloudy",
       "high": 46,
       "low": 28,

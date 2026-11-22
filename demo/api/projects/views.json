@@ -20,7 +20,7 @@
     "next": {
      "who": "you",
      "text": "Pay the $120 bounce house deposit for Leo's party",
-     "due": "2026-11-26"
+     "due": "2026-11-27"
     },
     "needsYou": [],
     "risks": [],
@@ -28,13 +28,13 @@
      {
       "who": "you",
       "text": "Pay the $120 bounce house deposit for Leo's party",
-      "due": "2026-11-26"
+      "due": "2026-11-27"
      },
      {
       "who": "waiting",
       "name": "Owen Brooks",
       "text": "RSVP for his two kids",
-      "due": "2026-11-24"
+      "due": "2026-11-25"
      }
     ]
    },
@@ -90,7 +90,7 @@
     "next": {
      "who": "you",
      "text": "Read and sign the lease renewal (2 pages)",
-     "due": "2026-11-28"
+     "due": "2026-11-30"
     },
     "needsYou": [],
     "risks": [],
@@ -98,7 +98,7 @@
      {
       "who": "you",
       "text": "Read and sign the lease renewal (2 pages)",
-      "due": "2026-11-28"
+      "due": "2026-11-30"
      },
      {
       "who": "you",
@@ -109,7 +109,7 @@
       "who": "waiting",
       "name": "Aspen Court Properties",
       "text": "Fix the kitchen faucet before signing",
-      "due": "2026-11-24"
+      "due": "2026-11-25"
      }
     ]
    },
@@ -161,7 +161,7 @@
       "who": "waiting",
       "name": "Juniper Dental",
       "text": "Confirm the pilot start date",
-      "due": "2026-11-25"
+      "due": "2026-11-26"
      }
     ]
    },

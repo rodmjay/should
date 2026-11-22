@@ -15,7 +15,7 @@
  "items": [
   {
    "text": "Lease renewal: sign within 7 days",
-   "when": "2026-11-28",
+   "when": "2026-11-30",
    "level": "watch",
    "link": "/next/projects"
   }
@@ -24,7 +24,7 @@
  "watch": [
   {
    "text": "Lease renewal: sign within 7 days",
-   "when": "2026-11-28",
+   "when": "2026-11-30",
    "level": "watch",
    "link": "/next/projects"
   }
@@ -39,8 +39,8 @@
     "Home"
    ],
    "flagged": false,
-   "due": "2026-11-28",
-   "days_left": 7,
+   "due": "2026-11-30",
+   "days_left": 8,
    "overdue": false,
    "duration_min": 20,
    "view": null
@@ -55,7 +55,7 @@
    ],
    "flagged": false,
    "due": "2026-11-30",
-   "days_left": 9,
+   "days_left": 8,
    "overdue": false,
    "duration_min": 30,
    "view": null
@@ -79,8 +79,8 @@
  "routines": [],
  "report": {
   "latest": {
-   "path": "apartment-search/reports/2026-11-20.md",
-   "date": "2026-11-20",
+   "path": "apartment-search/reports/2026-11-21.md",
+   "date": "2026-11-21",
    "summary": "Renewal offer reviewed; staying is cheaper than moving this year.",
    "html": "<p>Renewal offer reviewed; staying is cheaper than moving this year.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
   },
@@ -89,7 +89,7 @@
  "tiles": [
   {
    "label": "Lease ends",
-   "value": "1/30",
+   "value": "1/31",
    "sub": "renewal offered",
    "tone": "",
    "trend": [],
@@ -145,7 +145,7 @@
      "items": [
       {
        "text": "Lease renewal: sign within 7 days",
-       "when": "2026-11-28",
+       "when": "2026-11-30",
        "level": "watch",
        "link": "/next/projects"
       }
@@ -160,8 +160,8 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-11-28",
-       "days_left": 7,
+       "due": "2026-11-30",
+       "days_left": 8,
        "overdue": false,
        "duration_min": 20,
        "view": null
@@ -176,7 +176,7 @@
        ],
        "flagged": false,
        "due": "2026-11-30",
-       "days_left": 9,
+       "days_left": 8,
        "overdue": false,
        "duration_min": 30,
        "view": null

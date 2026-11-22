@@ -147,7 +147,7 @@
  ],
  "deadlines": [
   {
-   "next_due": "2027-01-05",
+   "next_due": "2027-01-06",
    "short_name": "Brightline Labs",
    "legal_name": "Brightline Labs LLC",
    "title": "Form the LLC",
@@ -199,7 +199,7 @@
    "title": "Draft operating agreement",
    "signed": false,
    "kind": "operating_agreement",
-   "dated": "2026-11-11",
+   "dated": "2026-11-12",
    "location": "Drive, Business folder"
   }
  ],

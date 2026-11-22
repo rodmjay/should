@@ -26,7 +26,7 @@
    ],
    "report": {
     "summary": "Faucet repair is with the landlord; furnace filter due Thursday.",
-    "date": "2026-11-20"
+    "date": "2026-11-21"
    },
    "act": 0,
    "tasks": 10
@@ -38,7 +38,7 @@
    "tiles": [
     {
      "label": "Lease ends",
-     "value": "1/30",
+     "value": "1/31",
      "sub": "renewal offered",
      "tone": ""
     },
@@ -51,7 +51,7 @@
    ],
    "report": {
     "summary": "Renewal offer reviewed; staying is cheaper than moving this year.",
-    "date": "2026-11-20"
+    "date": "2026-11-21"
    },
    "act": 0,
    "tasks": 3
@@ -76,7 +76,7 @@
    ],
    "report": {
     "summary": "Vaccines are due next month; food lasts three weeks.",
-    "date": "2026-11-20"
+    "date": "2026-11-21"
    },
    "act": 0,
    "tasks": 1
@@ -107,7 +107,7 @@
    ],
    "report": {
     "summary": "Meal plan is set through next Friday; groceries came in $8 under the cap.",
-    "date": "2026-11-20"
+    "date": "2026-11-21"
    },
    "act": 0,
    "tasks": 5
@@ -124,7 +124,7 @@
     "Money"
    ],
    "flagged": false,
-   "due": "2026-11-30",
+   "due": "2026-12-01",
    "days_left": 9,
    "overdue": false,
    "duration_min": 10,
@@ -184,7 +184,7 @@
     "Home"
    ],
    "flagged": false,
-   "due": "2026-11-24",
+   "due": "2026-11-25",
    "days_left": 3,
    "overdue": false,
    "duration_min": 10,
@@ -214,7 +214,7 @@
     "Home"
    ],
    "flagged": false,
-   "due": "2026-12-04",
+   "due": "2026-12-05",
    "days_left": 13,
    "overdue": false,
    "duration_min": 60,
@@ -229,7 +229,7 @@
     "Home"
    ],
    "flagged": false,
-   "due": "2026-11-27",
+   "due": "2026-11-28",
    "days_left": 6,
    "overdue": false,
    "duration_min": 30,
@@ -244,7 +244,7 @@
     "Home"
    ],
    "flagged": false,
-   "due": "2026-12-11",
+   "due": "2026-12-12",
    "days_left": 20,
    "overdue": false,
    "duration_min": 10,
@@ -260,7 +260,7 @@
    ],
    "flagged": false,
    "due": "2026-11-30",
-   "days_left": 9,
+   "days_left": 8,
    "overdue": false,
    "duration_min": 30,
    "view": null
@@ -274,8 +274,8 @@
     "Home"
    ],
    "flagged": false,
-   "due": "2026-11-28",
-   "days_left": 7,
+   "due": "2026-11-30",
+   "days_left": 8,
    "overdue": false,
    "duration_min": 20,
    "view": null
@@ -334,7 +334,7 @@
     "Errands"
    ],
    "flagged": false,
-   "due": "2026-11-23",
+   "due": "2026-11-24",
    "days_left": 2,
    "overdue": false,
    "duration_min": 15,
@@ -349,8 +349,8 @@
     "Home"
    ],
    "flagged": false,
-   "due": "2026-11-21",
-   "days_left": 0,
+   "due": "2026-11-23",
+   "days_left": 1,
    "overdue": false,
    "duration_min": 45,
    "view": "recipe"
@@ -365,7 +365,7 @@
    ],
    "flagged": false,
    "due": "2026-11-23",
-   "days_left": 2,
+   "days_left": 1,
    "overdue": false,
    "duration_min": 50,
    "view": null
@@ -381,7 +381,7 @@
    ],
    "flagged": false,
    "due": "2026-11-23",
-   "days_left": 2,
+   "days_left": 1,
    "overdue": false,
    "duration_min": 5,
    "view": null
@@ -408,39 +408,33 @@
   "weight": {
    "readings": [
     [
-     "2026-10-17",
+     "2026-10-18",
      196.5
     ],
     [
-     "2026-10-24",
+     "2026-10-25",
      196.1
     ],
     [
-     "2026-10-31",
+     "2026-11-01",
      195.4
     ],
     [
-     "2026-11-07",
+     "2026-11-08",
      195.3
     ],
     [
-     "2026-11-14",
+     "2026-11-15",
      195.2
     ],
     [
-     "2026-11-21",
+     "2026-11-22",
      194.5
     ]
    ],
    "goal": 185.0
   },
   "events": [
-   {
-    "day": "2026-11-21",
-    "time": "17:00",
-    "title": "Soccer practice",
-    "location": "Ridgeway Park"
-   },
    {
     "day": "2026-11-22",
     "time": "",
@@ -449,38 +443,44 @@
    },
    {
     "day": "2026-11-23",
-    "time": "08:30",
-    "title": "Dentist, Maya",
-    "location": "Cedar Falls Dental"
+    "time": "16:00",
+    "title": "Piano lesson",
+    "location": "Rosa's studio"
    },
    {
-    "day": "2026-11-24",
-    "time": "19:00",
-    "title": "Date night",
-    "location": "Trailhead Tacos"
-   },
-   {
-    "day": "2026-11-24",
-    "time": "12:00",
-    "title": "Grandpa Ray visits for lunch",
-    "location": null
-   },
-   {
-    "day": "2026-11-25",
+    "day": "2026-11-23",
     "time": "10:30",
     "title": "Library story time",
     "location": "Cedar Falls Library"
    },
    {
-    "day": "2026-11-26",
-    "time": "16:00",
-    "title": "Leo's game",
-    "location": "Ridgeway Park"
+    "day": "2026-11-24",
+    "time": "08:30",
+    "title": "Dentist, Maya",
+    "location": "Cedar Falls Dental"
+   },
+   {
+    "day": "2026-11-25",
+    "time": "19:00",
+    "title": "Date night",
+    "location": "Trailhead Tacos"
+   },
+   {
+    "day": "2026-11-25",
+    "time": "12:00",
+    "title": "Grandpa Ray visits for lunch",
+    "location": null
    },
    {
     "day": "2026-11-26",
-    "time": "17:00",
-    "title": "Soccer practice",
+    "time": "10:30",
+    "title": "Library story time",
+    "location": "Cedar Falls Library"
+   },
+   {
+    "day": "2026-11-27",
+    "time": "16:00",
+    "title": "Leo's game",
     "location": "Ridgeway Park"
    }
   ]

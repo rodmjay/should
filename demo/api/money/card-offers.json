@@ -9,14 +9,14 @@
    "reward_value": 3.0,
    "cap": null,
    "min_spend": null,
-   "expires_on": "2026-11-24",
+   "expires_on": "2026-11-25",
    "days_left": 3,
    "status": "activated",
    "matches": true,
    "notes": "",
    "card": "First Mesa Credit Union",
    "last4": "4417",
-   "last_seen": "2026-11-21"
+   "last_seen": "2026-11-22"
   },
   {
    "source": "Summit Card offers",
@@ -26,14 +26,14 @@
    "reward_value": 10.0,
    "cap": null,
    "min_spend": null,
-   "expires_on": "2026-11-28",
+   "expires_on": "2026-11-29",
    "days_left": 7,
    "status": "available",
    "matches": true,
    "notes": "",
    "card": "Summit Card",
    "last4": "0932",
-   "last_seen": "2026-11-21"
+   "last_seen": "2026-11-22"
   }
  ],
  "other": [
@@ -45,14 +45,14 @@
    "reward_value": 7.0,
    "cap": null,
    "min_spend": null,
-   "expires_on": "2026-12-02",
+   "expires_on": "2026-12-03",
    "days_left": 11,
    "status": "available",
    "matches": true,
    "notes": "",
    "card": "Summit Card",
    "last4": "0932",
-   "last_seen": "2026-11-21"
+   "last_seen": "2026-11-22"
   },
   {
    "source": "Credit union offers",
@@ -62,14 +62,14 @@
    "reward_value": 20.0,
    "cap": null,
    "min_spend": null,
-   "expires_on": "2026-12-06",
+   "expires_on": "2026-12-07",
    "days_left": 15,
    "status": "available",
    "matches": false,
    "notes": "",
    "card": "First Mesa Credit Union",
    "last4": "4417",
-   "last_seen": "2026-11-21"
+   "last_seen": "2026-11-22"
   },
   {
    "source": "Summit Card offers",
@@ -79,14 +79,14 @@
    "reward_value": 5.0,
    "cap": null,
    "min_spend": null,
-   "expires_on": "2026-12-10",
+   "expires_on": "2026-12-11",
    "days_left": 19,
    "status": "available",
    "matches": true,
    "notes": "",
    "card": "Summit Card",
    "last4": "0932",
-   "last_seen": "2026-11-21"
+   "last_seen": "2026-11-22"
   },
   {
    "source": "Summit Card offers",
@@ -96,14 +96,14 @@
    "reward_value": 10.0,
    "cap": null,
    "min_spend": null,
-   "expires_on": "2026-12-14",
+   "expires_on": "2026-12-15",
    "days_left": 23,
    "status": "available",
    "matches": false,
    "notes": "",
    "card": "Summit Card",
    "last4": "0932",
-   "last_seen": "2026-11-21"
+   "last_seen": "2026-11-22"
   },
   {
    "source": "Credit union offers",
@@ -113,14 +113,14 @@
    "reward_value": 3.0,
    "cap": null,
    "min_spend": null,
-   "expires_on": "2026-12-18",
+   "expires_on": "2026-12-19",
    "days_left": 27,
    "status": "activated",
    "matches": true,
    "notes": "",
    "card": "First Mesa Credit Union",
    "last4": "4417",
-   "last_seen": "2026-11-21"
+   "last_seen": "2026-11-22"
   },
   {
    "source": "Summit Card offers",
@@ -130,14 +130,14 @@
    "reward_value": 20.0,
    "cap": null,
    "min_spend": null,
-   "expires_on": "2026-12-22",
+   "expires_on": "2026-12-23",
    "days_left": 31,
    "status": "available",
    "matches": false,
    "notes": "",
    "card": "Summit Card",
    "last4": "0932",
-   "last_seen": "2026-11-21"
+   "last_seen": "2026-11-22"
   },
   {
    "source": "Summit Card offers",
@@ -147,14 +147,14 @@
    "reward_value": 7.0,
    "cap": null,
    "min_spend": null,
-   "expires_on": "2026-12-26",
+   "expires_on": "2026-12-27",
    "days_left": 35,
    "status": "available",
    "matches": true,
    "notes": "",
    "card": "Summit Card",
    "last4": "0932",
-   "last_seen": "2026-11-21"
+   "last_seen": "2026-11-22"
   },
   {
    "source": "Credit union offers",
@@ -164,14 +164,14 @@
    "reward_value": 10.0,
    "cap": null,
    "min_spend": null,
-   "expires_on": "2026-12-30",
+   "expires_on": "2026-12-31",
    "days_left": 39,
    "status": "available",
    "matches": false,
    "notes": "",
    "card": "First Mesa Credit Union",
    "last4": "4417",
-   "last_seen": "2026-11-21"
+   "last_seen": "2026-11-22"
   },
   {
    "source": "Summit Card offers",
@@ -181,14 +181,14 @@
    "reward_value": 5.0,
    "cap": null,
    "min_spend": null,
-   "expires_on": "2027-01-03",
+   "expires_on": "2027-01-04",
    "days_left": 43,
    "status": "available",
    "matches": false,
    "notes": "",
    "card": "Summit Card",
    "last4": "0932",
-   "last_seen": "2026-11-21"
+   "last_seen": "2026-11-22"
   },
   {
    "source": "Summit Card offers",
@@ -198,14 +198,14 @@
    "reward_value": 20.0,
    "cap": null,
    "min_spend": null,
-   "expires_on": "2027-01-07",
+   "expires_on": "2027-01-08",
    "days_left": 47,
    "status": "available",
    "matches": true,
    "notes": "",
    "card": "Summit Card",
    "last4": "0932",
-   "last_seen": "2026-11-21"
+   "last_seen": "2026-11-22"
   }
  ],
  "count": 12

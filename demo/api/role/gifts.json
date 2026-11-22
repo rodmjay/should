@@ -15,7 +15,7 @@
  "items": [
   {
    "text": "Maya's birthday in 4 days: order the gift today",
-   "when": "2026-11-21",
+   "when": "2026-11-23",
    "level": "watch",
    "link": "/next/r/gifts#gifts"
   }
@@ -24,7 +24,7 @@
  "watch": [
   {
    "text": "Maya's birthday in 4 days: order the gift today",
-   "when": "2026-11-21",
+   "when": "2026-11-23",
    "level": "watch",
    "link": "/next/r/gifts#gifts"
   }
@@ -41,7 +41,7 @@
    ],
    "flagged": true,
    "due": "2026-11-23",
-   "days_left": 2,
+   "days_left": 1,
    "overdue": false,
    "duration_min": 10,
    "view": null
@@ -57,8 +57,8 @@
  ],
  "report": {
   "latest": {
-   "path": "gifts/reports/2026-11-20.md",
-   "date": "2026-11-20",
+   "path": "gifts/reports/2026-11-21.md",
+   "date": "2026-11-21",
    "summary": "Maya's gift is picked and in the cart; two cards go out next week.",
    "html": "<p>Maya's gift is picked and in the cart; two cards go out next week.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
   },
@@ -98,7 +98,7 @@
    "error": null,
    "upcoming": [
     {
-     "date": "2026-11-25",
+     "date": "2026-11-26",
      "name": "Maya",
      "occasion": "birthday (12)",
      "address_ok": true,
@@ -108,7 +108,7 @@
      "budget": 60
     },
     {
-     "date": "2026-12-10",
+     "date": "2026-12-11",
      "name": "Leo",
      "occasion": "birthday (16)",
      "address_ok": true,
@@ -118,7 +118,7 @@
      "budget": 80
     },
     {
-     "date": "2026-12-29",
+     "date": "2026-12-30",
      "name": "Ivy Wynn",
      "occasion": "birthday (9)",
      "address_ok": false,
@@ -128,7 +128,7 @@
      "budget": 30
     },
     {
-     "date": "2027-02-06",
+     "date": "2027-02-07",
      "name": "Grandpa Ray",
      "occasion": "birthday (71)",
      "address_ok": true,
@@ -143,7 +143,7 @@
     "people": [
      {
       "person": "Maya",
-      "birthday": "11/25",
+      "birthday": "11/26",
       "birthday_amt": 60,
       "christmas": "$80 art kit",
       "other": "Easter $15",
@@ -151,7 +151,7 @@
      },
      {
       "person": "Leo",
-      "birthday": "12/10",
+      "birthday": "12/11",
       "birthday_amt": 80,
       "christmas": "$80 headphones",
       "other": "",
@@ -167,7 +167,7 @@
      },
      {
       "person": "Grandpa Ray",
-      "birthday": "2/6",
+      "birthday": "2/7",
       "birthday_amt": 50,
       "christmas": "$40 photo book",
       "other": "",
@@ -183,7 +183,7 @@
      },
      {
       "person": "Ivy Wynn",
-      "birthday": "12/29",
+      "birthday": "12/30",
       "birthday_amt": 30,
       "christmas": "$25 books",
       "other": "",
@@ -201,7 +201,7 @@
     {
      "name": "Gift fund",
      "frequency": "monthly",
-     "next_due": "2026-12-01",
+     "next_due": "2026-12-02",
      "status": "active",
      "amount_usd": 60
     }

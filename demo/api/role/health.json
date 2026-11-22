@@ -69,7 +69,7 @@
     "Errands"
    ],
    "flagged": false,
-   "due": "2026-11-23",
+   "due": "2026-11-24",
    "days_left": 2,
    "overdue": false,
    "duration_min": 15,
@@ -84,8 +84,8 @@
     "Home"
    ],
    "flagged": false,
-   "due": "2026-11-21",
-   "days_left": 0,
+   "due": "2026-11-23",
+   "days_left": 1,
    "overdue": false,
    "duration_min": 45,
    "view": "recipe"
@@ -100,7 +100,7 @@
    ],
    "flagged": false,
    "due": "2026-11-23",
-   "days_left": 2,
+   "days_left": 1,
    "overdue": false,
    "duration_min": 50,
    "view": null
@@ -116,7 +116,7 @@
    ],
    "flagged": false,
    "due": "2026-11-23",
-   "days_left": 2,
+   "days_left": 1,
    "overdue": false,
    "duration_min": 5,
    "view": null
@@ -144,8 +144,8 @@
  ],
  "report": {
   "latest": {
-   "path": "nutrition/reports/2026-11-20.md",
-   "date": "2026-11-20",
+   "path": "nutrition/reports/2026-11-21.md",
+   "date": "2026-11-21",
    "summary": "Meal plan is set through next Friday; groceries came in $8 under the cap.",
    "html": "<p>Meal plan is set through next Friday; groceries came in $8 under the cap.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
   },
@@ -275,7 +275,7 @@
         "Errands"
        ],
        "flagged": false,
-       "due": "2026-11-23",
+       "due": "2026-11-24",
        "days_left": 2,
        "overdue": false,
        "duration_min": 15,
@@ -290,8 +290,8 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-11-21",
-       "days_left": 0,
+       "due": "2026-11-23",
+       "days_left": 1,
        "overdue": false,
        "duration_min": 45,
        "view": "recipe"
@@ -306,7 +306,7 @@
        ],
        "flagged": false,
        "due": "2026-11-23",
-       "days_left": 2,
+       "days_left": 1,
        "overdue": false,
        "duration_min": 50,
        "view": null
@@ -322,7 +322,7 @@
        ],
        "flagged": false,
        "due": "2026-11-23",
-       "days_left": 2,
+       "days_left": 1,
        "overdue": false,
        "duration_min": 5,
        "view": null
@@ -331,38 +331,34 @@
     },
     "weight": {
      "latest": [
-      "2026-11-20T06:40:00-07:00",
+      "2026-11-21T06:40:00-07:00",
       194.6
      ],
      "goal": 185.0,
      "start": [
-      "2026-10-17",
+      "2026-10-18",
       196.5
      ],
      "daily": [
       [
-       "2026-10-22",
+       "2026-10-23",
        196.4
       ],
       [
-       "2026-10-23",
+       "2026-10-24",
        196.2
       ],
       [
-       "2026-10-24",
+       "2026-10-25",
        195.9
       ],
       [
-       "2026-10-25",
+       "2026-10-26",
        195.7
       ],
       [
-       "2026-10-26",
-       195.5
-      ],
-      [
        "2026-10-27",
-       195.4
+       195.5
       ],
       [
        "2026-10-28",
@@ -370,15 +366,15 @@
       ],
       [
        "2026-10-29",
-       195.5
+       195.4
       ],
       [
        "2026-10-30",
-       195.3
+       195.5
       ],
       [
        "2026-10-31",
-       195.2
+       195.3
       ],
       [
        "2026-11-01",
@@ -386,15 +382,15 @@
       ],
       [
        "2026-11-02",
-       195.0
+       195.2
       ],
       [
        "2026-11-03",
-       195.1
+       195.0
       ],
       [
        "2026-11-04",
-       195.2
+       195.1
       ],
       [
        "2026-11-05",
@@ -406,11 +402,11 @@
       ],
       [
        "2026-11-07",
-       195.0
+       195.2
       ],
       [
        "2026-11-08",
-       195.1
+       195.0
       ],
       [
        "2026-11-09",
@@ -418,11 +414,11 @@
       ],
       [
        "2026-11-10",
-       195.2
+       195.1
       ],
       [
        "2026-11-11",
-       195.3
+       195.2
       ],
       [
        "2026-11-12",
@@ -430,52 +426,6 @@
       ],
       [
        "2026-11-13",
-       195.2
-      ],
-      [
-       "2026-11-14",
-       195.0
-      ],
-      [
-       "2026-11-15",
-       195.1
-      ],
-      [
-       "2026-11-16",
-       195.0
-      ],
-      [
-       "2026-11-17",
-       194.8
-      ],
-      [
-       "2026-11-18",
-       194.7
-      ],
-      [
-       "2026-11-19",
-       194.7
-      ],
-      [
-       "2026-11-20",
-       194.6
-      ]
-     ],
-     "weekly": [
-      [
-       "2026-10-17",
-       196.5
-      ],
-      [
-       "2026-10-24",
-       196.1
-      ],
-      [
-       "2026-10-31",
-       195.4
-      ],
-      [
-       "2026-11-07",
        195.3
       ],
       [
@@ -483,13 +433,63 @@
        195.2
       ],
       [
+       "2026-11-15",
+       195.0
+      ],
+      [
+       "2026-11-16",
+       195.1
+      ],
+      [
+       "2026-11-17",
+       195.0
+      ],
+      [
+       "2026-11-18",
+       194.8
+      ],
+      [
+       "2026-11-19",
+       194.7
+      ],
+      [
+       "2026-11-20",
+       194.7
+      ],
+      [
        "2026-11-21",
+       194.6
+      ]
+     ],
+     "weekly": [
+      [
+       "2026-10-18",
+       196.5
+      ],
+      [
+       "2026-10-25",
+       196.1
+      ],
+      [
+       "2026-11-01",
+       195.4
+      ],
+      [
+       "2026-11-08",
+       195.3
+      ],
+      [
+       "2026-11-15",
+       195.2
+      ],
+      [
+       "2026-11-22",
        194.5
       ]
      ],
      "progress": [
       {
-       "week_of": "2026-10-17",
+       "week_of": "2026-10-18",
        "avg_weight_lb": 196.5,
        "avg_body_fat_pct": 24.6,
        "avg_steps": 6800,
@@ -498,7 +498,7 @@
        "notes": ""
       },
       {
-       "week_of": "2026-10-24",
+       "week_of": "2026-10-25",
        "avg_weight_lb": 196.1,
        "avg_body_fat_pct": 24.5,
        "avg_steps": 7010,
@@ -507,7 +507,7 @@
        "notes": ""
       },
       {
-       "week_of": "2026-10-31",
+       "week_of": "2026-11-01",
        "avg_weight_lb": 195.4,
        "avg_body_fat_pct": 24.4,
        "avg_steps": 7220,
@@ -516,7 +516,7 @@
        "notes": ""
       },
       {
-       "week_of": "2026-11-07",
+       "week_of": "2026-11-08",
        "avg_weight_lb": 195.3,
        "avg_body_fat_pct": 24.3,
        "avg_steps": 7430,
@@ -525,7 +525,7 @@
        "notes": ""
       },
       {
-       "week_of": "2026-11-14",
+       "week_of": "2026-11-15",
        "avg_weight_lb": 195.2,
        "avg_body_fat_pct": 24.2,
        "avg_steps": 7640,
@@ -534,7 +534,7 @@
        "notes": ""
       },
       {
-       "week_of": "2026-11-21",
+       "week_of": "2026-11-22",
        "avg_weight_lb": 194.5,
        "avg_body_fat_pct": 24.1,
        "avg_steps": 7850,
@@ -546,54 +546,54 @@
     },
     "weight_svg": "<svg viewBox=\"0 0 640 160\" role=\"img\" aria-label=\"Weight, last 30 days\" style=\"width:100%;height:auto\"><polyline fill=\"none\" stroke=\"var(--r-health, #2e7d32)\" stroke-width=\"2.5\" points=\"20.0,20.0 40.7,33.3 61.4,53.3 82.1,66.7 102.8,80.0 123.4,86.7 144.1,86.7 164.8,80.0 185.5,93.3 206.2,100.0 226.9,100.0 247.6,113.3 268.3,106.7 289.0,100.0 309.7,100.0 330.3,100.0 351.0,113.3 371.7,106.7 392.4,106.7 413.1,100.0 433.8,93.3 454.5,93.3 475.2,100.0 495.9,113.3 516.6,106.7 537.2,113.3 557.9,126.7 578.6,133.3 599.3,133.3 620.0,140.0\"/></svg>",
     "weight_sync": {
-     "synced": "11/21 6:05 AM",
-     "latest": "194.6 lb on 11/20"
+     "synced": "11/22 6:05 AM",
+     "latest": "194.6 lb on 11/21"
     },
     "plan": {
      "days": {
-      "2026-11-21": {
+      "2026-11-22": {
        "breakfast": "Veggie egg scramble and fruit",
        "lunch": "Turkey wraps",
        "snack": "Apple and peanut butter",
        "dinner": "Chicken tinga tacos",
        "sweet": "Mango rice pudding"
       },
-      "2026-11-22": {
+      "2026-11-23": {
        "breakfast": "Oatmeal with berries",
        "lunch": "Leftover taco bowl",
        "snack": "Greek yogurt",
        "dinner": "Sheet-pan lemon salmon",
        "sweet": "Dark chocolate square"
       },
-      "2026-11-23": {
+      "2026-11-24": {
        "breakfast": "Eggs and toast",
        "lunch": "Chicken salad",
        "snack": "Carrots and hummus",
        "dinner": "Slow-cooker beef chili",
        "sweet": "Cornbread"
       },
-      "2026-11-24": {
+      "2026-11-25": {
        "breakfast": "Smoothie",
        "lunch": "Chili leftovers",
        "snack": "Trail mix",
        "dinner": "Rice pilaf and chicken",
        "sweet": "Fruit"
       },
-      "2026-11-25": {
+      "2026-11-26": {
        "breakfast": "Veggie egg scramble and fruit",
        "lunch": "Turkey wraps",
        "snack": "Apple and peanut butter",
        "dinner": "Chicken tinga tacos",
        "sweet": "Mango rice pudding"
       },
-      "2026-11-26": {
+      "2026-11-27": {
        "breakfast": "Oatmeal with berries",
        "lunch": "Leftover taco bowl",
        "snack": "Greek yogurt",
        "dinner": "Sheet-pan lemon salmon",
        "sweet": "Dark chocolate square"
       },
-      "2026-11-27": {
+      "2026-11-28": {
        "breakfast": "Eggs and toast",
        "lunch": "Chicken salad",
        "snack": "Carrots and hummus",
@@ -607,7 +607,7 @@
      "note": "Cooking at home five nights; one pizza night with the kids.",
      "shops": [
       {
-       "date": "2026-11-21",
+       "date": "2026-11-28",
        "est_total": 76.25,
        "cap": 150,
        "items": [
@@ -677,8 +677,8 @@
      "cut": [
       "Swapped steak night for chili to stay under the cap."
      ],
-     "start": "2026-11-21",
-     "end": "2026-11-27",
+     "start": "2026-11-22",
+     "end": "2026-11-28",
      "path": "nutrition/plans/this-week.md"
     }
    }

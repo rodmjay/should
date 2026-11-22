@@ -15,13 +15,13 @@
  "items": [
   {
    "text": "Car registration renews in 9 days, $86",
-   "when": "2026-11-30",
+   "when": "2026-12-01",
    "level": "watch",
    "link": "/next/chores"
   },
   {
    "text": "Kitchen faucet: waiting on the landlord",
-   "when": "2026-11-24",
+   "when": "2026-11-25",
    "level": "watch",
    "link": "/next/chores"
   }
@@ -30,13 +30,13 @@
  "watch": [
   {
    "text": "Car registration renews in 9 days, $86",
-   "when": "2026-11-30",
+   "when": "2026-12-01",
    "level": "watch",
    "link": "/next/chores"
   },
   {
    "text": "Kitchen faucet: waiting on the landlord",
-   "when": "2026-11-24",
+   "when": "2026-11-25",
    "level": "watch",
    "link": "/next/chores"
   }
@@ -52,7 +52,7 @@
     "Money"
    ],
    "flagged": false,
-   "due": "2026-11-30",
+   "due": "2026-12-01",
    "days_left": 9,
    "overdue": false,
    "duration_min": 10,
@@ -112,7 +112,7 @@
     "Home"
    ],
    "flagged": false,
-   "due": "2026-11-24",
+   "due": "2026-11-25",
    "days_left": 3,
    "overdue": false,
    "duration_min": 10,
@@ -142,7 +142,7 @@
     "Home"
    ],
    "flagged": false,
-   "due": "2026-12-04",
+   "due": "2026-12-05",
    "days_left": 13,
    "overdue": false,
    "duration_min": 60,
@@ -157,7 +157,7 @@
     "Home"
    ],
    "flagged": false,
-   "due": "2026-11-27",
+   "due": "2026-11-28",
    "days_left": 6,
    "overdue": false,
    "duration_min": 30,
@@ -172,7 +172,7 @@
     "Home"
    ],
    "flagged": false,
-   "due": "2026-12-11",
+   "due": "2026-12-12",
    "days_left": 20,
    "overdue": false,
    "duration_min": 10,
@@ -188,7 +188,7 @@
    ],
    "flagged": false,
    "due": "2026-11-30",
-   "days_left": 9,
+   "days_left": 8,
    "overdue": false,
    "duration_min": 30,
    "view": null
@@ -204,8 +204,8 @@
  ],
  "report": {
   "latest": {
-   "path": "home/reports/2026-11-20.md",
-   "date": "2026-11-20",
+   "path": "home/reports/2026-11-21.md",
+   "date": "2026-11-21",
    "summary": "Faucet repair is with the landlord; furnace filter due Thursday.",
    "html": "<p>Faucet repair is with the landlord; furnace filter due Thursday.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
   },
@@ -278,13 +278,13 @@
      "items": [
       {
        "text": "Car registration renews in 9 days, $86",
-       "when": "2026-11-30",
+       "when": "2026-12-01",
        "level": "watch",
        "link": "/next/chores"
       },
       {
        "text": "Kitchen faucet: waiting on the landlord",
-       "when": "2026-11-24",
+       "when": "2026-11-25",
        "level": "watch",
        "link": "/next/chores"
       }
@@ -300,7 +300,7 @@
         "Money"
        ],
        "flagged": false,
-       "due": "2026-11-30",
+       "due": "2026-12-01",
        "days_left": 9,
        "overdue": false,
        "duration_min": 10,
@@ -360,7 +360,7 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-11-24",
+       "due": "2026-11-25",
        "days_left": 3,
        "overdue": false,
        "duration_min": 10,
@@ -390,7 +390,7 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-12-04",
+       "due": "2026-12-05",
        "days_left": 13,
        "overdue": false,
        "duration_min": 60,
@@ -405,7 +405,7 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-11-27",
+       "due": "2026-11-28",
        "days_left": 6,
        "overdue": false,
        "duration_min": 30,
@@ -420,7 +420,7 @@
         "Home"
        ],
        "flagged": false,
-       "due": "2026-12-11",
+       "due": "2026-12-12",
        "days_left": 20,
        "overdue": false,
        "duration_min": 10,
@@ -436,7 +436,7 @@
        ],
        "flagged": false,
        "due": "2026-11-30",
-       "days_left": 9,
+       "days_left": 8,
        "overdue": false,
        "duration_min": 30,
        "view": null

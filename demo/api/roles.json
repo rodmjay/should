@@ -9,21 +9,21 @@
    "items": [
     {
      "text": "Money: approve the $45 Summit Card payment for payday",
-     "when": "2026-11-21",
+     "when": "2026-11-23",
      "level": "act",
      "link": "/s/money#bills",
      "desk": "bookkeeper"
     },
     {
      "text": "Sends to Nora: the weekend plan text (draft ready)",
-     "when": "2026-11-21",
+     "when": "2026-11-23",
      "level": "act",
      "link": "/next/r/assistant#attention",
      "desk": "assistant"
     },
     {
      "text": "Kitchen faucet: landlord said this week",
-     "when": "2026-11-24",
+     "when": "2026-11-25",
      "level": "watch",
      "link": "/s/home",
      "desk": "home-manager"
@@ -49,7 +49,7 @@
     },
     {
      "text": "Thursday has three evening commitments",
-     "when": "2026-11-24",
+     "when": "2026-11-25",
      "level": "watch",
      "link": "/next/r/scheduler#calendar",
      "desk": "scheduler"
@@ -75,7 +75,7 @@
     },
     {
      "text": "StreamBox trial renews in 6 days at $11.99",
-     "when": "2026-11-27",
+     "when": "2026-11-28",
      "level": "watch",
      "link": "/s/money#bills",
      "desk": "bookkeeper"
@@ -127,7 +127,7 @@
    "items": [
     {
      "text": "Maya's birthday in 4 days: order the gift today",
-     "when": "2026-11-21",
+     "when": "2026-11-23",
      "level": "watch",
      "link": "/next/r/gifts#gifts",
      "desk": "gifts"
@@ -165,14 +165,14 @@
    "items": [
     {
      "text": "Car registration renews in 9 days, $86",
-     "when": "2026-11-30",
+     "when": "2026-12-01",
      "level": "watch",
      "link": "/next/chores",
      "desk": "home-manager"
     },
     {
      "text": "Kitchen faucet: waiting on the landlord",
-     "when": "2026-11-24",
+     "when": "2026-11-25",
      "level": "watch",
      "link": "/next/chores",
      "desk": "home-manager"
@@ -221,7 +221,7 @@
    "items": [
     {
      "text": "Annual report due in 12 days ($10)",
-     "when": "2026-12-03",
+     "when": "2026-12-04",
      "level": "watch",
      "link": "/next/companies",
      "desk": "business"
@@ -273,7 +273,7 @@
    "items": [
     {
      "text": "Leo's party: bounce house deposit due in 5 days",
-     "when": "2026-11-26",
+     "when": "2026-11-27",
      "level": "watch",
      "link": "/next/projects",
      "desk": "events"
@@ -388,7 +388,7 @@
    "items": [
     {
      "text": "Lease renewal: sign within 7 days",
-     "when": "2026-11-28",
+     "when": "2026-11-30",
      "level": "watch",
      "link": "/next/projects",
      "desk": "relocation"
@@ -465,6 +465,17 @@
    "needs": 0
   },
   {
+   "key": "business_analyst",
+   "name": "Business Analyst",
+   "nav": "business-analyst",
+   "owns": "Plans, numbers and strategy for Carter Studio and Brightline Labs, with a specific target for each",
+   "status": "ok",
+   "items": [],
+   "count": 0,
+   "tasks": 0,
+   "needs": 0
+  },
+  {
    "key": "business_coach",
    "name": "Business Coach",
    "nav": "business-coach",
@@ -514,14 +525,14 @@
    "items": [
     {
      "text": "Legal: sign the Carter Studio annual report",
-     "when": "2026-12-03",
+     "when": "2026-12-04",
      "level": "act",
      "link": "/next/companies",
      "desk": "legal"
     },
     {
      "text": "Lease renewal language checked: no surprises",
-     "when": "2026-11-28",
+     "when": "2026-11-30",
      "level": "watch",
      "link": "/next/projects",
      "desk": "legal"

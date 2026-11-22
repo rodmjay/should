@@ -40,8 +40,8 @@
  ],
  "report": {
   "latest": {
-   "path": "media/reports/2026-11-20.md",
-   "date": "2026-11-20",
+   "path": "media/reports/2026-11-21.md",
+   "date": "2026-11-21",
    "summary": "Friday's pick is set; two films leave streaming this month.",
    "html": "<p>Friday's pick is set; two films leave streaming this month.</p><ul><li>Nothing needs Sam today unless listed above.</li><li>Next check is tomorrow morning.</li></ul>"
   },
@@ -102,7 +102,7 @@
      "other_subs": [],
      "rent": ""
     },
-    "checked": "2026-11-20",
+    "checked": "2026-11-21",
     "trailer": null,
     "imdb": null,
     "wikipedia": null,
@@ -141,7 +141,7 @@
       "other_subs": [],
       "rent": ""
      },
-     "checked": "2026-11-20",
+     "checked": "2026-11-21",
      "trailer": null,
      "imdb": null,
      "wikipedia": null,
@@ -174,12 +174,12 @@
       "included": [
        "Prime Video"
       ],
-      "leaving": "2026-12-03",
+      "leaving": "2026-12-04",
       "free": [],
       "other_subs": [],
       "rent": ""
      },
-     "checked": "2026-11-20",
+     "checked": "2026-11-21",
      "trailer": null,
      "imdb": null,
      "wikipedia": null,
@@ -217,7 +217,7 @@
       "other_subs": [],
       "rent": ""
      },
-     "checked": "2026-11-20",
+     "checked": "2026-11-21",
      "trailer": null,
      "imdb": null,
      "wikipedia": null,
@@ -255,7 +255,7 @@
       "other_subs": [],
       "rent": ""
      },
-     "checked": "2026-11-20",
+     "checked": "2026-11-21",
      "trailer": null,
      "imdb": null,
      "wikipedia": null,
@@ -291,7 +291,7 @@
       "other_subs": [],
       "rent": "$3.99"
      },
-     "checked": "2026-11-20",
+     "checked": "2026-11-21",
      "trailer": null,
      "imdb": null,
      "wikipedia": null,
@@ -329,7 +329,7 @@
       "other_subs": [],
       "rent": ""
      },
-     "checked": "2026-11-20",
+     "checked": "2026-11-21",
      "trailer": null,
      "imdb": null,
      "wikipedia": null,
@@ -365,7 +365,7 @@
       "other_subs": [],
       "rent": "$3.99"
      },
-     "checked": "2026-11-20",
+     "checked": "2026-11-21",
      "trailer": null,
      "imdb": null,
      "wikipedia": null,
@@ -403,7 +403,7 @@
       "other_subs": [],
       "rent": ""
      },
-     "checked": "2026-11-20",
+     "checked": "2026-11-21",
      "trailer": null,
      "imdb": null,
      "wikipedia": null,
@@ -438,7 +438,7 @@
       "other_subs": [],
       "rent": "$3.99"
      },
-     "checked": "2026-11-20",
+     "checked": "2026-11-21",
      "trailer": null,
      "imdb": null,
      "wikipedia": null,
@@ -476,7 +476,7 @@
       "other_subs": [],
       "rent": ""
      },
-     "checked": "2026-11-20",
+     "checked": "2026-11-21",
      "trailer": null,
      "imdb": null,
      "wikipedia": null,
@@ -514,7 +514,7 @@
       "other_subs": [],
       "rent": ""
      },
-     "checked": "2026-11-20",
+     "checked": "2026-11-21",
      "trailer": null,
      "imdb": null,
      "wikipedia": null,
@@ -525,14 +525,14 @@
     {
      "title": "Toy Story",
      "year": 1995,
-     "watched_on": "2026-11-14",
+     "watched_on": "2026-11-16",
      "rating": "★★★★",
      "notes": "Leo laughed the most"
     },
     {
      "title": "Finding Nemo",
      "year": 2003,
-     "watched_on": "2026-11-07",
+     "watched_on": "2026-11-09",
      "rating": "★★★★★",
      "notes": ""
     }

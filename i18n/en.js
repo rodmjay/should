@@ -258,7 +258,7 @@
 
   cta_h2: "Want a staff of your own?",
   cta_p: "I'm building this in public, and in 2028 I want to bring people to Costa Rica for a week to build theirs together. If that sounds like you, tell me.",
-  footer: "Should · built by Rod Johnson with Claude",
+  footer: "Should · built by Rod Johnson with Claude · No tracking cookies. Cookies this page sets: none.",
 
   flow_labels: ["When", "Your staff", "You"],
   text_from_staff: "Text from your staff",

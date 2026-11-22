@@ -258,7 +258,7 @@
 
   cta_h2: "¿Quiere un equipo propio?",
   cta_p: "Estoy construyendo esto en público, y en 2028 quiero llevar gente a Costa Rica durante una semana para construir el suyo juntos. Si eso le suena, cuénteme.",
-  footer: "Should · hecho por Rod Johnson con Claude",
+  footer: "Should · hecho por Rod Johnson con Claude · Sin cookies de seguimiento. Cookies que usa esta página: ninguna.",
 
   flow_labels: ["Cuándo", "Su equipo", "Usted"],
   text_from_staff: "Mensaje de su equipo",

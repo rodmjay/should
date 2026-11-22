@@ -91,6 +91,7 @@ api/projects/lease-renewal.json
 api/projects/leo-birthday.json
 api/projects/spring-coast.json
 api/projects/thanksgiving.json
+api/projects/views.json
 api/registry.json
 api/retirement.json
 api/retirement/sim.json

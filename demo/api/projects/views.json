@@ -1,0 +1,184 @@
+{
+ "agencypro": {
+  "up": false,
+  "reason": "Demo: no AgencyPro snapshot.",
+  "taken_at": null,
+  "projects": []
+ },
+ "should": {
+  "live": true,
+  "error": null,
+  "views": [
+   {
+    "id": "leo-birthday",
+    "title": "Leo's 16th birthday party",
+    "kind": "event",
+    "status": "active",
+    "finishedOn": null,
+    "percent": null,
+    "forecast": null,
+    "next": {
+     "who": "you",
+     "text": "Pay the $120 bounce house deposit for Leo's party",
+     "due": "2026-11-26"
+    },
+    "needsYou": [],
+    "risks": [],
+    "upcoming": [
+     {
+      "who": "you",
+      "text": "Pay the $120 bounce house deposit for Leo's party",
+      "due": "2026-11-26"
+     },
+     {
+      "who": "waiting",
+      "name": "Owen Brooks",
+      "text": "RSVP for his two kids",
+      "due": "2026-11-24"
+     }
+    ]
+   },
+   {
+    "id": "spring-coast",
+    "title": "Spring coast trip",
+    "kind": "vacation",
+    "status": "active",
+    "finishedOn": null,
+    "percent": null,
+    "forecast": null,
+    "next": {
+     "who": "you",
+     "text": "Pick dates for the spring coast trip",
+     "due": null
+    },
+    "needsYou": [],
+    "risks": [],
+    "upcoming": [
+     {
+      "who": "you",
+      "text": "Pick dates for the spring coast trip",
+      "due": null
+     },
+     {
+      "who": "you",
+      "text": "Book Maya's passport appointment at the post office",
+      "due": null
+     }
+    ]
+   },
+   {
+    "id": "thanksgiving",
+    "title": "Thanksgiving dinner",
+    "kind": "event",
+    "status": "active",
+    "finishedOn": null,
+    "percent": null,
+    "forecast": null,
+    "next": null,
+    "needsYou": [],
+    "risks": [],
+    "upcoming": []
+   },
+   {
+    "id": "lease-renewal",
+    "title": "Lease renewal",
+    "kind": "move",
+    "status": "active",
+    "finishedOn": null,
+    "percent": null,
+    "forecast": null,
+    "next": {
+     "who": "you",
+     "text": "Read and sign the lease renewal (2 pages)",
+     "due": "2026-11-28"
+    },
+    "needsYou": [],
+    "risks": [],
+    "upcoming": [
+     {
+      "who": "you",
+      "text": "Read and sign the lease renewal (2 pages)",
+      "due": "2026-11-28"
+     },
+     {
+      "who": "you",
+      "text": "Update the address at the DMV",
+      "due": null
+     },
+     {
+      "who": "waiting",
+      "name": "Aspen Court Properties",
+      "text": "Fix the kitchen faucet before signing",
+      "due": "2026-11-24"
+     }
+    ]
+   },
+   {
+    "id": "emergency-fund",
+    "title": "Emergency fund to $6,000",
+    "kind": "generic",
+    "status": "active",
+    "finishedOn": null,
+    "percent": null,
+    "forecast": null,
+    "next": {
+     "who": "you",
+     "text": "Move $150 to the emergency fund",
+     "due": "2026-12-04"
+    },
+    "needsYou": [],
+    "risks": [],
+    "upcoming": [
+     {
+      "who": "you",
+      "text": "Move $150 to the emergency fund",
+      "due": "2026-12-04"
+     }
+    ]
+   },
+   {
+    "id": "brightline-launch",
+    "title": "Brightline Labs pilot",
+    "kind": "business_launch",
+    "status": "active",
+    "finishedOn": null,
+    "percent": null,
+    "forecast": null,
+    "next": {
+     "who": "you",
+     "text": "Review the Brightline Labs pricing page draft",
+     "due": null
+    },
+    "needsYou": [],
+    "risks": [],
+    "upcoming": [
+     {
+      "who": "you",
+      "text": "Review the Brightline Labs pricing page draft",
+      "due": null
+     },
+     {
+      "who": "waiting",
+      "name": "Juniper Dental",
+      "text": "Confirm the pilot start date",
+      "due": "2026-11-25"
+     }
+    ]
+   },
+   {
+    "id": "garage",
+    "title": "Clean out the garage",
+    "kind": "generic",
+    "status": "paused",
+    "finishedOn": null,
+    "percent": null,
+    "forecast": null,
+    "next": null,
+    "needsYou": [],
+    "risks": [],
+    "upcoming": []
+   }
+  ]
+ },
+ "needs_you": 0
+}

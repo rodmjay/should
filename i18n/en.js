@@ -297,7 +297,7 @@
   relmgr: { n: "Relationship Manager", job: "Family and friends: who's who, every household's address, staying in touch, and smooth co-parenting.", routines: ["Keep-in-touch nudges, weekly", "Kids' schedule check, Thursdays"], never: "Sends a message to anyone without your yes." },
   events: { n: "Event Planner", job: "Plans the gatherings you host: guest list, invites, RSVPs, timeline and a day-of run sheet.", routines: ["Event checklist, until the day"], never: "Sends an invite or pays a deposit without your yes." },
   legal: { n: "Legal Advisor", job: "Reads paperwork in plain words and writes the questions for a lawyer.", routines: ["On request"], never: "Files anything or contacts anyone." },
-  music: { n: "Music Producer", job: "Records what you play on the piano and turns it into sheet music.", routines: ["On request"], never: "Gives lessons you didn't ask for." },
+  music: { n: "Music Producer", job: "Records what you play on the piano and turns it into sheet music.", routines: ["Sheet music for new piano tracks, Mon–Sat 7:50 PM", "On request"], never: "Buys sheet music or gives lessons you didn't ask for." },
   web: { n: "Webmaster", job: "Builds your personal dashboard, where every agent has its own desk.", routines: ["On request"], never: "Publishes without your yes." },
   pr: { n: "PR Person", job: "Drafts your posts and keeps your public profiles telling one story.", routines: ["Weekly drafts, Mondays"], never: "Posts. You do." },
   media: { n: "Media Concierge", job: "Knows your taste in film and picks tonight's movie, with where to stream.", routines: ["On request"], never: "Buys or rents anything without your yes." },

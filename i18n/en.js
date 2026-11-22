@@ -233,7 +233,8 @@
   way_p2: "<b>Capture → Clarify → Route → Organize → Review → Engage.</b> Things come in on their own: calls, texts, mail, email. Agents work out what each one is and who should act on it. You check in with the morning text each day and a short sit-down each week.",
   way_rules: [
    ["Agent first", "Your attention is the scarce resource. If an agent can do it, or do all of it but one step, it does."],
-   ["One-way and two-way doors", "Easy-to-undo calls, like wording, scheduling or a draft, agents just make and tell you in one line. Only hard-to-undo ones (money, sending, deleting for good, settings) come to you, once, named for what's at stake and with one recommendation."],
+   ["One-way and two-way doors", "Easy-to-undo calls, like wording, scheduling or a draft, agents just make and tell you in one line. Only hard-to-undo ones (money, sending, deleting for good, settings) come to you, once, as one clear question with buttons, named for what's at stake and with one recommendation. Permissions our own automation needs are pre-approved, kept to the least access and logged. Money, sending, publishing outside, deleting and legal always stay yours."],
+   ["The law comes first", "Every business and system follows the law, above even your other values, and never trades it for speed or money. Compliance Officer keeps a list of the laws that apply to each business and checks a launch against it. Legal Advisor flags what needs a real lawyer."],
    ["Dates only for real deadlines", "Your calendar holds what has to happen on a day: appointments, deadlines. Nothing else."],
    ["Agents do the waiting", "Waiting on a reply, a refund or a package is the agents' job, and you can see the list anytime."],
    ["Fewer, better", "A short list you'll finish beats a long one you won't. Fewer things in flight at once."],

@@ -664,22 +664,22 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 <script>
 /* Structure only. Every visible word is in i18n/en.js and i18n/es.js (same shape, checked by ds/check-i18n.mjs). */
 const AGENTS = {
-  ea:{i:"🧭"}, book:{i:"📒"}, sched:{bg:true,i:"🗓️"}, pi:{i:"🔎"}, health:{i:"🩺"}, text:{i:"💬"}, phil:{i:"📚"}, sec:{i:"🛡️"},
-  comp:{i:"⚖️"}, bcoach:{i:"🧭",toYou:true}, coach:{i:"🏁"}, career:{i:"💼"}, wealth:{i:"📈"}, travel:{i:"✈️"}, shop:{i:"🛒"},
-  clothier:{i:"👔"}, house:{i:"🏠"}, pets:{i:"🐾"}, move:{i:"📦"}, gift:{i:"🎁"}, relmgr:{i:"🤝"}, events:{i:"🎉"}, legal:{i:"⚖️"},
+  ea:{i:"🧭"}, book:{i:"📒"}, sched:{i:"🗓️"}, pi:{i:"🔎"}, health:{i:"🩺"}, text:{i:"💬"}, phil:{i:"📚"}, sec:{i:"🛡️"},
+  comp:{i:"⚖️"}, bcoach:{i:"🧭",toYou:true}, coach:{i:"🏁"}, career:{i:"💼"}, wealth:{i:"📈"}, shop:{i:"🛒"},
+  house:{i:"🏠"}, move:{i:"📦"}, gift:{i:"🎁"}, relmgr:{i:"🤝"}, events:{i:"🎉"}, legal:{i:"⚖️"},
   music:{i:"🎹"}, web:{i:"🖥️"}, pr:{i:"📣"}, media:{i:"🎬"}, guide:{i:"📍"}, biz:{i:"🏢"}, ba:{i:"📊"}, arch:{i:"🏗️"}, dba:{i:"🗄️"}, it:{i:"🛠️"},
   pm:{i:"🧩"}, design:{i:"🎨"}, rel:{i:"💬",soon:true},
 };
 // Each agent's person avatar comes from the design system (ds/avatars.global.js), keyed by org role
-const ORG={ea:"assistant",book:"bookkeeper",sched:"scheduler",pi:"investigator",health:"health",text:"text-concierge",phil:"philosopher",sec:"security",comp:"compliance",bcoach:"business_coach",coach:"coach",career:"career",wealth:"financial",travel:"travel",shop:"shopping",clothier:"clothier",house:"home-manager",pets:"pets",move:"relocation",gift:"gifts",relmgr:"relationship-manager",events:"events",legal:"legal",music:"music",web:"webmaster",pr:"pr",media:"media",guide:"local-guide",biz:"business",ba:"business_analyst",arch:"as-architect",dba:"dba",it:"it",pm:"product",design:"designer",rel:"relationships"};
+const ORG={ea:"assistant",book:"bookkeeper",sched:"scheduler",pi:"investigator",health:"health",text:"text-concierge",phil:"philosopher",sec:"security",comp:"compliance",bcoach:"business_coach",coach:"coach",career:"career",wealth:"financial",shop:"shopping",house:"home-manager",move:"relocation",gift:"gifts",relmgr:"relationship-manager",events:"events",legal:"legal",music:"music",web:"webmaster",pr:"pr",media:"media",guide:"local-guide",biz:"business",ba:"business_analyst",arch:"as-architect",dba:"dba",it:"it",pm:"product",design:"designer",rel:"relationships"};
 
 const GOALS = [
  {id:"career",agents:["career","pi","pr"],sc:[{ico:"🎯",scene:"lead"},{ico:"✍️",scene:"resume"},{ico:"🤝",scene:"offer",sim:"negotiate"},{ico:"🪜",scene:"ladder"}]},
  {id:"money",agents:["wealth","book","pi"],sc:[{ico:"📈",sim:"trade"},{ico:"🏖️",sim:"retire"},{ico:"🧾",scene:"stmt"},{ico:"🪜",scene:"ladder"}]},
  {id:"business",agents:["biz","ba","book","legal"],sc:[{ico:"📊",scene:"dash"},{ico:"🌳",scene:"tree"},{ico:"🪜",scene:"ladder"}]},
  {id:"health",agents:["health","shop"],sc:[{ico:"⚖️",sim:"body"},{ico:"🥘",scene:"meals"},{ico:"🩺"},{ico:"🚭",scene:"streak"},{ico:"🪜",scene:"ladder"}]},
- {id:"home",agents:["relmgr","house","pets"],sc:[{ico:"👨‍👧‍👦",scene:"coparent"},{ico:"🔧",scene:"repair"},{ico:"🪜",scene:"ladder"}]},
- {id:"style",agents:["shop","clothier","gift"],sc:[{ico:"🏷️",scene:"price"},{ico:"👔",scene:"outfit"},{ico:"🎂",scene:"bdays"},{ico:"🪜",scene:"ladder"}]},
+ {id:"home",agents:["relmgr","house"],sc:[{ico:"👨‍👧‍👦",scene:"coparent"},{ico:"🔧",scene:"repair"},{ico:"🪜",scene:"ladder"}]},
+ {id:"style",agents:["shop","gift"],sc:[{ico:"🏷️",scene:"price"},{ico:"👔",scene:"outfit"},{ico:"🎂",scene:"bdays"},{ico:"🪜",scene:"ladder"}]},
  {id:"people",agents:["relmgr","pi","events"],sc:[{ico:"📇",scene:"contact"},{ico:"🪜",scene:"ladder"}]},
  {id:"legal",agents:["legal","comp"],sc:[{ico:"📄",scene:"doc"},{ico:"🗂️"},{ico:"✅"}]},
  {id:"logistics",agents:["arch","it","dba","design","web"],sc:[{ico:"🏗️"},{ico:"🔐"},{ico:"🗄️"}]},

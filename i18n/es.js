@@ -3,7 +3,7 @@
 (window.SHOULD_I18N = window.SHOULD_I18N || {}).es = {
  meta: {
   title: "Should: ponga sus metas de vida en piloto automático",
-  description: "Ponga sus metas de vida en piloto automático. Una persona, treinta y seis agentes de IA.",
+  description: "Ponga sus metas de vida en piloto automático. Una persona, treinta y tres agentes de IA.",
   lang_label: "Idioma",
   close: "Cerrar",
  },

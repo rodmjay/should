@@ -3,7 +3,7 @@
 (window.SHOULD_I18N = window.SHOULD_I18N || {}).en = {
  meta: {
   title: "Should: put your life goals on autopilot",
-  description: "Put your life goals on autopilot. One human, thirty-six AI agents.",
+  description: "Put your life goals on autopilot. One human, thirty-three AI agents.",
   lang_label: "Language",
   close: "Close",
  },

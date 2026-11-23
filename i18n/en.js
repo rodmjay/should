@@ -193,7 +193,7 @@
   demo_btn: "See the demo",
   demo_note: "Everything in it is fake except public things like movies, places and the weather.",
   tv_cap: "Also runs on your TV",
-  tv_sub: "The living-room view shows what the family can see: the day, chores, recipes and quotes. Everything private stays behind a PIN.",
+  tv_sub: "The living-room view shows what the family can see: the day, chores, recipes and quotes. Everything private stays behind a PIN. A second TV app, Should ED, is your own study room for a certification: it spaces your reviews, picks up where you stopped on any screen, shows your strong and weak topics, and gets new practice questions made overnight.",
   tv_lang_note: "Shown with made-up data.",
   tv_tab_home: "Home",
   tv_tab_recipes: "Recipes",

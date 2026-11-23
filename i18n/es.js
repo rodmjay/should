@@ -193,7 +193,7 @@
   demo_btn: "Vea la demo",
   demo_note: "Todo es ficticio, excepto lo público, como películas, lugares y el clima.",
   tv_cap: "También funciona en su televisor",
-  tv_sub: "La vista de la sala muestra lo que la familia puede ver: el día, las tareas, las recetas y las citas. Todo lo privado queda detrás de un PIN.",
+  tv_sub: "La vista de la sala muestra lo que la familia puede ver: el día, las tareas, las recetas y las citas. Todo lo privado queda detrás de un PIN. Una segunda app de TV, Should ED, es su sala de estudio para una certificación: espacia sus repasos, retoma donde se quedó en cualquier pantalla, muestra sus temas fuertes y débiles, y recibe preguntas de práctica nuevas hechas durante la noche.",
   tv_lang_note: "Con datos inventados. Por ahora, la app de la TV está en inglés.",
   tv_tab_home: "Inicio",
   tv_tab_recipes: "Recetas",

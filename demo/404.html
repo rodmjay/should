@@ -35,10 +35,11 @@ document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest
 		<link href="/should/demo/_app/immutable/assets/Icon.DWahk0DO.css" rel="stylesheet">
 		<link href="/should/demo/_app/immutable/assets/Person.BZSMUUmg.css" rel="stylesheet">
 		<link href="/should/demo/_app/immutable/assets/0.DfxlM7YD.css" rel="stylesheet">
-  </head>
+      <link rel="stylesheet" href="/should/demo/demo-bar.css">
+</head>
   <body data-sveltekit-preload-data="hover">
-    <style>.demo-bar{white-space:nowrap}.demo-bar .db-short{display:none}@media (max-width:600px){.demo-bar .db-long{display:none}.demo-bar .db-short{display:inline}}</style><div class="demo-bar" style="font:13px/1.4 var(--md-ref-typeface-plain,system-ui);background:var(--md-sys-color-secondary-container);color:var(--md-sys-color-on-secondary-container);padding:6px max(16px,env(safe-area-inset-left,0px));text-align:center"><span class="db-long">Demo with made-up data.</span><span class="db-short">Made-up data ·</span> <a href="/should/demo/tv" style="color:inherit;font-weight:600">See it on a TV</a> · <a href="/should/" style="color:inherit">Back to Should</a></div>
-    <div style="display: contents">
+    <div class="demo-bar"><span class="db-long">Demo with made-up data.</span><span class="db-short">Made-up data ·</span> <a class="db-tv" href="/should/demo/tv">See it on a TV</a> · <a href="/should/">Back to Should</a></div>
+    <div class="sk-body">
 			<script>
 				{
 					__sveltekit_1npktw8 = {

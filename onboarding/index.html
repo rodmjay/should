@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" data-brand="should">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="google" content="notranslate">
+<title>Should setup, a demo</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="ds/fonts.css">
+<link rel="stylesheet" href="ds/design-system.css">
+<link rel="stylesheet" href="onboarding.css">
+</head>
+<body translate="no">
+<a class="skip" href="#main" id="skiplink"></a>
+<header class="top">
+  <a class="logo" href="../" id="logo"><img src="../should-mark.svg" alt="" width="28" height="28"><span>Should</span></a>
+  <div class="top-end">
+    <label class="ds-field lang"><span class="sr" id="langlabel"></span><select class="ds-select" id="lang" aria-labelledby="langlabel"><option value="en">English</option><option value="es">Español</option></select></label>
+    <button class="ds-btn text" type="button" id="skipsetup"></button>
+  </div>
+</header>
+<div class="demo-note ds-banner primary" id="demonote" role="note"></div>
+<main id="main" tabindex="-1">
+  <div class="progress-wrap">
+    <p class="ds-overline" id="steptext" aria-live="polite"></p>
+    <div class="ds-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="bar"><span></span></div>
+  </div>
+  <section id="screen" aria-live="off"></section>
+</main>
+<script src="ds/i18n.global.js"></script>
+<script src="data.js"></script>
+<script src="onboarding.js"></script>
+</body>
+</html>

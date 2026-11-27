@@ -14,4 +14,5 @@ body{margin:0;background:var(--md-sys-color-surface);color:var(--md-sys-color-on
 .foot a{color:var(--md-sys-color-primary)}
 .top .ds-btn,.ds-role .ds-btn{min-height:3rem;display:inline-flex;align-items:center;justify-content:center}
 .note,.foot p,.foot li{font-size:.875rem;line-height:1.5}
-.foot a{display:inline-block;padding-block:.75rem}
+.foot a{display:inline-flex;align-items:center;min-height:3rem}
+.logo{min-height:3rem}

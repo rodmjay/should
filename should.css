@@ -466,3 +466,16 @@ footer{padding:30px 0 50px;font-size:13px;color:var(--muted);text-align:center}
 .m0s14{margin:0;font-size:14px}.m8s13{margin:8px 0 0;font-size:13px}.mr6{margin:6px 6px 0 0}.fs24{font-size:24px}
 .sheet-head{display:flex;gap:12px;align-items:center;margin:4px 40px 6px 0}
 .legend i.bm{background:var(--muted)}.legend i.ba{background:var(--accent)}.legend i.bw{background:var(--warm)}
+
+/* who it's for (audience pages) */
+.roles{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr))}
+.role-card{position:relative;display:grid;gap:6px;align-content:start;padding:18px;border-radius:16px;background:var(--card);border:1px solid var(--line)}
+.role-card h3{margin:0;font-size:18px}
+.role-card p{margin:0;color:var(--muted);font-size:15px}
+.role-card a{color:inherit;text-decoration:none}
+.role-card a::after{content:"";position:absolute;inset:0;border-radius:inherit}
+.role-card a:focus-visible::after{outline:3px solid var(--accent);outline-offset:2px}
+.role-card:hover{background:var(--accent-soft)}
+.role-more{color:var(--accent);font-weight:600;font-size:14px}
+.foot-roles{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 16px}
+.foot-roles a{color:var(--accent)}

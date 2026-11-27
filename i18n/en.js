@@ -33,7 +33,7 @@
   role_co_t: "The calendar and records kept for you, with drafted messages ready to send.",
   role_co_href: "for/co-parents/",
   role_builder_n: "Builders",
-  role_builder_t: "Build your own agent staff from a series of setup prompts.",
+  role_builder_t: "A series of setup prompts for building your own agent staff. Not public yet.",
   role_builder_href: "for/builders/",
 
   ebook_btn: "Download eBook",

@@ -33,7 +33,7 @@
   role_co_t: "El calendario y los registros al día, con mensajes redactados listos para enviar.",
   role_co_href: "es/para/padres-y-madres-que-comparten-la-crianza/",
   role_builder_n: "Creadores",
-  role_builder_t: "Arme su propio equipo de agentes con una serie de instrucciones de configuración.",
+  role_builder_t: "Una serie de instrucciones de configuración para armar su propio equipo de agentes. Todavía no son públicas.",
   role_builder_href: "es/para/creadores/",
 
   ebook_btn: "Descargar el eBook",

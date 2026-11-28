@@ -3,7 +3,7 @@
 (window.SHOULD_I18N = window.SHOULD_I18N || {}).es = {
  meta: {
   title: "Should: ponga sus metas de vida en piloto automático",
-  description: "Ponga sus metas de vida en piloto automático. Una persona, treinta y tres agentes de IA.",
+  description: "Ponga sus metas de vida en piloto automático. Una persona, treinta y cinco agentes de IA.",
   lang_label: "Idioma",
   close: "Cerrar",
  },
@@ -11,7 +11,7 @@
   motto_q: "«Sea regular y ordenado en su vida, para poder ser violento y original en su obra».",
   motto_by: "— Gustave Flaubert",
   hero_h1: "Ponga sus metas de vida en piloto automático.",
-  hero_sub: "Un mejor trabajo, dinero bien cuidado mientras usted trabaja, un negocio que se maneja solo, un cuerpo del que se sienta orgulloso. Treinta y tres agentes de IA trabajan en eso todos los días. Usted responde con 1, 2 o 3.",
+  hero_sub: "Un mejor trabajo, dinero bien cuidado mientras usted trabaja, un negocio que se maneja solo, un cuerpo del que se sienta orgulloso. Treinta y cinco agentes de IA trabajan en eso todos los días. Usted responde con 1, 2 o 3.",
   stat_agents: "agentes de IA",
   stat_goals: "metas de vida",
   stat_human: "persona al mando",
@@ -322,6 +322,8 @@
   arch: { n: "Arquitecto de software", job: "Dirige un equipo de software para su empresa: planifica lo que se construye, escribe el código con sus ingenieros y prueba cada cambio.", routines: ["Plan de construcción, a medida que crece el trabajo", "Informe de avance, después de cada sesión"], never: "Gasta dinero, lanza algo público ni sube un secreto al código." },
   dba: { n: "Administrador de bases de datos", job: "Cuida la base de datos con sus registros: cada cambio pasa por un mismo proceso cuidadoso, y la mantiene rápida, respaldada y sana.", routines: ["Vigila el respaldo nocturno y la revisión de salud"], never: "Debilita su seguridad sin su sí." },
   it: { n: "Técnico de TI", job: "Mantiene funcionando su internet, el Wi-Fi, el celular y la computadora, arregla lo que encuentra el Responsable de seguridad y mantiene en marcha los sistemas del equipo. Cuando usted inicia sesión en una cuenta nueva, la deja configurada: de quién es, sus datos guardados y nuevos comandos por mensaje.", routines: ["Revisión de salud del sistema, diaria", "Control de uso, 6 veces al día: baja el ritmo del equipo antes de que se acabe el límite semanal de IA", "Revisión de filtraciones, cada vez que escriba /it /breach-check", "Configuración de cuentas nuevas, cuando inicie sesión"], never: "Maneja sus contraseñas, ni cambia una cuenta sin su sí." },
+  chef: { n: "Chef", job: "Hace que cada receta se cocine bien y de la misma manera: un solo sistema de la casa para dorar, sazonar y medir tiempos, pasos realistas y arreglos al texto y a la foto de una receta cuando hace falta.", routines: ["Revisión de recetas, al agregarlas"], never: "Publica una receta sin las revisiones de siempre, ni usa un estilo de foto aislado." },
+  nutri: { n: "Nutricionista", job: "Sabe qué significa cada ingrediente para su dieta, de paleo a keto y sin gluten, y qué sustitución deja el plato igual. Las etiquetas de dieta de una receta salen de sus ingredientes.", routines: ["Auditoría de dietas, al agregar recetas"], never: "Hace de médico ni fija sus metas. Eso lo hace el agente de salud." },
   pm: { n: "Gerente de producto", job: "Maneja Should como un producto: el nombre, la historia y lo que aprende después.", routines: ["Hoja de ruta, a medida que usted pide cosas"], never: "Cambia las palabras de esta página sin su sí." },
   design: { n: "Diseño", job: "Hace que todo lo que usted ve se vea como una sola familia: el sistema de diseño con el que se construye cada página, panel y sitio, en inglés y español, claro y oscuro.", routines: ["Revisión de diseño, antes de publicar algo visual"], never: "Publica una imagen nueva sin la revisión de diseño." },
   rel: { n: "Coach de pareja", job: "Le ayuda a mantenerse cerca de su pareja y de las personas que más le importan.", routines: ["Próximamente"], never: "Lee ni envía sus mensajes privados, ni comparte nada sobre las personas que usted quiere." },

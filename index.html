@@ -11,9 +11,9 @@
 <title>Should</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <!-- Link previews can't run scripts, so description and og: stay in English here; the page sets the description from i18n/ on load -->
-<meta name="description" content="Put your life goals on autopilot. One human, thirty-three AI agents.">
+<meta name="description" content="Put your life goals on autopilot. One human, thirty-five AI agents.">
 <meta property="og:title" content="Should">
-<meta property="og:description" content="Put your life goals on autopilot. One human, thirty-three AI agents.">
+<meta property="og:description" content="Put your life goals on autopilot. One human, thirty-five AI agents.">
 <link rel="stylesheet" href="ds/fonts.css">
 <link rel="stylesheet" href="ds/design-system.css">
 <link rel="stylesheet" href="should.css">
@@ -30,7 +30,7 @@
   <h1 data-i18n="ui.hero_h1"></h1>
   <p class="sub" data-i18n="ui.hero_sub"></p>
   <div class="stats">
-    <div class="stat"><b>33</b><span data-i18n="ui.stat_agents"></span></div>
+    <div class="stat"><b>35</b><span data-i18n="ui.stat_agents"></span></div>
     <div class="stat"><b>7</b><span data-i18n="ui.stat_goals"></span></div>
     <div class="stat"><b>1</b><span data-i18n="ui.stat_human"></span></div>
   </div>
@@ -214,14 +214,14 @@
 <script>
 /* Structure only. Every visible word is in i18n/en.js and i18n/es.js (same shape, checked by ds/check-i18n.mjs). */
 const AGENTS = {
-  ea:{i:"🧭"}, book:{i:"📒"}, sched:{i:"🗓️"}, pi:{i:"🔎"}, health:{i:"🩺"}, text:{i:"💬"}, phil:{i:"📚"}, sec:{i:"🛡️"},
+  ea:{i:"🧭"}, book:{i:"📒"}, sched:{i:"🗓️"}, pi:{i:"🔎"}, health:{i:"🩺"}, chef:{i:"👩‍🍳"}, nutri:{i:"🥗"}, text:{i:"💬"}, phil:{i:"📚"}, sec:{i:"🛡️"},
   comp:{i:"⚖️"}, bcoach:{i:"🧭",toYou:true}, coach:{i:"🏁"}, career:{i:"💼"}, wealth:{i:"📈"}, shop:{i:"🛒"},
   house:{i:"🏠"}, move:{i:"📦"}, gift:{i:"🎁"}, relmgr:{i:"🤝"}, events:{i:"🎉"}, legal:{i:"⚖️"},
   music:{i:"🎹"}, web:{i:"🖥️"}, pr:{i:"📣"}, media:{i:"🎬"}, guide:{i:"📍"}, biz:{i:"🏢"}, ba:{i:"📊"}, arch:{i:"🏗️"}, dba:{i:"🗄️"}, it:{i:"🛠️"},
   pm:{i:"🧩"}, design:{i:"🎨"}, rel:{i:"💬",soon:true},
 };
 // Each agent's person avatar comes from the design system (ds/avatars.global.js), keyed by org role
-const ORG={ea:"assistant",book:"bookkeeper",sched:"scheduler",pi:"investigator",health:"health",text:"text-concierge",phil:"philosopher",sec:"security",comp:"compliance",bcoach:"business_coach",coach:"coach",career:"career",wealth:"financial",shop:"shopping",house:"home-manager",move:"relocation",gift:"gifts",relmgr:"relationship-manager",events:"events",legal:"legal",music:"music",web:"webmaster",pr:"pr",media:"media",guide:"local-guide",biz:"business",ba:"business_analyst",arch:"as-architect",dba:"dba",it:"it",pm:"product",design:"designer",rel:"relationships"};
+const ORG={ea:"assistant",book:"bookkeeper",sched:"scheduler",pi:"investigator",health:"health",chef:"chef",nutri:"nutritionist",text:"text-concierge",phil:"philosopher",sec:"security",comp:"compliance",bcoach:"business_coach",coach:"coach",career:"career",wealth:"financial",shop:"shopping",house:"home-manager",move:"relocation",gift:"gifts",relmgr:"relationship-manager",events:"events",legal:"legal",music:"music",web:"webmaster",pr:"pr",media:"media",guide:"local-guide",biz:"business",ba:"business_analyst",arch:"as-architect",dba:"dba",it:"it",pm:"product",design:"designer",rel:"relationships"};
 
 const GOALS = [
  {id:"career",agents:["career","pi","pr"],sc:[{ico:"🎯",scene:"lead"},{ico:"✍️",scene:"resume"},{ico:"🤝",scene:"offer",sim:"negotiate"},{ico:"🪜",scene:"ladder"}]},
